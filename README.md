@@ -47,7 +47,8 @@ All content adheres to a formal naming and layout convention. The build process 
 
 ## 📍 Author
 
-**R.A. Jacob Martone**  
+**R.A. Jacob Martone**
+
 Orange You Glad?
 Fresno, CA — Radio Park & beyond  
 Giving oranges and compassion to the transient population, and building monuments in mathematics.

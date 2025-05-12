@@ -55,8 +55,17 @@ Giving oranges and compassion to the transient population, and building monument
 
 ## 🧡 Support
 
-If you’d like to support the oranges, the compassion, or the math, reach out via GitHub or [insert donation/contact link if desired].
+If you’d like to support the oranges, the compassion, or the math:
+
+- Say hello or open an issue here on GitHub
+- Share the repository with someone who loves beauty and rigor
+- Or donate oranges to someone in need
+
+Thank you for reading, supporting, or thinking curiously about this work.
 
 ## 📖 License
 
-To be finalized. Proposed: MIT (code) + CC-BY-4.0 (manuscript content).
+- All code and automation scripts in this repository are licensed under the [MIT License](./LICENSE).
+- All manuscript content (LaTeX source, figures, and prose) is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](./LICENSE-TEXT).
+
+© 2025 R.A. Jacob Martone. You are free to share and adapt the manuscript material, provided proper attribution is given.

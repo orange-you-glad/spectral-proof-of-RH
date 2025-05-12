@@ -1,0 +1,50 @@
+name: Manuscript CI
+
+on:
+  push:
+    paths:
+      - '**.tex'
+      - '**.py'
+      - '.github/workflows/ci.yml'
+      - 'Makefile'
+  pull_request:
+    paths:
+      - '**.tex'
+      - '**.py'
+      - '.github/workflows/ci.yml'
+      - 'Makefile'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Structural + Hygiene Checks
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt || true
+
+      - name: Run label validator
+        run: |
+          python scripts/validate_labels.py
+
+      - name: Run proof checker
+        run: |
+          python scripts/check_proofs.py
+
+      - name: Run structure checker
+        run: |
+          python scripts/check_structure.py
+
+      - name: Build LaTeX (dry run)
+        run: |
+          sudo apt-get update && sudo apt-get install -y latexmk texlive-full
+          latexmk -pdf -cd -interaction=nonstopmode -halt-on-error src/main.tex

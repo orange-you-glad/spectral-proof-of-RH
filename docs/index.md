@@ -16,9 +16,7 @@ This work is both a mathematical monument and an act of compassion.
 ## 🧡 Author
 
 **R.A. Jacob Martone**
-
 Orange You Glad?
-
 Fresno, CA — Radio Park & beyond
 
 Giving out oranges and compassion, and building monuments in mathematics.

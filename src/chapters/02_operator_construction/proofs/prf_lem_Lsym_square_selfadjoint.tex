@@ -1,0 +1,31 @@
+\begin{proof}[Proof of \lemref{lem:Lsym-square-selfadjoint}]
+We verify essential self-adjointness of \( L_{\mathrm{sym}}^2 \) on the Schwartz core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \).
+
+\textbf{Step 1: Core Invariance.}
+Since \( L_{\mathrm{sym}} \) is a convolution operator with kernel \( k \in \mathcal{S}(\mathbb{R}) \), and since convolution preserves Schwartz regularity, we have:
+\[
+L_{\mathrm{sym}} \colon \mathcal{S}(\mathbb{R}) \to \mathcal{S}(\mathbb{R}).
+\]
+Therefore,
+\[
+L_{\mathrm{sym}}^2 \colon \mathcal{S}(\mathbb{R}) \to \mathcal{S}(\mathbb{R}),
+\]
+so \( \mathcal{S}(\mathbb{R}) \) is invariant under both \( L_{\mathrm{sym}} \) and \( L_{\mathrm{sym}}^2 \).
+
+\textbf{Step 2: Symmetry.}
+As \( L_{\mathrm{sym}} \) is self-adjoint, it follows that \( L_{\mathrm{sym}}^2 \) is symmetric on any domain where it is defined:
+\[
+\langle L_{\mathrm{sym}}^2 f, g \rangle_{H_{\Psi_\alpha}} = \langle f, L_{\mathrm{sym}}^2 g \rangle_{H_{\Psi_\alpha}}, \quad \forall f, g \in \mathcal{S}(\mathbb{R}).
+\]
+
+\textbf{Step 3: Essential Self-Adjointness via Nelson's Theorem.}
+Since \( L_{\mathrm{sym}}^2 \) leaves \( \mathcal{S}(\mathbb{R}) \) invariant and all derivatives of elements of \( \mathcal{S} \) are in \( H_{\Psi_\alpha} \), we may apply Nelson’s analytic vector theorem (see \cite[Thm. X.36]{ReedSimon1975II}): every element \( f \in \mathcal{S}(\mathbb{R}) \) is an analytic vector for \( L_{\mathrm{sym}}^2 \), as the iterates \( (L_{\mathrm{sym}}^2)^n f \in \mathcal{S}(\mathbb{R}) \) for all \( n \).
+
+Therefore, \( L_{\mathrm{sym}}^2 \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \).
+
+\textbf{Step 4: Discreteness of Spectrum.}
+Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), its square \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) as well. Hence, by standard spectral theory of compact, self-adjoint operators, its spectrum consists of a discrete sequence of nonnegative real eigenvalues with finite multiplicity, accumulating only at zero.
+
+\textbf{Conclusion.}
+The operator \( L_{\mathrm{sym}}^2 \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \), with self-adjoint closure admitting a full discrete spectral resolution.
+\end{proof}

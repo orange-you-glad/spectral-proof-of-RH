@@ -1,0 +1,34 @@
+\begin{proof}[Proof of Lemma~\ref{lem:A_log_derivative}]
+Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact and self-adjoint. Let \( \rho := \|L\| \). For all \( \lambda \in \mathbb{C} \) with \( |\lambda| < \rho^{-1} \), the Neumann series expansion holds:
+\[
+(I - \lambda L)^{-1} = \sum_{n=0}^\infty \lambda^n L^n,
+\]
+with convergence in operator norm.
+
+\paragraph{Step 1: Differentiation of the logarithmic trace series.}
+From the definition of the Carleman \(\zeta\)-determinant, we have
+\[
+\log \det\nolimits_\zeta(I - \lambda L) = -\sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L^n),
+\]
+which converges absolutely for \( |\lambda| < \rho^{-1} \) due to the trace-norm decay. Differentiating term-by-term yields
+\[
+\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L)
+= \sum_{n=1}^\infty \lambda^{n-1} \operatorname{Tr}(L^n)
+= \operatorname{Tr} \left( \sum_{n=1}^\infty \lambda^{n-1} L^n \right).
+\]
+
+\paragraph{Step 2: Identifying the resolvent trace.}
+The operator series satisfies
+\[
+\sum_{n=1}^\infty \lambda^{n-1} L^n = (I - \lambda L)^{-1} L,
+\]
+so we conclude:
+\[
+\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L)
+= \operatorname{Tr} \left( (I - \lambda L)^{-1} L \right).
+\]
+
+\paragraph{Conclusion.}
+Thus, the logarithmic derivative of the zeta-regularized determinant equals the trace of the operator-valued function \( \lambda \mapsto (I - \lambda L)^{-1} L \), which is analytic on the open disk \( |\lambda| < \rho^{-1} \). This completes the proof.
+\end{proof}
+%  

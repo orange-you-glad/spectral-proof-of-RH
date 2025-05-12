@@ -1,0 +1,24 @@
+\begin{lemma}[Density of Schwartz Space in Exponentially Weighted \( L^2 \)]\label{lem:density-schwartz-weighted-L2}
+Let \( \alpha > \pi \), and define the exponential weight
+\[
+\Psi_\alpha(x) := e^{\alpha |x|}, \quad x \in \mathbb{R}.
+\]
+Let
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx)
+\]
+denote the associated weighted Hilbert space, equipped with inner product
+\[
+\langle f, g \rangle_{H_{\Psi_\alpha}} := \int_{\mathbb{R}} f(x) \overline{g(x)}\, \Psi_\alpha(x)\, dx,
+\]
+and norm
+\[
+\|f\|_{H_{\Psi_\alpha}} := \left( \int_{\mathbb{R}} |f(x)|^2\, e^{\alpha |x|} dx \right)^{1/2}.
+\]
+
+Then the Schwartz space \( \mathcal{S}(\mathbb{R}) \) is dense in \( H_{\Psi_\alpha} \); that is, for every \( f \in H_{\Psi_\alpha} \) and every \( \varepsilon > 0 \), there exists \( \phi \in \mathcal{S}(\mathbb{R}) \) such that
+\[
+\| f - \phi \|_{H_{\Psi_\alpha}} < \varepsilon.
+\]
+\end{lemma}
+% 

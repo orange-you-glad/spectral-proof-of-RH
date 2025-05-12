@@ -1,0 +1,102 @@
+\section{Foundational Analytic and Operator Structures}
+\label{sec:foundations}
+
+\begin{remark}[Contextual Link to Prologue]
+The analytic constructions in this chapter are conceptually motivated by the arithmetic heuristics in the Prologue,
+which relate the canonical determinant identity to the Euler product, Frobenius eigenvalues, and the Weil explicit formula.
+Readers seeking a geometric or number-theoretic framing are encouraged to review that material before proceeding.
+\end{remark}
+
+\input{chapters/01_foundations/intro}
+
+%------------------------------------------------------------------
+\subsection{Definitions}
+% === Weighted operator theory and distributional domains ===
+
+\input{chapters/01_foundations/defs/def_compact_operator}
+\input{chapters/01_foundations/defs/def_trace_class_operator}
+\input{chapters/01_foundations/defs/def_trace_norm}
+\input{chapters/01_foundations/defs/def_selfadjoint_operator}
+\input{chapters/01_foundations/defs/def_weighted_schwartz_space}
+\input{chapters/01_foundations/defs/def_weighted_exponential_space}
+\input{chapters/01_foundations/defs/def_weighted_trace_norm_space} % NEW
+
+%------------------------------------------------------------------
+\subsection{Analytic Lemmas}
+% === Fourier decay, symmetry, and kernel convergence ===
+
+% Density of weighted Schwartz space in L^2(ℝ, e^{α|x|}dx)
+\input{chapters/01_foundations/lems/lem_space_density_schwartz}
+\input{chapters/01_foundations/proofs/prf_lem_space_density_schwartz}
+
+% Weighted trace-norm duality
+\input{chapters/01_foundations/lems/lem_weighted_trace_norm_duality} % NEW
+\input{chapters/01_foundations/proofs/prf_lem_weighted_trace_norm_duality} % NEW
+
+% Conjugated kernel Fourier control
+\input{chapters/01_foundations/lems/lem_L1_conjugated_kernel}
+\input{chapters/01_foundations/proofs/prf_lem_L1_conjugated_kernel}
+
+% Exponential kernel decay
+\input{chapters/01_foundations/lems/lem_exponential_decay_kernel_estimates}
+\input{chapters/01_foundations/proofs/prf_lem_exponential_decay_kernel_estimates}
+
+% Growth control of Ξ(s) in critical strip
+\input{chapters/01_foundations/lems/lem_xi_growth_exact}
+\input{chapters/01_foundations/proofs/prf_lem_xi_growth_exact}
+
+% Weighted L^1 integrability of inverse Fourier transform of Ξ
+\input{chapters/01_foundations/lems/lem_ft_xi_weighted_L1}
+\input{chapters/01_foundations/proofs/prf_lem_ft_xi_weighted_L1}
+
+% Precise decay control for inverse Fourier transform of Ξ
+\input{chapters/01_foundations/lems/lem_decay_inverse_fourier_xi} % NEW
+\input{chapters/01_foundations/proofs/prf_lem_decay_inverse_fourier_xi} % NEW
+
+% Uniform kernel bounds over mollified families
+\input{chapters/01_foundations/lems/lem_uniform_kernel_L1_bound}
+\input{chapters/01_foundations/proofs/prf_lem_uniform_kernel_L1_bound}
+
+% Symmetry under x ↔ -x kernel reflection
+\input{chapters/01_foundations/lems/lem_kernel_symmetry}
+\input{chapters/01_foundations/proofs/prf_lem_kernel_symmetry}
+
+% Fourier reflection and symmetry
+\input{chapters/01_foundations/lems/lem_fourier_symmetry_reflection} % NEW
+\input{chapters/01_foundations/proofs/prf_lem_fourier_symmetry_reflection} % NEW
+
+% === Trace-class verification via weighted kernel bounds ===
+\input{chapters/01_foundations/lems/lem_trace_class_via_weighted_L1}
+\input{chapters/01_foundations/proofs/prf_lem_trace_class_via_weighted_L1}
+
+% === Hilbert–Schmidt verification via L² kernel decay ===
+\input{chapters/01_foundations/lems/lem_kernel_L2_weighted_bound} % NEW
+\input{chapters/01_foundations/proofs/prf_lem_kernel_L2_weighted_bound} % NEW
+
+% === Weighted trace-class inclusion via conjugated kernels ===
+\input{chapters/01_foundations/lems/lem_trace_class_conjugated_kernel}
+\input{chapters/01_foundations/proofs/prf_lem_trace_class_conjugated_kernel}
+
+%------------------------------------------------------------------
+\subsection{Operator-Theoretic Properties of \texorpdfstring{\( L_t \)}{Lt}}
+% === Boundedness, compactness, domain symmetry, and closure properties ===
+
+\input{chapters/01_foundations/props/prop_boundedness_Lt_weighted_space}
+\input{chapters/01_foundations/proofs/prf_prop_boundedness_Lt_weighted_space}
+
+\input{chapters/01_foundations/props/prop_compactness_Lt}
+\input{chapters/01_foundations/proofs/prf_prop_compactness_Lt}
+
+\input{chapters/01_foundations/props/prop_symmetry_Lt_Schwartz}
+\input{chapters/01_foundations/proofs/prf_prop_symmetry_Lt_Schwartz}
+
+\input{chapters/01_foundations/props/prop_selfadjointness_Lt}
+\input{chapters/01_foundations/proofs/prf_prop_selfadjointness_Lt}
+
+% Essential domain closure of Schwartz under Lt
+\input{chapters/01_foundations/props/prop_core_schwartz_density} % NEW
+\input{chapters/01_foundations/proofs/prf_prop_core_schwartz_density} % NEW
+
+%------------------------------------------------------------------
+
+\input{chapters/01_foundations/summary}

@@ -1,0 +1,27 @@
+\begin{proof}[Proof of Proposition~\ref{prop:two-sided-heat-trace-bounds}]
+We apply Lemmas~\ref{lem:hk-upper-bound} and~\ref{lem:hk-lower-bound} to obtain explicit bounds on the heat trace.
+
+\paragraph{Upper Bound.}
+Lemma~\ref{lem:hk-upper-bound} guarantees that for all \( t \in (0,1] \),
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \leq c_2 \, t^{-1/2}, \qquad
+c_2 := (1 + e^{-1}) \cdot \| L_{\mathrm{sym}} \|_{\mathcal{C}_1}.
+\]
+
+\paragraph{Lower Bound.}
+Lemma~\ref{lem:hk-lower-bound} establishes that there exists \( t_1 > 0 \) and a constant
+\[
+c_1 := \frac{1}{4 \, \| L_{\mathrm{sym}} \|_{\mathcal{C}_1}} > 0
+\]
+such that for all \( t \in (0, t_1] \),
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \geq c_1 \, t^{-1/2}.
+\]
+
+\paragraph{Conclusion.}
+Let \( t_0 := \min\{1, t_1\} \). Then for all \( t \in (0, t_0] \), the two-sided bound holds:
+\[
+c_1 \, t^{-1/2} \;\leq\; \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \;\leq\; c_2 \, t^{-1/2}.
+\]
+This completes the proof. The estimate confirms that the heat trace exhibits a sharp \( t^{-1/2} \) scaling in the short-time regime, consistent with local parametrix asymptotics and spectral dimension one. The constants depend only on the trace norm of \( L_{\mathrm{sym}} \), and the bounds are uniform across all compact time intervals \( (0, t_0] \).
+\end{proof}

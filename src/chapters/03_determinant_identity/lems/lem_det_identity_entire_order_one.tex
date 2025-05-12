@@ -1,0 +1,23 @@
+\begin{lemma}[Determinant Identity Defines an Entire Function of Order One and Type \(\pi\)]
+\label{lem:det_identity_entire_order_one}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator.
+
+Then the map
+\[
+\lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+\]
+extends to an entire function on \( \mathbb{C} \) of order one and exponential type \( \pi \). That is, there exists a constant \( C > 0 \) such that for all \( \lambda \in \mathbb{C} \),
+\[
+\left| \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \right| \le C e^{\pi |\lambda|}.
+\]
+In particular,
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \in \mathcal{E}_1^\pi,
+\]
+the Hadamard class of entire functions of order one and exact exponential type \( \pi \).
+
+\medskip
+\noindent
+The exponential type is governed by the Paley–Wiener theorem, which bounds the growth of entire functions whose Fourier transforms have compact support. In this case, the support of the kernel’s Fourier transform \( \widehat{\phi} \), inherited from the decay of \( \Xi(s) \), restricts the spectral convolution kernel \( K(x-y) \) to exponential type \( \pi \), ensuring the determinant exhibits exactly this growth.
+\end{lemma}
+% 

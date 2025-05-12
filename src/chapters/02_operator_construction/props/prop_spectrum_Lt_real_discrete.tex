@@ -1,0 +1,33 @@
+\begin{proposition}[Real and Discrete Spectrum of \( L_t \)]
+\label{prop:spectrum-Lt-real-discrete}
+Let \( L_t \in \mathcal{B}(H_{\Psi_\alpha}) \) be the mollified convolution operator defined by
+\[
+(L_t f)(x) := \int_{\mathbb{R}} k_t(x - y)\, f(y)\, dy,
+\]
+where \( k_t \in \mathcal{S}(\mathbb{R}) \) is the inverse Fourier transform of the mollified profile
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+Then:
+\begin{enumerate}
+    \item[\textnormal{(i)}] \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) is trace-class and compact.
+
+    \item[\textnormal{(ii)}] \( L_t \) is self-adjoint on \( H_{\Psi_\alpha} \), with dense domain containing \( \mathcal{S}(\mathbb{R}) \).
+
+    \item[\textnormal{(iii)}] The spectrum of \( L_t \) is real and discrete:
+    \[
+    \operatorname{Spec}(L_t) = \{ \lambda_n \}_{n=1}^\infty \subset \mathbb{R}, \quad \lambda_n \to 0,
+    \]
+    with each eigenvalue \( \lambda_n \in \mathbb{R} \) of finite multiplicity, and \( 0 \) the only possible accumulation point.
+
+    \item[\textnormal{(iv)}] There exists an orthonormal basis \( \{ \psi_n \}_{n=1}^\infty \subset H_{\Psi_\alpha} \) of eigenfunctions for \( L_t \), with
+    \[
+    L_t \psi_n = \lambda_n \psi_n.
+    \]
+\end{enumerate}
+
+\noindent
+Thus, the mollified convolution operator \( L_t \) admits a complete discrete spectral decomposition on \( H_{\Psi_\alpha} \), forming the basis for trace computations and determinant regularization.
+\end{proposition}
+% 

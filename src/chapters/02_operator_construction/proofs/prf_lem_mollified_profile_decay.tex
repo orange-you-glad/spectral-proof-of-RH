@@ -1,0 +1,61 @@
+\begin{proof}[Proof of Lemma~\ref{lem:mollified-profile-decay}]
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define the mollified profile
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \cdot \phi(\lambda), \quad t > 0.
+\]
+
+\medskip
+\noindent\textbf{(i) Gaussian Envelope and Schwartz Regularity.}
+By Lemma~\ref{lem:xi-growth-bound}, \( \phi \in PW_\pi(\mathbb{R}) \) and satisfies
+\[
+|\phi(\lambda)| \le C\, e^{\frac{\pi}{2} |\lambda|}, \quad \forall \lambda \in \mathbb{R}.
+\]
+Hence,
+\[
+|\phi_t(\lambda)| \le C\, e^{-t\lambda^2 + \frac{\pi}{2} |\lambda|}.
+\]
+Completing the square:
+\[
+-t\lambda^2 + \frac{\pi}{2}|\lambda| \le -\tfrac{t}{2}\lambda^2 + \tfrac{\pi^2}{8t},
+\]
+so
+\[
+|\phi_t(\lambda)| \le C_t\, e^{-a_t \lambda^2}, \quad \text{with } C_t := C e^{\pi^2/8t}, \quad a_t := t/2.
+\]
+Thus, \( \phi_t \in \mathcal{S}(\mathbb{R}) \), and its inverse Fourier transform
+\[
+k_t(x) := \widehat{\phi_t}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \phi_t(\lambda)\, d\lambda
+\]
+also lies in \( \mathcal{S}(\mathbb{R}) \); hence \( k_t \) is smooth, real-valued, even, and rapidly decreasing.
+
+\medskip
+\noindent\textbf{(ii) Integrability and Weighted Decay.}
+Since \( \phi_t \in \mathcal{S}(\mathbb{R}) \), we have \( \phi_t \in L^1(\mathbb{R}) \cap L^2(\mathbb{R}) \), and therefore \( k_t \in \mathcal{S}(\mathbb{R}) \subset L^1(\mathbb{R}, e^{\alpha |x|} dx) \) for all \( \alpha > \pi \).
+
+\medskip
+\noindent\textbf{(iii) Pointwise and Local \( L^1 \) Convergence.}
+As \( t \to 0^+ \), we have pointwise:
+\[
+\phi_t(\lambda) \to \phi(\lambda), \quad \forall \lambda \in \mathbb{R}.
+\]
+Fix a compact interval \( I \subset \mathbb{R} \). Since \( \phi \in C(\mathbb{R}) \), the family \( \{\phi_t\} \) is dominated on \( I \), and for any \( \lambda \in I \),
+\[
+|\phi_t(\lambda) - \phi(\lambda)| \le |\phi(\lambda)| \cdot |1 - e^{-t\lambda^2}| \to 0.
+\]
+Thus, by dominated convergence,
+\[
+\int_I |\phi_t(\lambda) - \phi(\lambda)|\, d\lambda \to 0.
+\]
+
+\medskip
+\noindent\textbf{(iv) Operator-Theoretic Consequence.}
+The inverse transforms \( k_t \in \mathcal{S}(\mathbb{R}) \cap L^1(\mathbb{R}, e^{\alpha |x|} dx) \) define convolution operators
+\[
+L_t f(x) := \int_{\mathbb{R}} k_t(x - y) f(y)\, dy
+\]
+that are bounded, self-adjoint, and trace class on \( H_{\Psi_\alpha} \) by Simon’s criterion.
+
+\medskip
+\noindent\textbf{Conclusion.}
+The mollified spectral profiles \( \phi_t \in \mathcal{S}(\mathbb{R}) \) form an admissible family for regularizing the canonical profile \( \phi \), yielding trace-class convolution operators \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) and strong analytic convergence toward \( L_{\mathrm{sym}} \).
+\end{proof}

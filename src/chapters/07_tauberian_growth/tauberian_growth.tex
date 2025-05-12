@@ -1,0 +1,72 @@
+\section{Tauberian Growth and Spectral Asymptotics}
+\label{sec:tauberian-growth}
+
+\input{chapters/07_tauberian_growth/intro}
+
+%------------------------------------------------------------------
+\subsection{Definitions}
+% === Tauberian framework: Laplace growth and spectral inversion ===
+
+\input{chapters/07_tauberian_growth/defs/def_tauberian_theorem}  % Korevaar's Tauberian setup
+
+%------------------------------------------------------------------
+\subsection{Tauberian Lemmas and Asymptotic Estimates}
+% === Spectral growth bounds from Laplace transforms and heat trace asymptotics ===
+
+\input{chapters/07_tauberian_growth/lems/lem_spectral_convexity_estimate}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_spectral_convexity_estimate}
+
+\input{chapters/07_tauberian_growth/lems/lem_korevaar_tauberian_application}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_korevaar_tauberian_application}
+
+\input{chapters/07_tauberian_growth/lems/lem_tauberian_application_to_heat_trace}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_tauberian_application_to_heat_trace}
+
+\input{chapters/07_tauberian_growth/lems/lem_rigorous_tauberian_application}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_rigorous_tauberian_application}
+
+\input{chapters/07_tauberian_growth/lems/lem_laplace_kernel_growth_class}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_laplace_kernel_growth_class}
+
+\input{chapters/07_tauberian_growth/lems/lem_tauberian_log_correction}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_tauberian_log_correction}
+
+\input{chapters/07_tauberian_growth/lems/lem_explicit_korevaar_tauberian_bound}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_explicit_korevaar_tauberian_bound}
+
+% --- Verify all Korevaar Tauberian hypotheses are satisfied ---
+\input{chapters/07_tauberian_growth/lems/lem_korevaar_tauberian_constants_verified}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_korevaar_tauberian_constants_verified}
+
+% --- Functional framework link ---
+\begin{remark}[Functional Class for Tauberian Inversion]
+Let \( \Theta(t) := \operatorname{Tr}(e^{-tL^2_{\mathrm{sym}}}) \) denote the heat trace. Proposition~6.7 implies that
+\[
+\Theta(t) \sim \frac{1}{\sqrt{4\pi t}}\log\left(\frac{1}{t}\right)
+\quad \text{as } t \to 0^+.
+\]
+This places \( \Theta \in \mathcal{R}_{1/2}^{\log} \), the class of regularly varying functions of index \( 1/2 \), modulated by a logarithmic term. Its Laplace–Stieltjes inverse, the eigenvalue counting function \( N(\Lambda) \), lies in \( \mathcal{R}_{1/2}^{\log}(\infty) \), with refined asymptotic expansion
+\[
+N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi}\log \Lambda + O(\sqrt{\Lambda}),
+\quad \text{as } \Lambda \to \infty.
+\]
+This is justified by Korevaar's remainder-enhanced Tauberian theorems~\cite[Ch.~III, §5]{Korevaar2004Tauberian}.
+\end{remark}
+
+%------------------------------------------------------------------
+\subsection{Spectral Uniqueness via Tauberian Control}
+% === Inverse application: spectral growth fully encodes zeta zeros ===
+
+\input{chapters/07_tauberian_growth/lems/lem_inverse_spectral_uniqueness}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_inverse_spectral_uniqueness}
+
+%------------------------------------------------------------------
+\subsection{Zeta-Theoretic Consistency}
+% === Spectral asymptotics match Riemann zero-counting asymptotics ===
+
+\input{chapters/07_tauberian_growth/cors/cor_zeta_compatible_spectral_growth}
+\input{chapters/07_tauberian_growth/proofs/prf_cor_zeta_compatible_spectral_growth}
+
+%------------------------------------------------------------------
+
+\input{chapters/07_tauberian_growth/summary}

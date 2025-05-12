@@ -1,0 +1,25 @@
+\begin{proof}[Proof of Lemma~\ref{lem:det-zero-implies-spectrum}]
+Let \( T \in \mathcal{C}_1(H) \) be compact and self-adjoint. Then its spectrum consists of a discrete set of real eigenvalues \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \), accumulating only at zero.
+
+The Carleman zeta-regularized Fredholm determinant admits the entire Hadamard product expansion:
+\[
+\det\nolimits_{\zeta}(I - \lambda T) = \prod_{n=1}^\infty (1 - \lambda \mu_n),
+\]
+which converges absolutely on compact subsets of \( \mathbb{C} \) since \( \mu_n \to 0 \) and \( T \in \mathcal{C}_1(H) \).
+
+\paragraph{Step 1: Determinant Vanishing Implies Spectral Pole.}
+Suppose \( \det\nolimits_{\zeta}(I - \lambda T) = 0 \) at \( \lambda = \lambda_0 \in \mathbb{C} \setminus \{0\} \). Then there exists some \( n \in \mathbb{N} \) such that:
+\[
+1 - \lambda_0 \mu_n = 0 \quad \Longrightarrow \quad \lambda_0 = \mu_n^{-1}.
+\]
+
+\paragraph{Step 2: Inversion and Spectral Inclusion.}
+It follows that \( \mu_n = \lambda_0^{-1} \in \operatorname{Spec}(T) \), and hence \( \lambda_0 \in \operatorname{Spec}(T)^{-1} \). In particular, \( \lambda_0^{-1} \) is an eigenvalue of \( T \), completing the implication.
+
+\paragraph{Conclusion.}
+Zeros of the regularized determinant correspond precisely to the nonzero reciprocal eigenvalues of \( T \). Therefore,
+\[
+\lambda \in \mathbb{C}, \; \det\nolimits_{\zeta}(I - \lambda T) = 0 \quad \Longrightarrow \quad \lambda^{-1} \in \operatorname{Spec}(T),
+\]
+as claimed.
+\end{proof}

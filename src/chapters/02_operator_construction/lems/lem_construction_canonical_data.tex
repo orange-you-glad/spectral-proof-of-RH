@@ -1,0 +1,44 @@
+\begin{lemma}[Uniqueness of Construction from Fixed Analytic Data]
+\label{lem:construction_canonical_data}
+Let \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|}\, dx) \) for fixed \( \alpha > \pi \), and let \( \widehat{\Xi} \in \mathcal{S}'(\mathbb{R}) \) denote the inverse Fourier transform of the canonical profile
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+Let \( \eta \in \mathcal{S}(\mathbb{R}) \) be a non-negative mollifier satisfying
+\[
+\eta \ge 0, \quad \int_{\mathbb{R}} \eta(x)\, dx = 1,
+\]
+and define the rescaled family \( \eta_\epsilon(x) := \frac{1}{\epsilon} \eta\left( \frac{x}{\epsilon} \right) \), with \( \epsilon > 0 \). Define mollified spatial kernels via convolution:
+\[
+\widehat{\Xi}_\epsilon(x) := (\eta_\epsilon * \widehat{\Xi})(x),
+\]
+and the associated convolution operators:
+\[
+(L_\epsilon f)(x) := \int_{\mathbb{R}} \widehat{\Xi}_\epsilon(x - y)\, f(y)\, dy.
+\]
+
+Then:
+\begin{enumerate}
+  \item[\textnormal{(i)}] \textbf{Trace-Class Structure.} For each \( \epsilon > 0 \), the kernel \( \widehat{\Xi}_\epsilon \in \mathcal{S}(\mathbb{R}) \cap L^1(\mathbb{R}, e^{\alpha |x|} dx) \), and thus the operator \( L_\epsilon \) extends to a compact, self-adjoint, trace-class operator on \( H_{\Psi_\alpha} \):
+  \[
+  L_\epsilon \in \mathcal{C}_1(H_{\Psi_\alpha}).
+  \]
+  This follows from Simon’s trace-norm kernel criterion under conjugation (see \cite[Thm.~3.1]{Simon2005TraceIdeals}).
+
+  \item[\textnormal{(ii)}] \textbf{Trace-Norm Convergence and Uniqueness.} The trace-norm limit
+  \[
+  L_{\mathrm{sym}} := \lim_{\epsilon \to 0^+} L_\epsilon \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha})
+  \]
+  exists uniquely and is independent of the specific choice of mollifier \( \eta \), provided it satisfies the standard conditions above.
+
+  This convergence follows from:
+  \begin{itemize}
+    \item Pointwise convergence \( \widehat{\Xi}_\epsilon(x) \to \widehat{\Xi}(x) \) almost everywhere;
+    \item Uniform exponential decay of \( \widehat{\Xi}_\epsilon \in L^1(\mathbb{R}, e^{\alpha |x|} dx) \), ensuring a common dominating kernel;
+    \item Dominated convergence theorem applied to the conjugated kernels in \( L^1(\mathbb{R}^2) \), yielding trace-norm convergence of integral operators.
+  \end{itemize}
+
+  The resulting limit defines the canonical operator \( L_{\mathrm{sym}} \), depending only on the analytic data \( (\Xi, \alpha) \), and not on the mollifier used to regularize \( \widehat{\Xi} \). This intrinsic construction confirms the spectral origin of \( L_{\mathrm{sym}} \) from the Riemann zeta function.
+\end{enumerate}
+\end{lemma}

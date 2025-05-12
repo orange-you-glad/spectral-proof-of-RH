@@ -1,0 +1,36 @@
+\begin{definition}[Spectral Decomposition of Compact Self-Adjoint Operators]
+\label{def:spectral-decomposition-compact}
+Let \( H \) be a separable complex Hilbert space, and let \( T \in \mathcal{C}_1(H) \) be a compact, self-adjoint operator.
+
+Then there exists an orthonormal basis \( \{ e_n \}_{n=1}^\infty \subset H \) consisting of eigenvectors of \( T \), with associated eigenvalues \( \{ \lambda_n \}_{n=1}^\infty \subset \mathbb{R} \), counted with algebraic multiplicity and satisfying \( \lambda_n \to 0 \) as \( n \to \infty \), such that for all \( f \in H \),
+\[
+T f = \sum_{n=1}^\infty \lambda_n \langle f, e_n \rangle e_n,
+\]
+where the series converges in the norm topology of \( H \).
+
+\medskip
+\noindent
+This diagonalization expresses \( T \) via the spectral theorem as a normal operator with pure point spectrum and no continuous or residual part. In particular:
+\begin{itemize}
+  \item The trace is given by
+  \[
+  \operatorname{Tr}(T) = \sum_{n=1}^\infty \lambda_n,
+  \]
+  which converges absolutely by the trace-class condition;
+
+  \item The trace norm satisfies
+  \[
+  \|T\|_{\mathcal{C}_1} = \sum_{n=1}^\infty |\lambda_n|;
+  \]
+
+  \item The spectral functional calculus applies: for any holomorphic function \( \phi \) defined on a neighborhood of the spectrum \( \{\lambda_n\} \), the operator \( \phi(T) \colon H \to H \) is given by
+  \[
+  \phi(T) f = \sum_{n=1}^\infty \phi(\lambda_n) \langle f, e_n \rangle e_n.
+  \]
+\end{itemize}
+
+\medskip
+\noindent
+This Hilbert–Schmidt spectral resolution forms the analytic foundation for trace expansions, heat kernel asymptotics, spectral zeta functions, and Fredholm or Carleman determinant identities associated with \( T \).
+\end{definition}
+% 

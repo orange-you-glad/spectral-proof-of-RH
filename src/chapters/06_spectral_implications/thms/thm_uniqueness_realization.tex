@@ -1,0 +1,31 @@
+\begin{theorem}[Uniqueness of Spectral Realization]
+\label{thm:uniqueness_realization}
+Let \( L \in \mathcal{S}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} \, dx), \qquad \alpha > \pi.
+\]
+
+Suppose \( L \) satisfies the canonical zeta-regularized determinant identity:
+\[
+\det\nolimits_\zeta(I - \lambda L) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\quad \text{for all } \lambda \in \mathbb{C},
+\]
+where \( \Xi(s) \) is the completed Riemann zeta function, entire of order one and exact exponential type \( \pi \), and the determinant is normalized so that
+\[
+\det\nolimits_\zeta(I) = 1.
+\]
+
+Then \( L \) is unitarily equivalent to the canonical operator \( L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha}) \). That is, there exists a unitary operator
+\[
+U \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha} \quad \text{such that} \quad L = U L_{\mathrm{sym}} U^{-1}.
+\]
+
+\medskip
+\noindent
+In particular:
+\begin{itemize}
+  \item The spectrum of \( L \), including algebraic multiplicities, coincides with that of \( L_{\mathrm{sym}} \);
+  \item \( L_{\mathrm{sym}} \) is the unique (up to unitary equivalence) compact, self-adjoint trace-class realization of the completed zeta function’s canonical spectral determinant;
+  \item The analytic data of \( \Xi(s) \), via its Hadamard factorization and trace normalization, rigidly determines the operator structure of \( L_{\mathrm{sym}} \).
+\end{itemize}
+\end{theorem}

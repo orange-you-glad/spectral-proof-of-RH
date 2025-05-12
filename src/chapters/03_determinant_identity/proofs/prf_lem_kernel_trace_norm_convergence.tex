@@ -1,0 +1,41 @@
+\begin{proof}[Proof of Lemma~\ref{lem:kernel-trace-norm-convergence}]
+Let \( \varphi_t(\lambda) := e^{-t\lambda^2} \Xi\left(\tfrac{1}{2} + i\lambda\right) \), and define the limiting profile \( \varphi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right) \). Set
+\[
+K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda, \qquad
+K(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \varphi(\lambda)\, d\lambda.
+\]
+
+Let \( \Psi_\alpha(x) := e^{\alpha |x|} \), with \( \alpha > \pi \), and define the conjugated kernels
+\[
+\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}, \qquad
+\widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+\]
+
+\paragraph{Step 1: Pointwise convergence and uniform integrability.}
+By Lemma~\ref{lem:mollified-profile-decay}, the mollifiers \( \varphi_t \to \varphi \) converge pointwise on \( \mathbb{R} \), and are uniformly bounded by a Gaussian envelope. The inverse Fourier transforms \( K_t \to K \) converge pointwise and are uniformly dominated by a Schwartz-class envelope. Then \( \widetilde{K}_t(x,y) \to \widetilde{K}(x,y) \) pointwise on \( \mathbb{R}^2 \), and by Lemma~\ref{lem:uniform-L1-conjugated-kernel}, there exists a fixed \( M(x,y) \in L^1(\mathbb{R}^2) \) such that
+\[
+|\widetilde{K}_t(x,y)| \le M(x,y) \quad \text{for all } t > 0.
+\]
+
+\paragraph{Step 2: Dominated convergence in trace-norm.}
+By the dominated convergence theorem,
+\[
+\| \widetilde{K}_t - \widetilde{K} \|_{L^1(\mathbb{R}^2)} \to 0 \quad \text{as } t \to 0^+.
+\]
+Since \( \widetilde{L}_t, \widetilde{L} \) are integral operators on \( L^2(\mathbb{R}) \) with kernels \( \widetilde{K}_t, \widetilde{K} \), we apply Simon’s trace-norm kernel bound \cite[Theorem~3.1]{Simon2005TraceIdeals}:
+\[
+\| \widetilde{L}_t - \widetilde{L} \|_{\mathcal{C}_1(L^2)} = \| \widetilde{K}_t - \widetilde{K} \|_{L^1(\mathbb{R}^2)} \to 0.
+\]
+
+\paragraph{Step 3: Transfer to the weighted space.}
+Let \( U \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}) \) be the unitary transformation \( Uf(x) := \sqrt{\Psi_\alpha(x)} f(x) \). Then
+\[
+L_t = U^{-1} \widetilde{L}_t U, \qquad L_{\mathrm{sym}} = U^{-1} \widetilde{L} U.
+\]
+By unitary invariance of Schatten norms,
+\[
+\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1(H_{\Psi_\alpha})} = \| \widetilde{L}_t - \widetilde{L} \|_{\mathcal{C}_1(L^2)} \to 0,
+\]
+as \( t \to 0^+ \). This completes the proof.
+\end{proof}
+%  

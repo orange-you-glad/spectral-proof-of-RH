@@ -1,0 +1,41 @@
+\subsection*{Introduction}
+
+This chapter establishes the spectral bijection between the nontrivial zeros of the Riemann zeta function and the nonzero spectrum of the canonical trace-class operator \( L_{\mathrm{sym}} \). Each nontrivial zero
+\[
+\rho = \tfrac{1}{2} + i\gamma
+\]
+is mapped to an eigenvalue
+\[
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} \in \mathbb{R},
+\]
+realizing the completed zeta function \( \Xi(s) \) spectrally through the canonical determinant identity
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
+\]
+
+\medskip
+\noindent
+This correspondence is developed through the following modular structure:
+\begin{itemize}
+  \item \textbf{Injection:} Every nontrivial zero of \( \zeta(s) \) yields a nonzero eigenvalue of \( L_{\mathrm{sym}} \) \textbf{(Lemma~\ref{lem:zero-to-eigenvalue-injection})}.
+  \item \textbf{Surjection:} Every nonzero eigenvalue of \( L_{\mathrm{sym}} \) arises from such a zero \textbf{(Lemma~\ref{lem:spectral_exhaustivity})}.
+  \item \textbf{Multiplicity:} The order of each zero matches the algebraic multiplicity of the corresponding eigenvalue \textbf{(Lemma~\ref{lem:spectral-multiplicity-matching})}.
+  \item \textbf{Symmetry:} The spectrum of \( L_{\mathrm{sym}} \) is symmetric about the origin \textbf{(Lemma~\ref{lem:spectral-symmetry})}, reflecting the functional identity \( \zeta(s) = \zeta(1 - s) \).
+  \item \textbf{Bijection:} The map \( \rho \mapsto \mu_\rho \) defines a multiplicity-preserving bijection between the nontrivial zeros and the nonzero spectrum \textbf{(Lemma~\ref{lem:spectral_bijection_consistency})}.
+  \item \textbf{Spectral Measure:} The spectral heat trace expansion recovers \( \Xi \) via integration over the spectral measure \textbf{(Lemma~\ref{lem:spectral-heat-trace-representation})}.
+  \item \textbf{Spectrum-Reality Equivalence:} The spectrum of \( L_{\mathrm{sym}} \) is real if and only if the Riemann Hypothesis holds \textbf{(Lemma~\ref{lem:spectrum-reality-implies-rh})}.
+\end{itemize}
+
+\medskip
+\noindent
+Theorem~\ref{thm:spectral-zero-bijection-revised} consolidates these results into a canonical spectral identity:
+\[
+\mathrm{Spec}(L_{\mathrm{sym}}) \setminus \{0\} = \left\{ \mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} : \zeta(\rho) = 0 \right\},
+\]
+with algebraic multiplicities preserved. This bijection underpins the spectral reformulation of the Riemann Hypothesis in Chapter~\ref{sec:spectral-implications}.
+
+\medskip
+\noindent\textbf{Canonical Spectral Schematic:} See Figure~\ref{fig:spectral-bijection-table}.
+
+\input{chapters/04_spectral_correspondence/schematic_table}
+%  

@@ -1,0 +1,38 @@
+\begin{proof}[Proof of Lemma~\ref{lem:hadamard_fredholm_multiplicity}]
+Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \), and define
+\[
+g(\lambda) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
+\]
+By Theorem~\ref{thm:det-identity-revised}, we have \( f(\lambda) = g(\lambda) \) as entire functions.
+
+\paragraph{Step 1: Zeros of the Hadamard Product.}
+The Hadamard factorization of \( \Xi\left( \tfrac{1}{2} + i\lambda \right) \) gives
+\[
+g(\lambda) = \prod_{\rho \ne \tfrac{1}{2}} \left(1 - \frac{\lambda}{\lambda_\rho}\right) \exp\left( \frac{\lambda}{\lambda_\rho} \right),
+\]
+where \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \). The multiplicity of each zero at \( \lambda_\rho \) is equal to the order of vanishing of \( \zeta \) at \( \rho \), i.e.,
+\[
+\operatorname{ord}_{\lambda_\rho}(g) = \operatorname{ord}_\rho(\Xi).
+\]
+
+\paragraph{Step 2: Zeros in the Fredholm Product.}
+The Fredholm determinant has the canonical product expansion:
+\[
+f(\lambda) = \prod_{\mu \in \Spec(L_{\mathrm{sym}})} (1 - \lambda \mu)^{\operatorname{mult}_{\mathrm{spec}}(\mu)},
+\]
+where \(\mu = \mu_\rho = 1/\lambda_\rho\). Hence the zero of \( f \) at \( \lambda = \lambda_\rho \) corresponds to the pole of the logarithmic derivative
+\[
+\frac{d}{d\lambda} \log f(\lambda) = \sum_\mu \frac{\operatorname{mult}_{\mathrm{spec}}(\mu) \mu}{1 - \lambda \mu},
+\]
+with residue equal to the multiplicity.
+
+\paragraph{Step 3: Equality of Multiplicities.}
+Since \( f = g \) and both are entire of order one with identical zero sets, the order of the zero of \( g \) at \( \lambda_\rho \) must match the multiplicity of the pole in the trace-log derivative, i.e.,
+\[
+\operatorname{mult}_{\mathrm{spec}}(\mu_\rho) = \operatorname{ord}_\rho(\Xi).
+\]
+
+\paragraph{Conclusion.}
+Hadamard multiplicities from the zeros of \( \Xi \) match the spectral multiplicities of the corresponding eigenvalues of \( L_{\mathrm{sym}} \). This completes the proof.
+\end{proof}
+% 

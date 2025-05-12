@@ -1,0 +1,45 @@
+\begin{proof}[Proof of Lemma~\ref{lem:laplace-integrability-heat-trace}]
+Let \( f(t) := \operatorname{Tr}\left(e^{-t L_{\mathrm{sym}}^2}\right) \). By Lemma~\ref{lem:heat-trace-expansion}, \( f(t) \) is positive, smooth for \( t > 0 \), and admits the singular short-time expansion
+\[
+f(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \frac{c_0}{\sqrt{t}} + o(t^{-1/2}) \quad \text{as } t \to 0^+,
+\]
+while Lemma~\ref{lem:hk-upper-bound} provides the exponential decay
+\[
+f(t) \leq C e^{-c t} \quad \text{as } t \to \infty,
+\]
+for some constants \( c, C > 0 \).
+
+\paragraph{Step 1: Convergence near \( t = 0 \).}
+We estimate for small \( t \in (0, t_0] \), using the asymptotic structure of \( f(t) \),
+\[
+\left| \frac{e^{-\lambda^2 t}}{t} f(t) \right|
+\leq \frac{1}{t} \left( \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \frac{C_1}{\sqrt{t}} \right)
+= \frac{1}{t^{3/2}} \left( \log\left( \frac{1}{t} \right) + C_1 \right),
+\]
+which is integrable on \( (0, t_0] \) since the function \( t^{-3/2} \log(1/t) \in L^1(0, t_0) \) by standard singular integral estimates.
+
+\paragraph{Step 2: Convergence near \( t = \infty \).}
+For \( t \geq t_0 \), we use the exponential decay of \( f(t) \) and boundedness of \( \lambda \mapsto e^{-\lambda^2 t} \) for fixed \( \lambda \in \mathbb{C} \):
+\[
+\left| \frac{e^{-\lambda^2 t}}{t} f(t) \right| \leq \frac{C e^{-\operatorname{Re}(\lambda^2) t}}{t} \in L^1(t_0, \infty),
+\]
+since exponential decay dominates the \( t^{-1} \) denominator for all \( \lambda \in \mathbb{C} \).
+
+\paragraph{Step 3: Entirety in \( \lambda \).}
+For each fixed \( t > 0 \), the map \( \lambda \mapsto e^{-\lambda^2 t} \) is entire, and \( f(t) \) is independent of \( \lambda \). Hence the Laplace-type integral
+\[
+F(\lambda) := \int_0^\infty \frac{e^{-\lambda^2 t}}{t} f(t)\, dt
+\]
+is an entire function by dominated convergence on compact subsets of \( \lambda \in \mathbb{C} \), with majorant derived from Steps 1 and 2.
+
+\paragraph{Conclusion.}
+The integral
+\[
+\int_0^\infty \frac{e^{-\lambda^2 t}}{t} \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \, dt
+\]
+converges absolutely and defines an entire function of \( \lambda \in \mathbb{C} \), validating the Fredholm determinant identity
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \exp\left( -\int_0^\infty \frac{e^{-\lambda^2 t}}{t} \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\, dt \right),
+\]
+as an entire function. This confirms the global analytic well-posedness of the determinant via heat trace regularization.
+\end{proof}

@@ -1,0 +1,70 @@
+\subsection*{Introduction}
+
+This chapter establishes the spectral asymptotics of the canonical compact, self-adjoint, trace-class operator
+\[
+L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}),
+\]
+via Laplace–Tauberian inversion of its squared heat semigroup. Using refined small-time asymptotics of the heat trace
+\[
+\Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}),
+\]
+we recover precise growth estimates for the eigenvalue counting function
+\[
+N(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\},
+\]
+and analytically verify compatibility with the Riemann–von Mangoldt zero-counting formula.
+
+\paragraph{Objectives.}
+\begin{itemize}
+  \item \textit{Spectral Growth Bounds.}  
+  From the heat trace envelope
+  \[
+  \Theta(t) \asymp t^{-1/2} \quad \text{as } t \to 0^+,
+  \]
+  established in Chapter~\ref{sec:heat-kernel-asymptotics}, we deduce via Lemma~\ref{lem:spectral_convexity_estimate} that
+  \[
+  N(\Lambda) = O(\Lambda^{1/2+\varepsilon}) \quad \text{for all } \varepsilon > 0,
+  \]
+  confirming subconvex spectral growth. The effective spectral dimension is \( d = 1 \), consistent with a leading law \( N(\Lambda) \sim \Lambda^{1/2} \log \Lambda \).
+
+  \item \textit{Tauberian Inversion.}  
+  Applying Korevaar’s refinement of Karamata theory (Lemmas~\ref{lem:tauberian-heat-trace-application},~\ref{lem:log-corrected-tauberian-application},~\ref{lem:tauberian-log-correction}), we invert the Laplace representation
+  \[
+  \Theta(t) = \int_0^\infty e^{-t\lambda} \, dN(\lambda),
+  \]
+  and obtain the precise growth law
+  \[
+  N(\Lambda) \sim \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda \quad \text{as } \Lambda \to \infty.
+  \]
+  This follows from the classification \( \Theta \in \mathcal{R}_{1/2}^{\log} \), the space of regularly varying functions of index \( \frac{1}{2} \) modulated by a logarithmic factor.
+
+  \item \textit{Zeta-Theoretic Compatibility.}  
+  The derived growth law exactly matches the Riemann–von Mangoldt formula for the nontrivial zeros of the Riemann zeta function. This analytic agreement, established in Corollary~\ref{cor:zeta-compatibility}, provides direct confirmation that the spectrum of \( L_{\mathrm{sym}} \) encodes the zero distribution of \( \zeta(s) \).
+\end{itemize}
+
+\paragraph{Analytic Inputs from Chapter~\ref{sec:heat-kernel-asymptotics}.}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|c|X|X|}
+\hline
+\textbf{Source} & \textbf{Analytic Quantity} & \textbf{Role in This Chapter} \\
+\hline
+\textbf{Proposition~\ref{prop:two-sided-heat-trace-bounds}} &
+\( \operatorname{Tr}(e^{-tL^2}) \asymp t^{-1/2} \) &
+Ensures admissibility for Tauberian envelope bounds \\
+
+\textbf{Proposition~\ref{prop:short_time_heat_expansion}} &
+\( \operatorname{Tr}(e^{-tL^2}) = \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) &
+Triggers Korevaar inversion with logarithmic precision \\
+
+\textbf{Lemma~\ref{lem:log-derivative-determinant}} &
+Spectral zeta representation via heat trace &
+Links eigenvalue asymptotics to determinant structure \\
+
+\textbf{Remark~\ref{rem:spectral-dimension}} &
+Spectral dimension \( d = 1 \), with \( N(\lambda) \sim \lambda^{1/2} \log \lambda \) &
+Anchors growth law in RH-compatible zero distribution \\
+\hline
+\end{tabularx}
+\end{center}

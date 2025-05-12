@@ -1,0 +1,44 @@
+\begin{proof}[Proof of Lemma~\ref{lem:log-derivative-determinant}]
+Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator. The spectral zeta function is defined for \( \Re(s) > \tfrac{1}{2} \) by
+\[
+\zeta_L(s) := \sum_{\mu_n \neq 0} \mu_n^{-2s},
+\]
+where \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \) are the eigenvalues of \( L \). By standard spectral theory and trace-class integrability, \( \zeta_L(s) \) admits a meromorphic continuation to \( \mathbb{C} \) with a regular point at \( s = 0 \) (cf.~\cite[Ch.~3]{Simon2005TraceIdeals}).
+
+\paragraph{Step 1: Zeta-Regularized Determinant.}
+The logarithm of the zeta-regularized determinant is defined by
+\[
+\log \det\nolimits_\zeta(L^2) := -\left. \frac{d}{ds} \zeta_L(s) \right|_{s=0},
+\]
+provided \( \zeta_L(s) \) is analytic at \( s = 0 \), which is ensured by the short-time expansion of the heat trace and the spectral convergence properties of \( L \).
+
+\paragraph{Step 2: Mellin Representation and Heat Trace Regularization.}
+The spectral zeta function admits the integral representation:
+\[
+\zeta_L(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s - 1} \operatorname{Tr}(e^{-t L^2}) \, dt.
+\]
+To extract \( \zeta_L'(0) \), one subtracts a parametrix \( P(t) \) matching the singular short-time expansion:
+\[
+P(t) \sim \sum_{n=0}^{N} A_n t^{n - \frac{1}{2}}, \qquad t \to 0^+.
+\]
+Differentiation and evaluation at \( s = 0 \) yields:
+\[
+\log \det\nolimits_\zeta(L^2)
+= -\int_0^\infty \frac{\operatorname{Tr}(e^{-t L^2}) - P(t)}{t} \, dt,
+\]
+justified by termwise convergence of the subtraction, as established in Appendix~\ref{app:heat-kernel-construction}.
+
+\paragraph{Step 3: Leading Singular Contribution.}
+By Proposition~\ref{prop:short_time_heat_expansion}, the heat trace satisfies:
+\[
+\operatorname{Tr}(e^{-t L^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + \cdots \quad \text{as } t \to 0^+.
+\]
+The leading term \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) is non-integrable and must be cancelled by \( P(t) \). Its coefficient thus governs the divergence of the logarithmic derivative, and encodes the singularity structure of the determinant.
+
+\paragraph{Conclusion.}
+The zeta-regularized determinant satisfies
+\[
+\log \det\nolimits_\zeta(L^2) = -\int_0^\infty \frac{\operatorname{Tr}(e^{-t L^2}) - P(t)}{t} \, dt,
+\]
+with \( P(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \), ensuring convergence and capturing the dominant analytic behavior. This completes the proof.
+\end{proof}

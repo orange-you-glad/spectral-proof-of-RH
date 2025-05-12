@@ -1,0 +1,30 @@
+\begin{definition}[Carleman \(\zeta\)-Regularized Determinant]
+\label{def:carleman-zeta-determinant}
+Let \( H \) be a separable complex Hilbert space, and let \( T \colon H \to H \) be a compact operator such that \( T^n \in \mathcal{C}_1(H) \) for all \( n \ge 1 \); that is, \( T \in \bigcap_{n \ge 1} \mathcal{C}_n(H) \), the ideal of trace-class regularizable compact operators.
+
+\medskip
+\noindent
+The Carleman \(\zeta\)-regularized determinant of the operator \( I - \lambda T \) is defined by the trace-exponential formula:
+\[
+\det\nolimits_\zeta(I - \lambda T) := \exp\left( - \sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(T^n) \right),
+\]
+which converges absolutely for \( |\lambda| < R^{-1} \), where
+\[
+R := \limsup_{n \to \infty} \|T^n\|_1^{1/n}
+\]
+is the exponential growth rate of the Schatten trace powers.
+
+\medskip
+\noindent
+If \( T \in \mathcal{C}_1(H) \), then the series converges for all \( \lambda \in \mathbb{C} \), and \( \det\nolimits_\zeta(I - \lambda T) \) defines an entire function of order one and finite exponential type. In this case, the Carleman determinant agrees with the classical Fredholm determinant:
+\[
+\det\nolimits_\zeta(I - \lambda T)
+= \prod_{n=1}^\infty (1 - \lambda \lambda_n),
+\]
+where \( \{ \lambda_n \} \subset \mathbb{C} \) are the eigenvalues of \( T \), counted with multiplicity.
+
+\medskip
+\noindent
+This construction is a specialization of the general zeta-regularization procedure, applied to trace-class perturbations of the identity. It provides a rigorous analytic foundation for determinant identities of compact operators and plays a central role in spectral reformulations of zeta functions in analytic number theory.
+\end{definition}
+% 

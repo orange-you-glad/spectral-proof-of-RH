@@ -1,0 +1,31 @@
+\begin{lemma}[Exponential Decay of the Inverse Fourier Transform of \( \Xi \)]
+\label{lem:decay-inverse-fourier-xi}
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \Xi(s) \) is the completed Riemann zeta function. Define the inverse Fourier transform
+\[
+k(x) := \widehat{\phi}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \phi(\lambda)\, d\lambda.
+\]
+
+Then \( k \in C^\infty(\mathbb{R}) \) is real-valued, even, and satisfies the exponential decay estimate:
+\[
+|k(x)| \le C_\alpha\, e^{-\alpha |x|}, \qquad \forall\, x \in \mathbb{R},\quad \text{for any } \alpha > \pi,
+\]
+where \( C_\alpha > 0 \) depends on \( \alpha \), but not on \( x \).
+
+\medskip
+\noindent In particular:
+\begin{itemize}
+    \item \( k \in L^1(\mathbb{R}, \Psi_\alpha(x)\, dx) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \);
+    \item The translation-invariant kernel \( K(x,y) := k(x - y) \) satisfies
+    \[
+    K \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy);
+    \]
+    \item The associated convolution operator
+    \[
+    (Lf)(x) := \int_{\mathbb{R}} k(x - y) f(y)\, dy
+    \]
+    lies in the trace class \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon’s trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+\end{itemize}
+
+\noindent
+This follows from the Paley–Wiener theorem: the exponential type \( \pi \) of \( \phi \) implies that \( \widehat{\phi}(x) \) decays exponentially faster than \( e^{-\alpha |x|} \) for any \( \alpha > \pi \).
+\end{lemma}

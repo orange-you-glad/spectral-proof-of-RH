@@ -1,0 +1,50 @@
+\begin{proof}[Proof of \thmref{thm:existence-Lsym}]
+Fix \( \alpha > \pi \), and define the exponential weight
+\[
+\Psi_\alpha(x) := e^{\alpha |x|}.
+\]
+The associated weighted Hilbert space is
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx).
+\]
+
+\paragraph{(i) Trace-Class Structure of \( L_t \).}
+By \lemref{lem:trace_class_Lt}, for each \( t > 0 \), the convolution operator \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \), and is compact and self-adjoint. The operator is defined via convolution with the inverse Fourier transform of the mollified profile
+\[
+\varphi_t(\lambda) := e^{-t\lambda^2} \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+\paragraph{(ii) Trace-Norm Convergence.}
+By \lemref{lem:trace-norm-convergence-Lt-to-Lsym}, the family \( \{L_t\}_{t > 0} \) converges in trace norm:
+\[
+\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1} \to 0 \quad \text{as } t \to 0^+,
+\]
+for a unique limit \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), since \( \mathcal{C}_1 \) is a Banach space.
+
+\paragraph{(iii) Compactness of the Limit.}
+Trace-norm convergence implies convergence in the operator norm, and the ideal \( \mathcal{K}(H_{\Psi_\alpha}) \) is norm-closed. Therefore,
+\[
+L_{\mathrm{sym}} \in \mathcal{K}(H_{\Psi_\alpha}).
+\]
+
+\paragraph{(iv) Self-Adjointness of the Limit.}
+By \lemref{lem:core-essential-selfadjointness}, the restriction of \( L_{\mathrm{sym}} \) to \( \mathcal{S}(\mathbb{R}) \) is essentially self-adjoint, and its closure defines a unique self-adjoint operator:
+\[
+L_{\mathrm{sym}} = L_{\mathrm{sym}}^*.
+\]
+
+\paragraph{(v) Trace Normalization.}
+By \thmref{thm:trace-zero-Lsym}, the trace of \( L_{\mathrm{sym}} \) vanishes:
+\[
+\operatorname{Tr}(L_{\mathrm{sym}}) = 0.
+\]
+This property canonically fixes the exponential ambiguity in the zeta-regularized determinant:
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+by enforcing the normalization \( \det\nolimits_{\zeta}(I) = 1 \).
+
+\paragraph{Conclusion.}
+The operator \( L_{\mathrm{sym}} \) is compact, trace-class, and self-adjoint on \( H_{\Psi_\alpha} \), with vanishing trace. It arises canonically from the analytic structure of \( \Xi(s) \) as the trace-norm limit of mollified convolution operators. This completes the classification.
+\end{proof}
+% 

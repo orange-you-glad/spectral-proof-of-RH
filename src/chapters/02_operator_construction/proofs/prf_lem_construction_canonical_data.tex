@@ -1,0 +1,40 @@
+\begin{proof}[Proof of Lemma~\ref{lem:construction_canonical_data}]
+Let \( \eta_\epsilon(\lambda) := \frac{1}{\epsilon \sqrt{\pi}} e^{-\lambda^2 / \epsilon^2} \) be the standard Gaussian mollifier. Then:
+\[
+\eta_\epsilon \in \mathcal{S}(\mathbb{R}), \quad \eta_\epsilon \ge 0, \quad \int_{\mathbb{R}} \eta_\epsilon(\lambda)\, d\lambda = 1, \quad \text{and} \quad \eta_\epsilon \to \delta_0 \text{ in } \mathcal{S}' \text{ as } \epsilon \to 0^+.
+\]
+
+Let \( \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right) \), and define its inverse Fourier transform \( \widehat{\Xi}(x) := \phi^\vee(x) \in L^1(\mathbb{R}) \cap L^2(\mathbb{R}) \). Define mollified kernels:
+\[
+\widehat{\Xi}_\epsilon(x) := (\eta_\epsilon * \widehat{\Xi})(x).
+\]
+Then \( \widehat{\Xi}_\epsilon \in \mathcal{S}(\mathbb{R}) \) by standard convolution closure, and decays exponentially for \( \alpha > \pi \).
+
+\medskip
+\noindent\textbf{Step 1: Operator Structure.}
+Define the conjugated kernel:
+\[
+K_\epsilon(x,y) := \frac{\widehat{\Xi}_\epsilon(x - y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}, \quad \text{with } \Psi_\alpha(x) := e^{\alpha |x|}.
+\]
+Then \( K_\epsilon \in L^1(\mathbb{R}^2) \), and the integral operator
+\[
+(L_\epsilon f)(x) := \int_{\mathbb{R}} \widehat{\Xi}_\epsilon(x - y)\, f(y)\, dy
+\]
+lies in \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon’s criterion \cite[Thm.~3.1]{Simon2005TraceIdeals}.
+
+\medskip
+\noindent\textbf{Step 2: Convergence in Trace Norm.}
+Since \( \widehat{\Xi}_\epsilon \to \widehat{\Xi} \) pointwise and in \( L^1_{\mathrm{loc}} \), and each \( \widehat{\Xi}_\epsilon \in L^1(\mathbb{R}, e^{\alpha|x|} dx) \), the conjugated kernels satisfy:
+\[
+K_\epsilon(x,y) \to K(x,y) := \frac{\widehat{\Xi}(x - y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}} \quad \text{in } L^1(\mathbb{R}^2).
+\]
+Hence,
+\[
+\|L_\epsilon - L_{\mathrm{sym}}\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \to 0,
+\]
+where \( L_{\mathrm{sym}} \) is defined by convolution against \( \widehat{\Xi}(x - y) \).
+
+\medskip
+\noindent\textbf{Conclusion.}
+The trace-norm limit \( L_{\mathrm{sym}} := \lim_{\epsilon \to 0^+} L_\epsilon \in \mathcal{C}_1(H_{\Psi_\alpha}) \) exists and is independent of the mollifier \( \eta_\epsilon \). It is canonically determined by the analytic data \( (\Xi, \alpha) \), establishing \( L_{\mathrm{sym}} \) as the unique trace-class convolution operator encoding the completed Riemann zeta function.
+\end{proof}

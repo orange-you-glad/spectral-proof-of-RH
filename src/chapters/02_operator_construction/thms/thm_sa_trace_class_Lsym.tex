@@ -1,0 +1,34 @@
+\begin{theorem}[Self-Adjointness and Trace-Class Structure of \( L_{\mathrm{sym}} \)]
+\label{thm:sa-trace-class-Lsym}
+Let \( L_{\mathrm{sym}} \) be the canonical convolution operator defined as the trace-norm limit of the mollified operators \( L_t \) on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \text{where } \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+\]
+
+Then:
+\begin{enumerate}
+  \item[\textnormal{(i)}] \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), i.e., it is a trace-class operator, obtained as the trace-norm limit
+  \[
+  L_{\mathrm{sym}} = \lim_{t \to 0^+} L_t \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}).
+  \]
+
+  \item[\textnormal{(ii)}] \( L_{\mathrm{sym}} \in \mathcal{K}(H_{\Psi_\alpha}) \), i.e., it is compact, as all trace-class operators are compact.
+
+  \item[\textnormal{(iii)}] \( L_{\mathrm{sym}} \) is self-adjoint:
+  \[
+  L_{\mathrm{sym}} = L_{\mathrm{sym}}^*,
+  \]
+  with domain closure obtained from the symmetric core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \), as established in Lemma~\ref{lem:core-essential-selfadjointness}.
+\end{enumerate}
+
+\medskip
+
+\noindent
+This spectral classification guarantees:
+\begin{itemize}
+  \item The spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \) is discrete, consisting of real eigenvalues of finite multiplicity.
+  \item The spectral theorem applies to \( L_{\mathrm{sym}} \), enabling functional calculus and construction of the semigroup \( e^{-tL_{\mathrm{sym}}^2} \).
+  \item The Fredholm determinant identity derived in Chapter~\ref{sec:determinant-identity} is valid and connects the spectrum of \( L_{\mathrm{sym}} \) with the zeros of the completed Riemann zeta function \( \Xi(s) \).
+\end{itemize}
+\end{theorem}
+% 

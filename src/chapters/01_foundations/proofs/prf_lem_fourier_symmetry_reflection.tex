@@ -1,0 +1,46 @@
+\begin{proof}[Proof of \lemref{lem:fourier-symmetry-reflection}]
+Let \( \phi \colon \mathbb{R} \to \mathbb{R} \) be an even, real-valued function:
+\[
+\phi(\lambda) = \phi(-\lambda), \quad \phi(\lambda) \in \mathbb{R}, \quad \forall \lambda \in \mathbb{R}.
+\]
+
+Define the inverse Fourier transform
+\[
+k(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i \lambda x} \phi(\lambda)\, d\lambda.
+\]
+
+\medskip
+\noindent\textbf{Step 1: Real-Valuedness.}
+We compute:
+\[
+\overline{k(x)} = \frac{1}{2\pi} \int_{\mathbb{R}} e^{-i \lambda x} \phi(\lambda)\, d\lambda.
+\]
+By substituting \( \lambda \mapsto -\lambda \) and using \( \phi(-\lambda) = \phi(\lambda) \), we obtain:
+\[
+\overline{k(x)} = \frac{1}{2\pi} \int_{\mathbb{R}} e^{i \lambda x} \phi(\lambda)\, d\lambda = k(x).
+\]
+Hence, \( k(x) \in \mathbb{R} \) for all \( x \in \mathbb{R} \).
+
+\medskip
+\noindent\textbf{Step 2: Evenness.}
+We compute:
+\[
+k(-x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{-i \lambda x} \phi(\lambda)\, d\lambda.
+\]
+Substituting \( \lambda \mapsto -\lambda \) and again using evenness of \( \phi \), we find:
+\[
+k(-x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{i \lambda x} \phi(\lambda)\, d\lambda = k(x).
+\]
+
+\medskip
+\noindent\textbf{Conclusion.}
+The function \( k \) is real-valued and even. Therefore, the translation-invariant kernel
+\[
+K(x,y) := k(x - y)
+\]
+is symmetric:
+\[
+K(x,y) = k(x - y) = k(y - x) = K(y,x) \in \mathbb{R}.
+\]
+This proves that the associated convolution operator defines a real, symmetric integral operator on any Hilbert space where it is densely defined.
+\end{proof}

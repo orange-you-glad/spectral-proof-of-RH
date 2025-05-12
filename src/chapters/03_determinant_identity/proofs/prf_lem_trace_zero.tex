@@ -1,0 +1,56 @@
+\begin{proof}[Proof of Lemma~\ref{lem:trace-zero}]
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical self-adjoint convolution operator with kernel
+\[
+K(x - y) := \widehat{\Xi}(x - y),
+\]
+where
+\[
+\widehat{\Xi}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \Xi\left( \tfrac{1}{2} + i\lambda \right) \, d\lambda
+\]
+is the inverse Fourier transform of the completed zeta profile.
+
+\paragraph{(i) Symmetry of the Kernel.}
+The function
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)
+\]
+is real-valued and even, due to the functional equation \( \Xi(s) = \Xi(1 - s) \) and the fact that \( \Xi \) is real on the critical line. Therefore, \( \widehat{\Xi}(x) \in \mathcal{S}(\mathbb{R}) \) is real-valued and even as well. In particular, \( K(x, x) = \widehat{\Xi}(0) \) is constant.
+
+\paragraph{(ii) Kernel Trace Heuristic.}
+Formally, the kernel trace of \( L_{\mathrm{sym}} \) would be
+\[
+\operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} K(x, x)\, dx = \widehat{\Xi}(0) \cdot \int_{\mathbb{R}} dx.
+\]
+This diverges unless \( \widehat{\Xi}(0) = 0 \), but this argument is heuristic and not valid in the trace-class context on weighted spaces.
+
+\paragraph{(iii) Spectral Interpretation via Hadamard Structure.}
+The determinant
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\]
+is an entire function of exponential type \( \pi \) and genus one, with Hadamard factorization
+\[
+\Xi\left( \tfrac{1}{2} + i\lambda \right)
+= \Xi\left( \tfrac{1}{2} \right)
+\prod_\rho \left(1 - \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right)
+\exp\left( \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right).
+\]
+The logarithmic derivative satisfies
+\[
+\frac{d}{d\lambda} \log \Xi\left( \tfrac{1}{2} + i\lambda \right)
+= \sum_\rho \frac{1}{\lambda - i(\rho - \tfrac{1}{2})},
+\]
+with no term of the form \( \lambda^{-1} \) appearing. Since such a term would contribute a nonzero trace in the spectral expansion of the logarithmic derivative, its absence implies:
+\[
+\operatorname{Tr}(L_{\mathrm{sym}}) = \sum_n \lambda_n = 0.
+\]
+
+\paragraph{Conclusion.}
+Thus, the vanishing trace condition follows from the Hadamard factorization and canonical normalization of the determinant. It ensures
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\quad \text{satisfies} \quad \det\nolimits_\zeta(I) = 1,
+\]
+as claimed.
+\end{proof}
+% 

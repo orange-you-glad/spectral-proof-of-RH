@@ -1,0 +1,40 @@
+\begin{definition}[Spectral Zeta Function]
+\label{def:spectral-zeta-function}
+
+Let \( H \) be a separable Hilbert space, and let
+\[
+T \in \mathcal{C}_1(H)
+\]
+be a compact, self-adjoint, positive semi-definite operator.
+
+Let \( \{ \lambda_n \}_{n=1}^\infty \subset (0,\infty) \) denote the nonzero eigenvalues of \( T \), listed with algebraic multiplicity and ordered so that \( \lambda_n \to 0 \) as \( n \to \infty \).
+
+\medskip
+
+The \emph{spectral zeta function} associated to \( T \) is defined by the Dirichlet series:
+\[
+\zeta_T(s) := \sum_{n=1}^\infty \lambda_n^{-s},
+\]
+which converges absolutely for \( \Re(s) > s_0 \), for some \( s_0 > 0 \) depending on the decay of \( \lambda_n \).
+
+\medskip
+
+Under suitable growth assumptions on the eigenvalues (e.g., Weyl-type or logarithmic asymptotics), \( \zeta_T(s) \) admits meromorphic continuation to a larger domain, often to all of \( \mathbb{C} \). In particular, when \( T = L_{\mathrm{sym}}^2 \), the small-time asymptotics of the heat trace:
+\[
+\operatorname{Tr}(e^{-t T}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
+\quad \text{as } t \to 0^+,
+\]
+imply that \( \zeta_T(s) \) extends meromorphically via the Mellin transform of the heat kernel.
+
+\medskip
+
+Spectral zeta functions are central in analytic spectral theory, particularly in the construction of zeta-regularized determinants. The \emph{shifted spectral zeta function}, defined by
+\[
+\zeta_T(s, \lambda) := \sum_n (\lambda_n - \lambda)^{-s},
+\]
+admits analytic continuation in \( s \) for fixed \( \lambda \notin \{\lambda_n\} \), and the regularized determinant is then given by
+\[
+\log \det\nolimits_\zeta(I - \lambda T^{1/2}) := -\left.\frac{d}{ds} \zeta_T(s, \lambda)\right|_{s = 0}.
+\]
+\end{definition}
+% 

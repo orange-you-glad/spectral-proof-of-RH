@@ -1,0 +1,38 @@
+\subsection*{Introduction}
+
+This chapter establishes sharp two-sided bounds and structural asymptotic expansions for the short-time behavior of the spectral heat trace
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}),
+\]
+where \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is the canonical compact, self-adjoint convolution operator constructed in Chapter~\ref{sec:operator-construction}. The operator \( L_{\mathrm{sym}} \) generates a strongly continuous, trace-class contraction semigroup \( e^{-tL_{\mathrm{sym}}^2} \) for all \( t > 0 \).
+
+\paragraph{Two-Sided Trace Bound.}
+We prove that there exist constants \( c_1, c_2 > 0 \) and \( t_0 > 0 \) such that
+\[
+c_1\, t^{-1/2} \le \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \le c_2\, t^{-1/2}
+\quad \text{for all } 0 < t \le t_0,
+\]
+uniformly on compact subintervals of \( (0, t_0] \). This confirms the expected spectral dimension \( d = 1 \) and matches the scaling of a generator with inverse-square behavior.
+
+\paragraph{Analytic Framework.}
+These results are derived from the operator-theoretic and analytic structure of the semigroup and its heat kernel. Key tools include:
+\begin{itemize}
+  \item Gaussian decay and Paley--Wiener-type support of the mollified Fourier kernel defining \( L_{\mathrm{sym}} \);
+  \item Positivity and exponential off-diagonal decay of the heat kernel, as established in Lemma~\ref{lem:heat-kernel-diagonal-positivity};
+  \item Trace-norm convergence from approximants \( L_t \to L_{\mathrm{sym}} \) as \( t \to 0^+ \);
+  \item Diagonal kernel asymptotics of the form \( K_t(x,x) \sim \sum a_n(x)\, t^{n - 1/2} \), yielding the global expansion
+  \[
+  \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \sum_{n=0}^\infty A_n t^{n - 1/2},
+  \]
+  including an explicit logarithmic term (Lemma~\ref{lem:heat-trace-expansion}) and its refinement (Proposition~\ref{prop:short_time_heat_expansion}).
+\end{itemize}
+
+\paragraph{Determinant and Spectral Implications.}
+The precise asymptotic form
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + o(\sqrt{t})
+\]
+captures the leading singularity and governs the order-one growth of the canonical zeta-regularized Fredholm determinant \( \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) \). This is realized through its Laplace integral representation (Lemma~\ref{lem:laplace-integrability-heat-trace}) and logarithmic derivative identity (Lemma~\ref{lem:A_log_derivative}).
+
+\paragraph{Outlook.}
+This chapter provides the analytic foundation for Chapter~\ref{sec:tauberian-growth}, where Korevaar-style Tauberian theorems (Lemmas~\ref{lem:tauberian-heat-trace-application}–\ref{lem:log-corrected-tauberian-application}, and Proposition~\ref{prop:inverse-spectral-rigidity}) convert the heat trace expansion into precise spectral asymptotics. These results close the analytic–spectral circle initiated in Chapter~\ref{sec:determinant-identity} and yield explicit eigenvalue growth estimates for \( L_{\mathrm{sym}} \).

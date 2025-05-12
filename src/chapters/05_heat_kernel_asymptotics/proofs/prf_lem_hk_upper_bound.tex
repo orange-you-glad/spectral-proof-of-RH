@@ -1,0 +1,47 @@
+\begin{proof}[Proof of Lemma~\ref{lem:hk-upper-bound}]
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), with spectral decomposition \( L_{\mathrm{sym}} e_n = \mu_n e_n \) for an orthonormal basis \( \{ e_n \} \subset H_{\Psi_\alpha} \). The heat trace is given by:
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2},
+\]
+which converges absolutely since \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1 \).
+
+\paragraph{Step 1: Partitioning the Spectrum.}
+Fix \( 0 < t \le 1 \), and define:
+\[
+A_1(t) := \left\{ n : |\mu_n| \le t^{-1/2} \right\}, \quad
+A_2(t) := \left\{ n : |\mu_n| > t^{-1/2} \right\}.
+\]
+We split the trace sum:
+\[
+\sum_n e^{-t \mu_n^2} = \sum_{n \in A_1(t)} e^{-t \mu_n^2} + \sum_{n \in A_2(t)} e^{-t \mu_n^2}.
+\]
+
+\paragraph{Step 2: Bounds on Each Region.}
+On \( A_1(t) \), we have \( e^{-t \mu_n^2} \le 1 \), so:
+\[
+\sum_{n \in A_1(t)} e^{-t \mu_n^2} \le |A_1(t)|.
+\]
+On \( A_2(t) \), use \( |\mu_n| > t^{-1/2} \Rightarrow t \mu_n^2 > 1 \Rightarrow e^{-t \mu_n^2} < e^{-1} \), hence:
+\[
+\sum_{n \in A_2(t)} e^{-t \mu_n^2} \le e^{-1} \cdot |A_2(t)|.
+\]
+
+\paragraph{Step 3: Bounding Index Set Cardinalities.}
+Note:
+\[
+\sum_{n \in A_1(t)} |\mu_n| \ge t^{1/2} \cdot |A_1(t)| \quad \Rightarrow \quad |A_1(t)| \le t^{-1/2} \sum_{n \in A_1(t)} |\mu_n|.
+\]
+Similarly for \( A_2(t) \). Summing yields:
+\[
+|A_1(t)| + |A_2(t)| \le t^{-1/2} \sum_n |\mu_n| = t^{-1/2} \|L_{\mathrm{sym}}\|_{\mathcal{C}_1}.
+\]
+
+\paragraph{Step 4: Final Estimate.}
+Combining the bounds:
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
+\le |A_1(t)| + e^{-1} |A_2(t)|
+\le (1 + e^{-1}) \cdot t^{-1/2} \cdot \|L_{\mathrm{sym}}\|_{\mathcal{C}_1}.
+\]
+Setting \( c_2 := (1 + e^{-1}) \cdot \|L_{\mathrm{sym}}\|_{\mathcal{C}_1} \) completes the proof.
+\end{proof}

@@ -1,0 +1,45 @@
+\begin{proof}[Proof of Lemma~\ref{lem:distributional-trace-asymptotics}]
+Let \( f(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \). From Lemma~\ref{lem:heat-trace-expansion}, we have the full short-time expansion
+\[
+f(t) = \sum_{n=0}^N A_n \, t^{n - \frac{1}{2}} + \mathcal{O}(t^{N + \frac{1}{2}}), \quad \text{as } t \to 0^+,
+\]
+with convergence uniform on compact subintervals of \( (0, t_0] \) and coefficients \( A_n \in \mathbb{R} \) derived from the diagonal parametrix expansion of the heat kernel.
+
+\paragraph{Step 1: Dilation of Test Function.}
+Let \( \psi \in C_c^\infty((0, \infty)) \) be a test function. Define the rescaled family
+\[
+\psi_\varepsilon(t) := \psi(t/\varepsilon),
+\]
+so that \( \psi_\varepsilon \to 0 \) weakly as \( \varepsilon \to 0^+ \), and the scaling maps the region near \( t = 0 \) into the support of \( \psi \).
+
+We compute:
+\[
+\int_0^\infty f(t) \psi_\varepsilon(t)\, dt
+= \int_0^\infty f(t) \psi(t/\varepsilon)\, dt
+= \varepsilon \int_0^\infty f(\varepsilon t) \psi(t)\, dt,
+\]
+via the substitution \( t \mapsto \varepsilon t \).
+
+\paragraph{Step 2: Asymptotic Substitution.}
+In the inner integral, apply the expansion:
+\[
+f(\varepsilon t) = \sum_{n=0}^N A_n (\varepsilon t)^{n - \frac{1}{2}} + \mathcal{O}(\varepsilon^{N + \frac{1}{2}}),
+\]
+uniformly in \( t \in \operatorname{supp}(\psi) \subset (0, \infty) \), yielding
+\[
+\varepsilon \int_0^\infty f(\varepsilon t) \psi(t)\, dt
+= \sum_{n=0}^N A_n \varepsilon^{n + \frac{1}{2}} \int_0^\infty t^{n - \frac{1}{2}} \psi(t)\, dt + \mathcal{O}(\varepsilon^{N + \frac{3}{2}}).
+\]
+
+\paragraph{Step 3: Distributional Limit.}
+Taking the limit \( \varepsilon \to 0^+ \), we conclude:
+\[
+\lim_{\varepsilon \to 0^+} \int_0^\infty f(t) \psi(t/\varepsilon)\, dt
+= \sum_{n=0}^\infty A_n \int_0^\infty t^{n - \frac{1}{2}} \psi(t)\, dt.
+\]
+This is precisely the definition of an asymptotic expansion in the distributional sense on \( \mathbb{R}_{>0} \):
+\[
+f(t) \sim \sum_{n=0}^\infty A_n t^{n - \frac{1}{2}} \quad \text{in } \mathcal{D}'(\mathbb{R}_{>0}),
+\]
+as claimed.
+\end{proof}

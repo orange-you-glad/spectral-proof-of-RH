@@ -1,0 +1,74 @@
+\section{Heat Kernel Bounds and Short-Time Trace Estimates}
+\label{sec:heat-kernel-asymptotics}
+
+\input{chapters/05_heat_kernel_asymptotics/intro}
+
+%------------------------------------------------------------------
+\subsection{Definitions}
+% --- Heat semigroup and spectral trace definition ---
+\input{chapters/05_heat_kernel_asymptotics/defs/def_heat_operator}
+
+%------------------------------------------------------------------
+\subsection{Kernel Estimates and Local Bounds}
+
+% --- Upper bound for Tr(e^{-tL^2_sym}) from spectrum partitioning ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_hk_upper_bound}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_hk_upper_bound}
+
+% --- Lower bound for Tr(e^{-tL^2_sym}) from Gaussian inequality ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_hk_lower_bound}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_hk_lower_bound}
+
+% --- Diagonal short-time asymptotic expansion K_t(x,x) ~ sum a_n(x) t^{n-1/2} ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_hk_expansion_uniform}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_hk_expansion_uniform}
+
+% --- Positivity of the heat kernel diagonal ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_heat_kernel_diagonal_positivity}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_heat_kernel_diagonal_positivity}
+
+%------------------------------------------------------------------
+\subsection{Spectral Trace Properties}
+
+% --- Heat trace expansion and trace-class closure lemma ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_heat_trace_expansion}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_heat_trace_expansion}
+
+% --- Laplace integrability for determinant definition ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_laplace_integrability_heat_trace}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_laplace_integrability_heat_trace}
+
+% --- Two-sided estimate for Tr(e^{-tL^2_sym}) ~ t^{-1/2} ---
+\input{chapters/05_heat_kernel_asymptotics/props/prop_two_sided_heat_trace_bounds}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_two_sided_heat_trace_bounds}
+
+% --- Global convergence of Tr(e^{-tL^2_sym}) ~ sum A_n t^{n-1/2} ---
+\input{chapters/05_heat_kernel_asymptotics/props/prop_heat_trace_uniform_conv}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_heat_trace_uniform_conv}
+
+% --- Refined log-term asymptotic: Tr(e^{-tL^2_sym}) = (log(1/t))/sqrt(4pi t) + ... ---
+\input{chapters/05_heat_kernel_asymptotics/props/prop_short_time_heat_expansion}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_short_time_heat_expansion}
+
+% --- Distributional asymptotics of Tr(e^{-tL^2_sym}) expansion ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_distributional_trace_asymptotics}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_distributional_trace_asymptotics}
+
+% --- Determinant-log derivative connection via heat trace regularization ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_log_derivative_determinant}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_log_derivative_determinant}
+
+% --- Spectral Weyl asymptotics from heat kernel expansion ---
+\input{chapters/05_heat_kernel_asymptotics/props/prop_spectral_counting_weyl}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_spectral_counting_weyl}
+
+% --- Strong operator closure of heat semigroup ---
+\input{chapters/05_heat_kernel_asymptotics/props/prop_strong_op_closure_heat}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_strong_op_closure_heat}
+
+%------------------------------------------------------------------
+% --- Spectral dimension and trace scaling interpretation ---
+\input{chapters/05_heat_kernel_asymptotics/rems/rem_spectral_dimension}
+
+%------------------------------------------------------------------
+\input{chapters/05_heat_kernel_asymptotics/summary}

@@ -1,0 +1,26 @@
+\begin{lemma}[Logarithmic Derivative of the Spectral Determinant]
+\label{lem:log-derivative-determinant}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator with discrete nonzero spectrum \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \). Define the associated spectral zeta function by
+\[
+\zeta_L(s) := \sum_{\mu_n \neq 0} \mu_n^{-2s}, \qquad \Re(s) > \tfrac{1}{2}.
+\]
+
+Then the logarithm of the zeta-regularized determinant of \( L_{\mathrm{sym}}^2 \) satisfies
+\[
+\log \det\nolimits_{\zeta}(L_{\mathrm{sym}}^2)
+= -\left. \frac{d}{ds} \zeta_L(s) \right|_{s=0}
+= -\int_0^\infty \frac{\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) - P(t)}{t} \, dt,
+\]
+where \( P(t) \) denotes the full small-\( t \) asymptotic expansion of the heat trace:
+\[
+P(t) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}} = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + \cdots.
+\]
+
+\medskip
+\noindent
+This identity is justified by the Laplace–Mellin representation of the spectral zeta function and the analyticity of the heat semigroup trace \( \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \), as developed in Chapter~\ref{sec:heat-kernel-asymptotics} and Appendix~\ref{app:heat-kernel-construction}.
+
+\medskip
+\noindent
+In particular, the coefficient of the logarithmic term \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) governs the leading singularity of the determinant and encodes the spectral dimension and singularity class of \( L_{\mathrm{sym}} \). This structure underpins both the analytic continuation of \( \zeta_L(s) \) and the asymptotic scaling of \( \det\nolimits_{\zeta}(I + \lambda L_{\mathrm{sym}}) \) as \( \lambda \to 0 \).
+\end{lemma}

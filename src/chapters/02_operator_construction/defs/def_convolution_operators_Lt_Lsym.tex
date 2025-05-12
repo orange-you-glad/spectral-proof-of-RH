@@ -1,0 +1,53 @@
+\begin{definition}[Convolution Operators \( L_t \) and Canonical Limit \( L_{\mathrm{sym}} \)]
+\label{def:convolution-operators-Lt-Lsym}
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the canonical Fourier profile, and define mollified spectral profiles for \( t > 0 \) as
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda).
+\]
+
+Define the mollified inverse Fourier kernels:
+\[
+k_t(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i x \lambda} \phi_t(\lambda)\, d\lambda \in \mathcal{S}(\mathbb{R}),
+\]
+and the translation-invariant integral kernels:
+\[
+K_t(x,y) := k_t(x - y).
+\]
+Then \( K_t \in \mathcal{S}(\mathbb{R}^2) \) is real-valued, symmetric \( K_t(x,y) = K_t(y,x) \), and rapidly decaying in both variables.
+
+Define the convolution operator on the Schwartz core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \) by
+\[
+(L_t f)(x) := \int_{\mathbb{R}} K_t(x,y)\, f(y)\, dy = \int_{\mathbb{R}} k_t(x - y) f(y)\, dy.
+\]
+
+Then each \( L_t \) extends uniquely to a compact, self-adjoint operator on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx), \quad \text{with } \alpha > \pi.
+\]
+Moreover,
+\[
+L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{C}_2(H_{\Psi_\alpha}), \qquad L_t = L_t^*.
+\]
+The decay of \( k_t \in \mathcal{S}(\mathbb{R}) \) ensures that \( K_t \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \), satisfying Simon’s trace-class criterion \cite[Ch.~4]{Simon2005TraceIdeals}.
+
+\medskip
+\noindent
+Define the canonical convolution operator as the trace-norm limit:
+\[
+L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}),
+\]
+i.e.,
+\[
+\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1} \to 0 \quad \text{as } t \to 0^+.
+\]
+This limit exists and is unique due to uniform trace-norm bounds and the mollified profiles' Schwartz regularity. See \lemref{lem:trace-norm-convergence-Lt-to-Lsym} and \lemref{lem:mollifier-independence-kernel-limit} for rigorous justification and mollifier-independence.
+
+\medskip
+\noindent
+The operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is compact, self-adjoint, and defined by convolution against the inverse Fourier transform \( \phi^\vee(x) := \widehat{\phi}(x) \). It inherits its analytic symmetry from \( \Xi(s) \) and encodes the nontrivial zeros of \( \zeta(s) \) through its spectrum. The associated Fredholm determinant satisfies the identity:
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+as shown in Chapter~\ref{sec:determinant-identity}.
+\end{definition}
+% 

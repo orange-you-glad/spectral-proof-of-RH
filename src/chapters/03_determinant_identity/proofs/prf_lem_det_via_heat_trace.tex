@@ -1,0 +1,27 @@
+\begin{proof}[Proof of Lemma~\ref{lem:det-via-heat-trace}]
+Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact and self-adjoint.
+
+\paragraph{(i) Local power series expansion.}
+Since \( L \in \mathcal{C}_1 \), each power \( L^n \in \mathcal{C}_1 \), and the trace identity
+\[
+\log \det\nolimits_\zeta(I - \lambda L) = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L^n)
+\]
+is absolutely convergent for \( |\lambda| < \|L\|^{-1} \). This follows from the submultiplicativity of Schatten norms and the identity \( \|L^n\|_{\mathcal{C}_1} \le \|L\|^n \). Thus the logarithm of the zeta-regularized determinant defines an analytic function in a disk around \( \lambda = 0 \), as in classical Fredholm theory.
+
+\paragraph{(ii) Analytic continuation via heat trace.}
+By spectral theory for self-adjoint compact operators, \( e^{-tL} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) for all \( t > 0 \), and
+\[
+\operatorname{Tr}(e^{-tL}) = \sum_{n=1}^\infty e^{-t\lambda_n}
+\]
+is well-defined, finite, and decays rapidly as \( t \to \infty \). Moreover, short-time asymptotics from Section~\ref{sec:heat-kernel-asymptotics} show that \( \operatorname{Tr}(e^{-tL}) = O(t^{-1}) \cdot e^{-c/t} \) as \( t \to 0^+ \).
+
+\medskip
+\noindent
+Therefore the Laplace integral
+\[
+\log \det\nolimits_\zeta(I - \lambda L)
+= - \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL})\, dt
+\]
+converges absolutely for all \( \lambda \in \mathbb{C} \) and defines an entire function of exponential type. This provides the analytic continuation of \( \log \det_\zeta(I - \lambda L) \) beyond the radius of convergence of the trace expansion, completing the proof.
+\end{proof}
+%  

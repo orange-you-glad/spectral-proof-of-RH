@@ -1,0 +1,32 @@
+\begin{definition}[Fredholm Determinant]
+\label{def:fredholm-determinant}
+Let \( H \) be a separable complex Hilbert space, and let \( T \in \mathcal{C}_1(H) \) be a trace-class operator.
+
+Then the Fredholm determinant of the bounded operator \( I + T \colon H \to H \) is defined by the absolutely convergent infinite product:
+\[
+\det(I + T) := \prod_{n=1}^\infty (1 + \lambda_n),
+\]
+where \( \{ \lambda_n \} \subset \mathbb{C} \) are the eigenvalues of \( T \), counted with algebraic multiplicity. The convergence follows from the trace-class condition:
+\[
+\sum_{n=1}^\infty |\lambda_n| < \infty.
+\]
+This definition is independent of the choice of orthonormal basis.
+
+\medskip
+
+The function \( \lambda \mapsto \det(I + \lambda T) \) defines an entire function on \( \mathbb{C} \), analytic in \( \lambda \), and satisfies the identity:
+\[
+\frac{d}{d\lambda} \log \det(I + \lambda T)
+= \operatorname{Tr}\left[ (I + \lambda T)^{-1} T \right],
+\]
+valid on the open set where \( I + \lambda T \) is invertible.
+
+\medskip
+
+If \( T \) is self-adjoint, then the eigenvalues \( \lambda_n \in \mathbb{R} \), and the determinant is real-analytic for real \( \lambda \) outside the poles \( \lambda = -1/\lambda_n \). The Fredholm determinant is meromorphic with simple zeros at the inverses of eigenvalues.
+
+\medskip
+
+The Fredholm determinant coincides with the Carleman \(\zeta\)-regularized determinant in the special case of certain elliptic operators, though the two constructions are analytically distinct in general.
+\end{definition}
+% 

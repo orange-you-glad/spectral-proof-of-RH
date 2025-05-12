@@ -1,0 +1,46 @@
+\begin{proof}[Proof of \lemref{lem:decay-inverse-fourier-xi}]
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \Xi(s) \) is the completed Riemann zeta function. As established in Lemma~\ref{lem:xi-growth-bound}, \( \phi \in PW_\pi(\mathbb{R}) \) is entire of exponential type \( \pi \), real-valued, and even, with
+\[
+|\phi(\lambda)| \le C\, e^{\pi |\lambda|}, \quad \forall \lambda \in \mathbb{R}.
+\]
+
+\medskip
+\noindent\textbf{Step 1: Exponential Decay via Paley–Wiener.}
+By the Paley–Wiener theorem for \( PW_\pi \) functions (see \cite[Thm.~3.2.4]{Levin1996EntireLectures}, \cite[Ch.~IX.4]{ReedSimon1975II}), the inverse Fourier transform
+\[
+k(x) := \mathscr{F}^{-1}[\phi](x) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \phi(\lambda)\, d\lambda
+\]
+lies in \( C^\infty(\mathbb{R}) \cap L^1(\mathbb{R}, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \), with
+\[
+|k(x)| \le C_\alpha\, e^{-\alpha |x|}, \quad \forall x \in \mathbb{R}.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Symmetry and Regularity.}
+Since \( \phi \) is real-valued and even, the Fourier inversion implies that \( k(x) \in \mathbb{R} \) and \( k(x) = k(-x) \). Moreover, \( k \in \mathcal{S}(\mathbb{R}) \subset C^\infty(\mathbb{R}) \), and all derivatives decay faster than any exponential \( e^{-\beta |x|} \) for \( \beta < \alpha \).
+
+\medskip
+\noindent\textbf{Step 3: Weighted Integrability.}
+For any fixed \( \alpha > \pi \), define \( \Psi_\alpha(x) := e^{\alpha |x|} \). Then
+\[
+\int_{\mathbb{R}} |k(x)|\, \Psi_\alpha(x)\, dx = \int_{\mathbb{R}} |k(x)|\, e^{\alpha |x|} dx < \infty,
+\]
+so \( k \in L^1(\mathbb{R}, \Psi_\alpha(x)\, dx) \).
+
+\medskip
+\noindent\textbf{Step 4: Trace-Class Kernel Inclusion.}
+Define the translation-invariant kernel \( K(x,y) := k(x - y) \). Then
+\[
+\iint_{\mathbb{R}^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy
+= \int_{\mathbb{R}} |k(z)| \left( \int_{\mathbb{R}} \Psi_\alpha(z + y)\Psi_\alpha(y)\, dy \right) dz.
+\]
+Using the exponential decay of \( k \) and the convexity of \( \Psi_\alpha \), the inner integral is uniformly bounded in \( z \) by \( C \Psi_\alpha(z) \). Thus, the full integral is bounded by
+\[
+C \int_{\mathbb{R}} |k(z)|\, \Psi_\alpha(z)\, dz < \infty.
+\]
+Hence \( K \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), and the associated convolution operator
+\[
+(Lf)(x) := \int_{\mathbb{R}} k(x - y) f(y)\, dy
+\]
+belongs to \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+\end{proof}

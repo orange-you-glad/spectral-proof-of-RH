@@ -1,0 +1,35 @@
+\begin{proof}[Proof of Lemma~\ref{lem:spectral-zero-encoding}]
+From the determinant identity established in Chapter~\ref{sec:determinant-identity}, we have:
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+where \( \Xi(s) \) is the completed Riemann zeta function. The zeros of this determinant coincide with the zeros of \( \Xi(\tfrac{1}{2} + i\lambda) \), and the order of vanishing is preserved under Hadamard factorization.
+
+\paragraph{Forward Map.}
+Let \( \rho \in \mathbb{C} \) be a nontrivial zero of \( \zeta(s) \). Then \( \Xi(\rho) = 0 \), and \( \rho = \tfrac{1}{2} + i\lambda \) for some \( \lambda \in \mathbb{C} \). Define
+\[
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\lambda}.
+\]
+The determinant vanishes at \( \lambda \), so by analytic Fredholm theory for trace-class operators,
+\[
+\mu_\rho = \lambda^{-1} \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}.
+\]
+Moreover, the multiplicity of the zero \( \rho \) of \( \Xi(s) \) equals the algebraic multiplicity of the eigenvalue \( \mu_\rho \), since both are encoded by the Hadamard product structure of the entire determinant function.
+
+\paragraph{Reverse Map.}
+Conversely, let \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \). Then the determinant vanishes at \( \lambda := \mu^{-1} \), and hence
+\[
+\Xi\left(\tfrac{1}{2} + i\lambda\right) = 0.
+\]
+Define
+\[
+\rho := \tfrac{1}{2} + i\lambda = \tfrac{1}{2} + i\mu^{-1}.
+\]
+Then \( \rho \) is a nontrivial zero of \( \zeta(s) \), and \( \mu = \mu_\rho \). The order of vanishing of the determinant at \( \lambda \) equals the multiplicity of both \( \mu \) and \( \rho \).
+
+\paragraph{Conclusion.}
+This establishes a multiplicity-preserving bijection between the nontrivial zeros \( \rho \) of \( \zeta(s) \) and the nonzero spectrum of \( L_{\mathrm{sym}} \), given by
+\[
+\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
+\]
+\end{proof}

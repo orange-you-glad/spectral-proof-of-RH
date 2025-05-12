@@ -1,0 +1,29 @@
+\begin{lemma}[Continuity of the Determinant under Trace-Norm Limits]
+\label{lem:det_continuity_trace_norm}
+Let \( \{ T_n \} \subset \mathcal{C}_1(H) \) be a sequence of trace-class operators on a separable Hilbert space \( H \), and let \( T \in \mathcal{C}_1(H) \) be such that
+\[
+\| T_n - T \|_{\mathcal{C}_1} \to 0 \quad \text{as } n \to \infty.
+\]
+
+Then:
+\begin{enumerate}
+  \item[\textnormal{(i)}] For all \( \lambda \in \mathbb{C} \), we have
+  \[
+  \det\nolimits_\zeta(I - \lambda T_n) \to \det\nolimits_\zeta(I - \lambda T),
+  \]
+  with convergence uniform on compact subsets of \( \mathbb{C} \).
+
+  \item[\textnormal{(ii)}] The logarithmic derivatives converge:
+  \[
+  \frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda T_n)
+  \to \frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda T),
+  \]
+  uniformly on compact subsets where \( I - \lambda T \) is invertible.
+
+  \item[\textnormal{(iii)}] If \( T_n = T_n^* \) and \( T = T^* \), and all \( T_n \to T \) in \( \mathcal{C}_1 \), then the convergence also holds in the class \( \mathcal{E}_1^\tau \) of entire functions of order one and exponential type \( \tau \), with \( \tau := \limsup_{n} \|T_n\|_{\mathcal{C}_1} \).
+\end{enumerate}
+
+\noindent
+This lemma guarantees that determinant constructions are stable under trace-norm approximation, as occurs in the mollification of spectral convolution operators.
+\end{lemma}
+% 

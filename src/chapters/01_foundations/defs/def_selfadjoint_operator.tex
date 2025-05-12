@@ -1,0 +1,69 @@
+\begin{definition}[Self-Adjoint Operators]\label{def:selfadjoint-operator}
+Let \( H \) be a separable complex Hilbert space, and let \( T \colon \mathcal{D}(T) \subset H \to H \) be a densely defined linear operator.
+
+The operator \( T \) is \emph{self-adjoint} if
+\[
+T = T^*, \qquad \text{and} \qquad \mathcal{D}(T) = \mathcal{D}(T^*),
+\]
+where the adjoint \( T^* \colon \mathcal{D}(T^*) \to H \) is defined as follows: a vector \( g \in H \) lies in \( \mathcal{D}(T^*) \) if there exists \( h \in H \) such that
+\[
+\langle T f, g \rangle = \langle f, h \rangle \quad \text{for all } f \in \mathcal{D}(T),
+\]
+in which case \( T^* g := h \). The Riesz representation theorem ensures that \( T^* \) is well-defined and closed.
+
+\medskip
+\noindent\textbf{Bounded Case.}
+If \( T \in \mathcal{B}(H) \) is bounded and everywhere defined, then self-adjointness reduces to symmetry:
+\[
+\langle T f, g \rangle = \langle f, T g \rangle \quad \text{for all } f, g \in H.
+\]
+
+\medskip
+\noindent\textbf{Symmetric Operators.}
+A densely defined operator \( T \colon \mathcal{D}(T) \to H \) is \emph{symmetric} if
+\[
+\langle T f, g \rangle = \langle f, T g \rangle \quad \text{for all } f, g \in \mathcal{D}(T),
+\]
+i.e., \( T \subseteq T^* \). Such an operator is self-adjoint if and only if \( \mathcal{D}(T) = \mathcal{D}(T^*) \).
+
+\medskip
+\noindent\textbf{Graph Characterization.}
+\( T \) is self-adjoint if and only if its graph
+\[
+\mathrm{graph}(T) := \{ (f, Tf) \in H \times H : f \in \mathcal{D}(T) \}
+\]
+is closed and coincides with the graph of its adjoint \( T^* \). In particular, self-adjoint operators are always closed and symmetric, with no proper symmetric extensions.
+
+\medskip
+\noindent\textbf{Spectral Theorem.}
+Every self-adjoint operator \( T \colon \mathcal{D}(T) \to H \) admits a unique spectral decomposition:
+\[
+T = \int_{\sigma(T)} \lambda \, dE_\lambda,
+\]
+where \( \{ E_\lambda \} \) is a projection-valued measure (PVM) on the Borel subsets of \( \mathbb{R} \), supported on the spectrum \( \sigma(T) \subset \mathbb{R} \). Consequently:
+\begin{itemize}
+    \item \( \sigma(T) \subset \mathbb{R} \) is closed and non-empty;
+    \item The spectral calculus \( f(T) := \int f(\lambda)\, dE_\lambda \) is well-defined for all bounded Borel functions \( f \colon \mathbb{R} \to \mathbb{C} \);
+    \item The one-parameter unitary group \( \{ e^{itT} \}_{t \in \mathbb{R}} \subset \mathcal{U}(H) \) is strongly continuous.
+\end{itemize}
+
+\medskip
+\noindent\textbf{Compact Self-Adjoint Operators.}
+If \( T \in \mathcal{C}_1(H) \cap \mathrm{SA}(H) \), then \( \sigma(T) \subset \mathbb{R} \) consists entirely of isolated eigenvalues of finite multiplicity, with \( \lambda_n \to 0 \). The eigenfunctions form a complete orthonormal basis of \( H \).
+
+\medskip
+\noindent\textbf{Remarks.}
+\begin{itemize}
+    \item Self-adjointness guarantees real spectrum, a complete functional calculus, and unitary time evolution.
+    \item A symmetric operator \( T_0 \colon \mathcal{D}_0 \to H \) is said to be \emph{essentially self-adjoint} if its closure \( \overline{T_0} \) is self-adjoint. This is essential in spectral theory and quantum mechanics.
+    \item In this manuscript, all mollified convolution operators \( L_t \) and the canonical limit \( L_{\mathrm{sym}} \) are constructed to be essentially self-adjoint on the Schwartz core \( \mathcal{S}_\alpha(\mathbb{R}) \subset H_{\Psi_\alpha} \) (cf.~Chapter~\ref{sec:operator-construction}).
+    \item For symmetric integral operators with Hermitian kernels and exponential damping, self-adjointness follows from symmetry and essential self-adjointness on the core via Friedrichs extensions.
+\end{itemize}
+
+\medskip
+\noindent\textbf{References.}
+\begin{itemize}
+    \item M. Reed and B. Simon, \emph{Methods of Modern Mathematical Physics I: Functional Analysis}, Chapter~VI \cite{ReedSimon1980I}.
+    \item B. Simon, \emph{Trace Ideals and Their Applications}, Chapter~3 \cite{Simon2005TraceIdeals}.
+\end{itemize}
+\end{definition}

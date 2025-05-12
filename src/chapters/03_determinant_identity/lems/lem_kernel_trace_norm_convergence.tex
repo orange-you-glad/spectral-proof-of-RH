@@ -1,0 +1,32 @@
+\begin{lemma}[Trace-Norm Convergence of Mollified Convolution Kernels]
+\label{lem:kernel-trace-norm-convergence}
+Let \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} \, dx) \) be the exponentially weighted Hilbert space with fixed weight parameter \( \alpha > \pi \). Let \( \varphi_t(\lambda) := e^{-t\lambda^2} \cdot \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the Gaussian-damped spectral profile, and define the mollified convolution operators \( L_t \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) by
+\[
+L_t f(x) := \int_{\mathbb{R}} K_t(x - y) f(y) \, dy, \qquad K_t := \mathcal{F}^{-1}[\varphi_t],
+\]
+and let \( L_{\mathrm{sym}} \) be the canonical limit operator defined by convolution with \( K := \mathcal{F}^{-1}[\Xi(\tfrac{1}{2} + i\lambda)] \), assuming suitable convergence.
+
+\medskip
+\noindent
+Then the mollified operators \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) converge in trace norm to \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), i.e.,
+\[
+\lim_{t \to 0^+} \| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1} = 0.
+\]
+
+\medskip
+\noindent
+In particular:
+\begin{itemize}
+  \item Each \( L_t \) and \( L_{\mathrm{sym}} \) is compact and admits a continuous kernel in \( L^2(\mathbb{R}^2, e^{\alpha|x| + \alpha|y|} dx \, dy) \);
+  \item The convergence holds in all Schatten norms \( \mathcal{C}_p \) for \( p \ge 1 \), in particular for the trace class \( p = 1 \);
+  \item The trace and determinant satisfy
+  \[
+  \lim_{t \to 0^+} \operatorname{Tr}(L_t^n) = \operatorname{Tr}(L_{\mathrm{sym}}^n), \qquad \forall n \in \mathbb{N},
+  \]
+  and hence
+  \[
+  \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+  \]
+  uniformly on compact subsets of \( \lambda \in \mathbb{C} \), by trace-norm continuity of the zeta determinant.
+\end{itemize}
+\end{lemma}

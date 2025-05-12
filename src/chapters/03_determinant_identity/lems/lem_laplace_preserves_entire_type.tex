@@ -1,0 +1,31 @@
+\begin{lemma}[Laplace Representation Preserves Entire Function Order and Type]
+\label{lem:laplace-preserves-entire-type}
+Let \( L \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator such that the heat trace satisfies
+\[
+\operatorname{Tr}(e^{-tL}) \le A t^{-1} e^{-c/t}, \quad \text{as } t \to 0^+,
+\]
+and
+\[
+\operatorname{Tr}(e^{-tL}) \le B e^{-\delta t}, \quad \text{as } t \to \infty,
+\]
+for some constants \( A,B,c,\delta > 0 \).
+
+Then the Laplace integral
+\[
+\log \det\nolimits_\zeta(I - \lambda L)
+= - \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL})\, dt
+\]
+defines an entire function of order one and exponential type bounded by \( \pi \). That is,
+\[
+\left| \log \det\nolimits_\zeta(I - \lambda L) \right| \le C |\lambda| \log(1 + |\lambda|),
+\]
+and
+\[
+\left| \det\nolimits_\zeta(I - \lambda L) \right| \le C' e^{\pi |\lambda|}.
+\]
+\end{lemma}
+
+\medskip
+\noindent
+The bounds on the heat trace ensure the Laplace transform converges absolutely and uniformly on compact subsets of \( \mathbb{C} \), and Paley–Wiener-type estimates control the exponential type.
+%  

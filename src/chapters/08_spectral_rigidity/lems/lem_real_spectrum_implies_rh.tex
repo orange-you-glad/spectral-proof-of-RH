@@ -1,0 +1,26 @@
+\begin{lemma}[Spectral Reality Implies the Riemann Hypothesis]
+\label{lem:real-spectrum-implies-rh}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \), acting on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \text{for fixed } \alpha > \pi.
+\]
+
+Assume:
+\begin{enumerate}
+  \item[\textnormal{(i)}] The Carleman \(\zeta\)-regularized Fredholm determinant of \( L_{\mathrm{sym}} \) satisfies the canonical identity:
+  \[
+  \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}, \qquad \forall \lambda \in \mathbb{C}.
+  \]
+
+  \item[\textnormal{(ii)}] The spectrum of \( L_{\mathrm{sym}} \) lies entirely on the real line:
+  \[
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+  \]
+\end{enumerate}
+
+Then every nontrivial zero \( \rho \in \mathbb{C} \) of the Riemann zeta function satisfies:
+\[
+\Re(\rho) = \tfrac{1}{2}.
+\]
+That is, the Riemann Hypothesis holds.
+\end{lemma}

@@ -1,0 +1,33 @@
+\begin{lemma}[Fourier Reflection Symmetry of Convolution Kernels]
+\label{lem:fourier-symmetry-reflection}
+Let \( \phi \colon \mathbb{R} \to \mathbb{R} \) be a real-valued, even function:
+\[
+\phi(\lambda) = \phi(-\lambda), \qquad \phi(\lambda) \in \mathbb{R} \quad \forall \lambda \in \mathbb{R}.
+\]
+
+Suppose \( \phi \in L^1(\mathbb{R}) \), and define its inverse Fourier transform
+\[
+k(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i \lambda x} \phi(\lambda)\, d\lambda.
+\]
+
+Then:
+\begin{itemize}
+    \item \( k(x) \in \mathbb{R} \) for all \( x \in \mathbb{R} \);
+    \item \( k(x) = k(-x) \), i.e., \( k \) is even.
+\end{itemize}
+
+Consequently, the translation-invariant kernel
+\[
+K(x,y) := k(x - y)
+\]
+is real-valued and symmetric:
+\[
+K(x,y) = K(y,x), \quad \forall x, y \in \mathbb{R}.
+\]
+
+In particular, the associated convolution operator
+\[
+(Lf)(x) := \int_{\mathbb{R}} k(x - y) f(y)\, dy
+\]
+is real and symmetric on any Hilbert space in which it is densely defined (e.g., \( H_{\Psi_\alpha} \)), and its formal adjoint coincides with the operator on its Schwartz core \( \mathcal{S}(\mathbb{R}) \).
+\end{lemma}

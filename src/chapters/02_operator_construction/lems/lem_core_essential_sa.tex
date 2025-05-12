@@ -1,0 +1,33 @@
+\begin{lemma}[Essential Self-Adjointness on Schwartz Core]
+\label{lem:core-essential-selfadjointness}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical convolution operator on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \quad \text{with } \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+\]
+Let \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \) denote the Schwartz space, which is dense in \( H_{\Psi_\alpha} \). Define the operator
+\[
+L_0 := L_{\mathrm{sym}}|_{\mathcal{S}(\mathbb{R})}.
+\]
+
+Then:
+\begin{enumerate}
+  \item[\textnormal{(i)}] \( L_0 \colon \mathcal{S}(\mathbb{R}) \to H_{\Psi_\alpha} \) is densely defined and symmetric:
+  \[
+  \langle L_0 f, g \rangle = \langle f, L_0 g \rangle, \quad \forall f, g \in \mathcal{S}(\mathbb{R}),
+  \]
+  due to the fact that \( L_{\mathrm{sym}} \) is defined by convolution against a real, even kernel \( k \in \mathcal{S}(\mathbb{R}) \).
+
+  \item[\textnormal{(ii)}] \( L_0 \) is essentially self-adjoint, i.e.,
+  \[
+  \overline{L_0} = L_{\mathrm{sym}}, \qquad \text{and} \qquad L_{\mathrm{sym}} = L_{\mathrm{sym}}^*.
+  \]
+  That is, the closure of \( L_0 \) is the unique self-adjoint extension of \( L_0 \) on \( H_{\Psi_\alpha} \).
+\end{enumerate}
+
+\medskip
+\noindent
+Therefore, \( \mathcal{S}(\mathbb{R}) \) serves as a symmetric core for \( L_{\mathrm{sym}} \). Since the kernel of \( L_{\mathrm{sym}} \) is smooth, real-valued, and decays faster than any exponential (as it lies in \( \mathcal{S} \)), the essential self-adjointness follows from Nelson's analytic vector theorem (cf. \cite{ReedSimon1975II}, Theorem~X.36).
+
+\paragraph{Spectral Implications.}
+This result guarantees that the spectral theorem applies to \( L_{\mathrm{sym}} \) with domain determined by the closure of \( \mathcal{S}(\mathbb{R}) \). Hence, functional calculus, heat kernels, and zeta determinants are all well-defined.
+\end{lemma}

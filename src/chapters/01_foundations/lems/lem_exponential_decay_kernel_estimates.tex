@@ -1,0 +1,46 @@
+\begin{lemma}[Exponential Decay Estimates for Mollified Kernels]
+\label{lem:decay-mollified-kernel}
+Let \( t > 0 \), and define the mollified spectral profile
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda\right),
+\]
+where \( \Xi(s) \) is the completed Riemann zeta function—an entire function of order one and exponential type \( \pi \).
+
+Then the following exponential decay estimates hold:
+
+\begin{enumerate}
+    \item[\textup{(i)}] \textbf{Exponential Fourier Envelope:} There exists a constant \( C > 0 \), independent of \( t \), such that
+    \[
+    |\phi_t(\lambda)| \le C \, e^{\frac{\pi}{2}|\lambda| - t\lambda^2}, \qquad \forall\, \lambda \in \mathbb{R}.
+    \]
+
+    \item[\textup{(ii)}] \textbf{Exponential Spatial Kernel Decay:} Define the inverse Fourier kernel
+    \[
+    K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi_t(\lambda)\,d\lambda.
+    \]
+    Then for each \( t > 0 \), there exist constants \( C_t > 0 \), \( b_t > 0 \) such that
+    \[
+    |K_t(x,y)| \le C_t\, e^{-b_t |x - y|}, \qquad \forall\, x, y \in \mathbb{R}.
+    \]
+
+    \item[\textup{(iii)}] \textbf{Uniform Bounds for Small \( t \):} There exist constants \( C_0 > 0 \), \( b_0 > 0 \), and \( t_0 > 0 \), such that for all \( t \in (0, t_0] \),
+    \[
+    |K_t(x,y)| \le C_0\, e^{-b_0 |x - y|}, \qquad \forall\, x, y \in \mathbb{R}.
+    \]
+\end{enumerate}
+
+\noindent
+As a consequence, \( K_t \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \) for any \( \alpha > \pi \), and the associated convolution operator
+\[
+L_t f(x) := \int_{\mathbb{R}} K_t(x,y) f(y)\, dy
+\]
+belongs to \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon's exponential trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}. The uniform bounds in \textup{(iii)} ensure trace-norm convergence
+\[
+L_t \xrightarrow{\ \mathcal{C}_1(H_{\Psi_\alpha})\ } L_{\mathrm{sym}},
+\]
+and determinant convergence
+\[
+\det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+\]
+uniformly on compact subsets of \( \lambda \in \mathbb{C} \).
+\end{lemma}

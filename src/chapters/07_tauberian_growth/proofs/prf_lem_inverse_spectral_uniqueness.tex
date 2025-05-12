@@ -1,0 +1,37 @@
+\begin{proof}[Proof of Lemma~\ref{lem:inverse_spectral_uniqueness}]
+Let \( L \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator with simple, discrete, real spectrum \( \{ \mu_n \}_{n=1}^\infty \), coinciding with that of the canonical operator \( L_{\mathrm{sym}} \). Assume:
+\[
+\operatorname{Spec}(L) = \operatorname{Spec}(L_{\mathrm{sym}}), \qquad
+\det\nolimits_\zeta(I - \lambda L) = \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}), \quad \forall \lambda \in \mathbb{C}.
+\]
+
+\paragraph{Step 1: Diagonalization via Spectral Theorem.}
+Since both \( L \) and \( L_{\mathrm{sym}} \) are compact and self-adjoint with simple spectra, the spectral theorem provides orthonormal eigenbases:
+\[
+L e_n = \mu_n e_n, \qquad L_{\mathrm{sym}} f_n = \mu_n f_n, \qquad \text{for all } n \in \mathbb{N},
+\]
+where \( \{e_n\} \), \( \{f_n\} \subset H_{\Psi_\alpha} \) are orthonormal.
+
+\paragraph{Step 2: Construction of Unitary Intertwiner.}
+Define the map \( U : H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) by
+\[
+U e_n := f_n, \qquad \forall n \in \mathbb{N}.
+\]
+Since \( U \) maps an orthonormal basis to another, it extends by linearity and completeness to a unitary operator:
+\[
+U^* U = I = UU^*.
+\]
+
+\paragraph{Step 3: Intertwining Relation.}
+For all \( n \),
+\[
+U L e_n = U (\mu_n e_n) = \mu_n f_n = L_{\mathrm{sym}} f_n = L_{\mathrm{sym}} U e_n,
+\]
+so \( U L = L_{\mathrm{sym}} U \), and thus
+\[
+L = U^{-1} L_{\mathrm{sym}} U.
+\]
+
+\paragraph{Conclusion.}
+The operator \( L \) is unitarily equivalent to \( L_{\mathrm{sym}} \), with equivalence determined entirely by the shared spectrum and determinant. This confirms the spectral rigidity of the canonical operator under trace-class determinant normalization.
+\end{proof}

@@ -1,0 +1,34 @@
+\begin{proof}[Proof of Lemma~\ref{lem:hk-lower-bound}]
+Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) have discrete real spectrum \( \{ \mu_n \}_{n=1}^\infty \subset \mathbb{R} \) with associated orthonormal basis \( \{ e_n \} \subset H_{\Psi_\alpha} \). Then
+\[
+\operatorname{Tr}(e^{-t L^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2}.
+\]
+
+\paragraph{Step 1: Spectral Splitting.}
+Fix \( t \in (0,1] \). Define the spectral subset
+\[
+A(t) := \{ n \in \mathbb{N} : |\mu_n| \le t^{-1/2} \}.
+\]
+For each \( n \in A(t) \), we have \( |\mu_n| \sqrt{t} \le 1 \), hence
+\[
+e^{-t \mu_n^2} \ge e^{-1} \ge \tfrac{1}{4}.
+\]
+
+\paragraph{Step 2: Lower Bound via Trace Norm.}
+The trace norm of \( L \) satisfies
+\[
+\sum_{n \notin A(t)} |\mu_n| \ge t^{-1/2} \cdot |A(t)^c|,
+\quad \Rightarrow \quad |A(t)| \ge t^{-1/2} \cdot \left( \|L\|_{\mathcal{C}_1}^{-1} \right).
+\]
+Thus,
+\[
+\operatorname{Tr}(e^{-t L^2}) \ge \sum_{n \in A(t)} e^{-t \mu_n^2}
+\ge \tfrac{1}{4} \cdot |A(t)| \ge \tfrac{1}{4 \|L\|_{\mathcal{C}_1}} \cdot t^{-1/2}.
+\]
+
+\paragraph{Conclusion.}
+Set \( c_1 := \tfrac{1}{4 \|L\|_{\mathcal{C}_1}} \). Then for all \( t \in (0,1] \),
+\[
+\operatorname{Tr}(e^{-t L^2}) \ge c_1 \, t^{-1/2}.
+\]
+\end{proof}

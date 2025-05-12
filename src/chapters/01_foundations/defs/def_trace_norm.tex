@@ -1,0 +1,72 @@
+\begin{definition}[Trace Norm]\label{def:trace-norm}
+Let \( H \) be a separable complex Hilbert space, and let \( T \in \mathcal{C}_1(H) \) be a trace-class operator.
+
+The \emph{trace norm} of \( T \), also called the \emph{Schatten \( \ell^1 \)-norm}, is defined by
+\[
+\| T \|_{\mathcal{C}_1} := \sum_{n=1}^\infty \sigma_n(T),
+\]
+where \( \sigma_n(T) \) denotes the \( n \)-th singular value of \( T \), i.e., the \( n \)-th eigenvalue (counted with multiplicity) of the positive compact operator
+\[
+|T| := \sqrt{T^* T},
+\]
+arranged in non-increasing order:
+\[
+\sigma_1(T) \ge \sigma_2(T) \ge \cdots \ge 0, \quad \lim_{n \to \infty} \sigma_n(T) = 0.
+\]
+
+This norm equals the operator trace of the modulus:
+\[
+\| T \|_{\mathcal{C}_1} = \operatorname{Tr}(|T|) = \sum_{n=1}^\infty \langle |T| e_n, e_n \rangle,
+\]
+for any orthonormal basis \( \{ e_n \} \subset H \). The sum converges absolutely and is basis-independent by positivity and spectral theory.
+
+\medskip
+\noindent\textbf{Norm Properties.}
+\begin{enumerate}
+    \item[\textup{(i)}] The space \( \mathcal{C}_1(H) \), equipped with \( \| \cdot \|_{\mathcal{C}_1} \), is a Banach space and a two-sided norm-closed *-ideal in \( \mathcal{B}(H) \).
+    
+    \item[\textup{(ii)}] The trace norm is submultiplicative under bounded composition:
+    \[
+    \| AT \|_{\mathcal{C}_1} \le \|A\| \cdot \|T\|_{\mathcal{C}_1}, \quad
+    \| TA \|_{\mathcal{C}_1} \le \|A\| \cdot \|T\|_{\mathcal{C}_1}, \quad \forall A \in \mathcal{B}(H).
+    \]
+
+    \item[\textup{(iii)}] The trace norm is unitarily invariant:
+    \[
+    \| U T V \|_{\mathcal{C}_1} = \|T\|_{\mathcal{C}_1}, \quad \text{for all unitaries } U, V \in \mathcal{B}(H).
+    \]
+
+    \item[\textup{(iv)}] Trace-norm convergence implies convergence in operator norm and in the weak operator topology. Moreover:
+    \[
+    T_n \to T \text{ in } \mathcal{C}_1 \quad \Rightarrow \quad \operatorname{Tr}(T_n) \to \operatorname{Tr}(T).
+    \]
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Spectral and Determinant Applications.}
+The trace norm governs spectral convergence, determinant analyticity, and the well-posedness of functional calculus on Schatten ideals:
+
+\begin{itemize}
+    \item For \( T \in \mathcal{C}_1(H) \), the Carleman \(\zeta\)-regularized Fredholm determinant
+    \[
+    \det\nolimits_{\zeta}(I - \lambda T) := \prod_{n=1}^\infty (1 - \lambda \lambda_n),
+    \]
+    where \( \{\lambda_n\} \subset \mathbb{C} \) are the eigenvalues of \( T \), converges absolutely and locally uniformly in \( \lambda \in \mathbb{C} \). It defines an entire function of order one and exponential type bounded by \( \|T\|_{\mathcal{C}_1} \) \cite[Thm.~3.1]{Simon2005TraceIdeals}.
+
+    \item If \( T_n \to T \) in trace norm, then:
+    \begin{itemize}
+        \item Heat traces converge: \( \operatorname{Tr}(e^{-t T_n^2}) \to \operatorname{Tr}(e^{-t T^2}) \) for all \( t > 0 \);
+        \item Resolvent traces converge: \( \operatorname{Tr}((T_n - zI)^{-1}) \to \operatorname{Tr}((T - zI)^{-1}) \) for \( z \in \rho(T) \);
+        \item Spectral zeta functions converge: \( \zeta_{T_n}(s) \to \zeta_T(s) \) uniformly on compact subsets of their shared domain of holomorphy.
+    \end{itemize}
+
+    \item These continuity results underpin the construction of the canonical spectral determinant in Chapter~\ref{sec:determinant-identity}, and the derivation of asymptotic growth via Tauberian theory in Chapter~\ref{sec:tauberian-growth} \cite{Korevaar2004Tauberian}.
+\end{itemize}
+
+\medskip
+\noindent\textbf{References.}
+\begin{itemize}
+    \item B. Simon, \emph{Trace Ideals and Their Applications}, Thms.~3.1–3.3 \cite{Simon2005TraceIdeals}.
+    \item J. Korevaar, \emph{Tauberian Theory}, Chapter~III \cite{Korevaar2004Tauberian}.
+\end{itemize}
+\end{definition}

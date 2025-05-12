@@ -1,0 +1,51 @@
+\begin{definition}[Compact Operators]\label{def:compact-operator}
+Let \( H \) be a complex separable Hilbert space, and denote by \( \mathcal{B}(H) \) the Banach algebra of bounded linear operators on \( H \), equipped with the operator norm \( \|T\| := \sup_{\|x\|=1} \|Tx\| \).
+
+An operator \( T \in \mathcal{B}(H) \) is said to be \emph{compact} if it satisfies any (hence all) of the following equivalent properties:
+\begin{enumerate}
+    \item[\textup{(i)}] The image of the closed unit ball \( B_H := \{ x \in H : \|x\| \leq 1 \} \) under \( T \) has compact closure in the norm topology of \( H \).
+    \item[\textup{(ii)}] For every bounded sequence \( \{x_n\} \subset H \), the image sequence \( \{Tx_n\} \subset H \) has a convergent subsequence.
+    \item[\textup{(iii)}] There exists a sequence \( \{T_n\} \subset \mathcal{F}(H) \) of finite-rank operators such that \( \|T - T_n\|_{\mathrm{op}} \to 0 \) as \( n \to \infty \).
+\end{enumerate}
+
+The set \( \mathcal{K}(H) \subset \mathcal{B}(H) \) of compact operators forms a norm-closed, two-sided *-ideal and satisfies the inclusions:
+\[
+\mathcal{F}(H) \subset \mathcal{K}(H) \subset \mathcal{C}_p(H) \quad \text{for all } p > 0,
+\]
+where \( \mathcal{C}_p(H) \) denotes the Schatten \( p \)-class (see Appendix~\ref{app:trace-ideals-review}).
+
+\medskip
+\noindent\textbf{Singular Value Decomposition.}
+Every \( T \in \mathcal{K}(H) \) admits a singular value decomposition (SVD):
+\[
+T = \sum_{n=1}^\infty s_n \langle \cdot, f_n \rangle e_n,
+\]
+where \( \{e_n\}, \{f_n\} \subset H \) are orthonormal systems, and \( s_n \geq 0 \) are the singular values with \( s_n \to 0 \). The sum converges in operator norm. The spectrum of such \( T \) consists entirely of the eigenvalues \( \{\pm s_n\} \cup \{0\} \), with possible multiplicities.
+
+\medskip
+\noindent\textbf{Spectral Properties.}
+For every \( T \in \mathcal{K}(H) \):
+\begin{itemize}
+    \item The spectrum \( \sigma(T) \subset \mathbb{C} \) is at most countable, with \( \sigma(T) \setminus \{0\} \) consisting solely of eigenvalues of finite multiplicity.
+    \item The only possible accumulation point of \( \sigma(T) \) is \( 0 \).
+    \item The resolvent set \( \rho(T) := \mathbb{C} \setminus \sigma(T) \) is open.
+\end{itemize}
+
+\medskip
+\noindent\textbf{Ideal and Closure Properties.}
+\begin{itemize}
+    \item \( \mathcal{K}(H) \) is the closure (in operator norm) of the rank-one operators.
+    \item If \( A \in \mathcal{B}(H) \) and \( K \in \mathcal{K}(H) \), then \( AK, KA \in \mathcal{K}(H) \). Compactness is preserved under bounded left and right multiplication.
+\end{itemize}
+
+\medskip
+\noindent\textbf{Contextual Role.}
+In this manuscript, compactness underpins spectral discreteness, Schatten inclusion, and determinant analyticity. The mollified convolution operators \( L_t \) are shown to be compact on the weighted space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx) \) for all \( \alpha > \pi \) (cf. Proposition~\ref{prop:compactness-Lt} and Lemma~\ref{lem:kernel_L2_weighted_bound}). This enables construction of the limit operator \( L_{\mathrm{sym}} \), realization of its spectral resolution, and well-defined Carleman–Fredholm determinant expansion.
+
+\medskip
+\noindent\textbf{References.}
+\begin{itemize}
+    \item M. Reed and B. Simon, \emph{Methods of Modern Mathematical Physics I: Functional Analysis}, Theorem~VI.10 \cite{ReedSimon1980I}.
+    \item B. Simon, \emph{Trace Ideals and Their Applications}, Chapter~3 \cite{Simon2005TraceIdeals}.
+\end{itemize}
+\end{definition}

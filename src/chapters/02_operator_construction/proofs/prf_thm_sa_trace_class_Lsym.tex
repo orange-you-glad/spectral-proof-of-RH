@@ -1,0 +1,38 @@
+\begin{proof}[Proof of Theorem~\ref{thm:sa-trace-class-Lsym}]
+Let \( L_{\mathrm{sym}} \) be the canonical convolution operator acting on
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \text{where } \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+\]
+
+\paragraph{(i) Trace-Class and Compactness.}
+By Lemma~\ref{lem:trace-norm-convergence-Lt-to-Lsym}, we have
+\[
+L_t \to L_{\mathrm{sym}} \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}) \text{ as } t \to 0^+,
+\]
+where each \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) by Lemma~\ref{lem:trace_class_Lt}. Since the trace-class operators form a Banach ideal, closed under norm convergence, it follows that
+\[
+L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}).
+\]
+Moreover, trace-class operators are compact, i.e., \( \mathcal{C}_1 \subset \mathcal{K} \), so
+\[
+L_{\mathrm{sym}} \in \mathcal{K}(H_{\Psi_\alpha}).
+\]
+
+\paragraph{(ii) Self-Adjointness via Core Domain.}
+By Proposition~\ref{prop:core_schwartz_density}, the Schwartz space \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \) is a dense core for \( L_{\mathrm{sym}} \). Moreover, by Lemma~\ref{lem:core-essential-selfadjointness}, the restriction \( L_0 := L_{\mathrm{sym}}|_{\mathcal{S}(\mathbb{R})} \) is essentially self-adjoint. Therefore,
+\[
+\overline{L_0} = L_{\mathrm{sym}}, \quad \text{and} \quad L_{\mathrm{sym}} = L_{\mathrm{sym}}^*.
+\]
+
+\paragraph{Conclusion.}
+We have shown that
+\[
+L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}), \quad \text{and} \quad L_{\mathrm{sym}} = L_{\mathrm{sym}}^*.
+\]
+The spectrum of \( L_{\mathrm{sym}} \) therefore consists of real, discrete eigenvalues of finite multiplicity. The spectral theorem applies, enabling functional calculus and defining the semigroup \( e^{-t L_{\mathrm{sym}}^2} \). In particular, the Fredholm determinant
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+\]
+is well-defined, and its analytic structure is central to the determinant identity established in Chapter~\ref{sec:determinant-identity}.
+\end{proof}
+% 

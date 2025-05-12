@@ -1,0 +1,36 @@
+\begin{proof}[Proof of Proposition~\ref{prop:inverse-spectral-rigidity}]
+Let \( L_1, L_2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact, self-adjoint trace-class operators satisfying:
+\[
+\operatorname{Spec}(L_1) = \operatorname{Spec}(L_2), \qquad
+\det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2) \quad \text{for all } \lambda \in \mathbb{C}.
+\]
+
+\paragraph{Step 1: Spectral Resolution via the Spectral Theorem.}
+Since both \( L_1 \) and \( L_2 \) are compact and self-adjoint on the separable Hilbert space \( H_{\Psi_\alpha} \), they admit spectral decompositions with orthonormal eigenbases \( \{e_n^{(1)}\} \), \( \{e_n^{(2)}\} \) and eigenvalue sequence \( \{\lambda_n\} \subset \mathbb{R} \) satisfying \( \lambda_n \to 0 \), repeated according to multiplicity:
+\[
+L_j f = \sum_{n=1}^\infty \lambda_n \langle f, e_n^{(j)} \rangle e_n^{(j)}, \qquad j = 1,2.
+\]
+
+\paragraph{Step 2: Spectral Determinant Equivalence.}
+The zeta-regularized determinant is given by the Hadamard product:
+\[
+\det\nolimits_\zeta(I - \lambda L_j) = \prod_{n=1}^\infty (1 - \lambda \lambda_n),
+\]
+which converges absolutely on compact subsets of \( \mathbb{C} \) because \( L_j \in \mathcal{C}_1 \). The equality of the determinants as entire functions of order one implies that their zeros (the reciprocal eigenvalues) agree exactly—including multiplicities—by uniqueness of Weierstrass factorization up to normalization. Since both determinants are normalized at \( \lambda = 0 \), we conclude:
+\[
+\operatorname{Spec}(L_1) = \operatorname{Spec}(L_2), \quad \text{with identical multiplicities}.
+\]
+
+\paragraph{Step 3: Construction of a Unitary Intertwiner.}
+Define a unitary operator \( U : H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) by \( U e_n^{(1)} := e_n^{(2)} \) for each \( n \). This map preserves orthonormality and extends to a unitary operator. Then:
+\[
+U L_1 U^{-1} f = \sum_{n=1}^\infty \lambda_n \langle f, e_n^{(2)} \rangle e_n^{(2)} = L_2 f.
+\]
+Thus,
+\[
+L_2 = U L_1 U^{-1}.
+\]
+
+\paragraph{Conclusion.}
+The operators \( L_1 \) and \( L_2 \) are unitarily equivalent. If both arise from the canonical construction associated with the completed zeta function \( \Xi(s) \), then the spectral encoding and determinant identity uniquely determine the operator, and it follows that \( L_1 = L_2 \).
+\end{proof}

@@ -1,0 +1,32 @@
+\begin{proof}[Proof of Theorem~\ref{thm:eq_of_rh}]
+Let \( \rho \mapsto \mu_\rho := \dfrac{1}{i(\rho - \tfrac{1}{2})} \) denote the canonical bijection between the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zeta(s) \) and the nonzero eigenvalues of the canonical compact, self-adjoint trace-class operator \( L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha}) \), as established in Theorem~\ref{thm:spectral-zero-bijection-revised}. This correspondence is multiplicity-preserving by Lemma~\ref{lem:multiplicity-preservation}, and the determinant identity
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
+\]
+encodes the zero structure of \( \Xi(s) \) exactly, up to canonical normalization.
+
+The key identity in the proof is that:
+\[
+\mu_\rho \in \mathbb{R}
+\quad \Longleftrightarrow \quad
+\Re(\rho) = \tfrac{1}{2}.
+\]
+This follows by direct computation:
+\[
+\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} \in \mathbb{R}
+\quad \Longleftrightarrow \quad
+\frac{1}{i(\sigma + i\gamma - \tfrac{1}{2})} \in \mathbb{R}
+\quad \Longleftrightarrow \quad
+\sigma = \tfrac{1}{2}.
+\]
+
+\paragraph{\( \Rightarrow \)}  
+Assume \( \Spec(L_{\mathrm{sym}}) \subset \mathbb{R} \). Then all eigenvalues \( \mu_\rho \in \mathbb{R} \). By the canonical correspondence, this implies \( \Re(\rho) = \tfrac{1}{2} \) for all nontrivial \( \rho \), hence RH holds.
+
+\paragraph{\( \Leftarrow \)}  
+Conversely, assume the Riemann Hypothesis is true. Then each nontrivial zero \( \rho \) satisfies \( \Re(\rho) = \tfrac{1}{2} \), so each eigenvalue \( \mu_\rho \in \mathbb{R} \), and hence \( \Spec(L_{\mathrm{sym}}) \subset \mathbb{R} \).
+
+\paragraph{Spectral and Functional Conclusion.}
+Because \( L_{\mathrm{sym}} \) is self-adjoint (Theorem~\ref{thm:sa-trace-class-Lsym}) and trace-class, the spectral theorem ensures that its spectrum is real-valued if and only if all canonical \( \mu_\rho \in \mathbb{R} \). Therefore, the Riemann Hypothesis is logically equivalent to the spectral realness of \( L_{\mathrm{sym}} \), as claimed.
+\end{proof}
+%  

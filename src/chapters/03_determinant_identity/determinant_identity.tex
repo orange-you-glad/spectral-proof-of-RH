@@ -1,0 +1,83 @@
+\section{The Canonical Determinant Identity}
+\label{sec:determinant-identity}
+
+\input{chapters/03_determinant_identity/intro}
+
+\subsection{Definitions and Kernel Convergence}
+
+\input{chapters/03_determinant_identity/defs/def_fredholm_determinant}
+\input{chapters/03_determinant_identity/defs/def_carleman_zeta_determinant}
+\input{chapters/03_determinant_identity/defs/def_spectral_decomposition_compact}
+\input{chapters/03_determinant_identity/defs/def_spectral_zeta_function}
+
+\input{chapters/03_determinant_identity/lems/lem_kernel_trace_norm_convergence}
+\input{chapters/03_determinant_identity/proofs/prf_lem_kernel_trace_norm_convergence}
+
+% --- Trace Singularities Linkage to Determinant Growth ---
+\paragraph{Trace Singularity and Zeta Determinant Growth.}
+The asymptotic structure of the trace \(\operatorname{Tr}(e^{-tL^2_{\mathrm{sym}}})\) encodes the analytic order and exponential type of the zeta-regularized Fredholm determinant \(\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})\). By Lemma~\ref{lem:heat-trace-expansion}, we have the short-time singularity
+\[
+\operatorname{Tr}(e^{-tL^2_{\mathrm{sym}}}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2}),
+\quad t \to 0^+.
+\]
+This behavior propagates, via Laplace–Mellin inversion, into the asymptotic growth of the spectral zeta function
+\[
+\zeta_{L^2_{\mathrm{sym}}}(s) := \sum_{n=1}^\infty \mu_n^{-2s},
+\]
+and in turn determines the entire function structure of
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \exp\left(- \sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L_{\mathrm{sym}}^n)\right).
+\]
+The coefficient \(\log(1/t)\) signals a genus-one Hadamard structure in the determinant, aligned with the growth of \(\Xi(s)\) as an entire function of order 1 and exponential type \(\pi\). This underpins the precise matching:
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\]
+proven in Section~\ref{sec:main-result-det-id}.
+
+\subsection{Determinant Construction and Growth}
+
+\input{chapters/03_determinant_identity/lems/lem_det_via_heat_trace}
+\input{chapters/03_determinant_identity/proofs/prf_lem_det_via_heat_trace}
+
+\input{chapters/03_determinant_identity/lems/lem_laplace_preserves_entire_type}
+\input{chapters/03_determinant_identity/proofs/prf_lem_laplace_preserves_entire_type}
+
+\input{chapters/03_determinant_identity/lems/lem_det_growth_bound}
+\input{chapters/03_determinant_identity/proofs/prf_lem_det_growth_bound}
+
+\input{chapters/03_determinant_identity/lems/lem_det_identity_entire_order_one}
+\input{chapters/03_determinant_identity/proofs/prf_lem_det_identity_entire_order_one}
+
+\input{chapters/03_determinant_identity/lems/lem_laplace_heat_trace_convergence}
+\input{chapters/03_determinant_identity/proofs/prf_lem_laplace_heat_trace_convergence}
+
+\input{chapters/03_determinant_identity/lems/lem_spectral_zeta_from_heat}
+\input{chapters/03_determinant_identity/proofs/prf_lem_spectral_zeta_from_heat}
+
+\input{chapters/03_determinant_identity/lems/lem_det_continuity_trace_norm}
+\input{chapters/03_determinant_identity/proofs/prf_lem_det_continuity_trace_norm}
+
+\subsection{Hadamard Structure and Normalization}
+
+\input{chapters/03_determinant_identity/lems/lem_hadamard_linear_form}
+\input{chapters/03_determinant_identity/proofs/prf_lem_hadamard_linear_form}
+
+\input{chapters/03_determinant_identity/lems/lem_trace_zero}
+\input{chapters/03_determinant_identity/proofs/prf_lem_trace_zero}
+
+\input{chapters/03_determinant_identity/lems/lem_A_log_derivative}
+\input{chapters/03_determinant_identity/proofs/prf_lem_A_log_derivative}
+
+\input{chapters/03_determinant_identity/lems/lem_zero_to_spectrum_correspondence}
+\input{chapters/03_determinant_identity/proofs/prf_lem_zero_to_spectrum_correspondence}
+
+\input{chapters/03_determinant_identity/lems/lem_exact_type_pi}
+\input{chapters/03_determinant_identity/proofs/prf_lem_exact_type_pi}
+
+\subsection{Main Result: Canonical Determinant Identity}
+\label{sec:main-result-det-id}
+
+\input{chapters/03_determinant_identity/thms/thm_det_identity_revised}
+\input{chapters/03_determinant_identity/proofs/prf_thm_det_identity_revised}
+
+\input{chapters/03_determinant_identity/summary}

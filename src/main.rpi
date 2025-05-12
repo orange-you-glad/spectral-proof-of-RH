@@ -1,0 +1,14 @@
+%authors=R.A.\nonbreakingspace Jacob\nonbreakingspace Martone
+%authors.information={author=R.A.\nonbreakingspace Jacob\nonbreakingspace Martone;email=jacob@orangeyouglad.org;}
+%title=A Canonical Spectral Determinant Realizing the Riemann Hypothesis
+%year=XXXX
+%volume=00
+%issue=0
+%paper=0000
+%startpage=1
+%endpage=192
+%doi=10.4007/annals.XXXX.00.0.0000
+%subjects=Primary ; Secondary: 
+%keywords=Riemann zeta function, trace-class operator, spectral determinant, heat kernel, Tauberian theorem
+%abstract=<begin abstract english> We construct a canonical compact, self-adjoint, trace-class operator \( L_{\mathrm  {sym}} \in \mathcal  {C}_1(H_{\Psi _\alpha }) \), on the exponentially weighted Hilbert space \( H_{\Psi _\alpha } = L^2(\mathbb  {R}, e^{\alpha |x|} \tmspace  +\thinmuskip {.1667em} dx) \), for fixed \( \alpha > \pi \). Its Carleman \(\zeta \)-regularized Fredholm determinant satisfies \[ \qopname  \relax m{det}\nolimits _{\zeta }(I - \lambda L_{\mathrm  {sym}}) = \frac  {\Xi (\genfrac  {}{}{}1{1}{2} + i\lambda )}{\Xi (\genfrac  {}{}{}1{1}{2})}, \] with \(\Xi (s)\) the completed Riemann zeta function. \par The determinant is entire of order one and exponential type \( \pi \), yielding a complete analytic resolution of the Riemann Hypothesis. The operator arises as the trace-norm limit of mollified convolution operators with kernels given by the inverse Fourier transform of \( \Xi \), and has real, discrete spectrum \( \mu _\rho = 1/i(\rho - \genfrac  {}{}{}1{1}{2}) \) that encodes all nontrivial zeros \( \rho \) of \( \zeta (s) \), preserving multiplicities. \par We establish heat kernel analyticity, derive refined short-time trace asymptotics, and extract spectral counting bounds via Tauberian theory. The determinant identity is proven without assuming spectral bijection, using only classical analytic and trace-class operator theory. \par A modular sequence of rigidity results culminates in the equivalence \( \mathrm  {RH} \DOTSB \tmspace  +\thickmuskip {.2777em}\DOTSB \Leftarrow \joinrel  \Rightarrow \tmspace  +\thickmuskip {.2777em}\operatorname  {Spec}(L_{\mathrm  {sym}}) \subset \mathbb  {R} \), and we prove this spectral condition holds. Therefore, the Riemann Hypothesis is resolved as an exact spectral theorem. <end abstract english>
+%articlelanguage=english

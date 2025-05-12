@@ -1,0 +1,36 @@
+\begin{proof}[Proof of Lemma~\ref{lem:exact-type-pi}]
+Let \( f(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). It is classical that \( \Xi(s) \) is an entire function of order one and exponential type \( \pi \). This follows from:
+
+\begin{itemize}
+  \item The functional equation and integral representation of \( \Xi(s) \),
+  \item The Stirling expansion of \( \Gamma(s/2) \), and
+  \item The Hadamard factorization for entire functions with real zeros of bounded density.
+\end{itemize}
+
+\paragraph{(i) Upper bound on type.}
+From Titchmarsh~\cite[§10.5]{Titchmarsh1986Zeta}, one has for all \( \varepsilon > 0 \),
+\[
+|\Xi(\tfrac{1}{2} + i\lambda)| \le C e^{(\pi + \varepsilon)|\lambda|},
+\]
+establishing exponential type \( \le \pi \).
+
+\paragraph{(ii) Lower bound on type.}
+The lower bound follows from classical results of de Bruijn and Levin~\cite[Chap.~3]{Levin1996EntireLectures}, which state that the exponential type is equal to \( \pi \) if the distribution of the zeros has limiting density \( \frac{\pi}{\log T} \) and the function is real-entire and even.
+
+Furthermore, the exact type is encoded in the asymptotic location of the zeros of \( \Xi(s) \), whose imaginary parts have counting function
+\[
+N(T) \sim \frac{T}{2\pi} \log\left(\frac{T}{2\pi e}\right) + O(\log T),
+\]
+implying exponential type at least \( \pi \) by Hadamard theory.
+
+\paragraph{(iii) Determinant match.}
+By Theorem~\ref{thm:det-identity-revised}, we have
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\]
+and therefore the determinant inherits the exact same exponential type.
+
+\paragraph{Conclusion.}
+Both \( \Xi(\tfrac{1}{2} + i\lambda) \) and the canonical determinant belong to the class \( \mathcal{E}_1^\pi \), completing the proof.
+\end{proof}
+%  

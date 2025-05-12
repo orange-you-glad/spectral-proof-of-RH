@@ -1,0 +1,23 @@
+\begin{lemma}[Positivity of the Trace Distribution]
+\label{lem:trace_distribution_positivity}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \}_{n \in \mathbb{Z}} \subset \mathbb{R} \), with each eigenvalue repeated according to its finite multiplicity.
+
+Define the spectral trace functional on the Schwartz space \( \mathcal{S}(\mathbb{R}) \) by
+\[
+\phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) := \sum_n \phi(\mu_n).
+\]
+
+Then the following hold:
+\begin{enumerate}
+  \item[\normalfont(i)] The map \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) defines a tempered distribution on \( \mathbb{R} \). That is, it extends continuously to \( \mathcal{S}(\mathbb{R}) \) and satisfies finite-order growth bounds under test function differentiation.
+
+  \item[\normalfont(ii)] The trace distribution is positive: for every nonnegative test function \( \phi \in \mathcal{S}(\mathbb{R}) \) such that \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \mathbb{R} \), we have
+  \[
+  \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \ge 0.
+  \]
+\end{enumerate}
+
+\medskip
+\noindent
+This distributional positivity reflects the positivity of the spectral measure associated with \( L_{\mathrm{sym}} \), as inherited from the positivity of the heat kernel trace. The analytic justification for this property follows from the short-time trace expansion in Proposition~\ref{prop:heat_trace_uniform_conv}, and the decay and regularity results developed in Appendix~\ref{app:heat-kernel-construction}.
+\end{lemma}

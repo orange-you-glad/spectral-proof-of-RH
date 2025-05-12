@@ -1,0 +1,77 @@
+\section{Trace Ideals and Operator Norms}
+\label{app:trace-ideals-review}
+
+This appendix reviews key analytic properties of compact operators, Schatten–von Neumann ideals, trace norms, and determinant expansions.
+
+These constructions underpin the spectral realization of the completed zeta function \( \Xi(s) \) via the canonical trace-class operator \( L_{\mathrm{sym}} \), and rely on foundational results in functional analysis and operator theory, particularly~\cite{Simon2005TraceIdeals, ReedSimon1980I, ReedSimon1975II}.
+
+For the determinant identity linking the spectrum of \( L_{\mathrm{sym}} \) to the zeros of \( \Xi(s) \), see Theorem~\ref{thm:det-identity-revised} in Chapter~\ref{sec:determinant-identity}.
+
+\subsection*{Schatten–von Neumann Ideals}
+
+Let \( H \) be a separable complex Hilbert space. For \( p \in [1, \infty) \), define:
+\[
+\mathcal{C}_p(H) := \left\{ T \in \mathcal{K}(H) \;\middle|\; \|T\|_{\mathcal{C}_p} := \left( \sum_{n=1}^\infty \sigma_n(T)^p \right)^{1/p} < \infty \right\},
+\]
+where \( \sigma_n(T) \) are the singular values of \( T \). Each \( \mathcal{C}_p \) is a Banach *-ideal, closed under adjoints and invariant under unitary conjugation.
+
+\medskip
+Important cases:
+\begin{itemize}
+  \item \( \mathcal{C}_1(H) \): trace-class operators;
+  \item \( \mathcal{C}_2(H) \): Hilbert–Schmidt operators.
+\end{itemize}
+
+\subsection*{Trace-Class Operators}
+
+If \( T \in \mathcal{C}_1(H) \), then the trace
+\[
+\operatorname{Tr}(T) := \sum_n \langle T e_n, e_n \rangle
+\]
+is independent of the choice of orthonormal basis \( \{ e_n \} \). One has:
+\[
+|\operatorname{Tr}(T)| \le \|T\|_{\mathcal{C}_1}, \qquad \|T\| \le \|T\|_{\mathcal{C}_1}.
+\]
+
+\subsection*{Structural Properties}
+
+\begin{itemize}
+  \item Ideal hierarchy: \( \mathcal{C}_1 \subset \mathcal{C}_2 \subset \mathcal{K} \subset \mathcal{B} \), where \( \mathcal{K} \) is the ideal of compact operators and \( \mathcal{B} \) the bounded operators.
+  \item All \( \mathcal{C}_p \) operators (for \( p < \infty \)) are compact.
+  \item Trace cyclicity: \( \operatorname{Tr}(AB) = \operatorname{Tr}(BA) \) when \( A \in \mathcal{C}_1 \), \( B \in \mathcal{B} \).
+\end{itemize}
+
+\subsection*{Fredholm and Carleman Determinants}
+
+Let \( T \in \mathcal{C}_1(H) \). The classical Fredholm determinant is defined by
+\[
+\det(I + T) := \prod_n (1 + \lambda_n),
+\]
+with logarithmic expansion
+\[
+\log \det(I + T) = \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k} \operatorname{Tr}(T^k),
+\]
+where \( \lambda_n \) are the eigenvalues of \( T \), counted with multiplicity.
+
+The Carleman zeta-regularized determinant is defined (formally) for \( |\lambda| < \|T\|_{\mathcal{C}_1}^{-1} \) by
+\[
+\det\nolimits_\zeta(I - \lambda T) := \exp\left( -\sum_{k=1}^\infty \frac{\lambda^k}{k} \operatorname{Tr}(T^k) \right).
+\]
+For compact, self-adjoint trace-class operators—such as \( L_{\mathrm{sym}} \)—this determinant extends analytically and defines an entire function of order one~\cite{Simon2005TraceIdeals}.
+
+\subsection*{Spectral Mapping Diagram}
+
+\begin{figure}[ht]
+\centering
+% See above: TikZ diagram code already given
+\caption{Zeta zeros \( \rho \) map via \( \rho \mapsto \mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} \) to eigenvalues of \( L_{\mathrm{sym}} \).}
+\label{fig:spectral-mapping}
+\end{figure}
+
+\subsection*{Conclusion}
+
+The theory of trace-class operators, Schatten ideals, and zeta-regularized determinants underpins the canonical identity
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\]
+for the self-adjoint operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). This framework justifies the analytic trace expansions, heat kernel asymptotics, and spectral rigidity principles that culminate in the proof of the Riemann Hypothesis in this manuscript.

@@ -1,0 +1,27 @@
+\begin{proposition}[Inverse Spectral Rigidity]
+\label{prop:inverse-spectral-rigidity}
+Let \( L_1, L_2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact, self-adjoint operators on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \), for fixed \( \alpha > \pi \). Suppose the following hold:
+\begin{itemize}
+  \item The spectra of \( L_1 \) and \( L_2 \) agree as multisets, including algebraic multiplicities:
+  \[
+  \operatorname{Spec}(L_1) = \operatorname{Spec}(L_2).
+  \]
+
+  \item The Carleman \(\zeta\)-regularized Fredholm determinants agree globally:
+  \[
+  \det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \qquad \text{for all } \lambda \in \mathbb{C}.
+  \]
+\end{itemize}
+
+Then \( L_1 \) and \( L_2 \) are unitarily equivalent: there exists a unitary operator \( U : H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) such that
+\[
+L_2 = U L_1 U^{-1}.
+\]
+
+\medskip
+\noindent
+In particular, if both \( L_1 \) and \( L_2 \) arise from the canonical convolution construction associated with the completed zeta function \( \Xi(s) \), then
+\[
+L_1 = L_2.
+\]
+\end{proposition}

@@ -1,0 +1,17 @@
+\begin{lemma}[Logarithmic Derivative of the \(\zeta\)-Regularized Determinant]
+\label{lem:A_log_derivative}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|}\, dx), \qquad \alpha > \pi.
+\]
+Then for all \( \lambda \in \mathbb{C} \) such that \( I - \lambda L_{\mathrm{sym}} \) is invertible (e.g., for \( |\lambda| < \|L_{\mathrm{sym}}\|^{-1} \)), the logarithmic derivative of the zeta-regularized determinant satisfies:
+\[
+\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+= \operatorname{Tr} \left( (I - \lambda L_{\mathrm{sym}})^{-1} L_{\mathrm{sym}} \right).
+\]
+
+\medskip
+\noindent
+This identity relates the derivative of the entire function \( \lambda \mapsto \det_\zeta(I - \lambda L_{\mathrm{sym}}) \) to the trace of the resolvent, and provides a powerful tool for matching the spectral structure and zero multiplicities with Hadamard products. The right-hand side is analytic on the set of \( \lambda \in \mathbb{C} \) such that \( \lambda^{-1} \notin \operatorname{Spec}(L_{\mathrm{sym}}) \).
+\end{lemma}
+%  

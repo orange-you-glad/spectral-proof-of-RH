@@ -1,0 +1,62 @@
+\section{Classical Properties of the Riemann Zeta Function}
+\label{app:zeta-function-background}
+
+This appendix summarizes the classical analytic properties of the Riemann zeta function \( \zeta(s) \) and its completion \( \Xi(s) \), based on foundational results from Titchmarsh~\cite{Titchmarsh1986Zeta} and Edwards~\cite{Edwards1974Zeta}. These properties form the analytic foundation for the determinant identity and spectral constructions in Chapters~\ref{sec:determinant-identity}–\ref{sec:logical-closure}.
+
+\subsection*{The Completed Zeta Function \( \Xi(s) \)}
+
+Define:
+\[
+\Xi(s) := \tfrac{1}{2} s(s - 1) \pi^{-s/2} \Gamma\left( \tfrac{s}{2} \right) \zeta(s),
+\qquad \text{where } \zeta(s) := \sum_{n=1}^\infty n^{-s}, \quad \Re(s) > 1.
+\]
+
+Then \( \Xi(s) \) satisfies:
+\begin{itemize}
+  \item \textbf{Entirety:} \( \Xi(s) \) extends to an entire function of order one and genus one;
+  \item \textbf{Functional Equation:} \( \Xi(s) = \Xi(1 - s) \);
+  \item \textbf{Reality Symmetry:} \( \Xi(s) \in \mathbb{R} \) for real \( s \), and \( \Xi(\bar{s}) = \overline{\Xi(s)} \).
+\end{itemize}
+
+These follow from analytic continuation of \( \zeta(s) \) and Stirling asymptotics of the gamma factor.
+
+\subsection*{Zeros and the Riemann Hypothesis}
+
+The nontrivial zeros of \( \zeta(s) \) lie in the critical strip \( 0 < \Re(s) < 1 \), and coincide with the zeros of \( \Xi(s) \). The Riemann Hypothesis (RH) asserts:
+\[
+\Re(\rho) = \tfrac{1}{2}, \qquad \text{for all nontrivial zeros } \rho.
+\]
+Centering via \( s = \tfrac{1}{2} + i\lambda \) maps the critical line to the real axis, enabling the spectral formulation realized by the operator \( L_{\mathrm{sym}} \).
+
+\subsection*{Hadamard Factorization and Growth}
+
+As an entire function of order one, \( \Xi(s) \) admits the Hadamard product:
+\[
+\Xi(s) = e^{C_0 + C_1 s} \prod_\rho \left( 1 - \frac{s}{\rho} \right) e^{s/\rho},
+\]
+with convergence uniform on compact subsets, and where the product is over nontrivial zeros \( \rho \).
+
+The centered profile satisfies the exact exponential growth bound:
+\[
+\Xi\left( \tfrac{1}{2} + i\lambda \right) = O\left( e^{\pi |\lambda| / 2} \right), \qquad |\lambda| \to \infty,
+\]
+due to gamma asymptotics. Hence, \( \lambda \mapsto \Xi(\tfrac{1}{2} + i\lambda) \) is entire of exponential type \( \pi/2 \).
+
+\subsection*{Centered Spectral Profile}
+
+Define:
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad \lambda \in \mathbb{R}.
+\]
+Then:
+\[
+\phi(-\lambda) = \phi(\lambda), \qquad \phi(\lambda) \in \mathbb{R}, \qquad \phi \in \mathcal{S}^\prime(\mathbb{R}).
+\]
+
+This centering aligns the critical line with the real axis and underpins the convolution kernel used in constructing the canonical operator \( L_{\mathrm{sym}} \) (cf. Chapters~\ref{sec:operator-construction}–\ref{sec:determinant-identity}).
+
+\subsection*{Conclusion}
+
+The completed zeta function \( \Xi(s) \) exhibits entire analyticity, functional symmetry, Hadamard factorization, and sharp exponential type control. These classical properties justify its realization as a zeta-regularized Fredholm determinant of a compact, self-adjoint trace-class operator, and enable the spectral reformulation of RH developed in this manuscript.
+
+The centered profile \( \phi(\lambda) \) provides the spectral kernel for \( L_{\mathrm{sym}} \), linking classical analytic number theory to the trace-class spectral framework.

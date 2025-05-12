@@ -1,0 +1,31 @@
+\begin{proof}[Proof of Lemma~\ref{lem:det_identity_entire_order_one}]
+Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact and self-adjoint. Then the zeta-regularized determinant is defined by the trace expansion:
+\[
+\det\nolimits_\zeta(I - \lambda L)
+= \exp\left( - \sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L^n) \right),
+\]
+which converges absolutely for all \( \lambda \in \mathbb{C} \), since
+\[
+|\operatorname{Tr}(L^n)| \le \|L^n\|_{\mathcal{C}_1} \le \|L\|^n.
+\]
+Thus, \( \det_\zeta(I - \lambda L) \) is an entire function on \( \mathbb{C} \).
+
+\paragraph{Growth bound.}
+By Lemma~\ref{lem:det_growth_bound}, the determinant satisfies the exponential growth estimate
+\[
+\log \left| \det\nolimits_\zeta(I - \lambda L) \right|
+\le C |\lambda| \log(1 + |\lambda|),
+\]
+for some constant \( C > 0 \). This implies the function is entire of order one.
+
+\paragraph{Exponential type via Fourier decay.}
+The operator \( L \) is defined via convolution with a kernel \( K(x-y) \) whose Fourier transform is \( \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Since \( \Xi \) is an entire function of exponential type \( \pi \), it follows by the Paley–Wiener theorem that \( K \in L^2(\mathbb{R}) \) is supported in \( [-\pi, \pi] \) in the frequency domain, and hence \( K(x) \) decays exponentially in space as \( e^{-(\pi - \varepsilon)|x|} \). This decay propagates into exponential type of the determinant via standard determinant-kernel correspondence \cite{Simon2005TraceIdeals}.
+
+\paragraph{Conclusion.}
+The determinant is entire of order one and exponential type \( \pi \). That is,
+\[
+\det\nolimits_\zeta(I - \lambda L) \in \mathcal{E}_1^\pi,
+\]
+the class of entire functions of order one and finite exponential type \( \pi \), as claimed.
+\end{proof}
+%  

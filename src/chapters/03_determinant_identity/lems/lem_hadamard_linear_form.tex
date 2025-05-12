@@ -1,0 +1,32 @@
+\begin{lemma}[Hadamard Factorization of \( \Xi\left(\tfrac{1}{2} + i\lambda\right) \)]
+\label{lem:hadamard-linear-form}
+Let \( \Xi(s) \) denote the completed Riemann zeta function. Then the shifted entire function
+\[
+\lambda \mapsto \Xi\left( \tfrac{1}{2} + i\lambda \right)
+\]
+is of order one and genus one, and admits the canonical Hadamard factorization:
+\[
+\Xi\left( \tfrac{1}{2} + i\lambda \right)
+= \Xi\left( \tfrac{1}{2} \right)
+\prod_{\rho \ne \tfrac{1}{2}} \left( 1 - \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right)
+\exp\left( \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right),
+\]
+where the product is taken over all nontrivial zeros \( \rho \in \mathbb{C} \) of \( \zeta(s) \), counted with multiplicity.
+
+\medskip
+\noindent
+This factorization is canonical in the Hadamard sense: since \( \Xi(s) \) is entire of order one, the associated genus is also one, and the minimal Weierstrass primary factor is of the form
+\[
+E_1(z) = (1 - z) \exp(z).
+\]
+The exponential terms arise from this genus-one constraint.
+
+\medskip
+\noindent
+The product converges absolutely and uniformly on compact subsets of \( \mathbb{C} \), and the symmetry \( \Xi(s) = \Xi(1 - s) \) implies
+\[
+\Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} - i\lambda \right),
+\]
+so the factorization is invariant under \( \lambda \mapsto -\lambda \), and all zeros appear in symmetric pairs about the origin.
+\end{lemma}
+%  

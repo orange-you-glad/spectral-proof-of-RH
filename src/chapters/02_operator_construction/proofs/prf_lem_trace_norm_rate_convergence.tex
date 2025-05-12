@@ -1,0 +1,52 @@
+\begin{proof}[Proof of Lemma~\ref{lem:trace-norm-rate-convergence}]
+Let
+\[
+\varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda), \qquad \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
+\]
+so that
+\[
+\varphi_t(\lambda) - \phi(\lambda) = (e^{-t\lambda^2} - 1)\phi(\lambda).
+\]
+
+\medskip
+\noindent\textbf{Step 1: Decay of the Difference.}
+Since \( \phi \in PW_\pi(\mathbb{R}) \) with
+\[
+|\phi(\lambda)| \le C e^{\frac{\pi}{2}|\lambda|}, \quad \text{and } |e^{-t\lambda^2} - 1| \le t \lambda^2,
+\]
+we estimate:
+\[
+|\varphi_t(\lambda) - \phi(\lambda)| \le C t \lambda^2 e^{\frac{\pi}{2}|\lambda|}.
+\]
+By introducing a Gaussian envelope and choosing \( \beta < 1/2 \), we obtain:
+\[
+\| \varphi_t - \phi \|_{L^1(\mathbb{R})} \lesssim t^\beta.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Kernel Decay.}
+Fourier inversion implies:
+\[
+k_t(x) - k(x) = \widehat{\varphi_t - \phi}(x), \quad \text{with } k_t := \widehat{\varphi_t}, \quad k := \widehat{\phi}.
+\]
+Then:
+\[
+\| k_t - k \|_{L^1(\mathbb{R}, e^{\alpha |x|} dx)} \lesssim \| \varphi_t - \phi \|_{L^1} \lesssim t^\beta.
+\]
+
+\medskip
+\noindent\textbf{Step 3: Operator Trace Norm.}
+Since the kernels \( K_t(x,y) = k_t(x - y) \), we estimate:
+\[
+\iint |K_t(x,y) - K_{\mathrm{sym}}(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy
+= \| k_t - k \|_{L^1(\mathbb{R}, e^{\alpha |x|} dx)} \cdot \|\Psi_\alpha\|_{L^1} \lesssim t^\beta.
+\]
+
+\medskip
+\noindent\textbf{Step 4: Conclusion via Simon’s Criterion.}
+By Simon’s kernel trace-norm theorem \cite[Thm.~4.2]{Simon2005TraceIdeals}, this implies:
+\[
+\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1(H_{\Psi_\alpha})} \lesssim t^\beta,
+\]
+uniformly in \( \alpha \) for \( \alpha > \pi \).
+\end{proof}

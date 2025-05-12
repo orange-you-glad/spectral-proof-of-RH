@@ -1,0 +1,60 @@
+\subsection*{Introduction}
+
+This chapter recasts the Riemann Hypothesis as a statement of spectral rigidity: the assertion that the spectrum of the canonical trace-class operator
+\[
+L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}),
+\]
+constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \), lies entirely in \( \mathbb{R} \) if and only if all nontrivial zeros of \( \zeta(s) \) lie on the critical line \( \Re(s) = \tfrac{1}{2} \).
+
+\paragraph{Goals.}
+\begin{itemize}
+  \item \textit{Spectral Encoding.}  
+  The Carleman \(\zeta\)-regularized determinant identity
+  \[
+  \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
+  = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
+  \]
+  induces a multiplicity-preserving map
+  \[
+  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+  \]
+  sending nontrivial zeros \( \rho \) of \( \zeta(s) \) to eigenvalues \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \). This encoding intertwines the Hadamard product expansion of \( \Xi(s) \) with the spectral structure of \( L_{\mathrm{sym}} \). We prove that every zero of the determinant corresponds to a spectral eigenvalue.
+
+  \item \textit{Spectral Rigidity.}  
+  While \( L_{\mathrm{sym}} \) is self-adjoint and hence has real spectrum by construction, we prove the converse: if all encoded eigenvalues \( \mu_\rho \in \mathbb{R} \), then the corresponding zeros \( \rho \) lie on the critical line. That is,
+  \[
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \quad \Longleftrightarrow \quad
+  \rho = \tfrac{1}{2} + i\gamma, \quad \gamma \in \mathbb{R}.
+  \]
+  Determinantal vanishing implies spectral inclusion via analytic continuation and Fredholm theory, without requiring an explicit spectral bijection.
+
+  \item \textit{Spectral Symmetry.}  
+  The functional equation \( \Xi(\tfrac{1}{2} + i\lambda) = \Xi(\tfrac{1}{2} - i\lambda) \) implies that the spectrum is symmetric:
+  \[
+  \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \quad \Rightarrow \quad -\mu \in \operatorname{Spec}(L_{\mathrm{sym}}),
+  \]
+  with equal multiplicity. This symmetry follows directly from the evenness of the canonical Fourier profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \).
+
+  \item \textit{Trace Positivity.}  
+  The spectral trace pairing
+  \[
+  \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}}))
+  \]
+  defines a positive tempered distribution on \( \mathbb{R} \). In particular,
+  \[
+  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \ge 0 \quad \text{for all } t > 0,
+  \]
+  reflecting positivity of the spectral measure under heat kernel regularization. This distributional positivity holds for all nonnegative test functions \( \phi \in \mathcal{S}(\mathbb{R}) \), supporting a harmonic-analytic interpretation of the spectral trace.
+
+  \item \textit{Analytic Independence.}  
+  All results in this chapter are derived using classical analytic techniques:
+  \begin{itemize}
+    \item spectral theory for compact self-adjoint operators;
+    \item Gaussian decay and trace-class convergence of \( e^{-tL_{\mathrm{sym}}^2} \);
+    \item Hadamard factorization and functional identity of \( \Xi(s) \);
+    \item Fredholm determinant theory and zero-to-spectrum transfer;
+    \item and spectral unitarity from orthonormal diagonalization.
+  \end{itemize}
+  No appeal is made to modular forms, trace formulas, or Langlands theory.
+\end{itemize}

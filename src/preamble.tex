@@ -1,0 +1,181 @@
+%==============================
+% Preamble: Core Packages and Custom Definitions
+%==============================
+
+%--- Essential Math Packages ---
+\usepackage{amsmath, amssymb, amsfonts, mathrsfs}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, cd}
+
+%--- Table and Caption Formatting ---
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{caption}
+
+%--- Hyperlinking (black links, PDF metadata) ---
+\usepackage{hyperref}
+\hypersetup{
+    bookmarksdepth=section,
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+    pdfauthor={R.A. Jacob Martone},
+    pdftitle={A Canonical Spectral Proof of the Riemann Hypothesis},
+    pdfsubject={Mathematics -- Spectral Theory, Zeta Functions, Trace-Class Operators},
+    pdfkeywords={Riemann Hypothesis, Fredholm Determinant, Trace-Class Operator, Hilbert Space, Zeta Regularization, Heat Kernel, Spectral Theory}
+}
+
+%==============================
+% Layout and Font Adjustments
+%==============================
+\linespread{1.12}  % Improves vertical spacing for readability
+\setlength{\headheight}{18pt}
+
+%==============================
+% Custom Column Types
+%==============================
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+%==============================
+% Number Systems
+%==============================
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+%==============================
+% Function Spaces
+%==============================
+\newcommand{\Lp}[1]{L^{#1}(\R)}
+\newcommand{\Schwartz}{\mathcal{S}(\R)}
+\newcommand{\HPsi}{H_{\Psi}}
+\newcommand{\Hilb}{\mathcal{H}}
+
+%==============================
+% Operator-Theoretic Objects
+%==============================
+\newcommand{\TC}{\mathcal{B}_1}       % Trace-class operators
+\newcommand{\KC}{\mathcal{K}}         % Compact operators
+\newcommand{\SC}{\mathcal{S}_2}       % Hilbert-Schmidt
+\newcommand{\Tr}{\operatorname{Tr}}   % Trace
+\newcommand{\Spec}{\operatorname{Spec}} 
+\newcommand{\Ran}{\operatorname{Ran}} 
+\newcommand{\Ker}{\operatorname{Ker}} 
+\newcommand{\HS}{\mathrm{HS}}         
+\newcommand{\Lop}{L_t}                % Mollified operator
+
+%==============================
+% Special Functions and Weights
+%==============================
+\newcommand{\XiR}{\Xi}
+\newcommand{\zetaR}{\zeta}
+\newcommand{\PsiW}{\Psi}
+\newcommand{\PsiAlpha}[1]{\exp\!\bigl(\alpha |#1|\bigr)}
+
+%==============================
+% Fourier Transform Convention
+%==============================
+\newcommand{\FT}{\mathcal{F}}
+\newcommand{\ft}[1]{\widehat{#1}}
+
+%==============================
+% Math Utilities
+%==============================
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+
+%==============================
+% Cross-Reference Shortcuts
+%==============================
+\newcommand{\thmref}[1]{Theorem~\ref{#1}}
+\newcommand{\lemref}[1]{Lemma~\ref{#1}}
+\newcommand{\corref}[1]{Corollary~\ref{#1}}
+\newcommand{\propref}[1]{Proposition~\ref{#1}}
+\newcommand{\defref}[1]{Definition~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+\newcommand{\eqnref}[1]{\eqref{#1}}
+
+%==============================
+% Additional Math Labels
+%==============================
+\newcommand{\sym}{\mathrm{sym}}
+\newcommand{\op}{\mathrm{op}}
+
+%==============================
+% Weighted Spaces (exponential profile)
+%==============================
+\newcommand{\PsiAlphaSpace}[1]{L^2(\R, \PsiAlpha{#1}\,dx)}
+
+%==============================
+% Theorem Environments
+%==============================
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{auditnote}{Audit Note}
+
+% ===== Preview Box Environment =====
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{previewbox}{
+  colback=gray!5,
+  colframe=black,
+  fonttitle=\bfseries,
+  coltitle=black,
+  sharp corners,
+  boxrule=0.4pt,
+  title={Spectral Preview},
+  before skip=10pt,
+  after skip=10pt,
+  breakable
+}
+
+\newenvironment{references}{
+  \medskip
+  \noindent\textbf{References.}
+  \begin{list}{}{\leftmargin=1.5em \itemindent=-1.5em \itemsep=0pt}
+  \item[]
+}{
+  \end{list}
+  \medskip
+}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+% In preamble
+\makeatletter
+\DeclareRobustCommand{\widecheck}[1]{
+  \mathpalette\@widecheck{#1}
+}
+\def\@widecheck#1#2{%
+  \setbox\z@\hbox{\m@th#1#2}%
+  \setbox\tw@\hbox{\m@th#1\widehat{\box\z@}}%
+  \setbox\tw@\hbox to \wd\z@{\hss\box\tw@\hss}%
+  {\vbox{\offinterlineskip
+      \box\tw@
+      \vskip -\ht\z@
+      \box\z@}}}
+\makeatother
+
+
+\newcommand{\remref}[1]{Remark~\ref{#1}}

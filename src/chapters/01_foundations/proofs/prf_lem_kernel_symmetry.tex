@@ -1,0 +1,37 @@
+\begin{proof}[Proof of \lemref{lem:kernel-symmetry}]
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \Xi(s) \) is the completed Riemann zeta function. Since \( \Xi(s) \) is entire and satisfies the functional identity \( \Xi(s) = \Xi(1 - s) \), we compute:
+\[
+\phi(-\lambda) = \Xi\left( \tfrac{1}{2} - i\lambda \right) = \Xi\left( \tfrac{1}{2} + i\lambda \right) = \phi(\lambda),
+\]
+so \( \phi \) is even. Moreover, since \( \Xi(s) \in \mathbb{R} \) for real \( s \), it follows that \( \phi(\lambda) \in \mathbb{R} \) for all \( \lambda \in \mathbb{R} \).
+
+\medskip
+\noindent\textbf{Step 1: Real-Valued and Symmetric Fourier Kernel.}
+Define
+\[
+K_0(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \phi(\lambda)\, d\lambda = \widehat{\phi}(x - y).
+\]
+Since \( \phi \) is real and even, its inverse Fourier transform \( \widehat{\phi} \) is real-valued and even. Hence,
+\[
+K_0(x,y) = \widehat{\phi}(x - y) = \widehat{\phi}(y - x) = K_0(y,x) \in \mathbb{R}.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Symmetry of the Conjugated Kernel.}
+Let \( \Psi_\alpha(x) := e^{\alpha |x|} \) for some fixed \( \alpha > \pi \), and define the conjugated kernel
+\[
+\widetilde{K}_0(x,y) := \frac{K_0(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+\]
+Since \( \Psi_\alpha \) is even, the product \( \sqrt{\Psi_\alpha(x)\Psi_\alpha(y)} \) is symmetric in \( (x,y) \). Thus, the symmetry and real-valuedness of \( K_0(x,y) \) are preserved:
+\[
+\widetilde{K}_0(x,y) = \widetilde{K}_0(y,x) \in \mathbb{R}, \quad \forall x, y \in \mathbb{R}.
+\]
+
+\medskip
+\noindent\textbf{Conclusion.}
+The conjugated kernel \( \widetilde{K}_0(x,y) \) is real and symmetric. Hence, the corresponding integral operator
+\[
+(L_{\mathrm{sym}} f)(x) := \int_{\mathbb{R}} \widetilde{K}_0(x,y)\, f(y)\, dy
+\]
+is symmetric on \( L^2(\mathbb{R}) \). By unitary equivalence via \( U f = \Psi_\alpha^{1/2} f \), it follows that \( L_{\mathrm{sym}} \) is symmetric on \( H_{\Psi_\alpha} \), initially defined on the dense core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \). This symmetry underpins the self-adjointness of \( L_{\mathrm{sym}} \) developed in later chapters.
+\end{proof}

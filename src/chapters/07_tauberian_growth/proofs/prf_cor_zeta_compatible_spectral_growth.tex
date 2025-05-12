@@ -1,0 +1,45 @@
+\begin{proof}[Proof of Corollary~\ref{cor:zeta-compatibility}]
+The canonical operator \( L_{\mathrm{sym}} \) has discrete spectrum determined by
+\[
+\mu_\rho := \frac{1}{i} \left( \rho - \tfrac{1}{2} \right),
+\]
+where \( \rho \) ranges over the nontrivial zeros of the Riemann zeta function \( \zeta(s) \), counted with multiplicity.
+
+Then
+\[
+\mu_\rho^2 = -(\rho - \tfrac{1}{2})^2,
+\]
+so the condition \( \mu_\rho^2 \le \Lambda \) is equivalent to
+\[
+|\rho - \tfrac{1}{2}| \le \sqrt{\Lambda}.
+\]
+
+Therefore, the squared eigenvalue counting function becomes
+\[
+A(\Lambda) := \#\left\{ \mu_\rho^2 \le \Lambda \right\}
+= \#\left\{ \rho : |\rho - \tfrac{1}{2}| \le \sqrt{\Lambda} \right\}
+= N_\zeta(\sqrt{\Lambda}),
+\]
+where \( N_\zeta(T) \) counts the number of nontrivial zeta zeros \( \rho \) satisfying \( 0 < \Im(\rho) \le T \), counted with multiplicity.
+
+\paragraph{Asymptotic Matching.}
+By the Riemann--von Mangoldt formula:
+\[
+N_\zeta(T) = \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + O(\log T),
+\]
+as \( T \to \infty \). Setting \( T = \sqrt{\Lambda} \), we find:
+\[
+\begin{aligned}
+A(\Lambda) &= N_\zeta(\sqrt{\Lambda}) \\
+&= \frac{\sqrt{\Lambda}}{2\pi} \log\left( \frac{\sqrt{\Lambda}}{2\pi} \right) - \frac{\sqrt{\Lambda}}{2\pi} + O(\log \Lambda) \\
+&= \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda + O(\Lambda^{1/2}).
+\end{aligned}
+\]
+
+\paragraph{Conclusion.}
+This matches the Tauberian-derived asymptotic:
+\[
+A(\Lambda) \sim \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda,
+\]
+confirming that the spectrum of \( L_{\mathrm{sym}} \) asymptotically mirrors the zero distribution of \( \zeta(s) \) under the canonical spectral encoding.
+\end{proof}

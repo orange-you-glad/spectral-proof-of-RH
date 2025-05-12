@@ -1,0 +1,22 @@
+\begin{lemma}[Spectral Encoding via Determinant Zeros]
+\label{lem:spectral-encoding-injection}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \), for some \( \alpha > \pi \). Suppose the spectral determinant identity holds:
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+where \( \Xi(s) \) is the completed Riemann zeta function.
+
+Then the mapping
+\[
+\rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
+\]
+defines a multiplicity-preserving injection from the multiset of nontrivial zeros \( \rho \) of \( \zeta(s) \) into the nonzero spectrum of \( L_{\mathrm{sym}} \):
+\[
+\operatorname{Spec}(L_{\mathrm{sym}}) \supset \left\{ \mu_\rho \in \mathbb{C} : \rho \in \operatorname{Zeros}(\zeta(s)) \right\},
+\]
+with multiplicity of each \( \mu_\rho \) equal to the multiplicity of the corresponding zero \( \rho \).
+
+\medskip
+\noindent
+This follows from Hadamard factorization of \( \Xi(s) \), which encodes the zeros of \( \zeta(s) \) in the entire function \( \Xi(\tfrac{1}{2} + i\lambda) \), and from the identification of the determinant with a canonical spectral product.
+\end{lemma}

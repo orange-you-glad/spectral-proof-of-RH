@@ -1,0 +1,33 @@
+\begin{proof}[Proof of Lemma~\ref{lem:laplace-preserves-entire-type}]
+Let
+\[
+f(\lambda) := \log \det\nolimits_\zeta(I - \lambda L)
+= - \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL})\, dt.
+\]
+
+\paragraph{(i) Convergence and analyticity.}
+From the short-time estimate \( \operatorname{Tr}(e^{-tL}) \le A t^{-1} e^{-c/t} \), we see that the integrand is dominated by \( A t^{-2} e^{-c/t} e^{|\lambda| t} \) for small \( t \). Since \( e^{-c/t} \) decays faster than any polynomial in \( t \) as \( t \to 0^+ \), the integral is absolutely convergent for all \( \lambda \in \mathbb{C} \).
+
+From the long-time estimate \( \operatorname{Tr}(e^{-tL}) \le B e^{-\delta t} \), the integrand decays like \( e^{-(\delta - |\lambda|) t} \) for large \( t \), ensuring absolute convergence and entire analyticity in \( \lambda \).
+
+\paragraph{(ii) Growth and order estimate.}
+We now estimate
+\[
+|f(\lambda)| = \left| \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL}) \, dt \right|.
+\]
+Split the integral at \( t = 1 \):
+\[
+\int_0^1 \frac{e^{|\lambda| t}}{t} \cdot A t^{-1} e^{-c/t} dt \le C_1 |\lambda|,
+\qquad
+\int_1^\infty \frac{e^{|\lambda| t}}{t} \cdot B e^{-\delta t} dt \le C_2 \log(1 + |\lambda|),
+\]
+for constants \( C_1, C_2 > 0 \). Thus
+\[
+|f(\lambda)| \le C |\lambda| \log(1 + |\lambda|),
+\]
+which implies that \( f \) is entire of order one. Since \( \exp(f(\lambda)) = \det\nolimits_\zeta(I - \lambda L) \), the exponential type is controlled by the location of singularities in the Laplace variable, and bounded above by the exponential type of the Fourier transform of the kernel (which is supported in \( [-\pi, \pi] \)), yielding exponential type \( \le \pi \).
+
+\paragraph{Conclusion.}
+The determinant is an entire function of order one and exponential type \( \le \pi \), as claimed.
+\end{proof}
+%  

@@ -1,0 +1,41 @@
+\begin{definition}[Unitary Conjugation Operator]
+\label{def:unitary-conjugation-operator}
+Fix any \( \alpha > \pi \), and define the exponential weight
+\[
+\Psi_\alpha(x) := e^{\alpha |x|}, \qquad x \in \mathbb{R}.
+\]
+Let
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx)
+\]
+denote the corresponding exponentially weighted Hilbert space, and let \( L^2(\mathbb{R}) \) denote the standard (flat) Hilbert space with Lebesgue measure.
+
+Define the unitary conjugation operator
+\[
+U_\alpha \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}), \qquad (U_\alpha f)(x) := \Psi_\alpha(x)^{1/2} f(x) = e^{\frac{\alpha}{2}|x|} f(x),
+\]
+with inverse
+\[
+U_\alpha^{-1}(h)(x) := \Psi_\alpha(x)^{-1/2} h(x) = e^{-\frac{\alpha}{2}|x|} h(x).
+\]
+
+Then:
+\begin{itemize}
+    \item \( U_\alpha \) is a unitary isomorphism of Hilbert spaces:
+    \[
+    \langle f, g \rangle_{H_{\Psi_\alpha}} = \langle U_\alpha f, U_\alpha g \rangle_{L^2(\mathbb{R})}, \quad \forall f, g \in H_{\Psi_\alpha}.
+    \]
+
+    \item The map
+    \[
+    T \mapsto \widetilde{T} := U_\alpha T U_\alpha^{-1}
+    \]
+    defines a unitary equivalence between operators on \( H_{\Psi_\alpha} \) and operators on \( L^2(\mathbb{R}) \), preserving boundedness, self-adjointness, compactness, and trace-class membership.
+
+    \item If \( K(x,y) \in C^\infty(\mathbb{R}^2) \) defines an integral operator \( T \) on \( H_{\Psi_\alpha} \), then the conjugated operator \( \widetilde{T} := U_\alpha T U_\alpha^{-1} \) acts on \( L^2(\mathbb{R}) \) with kernel
+    \[
+    \widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+    \]
+    This transformation underpins Simon’s trace-class criterion and is central to decay estimates throughout the construction of the canonical operator.
+\end{itemize}
+\end{definition}

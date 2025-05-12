@@ -1,0 +1,25 @@
+\begin{proposition}[Spectral Reality Implies RH and Simplicity]
+\label{prop:spectrum-reality-implies-rh-multiplicity}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator associated with the completed Riemann zeta function \( \Xi(s) \). Define its spectral Fredholm determinant by
+\[
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
+\]
+
+Assume the following:
+\begin{enumerate}
+  \item[\textnormal{(i)}] The spectrum of \( L_{\mathrm{sym}} \) lies entirely on the real line:
+  \[
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+  \]
+  \item[\textnormal{(ii)}] Each nonzero eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) has algebraic multiplicity one.
+\end{enumerate}
+
+Then every nontrivial zero \( \rho \) of the Riemann zeta function satisfies the Riemann Hypothesis and is simple:
+\[
+\zeta(\rho) = 0 \quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2}, \quad \operatorname{ord}_\rho(\zeta) = 1.
+\]
+
+\medskip
+\noindent
+That is, the spectral reality and simplicity of the canonical operator \( L_{\mathrm{sym}} \) ensure that all nontrivial zeros of \( \zeta(s) \) lie on the critical line and have multiplicity one.
+\end{proposition}

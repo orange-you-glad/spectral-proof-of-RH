@@ -1,0 +1,27 @@
+\begin{lemma}[Inverse Spectral Uniqueness of \( L_{\mathrm{sym}} \)]
+\label{lem:inverse_spectral_uniqueness}
+Let \( L \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator on the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \), and assume that its spectrum consists of a simple, discrete sequence \( \{ \mu_n \} \subset \mathbb{R} \), with multiplicity one and no accumulation point except zero.
+
+Suppose the following conditions hold:
+\begin{enumerate}
+  \item[\textnormal{(i)}] \textbf{Spectral Match:} The spectrum of \( L \) agrees with that of the canonical operator \( L_{\mathrm{sym}} \):
+  \[
+  \operatorname{Spec}(L) = \operatorname{Spec}(L_{\mathrm{sym}}).
+  \]
+  
+  \item[\textnormal{(ii)}] \textbf{Determinantal Consistency:} The Carleman \(\zeta\)-regularized Fredholm determinant of \( L \) agrees globally with that of \( L_{\mathrm{sym}} \):
+  \[
+  \det\nolimits_\zeta(I - \lambda L) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)} \qquad \text{for all } \lambda \in \mathbb{C},
+  \]
+  where \( \Xi(s) \) denotes the completed Riemann zeta function.
+\end{enumerate}
+
+Then \( L \) is unitarily equivalent to \( L_{\mathrm{sym}} \); that is, there exists a unitary operator \( U : H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) such that
+\[
+L = U L_{\mathrm{sym}} U^{-1}.
+\]
+
+\medskip
+\noindent
+This equivalence is uniquely determined by the shared discrete spectrum and exact agreement of the spectral determinants. It holds within any orthonormal basis in which both operators are diagonalized and reflects the full spectral rigidity of the canonical trace-class realization of \( \Xi(s) \).
+\end{lemma}

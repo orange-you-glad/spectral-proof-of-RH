@@ -1,0 +1,35 @@
+\begin{proof}[Proof of Lemma~\ref{lem:zero-to-eigenvalue-injection}]
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zeta(s) \), and define the corresponding spectral parameter \( \lambda_\rho := \gamma \in \mathbb{R} \). We aim to show that
+\[
+\mu_\rho := \frac{1}{\lambda_\rho} = \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\mathrm{sym}}),
+\]
+with algebraic multiplicity matching the order of vanishing of \( \zeta(s) \) at \( \rho \).
+
+\paragraph{Step 1: Determinant Vanishing.}
+By Theorem~\ref{thm:det-identity-revised}, the regularized Fredholm determinant of \( L_{\mathrm{sym}} \) satisfies
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\]
+Since \( \Xi(s) \) vanishes at \( s = \rho = \tfrac{1}{2} + i\lambda_\rho \), it follows that
+\[
+\det\nolimits_\zeta(I - \lambda_\rho L_{\mathrm{sym}}) = 0.
+\]
+
+\paragraph{Step 2: Spectral Implication.}
+For compact operators in the trace class \( \mathcal{C}_1 \), the Carleman determinant vanishes at \( \lambda \in \mathbb{C} \) if and only if \( \lambda^{-1} \in \Spec(L_{\mathrm{sym}}) \setminus \{0\} \); see \cite{Simon2005TraceIdeals}. Hence,
+\[
+\mu_\rho := \lambda_\rho^{-1} = \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} \in \Spec(L_{\mathrm{sym}}).
+\]
+
+\paragraph{Step 3: Multiplicity Matching.}
+The order of vanishing of \( \Xi(\tfrac{1}{2} + i\lambda) \) at \( \lambda = \lambda_\rho \) determines the multiplicity of the corresponding zero in the Hadamard product expansion of \( \Xi \), and hence in the determinant via
+\[
+\log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = -\sum_{\mu \in \Spec(L_{\mathrm{sym}})} \log(1 - \lambda \mu),
+\]
+valid for \( \| \lambda L_{\mathrm{sym}} \| < 1 \) and extended by analytic continuation. Thus, the order of vanishing at \( \lambda_\rho \) matches the algebraic multiplicity of the eigenvalue \( \mu_\rho \).
+
+\medskip
+\noindent
+This completes the multiplicity-preserving injection of nontrivial zeta zeros into the nonzero spectrum of \( L_{\mathrm{sym}} \).
+\end{proof}
+%  

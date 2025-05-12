@@ -1,0 +1,37 @@
+\begin{proposition}[Compactness of \( L_t \)]
+\label{prop:compactness-Lt}
+Let \( \Psi \colon \mathbb{R} \to (0,\infty) \) be a smooth, strictly positive weight function satisfying
+\[
+\Psi(x) \sim e^{\alpha|x|} \quad \text{as } |x| \to \infty,
+\]
+for some constant \( \alpha > 0 \); that is, there exist constants \( c_1, c_2 > 0 \) such that
+\[
+c_1 e^{\alpha |x|} \le \Psi(x) \le c_2 e^{\alpha |x|}, \quad \forall x \in \mathbb{R}.
+\]
+
+Let
+\[
+H_\Psi := L^2(\mathbb{R}, \Psi(x)\, dx)
+\]
+be the associated exponentially weighted Hilbert space.
+
+Suppose \( \phi_t \in \mathcal{S}(\mathbb{R}) \) is a real-valued, even mollifier, and define the convolution operator
+\[
+(L_t f)(x) := \int_{\mathbb{R}} \phi_t(x - y)\, f(y)\, dy, \quad f \in \mathcal{S}(\mathbb{R}).
+\]
+
+Then \( L_t \) extends uniquely to a compact operator on \( H_\Psi \); that is,
+\[
+L_t \in \mathcal{K}(H_\Psi).
+\]
+
+\noindent The compactness follows from:
+\begin{itemize}
+    \item The kernel \( K_t(x,y) := \phi_t(x - y) \in C^\infty(\mathbb{R}^2) \) is rapidly decaying off the diagonal;
+    \item The operator \( L_t \) maps bounded sets in \( H_\Psi \) into equicontinuous, rapidly decaying families (via convolution smoothing);
+    \item The inclusion \( \mathcal{S}(\mathbb{R}) \hookrightarrow H_\Psi \) is continuous and dense, and \( K_t \in L^2(\Psi^{\otimes 2}) \) implies \( L_t \) is Hilbert–Schmidt (see Lemma~\ref{lem:kernel_L2_weighted_bound}).
+\end{itemize}
+
+\medskip
+\noindent As a consequence, \( L_t \) has discrete spectrum with finite-multiplicity eigenvalues accumulating only at zero. This compactness ensures spectral discreteness and underpins the Schatten-class convergence and Fredholm determinant structure developed in subsequent chapters.
+\end{proposition}

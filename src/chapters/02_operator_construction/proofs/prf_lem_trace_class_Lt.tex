@@ -1,0 +1,48 @@
+\begin{proof}[Proof of Lemma~\ref{lem:trace_class_Lt}]
+Let \( H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx) \), with \( \Psi_\alpha(x) := e^{\alpha |x|} \), and fix \( \alpha > \pi \). Let \( \phi_t \in \mathcal{S}(\mathbb{R}) \) be the mollified profile, and define the convolution kernel
+\[
+K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \phi_t(\lambda)\, d\lambda = k_t(x - y),
+\]
+where \( k_t \in \mathcal{S}(\mathbb{R}) \) by Lemma~\ref{lem:mollified-profile-decay}.
+
+\medskip
+\noindent\textbf{Step 1: Unitary Conjugation.}
+Define the unitary map
+\[
+U \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}), \quad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x),
+\]
+with inverse \( U^{-1}(g)(x) := \Psi_\alpha(x)^{-1/2} g(x) \). Let \( \widetilde{L}_t := U L_t U^{-1} \) be the conjugated operator, which acts on \( L^2(\mathbb{R}) \) via kernel
+\[
+\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Trace-Class Criterion.}
+By assumption,
+\[
+\sup_{t \in (0,1]} \| \widetilde{K}_t \|_{L^1(\mathbb{R}^2)} < \infty.
+\]
+By Simon’s trace-class kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}, \( \widetilde{L}_t \in \mathcal{C}_1(L^2(\mathbb{R})) \), with
+\[
+\| \widetilde{L}_t \|_{\mathcal{C}_1} \le \| \widetilde{K}_t \|_{L^1(\mathbb{R}^2)}.
+\]
+
+\medskip
+\noindent\textbf{Step 3: Transfer to Weighted Space.}
+Since \( L_t = U^{-1} \widetilde{L}_t U \) and \( U \) is unitary, it follows that
+\[
+L_t \in \mathcal{C}_1(H_{\Psi_\alpha}), \quad \text{with } \| L_t \|_{\mathcal{C}_1(H_{\Psi_\alpha})} = \| \widetilde{L}_t \|_{\mathcal{C}_1(L^2)}.
+\]
+
+\medskip
+\noindent\textbf{Step 4: Hilbert–Schmidt Inclusion.}
+In addition, Lemma~\ref{lem:kernel_L2_weighted_bound} implies that
+\[
+K_t \in L^2(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy),
+\]
+so \( L_t \in \mathcal{C}_2(H_{\Psi_\alpha}) \subset \mathcal{K}(H_{\Psi_\alpha}) \). This confirms compactness and gives an independent check on trace-class membership.
+
+\medskip
+\noindent\textbf{Conclusion.}
+The mollified convolution operator \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) for all \( t > 0 \), with uniform trace-norm control for \( t \in (0,1] \). This ensures convergence in \( \mathcal{C}_1 \) and provides the analytic infrastructure for constructing the canonical operator \( L_{\mathrm{sym}} \).
+\end{proof}

@@ -1,0 +1,69 @@
+\begin{proof}[Proof of \lemref{lem:uniform-L1-conjugated-kernel}]
+Fix \( \alpha > \pi \), and define
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right), \quad t > 0,
+\]
+with associated inverse Fourier kernel
+\[
+K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi_t(\lambda)\, d\lambda.
+\]
+Let \( \Psi_\alpha(x) := e^{\alpha |x|} \), and define the conjugated kernel
+\[
+\widetilde{K}_t(x,y) := K_t(x,y)\, \Psi_\alpha(x)\Psi_\alpha(y) = K_t(x,y)\, e^{\alpha(|x| + |y|)}.
+\]
+
+\medskip
+\noindent\textbf{Step 1: Exponential Decay of \( K_t \).}
+By Lemma~\ref{lem:decay-mollified-kernel}, for all \( t \in (0,1] \), there exist constants \( C_t > 0 \), \( b_t > \pi \) such that
+\[
+|K_t(x,y)| \le C_t\, e^{-b_t |x - y|}, \quad \forall\, x, y \in \mathbb{R}.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Estimate of Conjugated Kernel.}
+We estimate:
+\[
+|\widetilde{K}_t(x,y)| \le C_t\, e^{-b_t |x - y|} \cdot e^{\alpha(|x| + |y|)}.
+\]
+Set \( u := x - y \), \( v := y \), so that \( x = u + v \), and \( dx\,dy = du\,dv \). Then:
+\[
+|\widetilde{K}_t(u + v, v)| \le C_t\, e^{-b_t |u|} \cdot e^{\alpha(|u + v| + |v|)}.
+\]
+By triangle inequality: \( |u + v| + |v| \le |u| + 2|v| \). Hence,
+\[
+|\widetilde{K}_t(x,y)| \le C_t\, e^{-(b_t - \alpha)|u|} \cdot e^{2\alpha |v|}.
+\]
+
+\medskip
+\noindent\textbf{Step 3: Integration over \( \mathbb{R}^2 \).}
+We compute:
+\[
+\begin{aligned}
+\iint_{\mathbb{R}^2} |\widetilde{K}_t(x,y)|\, dx\,dy
+&= \iint_{\mathbb{R}^2} |\widetilde{K}_t(u + v, v)|\, du\,dv \\
+&\le C_t \left( \int_{\mathbb{R}} e^{-(b_t - \alpha)|u|} \, du \right)
+        \left( \int_{\mathbb{R}} e^{2\alpha |v|} \, dv \right).
+\end{aligned}
+\]
+Both integrals are finite since \( b_t > \alpha \), and \( \alpha > \pi \). Therefore,
+\[
+\sup_{0 < t \le 1} \iint_{\mathbb{R}^2} |\widetilde{K}_t(x,y)|\, dx\,dy \le A_3(\alpha),
+\]
+for some constant \( A_3(\alpha) > 0 \) independent of \( t \).
+
+\medskip
+\noindent\textbf{Conclusion.}
+The conjugated kernels \( \widetilde{K}_t \) are uniformly in \( L^1(\mathbb{R}^2) \) for \( t \in (0,1] \). Hence,
+\[
+\sup_{0 < t \le 1} \|K_t\|_{\mathcal{C}_1(\Psi_\alpha)} < \infty,
+\]
+and the corresponding operators
+\[
+L_t f(x) := \int_{\mathbb{R}} K_t(x,y)\, f(y)\, dy
+\]
+lie in the trace class \( \mathcal{C}_1(H_{\Psi_\alpha}) \), with
+\[
+\sup_{0 < t \le 1} \|L_t\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le A_3(\alpha).
+\]
+This uniform bound ensures convergence in trace norm \( L_t \to L_{\mathrm{sym}} \), and uniform convergence of \( \det_\zeta(I - \lambda L_t) \) on compact subsets of \( \lambda \in \mathbb{C} \).
+\end{proof}

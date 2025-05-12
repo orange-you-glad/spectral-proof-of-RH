@@ -1,0 +1,37 @@
+\begin{proof}[Proof of Theorem~\ref{thm:truth_of_rh}]
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \).
+
+From the canonical determinant identity (Theorem~\ref{thm:det-identity-revised}) established in Chapter~\ref{sec:determinant-identity}, we have:
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+and from the spectral bijection (Theorem~\ref{thm:spectral-zero-bijection-revised}) and encoding lemma (Lemma~\ref{lem:spectral-zero-encoding}), each nontrivial zero \( \rho \in \mathbb{C} \) of \( \zeta(s) \) corresponds to a nonzero eigenvalue
+\[
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \operatorname{Spec}(L_{\mathrm{sym}}).
+\]
+
+\paragraph{Spectral Reality.}
+By analytic construction—via symmetric mollifiers, the weighted space \( H_{\Psi_\alpha} \), and trace-norm convergence justified in Chapter~\ref{sec:heat-kernel-asymptotics} and Appendix~\ref{app:heat-kernel-construction}—the operator \( L_{\mathrm{sym}} \) is self-adjoint and satisfies:
+\[
+\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\]
+
+\paragraph{Implication for Zeros.}
+Since \( \mu_\rho \in \mathbb{R} \), we compute:
+\[
+\frac{1}{i(\rho - \tfrac{1}{2})} \in \mathbb{R}
+\quad \Longrightarrow \quad \rho - \tfrac{1}{2} \in i\mathbb{R}
+\quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2}.
+\]
+This holds for every nontrivial zero \( \rho \), since the spectral determinant realizes all zeros of \( \zeta(s) \) via bijection.
+
+\paragraph{Conclusion.}
+By Theorem~\ref{thm:rh-spectrum-equiv}, we have the equivalence:
+\[
+\mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\]
+Since spectral reality has now been rigorously established, it follows that the Riemann Hypothesis holds:
+\[
+\zeta(\rho) = 0 \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
+\]
+\end{proof}

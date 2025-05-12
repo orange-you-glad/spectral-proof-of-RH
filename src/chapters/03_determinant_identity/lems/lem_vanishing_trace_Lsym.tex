@@ -1,0 +1,23 @@
+\begin{lemma}[Vanishing Trace of \( L_{\mathrm{sym}} \)]
+\label{lem:vanishing-trace-Lsym}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the trace-class convolution operator defined by
+\[
+L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} K(x - y) f(y) \, dy,
+\]
+where the kernel \( K \colon \mathbb{R} \to \mathbb{R} \) is given by the inverse Fourier transform
+\[
+K(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i x \lambda} \varphi(\lambda)\, d\lambda,
+\quad \text{with} \quad
+\varphi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+Then the operator trace satisfies:
+\[
+\operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} K(x,x)\, dx = \int_{\mathbb{R}} K(0)\, dx = 0.
+\]
+\end{lemma}
+
+\medskip
+\noindent
+This vanishing arises from the fact that \( \varphi(\lambda) \) is an even function: \( \varphi(-\lambda) = \varphi(\lambda) \), which implies \( K(x) \) is real and even, so \( K(0) \) is real and the integral of \( K(0) \) vanishes due to parity and decay. This identity ensures that the logarithm of the determinant has no linear term and satisfies canonical normalization in the Hadamard expansion.
+%  

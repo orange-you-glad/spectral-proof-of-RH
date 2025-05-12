@@ -1,0 +1,58 @@
+\subsection*{Summary}
+
+This chapter establishes that the Riemann Hypothesis is equivalent to spectral rigidity of the canonical operator \( L_{\mathrm{sym}} \), via the structure of the Carleman-regularized determinant and the spectral calculus of compact self-adjoint operators.
+
+\begin{itemize}
+  \item \lemref{lem:spectral-encoding-injection} — The canonical determinant identity induces a multiplicity-preserving injection
+  \[
+  \rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
+  \]
+  from nontrivial zeros \( \rho \) of \( \zeta(s) \) into the nonzero spectrum of \( L_{\mathrm{sym}} \).
+
+  \item \lemref{lem:det-zero-implies-spectrum} — Each zero \( \lambda \) of \( \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \) corresponds to an eigenvalue \( \mu = \lambda^{-1} \in \operatorname{Spec}(L_{\mathrm{sym}}) \), confirming that the determinant zeros are spectrally realized.
+
+  \item \lemref{lem:inject-zero-real-spectrum} — If the spectrum of \( L_{\mathrm{sym}} \) is real and simple, then every nontrivial zero of \( \zeta(s) \) lies on the critical line:
+  \[
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \quad \Longrightarrow \quad
+  \Re(\rho) = \tfrac{1}{2}.
+  \]
+
+  \item \lemref{lem:real-spectrum-implies-rh} — The same implication holds even without explicit bijection, using only the analytic continuation and zero structure of the entire determinant.
+
+  \item \lemref{lem:spectral-symmetry-lsym} — The spectrum is symmetric under \( \mu \mapsto -\mu \), inherited from the functional equation \( \Xi(\tfrac{1}{2} + i\lambda) = \Xi(\tfrac{1}{2} - i\lambda) \).
+
+  \item \lemref{lem:trace_distribution_positivity} — The trace map
+  \[
+  \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}}))
+  \]
+  defines a positive tempered distribution on \( \mathbb{R} \), and in particular:
+  \[
+  \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \ge 0.
+  \]
+
+  \item \lemref{sublem:trace-distribution-positive} — This positivity extends to all nonnegative Schwartz test functions, confirming the trace distribution is induced by a positive spectral measure.
+
+  \item \propref{prop:inverse-spectral-rigidity} — The spectrum and determinant uniquely determine \( L_{\mathrm{sym}} \) up to unitary equivalence. If two trace-class operators have the same spectral data and determinant identity, they are unitarily conjugate.
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{Remarks.}
+\begin{itemize}
+  \item Simplicity of the spectrum is a sufficient but not necessary condition for RH; the Hadamard factorization of \( \Xi(s) \) encodes multiplicity.
+  \item The determinant-to-spectrum map arises intrinsically from Fredholm theory and entire function analysis.
+  \item Positivity of the trace distribution supports a harmonic-analytic interpretation of the canonical spectral realization.
+  \item The spectral transform \( \mathcal{F}_L \) diagonalizing \( L_{\mathrm{sym}} \) interprets the trace pairing as integration against the spectral measure.
+\end{itemize}
+
+\medskip
+
+\noindent
+\textbf{Forward Link.}  
+The next chapter consolidates all previous implications into a logically closed equivalence:
+\[
+\mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\]
+This is formalized in Chapter~\ref{sec:logical-closure}, where the equivalence is rigorously proven using operator-theoretic and analytic methods.

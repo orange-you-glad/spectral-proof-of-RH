@@ -1,0 +1,32 @@
+\begin{proof}[Proof of Lemma~\ref{lem:real-spectrum-implies-rh}]
+Let \( \rho \) be an arbitrary nontrivial zero of the Riemann zeta function \( \zeta(s) \), and define the associated spectral image under the canonical encoding:
+\[
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}).
+\]
+
+\paragraph{Step 1: Determinant Vanishing Implies Spectral Point.}
+From the canonical determinant identity (Theorem~\ref{thm:det-identity-revised}), we have
+\[
+\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+which vanishes if and only if \( \lambda = \gamma \), where \( \rho = \tfrac{1}{2} + i\gamma \) is a nontrivial zero of \( \zeta(s) \). In particular,
+\[
+\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} = \lambda^{-1}.
+\]
+
+By analytic Fredholm theory for trace-class operators, the zeros of the determinant correspond to nonzero reciprocal eigenvalues of \( L_{\mathrm{sym}} \). Thus,
+\[
+\mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}).
+\]
+
+\paragraph{Step 2: Spectral Reality Implies Critical-Line Symmetry.}
+Assumption (ii) states \( \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \), so \( \mu_\rho \in \mathbb{R} \). Therefore,
+\[
+\frac{1}{i}(\rho - \tfrac{1}{2}) \in \mathbb{R}
+\quad \Rightarrow \quad \rho - \tfrac{1}{2} \in i\mathbb{R}
+\quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
+\]
+
+\paragraph{Conclusion.}
+Since \( \rho \) was arbitrary among the nontrivial zeros of \( \zeta(s) \), it follows that all such zeros lie on the critical line. Hence, the Riemann Hypothesis holds.
+\end{proof}

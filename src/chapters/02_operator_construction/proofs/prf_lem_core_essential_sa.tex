@@ -1,0 +1,47 @@
+\begin{proof}[Proof of Lemma~\ref{lem:core-essential-selfadjointness}]
+Let \( L_0 := L_{\mathrm{sym}}|_{\mathcal{S}(\mathbb{R})} \), acting on the weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+\]
+
+\paragraph{Step 1: Symmetry on a Dense Domain.}
+By Lemma~\ref{lem:kernel-symmetry} (or direct symmetry of \( \widehat{\Xi} \in \mathcal{S}(\mathbb{R}) \)), the convolution kernel \( \widehat{\Xi}(x - y) \) is real-valued and even. Since convolution with such a kernel defines a symmetric operator on \( \mathcal{S}(\mathbb{R}) \), we have:
+\[
+\langle L_0 f, g \rangle = \langle f, L_0 g \rangle, \quad \forall f, g \in \mathcal{S}(\mathbb{R}).
+\]
+Also, \( \mathcal{S}(\mathbb{R}) \) is dense in \( H_{\Psi_\alpha} \). Hence \( L_0 \) is densely defined and symmetric.
+
+\paragraph{Step 2: Conjugation to Flat Space.}
+Let \( U \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}) \) be the unitary map given by:
+\[
+(Uf)(x) := \Psi_\alpha(x)^{1/2} f(x), \quad U^{-1}(g)(x) := \Psi_\alpha(x)^{-1/2} g(x).
+\]
+Define the conjugated operator \( \widetilde{L}_0 := U L_0 U^{-1} \), acting on \( L^2(\mathbb{R}) \), with integral kernel
+\[
+\widetilde{K}(x, y) := \frac{\widehat{\Xi}(x - y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+\]
+Since \( \widehat{\Xi} \in \mathcal{S}(\mathbb{R}) \), and the exponential weight \( \Psi_\alpha \) grows faster than any polynomial, it follows that
+\[
+\widetilde{K} \in \mathcal{S}(\mathbb{R}^2) \subset L^2(\mathbb{R}^2) \cap C^\infty(\mathbb{R}^2),
+\]
+and \( \widetilde{K}(x,y) = \widetilde{K}(y,x) \) is real-valued and symmetric.
+
+\paragraph{Step 3: Essential Self-Adjointness in Flat Space.}
+By \cite[Thm.~X.36]{ReedSimon1975II} (or Proposition~13.3 in \cite{ReedSimon1980I}), a symmetric integral operator with real symmetric kernel in \( L^2(\mathbb{R}^2) \), defined on \( \mathcal{S}(\mathbb{R}) \subset L^2(\mathbb{R}) \), is essentially self-adjoint. Thus:
+\[
+\widetilde{L}_0 \text{ is essentially self-adjoint on } L^2(\mathbb{R}).
+\]
+
+\paragraph{Step 4: Transfer of Closure.}
+Since essential self-adjointness is preserved under unitary equivalence, it follows that
+\[
+L_0 := U^{-1} \widetilde{L}_0 U \quad \text{is essentially self-adjoint on } H_{\Psi_\alpha},
+\]
+and its closure coincides with \( L_{\mathrm{sym}} \), which is self-adjoint:
+\[
+\overline{L_0} = L_{\mathrm{sym}} = L_{\mathrm{sym}}^*.
+\]
+
+\paragraph{Conclusion.}
+Thus, \( \mathcal{S}(\mathbb{R}) \) serves as a symmetric core for \( L_{\mathrm{sym}} \), and the unique self-adjoint extension of \( L_0 \) coincides with \( L_{\mathrm{sym}} \). This ensures that all spectral constructions built from \( L_{\mathrm{sym}} \)—heat kernels, zeta regularizations, and determinants—are rigorously defined via functional calculus.
+\end{proof}

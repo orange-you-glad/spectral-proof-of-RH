@@ -1,0 +1,30 @@
+\begin{proof}[Proof of Lemma~\ref{lem:laplace-kernel-growth-class}]
+Assume the spectral heat trace admits the refined short-time expansion:
+\[
+\Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2}), \qquad \text{as } t \to 0^+.
+\]
+This places \( \Theta(t) \) in the class of log-modulated regularly varying functions at the origin:
+\[
+\Theta \in \mathcal{R}_{1/2}^{\log}(0^+),
+\]
+i.e., \( \Theta(t) = t^{-1/2} \cdot L(1/t) \) for some slowly varying function \( L(x) \sim \log x \).
+
+Let \( A(\Lambda) := \#\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \} \) denote the squared spectral counting function. Then \( \Theta(t) \) is the Laplace–Stieltjes transform of \( A(\Lambda) \):
+\[
+\Theta(t) = \int_0^\infty e^{-t \lambda} \, dA(\lambda),
+\]
+with \( A(\lambda) \) monotone, piecewise constant, and right-continuous.
+
+\paragraph{Tauberian Inversion.}
+By Korevaar’s log-enhanced Laplace–Tauberian theorem~\cite[Ch.~III, Thm.~5.5]{Korevaar2004Tauberian}, the asymptotic
+\[
+\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+,
+\]
+implies that
+\[
+A(\Lambda) \sim \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda, \qquad \text{as } \Lambda \to \infty.
+\]
+
+\paragraph{Conclusion.}
+Thus, the heat trace belongs to \( \mathcal{R}_{1/2}^{\log}(0^+) \), and its Laplace–Stieltjes inverse \( A(\Lambda) \) exhibits log-modulated Weyl-type growth. This confirms both parts of the lemma.
+\end{proof}

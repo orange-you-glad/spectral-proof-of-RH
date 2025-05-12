@@ -1,0 +1,22 @@
+\begin{lemma}[Tauberian Logarithmic Correction to Heat Trace]
+\label{lem:tauberian-log-correction}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator with positive-definite square \( L_{\mathrm{sym}}^2 \). Suppose the spectral heat trace satisfies the singular expansion
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + r(t),
+\]
+with \( r(t) = o(t^{-1/2}) \) as \( t \to 0^+ \).
+
+Define the squared spectral counting function
+\[
+A(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\}, \qquad \Lambda > 0.
+\]
+
+Then the counting function admits the asymptotic expansion
+\[
+A(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + o(\sqrt{\Lambda}), \qquad \text{as } \Lambda \to \infty.
+\]
+
+\medskip
+\noindent
+That is, the logarithmic singularity in the heat trace induces a log-corrected Weyl-type growth in the spectral density, consistent with the Riemann–von Mangoldt formula under the spectral encoding \( \mu_\rho = \frac{1}{i}(\rho - \frac{1}{2}) \). The asymptotics follow from Korevaar’s log-modulated Tauberian theory~\cite[Ch.~III, §5]{Korevaar2004Tauberian}.
+\end{lemma}

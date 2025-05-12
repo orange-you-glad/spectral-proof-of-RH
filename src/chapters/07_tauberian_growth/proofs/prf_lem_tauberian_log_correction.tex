@@ -1,0 +1,34 @@
+\begin{proof}[Proof of Lemma~\ref{lem:tauberian-log-correction}]
+Let \( \Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \) denote the spectral heat trace of the canonical compact, self-adjoint operator. Assume the singular asymptotic expansion:
+\[
+\Theta(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + r(t), \qquad \text{with } r(t) = o(t^{-1/2}) \quad \text{as } t \to 0^+.
+\]
+
+\paragraph{Step 1: Regular Variation Structure.}
+The leading term has the form
+\[
+t^{-\rho} L(1/t), \quad \text{with } \rho = \tfrac{1}{2}, \quad L(u) := \frac{1}{\sqrt{4\pi}} \log u.
+\]
+Here \( L \in \mathcal{S} \) is slowly varying at infinity. Thus, \( \Theta \in \mathcal{R}_{1/2}^{\log}(0^+) \), the class of regularly varying functions of index \( 1/2 \) with logarithmic modulation.
+
+\paragraph{Step 2: Laplace–Stieltjes Inversion.}
+Let \( A(\Lambda) := \#\{ \mu_n^2 \le \Lambda \} \) be the squared spectral counting function. Then \( \Theta(t) \) is the Laplace–Stieltjes transform of \( A(\Lambda) \):
+\[
+\Theta(t) = \int_0^\infty e^{-t\lambda} \, dA(\lambda).
+\]
+
+\paragraph{Step 3: Application of Korevaar’s Theorem.}
+Korevaar’s refined Tauberian theorem (see~\cite[Ch.~III, §5, Thm.~5.5]{Korevaar2004Tauberian}) implies that
+\[
+\Theta(t) \sim t^{-1/2} \log(1/t) \quad \Rightarrow \quad
+A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda \quad \text{as } \Lambda \to \infty,
+\]
+and any remainder \( r(t) = o(t^{-1/2}) \) contributes only \( o(\sqrt{\Lambda}) \) to the counting function.
+
+\paragraph{Conclusion.}
+Hence, the refined log singularity in the heat trace expansion transfers directly to the log-corrected Weyl law:
+\[
+A(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + o(\sqrt{\Lambda}),
+\]
+completing the proof.
+\end{proof}

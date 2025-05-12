@@ -1,0 +1,45 @@
+\begin{lemma}[Uniform \( L^1 \)-Bound for Exponentially Conjugated Heat Kernels]
+\label{lem:uniform-L1-conjugated-kernel}
+Let
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right), \quad t > 0,
+\]
+and define the mollified inverse Fourier kernel
+\[
+K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi_t(\lambda) \, d\lambda.
+\]
+
+Fix an exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \) with \( \alpha > \pi \), and define the exponentially conjugated kernel
+\[
+\widetilde{K}_t(x,y) := K_t(x,y)\, \Psi_\alpha(x)\Psi_\alpha(y) = K_t(x,y)\, e^{\alpha(|x| + |y|)}.
+\]
+
+Then there exists a constant \( A_3(\alpha) > 0 \) such that
+\[
+\sup_{0 < t \le 1} \iint_{\mathbb{R}^2} |\widetilde{K}_t(x,y)| \, dx\,dy \le A_3(\alpha).
+\]
+Equivalently,
+\[
+\sup_{0 < t \le 1} \|K_t\|_{\mathcal{C}_1(\Psi_\alpha)} < \infty.
+\]
+
+In particular, for each \( t \in (0,1] \), the associated convolution operator
+\[
+L_t f(x) := \int_{\mathbb{R}} K_t(x,y) f(y)\, dy
+\]
+lies in the trace class \( \mathcal{C}_1(H_{\Psi_\alpha}) \), with uniformly bounded trace norm:
+\[
+\sup_{0 < t \le 1} \|L_t\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le A_3(\alpha).
+\]
+
+\noindent
+This uniform trace-norm control ensures:
+\begin{itemize}
+    \item Convergence in trace norm: \( L_t \to L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) as \( t \to 0^+ \);
+    \item Uniform convergence of the Fredholm determinants:
+    \[
+    \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+    \]
+    locally uniformly in \( \lambda \in \mathbb{C} \).
+\end{itemize}
+\end{lemma}

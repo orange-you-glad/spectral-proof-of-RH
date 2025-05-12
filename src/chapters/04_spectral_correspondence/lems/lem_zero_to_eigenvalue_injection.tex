@@ -1,0 +1,29 @@
+\begin{lemma}[Spectral Injection from Nontrivial Zeros of \( \zeta(s) \)]
+\label{lem:zero-to-eigenvalue-injection}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator constructed in Chapter~\ref{sec:operator-construction}, with associated regularized Fredholm determinant satisfying:
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+= \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
+\]
+
+Then for each nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \) of the Riemann zeta function \( \zeta(s) \), the value
+\[
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma}
+\]
+is a nonzero eigenvalue of \( L_{\mathrm{sym}} \), and the algebraic multiplicity of \( \mu_\rho \) in the spectrum equals the order of vanishing of \( \zeta(s) \) at \( \rho \).
+
+\medskip
+\noindent
+Hence, the canonical spectral map \( \rho \mapsto \mu_\rho \) defines a multiplicity-preserving injection:
+\[
+\begin{aligned}
+\rho &\longmapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}, \\
+&\text{from the set of nontrivial zeros of } \zeta(s) \\
+&\text{into } \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}.
+\end{aligned}
+\]
+
+\noindent
+This correspondence is encoded analytically in the poles of the logarithmic derivative of the spectral determinant.
+\end{lemma}
+% 

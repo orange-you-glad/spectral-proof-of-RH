@@ -1,0 +1,52 @@
+\begin{theorem}[Spectral Reformulation of the Riemann Hypothesis]
+\label{thm:eq_of_rh}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint trace-class operator on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} \, dx), \qquad \alpha > \pi,
+\]
+constructed via mollified convolution with the inverse Fourier transform of the completed zeta function profile
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+Suppose that the zeta-regularized Fredholm determinant satisfies:
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\qquad \forall \lambda \in \mathbb{C}.
+\]
+
+Then the Riemann Hypothesis is equivalent to the spectral reality of \( L_{\mathrm{sym}} \):
+\[
+\mathrm{RH} \quad \Longleftrightarrow \quad \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\]
+
+\medskip
+
+\noindent
+Explicitly, for each nontrivial zero \( \rho = \beta + i\gamma \) of \( \zeta(s) \), define the canonical spectral image
+\[
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} \in \mathbb{C}.
+\]
+Then:
+\begin{itemize}
+  \item \( \mu_\rho \in \mathbb{R} \quad \Longleftrightarrow \quad \Re(\rho) = \tfrac{1}{2} \);
+  \item Thus,
+  \[
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \quad \Longleftrightarrow \quad \text{all nontrivial zeros } \rho \text{ lie on the critical line.}
+  \]
+\end{itemize}
+
+\medskip
+
+\noindent
+This equivalence follows from:
+\begin{enumerate}
+  \item The spectral determinant identity;
+  \item The canonical bijection \( \rho \mapsto \mu_\rho \) between nontrivial zeta zeros and nonzero spectrum (Theorem~\ref{thm:spectral-zero-bijection-revised});
+  \item The functional identity
+  \[
+  \mu_\rho \in \mathbb{R} \quad \Longleftrightarrow \quad \Re(\rho) = \tfrac{1}{2},
+  \]
+  derived by direct algebraic inversion.
+\end{enumerate}
+\end{theorem}

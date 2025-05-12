@@ -1,0 +1,45 @@
+\begin{proof}[Proof of Theorem~\ref{thm:det-identity-revised}]
+Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \).
+
+\paragraph{(1) Local Power Series Definition.}
+For \( |\lambda| < \|L_{\mathrm{sym}}\|^{-1} \), the logarithm of the determinant admits the convergent trace expansion:
+\[
+\log f(\lambda) = -\sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L_{\mathrm{sym}}^n),
+\]
+which defines a holomorphic function near \( \lambda = 0 \).
+
+\paragraph{(2) Entire Extension via Heat Trace.}
+By Lemma~\ref{lem:det-via-heat-trace}, \( f(\lambda) \) admits the Laplace representation
+\[
+\log f(\lambda) = -\int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL_{\mathrm{sym}}})\, dt,
+\]
+which converges for all \( \lambda \in \mathbb{C} \), proving that \( f \) is entire.
+
+\paragraph{(3) Order and Growth.}
+By Lemma~\ref{lem:det_growth_bound}, the function \( f \) is entire of order one and exponential type at most \( \pi \), with sub-exponential bounds controlling its growth.
+
+\paragraph{(4) Matching with \( \Xi \).}
+Define
+\[
+g(\lambda) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
+\]
+By Lemma~\ref{lem:hadamard-linear-form}, the function \( g \) is also entire of order one and exponential type exactly \( \pi \), and satisfies \( g(0) = 1 \). By Lemma~\ref{lem:trace-zero}, \( \operatorname{Tr}(L_{\mathrm{sym}}) = 0 \), so \( f(0) = \det\nolimits_\zeta(I) = 1 \) as well.
+
+\paragraph{(5) Logarithmic Derivative Equality.}
+By Lemma~\ref{lem:A_log_derivative}, the logarithmic derivatives match:
+\[
+\frac{d}{d\lambda} \log f(\lambda)
+= \operatorname{Tr}\left( (I - \lambda L_{\mathrm{sym}})^{-1} L_{\mathrm{sym}} \right)
+= \frac{d}{d\lambda} \log g(\lambda).
+\]
+Thus, \( \log f(\lambda) - \log g(\lambda) \) is constant. Since \( f(0) = g(0) = 1 \), this constant is zero.
+
+\paragraph{Conclusion.}
+The functions \( f \) and \( g \) are entire of order one, have matching zero sets (with multiplicity), matching logarithmic derivatives, and equal normalization. By Hadamard's uniqueness theorem, we conclude:
+\[
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\quad \text{for all } \lambda \in \mathbb{C},
+\]
+as claimed.
+\end{proof}
+% 

@@ -1,0 +1,40 @@
+\subsection*{Summary}
+
+This chapter constructed the canonical convolution operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), beginning with mollified spectral profiles and culminating in a complete operator-theoretic classification. The results are modularly organized below:
+
+\paragraph{Function Space and Definitions}
+\begin{itemize}
+  \item \defref{def:weighted-fourier-space} — Definition of the weighted Hilbert space \( H_{\Psi_\alpha} \) with exponential weight \( \Psi_\alpha(x) = e^{\alpha |x|} \), for \( \alpha > \pi \).
+  \item \defref{def:mollified-fourier-profile} — Gaussian-mollified spectral profiles:\\
+  \hspace*{1.5em} \( \varphi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda) \in \mathcal{S}(\mathbb{R}) \).
+  \item \defref{def:convolution-operators-Lt-Lsym} — Definition of convolution operators \( L_t \) and the canonical trace-norm limit \( L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \).
+\end{itemize}
+
+\paragraph{Analytic Bounds and Kernel Estimates}
+\begin{itemize}
+  \item \lemref{lem:xi-growth-bound} — Exponential type-\( \pi/2 \) growth for the canonical profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \).
+  \item \lemref{lem:weighted-L1-inverse-FT-xi} — Weighted \( L^1 \)-integrability of \( \phi^\vee = \widehat{\Xi} \).
+  \item \lemref{lem:uniform-L1-conjugated-kernel} — Uniform \( L^1 \)-bound on conjugated mollified kernels \( \widetilde{K}_t(x,y) \), used in trace-class norm estimates.
+\end{itemize}
+
+\paragraph{Operator Theory and Convergence}
+\begin{itemize}
+  \item \lemref{lem:mollified-profile-decay} — Gaussian decay, \( L^1 \)-convergence, and regularity of \( \varphi_t \).
+  \item \lemref{lem:trace_class_Lt} — Each \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon's kernel criterion.
+  \item \lemref{lem:trace-norm-convergence-Lt-to-Lsym} — Trace-norm convergence \( L_t \to L_{\mathrm{sym}} \in \mathcal{C}_1 \).
+  \item \lemref{lem:construction_canonical_data} — Uniqueness of \( L_{\mathrm{sym}} \) from analytic input \( (\Xi, \alpha) \), independent of mollifier.
+  \item \lemref{lem:core-essential-selfadjointness} — \( L_{\mathrm{sym}} \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \).
+  \item \lemref{lem:Lsym-square-selfadjoint} — The operator \( L_{\mathrm{sym}}^2 \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \) and admits discrete spectral resolution.
+\end{itemize}
+
+\paragraph{Main Theorems}
+\begin{itemize}
+  \item \thmref{thm:existence-Lsym} — Existence of \( L_{\mathrm{sym}} \) as the canonical operator defined by trace-norm convergence of mollified \( L_t \).
+  \item \thmref{thm:sa-trace-class-Lsym} — Final classification: \( L_{\mathrm{sym}} \in \mathcal{C}_1 \cap \mathcal{K} \), self-adjoint, with kernel derived from the inverse Fourier transform of \( \Xi \).
+  \item \thmref{thm:trace-zero-Lsym} — Trace normalization: \( \operatorname{Tr}(L_{\mathrm{sym}}) = 0 \), fixing the exponential ambiguity in the determinant identity.
+\end{itemize}
+
+\medskip
+\noindent
+These results establish the full analytic and operator-theoretic foundation for the spectral determinant identity and eigenvalue encoding developed in Chapter~\ref{sec:determinant-identity}, where the spectrum of \( L_{\mathrm{sym}} \) will be shown to recover the nontrivial zeros of the Riemann zeta function.
+% 

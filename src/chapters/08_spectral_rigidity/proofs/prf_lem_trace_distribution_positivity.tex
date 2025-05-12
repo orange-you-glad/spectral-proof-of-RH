@@ -1,0 +1,36 @@
+\begin{proof}[Proof of Lemma~\ref{lem:trace_distribution_positivity}]
+Let \( \{ \mu_n \} \subset \mathbb{R} \) denote the discrete spectrum of the compact, self-adjoint operator \( L_{\mathrm{sym}} \), with each eigenvalue repeated according to its finite multiplicity.
+
+\paragraph{(i) Well-Definedness and Temperedness.}
+For \( \phi \in \mathcal{S}(\mathbb{R}) \), the operator \( \phi(L_{\mathrm{sym}}) \) is defined via spectral functional calculus:
+\[
+\phi(L_{\mathrm{sym}}) = \sum_n \phi(\mu_n) P_n,
+\]
+where \( P_n \) denotes the orthogonal projection onto the eigenspace corresponding to \( \mu_n \), and each \( P_n \) is of finite rank.
+
+Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), its eigenvalues \( \mu_n \to 0 \) and satisfy \( \sum_n |\mu_n| < \infty \). The Schwartz decay of \( \phi \in \mathcal{S}(\mathbb{R}) \) ensures that for any \( N \in \mathbb{N} \), there exists \( C_N > 0 \) such that
+\[
+|\phi(\mu_n)| \le C_N (1 + |\mu_n|)^{-N}.
+\]
+Choosing \( N \) large enough yields
+\[
+\sum_n |\phi(\mu_n)| < \infty,
+\]
+so the spectral trace
+\[
+\operatorname{Tr}(\phi(L_{\mathrm{sym}})) := \sum_n \phi(\mu_n)
+\]
+is well-defined and finite. Furthermore, the map \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) is continuous on \( \mathcal{S}(\mathbb{R}) \), bounded by a finite collection of Schwartz seminorms. Thus, it defines a tempered distribution on \( \mathbb{R} \).
+
+\paragraph{(ii) Positivity.}
+If \( \phi \in \mathcal{S}(\mathbb{R}) \) satisfies \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \mathbb{R} \), then
+\[
+\operatorname{Tr}(\phi(L_{\mathrm{sym}})) = \sum_n \phi(\mu_n) \ge 0,
+\]
+since each term in the sum is nonnegative.
+
+This positivity reflects the nonnegativity of the heat kernel \( K_t(x, x) \) and its diagonal integral expansion. In particular, positivity is supported analytically by Proposition~\ref{prop:heat_trace_uniform_conv}, and the full decay and regularity justification in Appendix~\ref{app:heat-kernel-construction}.
+
+\paragraph{Conclusion.}
+The trace pairing \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) defines a positive tempered distribution on \( \mathbb{R} \), as claimed.
+\end{proof}

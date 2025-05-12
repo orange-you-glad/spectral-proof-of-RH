@@ -1,0 +1,37 @@
+\begin{definition}[Exponentially Weighted Hilbert Space]
+\label{def:weighted-fourier-space}
+Fix a weight parameter \( \alpha > \pi \), and define the exponential weight function
+\[
+\Psi_\alpha(x) := e^{\alpha |x|}, \quad x \in \mathbb{R}.
+\]
+The associated exponentially weighted Hilbert space is
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx),
+\]
+consisting of all measurable functions \( f \colon \mathbb{R} \to \mathbb{C} \) such that
+\[
+\|f\|_{H_{\Psi_\alpha}}^2 := \int_{\mathbb{R}} |f(x)|^2 \Psi_\alpha(x)\, dx < \infty.
+\]
+
+This space is a separable, reflexive Hilbert space equipped with the inner product
+\[
+\langle f, g \rangle_{H_{\Psi_\alpha}} := \int_{\mathbb{R}} f(x)\, \overline{g(x)}\, \Psi_\alpha(x)\, dx,
+\]
+which is linear in the first argument and conjugate-linear in the second.
+
+\medskip
+
+The condition \( \alpha > \pi \) is critical: it ensures that inverse Fourier transforms of profiles of exponential type at most \( \pi \), such as
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
+\]
+belong to \( L^1(\mathbb{R}, \Psi_\alpha^{-1}(x)\, dx) \). This exponential integrability guarantees that convolution against \( \phi^\vee \) defines trace-class operators on \( H_{\Psi_\alpha} \).
+
+\medskip
+
+Functions in \( H_{\Psi_\alpha} \) exhibit exponential decay:
+\[
+|f(x)| \lesssim e^{-\alpha |x|} \quad \text{as } |x| \to \infty,
+\]
+in the sense of weighted envelope norm control. The Schwartz space \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \) is dense and serves as a canonical core domain for the definition and analysis of convolution operators with exponentially decaying kernels.
+\end{definition}

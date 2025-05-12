@@ -1,0 +1,36 @@
+\begin{proof}[Proof of Lemma~\ref{lem:det_continuity_trace_norm}]
+Let \( \{ T_n \} \subset \mathcal{C}_1(H) \) be trace-class operators converging to \( T \in \mathcal{C}_1(H) \) in trace norm:
+\[
+\| T_n - T \|_{\mathcal{C}_1} \to 0 \quad \text{as } n \to \infty.
+\]
+
+\paragraph{(i) Convergence of determinants.}
+The zeta-regularized determinant is given by the absolutely convergent series:
+\[
+\log \det\nolimits_\zeta(I - \lambda T_n) = - \sum_{k=1}^\infty \frac{\lambda^k}{k} \operatorname{Tr}(T_n^k).
+\]
+Since trace-norm convergence implies convergence of powers in trace norm (i.e., \( T_n^k \to T^k \) in \( \mathcal{C}_1 \) for all \( k \)), and the Schatten ideal \( \mathcal{C}_1 \) is a Banach algebra, it follows that
+\[
+\operatorname{Tr}(T_n^k) \to \operatorname{Tr}(T^k), \quad \forall k \in \mathbb{N}.
+\]
+The series converges uniformly on compact subsets of \( \mathbb{C} \), so by the Weierstrass theorem,
+\[
+\det\nolimits_\zeta(I - \lambda T_n) \to \det\nolimits_\zeta(I - \lambda T),
+\]
+uniformly on compacts.
+
+\paragraph{(ii) Logarithmic derivative convergence.}
+Differentiating term-by-term yields
+\[
+\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda T_n) = - \sum_{k=1}^\infty \lambda^{k-1} \operatorname{Tr}(T_n^k),
+\]
+with convergence in compact domains avoiding \( \operatorname{Spec}(T)^{-1} \). Since the traces converge for each \( k \), the derivatives converge uniformly on compact subsets as well.
+
+\paragraph{(iii) Entire function class convergence.}
+If all \( T_n, T \) are self-adjoint and uniformly bounded in trace norm, then by classical results on entire functions of order 1 and exponential type (see \cite[Ch.~1]{Levin1996EntireLectures}), convergence in \( \mathcal{C}_1 \) implies convergence in the entire function topology on \( \mathcal{E}_1^\tau \), where
+\[
+\tau := \limsup_{n \to \infty} \| T_n \|_{\mathcal{C}_1}.
+\]
+This concludes the proof.
+\end{proof}
+% 

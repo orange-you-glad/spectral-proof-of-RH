@@ -66,6 +66,6 @@ Thank you for reading, supporting, or thinking curiously about this work.
 ## 📖 License
 
 - All code and automation scripts in this repository are licensed under the [MIT License](./LICENSE).
-- All manuscript content (LaTeX source, figures, and prose) is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](./LICENSE-TEXT.md).
+- All manuscript content (LaTeX source, figures, and prose) is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](./LICENSE-TEXT).
 
 © 2025 R.A. Jacob Martone. You are free to share and adapt the manuscript material, provided proper attribution is given.

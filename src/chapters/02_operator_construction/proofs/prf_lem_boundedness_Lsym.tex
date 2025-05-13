@@ -1,50 +1,50 @@
-\begin{proof}[Proof of Lemma~\ref{lem:boundedness_Lsym}]
+\begin{proof}[Proof of \lemref{lem:boundedness_Lsym}]
 Fix \( \alpha > \pi \), and define the weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx).
+H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx).
 \]
 Let
 \[
-L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(H_{\Psi_\alpha})
+L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(H_{\Psi_\alpha})
 \]
 be the trace-norm limit of mollified convolution operators
 \[
-L_t f(x) := \int_{\mathbb{R}} k_t(x - y)\, f(y)\, dy,
+(L_t f)(x) := \int_{\R} k_t(x - y)\, f(y)\, dy,
 \]
-where \( k_t := \widehat{\phi_t} \in \mathcal{S}(\mathbb{R}) \), and \( \phi_t(\lambda) := e^{-t\lambda^2} \cdot \Xi\left( \tfrac{1}{2} + i\lambda \right) \).
+where \( k_t := \widehat{\phi_t} \in \Schwartz \), and \( \phi_t(\lambda) := e^{-t\lambda^2} \cdot \Xi\left( \tfrac{1}{2} + i\lambda \right) \).
 
-\medskip
-\noindent\textbf{(i) Boundedness.}
-By Proposition~\ref{prop:boundedness_Lt_weighted}, each \( L_t \in \mathcal{B}(H_{\Psi_\alpha}) \) is uniformly bounded:
+\smallskip
+\noindent\textbf{(i) Boundedness.}  
+By Proposition~\ref{prop:boundedness_Lt_weighted}, each \( L_t \in \mathcal{B}(H_{\Psi_\alpha}) \) satisfies the uniform bound:
 \[
-\| L_t \|_{\mathcal{B}(H_{\Psi_\alpha})} \le C(\alpha), \quad \text{for all } t \in (0,1].
+\| L_t \|_{\mathcal{B}(H_{\Psi_\alpha})} \le C(\alpha), \qquad \forall t \in (0,1].
 \]
-Since \( L_t \to L_{\mathrm{sym}} \) in \( \mathcal{C}_1 \), we also have convergence in operator norm:
+Since \( L_t \to L_{\sym} \) in trace norm (\( \TC \)), it follows that
 \[
-\| L_t - L_{\mathrm{sym}} \|_{\mathcal{B}(H_{\Psi_\alpha})} \to 0,
+\| L_t - L_{\sym} \|_{\mathcal{B}(H_{\Psi_\alpha})} \to 0,
 \]
-and therefore \( L_{\mathrm{sym}} \in \mathcal{B}(H_{\Psi_\alpha}) \).
+so \( L_{\sym} \in \mathcal{B}(H_{\Psi_\alpha}) \) as well.
 
-\medskip
-\noindent\textbf{(ii) Operator Norm Estimate.}
-By lower semicontinuity of the norm under trace-norm convergence,
+\smallskip
+\noindent\textbf{(ii) Operator Norm Estimate.}  
+By lower semicontinuity of the operator norm under convergence in \( \TC \),
 \[
-\| L_{\mathrm{sym}} \|_{\mathcal{B}(H_{\Psi_\alpha})} \le \liminf_{t \to 0^+} \| L_t \|_{\mathcal{B}(H_{\Psi_\alpha})}.
+\| L_{\sym} \|_{\mathcal{B}(H_{\Psi_\alpha})} \le \liminf_{t \to 0^+} \| L_t \|_{\mathcal{B}(H_{\Psi_\alpha})}.
 \]
 
-\medskip
-\noindent\textbf{(iii) Symmetry and Domain Inclusion.}
-Each \( L_t \) is self-adjoint on \( H_{\Psi_\alpha} \), and preserves \( \mathcal{S}(\mathbb{R}) \). Since \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \) is dense and preserved under the limit, we have
+\smallskip
+\noindent\textbf{(iii) Symmetry and Core Domain.}  
+Each \( L_t \) is self-adjoint and preserves \( \Schwartz \subset H_{\Psi_\alpha} \). Since Schwartz functions are stable under trace-norm limits and dense in \( H_{\Psi_\alpha} \), we have
 \[
-\mathcal{S}(\mathbb{R}) \subset \operatorname{Dom}(L_{\mathrm{sym}}),
+\Schwartz \subset \operatorname{Dom}(L_{\sym}),
 \]
-and
+and for all \( f, g \in \Schwartz \),
 \[
-\langle L_{\mathrm{sym}} f, g \rangle = \langle f, L_{\mathrm{sym}} g \rangle, \quad \forall f, g \in \mathcal{S}(\mathbb{R}).
+\langle L_{\sym} f, g \rangle = \langle f, L_{\sym} g \rangle.
 \]
-Thus, \( L_{\mathrm{sym}} \) is symmetric and bounded on \( H_{\Psi_\alpha} \), hence self-adjoint.
+Thus, \( L_{\sym} \) is symmetric on a dense domain, and since it is bounded, it extends to a self-adjoint operator on \( H_{\Psi_\alpha} \).
 
-\medskip
-\noindent\textbf{Conclusion.}
-The canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{B}(H_{\Psi_\alpha}) \) is compact, bounded, and self-adjoint. These properties ensure well-posedness of its spectral resolution and enable determinant and zeta-function regularization frameworks.
+\smallskip
+\noindent\textbf{Conclusion.}  
+The canonical operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \cap \mathcal{B}(H_{\Psi_\alpha}) \) is compact, bounded, and self-adjoint. These properties enable its spectral resolution and support the analytic framework for spectral determinant regularization and zeta theory.
 \end{proof}

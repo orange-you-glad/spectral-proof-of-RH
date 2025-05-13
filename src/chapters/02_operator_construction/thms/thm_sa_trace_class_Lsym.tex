@@ -1,24 +1,24 @@
-\begin{theorem}[Self-Adjointness and Trace-Class Structure of \( L_{\mathrm{sym}} \)]
+\begin{theorem}[Self-Adjointness and Trace-Class Structure of \( L_{\sym} \)]
 \label{thm:sa_trace_class_Lsym}
-Let \( L_{\mathrm{sym}} \) be the canonical convolution operator defined as the trace-norm limit of the mollified operators \( L_t \) on the exponentially weighted Hilbert space
+Let \( L_{\sym} \) be the canonical convolution operator defined as the trace-norm limit of the mollified operators \( L_t \), acting on the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \text{where } \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
 \]
 
 Then:
 \begin{enumerate}
-  \item[\textnormal{(i)}] \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), i.e., it is a trace-class operator, obtained as the trace-norm limit
+  \item[\textnormal{(i)}] \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \); that is, it is trace class and realized as
   \[
-  L_{\mathrm{sym}} = \lim_{t \to 0^+} L_t \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}).
+  L_{\sym} = \lim_{t \to 0^+} L_t \quad \text{in } \TC(H_{\Psi_\alpha}).
   \]
 
-  \item[\textnormal{(ii)}] \( L_{\mathrm{sym}} \in \mathcal{K}(H_{\Psi_\alpha}) \), i.e., it is compact, as all trace-class operators are compact.
+  \item[\textnormal{(ii)}] \( L_{\sym} \in \KC(H_{\Psi_\alpha}) \); that is, it is compact, since every trace-class operator is compact.
 
-  \item[\textnormal{(iii)}] \( L_{\mathrm{sym}} \) is self-adjoint:
+  \item[\textnormal{(iii)}] \( L_{\sym} \) is self-adjoint:
   \[
-  L_{\mathrm{sym}} = L_{\mathrm{sym}}^*,
+  L_{\sym} = L_{\sym}^*,
   \]
-  with domain closure obtained from the symmetric core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \), as established in Lemma~\ref{lem:core-essential-selfadjointness}.
+  with domain closure obtained from the symmetric core \( \Schwartz \subset H_{\Psi_\alpha} \), as established in \lemref{lem:core_essential_sa}.
 \end{enumerate}
 
 \medskip
@@ -26,9 +26,8 @@ Then:
 \noindent
 This spectral classification guarantees:
 \begin{itemize}
-  \item The spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \) is discrete, consisting of real eigenvalues of finite multiplicity.
-  \item The spectral theorem applies to \( L_{\mathrm{sym}} \), enabling functional calculus and construction of the semigroup \( e^{-tL_{\mathrm{sym}}^2} \).
-  \item The Fredholm determinant identity derived in Chapter~\ref{sec:determinant-identity} is valid and connects the spectrum of \( L_{\mathrm{sym}} \) with the zeros of the completed Riemann zeta function \( \Xi(s) \).
+  \item The spectrum \( \Spec(L_{\sym}) \subset \R \) is discrete, consisting of real eigenvalues of finite multiplicity accumulating only at zero.
+  \item The spectral theorem applies to \( L_{\sym} \), enabling functional calculus and definition of the semigroup \( e^{-tL_{\sym}^2} \).
+  \item The Fredholm determinant identity derived in Chapter~\ref{sec:determinant_identity} is rigorously valid and encodes the nontrivial zeros of the completed Riemann zeta function \( \Xi(s) \).
 \end{itemize}
 \end{theorem}
-% 

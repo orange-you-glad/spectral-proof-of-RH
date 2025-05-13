@@ -1,40 +1,38 @@
 \subsection*{Summary}
 
-This chapter constructed the canonical convolution operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), beginning with mollified spectral profiles and culminating in a complete operator-theoretic classification. The results are modularly organized below:
+This chapter constructed the canonical convolution operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \), beginning with mollified spectral profiles and culminating in a complete operator-theoretic classification. The results are modularly organized below:
 
-\paragraph{Function Space and Definitions}
+\paragraph{Function Spaces and Core Definitions}
 \begin{itemize}
-  \item \defref{def:weighted-fourier-space} — Definition of the weighted Hilbert space \( H_{\Psi_\alpha} \) with exponential weight \( \Psi_\alpha(x) = e^{\alpha |x|} \), for \( \alpha > \pi \).
-  \item \defref{def:mollified-fourier-profile} — Gaussian-mollified spectral profiles:\\
-  \hspace*{1.5em} \( \varphi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda) \in \mathcal{S}(\mathbb{R}) \).
-  \item \defref{def:convolution-operators-Lt-Lsym} — Definition of convolution operators \( L_t \) and the canonical trace-norm limit \( L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \).
+  \item \defref{def:weighted_fourier_space} — Exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \), with \( \alpha > \pi \).
+  \item \defref{def:mollified_fourier_profile} — Gaussian-mollified profiles \( \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \).
+  \item \defref{def:convolution_operators_Lt_Lsym} — Convolution operators \( L_t \) and their trace-norm limit \( L_{\sym} := \lim_{t \to 0^+} L_t \).
 \end{itemize}
 
-\paragraph{Analytic Bounds and Kernel Estimates}
+\paragraph{Analytic Estimates and Kernel Decay}
 \begin{itemize}
-  \item \lemref{lem:xi-growth-bound} — Exponential type-\( \pi/2 \) growth for the canonical profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \).
-  \item \lemref{lem:weighted-L1-inverse-FT-xi} — Weighted \( L^1 \)-integrability of \( \phi^\vee = \widehat{\Xi} \).
-  \item \lemref{lem:uniform-L1-conjugated-kernel} — Uniform \( L^1 \)-bound on conjugated mollified kernels \( \widetilde{K}_t(x,y) \), used in trace-class norm estimates.
+  \item \lemref{lem:mollified_profile_decay} — Decay bounds, integrability, and convergence of \( \varphi_t \) and \( k_t := \widehat{\varphi_t} \).
+  \item \lemref{lem:trace_class_Lt} — Each mollified operator \( L_t \in \TC(H_{\Psi_\alpha}) \) via Simon's kernel criterion.
+  \item \lemref{lem:trace_norm_convergence_Lt_to_Lsym} — Convergence: \( \|L_t - L_{\sym}\|_{\TC} \to 0 \).
+  \item \lemref{lem:trace_norm_rate_convergence} — Explicit convergence rate: \( \|L_t - L_{\sym}\| \lesssim t^\beta \).
+  \item \lemref{lem:construction_canonical_data} — Uniqueness of \( L_{\sym} \) from analytic data \( (\Xi, \alpha) \), independent of mollifier.
+  \item \lemref{lem:mollifier_independence_kernel_limit} — Independence of \( L_{\sym} \) under generalized mollifier families.
 \end{itemize}
 
-\paragraph{Operator Theory and Convergence}
+\paragraph{Operator Properties and Domain Closure}
 \begin{itemize}
-  \item \lemref{lem:mollified-profile-decay} — Gaussian decay, \( L^1 \)-convergence, and regularity of \( \varphi_t \).
-  \item \lemref{lem:trace_class_Lt} — Each \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon's kernel criterion.
-  \item \lemref{lem:trace-norm-convergence-Lt-to-Lsym} — Trace-norm convergence \( L_t \to L_{\mathrm{sym}} \in \mathcal{C}_1 \).
-  \item \lemref{lem:construction_canonical_data} — Uniqueness of \( L_{\mathrm{sym}} \) from analytic input \( (\Xi, \alpha) \), independent of mollifier.
-  \item \lemref{lem:core-essential-selfadjointness} — \( L_{\mathrm{sym}} \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \).
-  \item \lemref{lem:Lsym-square-selfadjoint} — The operator \( L_{\mathrm{sym}}^2 \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \) and admits discrete spectral resolution.
+  \item \lemref{lem:boundedness_Lsym} — Boundedness of \( L_{\sym} \in \mathcal{B}(H_{\Psi_\alpha}) \) from mollified estimates.
+  \item \lemref{lem:core_essential_sa} — \( L_{\sym} \) is essentially self-adjoint on \( \Schwartz \subset H_{\Psi_\alpha} \).
+  \item \lemref{lem:Lsym_square_selfadjoint} — \( L_{\sym}^2 \) is also essentially self-adjoint on \( \Schwartz \) and admits a discrete spectral resolution.
 \end{itemize}
 
-\paragraph{Main Theorems}
+\paragraph{Canonical Operator Theorems}
 \begin{itemize}
-  \item \thmref{thm:existence-Lsym} — Existence of \( L_{\mathrm{sym}} \) as the canonical operator defined by trace-norm convergence of mollified \( L_t \).
-  \item \thmref{thm:sa-trace-class-Lsym} — Final classification: \( L_{\mathrm{sym}} \in \mathcal{C}_1 \cap \mathcal{K} \), self-adjoint, with kernel derived from the inverse Fourier transform of \( \Xi \).
-  \item \thmref{thm:trace-zero-Lsym} — Trace normalization: \( \operatorname{Tr}(L_{\mathrm{sym}}) = 0 \), fixing the exponential ambiguity in the determinant identity.
+  \item \thmref{thm:existence_Lsym} — Existence of \( L_{\sym} \) as trace-norm limit of \( L_t \), constructed from mollified profiles.
+  \item \thmref{thm:sa_trace_class_Lsym} — Final classification: \( L_{\sym} \in \TC \cap \KC \), self-adjoint with Paley–Wiener kernel.
+  \item \thmref{thm:trace_zero_Lsym} — Trace vanishing: \( \Tr(L_{\sym}) = 0 \), ensuring determinant normalization.
 \end{itemize}
 
 \medskip
 \noindent
-These results establish the full analytic and operator-theoretic foundation for the spectral determinant identity and eigenvalue encoding developed in Chapter~\ref{sec:determinant-identity}, where the spectrum of \( L_{\mathrm{sym}} \) will be shown to recover the nontrivial zeros of the Riemann zeta function.
-% 
+These results establish the full analytic and spectral-theoretic foundation for the canonical determinant identity in Chapter~\ref{sec:determinant_identity}, where the spectrum of \( L_{\sym} \) will be shown to encode the nontrivial zeros of the Riemann zeta function \( \zeta(s) \).

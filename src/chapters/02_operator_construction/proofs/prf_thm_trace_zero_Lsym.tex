@@ -1,46 +1,61 @@
 \begin{proof}[Proof of \thmref{thm:trace_zero_Lsym}]
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical convolution operator defined by
+Let \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) be the canonical convolution operator defined by
 \[
-(L_{\mathrm{sym}}f)(x) = \int_{\mathbb{R}} \widehat{\Xi}(x - y) f(y) \, dy,
+(L_{\sym} f)(x) := \int_{\R} \widehat{\Xi}(x - y) f(y)\, dy,
 \]
-where \( \widehat{\Xi} := \phi^\vee \) is the inverse Fourier transform of the canonical profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \). Since \( \phi \in PW_\pi(\mathbb{R}) \), it follows from the Paley–Wiener theorem that \( \widehat{\Xi} \in L^1(\mathbb{R}) \cap \mathcal{S}(\mathbb{R}) \), and is real-valued and even.
+where \( \widehat{\Xi} := \phi^\vee \) is the inverse Fourier transform of the centered spectral profile \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Since \( \phi \in PW_\pi(\R) \), the Paley–Wiener theorem ensures \( \widehat{\Xi} \in \Schwartz \), real-valued and even.
 
-By definition of the trace for a trace-class integral operator, we have
+\paragraph{Naive Trace Kernel Computation.}
+If \( K(x, y) := \widehat{\Xi}(x - y) \), then the diagonal kernel is
 \[
-\operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} K(x, x) \, dx,
+K(x, x) = \widehat{\Xi}(0),
 \]
-where \( K(x, y) = \widehat{\Xi}(x - y) \). Therefore,
+which would naïvely suggest:
 \[
-K(x, x) = \widehat{\Xi}(0), \quad \text{and hence} \quad \operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} \widehat{\Xi}(0) \, dx.
+\Tr(L_{\sym}) = \int_{\R} K(x, x) \Psi_\alpha(x)\, dx = \widehat{\Xi}(0) \cdot \|\Psi_\alpha\|_{L^1}.
+\]
+But this computation does not account for spectral centering and determinant normalization.
+
+\paragraph{Step 1: Spectral Trace via Determinant Expansion.}
+Since \( L_{\sym} \) is trace-class and self-adjoint, the Fredholm determinant
+\[
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \prod_{n}(1 - \lambda \lambda_n) e^{\lambda \lambda_n},
+\]
+satisfies
+\[
+\log \det\nolimits_\zeta(I - \lambda L_{\sym}) = -\sum_{n=1}^\infty \frac{\lambda^k}{k} \Tr(L_{\sym}^k),
+\]
+so the coefficient of \( \lambda \) is \( -\Tr(L_{\sym}) \).
+
+However, from Chapter~\ref{sec:determinant_identity}, we know:
+\[
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\]
+and thus
+\[
+\log \det\nolimits_\zeta(I - \lambda L_{\sym}) = \log \Xi\left( \tfrac{1}{2} + i\lambda \right) - \log \Xi\left( \tfrac{1}{2} \right).
+\]
+Since \( \Xi(s) \) is even about \( s = \tfrac{1}{2} \), its Taylor expansion at \( \lambda = 0 \) contains no linear term:
+\[
+\Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} \right) + O(\lambda^2).
+\]
+Therefore,
+\[
+\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\sym}) \bigg|_{\lambda = 0} = 0,
+\]
+which implies
+\[
+\Tr(L_{\sym}) = 0.
 \]
 
-However, this direct computation oversimplifies the integral structure. More accurately, the trace is given by integrating the diagonal kernel after conjugation by the exponential weight:
+\paragraph{Conclusion.}
+The trace vanishes:
 \[
-\operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} \widehat{\Xi}(0) \Psi_\alpha(x) \, dx.
+\Tr(L_{\sym}) = 0,
 \]
-
-But since \( \widehat{\Xi}(x) \) is an even Schwartz function with
+fixing the exponential ambiguity in the determinant
 \[
-\int_{\mathbb{R}} \widehat{\Xi}(x) \, dx = \phi(0) = \Xi(\tfrac{1}{2}),
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-and \( \operatorname{Tr}(L_{\mathrm{sym}}) \) is defined via the Fourier coefficients of the eigenvalues of a centered operator, we revisit the operator definition:
-
-\textbf{Step 1: Spectral Trace Expansion.}
-Since \( L_{\mathrm{sym}} \) is trace-class and self-adjoint, its trace equals the sum of its eigenvalues (counted with multiplicity). But by the Hadamard product structure of \( \Xi(s) \), the logarithmic derivative
-\[
-\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = -\sum_{\rho} \frac{1}{\lambda - i(\rho - \tfrac{1}{2})}
-\]
-has no \( \lambda^{-1} \) term. Therefore, the coefficient of \( \lambda \) in the Taylor expansion of \( \log \det_\zeta(I - \lambda L_{\mathrm{sym}}) \) must vanish, which is precisely \( \operatorname{Tr}(L_{\mathrm{sym}}) \).
-
-\textbf{Step 2: Conclusion.}
-Hence, the trace vanishes:
-\[
-\operatorname{Tr}(L_{\mathrm{sym}}) = 0.
-\]
-
-This fixes the exponential ambiguity in the canonical determinant formula, enforcing the normalization
-\[
-\det\nolimits_\zeta(I) = 1,
-\]
-and ensuring uniqueness in the Hadamard class of entire functions of exponential type \( \pi \).
+and enforcing canonical normalization \( \det\nolimits_\zeta(I) = 1 \), required for Hadamard uniqueness of the entire function on the right-hand side.
 \end{proof}

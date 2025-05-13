@@ -1,33 +1,35 @@
-\begin{lemma}[Boundedness of \( L_{\mathrm{sym}} \)]
+\begin{lemma}[Boundedness of \( L_{\sym} \)]
 \label{lem:boundedness_Lsym}
-Let \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx) \) for fixed \( \alpha > \pi \). Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical spectral convolution operator constructed as the trace-norm limit
+Let \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \) for fixed \( \alpha > \pi \). Let \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) denote the canonical spectral convolution operator, defined as the trace-norm limit
 \[
-L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t,
+L_{\sym} := \lim_{t \to 0^+} L_t,
 \]
-where \( L_t \) is the convolution operator with kernel \( k_t(x - y) \), the inverse Fourier transform of the mollified profile
+where \( L_t \) is the convolution operator associated with
 \[
-\phi_t(\lambda) := e^{-t\lambda^2} \cdot \Xi\left( \tfrac{1}{2} + i\lambda \right).
+k_t(x - y) := \widehat{\phi_t}(x - y), \quad \phi_t(\lambda) := e^{-t\lambda^2} \cdot \Xi\left( \tfrac{1}{2} + i\lambda \right).
 \]
 
-Then:
+Then the following hold:
 \begin{enumerate}
-    \item[\textnormal{(i)}] \( L_{\mathrm{sym}} \) is a bounded operator on \( H_{\Psi_\alpha} \), i.e.,
-    \[
-    L_{\mathrm{sym}} \in \mathcal{B}(H_{\Psi_\alpha}).
-    \]
+  \item[\textnormal{(i)}] \textbf{Boundedness:}  
+  The limit operator is bounded on \( H_{\Psi_\alpha} \):
+  \[
+  L_{\sym} \in \mathcal{B}(H_{\Psi_\alpha}).
+  \]
 
-    \item[\textnormal{(ii)}] The operator norm is bounded by the uniform trace-norm envelope of the approximating family:
-    \[
-    \| L_{\mathrm{sym}} \|_{\mathcal{B}(H_{\Psi_\alpha})} \le \liminf_{t \to 0^+} \| L_t \|_{\mathcal{B}(H_{\Psi_\alpha})}.
-    \]
+  \item[\textnormal{(ii)}] \textbf{Norm Estimate:}  
+  The operator norm satisfies
+  \[
+  \| L_{\sym} \|_{\mathcal{B}(H_{\Psi_\alpha})} \le \liminf_{t \to 0^+} \| L_t \|_{\mathcal{B}(H_{\Psi_\alpha})}.
+  \]
 
-    \item[\textnormal{(iii)}] \( L_{\mathrm{sym}} \) admits a self-adjoint extension with domain containing \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \), and satisfies
-    \[
-    \langle L_{\mathrm{sym}} f, f \rangle_{H_{\Psi_\alpha}} \in \mathbb{R}, \quad \forall f \in H_{\Psi_\alpha}.
-    \]
+  \item[\textnormal{(iii)}] \textbf{Self-Adjointness on Core:}  
+  The operator \( L_{\sym} \) admits a self-adjoint extension with core domain containing \( \Schwartz \subset H_{\Psi_\alpha} \), and satisfies:
+  \[
+  \langle L_{\sym} f, f \rangle_{H_{\Psi_\alpha}} \in \R, \qquad \forall f \in H_{\Psi_\alpha}.
+  \]
 \end{enumerate}
 
 \noindent
-Thus, the limit operator \( L_{\mathrm{sym}} \) inherits boundedness from the mollified operators \( L_t \), and belongs to both \( \mathcal{B}(H_{\Psi_\alpha}) \) and \( \mathcal{C}_1(H_{\Psi_\alpha}) \), establishing its suitability for spectral determinant analysis.
+Thus, the canonical operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \cap \mathcal{B}(H_{\Psi_\alpha}) \) inherits boundedness from the mollified family \( \{L_t\} \), and is well-suited for spectral determinant analysis and semigroup generation in later chapters.
 \end{lemma}
-% 

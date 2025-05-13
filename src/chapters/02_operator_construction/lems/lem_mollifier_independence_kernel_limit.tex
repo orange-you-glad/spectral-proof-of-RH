@@ -2,45 +2,51 @@
 \label{lem:mollifier_independence_kernel_limit}
 Let \( \alpha > \pi \), and define the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}.
+H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}.
 \]
 
-Let \( \widehat{\Xi} \in \mathcal{S}'(\mathbb{R}) \) denote the inverse Fourier transform of the canonical spectral profile
+Let \( \widehat{\Xi} \in \Schwartz' \) denote the inverse Fourier transform of the canonical spectral profile
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
 \]
 where \( \Xi \) is the completed Riemann zeta function.
 
-Let \( \{\varphi_t\}_{t > 0} \subset \mathcal{S}(\mathbb{R}) \) be any mollifier family satisfying:
+Let \( \{\varphi_t\}_{t > 0} \subset \Schwartz \) be any mollifier family satisfying:
 \begin{itemize}
-    \item \textnormal{(Normalization)} \( \int_{\mathbb{R}} \varphi_t(x)\, dx = 1 \);
-    \item \textnormal{(Approximate Identity)} \( \varphi_t \to \delta \) in \( \mathcal{S}' \) as \( t \to 0^+ \);
-    \item \textnormal{(Symmetry)} \( \varphi_t(x) = \varphi_t(-x) \);
-    \item \textnormal{(Decay)} \( \varphi_t \in L^1 \cap L^2 \cap L^1(\Psi_\alpha\, dx) \) for all \( t > 0 \).
+  \item \textnormal{(Normalization)}: \( \int_{\R} \varphi_t(x)\, dx = 1 \);
+  \item \textnormal{(Approximate Identity)}: \( \varphi_t \to \delta \) in \( \Schwartz' \) as \( t \to 0^+ \);
+  \item \textnormal{(Symmetry)}: \( \varphi_t(x) = \varphi_t(-x) \);
+  \item \textnormal{(Decay)}: \( \varphi_t \in L^1 \cap L^2 \cap L^1(\Psi_\alpha\, dx) \) for all \( t > 0 \).
 \end{itemize}
 
 Define the mollified kernels and corresponding convolution operators:
 \[
 \widehat{\Xi}_t := \varphi_t * \widehat{\Xi}, \qquad
-(L_t^{(\varphi)} f)(x) := \int_{\mathbb{R}} \widehat{\Xi}_t(x - y) f(y)\, dy.
+(L_t^{(\varphi)} f)(x) := \int_{\R} \widehat{\Xi}_t(x - y)\, f(y)\, dy.
 \]
 
 Then:
-\begin{enumerate}
-    \item[\textnormal{(i)}] For each \( t > 0 \), the mollified kernel \( \widehat{\Xi}_t \in \mathcal{S}(\mathbb{R}) \cap L^1(\mathbb{R}, \Psi_\alpha(x)\, dx) \), and the convolution operator \( L_t^{(\varphi)} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is trace class. This follows from classical kernel decay and weighted integral criteria for trace-class operators \cite[Ch.~4]{Simon2005TraceIdeals}.
 
-    \item[\textnormal{(ii)}] The limit
-    \[
-    L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t^{(\varphi)} \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha})
-    \]
-    exists and is independent of the mollifier family \( \{\varphi_t\} \). That is, for any two such families \( \varphi_t \), \( \tilde{\varphi}_t \), we have
-    \[
-    \lim_{t \to 0^+} \| L_t^{(\varphi)} - L_t^{(\tilde{\varphi})} \|_{\mathcal{C}_1} = 0.
-    \]
-    This follows from convolution continuity in trace-norm and the fact that mollifiers converge to the identity in \( \mathcal{S}' \), preserving symmetry and exponential integrability.
+\begin{enumerate}
+  \item[\textnormal{(i)}] \textbf{Trace-Class Structure.}  
+  For each \( t > 0 \), the mollified kernel \( \widehat{\Xi}_t \in \Schwartz \cap L^1(\R, \Psi_\alpha(x)\, dx) \), and
+  \[
+  L_t^{(\varphi)} \in \TC(H_{\Psi_\alpha}).
+  \]
+  This follows from classical decay and Simon’s weighted trace-norm kernel criterion~\cite[Ch.~4]{Simon2005TraceIdeals}.
+
+  \item[\textnormal{(ii)}] \textbf{Trace-Norm Convergence and Uniqueness.}  
+  The limit
+  \[
+  L_{\sym} := \lim_{t \to 0^+} L_t^{(\varphi)} \quad \text{in } \TC(H_{\Psi_\alpha})
+  \]
+  exists and is independent of the mollifier family \( \{\varphi_t\} \). Specifically, for any two mollifiers \( \varphi_t \) and \( \tilde{\varphi}_t \) satisfying the above properties,
+  \[
+  \lim_{t \to 0^+} \| L_t^{(\varphi)} - L_t^{(\tilde{\varphi})} \|_{\TC} = 0.
+  \]
+  This follows from convolution continuity in trace-norm, mollifier convergence in \( \Schwartz' \), and uniform exponential envelope control.
 \end{enumerate}
 
 \noindent
-Hence, the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is uniquely defined by the analytic profile \( \phi = \Xi(1/2 + i\lambda) \) and the exponential weight \( \Psi_\alpha \), independent of mollification choices. This confirms the analytic rigidity of the construction and provides the foundation for the determinant identity in \defref{def:convolution-operators-Lt-Lsym}.
+Hence, the canonical operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) is uniquely determined by the analytic data \( (\phi, \Psi_\alpha) \), and is independent of the mollifier family. This analytic rigidity confirms the well-posedness of the spectral model and supports the determinant identity in \defref{def:convolution_operators_Lt_Lsym}.
 \end{lemma}
-% 

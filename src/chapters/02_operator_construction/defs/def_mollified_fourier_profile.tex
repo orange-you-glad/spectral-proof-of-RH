@@ -1,36 +1,39 @@
 \begin{definition}[Mollified Fourier Profile]
 \label{def:mollified_fourier_profile}
-Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the canonical Fourier profile (see Definition~\ref{def:canonical-fourier-profile}). For each \( t > 0 \), define the mollified Fourier profile:
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) denote the canonical spectral profile (see \defref{def:canonical_fourier_profile}). For each \( t > 0 \), define the mollified profile:
 \[
-\varphi_t(\lambda) := e^{-t\lambda^2} \cdot \phi(\lambda), \qquad \lambda \in \mathbb{R}.
+\varphi_t(\lambda) := e^{-t\lambda^2} \cdot \phi(\lambda), \qquad \lambda \in \R.
 \]
-Here, the Gaussian damping factor \( e^{-t\lambda^2} \) serves as a mollifier: it improves decay, regularity, and integrability of the spectral profile.
+Here, the Gaussian damping factor \( e^{-t\lambda^2} \) serves as a mollifier: it improves decay, regularity, and integrability of the profile \( \phi \), making it suitable for operator-theoretic constructions.
 
-Then \( \varphi_t \) satisfies:
+Then \( \varphi_t \) satisfies the following properties:
 \begin{enumerate}
-  \item \textbf{Schwartz Regularity:} Since \( \phi(\lambda) \) is entire of exponential type \( \pi \) and polynomially bounded, the mollified profile satisfies:
+  \item \textbf{Schwartz Regularity:}  
+  Since \( \phi \) is entire of exponential type \( \pi \) and of moderate growth, the product \( \varphi_t \in \Schwartz \) for all \( t > 0 \):
   \[
-  \varphi_t \in \mathcal{S}(\mathbb{R}), \qquad \forall t > 0.
+  \varphi_t \in \Schwartz, \qquad \forall t > 0.
   \]
 
   \item \textbf{Evenness and Real-Valuedness:}
   \[
-  \varphi_t(-\lambda) = \varphi_t(\lambda), \quad \varphi_t(\lambda) \in \mathbb{R}, \qquad \forall \lambda \in \mathbb{R}.
+  \varphi_t(-\lambda) = \varphi_t(\lambda), \quad \varphi_t(\lambda) \in \R, \qquad \forall \lambda \in \R.
   \]
 
-  \item \textbf{Integrability and Kernel Smoothness:} We have \( \varphi_t \in L^1(\mathbb{R}) \cap L^2(\mathbb{R}) \), and its inverse Fourier transform
+  \item \textbf{Integrability and Kernel Smoothness:}  
+  The mollified profile satisfies \( \varphi_t \in L^1(\R) \cap L^2(\R) \), and its inverse Fourier transform
   \[
-  k_t(x) := \widehat{\varphi_t}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \varphi_t(\lambda)\, d\lambda
+  k_t(x) := \widehat{\varphi_t}(x) := \frac{1}{2\pi} \int_{\R} e^{i\lambda x} \varphi_t(\lambda)\, d\lambda
   \]
-  lies in \( \mathcal{S}(\mathbb{R}) \). In particular, \( k_t \) is smooth, real-valued, even, and rapidly decaying.
+  lies in \( \Schwartz \). In particular, \( k_t \) is smooth, real-valued, even, and rapidly decaying.
 
-  \item \textbf{Weighted Decay and Operator Admissibility:} For any \( \alpha > \pi \), we have:
+  \item \textbf{Weighted Decay and Operator Admissibility:}  
+  For any \( \alpha > \pi \), we have:
   \[
-  k_t \in L^1(\mathbb{R}, e^{\alpha|x|} dx),
+  k_t \in L^1(\R, e^{\alpha |x|} dx),
   \]
-  so the kernel \( k_t(x - y) \) defines a trace-class convolution operator on \( H_{\Psi_\alpha} \).
+  so the kernel \( k_t(x - y) \) defines a trace-class convolution operator on the weighted space \( H_{\Psi_\alpha} \) by Simon’s criterion.
 \end{enumerate}
 
 \noindent
-Thus, the mollified profiles \( \varphi_t \) form a regularizing family of spectral densities whose convolution kernels \( k_t \) yield trace-class convolution operators. They bridge entire function theory and spectral analysis via explicit kernel regularization.
+Thus, the mollified profiles \( \varphi_t \) form a regularizing family of spectral densities whose inverse transforms \( k_t \) yield trace-class convolution operators. They provide a controlled analytic bridge from entire function theory to compact operator theory via explicit kernel regularization.
 \end{definition}

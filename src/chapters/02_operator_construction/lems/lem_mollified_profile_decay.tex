@@ -1,6 +1,6 @@
 \begin{lemma}[Decay of Mollified Fourier Profiles]
 \label{lem:mollified_profile_decay}
-Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the canonical Fourier profile (see Definition~\ref{def:canonical-fourier-profile}), and define for \( t > 0 \):
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the canonical spectral profile (see \defref{def:canonical_fourier_profile}), and define, for \( t > 0 \),
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \cdot \phi(\lambda).
 \]
@@ -8,40 +8,46 @@ Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the cano
 Then the following hold:
 
 \begin{enumerate}
-    \item[\textnormal{(i)}] \textbf{Gaussian Envelope and Schwartz Regularity:} Since \( \phi(\lambda) \) is of exponential type \( \pi \), there exists \( C > 0 \) such that
+    \item[\textnormal{(i)}] \textbf{Gaussian Envelope and Schwartz Regularity:}  
+    Since \( \phi(\lambda) \) is entire of exponential type \( \pi \), there exists \( C > 0 \) such that
     \[
-    |\phi(\lambda)| \le C\, e^{\frac{\pi}{2}|\lambda|}, \quad \forall \lambda \in \mathbb{R}.
+    |\phi(\lambda)| \le C\, e^{\frac{\pi}{2}|\lambda|}, \qquad \forall \lambda \in \R.
     \]
-    Therefore, for fixed \( t > 0 \), there exist constants \( C_t, a_t > 0 \) such that
+    Therefore, for each fixed \( t > 0 \), there exist constants \( C_t, a_t > 0 \) such that
     \[
-    |\phi_t(\lambda)| \le C_t\, e^{-a_t \lambda^2}.
+    |\phi_t(\lambda)| \le C_t\, e^{-a_t \lambda^2},
     \]
-    Hence \( \phi_t \in \mathcal{S}(\mathbb{R}) \), and its inverse Fourier transform
+    and hence \( \phi_t \in \Schwartz \). Its inverse Fourier transform
     \[
-    k_t(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \phi_t(\lambda)\, d\lambda
+    k_t(x) := \frac{1}{2\pi} \int_{\R} e^{i\lambda x} \phi_t(\lambda)\, d\lambda
     \]
-    lies in \( \mathcal{S}(\mathbb{R}) \), and is real-valued, smooth, even, and rapidly decreasing.
+    also lies in \( \Schwartz \), and is smooth, real-valued, even, and rapidly decaying.
 
-    \item[\textnormal{(ii)}] \textbf{Integrability and Weighted Decay:} For every \( t > 0 \), \( \phi_t \in L^1(\mathbb{R}) \cap L^2(\mathbb{R}) \), and \( k_t \in L^1(\mathbb{R}, e^{\alpha |x|} dx) \) for all \( \alpha > \pi \).
-
-    \item[\textnormal{(iii)}] \textbf{Convergence to Canonical Profile:} As \( t \to 0^+ \),
+    \item[\textnormal{(ii)}] \textbf{Integrability and Weighted Decay:}  
+    For every \( t > 0 \), we have
     \[
-    \phi_t(\lambda) \to \phi(\lambda) \quad \text{pointwise for all } \lambda \in \mathbb{R},
+    \phi_t \in L^1(\R) \cap L^2(\R), \quad \text{and} \quad k_t \in L^1(\R, e^{\alpha |x|} dx), \quad \forall \alpha > \pi.
+    \]
+
+    \item[\textnormal{(iii)}] \textbf{Convergence to Canonical Profile:}  
+    As \( t \to 0^+ \),
+    \[
+    \phi_t(\lambda) \to \phi(\lambda) \quad \text{pointwise for all } \lambda \in \R,
     \]
     and
     \[
-    \phi_t \to \phi \quad \text{in } L^1_{\mathrm{loc}}(\mathbb{R}).
+    \phi_t \to \phi \quad \text{in } L^1_{\mathrm{loc}}(\R).
     \]
-    For any compact interval \( I \subset \mathbb{R} \),
+    For every compact interval \( I \subset \R \), we have
     \[
     \int_I |\phi_t(\lambda) - \phi(\lambda)|\, d\lambda \to 0 \quad \text{as } t \to 0^+.
     \]
 
-    \item[\textnormal{(iv)}] \textbf{Operator-Theoretic Consequence:} The Schwartz decay of \( \phi_t \) and exponential integrability of \( k_t \) imply:
+    \item[\textnormal{(iv)}] \textbf{Operator-Theoretic Consequence:}  
+    The rapid decay of \( \phi_t \in \Schwartz \) and the exponential integrability of \( k_t \) imply that
     \[
-    L_t f(x) := \int_{\mathbb{R}} k_t(x - y) f(y)\, dy
+    (L_t f)(x) := \int_{\R} k_t(x - y) f(y)\, dy
     \]
-    defines a bounded, self-adjoint, trace-class operator on \( H_{\Psi_\alpha} \), for any \( \alpha > \pi \).
+    defines a bounded, self-adjoint, trace-class operator on \( H_{\Psi_\alpha} \), for all \( \alpha > \pi \).
 \end{enumerate}
 \end{lemma}
-% 

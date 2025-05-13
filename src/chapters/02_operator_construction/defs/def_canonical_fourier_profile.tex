@@ -6,39 +6,44 @@ Let \( \Xi(s) \) denote the completed Riemann zeta function, defined by
 \]
 which extends to an entire function of order one and exponential type \( \pi \), and satisfies the functional equation \( \Xi(s) = \Xi(1 - s) \).
 
-Define the canonical Fourier profile \( \phi : \mathbb{R} \to \mathbb{R} \) by restriction:
+Define the \emph{canonical Fourier profile} \( \phi : \R \to \R \) by spectral centering:
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
 \]
 
-Then \( \phi \) satisfies:
+Then \( \phi \) satisfies the following analytic properties:
+
 \begin{enumerate}
   \item \textbf{Entirety and Exponential Type:} \( \phi \) is the restriction of an entire function of exponential type \( \pi \) and order one.
 
   \item \textbf{Evenness and Real-Valuedness:}
   \[
-  \phi(-\lambda) = \phi(\lambda), \quad \phi(\lambda) \in \mathbb{R}, \qquad \forall \lambda \in \mathbb{R}.
+  \phi(-\lambda) = \phi(\lambda), \quad \phi(\lambda) \in \R, \qquad \forall \lambda \in \R.
   \]
 
   \item \textbf{Exponential Growth Bound:} There exists a constant \( A_1 > 0 \) such that
   \[
-  |\phi(\lambda)| \le A_1\, e^{\frac{\pi}{2} |\lambda|}, \qquad \forall \lambda \in \mathbb{R},
+  |\phi(\lambda)| \le A_1\, e^{\frac{\pi}{2} |\lambda|}, \qquad \forall \lambda \in \R,
   \]
-  based on Hadamard factorization and Stirling asymptotics for \( \Gamma(s/2) \zeta(s) \) on vertical lines.
+  following from Hadamard factorization and Stirling-type bounds for \( \Gamma(s/2)\zeta(s) \) on vertical lines.
 
   \item \textbf{Paley--Wiener Membership:}
-\( \phi \in PW_\pi(\mathbb{R}) \cap \mathcal{S}'(\mathbb{R}) \),\\
-the Paley--Wiener space of entire functions of exponential type \( \pi \)
-whose inverse Fourier transforms are supported in \( [-\pi, \pi] \).
+  \[
+  \phi \in PW_\pi(\R) \cap \mathcal{S}'(\R),
+  \]
+  the Paley--Wiener space of entire functions of exponential type \( \pi \) whose inverse Fourier transforms are supported in \( [-\pi, \pi] \).
 
   \item \textbf{Inverse Fourier Decay:} The inverse Fourier transform
   \[
-  \phi^\vee(x) := \widehat{\phi}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i \lambda x} \phi(\lambda)\, d\lambda
+  \phi^\vee(x) := \widehat{\phi}(x) := \frac{1}{2\pi} \int_{\R} e^{i \lambda x} \phi(\lambda)\, d\lambda
   \]
-  lies in \( L^1(\mathbb{R}, e^{-\alpha |x|} dx) \) for any \( \alpha > \pi \), and is real-valued and even.
+  lies in \( L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \), and is real-valued and even.
 \end{enumerate}
 
 \noindent
-These properties ensure that convolution operators with kernel \( \phi^\vee \) define bounded, compact, and self-adjoint operators on exponentially weighted Hilbert spaces \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \), and that \( \phi \) serves as a canonical spectral analytic profile for trace-norm and determinant constructions.
+These properties ensure that convolution operators with kernel \( \phi^\vee \) define bounded, compact, and self-adjoint operators on exponentially weighted Hilbert spaces
+\[
+H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx),
+\]
+and certify that \( \phi \) serves as the canonical spectral profile for operator-theoretic realization of \( \Xi \) via trace-class convergence and determinant constructions.
 \end{definition}
-% 

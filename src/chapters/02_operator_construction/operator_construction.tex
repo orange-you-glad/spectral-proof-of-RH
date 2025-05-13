@@ -6,78 +6,81 @@
 %------------------------------------------------------------------
 \subsection{Definitions}
 
-% φ(λ) := Ξ(1/2 + iλ), real-valued profile of exponential type π
+% Canonical spectral profile φ(λ) := Ξ(1/2 + iλ)
 \input{chapters/02_operator_construction/defs/def_canonical_fourier_profile}
 
-% Weighted Hilbert space H_{\Psi_\alpha}, α > π
+% Weighted Hilbert space H_{Ψ_α} for α > π
 \input{chapters/02_operator_construction/defs/def_weighted_fourier_space}
 
-% Uα: conjugation between H_{Ψ_α} and L²
+% U_α: unitary conjugation between H_{Ψ_α} and L²
 \input{chapters/02_operator_construction/defs/def_unitary_conjugation_operator}
 
-% Mollified profiles φ_t(λ) = e^{-tλ²}φ(λ)
+% Mollified spectral profiles φ_t(λ) = e^{-tλ²} φ(λ)
 \input{chapters/02_operator_construction/defs/def_mollified_fourier_profile}
 
-% Definition of L_t and trace-norm limit L_sym
+% Convolution operators L_t and trace-norm limit L_sym
 \input{chapters/02_operator_construction/defs/def_convolution_operators_Lt_Lsym}
 
 %------------------------------------------------------------------
 \subsection{Mollified Operator Construction}
 
-% Fourier decay and S(R) structure of mollified φ_t
+% φ_t ∈ \mathcal{S}(\mathbb{R}), Fourier decay and Paley–Wiener control
 \input{chapters/02_operator_construction/lems/lem_mollified_profile_decay}
 \input{chapters/02_operator_construction/proofs/prf_lem_mollified_profile_decay}
 
-% L_t ∈ C₁(H_{\Psi_α}) by Simon's criterion
+% Trace-class inclusion L_t ∈ \mathcal{C}_1(H_{Ψ_α}) via weighted kernel norm
 \input{chapters/02_operator_construction/lems/lem_trace_class_Lt}
 \input{chapters/02_operator_construction/proofs/prf_lem_trace_class_Lt}
+
+% Spectral discreteness remark for L_t
+\input{chapters/02_operator_construction/rems/rmk_spectrum_Lt_real_discrete}
 
 %------------------------------------------------------------------
 \subsection{Convergence and Operator Limits}
 
-% Schatten-1 convergence L_t → L_sym
+% Convergence L_t → L_sym in trace norm
 \input{chapters/02_operator_construction/lems/lem_trace_norm_convergence_Lt_to_Lsym}
 \input{chapters/02_operator_construction/proofs/prf_lem_trace_norm_convergence_Lt_to_Lsym}
 
-% Explicit trace-norm convergence rate ‖L_t − L_sym‖ ≤ C t^β
+% Explicit rate: \|L_t - L_sym\|_{\mathcal{C}_1} ≤ C t^β
 \input{chapters/02_operator_construction/lems/lem_trace_norm_rate_convergence}
 \input{chapters/02_operator_construction/proofs/prf_lem_trace_norm_rate_convergence}
 
-% Uniqueness of L_sym from mollifier-independent construction
+% Canonicality: limit L_sym is independent of mollifier choice
 \input{chapters/02_operator_construction/lems/lem_construction_canonical_data}
 \input{chapters/02_operator_construction/proofs/prf_lem_construction_canonical_data}
 
-% Boundedness of L_sym inherited from L_t
+% L_sym inherits boundedness from mollified family L_t
 \input{chapters/02_operator_construction/lems/lem_boundedness_Lsym}
 \input{chapters/02_operator_construction/proofs/prf_lem_boundedness_Lsym}
 
-% Independence of L_sym from mollifier family
+% Mollifier independence in trace-norm limit kernel
 \input{chapters/02_operator_construction/lems/lem_mollifier_independence_kernel_limit}
 \input{chapters/02_operator_construction/proofs/prf_lem_mollifier_independence_kernel_limit}
 
 %------------------------------------------------------------------
 \subsection{Self-Adjointness and Core Domain}
 
-% L_sym is essentially self-adjoint on \mathcal{S}(\mathbb{R})
+% Schwartz core: L_sym is essentially self-adjoint on \mathcal{S}(\mathbb{R})
 \input{chapters/02_operator_construction/lems/lem_core_essential_sa}
 \input{chapters/02_operator_construction/proofs/prf_lem_core_essential_sa}
 
-% L_sym² is essentially self-adjoint on Schwartz core
+% L_sym² is also essentially self-adjoint on Schwartz core
 \input{chapters/02_operator_construction/lems/lem_Lsym_square_selfadjoint}
 \input{chapters/02_operator_construction/proofs/prf_lem_Lsym_square_selfadjoint}
 
 %------------------------------------------------------------------
 \subsection{Canonical Operator Theorems}
 
-% Construction of canonical L_sym by trace-norm limit
+% Theorem: L_sym ∈ \mathcal{C}_1(H_{Ψ_α}) by trace-norm limit of L_t
 \input{chapters/02_operator_construction/thms/thm_existence_Lsym}
 \input{chapters/02_operator_construction/proofs/prf_thm_existence_Lsym}
 
-% Spectral properties: trace-class, compactness, self-adjoint
+% L_sym is compact, self-adjoint, trace class
 \input{chapters/02_operator_construction/thms/thm_sa_trace_class_Lsym}
 \input{chapters/02_operator_construction/proofs/prf_thm_sa_trace_class_Lsym}
 
-% Tr(L_sym) = 0 ensures canonical normalization in det_ζ
+% Trace normalization: \Tr(L_sym) = 0 (canonical spectral centering)
 \input{chapters/02_operator_construction/thms/thm_trace_zero_Lsym}
 \input{chapters/02_operator_construction/proofs/prf_thm_trace_zero_Lsym}
 

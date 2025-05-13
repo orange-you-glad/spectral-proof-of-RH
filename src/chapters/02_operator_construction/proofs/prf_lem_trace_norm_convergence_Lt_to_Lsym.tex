@@ -1,64 +1,63 @@
-\begin{proof}[Proof of Lemma~\ref{lem:trace_norm_convergence_Lt_to_Lsym}]
-We prove that the mollified convolution operators \( L_t \) converge to the canonical operator \( L_{\mathrm{sym}} \) in the trace-norm topology on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} \). The strategy is to conjugate the operators into flat space \( L^2(\mathbb{R}) \), reduce the problem to convergence of integral kernels, and apply the trace-class convergence theorem for integral operators with \( L^1 \)-kernels.
+\begin{proof}[Proof of \lemref{lem:trace_norm_convergence_Lt_to_Lsym}]
+We show that the mollified convolution operators \( L_t \) converge in trace norm to the canonical operator \( L_{\sym} \) on the weighted Hilbert space \( H_{\Psi_\alpha} \). The strategy is to conjugate into flat space, control the kernels via uniform bounds, and apply Simon’s convergence theorem for integral operators.
 
 \paragraph{Step 1: Operator Conjugation.}
 Fix \( \alpha > \pi \), and define the exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \), so that
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx).
+H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx).
 \]
 Let
 \[
-U \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x)
+U : H_{\Psi_\alpha} \to L^2(\R), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x)
 \]
-be the unitary exponential conjugation operator. The conjugated operators
+denote the unitary conjugation operator. Then define the conjugated operators
 \[
-\widetilde{L}_t := U L_t U^{-1}, \qquad \widetilde{L} := U L_{\mathrm{sym}} U^{-1}
+\widetilde{L}_t := U L_t U^{-1}, \qquad \widetilde{L} := U L_{\sym} U^{-1},
 \]
-have integral kernels
+which act on \( L^2(\R) \) with integral kernels
 \[
-\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}, \qquad
-\widetilde{K}(x,y) := \frac{K_{\mathrm{sym}}(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+\widetilde{K}_t(x, y) := \frac{K_t(x, y)}{\sqrt{\Psi_\alpha(x) \Psi_\alpha(y)}}, \qquad
+\widetilde{K}(x, y) := \frac{K_{\sym}(x, y)}{\sqrt{\Psi_\alpha(x) \Psi_\alpha(y)}}.
 \]
 
 \paragraph{Step 2: Pointwise Convergence and Uniform Envelope.}
-From Lemma~\ref{lem:mollified_profile_decay}, the mollified profiles \( \varphi_t \in \mathcal{S}(\mathbb{R}) \) converge pointwise and locally in \( L^1 \) to the canonical profile \( \phi \). Each \( \varphi_t \) satisfies a Gaussian decay estimate
+By \lemref{lem:mollified_profile_decay}, the profiles \( \varphi_t \in \Schwartz \) converge pointwise and locally in \( L^1 \) to \( \phi \). Each \( \varphi_t \) satisfies a uniform Gaussian envelope:
 \[
-|\varphi_t(\lambda)| \le C e^{-a\lambda^2},
+|\varphi_t(\lambda)| \le C e^{-a\lambda^2}.
 \]
-uniform in \( t \in (0,1] \). By standard Paley--Wiener kernel estimates \cite[Thm.~IX.12]{ReedSimon1975II}, the associated kernels satisfy
+Paley--Wiener theory then implies~\cite[Thm.~IX.12]{ReedSimon1975II}:
 \[
-|K_t(x,y)| \le C' e^{-b|x - y|}.
+|K_t(x,y)| \le C' e^{-b|x - y|},
 \]
-Then, using
+so
 \[
-|\widetilde{K}_t(x,y)| \le C'' e^{-b|x - y|} e^{-\frac{\alpha}{2}(|x| + |y|)},
+|\widetilde{K}_t(x, y)| \le C'' e^{-b|x - y|} e^{-\frac{\alpha}{2}(|x| + |y|)},
 \]
-we obtain an integrable envelope in \( L^1(\mathbb{R}^2) \), independent of \( t \). Furthermore, for each \( (x,y) \in \mathbb{R}^2 \),
+which defines a dominating function in \( L^1(\R^2) \), independent of \( t \). Hence, for all \( (x,y) \in \R^2 \),
 \[
-\widetilde{K}_t(x,y) \to \widetilde{K}(x,y).
+\widetilde{K}_t(x, y) \to \widetilde{K}(x, y),
 \]
-By the dominated convergence theorem,
+and by the dominated convergence theorem,
 \[
-\| \widetilde{K}_t - \widetilde{K} \|_{L^1(\mathbb{R}^2)} \to 0 \quad \text{as } t \to 0^+.
+\| \widetilde{K}_t - \widetilde{K} \|_{L^1(\R^2)} \to 0 \quad \text{as } t \to 0^+.
 \]
 
 \paragraph{Step 3: Trace-Norm Convergence in Flat Space.}
-By \cite[Thm.~3.1]{Simon2005TraceIdeals}, convergence of kernels in \( L^1(\mathbb{R}^2) \) implies convergence of the associated operators in the trace norm:
+By Simon’s kernel convergence theorem~\cite[Thm.~3.1]{Simon2005TraceIdeals}, this implies
 \[
-\| \widetilde{L}_t - \widetilde{L} \|_{\mathcal{C}_1(L^2(\mathbb{R}))} \to 0 \quad \text{as } t \to 0^+.
+\| \widetilde{L}_t - \widetilde{L} \|_{\TC(L^2(\R))} \to 0.
 \]
 
 \paragraph{Step 4: Pullback to Weighted Space.}
-Since \( L_t = U^{-1} \widetilde{L}_t U \), \( L_{\mathrm{sym}} = U^{-1} \widetilde{L} U \), and the trace norm is unitarily invariant, we conclude:
+Since \( L_t = U^{-1} \widetilde{L}_t U \), and \( L_{\sym} = U^{-1} \widetilde{L} U \), we obtain by unitary invariance of the trace norm:
 \[
-\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1(H_{\Psi_\alpha})} = \| \widetilde{L}_t - \widetilde{L} \|_{\mathcal{C}_1(L^2)} \to 0 \quad \text{as } t \to 0^+.
+\| L_t - L_{\sym} \|_{\TC(H_{\Psi_\alpha})} = \| \widetilde{L}_t - \widetilde{L} \|_{\TC(L^2)} \to 0.
 \]
 
 \paragraph{Conclusion.}
-We have established
+Thus,
 \[
-L_t \to L_{\mathrm{sym}} \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}) \text{ as } t \to 0^+,
+L_t \to L_{\sym} \quad \text{in } \TC(H_{\Psi_\alpha}) \quad \text{as } t \to 0^+,
 \]
-which ensures the convergence of associated heat traces, Fredholm determinants, and spectral data, as developed further in Chapter~\ref{sec:determinant_identity}.
+which implies convergence of all spectral invariants, including heat traces and Fredholm determinants, as developed in \secref{sec:determinant_identity}.
 \end{proof}
-% 

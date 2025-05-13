@@ -1,31 +1,41 @@
 \begin{lemma}[Trace-Class Property of \( L_t \)]
 \label{lem:trace_class_Lt}
-Let \( \varphi_t \in \mathcal{S}(\mathbb{R}) \) be the mollified spectral profile, and define the translation-invariant kernel
+Let \( \varphi_t \in \Schwartz \) be the mollified spectral profile, and define the translation-invariant kernel
 \[
-K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda.
+K_t(x, y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda.
 \]
 
-Fix \( \alpha > \pi \), and define the exponentially weighted Hilbert space
+Fix any \( \alpha > \pi \), and define the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|}\, dx).
+H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx).
 \]
 
-Suppose the conjugated kernel
+Let \( U_\alpha : H_{\Psi_\alpha} \to L^2(\R) \) denote the unitary conjugation operator defined by
 \[
-\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{e^{\alpha|x|} e^{\alpha|y|}}}
+(U_\alpha f)(x) := e^{\frac{\alpha}{2}|x|} f(x),
 \]
-satisfies the uniform bound:
+and consider the conjugated kernel
 \[
-\sup_{0 < t \le 1} \| \widetilde{K}_t \|_{L^1(\mathbb{R}^2)} < \infty.
+\widetilde{K}_t(x, y) := \frac{K_t(x, y)}{\sqrt{e^{\alpha |x|} e^{\alpha |y|}}} = \frac{K_t(x, y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
+\]
+
+Suppose the conjugated kernel satisfies the uniform bound:
+\[
+\sup_{0 < t \le 1} \| \widetilde{K}_t \|_{L^1(\R^2)} < \infty.
 \]
 
 Then the integral operator
 \[
-(L_t f)(x) := \int_{\mathbb{R}} K_t(x,y)\, f(y)\, dy
+(L_t f)(x) := \int_{\R} K_t(x, y)\, f(y)\, dy
 \]
-extends to a trace-class operator on \( H_{\Psi_\alpha} \):
+defines a trace-class operator on \( H_{\Psi_\alpha} \):
 \[
-L_t \in \mathcal{C}_1(H_{\Psi_\alpha}),
+L_t \in \TC(H_{\Psi_\alpha}),
 \]
-with trace norm controlled by \( \| \widetilde{K}_t \|_{L^1(\mathbb{R}^2)} \) via Simon’s kernel trace-norm criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+with trace norm controlled by the flat-space norm of the conjugated kernel:
+\[
+\| L_t \|_{\TC(H_{\Psi_\alpha})} = \| U_\alpha L_t U_\alpha^{-1} \|_{\TC(L^2(\R))} \le \| \widetilde{K}_t \|_{L^1(\R^2)}.
+\]
+
+This follows from Simon’s trace-class kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals} applied to \( \widetilde{L}_t := U_\alpha L_t U_\alpha^{-1} \) acting on \( L^2(\R) \).
 \end{lemma}

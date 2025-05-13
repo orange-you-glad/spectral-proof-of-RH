@@ -3,13 +3,16 @@ import sys
 
 VERSION_FILE = "VERSION"
 
+
 def read_version():
     with open(VERSION_FILE, "r") as f:
         return f.read().strip()
 
+
 def write_version(v):
     with open(VERSION_FILE, "w") as f:
         f.write(v + "\n")
+
 
 def bump_version(part):
     v = read_version()
@@ -28,6 +31,7 @@ def bump_version(part):
     new_version = f"{major}.{minor}.{patch}"
     write_version(new_version)
     print(f"🔁 Bumped version: {v} → {new_version}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

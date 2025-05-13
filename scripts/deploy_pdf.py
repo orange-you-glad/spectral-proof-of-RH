@@ -7,6 +7,7 @@ DEST_DIR = "docs"
 DEST_PDF = os.path.join(DEST_DIR, "manuscript.pdf")
 VERSION_FILE = "VERSION"
 
+
 def get_version():
     if not os.path.isfile(VERSION_FILE):
         print(f"❌ VERSION file not found at {VERSION_FILE}")
@@ -17,6 +18,7 @@ def get_version():
         print("❌ VERSION file is empty.")
         exit(1)
     return version
+
 
 def deploy():
     if not os.path.isfile(SRC_PDF):
@@ -32,6 +34,7 @@ def deploy():
 
     print(f"✅ Deployed {SRC_PDF} → {DEST_PDF}")
     print(f"📦 Versioned copy → {DEST_VERSIONED}")
+
 
 if __name__ == "__main__":
     deploy()

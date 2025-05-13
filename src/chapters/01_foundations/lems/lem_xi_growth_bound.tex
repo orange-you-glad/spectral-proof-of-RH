@@ -1,0 +1,35 @@
+\begin{lemma}[Exact Growth Bound for \( \Xi \)]
+\label{lem:xi_growth_bound}
+Let \( \Xi(s) \) denote the completed Riemann zeta function,
+\[
+\Xi(s) := \tfrac{1}{2} s(s-1) \pi^{-s/2} \Gamma\left(\tfrac{s}{2}\right) \zeta(s),
+\]
+which extends to an entire function of order one and exponential type \( \pi \), with Hadamard product over its nontrivial zeros.
+
+Define the centered spectral profile
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+Then the following exponential growth bounds hold:
+\begin{itemize}
+    \item[\textup{(i)}] \textbf{Global Complex Growth:} There exists a constant \( A > 0 \) such that
+    \[
+    |\phi(\lambda)| \le A\, e^{\pi |\lambda|}, \qquad \forall\, \lambda \in \mathbb{C}.
+    \]
+    This reflects the exact exponential type \( \pi \) of \( \Xi(s) \), sharp in the Paley–Wiener sense \cite[Thm.~3.7.1]{Levin1996EntireLectures}.
+
+    \item[\textup{(ii)}] \textbf{Real Axis Growth:} There exists a constant \( A_1 > 0 \) such that
+    \[
+    |\phi(\lambda)| \le A_1\, e^{\tfrac{\pi}{2} |\lambda|}, \qquad \forall\, \lambda \in \mathbb{R}.
+    \]
+    This sharper bound follows from the symmetry \( \Xi(s) = \Xi(1 - s) \) and classical estimates for \( \Gamma(\tfrac{s}{2}) \) on the critical line \cite[§4.12]{Titchmarsh1986Zeta}.
+\end{itemize}
+
+\noindent
+These bounds imply that for any \( t > 0 \), the mollified profiles
+\[
+\phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda)
+\]
+belong to the Schwartz space \( \mathcal{S}(\mathbb{R}) \), and that their inverse Fourier transforms \( k_t := \mathscr{F}^{-1}[\phi_t] \) decay exponentially in space as in Lemma~\ref{lem:decay-mollified-kernel}.
+\end{lemma}

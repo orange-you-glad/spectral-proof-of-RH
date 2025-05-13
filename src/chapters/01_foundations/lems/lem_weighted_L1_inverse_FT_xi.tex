@@ -1,0 +1,33 @@
+\begin{lemma}[Weighted \( L^1 \)-Integrability of the Inverse Fourier Transform of \( \Xi \)]
+\label{lem:weighted_L1_inverse_FT_xi}
+Let \( \alpha > \pi \), and define the centered Paley–Wiener profile
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
+\]
+where \( \Xi(s) \) is the completed Riemann zeta function—entire of exponential type \( \pi \) and order one.
+
+Define the inverse Fourier transform
+\[
+\widehat{\Xi}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \, \phi(\lambda)\, d\lambda,
+\]
+interpreted in the distributional sense. Then
+\[
+\widehat{\Xi} \in L^1(\mathbb{R}, e^{-\alpha |x|}\, dx),
+\]
+i.e., there exists a constant \( A_\alpha > 0 \) such that
+\[
+\int_{\mathbb{R}} |\widehat{\Xi}(x)| \, e^{-\alpha |x|}\, dx \le A_\alpha.
+\]
+
+In particular, setting \( \Psi_\alpha(x) := e^{\alpha |x|} \), we have \( \widehat{\Xi} \in L^1(\mathbb{R}, \Psi_\alpha^{-1}(x)\, dx) \). Therefore, the translation-invariant kernel
+\[
+K(x,y) := \widehat{\Xi}(x - y)
+\]
+belongs to \( L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \), and the associated convolution operator
+\[
+(L f)(x) := \int_{\mathbb{R}} \widehat{\Xi}(x - y) f(y)\, dy
+\]
+lies in the trace class \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+
+This result follows from the Paley–Wiener theorem applied to \( \phi \in PW_\pi(\mathbb{R}) \), which ensures that \( \widehat{\Xi}(x) \) decays faster than \( e^{-\alpha |x|} \) for any \( \alpha > \pi \).
+\end{lemma}

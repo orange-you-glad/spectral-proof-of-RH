@@ -1,4 +1,4 @@
-\begin{proof}[Proof of Lemma~\ref{lem:kernel-trace-norm-convergence}]
+\begin{proof}[Proof of Lemma~\ref{lem:kernel_trace_norm_convergence}]
 Let \( \varphi_t(\lambda) := e^{-t\lambda^2} \Xi\left(\tfrac{1}{2} + i\lambda\right) \), and define the limiting profile \( \varphi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right) \). Set
 \[
 K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda, \qquad
@@ -12,7 +12,7 @@ Let \( \Psi_\alpha(x) := e^{\alpha |x|} \), with \( \alpha > \pi \), and define 
 \]
 
 \paragraph{Step 1: Pointwise convergence and uniform integrability.}
-By Lemma~\ref{lem:mollified-profile-decay}, the mollifiers \( \varphi_t \to \varphi \) converge pointwise on \( \mathbb{R} \), and are uniformly bounded by a Gaussian envelope. The inverse Fourier transforms \( K_t \to K \) converge pointwise and are uniformly dominated by a Schwartz-class envelope. Then \( \widetilde{K}_t(x,y) \to \widetilde{K}(x,y) \) pointwise on \( \mathbb{R}^2 \), and by Lemma~\ref{lem:uniform-L1-conjugated-kernel}, there exists a fixed \( M(x,y) \in L^1(\mathbb{R}^2) \) such that
+By Lemma~\ref{lem:mollified_profile_decay}, the mollifiers \( \varphi_t \to \varphi \) converge pointwise on \( \mathbb{R} \), and are uniformly bounded by a Gaussian envelope. The inverse Fourier transforms \( K_t \to K \) converge pointwise and are uniformly dominated by a Schwartz-class envelope. Then \( \widetilde{K}_t(x,y) \to \widetilde{K}(x,y) \) pointwise on \( \mathbb{R}^2 \), and by Lemma~\ref{lem:uniform_L1_conjugated_kernel}, there exists a fixed \( M(x,y) \in L^1(\mathbb{R}^2) \) such that
 \[
 |\widetilde{K}_t(x,y)| \le M(x,y) \quad \text{for all } t > 0.
 \]

@@ -1,17 +1,17 @@
 \begin{proof}[Proof of Theorem~\ref{thm:truth_of_rh}]
 Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \).
 
-From the canonical determinant identity (Theorem~\ref{thm:det-identity-revised}) established in Chapter~\ref{sec:determinant-identity}, we have:
+From the canonical determinant identity (Theorem~\ref{thm:det_identity_revised}) established in Chapter~\ref{sec:determinant_identity}, we have:
 \[
 \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
-and from the spectral bijection (Theorem~\ref{thm:spectral-zero-bijection-revised}) and encoding lemma (Lemma~\ref{lem:spectral-zero-encoding}), each nontrivial zero \( \rho \in \mathbb{C} \) of \( \zeta(s) \) corresponds to a nonzero eigenvalue
+and from the spectral bijection (Theorem~\ref{thm:spectral_zero_bijection_revised}) and encoding lemma (Lemma~\ref{lem:spectral_zero_encoding}), each nontrivial zero \( \rho \in \mathbb{C} \) of \( \zeta(s) \) corresponds to a nonzero eigenvalue
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \operatorname{Spec}(L_{\mathrm{sym}}).
 \]
 
 \paragraph{Spectral Reality.}
-By analytic construction—via symmetric mollifiers, the weighted space \( H_{\Psi_\alpha} \), and trace-norm convergence justified in Chapter~\ref{sec:heat-kernel-asymptotics} and Appendix~\ref{app:heat-kernel-construction}—the operator \( L_{\mathrm{sym}} \) is self-adjoint and satisfies:
+By analytic construction—via symmetric mollifiers, the weighted space \( H_{\Psi_\alpha} \), and trace-norm convergence justified in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}—the operator \( L_{\mathrm{sym}} \) is self-adjoint and satisfies:
 \[
 \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
 \]
@@ -26,7 +26,7 @@ Since \( \mu_\rho \in \mathbb{R} \), we compute:
 This holds for every nontrivial zero \( \rho \), since the spectral determinant realizes all zeros of \( \zeta(s) \) via bijection.
 
 \paragraph{Conclusion.}
-By Theorem~\ref{thm:rh-spectrum-equiv}, we have the equivalence:
+By Theorem~\ref{thm:rh_spectrum_equiv}, we have the equivalence:
 \[
 \mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
 \]

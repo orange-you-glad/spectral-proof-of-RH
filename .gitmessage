@@ -1,0 +1,22 @@
+# Commit Title (max 72 chars)
+# ---------------------------
+# Short summary of the change
+# Use imperative voice: "Add", "Fix", "Refactor", "Migrate"
+
+# Body (wrap at 72 chars)
+# -----------------------
+# Explain what and why (not just how)
+# Mention affected sections, files, or structural improvements
+
+# Examples:
+# - Migrated foundational theorems to 01_foundations/
+# - Added label/prf pair for Lemma: reality_of_spectrum
+# - Fixed missing summary.tex in 03_determinant_identity
+# - Bumped version to 1.0.1 and deployed updated manuscript
+
+# Tags (optional)
+# -----------------------
+# [ci skip]            - skip CI for this commit
+# [docs only]          - doc-only change
+# [structure update]   - structural reorg
+# [proof hygiene]      - cleanup of environments

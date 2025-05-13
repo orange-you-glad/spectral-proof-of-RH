@@ -17,6 +17,7 @@
 *.vrb
 *.run.xml
 *.pdf
+*.rpi
 
 # Intermediate metadata
 src/metadata/

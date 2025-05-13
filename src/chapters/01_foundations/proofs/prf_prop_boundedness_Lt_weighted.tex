@@ -1,0 +1,56 @@
+\begin{proof}[Proof of \propref{prop:boundedness_Lt_weighted}]
+Let \( H_\Psi := L^2(\mathbb{R}, \Psi(x)\, dx) \), where \( \Psi(x) \sim e^{\alpha |x|} \) for some fixed \( \alpha > 0 \). Let \( \phi_t \in \mathcal{S}(\mathbb{R}) \) be a real-valued, even mollifier, and define the convolution operator
+\[
+(L_t f)(x) := \int_{\mathbb{R}} \phi_t(x - y)\, f(y)\, dy, \quad f \in \mathcal{S}(\mathbb{R}).
+\]
+
+\medskip
+\noindent\textbf{Step 1: Cauchy–Schwarz Pointwise Estimate.}
+For fixed \( x \in \mathbb{R} \), apply the Cauchy–Schwarz inequality:
+\[
+|L_t f(x)|^2 \le \left( \int_{\mathbb{R}} |\phi_t(x - y)|^2 \Psi(y)^{-1}\, dy \right)
+                \cdot \left( \int_{\mathbb{R}} |f(y)|^2 \Psi(y)\, dy \right).
+\]
+Multiplying by \( \Psi(x) \) and integrating in \( x \), we obtain:
+\[
+\| L_t f \|_{H_\Psi}^2 \le \left( \sup_{x \in \mathbb{R}} \int_{\mathbb{R}} |\phi_t(x - y)|^2 \cdot \frac{\Psi(x)}{\Psi(y)}\, dy \right) \cdot \| f \|_{H_\Psi}^2.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Estimate of Envelope Ratio and Kernel Decay.}
+Since \( \Psi(x) \sim e^{\alpha |x|} \), there exists \( C_\alpha > 0 \) such that
+\[
+\frac{\Psi(x)}{\Psi(y)} \le C_\alpha\, e^{\alpha |x - y|}, \quad \forall x, y \in \mathbb{R}.
+\]
+Also, since \( \phi_t \in \mathcal{S}(\mathbb{R}) \), for each \( N > 0 \), there exists \( C_N > 0 \) such that
+\[
+|\phi_t(u)| \le C_N (1 + |u|)^{-N}, \quad \Rightarrow \quad |\phi_t(x - y)|^2 \le C_N^2 (1 + |x - y|)^{-2N}.
+\]
+Combining:
+\[
+|\phi_t(x - y)|^2 \cdot \frac{\Psi(x)}{\Psi(y)} \le C_N^2 C_\alpha (1 + |x - y|)^{-2N} e^{\alpha |x - y|},
+\]
+which is integrable in \( y \) uniformly in \( x \) provided \( N > \alpha \).
+
+\medskip
+\noindent\textbf{Step 3: Define the Uniform Bound.}
+Choose \( N > \alpha \), and define
+\[
+C_t(\alpha) := \sup_{x \in \mathbb{R}} \int_{\mathbb{R}} |\phi_t(x - y)|^2 \cdot \frac{\Psi(x)}{\Psi(y)}\, dy < \infty.
+\]
+Then for all \( f \in \mathcal{S}(\mathbb{R}) \),
+\[
+\| L_t f \|_{H_\Psi} \le \sqrt{C_t(\alpha)} \cdot \| f \|_{H_\Psi}.
+\]
+
+\medskip
+\noindent\textbf{Step 4: Extension to \( H_\Psi \).}
+Since \( \mathcal{S}(\mathbb{R}) \subset H_\Psi \) is dense (by Lemma~\ref{lem:density_schwartz_weighted_L2}), and \( L_t \) is bounded on this core, it extends uniquely to a bounded linear operator on all of \( H_\Psi \), with
+\[
+\| L_t \|_{\mathcal{B}(H_\Psi)} \le \sqrt{C_t(\alpha)}.
+\]
+
+\medskip
+\noindent\textbf{Conclusion.}
+The operator \( L_t \colon H_\Psi \to H_\Psi \) is bounded, with norm controlled by the mollifier decay and the exponential behavior of the weight. This boundedness is a key analytic input for verifying trace-class properties, symmetry, and convergence of \( L_t \to L_{\mathrm{sym}} \) in both the operator norm and the trace-class topology.
+\end{proof}

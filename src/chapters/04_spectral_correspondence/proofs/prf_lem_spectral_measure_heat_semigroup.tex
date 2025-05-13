@@ -1,5 +1,5 @@
-\begin{proof}
-We prove Lemma~\ref{lem:spectral-heat-trace-representation} using the spectral theorem and properties of trace-class semigroups.
+\begin{proof}[\ref{lem:spectral_measure_heat_semigroup}]
+We prove the result using the spectral theorem and properties of trace-class semigroups.
 
 Since \( L_{\mathrm{sym}} \) is self-adjoint and compact, it admits a discrete spectral decomposition:
 \[
@@ -7,20 +7,32 @@ L_{\mathrm{sym}} = \sum_{\rho} \mu_\rho P_\rho,
 \]
 where each \( \mu_\rho \in \mathbb{R} \) is an eigenvalue of finite multiplicity and \( P_\rho \) is the corresponding orthogonal projection.
 
-The spectral functional calculus defines the heat semigroup by:
+By the spectral functional calculus, the heat semigroup is given by:
 \[
-e^{-tL_{\mathrm{sym}}^2} = \int_{\mathbb{R}} e^{-t\lambda^2} \, dE_\lambda,
+e^{-tL_{\mathrm{sym}}^2} = \sum_{\rho} e^{-t\mu_\rho^2} P_\rho,
 \]
-where \( \{E_\lambda\} \) is the projection-valued spectral measure for \( L_{\mathrm{sym}} \). Taking the trace, we obtain:
+and taking the trace yields:
 \[
-\operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_\rho e^{-t\mu_\rho^2} = \int_{\mathbb{R}} e^{-t\lambda^2} \, dN(\lambda),
+\operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_\rho e^{-t\mu_\rho^2}.
 \]
-where \( N(\lambda) := \sum_{\mu_\rho \leq \lambda} \operatorname{mult}(\mu_\rho) \) denotes the eigenvalue counting function.
+Define the spectral measure \( \mu := \sum_{\rho} \delta_{\mu_\rho} \), accounting for multiplicity. Then the heat trace becomes the Laplace transform:
+\[
+\operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} e^{-t\lambda^2} \, d\mu(\lambda).
+\]
 
-For the determinant, we use the standard logarithmic identity:
+For test functions \( \phi \in \mathcal{S}(\mathbb{R}) \), the spectral theorem gives:
 \[
-\log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = - \sum_\rho \log\left(1 - \frac{\lambda}{\mu_\rho} \right) = - \int_{\mathbb{R}} \log\left(1 - \frac{\lambda}{\mu_\rho} \right) dN(\mu_\rho),
+\phi(L_{\mathrm{sym}}) = \sum_{\rho} \phi(\mu_\rho) P_\rho,
 \]
-which follows from Hadamard factorization and trace-class determinantal expansion of \( \log \det\nolimits_{\zeta}(I - \lambda T) \) for compact self-adjoint operators with discrete spectrum.
+and taking the trace:
+\[
+\operatorname{Tr}(\phi(L_{\mathrm{sym}})) = \sum_{\rho} \phi(\mu_\rho) = \int_{\mathbb{R}} \phi(\lambda) \, d\mu(\lambda).
+\]
+
+Finally, for the Carleman zeta-regularized determinant, we recall the logarithmic trace identity valid for compact operators:
+\[
+\log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = - \sum_\rho \log\left(1 - \lambda \mu_\rho^{-1} \right) = - \int_{\mathbb{R}} \log\left(1 - \frac{\lambda}{\lambda'} \right) \, d\mu(\lambda'),
+\]
+which matches the Hadamard representation for entire functions of order one with zero set \( \{\mu_\rho\} \). This completes the proof.
 \end{proof}
-%  
+s

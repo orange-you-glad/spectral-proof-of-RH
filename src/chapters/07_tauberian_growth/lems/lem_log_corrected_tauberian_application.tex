@@ -1,0 +1,34 @@
+\begin{lemma}[Refined Tauberian Application to the Heat Trace]
+\label{lem:log_corrected_tauberian_application}
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator on the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \), with nonzero spectrum \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \), counted with multiplicity. Define the squared spectral counting function
+\[
+A(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\}.
+\]
+
+Assume the spectral heat trace satisfies the refined short-time expansion:
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2})
+\quad \text{as } t \to 0^+,
+\]
+along with uniform upper control:
+\[
+\left| \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) - \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) \right| \le \varepsilon\, t^{-1/2},
+\qquad \text{for all sufficiently small } t > 0.
+\]
+
+Then the spectral counting function satisfies the log-corrected Weyl-type asymptotic:
+\[
+A(\Lambda) \sim \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda \qquad \text{as } \Lambda \to \infty.
+\]
+
+\medskip
+\noindent
+This result follows from Korevaar’s Tauberian theorem for Laplace transforms of log-modulated regularly varying functions, which guarantees that
+\[
+\Theta(t) \sim t^{-1/2} \log(1/t) \quad \Rightarrow \quad
+A(\Lambda) \sim C \Lambda^{1/2} \log \Lambda,
+\]
+with constant \( C = \frac{1}{2\pi} \) determined by Mellin inversion of the leading trace coefficient.
+
+\footnote{See Korevaar~\cite[Chapter~III, §5, Theorem~5.5]{Korevaar2004Tauberian} for the precise statement of the log-corrected Tauberian theorem yielding this asymptotic.}
+\end{lemma}

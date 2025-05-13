@@ -1,0 +1,26 @@
+begin{proof}[Proof of \lemref{lem:spectral_heat_trace_representation}]
+We prove Lemma~\ref{lem:spectral_heat_trace_representation} using the spectral theorem and properties of trace-class semigroups.
+
+Since \( L_{\mathrm{sym}} \) is self-adjoint and compact, it admits a discrete spectral decomposition:
+\[
+L_{\mathrm{sym}} = \sum_{\rho} \mu_\rho P_\rho,
+\]
+where each \( \mu_\rho \in \mathbb{R} \) is an eigenvalue of finite multiplicity and \( P_\rho \) is the corresponding orthogonal projection.
+
+The spectral functional calculus defines the heat semigroup by:
+\[
+e^{-tL_{\mathrm{sym}}^2} = \int_{\mathbb{R}} e^{-t\lambda^2} \, dE_\lambda,
+\]
+where \( \{E_\lambda\} \) is the projection-valued spectral measure for \( L_{\mathrm{sym}} \). Taking the trace, we obtain:
+\[
+\operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_\rho e^{-t\mu_\rho^2} = \int_{\mathbb{R}} e^{-t\lambda^2} \, dN(\lambda),
+\]
+where \( N(\lambda) := \sum_{\mu_\rho \leq \lambda} \operatorname{mult}(\mu_\rho) \) denotes the eigenvalue counting function.
+
+For the determinant, we use the standard logarithmic identity:
+\[
+\log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = - \sum_\rho \log\left(1 - \frac{\lambda}{\mu_\rho} \right) = - \int_{\mathbb{R}} \log\left(1 - \frac{\lambda}{\mu_\rho} \right) dN(\mu_\rho),
+\]
+which follows from Hadamard factorization and trace-class determinantal expansion of \( \log \det\nolimits_{\zeta}(I - \lambda T) \) for compact self-adjoint operators with discrete spectrum.
+\end{proof}
+%  

@@ -11,6 +11,7 @@ os.makedirs(METADATA_DIR, exist_ok=True)
 
 ITEM_TYPES = ["thms", "lems", "defs", "props", "cors", "rems"]
 
+
 def collect_labels():
     index = []
     for section in os.listdir(ROOT_DIR):
@@ -39,6 +40,7 @@ def collect_labels():
                             })
     return index
 
+
 def collect_proofs():
     mapping = []
     for section in os.listdir(ROOT_DIR):
@@ -54,15 +56,18 @@ def collect_proofs():
                 })
     return mapping
 
+
 def write_csv(data, path, headers):
     with open(path, "w", newline='', encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=headers)
         writer.writeheader()
         writer.writerows(data)
 
+
 def write_json(data, path):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
 
 def main():
     labels = collect_labels()
@@ -78,6 +83,7 @@ def main():
     }, os.path.join(METADATA_DIR, "index.json"))
 
     print("✅ Index generated in src/metadata/")
+
 
 if __name__ == "__main__":
     main()

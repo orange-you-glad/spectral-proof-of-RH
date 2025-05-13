@@ -15,7 +15,7 @@
 \usepackage{tabularx}
 \usepackage{caption}
 
-%--- Hyperlinking (black links, PDF metadata) ---
+%--- Hyperlinking and Cross-Referencing ---
 \usepackage{hyperref}
 \hypersetup{
     bookmarksdepth=section,
@@ -29,6 +29,8 @@
     pdfsubject={Mathematics -- Spectral Theory, Zeta Functions, Trace-Class Operators},
     pdfkeywords={Riemann Hypothesis, Fredholm Determinant, Trace-Class Operator, Hilbert Space, Zeta Regularization, Heat Kernel, Spectral Theory}
 }
+
+\usepackage[capitalize,nameinlink]{cleveref}
 
 %==============================
 % Layout and Font Adjustments
@@ -102,6 +104,7 @@
 \newcommand{\secref}[1]{Section~\ref{#1}}
 \newcommand{\appref}[1]{Appendix~\ref{#1}}
 \newcommand{\eqnref}[1]{\eqref{#1}}
+\newcommand{\remref}[1]{Remark~\ref{#1}}
 
 %==============================
 % Additional Math Labels
@@ -149,6 +152,9 @@
   breakable
 }
 
+%==============================
+% References Environment
+%==============================
 \newenvironment{references}{
   \medskip
   \noindent\textbf{References.}
@@ -159,10 +165,15 @@
   \medskip
 }
 
+%==============================
+% TikZ and PGFPlots
+%==============================
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.17}
 
-% In preamble
+%==============================
+% Wide Check (for Inverse FT)
+%==============================
 \makeatletter
 \DeclareRobustCommand{\widecheck}[1]{
   \mathpalette\@widecheck{#1}
@@ -176,6 +187,3 @@
       \vskip -\ht\z@
       \box\z@}}}
 \makeatother
-
-
-\newcommand{\remref}[1]{Remark~\ref{#1}}

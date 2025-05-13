@@ -5,23 +5,22 @@ A compact operator \( T \in \mathcal{K}(H) \) is said to be of \emph{trace class
 \[
 \| T \|_{\mathcal{C}_1} := \sum_{n=1}^\infty \sigma_n(T)
 \]
-is finite, where \( \{\sigma_n(T)\} \) are the singular values of \( T \), i.e., the eigenvalues of the positive operator \( |T| := \sqrt{T^* T} \), arranged in non-increasing order:
+is finite, where \( \{ \sigma_n(T) \} \) are the singular values of \( T \), i.e., the eigenvalues of the positive operator \( |T| := \sqrt{T^* T} \), arranged in non-increasing order:
 \[
-\sigma_1(T) \ge \sigma_2(T) \ge \cdots \ge 0, \quad \lim_{n \to \infty} \sigma_n(T) = 0.
+\sigma_1(T) \ge \sigma_2(T) \ge \cdots \ge 0, \qquad \lim_{n \to \infty} \sigma_n(T) = 0.
 \]
 
-The space \( \mathcal{C}_1(H) \) of trace-class operators satisfies:
-
+The space \( \mathcal{C}_1(H) \) of trace-class operators satisfies the following properties:
 \begin{enumerate}
-    \item[\textup{(i)}] \( \mathcal{C}_1(H) \) is a Banach space under \( \| \cdot \|_{\mathcal{C}_1} \), and a norm-closed, two-sided *-ideal in \( \mathcal{B}(H) \), obeying:
+    \item[\textup{(i)}] \( \mathcal{C}_1(H) \) is a Banach space under the norm \( \| \cdot \|_{\mathcal{C}_1} \), and a norm-closed, two-sided *-ideal in \( \mathcal{B}(H) \), obeying the inclusions
     \[
     \mathcal{F}(H) \subset \mathcal{C}_1(H) \subsetneq \mathcal{K}(H),
     \]
-    where \( \mathcal{F}(H) \) denotes the finite-rank operators.
+    where \( \mathcal{F}(H) \) denotes the space of finite-rank operators.
 
     \item[\textup{(ii)}] \( \mathcal{C}_1(H) \) is stable under bounded multiplication: for all \( A \in \mathcal{B}(H) \) and \( T \in \mathcal{C}_1(H) \),
     \[
-    \| A T \|_{\mathcal{C}_1} \le \|A\| \cdot \|T\|_{\mathcal{C}_1}, \quad
+    \| A T \|_{\mathcal{C}_1} \le \|A\| \cdot \|T\|_{\mathcal{C}_1}, \qquad
     \| T A \|_{\mathcal{C}_1} \le \|A\| \cdot \|T\|_{\mathcal{C}_1}.
     \]
 
@@ -29,39 +28,39 @@ The space \( \mathcal{C}_1(H) \) of trace-class operators satisfies:
     \[
     \operatorname{Tr}(T) := \sum_{n=1}^\infty \langle T e_n, e_n \rangle
     \]
-    is absolutely convergent, independent of the orthonormal basis \( \{ e_n \} \subset H \), and satisfies the cyclicity identity:
+    is absolutely convergent, independent of the choice of orthonormal basis \( \{ e_n \} \subset H \), and satisfies the cyclicity identity:
     \[
-    \operatorname{Tr}(AB) = \operatorname{Tr}(BA), \quad \forall A \in \mathcal{B}(H),\; B \in \mathcal{C}_1(H).
+    \operatorname{Tr}(AB) = \operatorname{Tr}(BA), \qquad \forall A \in \mathcal{B}(H),\; B \in \mathcal{C}_1(H).
     \]
 \end{enumerate}
 
 \medskip
 \noindent\textbf{Remarks.}
 \begin{itemize}
-    \item \( \mathcal{C}_1(H) = \mathcal{S}_1(H) \) is the first Schatten ideal: the set of compact operators whose singular values lie in \( \ell^1 \). It generalizes nuclear operators to the Hilbert setting.
+    \item \( \mathcal{C}_1(H) = \mathcal{S}_1(H) \) is the first Schatten ideal: the set of compact operators whose singular values lie in \( \ell^1 \). It generalizes the class of nuclear operators in Hilbert space theory.
 
-    \item For integral operators \( T \) with kernel \( K(x,y) \in L^1(\mathbb{R}^2) \), one has \( T \in \mathcal{C}_1(L^2) \) with
+    \item For integral operators \( T \) with kernel \( K(x, y) \in L^1(\R^2) \), one has \( T \in \mathcal{C}_1(L^2) \), with
     \[
-    \| T \|_{\mathcal{C}_1} \le \|K\|_{L^1(\mathbb{R}^2)} \quad \text{\cite[Thm.~4.2]{Simon2005TraceIdeals}}.
+    \| T \|_{\mathcal{C}_1} \le \| K \|_{L^1(\R^2)} \quad \text{\cite[Thm.~4.2]{Simon2005TraceIdeals}}.
     \]
 
-    \item In this manuscript, the mollified convolution operators \( L_t \), and their trace-norm limit \( L_{\mathrm{sym}} \), are shown to lie in \( \mathcal{C}_1(H_{\Psi_\alpha}) \) for all \( \alpha > \pi \). This ensures the Fredholm determinant
+    \item In this manuscript, the mollified convolution operators \( L_t \), and their trace-norm limit \( L_{\sym} \), are shown to lie in \( \mathcal{C}_1(\HPsi) \) for all \( \alpha > \pi \), where \( \HPsi := L^2(\R, e^{\alpha |x|} dx) \). This guarantees that the Fredholm determinant
     \[
-    \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
+    \det\nolimits_{\zeta}(I - \lambda L_{\sym})
     \]
-    is well-defined, entire of order one, and admits a spectral representation compatible with the Hadamard product of \( \Xi(s) \) (see Chapter~\ref{sec:determinant-identity}).
+    is well-defined, entire of order one, and admits a spectral representation compatible with the Hadamard factorization of \( \Xi(s) \) (see \secref{sec:determinant_identity}).
 
     \item The classical Fredholm determinant
     \[
     \det(I + zT) := \prod_{n=1}^\infty (1 + z \lambda_n),
     \]
-    where \( \lambda_n \) are the eigenvalues of \( T \in \mathcal{C}_1(H) \), converges absolutely and defines an entire function of exponential type (cf. Appendix~\ref{app:trace-ideals-review}).
+    where \( \{ \lambda_n \} \) are the eigenvalues of \( T \in \mathcal{C}_1(H) \), converges absolutely and defines an entire function of exponential type (see \appref{app:trace_ideals_review}).
 \end{itemize}
 
 \medskip
 \noindent\textbf{References.}
 \begin{itemize}
-    \item B. Simon, \emph{Trace Ideals and Their Applications}, Chapter~3 \cite{Simon2005TraceIdeals}.
-    \item M. Reed and B. Simon, \emph{Methods of Modern Mathematical Physics I}, Chapters~VI–VII \cite{ReedSimon1980I}.
+    \item B.~Simon, \emph{Trace Ideals and Their Applications}, Chapter~3 \cite{Simon2005TraceIdeals}.
+    \item M.~Reed and B.~Simon, \emph{Methods of Modern Mathematical Physics I: Functional Analysis}, Chapters~VI--VII \cite{ReedSimon1980I}.
 \end{itemize}
 \end{definition}

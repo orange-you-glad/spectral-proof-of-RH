@@ -1,0 +1,41 @@
+\begin{proof}[Proof of \lemref{lem:unitary_conjugation_trace_class}]
+Let \( U \colon \mathcal{H} \to \widetilde{\mathcal{H}} \) be a unitary operator, and let \( T \in \mathcal{B}(\mathcal{H}) \). Define the conjugated operator
+\[
+\widetilde{T} := U T U^{-1} \in \mathcal{B}(\widetilde{\mathcal{H}}).
+\]
+
+\medskip
+\noindent\textbf{Step 1: Schatten Ideal Equivalence.}
+It is a standard fact in operator theory that Schatten ideals are unitarily invariant (see \cite[Ch.~1]{Simon2005TraceIdeals}). That is:
+\[
+T \in \mathcal{C}_p(\mathcal{H}) \quad \iff \quad \widetilde{T} \in \mathcal{C}_p(\widetilde{\mathcal{H}}), \qquad \forall\, 1 \le p \le \infty,
+\]
+with equality of norms:
+\[
+\| T \|_{\mathcal{C}_p(\mathcal{H})} = \| \widetilde{T} \|_{\mathcal{C}_p(\widetilde{\mathcal{H}})}.
+\]
+
+\medskip
+\noindent\textbf{Step 2: Trace-Class and Determinants.}
+In the trace-class case \( p = 1 \), the trace norm and the Fredholm determinant are preserved:
+\[
+\Tr_{\mathcal{H}}(T) = \Tr_{\widetilde{\mathcal{H}}}(\widetilde{T}), \qquad \det\nolimits_\zeta(I - \lambda T) = \det\nolimits_\zeta(I - \lambda \widetilde{T}).
+\]
+This follows from cyclicity of trace and the unitarity of \( U \).
+
+\medskip
+\noindent\textbf{Step 3: Application to Weighted Hilbert Spaces.}
+In the specific setting where \( \mathcal{H} := \HPsi \), \( \widetilde{\mathcal{H}} := L^2(\R) \), and
+\[
+U f(x) := \Psi_\alpha(x)^{1/2} f(x),
+\]
+then any operator \( T \in \mathcal{C}_p(\HPsi) \) with kernel \( K(x,y) \) satisfies that \( \widetilde{T} := U T U^{-1} \in \mathcal{C}_p(L^2(\R)) \) has kernel
+\[
+\widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}},
+\]
+and norm equivalence follows.
+
+\medskip
+\noindent\textbf{Conclusion.}
+The Schatten-class property and trace norm are preserved under unitary conjugation, and Fredholm determinants remain invariant. This verifies the result.
+\end{proof}

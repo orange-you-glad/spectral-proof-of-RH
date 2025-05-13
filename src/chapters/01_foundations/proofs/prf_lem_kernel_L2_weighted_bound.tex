@@ -1,23 +1,24 @@
-\begin{proof}[Proof of Lemma~\ref{lem:kernel_L2_weighted_bound}]
-By Lemma~\ref{lem:uniform_L1_conjugated_kernel}, the mollified kernel \( K_t(x,y) \) satisfies the exponential bound
+\begin{proof}[Proof of \lemref{lem:kernel_L2_weighted_bound}]
+By \lemref{lem:uniform_L1_conjugated_kernel}, the mollified kernel \( K_t(x,y) \) satisfies the exponential bound
 \[
-|K_t(x,y)| \leq C_t \, e^{-\beta(|x| + |y|)} \quad \text{for some } \beta > \alpha.
+|K_t(x,y)| \leq C_t \, e^{-\beta(|x| + |y|)} \qquad \text{for some } \beta > \alpha.
 \]
 
 We square both sides and integrate against the weighted measure \( e^{\alpha|x| + \alpha|y|}\, dx\, dy \), yielding:
 \[
 \begin{aligned}
-\iint_{\mathbb{R}^2} |K_t(x,y)|^2\, e^{\alpha|x| + \alpha|y|}\, dx\, dy
-&\le C_t^2 \iint_{\mathbb{R}^2} e^{-2\beta(|x| + |y|)}\, e^{\alpha(|x| + |y|)}\, dx\, dy \\
-&= C_t^2 \left( \int_{\mathbb{R}} e^{-(2\beta - \alpha)|x|}\, dx \right)^2 < \infty,
+\iint_{\R^2} |K_t(x,y)|^2\, e^{\alpha|x| + \alpha|y|}\, dx\, dy
+&\le C_t^2 \iint_{\R^2} e^{-2\beta(|x| + |y|)}\, e^{\alpha(|x| + |y|)}\, dx\, dy \\
+&= C_t^2 \left( \int_{\R} e^{-(2\beta - \alpha)|x|}\, dx \right)^2 < \infty,
 \end{aligned}
 \]
-since \( 2\beta - \alpha > \beta > 0 \).
+since \( 2\beta - \alpha > \beta > 0 \) and \( \alpha > \pi \) by hypothesis.
 
 \medskip
-\noindent Thus, \( K_t \in L^2(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), i.e., \( K_t \in L^2(\Psi_\alpha^{\otimes 2}) \), and so the operator
+\noindent
+Thus, \( K_t \in L^2(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), i.e., \( K_t \in L^2(\Psi_\alpha^{\otimes 2}) \), and so the operator
 \[
-L_t f(x) := \int_{\mathbb{R}} K_t(x,y) f(y)\, dy
+L_t f(x) := \int_{\R} K_t(x,y) f(y)\, dy
 \]
-is Hilbert–Schmidt on \( H_{\Psi_\alpha} \), and therefore compact.
+is Hilbert--Schmidt on \( \HPsi \), and therefore compact.
 \end{proof}

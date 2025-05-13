@@ -2,11 +2,11 @@
 \label{lem:uniform_L1_conjugated_kernel}
 Let
 \[
-\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right), \quad t > 0,
+\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad t > 0,
 \]
 and define the mollified inverse Fourier kernel
 \[
-K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi_t(\lambda) \, d\lambda.
+K_t(x,y) := \frac{1}{2\pi} \int_{\R} e^{i\lambda(x - y)} \phi_t(\lambda) \, d\lambda.
 \]
 
 Fix an exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \) with \( \alpha > \pi \), and define the exponentially conjugated kernel
@@ -16,7 +16,7 @@ Fix an exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \) with \( \alpha 
 
 Then there exists a constant \( A_3(\alpha) > 0 \) such that
 \[
-\sup_{0 < t \le 1} \iint_{\mathbb{R}^2} |\widetilde{K}_t(x,y)| \, dx\,dy \le A_3(\alpha).
+\sup_{0 < t \le 1} \iint_{\R^2} |\widetilde{K}_t(x,y)| \, dx\,dy \le A_3(\alpha).
 \]
 Equivalently,
 \[
@@ -25,21 +25,22 @@ Equivalently,
 
 In particular, for each \( t \in (0,1] \), the associated convolution operator
 \[
-L_t f(x) := \int_{\mathbb{R}} K_t(x,y) f(y)\, dy
+L_t f(x) := \int_{\R} K_t(x,y) f(y)\, dy
 \]
-lies in the trace class \( \mathcal{C}_1(H_{\Psi_\alpha}) \), with uniformly bounded trace norm:
+lies in the trace class \( \mathcal{C}_1(\HPsi) \), with uniformly bounded trace norm:
 \[
-\sup_{0 < t \le 1} \|L_t\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le A_3(\alpha).
+\sup_{0 < t \le 1} \|L_t\|_{\mathcal{C}_1(\HPsi)} \le A_3(\alpha).
 \]
 
+\medskip
 \noindent
 This uniform trace-norm control ensures:
 \begin{itemize}
-    \item Convergence in trace norm: \( L_t \to L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) as \( t \to 0^+ \);
+    \item Convergence in trace norm: \( L_t \to L_{\sym} \in \mathcal{C}_1(\HPsi) \) as \( t \to 0^+ \);
     \item Uniform convergence of the Fredholm determinants:
     \[
-    \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+    \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym})
     \]
-    locally uniformly in \( \lambda \in \mathbb{C} \).
+    locally uniformly in \( \lambda \in \C \).
 \end{itemize}
 \end{lemma}

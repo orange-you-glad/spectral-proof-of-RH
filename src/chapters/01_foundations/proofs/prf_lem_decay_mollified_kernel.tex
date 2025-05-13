@@ -3,15 +3,15 @@ Define the mollified spectral profile
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda\right),
 \]
-and let \( k_t(x) := \mathscr{F}^{-1}[\phi_t](x) \), so that the convolution kernel is
+and let \( k_t(x) := \FT^{-1}[\phi_t](x) \), so that the convolution kernel is
 \[
-K_t(x,y) := k_t(x - y) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi_t(\lambda)\, d\lambda.
+K_t(x,y) := k_t(x - y) = \frac{1}{2\pi} \int_{\R} e^{i\lambda(x - y)} \phi_t(\lambda)\, d\lambda.
 \]
 
 \paragraph{(i) Fourier Envelope Decay.}
 The function \( \Xi(s) \) is entire of exponential type \( \pi \), and satisfies (see \cite[Thm.~3.7.1]{Levin1996EntireLectures}, \cite[§4.12]{Titchmarsh1986Zeta}):
 \[
-\left| \Xi\left( \tfrac{1}{2} + i\lambda \right) \right| \le C_0\, e^{\frac{\pi}{2} |\lambda|}, \quad \forall \lambda \in \mathbb{R}.
+\left| \Xi\left( \tfrac{1}{2} + i\lambda \right) \right| \le C_0\, e^{\frac{\pi}{2} |\lambda|}, \quad \forall \lambda \in \R.
 \]
 Therefore,
 \[
@@ -26,8 +26,8 @@ so
 |\phi_t(\lambda)| \le C_t\, e^{-a_t \lambda^2}, \quad \text{with } a_t := \tfrac{t}{2}, \quad C_t := C_0 e^{\pi^2/8t}.
 \]
 
-\paragraph{(ii) Spatial Kernel Decay via Paley–Wiener.}
-The profile \( \phi_t \in \mathcal{S}(\mathbb{R}) \) has exponential type \( \pi \), so by the Paley–Wiener theorem (see \cite[Ch.~IX.4]{ReedSimon1975II}),
+\paragraph{(ii) Spatial Kernel Decay via Paley--Wiener.}
+The profile \( \phi_t \in \Schwartz \) has exponential type \( \pi \), so by the Paley--Wiener theorem (see \cite[Ch.~IX.4]{ReedSimon1975II}),
 \[
 |k_t(x)| \le C_t' e^{-(\pi - \epsilon)|x|}, \quad \forall \epsilon > 0,
 \]
@@ -39,18 +39,18 @@ for some constant \( C_t' > 0 \). Thus,
 \paragraph{(iii) Uniformity for Small \( t \).}
 Since the exponential type of \( \phi_t \) is independent of \( t \), and the Gaussian factor improves decay, the family \( \{k_t\}_{t \in (0, t_0]} \) admits uniform exponential envelope bounds. Therefore, there exist constants \( C_0, b_0 > 0 \) and \( t_0 > 0 \) such that
 \[
-|K_t(x,y)| \le C_0\, e^{-b_0 |x - y|}, \quad \forall x, y \in \mathbb{R}, \quad \forall t \in (0, t_0].
+|K_t(x,y)| \le C_0\, e^{-b_0 |x - y|}, \quad \forall x, y \in \R, \quad \forall t \in (0, t_0].
 \]
 
 \paragraph{Conclusion.}
 From the above bounds:
 \begin{itemize}
-    \item[\textup{(i)}] \( \phi_t(\lambda) \in \mathcal{S}(\mathbb{R}) \) with decay controlled by Gaussian and exponential envelope;
-    \item[\textup{(ii)}] \( K_t(x,y) = k_t(x - y) \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \) for all \( \alpha > \pi \);
+    \item[\textup{(i)}] \( \phi_t(\lambda) \in \Schwartz \), with decay controlled by Gaussian and exponential envelope;
+    \item[\textup{(ii)}] \( K_t(x,y) = k_t(x - y) \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \) for all \( \alpha > \pi \);
     \item[\textup{(iii)}] The trace-class bound follows from Simon's criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}:
     \[
-    L_t f(x) := \int_{\mathbb{R}} K_t(x,y)\, f(y)\, dy \in \mathcal{C}_1(H_{\Psi_\alpha}),
+    L_t f(x) := \int_{\R} K_t(x,y)\, f(y)\, dy \in \mathcal{C}_1(\HPsi),
     \]
-    with trace-norm uniformly bounded for \( t \in (0, t_0] \), ensuring convergence \( L_t \to L_{\mathrm{sym}} \) in \( \mathcal{C}_1 \) and determinant convergence as \( t \to 0^+ \).
+    with trace-norm uniformly bounded for \( t \in (0, t_0] \), ensuring convergence \( L_t \to L_{\sym} \) in \( \mathcal{C}_1 \) and determinant convergence as \( t \to 0^+ \).
 \end{itemize}
 \end{proof}

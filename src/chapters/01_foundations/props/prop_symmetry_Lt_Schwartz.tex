@@ -1,32 +1,33 @@
 \begin{proposition}[Symmetry of \( L_t \) on Schwartz Core]
 \label{prop:symmetry_Lt_Schwartz}
-Let \( \Psi \colon \mathbb{R} \to (0,\infty) \) be a smooth, strictly positive weight function satisfying
+Let \( \Psi \colon \R \to (0,\infty) \) be a smooth, strictly positive weight function satisfying
 \[
 \Psi(x) \sim e^{\alpha|x|} \quad \text{as } |x| \to \infty,
 \]
 for some constant \( \alpha > 0 \); that is, there exist constants \( c_1, c_2 > 0 \) such that
 \[
-c_1 e^{\alpha |x|} \le \Psi(x) \le c_2 e^{\alpha |x|}, \quad \forall x \in \mathbb{R}.
+c_1 e^{\alpha |x|} \le \Psi(x) \le c_2 e^{\alpha |x|}, \qquad \forall x \in \R.
 \]
 
 Define the weighted Hilbert space
 \[
-H_\Psi := L^2(\mathbb{R}, \Psi(x)\, dx),
+H_\Psi := L^2(\R, \Psi(x)\, dx),
 \]
-and suppose \( \phi_t \in \mathcal{S}(\mathbb{R}) \) is real-valued and even. Define the convolution operator
+and suppose \( \phi_t \in \Schwartz \) is real-valued and even. Define the convolution operator
 \[
-(L_t f)(x) := \int_{\mathbb{R}} \phi_t(x - y)\, f(y)\, dy, \quad f \in \mathcal{S}(\mathbb{R}).
+(L_t f)(x) := \int_{\R} \phi_t(x - y)\, f(y)\, dy, \qquad f \in \Schwartz.
 \]
 
-Then \( L_t \) is symmetric on the core domain \( \mathcal{S}(\mathbb{R}) \subset H_\Psi \), that is,
+Then \( L_t \) is symmetric on the core domain \( \Schwartz \subset H_\Psi \), that is,
 \[
-\langle L_t f, g \rangle_{H_\Psi} = \langle f, L_t g \rangle_{H_\Psi}, \quad \forall f, g \in \mathcal{S}(\mathbb{R}),
+\langle L_t f, g \rangle_{H_\Psi} = \langle f, L_t g \rangle_{H_\Psi}, \qquad \forall f, g \in \Schwartz,
 \]
 where the inner product is given by
 \[
-\langle f, g \rangle_{H_\Psi} := \int_{\mathbb{R}} f(x)\, \overline{g(x)}\, \Psi(x)\, dx.
+\langle f, g \rangle_{H_\Psi} := \int_{\R} f(x)\, \overline{g(x)}\, \Psi(x)\, dx.
 \]
 
 \medskip
-\noindent The kernel \( K_t(x,y) := \phi_t(x - y) \) is real and symmetric. Combined with the density and stability of \( \mathcal{S}(\mathbb{R}) \) under convolution, this guarantees that \( L_t \) is symmetric on its natural core. This property underlies the essential self-adjointness of \( L_t \) and its strong limit \( L_{\mathrm{sym}} \) on the weighted space \( H_\Psi \).
+\noindent
+The kernel \( K_t(x,y) := \phi_t(x - y) \) is real and symmetric. Combined with the density and stability of \( \Schwartz \) under convolution, this guarantees that \( L_t \) is symmetric on its natural core. This property underlies the essential self-adjointness of \( L_t \) and its strong limit \( L_{\sym} \) on the weighted space \( H_\Psi \).
 \end{proposition}

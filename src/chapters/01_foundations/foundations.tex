@@ -1,17 +1,20 @@
 \section{Foundational Analytic and Operator Structures}
 \label{sec:foundations}
 
+%--- Context and Overview ---
 \input{chapters/01_foundations/rems/rmk_contextual_link_prologue}
-
 \input{chapters/01_foundations/intro}
 
 %------------------------------------------------------------------
 \subsection{Definitions}
 
+%--- Operator classes and spectral types ---
 \input{chapters/01_foundations/defs/def_compact_operator}
 \input{chapters/01_foundations/defs/def_trace_class_operator}
 \input{chapters/01_foundations/defs/def_trace_norm}
 \input{chapters/01_foundations/defs/def_selfadjoint_operator}
+
+%--- Weighted spaces and decay structure ---
 \input{chapters/01_foundations/defs/def_weighted_schwartz_space}
 \input{chapters/01_foundations/defs/def_exponential_weight}
 \input{chapters/01_foundations/defs/def_weighted_trace_norm_space}
@@ -19,12 +22,14 @@
 %------------------------------------------------------------------
 \subsection{Analytic Lemmas}
 
+%--- Duality estimates and kernel integrability ---
 \input{chapters/01_foundations/lems/lem_weighted_trace_norm_duality}
 \input{chapters/01_foundations/proofs/prf_lem_weighted_trace_norm_duality}
 
 \input{chapters/01_foundations/lems/lem_L1_integrability_conjugated_kernel}
 \input{chapters/01_foundations/proofs/prf_lem_L1_integrability_conjugated_kernel}
 
+%--- Mollifier decay and profile estimates ---
 \input{chapters/01_foundations/lems/lem_decay_mollified_kernel}
 \input{chapters/01_foundations/proofs/prf_lem_decay_mollified_kernel}
 
@@ -37,15 +42,18 @@
 \input{chapters/01_foundations/lems/lem_decay_inverse_fourier_xi}
 \input{chapters/01_foundations/proofs/prf_lem_decay_inverse_fourier_xi}
 
+%--- Uniform kernel control ---
 \input{chapters/01_foundations/lems/lem_uniform_L1_conjugated_kernel}
 \input{chapters/01_foundations/proofs/prf_lem_uniform_L1_conjugated_kernel}
 
+%--- Symmetry and Fourier reflection ---
 \input{chapters/01_foundations/lems/lem_kernel_symmetry}
 \input{chapters/01_foundations/proofs/prf_lem_kernel_symmetry}
 
 \input{chapters/01_foundations/lems/lem_fourier_symmetry_reflection}
 \input{chapters/01_foundations/proofs/prf_lem_fourier_symmetry_reflection}
 
+%--- Trace-class criteria and kernel embeddings ---
 \input{chapters/01_foundations/lems/lem_trace_class_via_weighted_L1}
 \input{chapters/01_foundations/proofs/prf_lem_trace_class_via_weighted_L1}
 
@@ -55,15 +63,25 @@
 \input{chapters/01_foundations/lems/lem_trace_class_conjugated_kernel}
 \input{chapters/01_foundations/proofs/prf_lem_trace_class_conjugated_kernel}
 
+%--- Space density and Fourier integrability ---
 \input{chapters/01_foundations/lems/lem_density_schwartz_weighted_L2}
 \input{chapters/01_foundations/proofs/prf_lem_density_schwartz_weighted_L2}
 
 \input{chapters/01_foundations/lems/lem_ft_xi_weighted_L1}
 \input{chapters/01_foundations/proofs/prf_lem_ft_xi_weighted_L1}
 
+%--- Sharpness of weight condition ---
+\input{chapters/01_foundations/lems/lem_trace_class_failure_alpha_leq_pi}
+\input{chapters/01_foundations/proofs/prf_lem_trace_class_failure_alpha_leq_pi}
+
+%--- Structural preservation under unitary conjugation ---
+\input{chapters/01_foundations/lems/lem_unitary_conjugation_trace_class}
+\input{chapters/01_foundations/proofs/prf_lem_unitary_conjugation_trace_class}
+
 %------------------------------------------------------------------
 \subsection{Operator-Theoretic Properties of \texorpdfstring{\( L_t \)}{Lt}}
 
+%--- Boundedness, compactness, symmetry, self-adjointness ---
 \input{chapters/01_foundations/props/prop_boundedness_Lt_weighted}
 \input{chapters/01_foundations/proofs/prf_prop_boundedness_Lt_weighted}
 
@@ -76,8 +94,14 @@
 \input{chapters/01_foundations/props/prop_selfadjointness_Lt}
 \input{chapters/01_foundations/proofs/prf_prop_selfadjointness_Lt}
 
+%--- Core convergence and limit properties ---
 \input{chapters/01_foundations/props/prop_core_schwartz_density}
 \input{chapters/01_foundations/proofs/prf_prop_core_schwartz_density}
+
+%------------------------------------------------------------------
+%--- Canonical spectral operator synthesis theorem ---
+\input{chapters/01_foundations/thms/thm_canonical_operator_realization}
+\input{chapters/01_foundations/proofs/prf_thm_canonical_operator_realization}
 
 %------------------------------------------------------------------
 \input{chapters/01_foundations/summary}

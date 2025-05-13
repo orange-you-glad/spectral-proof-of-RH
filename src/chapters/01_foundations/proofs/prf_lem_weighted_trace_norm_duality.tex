@@ -1,47 +1,47 @@
 \begin{proof}[Proof of \lemref{lem:weighted_trace_norm_duality}]
-Fix \( \alpha > \pi \), and define \( \Psi_\alpha(x) := e^{\alpha |x|} \). Let \( k \in L^1(\mathbb{R}, \Psi_\alpha(x)\, dx) \) be real-valued and even, and define the convolution kernel
+Fix \( \alpha > \pi \), and define \( \Psi_\alpha(x) := e^{\alpha |x|} \). Let \( k \in L^1(\R, \Psi_\alpha(x)\, dx) \) be real-valued and even, and define the convolution kernel
 \[
 K(x,y) := k(x - y),
 \]
-with associated operator
+with associated convolution operator
 \[
-(L f)(x) := \int_{\mathbb{R}} k(x - y)\, f(y)\, dy.
+(L f)(x) := \int_{\R} k(x - y)\, f(y)\, dy.
 \]
 
 \medskip
 \noindent\textbf{(i) Weighted Kernel Norm Factorization.}
 We compute:
 \begin{align*}
-\iint_{\mathbb{R}^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy
-&= \iint_{\mathbb{R}^2} |k(x - y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy.
+\iint_{\R^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy
+&= \iint_{\R^2} |k(x - y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy.
 \end{align*}
 Make the change of variables \( u := x - y \), \( v := y \), so that \( x = u + v \) and \( dx\,dy = du\,dv \). Then:
 \[
-= \int_{\mathbb{R}} |k(u)| \left( \int_{\mathbb{R}} \Psi_\alpha(u + v)\Psi_\alpha(v)\, dv \right) du.
+= \int_{\R} |k(u)| \left( \int_{\R} \Psi_\alpha(u + v)\Psi_\alpha(v)\, dv \right) du.
 \]
-Using symmetry and convexity of \( \Psi_\alpha \), we obtain:
+Using symmetry and convexity of \( \Psi_\alpha \), we observe:
 \[
 \Psi_\alpha(u + v)\Psi_\alpha(v) = e^{\alpha(|u + v| + |v|)} = e^{\alpha|u|} \cdot e^{2\alpha|v|}.
 \]
 Hence,
 \[
-\int_{\mathbb{R}} \Psi_\alpha(u + v)\Psi_\alpha(v)\, dv = \Psi_\alpha(u) \cdot \int_{\mathbb{R}} e^{2\alpha |v|}\, dv = \Psi_\alpha(u) \cdot \|\Psi_\alpha\|_{L^1(\mathbb{R})}.
+\int_{\R} \Psi_\alpha(u + v)\Psi_\alpha(v)\, dv = \Psi_\alpha(u) \cdot \int_{\R} e^{2\alpha |v|}\, dv = \Psi_\alpha(u) \cdot \|\Psi_\alpha\|_{L^1(\R)}.
 \]
 Therefore,
 \[
-\iint_{\mathbb{R}^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy
-= \|k\|_{L^1(\mathbb{R}, \Psi_\alpha)} \cdot \|\Psi_\alpha\|_{L^1(\mathbb{R})}.
+\iint_{\R^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy
+= \|k\|_{L^1(\R, \Psi_\alpha)} \cdot \|\Psi_\alpha\|_{L^1(\R)}.
 \]
 
 \medskip
 \noindent\textbf{(ii) Trace-Class Bound.}
-Since \( K \in \mathcal{C}_1(\Psi_\alpha) \), the associated integral operator \( L \) lies in \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}. Moreover,
+Since \( K \in \mathcal{C}_1(\Psi_\alpha) \), the associated integral operator \( L \) lies in \( \mathcal{C}_1(\HPsi) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}. Moreover,
 \[
-\|L\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le \|K\|_{\mathcal{C}_1(\Psi_\alpha)}
-= \|k\|_{L^1(\mathbb{R}, \Psi_\alpha)} \cdot \|\Psi_\alpha\|_{L^1(\mathbb{R})}.
+\|L\|_{\mathcal{C}_1(\HPsi)} \le \|K\|_{\mathcal{C}_1(\Psi_\alpha)}
+= \|k\|_{L^1(\R, \Psi_\alpha)} \cdot \|\Psi_\alpha\|_{L^1(\R)}.
 \]
 
 \medskip
 \noindent\textbf{Conclusion.}
-This completes the proof of both statements, establishing an explicit factorized relationship between 1D weighted kernel integrability and 2D trace-norm control in \( H_{\Psi_\alpha} \).
+This completes the proof of both claims, establishing an explicit factorized relationship between 1D weighted kernel integrability and 2D trace-norm control in \( \HPsi \).
 \end{proof}

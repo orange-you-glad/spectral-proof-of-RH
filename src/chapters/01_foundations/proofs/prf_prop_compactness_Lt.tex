@@ -1,35 +1,35 @@
 \begin{proof}[Proof of \propref{prop:compactness_Lt}]
-Let \( H_\Psi := L^2(\mathbb{R}, \Psi(x)\, dx) \), where \( \Psi(x) := e^{\alpha |x|} \) for some fixed \( \alpha > 0 \). Let \( \phi_t \in \mathcal{S}(\mathbb{R}) \) be a real-valued, even mollifier, and define the convolution operator:
+Let \( H_\Psi := L^2(\R, \Psi(x)\, dx) \), where \( \Psi(x) := e^{\alpha |x|} \) for some fixed \( \alpha > 0 \). Let \( \phi_t \in \Schwartz \) be a real-valued, even mollifier, and define the convolution operator:
 \[
-(L_t f)(x) := \int_{\mathbb{R}} \phi_t(x - y)\, f(y)\, dy, \quad f \in \mathcal{S}(\mathbb{R}).
+(L_t f)(x) := \int_{\R} \phi_t(x - y)\, f(y)\, dy, \qquad f \in \Schwartz.
 \]
 
 \medskip
 \noindent\textbf{Step 1: Unitary Conjugation to Flat \( L^2 \).}
 Define the unitary map
 \[
-U \colon H_\Psi \to L^2(\mathbb{R}), \qquad (Uf)(x) := \Psi(x)^{1/2} f(x),
+U \colon H_\Psi \to L^2(\R), \qquad (Uf)(x) := \Psi(x)^{1/2} f(x),
 \]
-with inverse \( U^{-1} g(x) := \Psi(x)^{-1/2} g(x) \). Then the conjugated operator \( \widetilde{L}_t := U L_t U^{-1} \) acts on \( L^2(\mathbb{R}) \) as an integral operator with kernel:
+with inverse \( (U^{-1} g)(x) := \Psi(x)^{-1/2} g(x) \). Then the conjugated operator \( \widetilde{L}_t := U L_t U^{-1} \) acts on \( L^2(\R) \) as an integral operator with kernel:
 \[
 \widetilde{K}_t(x,y) := \frac{\phi_t(x - y)}{\sqrt{\Psi(x)\Psi(y)}} = \phi_t(x - y) e^{-\frac{\alpha}{2}(|x| + |y|)}.
 \]
 
 \medskip
-\noindent\textbf{Step 2: Hilbert–Schmidt Estimate.}
-Since \( \phi_t \in \mathcal{S}(\mathbb{R}) \), we may estimate for any \( \varepsilon > 0 \):
+\noindent\textbf{Step 2: Hilbert--Schmidt Estimate.}
+Since \( \phi_t \in \Schwartz \), we may estimate for any \( \varepsilon > 0 \):
 \[
 |\phi_t(z)| \le C_\varepsilon\, e^{-(\alpha + \varepsilon)|z|},
 \]
 so that
 \[
-|\widetilde{K}_t(x,y)| \le C'\, e^{-\delta(|x| + |y|)}, \quad \text{for some } \delta > 0.
+|\widetilde{K}_t(x,y)| \le C'\, e^{-\delta(|x| + |y|)}, \qquad \text{for some } \delta > 0.
 \]
 Then
 \[
-\iint_{\mathbb{R}^2} |\widetilde{K}_t(x,y)|^2\, dx\, dy < \infty,
+\iint_{\R^2} |\widetilde{K}_t(x,y)|^2\, dx\, dy < \infty,
 \]
-so \( \widetilde{L}_t \in \mathcal{C}_2(L^2(\mathbb{R})) \), i.e., Hilbert–Schmidt and hence compact.
+so \( \widetilde{L}_t \in \mathcal{C}_2(L^2(\R)) \), i.e., Hilbert--Schmidt and hence compact.
 
 \medskip
 \noindent\textbf{Step 3: Transfer to Weighted Space.}
@@ -40,5 +40,5 @@ L_t = U^{-1} \widetilde{L}_t U \in \mathcal{K}(H_\Psi).
 
 \medskip
 \noindent\textbf{Conclusion.}
-Thus, \( L_t \) extends to a compact operator on \( H_\Psi \). Its kernel decays rapidly and defines a Hilbert–Schmidt operator under exponential conjugation. This compactness ensures the discreteness of the spectrum and underpins the Fredholm determinant and Schatten-class analysis developed in later chapters.
+Thus, \( L_t \) extends to a compact operator on \( H_\Psi \). Its kernel decays rapidly and defines a Hilbert--Schmidt operator under exponential conjugation. This compactness ensures the discreteness of the spectrum and underpins the Fredholm determinant and Schatten-class analysis developed in later chapters.
 \end{proof}

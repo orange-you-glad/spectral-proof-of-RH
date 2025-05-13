@@ -1,66 +1,66 @@
 \begin{definition}[Weighted Schwartz Space]\label{def:weighted_schwartz_space}
-Let \( w \colon \mathbb{R} \to (0, \infty) \) be a smooth, strictly positive weight function satisfying:
+Let \( w \colon \R \to (0, \infty) \) be a smooth, strictly positive weight function satisfying:
 \begin{enumerate}
-    \item[\textup{(i)}] \( w(x) \ge 1 \) for all \( x \in \mathbb{R} \);
+    \item[\textup{(i)}] \( w(x) \ge 1 \) for all \( x \in \R \);
     \item[\textup{(ii)}] \( w(x) \to \infty \) as \( |x| \to \infty \);
     \item[\textup{(iii)}] \( w(x) \ge e^{\alpha |x|} \) for some \( \alpha > 0 \).
 \end{enumerate}
 
-The \emph{weighted Schwartz space} \( \mathcal{S}_w(\mathbb{R}) \) is the Fréchet space of all functions \( f \in C^\infty(\mathbb{R}) \) such that
+The \emph{weighted Schwartz space} \( \mathcal{S}_w(\R) \) is the Fréchet space of all functions \( f \in C^\infty(\R) \) such that
 \[
-\| f \|^{(w)}_{k,\ell} := \sup_{x \in \mathbb{R}} \left| x^k f^{(\ell)}(x) \right| w(x)^{-1} < \infty \quad \text{for all } k,\ell \in \mathbb{N}_0.
+\| f \|^{(w)}_{k,\ell} := \sup_{x \in \R} \left| x^k f^{(\ell)}(x) \right| w(x)^{-1} < \infty \quad \text{for all } k,\ell \in \N_0.
 \]
-Each seminorm controls weighted decay of derivatives, so functions in \( \mathcal{S}_w(\mathbb{R}) \) decay faster than any polynomial, modulated by exponential weight.
+Each seminorm controls weighted decay of derivatives, so functions in \( \mathcal{S}_w(\R) \) decay faster than any polynomial, modulated by exponential weight.
 
 \medskip
 \noindent\textbf{Topological Structure.}
 \begin{itemize}
-    \item One has continuous dense inclusions: \( \mathcal{S}(\mathbb{R}) \subset \mathcal{S}_w(\mathbb{R}) \subset L^2(\mathbb{R}, w(x)^{-2} dx) \).
+    \item One has continuous dense inclusions: \( \Schwartz \subset \mathcal{S}_w(\R) \subset L^2(\R, w(x)^{-2} dx) \).
 
     \item For exponential weights \( w(x) = e^{\alpha |x|} \), define the corresponding weight potential \( \Psi_\alpha(x) := e^{2\alpha |x|} \), and the associated Hilbert space
     \[
-    H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx).
+    \HPsi := L^2(\R, \Psi_\alpha(x)\, dx).
     \]
-    Then \( \mathcal{S}_w(\mathbb{R}) \subset H_{\Psi_\alpha} \), with dense embedding for all \( \alpha > 0 \).
+    Then \( \mathcal{S}_w(\R) \subset \HPsi \), with dense embedding for all \( \alpha > 0 \).
 \end{itemize}
 
 \medskip
-\noindent\textbf{Paley–Wiener Profile and Kernel Decay.}
-Let \( \phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the mollified spectral profile. Since \( \Xi(s) \) is entire of exponential type \( \pi \), the Paley–Wiener theorem yields
+\noindent\textbf{Paley--Wiener Profile and Kernel Decay.}
+Let \( \phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the mollified spectral profile. Since \( \Xi(s) \) is entire of exponential type \( \pi \), the Paley--Wiener theorem yields
 \[
-|k_t(x)| := \left| \mathcal{F}^{-1}[\phi_t](x) \right| \le C_\epsilon \, e^{-(\pi - \epsilon)|x|}, \quad \text{for all } \epsilon > 0.
+|k_t(x)| := \left| \FT^{-1}[\phi_t](x) \right| \le C_\epsilon \, e^{-(\pi - \epsilon)|x|}, \quad \text{for all } \epsilon > 0.
 \]
 Thus, for convolution kernels \( K_t(x,y) := k_t(x - y) \) and any \( \alpha > \pi \), we have
 \[
-K_t \in L^1(\mathbb{R}^2, e^{\alpha(|x| + |y|)} dx\,dy),
+K_t \in L^1(\R^2, e^{\alpha(|x| + |y|)} dx\,dy),
 \]
 and the associated operator
 \[
-L_t f(x) := \int_{\mathbb{R}} k_t(x - y)\, f(y)\, dy
+L_t f(x) := \int_{\R} k_t(x - y)\, f(y)\, dy
 \]
-acts continuously on \( \mathcal{S}_w(\mathbb{R}) \) and preserves the space.
+acts continuously on \( \mathcal{S}_w(\R) \) and preserves the space.
 
 \medskip
 \noindent\textbf{Spectral and Functional Role.}
-The space \( \mathcal{S}_w(\mathbb{R}) \) serves as a common dense core for mollified convolution operators \( L_t \) and their trace-norm limit \( L_{\mathrm{sym}} \). Its properties include:
+The space \( \mathcal{S}_w(\R) \) serves as a common dense core for mollified convolution operators \( L_t \) and their trace-norm limit \( L_{\sym} \). Its properties include:
 \begin{itemize}
     \item Stability under convolution: \( f \in \mathcal{S}_w \Rightarrow k_t * f \in \mathcal{S}_w \), for all \( t > 0 \).
-    \item Density: \( \mathcal{S}_w(\mathbb{R}) \) is dense in \( H_{\Psi_\alpha} \) for all \( \alpha > 0 \), and serves as a domain core in the essential self-adjointness proofs (cf.~Chapter~\ref{sec:operator-construction}).
-    \item Simon’s criterion for trace class applies: if \( K_t \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y) dx\,dy) \), then
+    \item Density: \( \mathcal{S}_w(\R) \) is dense in \( \HPsi \) for all \( \alpha > 0 \), and serves as a domain core in the essential self-adjointness proofs (cf.~\secref{sec:operator_construction}).
+    \item Simon’s criterion for trace class applies: if \( K_t \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y) dx\,dy) \), then
     \[
-    L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \quad \text{\cite[Thm.~4.2]{Simon2005TraceIdeals}}.
+    L_t \in \mathcal{C}_1(\HPsi) \quad \text{\cite[Thm.~4.2]{Simon2005TraceIdeals}}.
     \]
     \item Moreover, the trace-norm convergence
     \[
-    \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+    \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym})
     \]
-    holds uniformly on compact subsets \( \lambda \in \mathbb{C} \), as \( t \to 0^+ \), by norm continuity of the Fredholm determinant.
+    holds uniformly on compact subsets \( \lambda \in \C \) as \( t \to 0^+ \), by norm continuity of the Fredholm determinant.
 \end{itemize}
 
 \medskip
 \noindent\textbf{References.}
 \begin{itemize}
-    \item B. Simon, \emph{Trace Ideals and Their Applications}, Theorem~4.2 \cite{Simon2005TraceIdeals}.
-    \item B. Ya. Levin, \emph{Lectures on Entire Functions}, Chapter~9 \cite{Levin1996EntireLectures}.
+    \item B.~Simon, \emph{Trace Ideals and Their Applications}, Theorem~4.2 \cite{Simon2005TraceIdeals}.
+    \item B.~Ya.~Levin, \emph{Lectures on Entire Functions}, Chapter~9 \cite{Levin1996EntireLectures}.
 \end{itemize}
 \end{definition}

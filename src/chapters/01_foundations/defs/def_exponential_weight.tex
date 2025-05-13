@@ -1,24 +1,24 @@
 \begin{definition}[Exponential Weight and Weighted Hilbert Space]\label{def:exponential_weight}
 Fix \( \alpha > \pi \), and define the exponential weight
 \[
-\Psi_\alpha(x) := e^{\alpha |x|}, \qquad x \in \mathbb{R}.
+\Psi_\alpha(x) := e^{\alpha |x|}, \qquad x \in \R.
 \]
-Then \( \Psi_\alpha \in C^\infty(\mathbb{R}) \) is strictly positive, even, convex, and satisfies:
+Then \( \Psi_\alpha \in C^\infty(\R) \) is strictly positive, even, convex, and satisfies:
 \begin{itemize}
     \item Super-exponential growth: \( \Psi_\alpha(x) \to \infty \) as \( |x| \to \infty \);
-    \item Rapid decay: \( \Psi_\alpha^{-1}(x) = e^{-\alpha |x|} \in L^1(\mathbb{R}) \) for all \( \alpha > 0 \).
+    \item Rapid decay: \( \Psi_\alpha^{-1}(x) = e^{-\alpha |x|} \in L^1(\R) \) for all \( \alpha > 0 \).
 \end{itemize}
 
 Define the weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx) = \left\{ f \in L^2_{\mathrm{loc}}(\mathbb{R}) \ \middle|\ \int_{\mathbb{R}} |f(x)|^2 e^{\alpha |x|}\, dx < \infty \right\}.
+\HPsi := L^2(\R, \Psi_\alpha(x)\, dx) = \left\{ f \in L^2_{\mathrm{loc}}(\R) \;\middle|\; \int_{\R} |f(x)|^2 e^{\alpha |x|}\, dx < \infty \right\}.
 \]
 
 \medskip
-\noindent\textbf{Paley–Wiener Control.}
-Let \( F \colon \mathbb{C} \to \mathbb{C} \) be entire of exponential type \( \tau < \alpha \). Then by the Paley–Wiener theorem \cite[Thm.~3.2.4]{Levin1996EntireLectures}, the inverse Fourier transform satisfies
+\noindent\textbf{Paley--Wiener Control.}
+Let \( F \colon \C \to \C \) be entire of exponential type \( \tau < \alpha \). Then by the Paley--Wiener theorem \cite[Thm.~3.2.4]{Levin1996EntireLectures}, the inverse Fourier transform satisfies
 \[
-\mathscr{F}^{-1}[F](x) \in L^1(\mathbb{R}, \Psi_\alpha^{-1}(x)\, dx),
+\FT^{-1}[F](x) \in L^1(\R, \Psi_\alpha^{-1}(x)\, dx),
 \]
 i.e., it decays faster than \( e^{-\alpha |x|} \). This provides precise decay estimates for convolution kernels constructed from entire spectral data.
 
@@ -27,49 +27,49 @@ i.e., it decays faster than \( e^{-\alpha |x|} \). This provides precise decay e
 Let
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \quad
-k := \mathscr{F}^{-1}[\phi], \quad
+k := \FT^{-1}[\phi], \quad
 K(x,y) := k(x - y).
 \]
 Since \( \Xi(s) \) is entire of exponential type \( \pi \), it follows that for all \( \alpha > \pi \),
 \[
-K \in L^1(\mathbb{R}^2, \Psi_\alpha^{-1}(x)\Psi_\alpha^{-1}(y)\, dx\,dy),
+K \in L^1(\R^2, \Psi_\alpha^{-1}(x)\Psi_\alpha^{-1}(y)\, dx\,dy),
 \]
 and the convolution operator
 \[
-(Lf)(x) := \int_{\mathbb{R}} k(x - y) f(y)\, dy
+(Lf)(x) := \int_{\R} k(x - y) f(y)\, dy
 \]
-lies in \( \mathcal{C}_1(H_{\Psi_\alpha}) \) by Simon's trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+lies in \( \mathcal{C}_1(\HPsi) \) by Simon's trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
 
 \medskip
 \noindent\textbf{Mollified Heat Kernels and Trace-Norm Limit.}
 Define the mollified spectral profile:
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda), \quad
-k_t := \mathscr{F}^{-1}[\phi_t], \quad
+k_t := \FT^{-1}[\phi_t], \quad
 K_t(x,y) := k_t(x - y).
 \]
-Then for all \( t > 0 \), we have \( k_t \in \mathcal{S}(\mathbb{R}) \subset L^1(\mathbb{R}, \Psi_\alpha^{-1}(x)\, dx) \), and the associated convolution operator
+Then for all \( t > 0 \), we have \( k_t \in \Schwartz \subset L^1(\R, \Psi_\alpha^{-1}(x)\, dx) \), and the associated convolution operator
 \[
-L_t f(x) := \int_{\mathbb{R}} k_t(x - y) f(y)\, dy
+L_t f(x) := \int_{\R} k_t(x - y) f(y)\, dy
 \]
-lies in \( \mathcal{C}_1(H_{\Psi_\alpha}) \). Moreover, there exists a canonical trace-norm limit:
+lies in \( \mathcal{C}_1(\HPsi) \). Moreover, there exists a canonical trace-norm limit:
 \[
-L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(H_{\Psi_\alpha}).
+L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi).
 \]
 
 \medskip
-\noindent\textbf{Sharpness of \(\alpha > \pi\).}
-The condition \( \alpha > \pi \) is sharp: the Paley–Wiener bound for \( k \) yields \( |k(x)| \approx e^{-\pi|x|} \) as \( |x| \to \infty \), so for \( \alpha \le \pi \), the weighted norm
+\noindent\textbf{Sharpness of \( \alpha > \pi \).}
+The condition \( \alpha > \pi \) is sharp: the Paley--Wiener bound for \( k \) yields \( |k(x)| \approx e^{-\pi|x|} \) as \( |x| \to \infty \), so for \( \alpha \le \pi \), the weighted norm
 \[
-\iint_{\mathbb{R}^2} |K(x,y)| \, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy = \infty.
+\iint_{\R^2} |K(x,y)| \, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy = \infty.
 \]
-Thus, \( L \notin \mathcal{C}_1(H_{\Psi_\alpha}) \) unless \( \alpha > \pi \).
+Thus, \( L \notin \mathcal{C}_1(\HPsi) \) unless \( \alpha > \pi \).
 
 \medskip
 \noindent\textbf{Spectral and Analytic Consequences.}
-The Hilbert space \( H_{\Psi_\alpha} \), with \( \alpha > \pi \), provides the analytic framework for the determinant and trace theory:
+The Hilbert space \( \HPsi \), with \( \alpha > \pi \), provides the analytic framework for the determinant and trace theory:
 \begin{itemize}
-    \item Heat trace finiteness: \( \operatorname{Tr}(e^{-tL^2}) < \infty \) for all \( t > 0 \), enabling short-time expansion;
+    \item Heat trace finiteness: \( \Tr(e^{-tL^2}) < \infty \) for all \( t > 0 \), enabling short-time expansion;
     \item Spectral zeta function: \( \zeta_L(s) = \sum \lambda_n^{-s} \) admits analytic continuation via Tauberian theory \cite{Korevaar2004Tauberian};
     \item Determinant identity: \( \det\nolimits_\zeta(I - \lambda L) \) is entire of order one and recovers \( \Xi(\tfrac{1}{2} + i\lambda) \) up to normalization.
 \end{itemize}
@@ -77,8 +77,8 @@ The Hilbert space \( H_{\Psi_\alpha} \), with \( \alpha > \pi \), provides the a
 \medskip
 \noindent\textbf{References.}
 \begin{itemize}
-    \item B. Ya. Levin, \emph{Lectures on Entire Functions}, Theorem~3.2.4 \cite{Levin1996EntireLectures}.
-    \item B. Simon, \emph{Trace Ideals and Their Applications}, Theorem~4.2 \cite{Simon2005TraceIdeals}.
-    \item J. Korevaar, \emph{Tauberian Theory}, Chapter~III \cite{Korevaar2004Tauberian}.
+    \item B.~Ya.~Levin, \emph{Lectures on Entire Functions}, Theorem~3.2.4 \cite{Levin1996EntireLectures}.
+    \item B.~Simon, \emph{Trace Ideals and Their Applications}, Theorem~4.2 \cite{Simon2005TraceIdeals}.
+    \item J.~Korevaar, \emph{Tauberian Theory}, Chapter~III \cite{Korevaar2004Tauberian}.
 \end{itemize}
 \end{definition}

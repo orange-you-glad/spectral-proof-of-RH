@@ -1,14 +1,16 @@
 \begin{proposition}[Schwartz Core for Canonical Operator]
 \label{prop:core_schwartz_density}
-Let \( \alpha > \pi \), and let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical convolution operator constructed as the trace-norm limit of mollified convolution operators \( L_t \in \mathcal{B}(H_{\Psi_\alpha}) \).
+Let \( \alpha > \pi \), and let \( L_{\sym} \in \mathcal{C}_1(\HPsi) \) be the canonical convolution operator constructed as the trace-norm limit of mollified convolution operators \( L_t \in \mathcal{B}(\HPsi) \).
 
-Then the Schwartz space \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \) is a core for \( L_{\mathrm{sym}} \). That is, for every \( f \in \operatorname{Dom}(L_{\mathrm{sym}}) = H_{\Psi_\alpha} \), there exists a sequence \( f_n \in \mathcal{S}(\mathbb{R}) \) such that
+Then the Schwartz space \( \Schwartz \subset \HPsi \) is a core for \( L_{\sym} \). That is, for every \( f \in \operatorname{Dom}(L_{\sym}) = \HPsi \), there exists a sequence \( f_n \in \Schwartz \) such that
 \[
-f_n \to f \quad \text{and} \quad L_{\mathrm{sym}} f_n \to L_{\mathrm{sym}} f \quad \text{in } H_{\Psi_\alpha}.
+f_n \to f \quad \text{and} \quad L_{\sym} f_n \to L_{\sym} f \quad \text{in } \HPsi.
 \]
 
-\noindent Equivalently, \( \mathcal{S}(\mathbb{R}) \) is dense in \( H_{\Psi_\alpha} \) with respect to the graph norm of \( L_{\mathrm{sym}} \),
+\medskip
+\noindent
+Equivalently, \( \Schwartz \) is dense in \( \HPsi \) with respect to the graph norm of \( L_{\sym} \),
 \[
-\|f\|_{\mathrm{graph}} := \left( \|f\|_{H_{\Psi_\alpha}}^2 + \|L_{\mathrm{sym}} f\|_{H_{\Psi_\alpha}}^2 \right)^{1/2}.
+\|f\|_{\mathrm{graph}} := \left( \|f\|_{\HPsi}^2 + \|L_{\sym} f\|_{\HPsi}^2 \right)^{1/2}.
 \]
 \end{proposition}

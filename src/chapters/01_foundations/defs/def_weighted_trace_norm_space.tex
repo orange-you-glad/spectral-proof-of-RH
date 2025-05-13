@@ -1,63 +1,63 @@
 \begin{definition}[Weighted Trace-Norm Space]\label{def:weighted_trace_norm_space}
 Fix any \( \alpha > \pi \), and define the exponential weight
 \[
-\Psi_\alpha(x) := e^{\alpha |x|}, \qquad x \in \mathbb{R}.
+\Psi_\alpha(x) := e^{\alpha |x|}, \qquad x \in \R.
 \]
-Let \( K \colon \mathbb{R}^2 \to \mathbb{C} \) be a measurable kernel. The \emph{weighted trace norm} is defined by
+Let \( K \colon \R^2 \to \C \) be a measurable kernel. The \emph{weighted trace norm} is defined by
 \[
-\| K \|_{\mathcal{C}_1(\Psi_\alpha)} := \iint_{\mathbb{R}^2} |K(x,y)| \, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\,dy.
+\| K \|_{\mathcal{C}_1(\Psi_\alpha)} := \iint_{\R^2} |K(x,y)| \, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\,dy.
 \]
 This defines the weighted trace-class kernel space
 \[
-\mathcal{C}_1(\Psi_\alpha) := \left\{ K \in L^1_{\mathrm{loc}}(\mathbb{R}^2) \ \middle|\ \| K \|_{\mathcal{C}_1(\Psi_\alpha)} < \infty \right\}.
+\mathcal{C}_1(\Psi_\alpha) := \left\{ K \in L^1_{\mathrm{loc}}(\R^2) \ \middle|\ \| K \|_{\mathcal{C}_1(\Psi_\alpha)} < \infty \right\}.
 \]
 
 \medskip
 \noindent\textbf{Trace-Class Realization.}
 If \( K \in \mathcal{C}_1(\Psi_\alpha) \), then the integral operator
 \[
-(T_K f)(x) := \int_{\mathbb{R}} K(x,y)\, f(y)\, dy
+(T_K f)(x) := \int_{\R} K(x,y)\, f(y)\, dy
 \]
-defines a bounded operator on the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx) \), and satisfies
+defines a bounded operator on the weighted Hilbert space \( \HPsi := L^2(\R, \Psi_\alpha(x)\, dx) \), and satisfies
 \[
-T_K \in \mathcal{C}_1(H_{\Psi_\alpha}).
+T_K \in \mathcal{C}_1(\HPsi).
 \]
 
 \medskip
 \noindent\textbf{Trace-Norm Estimate.}
 By Simon’s trace-class kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}, one has
 \[
-\|T_K\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le \|K\|_{\mathcal{C}_1(\Psi_\alpha)},
+\|T_K\|_{\mathcal{C}_1(\HPsi)} \le \|K\|_{\mathcal{C}_1(\Psi_\alpha)},
 \]
-so weighted kernel integrability controls trace-class membership in the Schatten \(\mathcal{C}_1\) ideal.
+so weighted kernel integrability controls trace-class membership in the Schatten \( \mathcal{C}_1 \) ideal.
 
 \medskip
 \noindent\textbf{Convolution Kernel Case.}
-Suppose \( K_t(x,y) = k_t(x - y) \) is a translation-invariant kernel with \( k_t \in L^1(\mathbb{R}, \Psi_\alpha^{-1}(x)\, dx) \). Then
+Suppose \( K_t(x,y) = k_t(x - y) \) is a translation-invariant kernel with \( k_t \in L^1(\R, \Psi_\alpha^{-1}(x)\, dx) \). Then
 \[
-\| K_t \|_{\mathcal{C}_1(\Psi_\alpha)} = \left( \int_{\mathbb{R}} |k_t(z)| \Psi_\alpha(z)\, dz \right) \cdot \left( \int_{\mathbb{R}} \Psi_\alpha(x)\, dx \right) < \infty,
+\| K_t \|_{\mathcal{C}_1(\Psi_\alpha)} = \left( \int_{\R} |k_t(z)| \Psi_\alpha(z)\, dz \right) \cdot \left( \int_{\R} \Psi_\alpha(x)\, dx \right) < \infty,
 \]
 so \( K_t \in \mathcal{C}_1(\Psi_\alpha) \), and the associated convolution operator
 \[
-L_t f(x) := \int_{\mathbb{R}} k_t(x - y)\, f(y)\, dy
+L_t f(x) := \int_{\R} k_t(x - y)\, f(y)\, dy
 \]
-satisfies \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) for all \( t > 0 \).
+satisfies \( L_t \in \mathcal{C}_1(\HPsi) \) for all \( t > 0 \).
 
 \medskip
 \noindent\textbf{Spectral Role in Canonical Construction.}
-The weighted kernel space \( \mathcal{C}_1(\Psi_\alpha) \) enables explicit and uniform trace-norm control of the mollified operator family \( \{L_t\}_{t > 0} \), with:
+The weighted kernel space \( \mathcal{C}_1(\Psi_\alpha) \) enables explicit and uniform trace-norm control of the mollified operator family \( \{L_t\}_{t > 0} \), with
 \[
-L_t \xrightarrow{\ \mathcal{C}_1(H_{\Psi_\alpha})\ } L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \quad \text{as } t \to 0^+.
+L_t \xrightarrow{\ \mathcal{C}_1(\HPsi)\ } L_{\sym} \in \mathcal{C}_1(\HPsi) \quad \text{as } t \to 0^+.
 \]
 This Schatten-class convergence ensures determinant convergence:
 \[
-\det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+\det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym})
 \]
-uniformly on compact subsets \( \lambda \in \mathbb{C} \). The weighted norm \( \|K\|_{\mathcal{C}_1(\Psi_\alpha)} \) thus offers a concrete test for trace-class inclusion, bypassing the need for diagonalization or kernel decomposition.
+uniformly on compact subsets \( \lambda \in \C \). The weighted norm \( \|K\|_{\mathcal{C}_1(\Psi_\alpha)} \) thus offers a concrete test for trace-class inclusion, bypassing the need for diagonalization or kernel decomposition.
 
 \medskip
 \noindent\textbf{References.}
 \begin{itemize}
-    \item B. Simon, \emph{Trace Ideals and Their Applications}, Theorem~4.2 \cite{Simon2005TraceIdeals}.
+    \item B.~Simon, \emph{Trace Ideals and Their Applications}, Theorem~4.2 \cite{Simon2005TraceIdeals}.
 \end{itemize}
 \end{definition}

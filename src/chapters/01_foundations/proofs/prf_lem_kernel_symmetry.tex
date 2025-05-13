@@ -3,17 +3,17 @@ Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \
 \[
 \phi(-\lambda) = \Xi\left( \tfrac{1}{2} - i\lambda \right) = \Xi\left( \tfrac{1}{2} + i\lambda \right) = \phi(\lambda),
 \]
-so \( \phi \) is even. Moreover, since \( \Xi(s) \in \mathbb{R} \) for real \( s \), it follows that \( \phi(\lambda) \in \mathbb{R} \) for all \( \lambda \in \mathbb{R} \).
+so \( \phi \) is even. Moreover, since \( \Xi(s) \in \R \) for real \( s \), it follows that \( \phi(\lambda) \in \R \) for all \( \lambda \in \R \).
 
 \medskip
 \noindent\textbf{Step 1: Real-Valued and Symmetric Fourier Kernel.}
 Define
 \[
-K_0(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \phi(\lambda)\, d\lambda = \widehat{\phi}(x - y).
+K_0(x,y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \phi(\lambda)\, d\lambda = \FT^{-1}[\phi](x - y).
 \]
-Since \( \phi \) is real and even, its inverse Fourier transform \( \widehat{\phi} \) is real-valued and even. Hence,
+Since \( \phi \) is real and even, its inverse Fourier transform \( \FT^{-1}[\phi] \) is real-valued and even. Hence,
 \[
-K_0(x,y) = \widehat{\phi}(x - y) = \widehat{\phi}(y - x) = K_0(y,x) \in \mathbb{R}.
+K_0(x,y) = \FT^{-1}[\phi](x - y) = \FT^{-1}[\phi](y - x) = K_0(y,x) \in \R.
 \]
 
 \medskip
@@ -24,14 +24,14 @@ Let \( \Psi_\alpha(x) := e^{\alpha |x|} \) for some fixed \( \alpha > \pi \), an
 \]
 Since \( \Psi_\alpha \) is even, the product \( \sqrt{\Psi_\alpha(x)\Psi_\alpha(y)} \) is symmetric in \( (x,y) \). Thus, the symmetry and real-valuedness of \( K_0(x,y) \) are preserved:
 \[
-\widetilde{K}_0(x,y) = \widetilde{K}_0(y,x) \in \mathbb{R}, \quad \forall x, y \in \mathbb{R}.
+\widetilde{K}_0(x,y) = \widetilde{K}_0(y,x) \in \R, \qquad \forall x, y \in \R.
 \]
 
 \medskip
 \noindent\textbf{Conclusion.}
 The conjugated kernel \( \widetilde{K}_0(x,y) \) is real and symmetric. Hence, the corresponding integral operator
 \[
-(L_{\mathrm{sym}} f)(x) := \int_{\mathbb{R}} \widetilde{K}_0(x,y)\, f(y)\, dy
+(L_{\sym} f)(x) := \int_{\R} \widetilde{K}_0(x,y)\, f(y)\, dy
 \]
-is symmetric on \( L^2(\mathbb{R}) \). By unitary equivalence via \( U f = \Psi_\alpha^{1/2} f \), it follows that \( L_{\mathrm{sym}} \) is symmetric on \( H_{\Psi_\alpha} \), initially defined on the dense core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \). This symmetry underpins the self-adjointness of \( L_{\mathrm{sym}} \) developed in later chapters.
+is symmetric on \( L^2(\R) \). By unitary equivalence via \( (U f)(x) := \Psi_\alpha(x)^{1/2} f(x) \), it follows that \( L_{\sym} \) is symmetric on \( \HPsi \), initially defined on the dense core \( \Schwartz \subset \HPsi \). This symmetry underpins the self-adjointness of \( L_{\sym} \) developed in later chapters.
 \end{proof}

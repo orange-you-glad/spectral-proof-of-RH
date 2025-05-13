@@ -1,0 +1,27 @@
+\begin{lemma}[Unitary Conjugation and Trace-Class Equivalence]
+\label{lem:unitary_conjugation_trace_class}
+Let \( U \colon \mathcal{H} \to \widetilde{\mathcal{H}} \) be a unitary isomorphism between Hilbert spaces, and let \( T \colon \mathcal{H} \to \mathcal{H} \) be a bounded operator. Define the conjugated operator
+\[
+\widetilde{T} := U T U^{-1} \colon \widetilde{\mathcal{H}} \to \widetilde{\mathcal{H}}.
+\]
+
+Then for all \( 1 \le p \le \infty \),
+\[
+T \in \mathcal{C}_p(\mathcal{H}) \quad \iff \quad \widetilde{T} \in \mathcal{C}_p(\widetilde{\mathcal{H}}),
+\]
+and
+\[
+\| \widetilde{T} \|_{\mathcal{C}_p} = \| T \|_{\mathcal{C}_p}.
+\]
+
+In particular:
+\begin{itemize}
+  \item If \( T \in \mathcal{C}_1(\mathcal{H}) \), then \( \widetilde{T} \in \mathcal{C}_1(\widetilde{\mathcal{H}}) \) with equal trace norm.
+  \item The spectrum and Fredholm determinant satisfy:
+  \[
+  \det\nolimits_\zeta(I - \lambda T) = \det\nolimits_\zeta(I - \lambda \widetilde{T}), \qquad \forall \lambda \in \C.
+  \]
+\end{itemize}
+
+This lemma applies, for example, when \( \mathcal{H} = H_{\Psi_\alpha} \), \( \widetilde{\mathcal{H}} = L^2(\R) \), and \( U f(x) := \Psi_\alpha(x)^{1/2} f(x) \) is the exponential conjugation map.
+\end{lemma}

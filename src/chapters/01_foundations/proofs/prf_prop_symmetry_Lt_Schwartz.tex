@@ -1,9 +1,9 @@
 \begin{proof}[Proof of \propref{prop:symmetry_Lt_Schwartz}]
-Let \( f, g \in \mathcal{S}(\mathbb{R}) \subset H_\Psi \), and define the convolution operator
+Let \( f, g \in \Schwartz \subset H_\Psi \), and define the convolution operator
 \[
-(L_t f)(x) := \int_{\mathbb{R}} \phi_t(x - y)\, f(y)\, dy,
+(L_t f)(x) := \int_{\R} \phi_t(x - y)\, f(y)\, dy,
 \]
-where \( \phi_t \in \mathcal{S}(\mathbb{R}) \) is real-valued and even.
+where \( \phi_t \in \Schwartz \) is real-valued and even.
 
 \medskip
 \noindent\textbf{Step 1: Compute the Weighted Inner Product.}
@@ -11,26 +11,26 @@ We compute:
 \[
 \begin{aligned}
 \langle L_t f, g \rangle_{H_\Psi}
-&= \int_{\mathbb{R}} (L_t f)(x)\, \overline{g(x)}\, \Psi(x)\, dx \\
-&= \iint_{\mathbb{R}^2} \phi_t(x - y)\, f(y)\, \overline{g(x)}\, \Psi(x)\, dy\, dx.
+&= \int_{\R} (L_t f)(x)\, \overline{g(x)}\, \Psi(x)\, dx \\
+&= \iint_{\R^2} \phi_t(x - y)\, f(y)\, \overline{g(x)}\, \Psi(x)\, dy\, dx.
 \end{aligned}
 \]
 
 \medskip
 \noindent\textbf{Step 2: Fubini and Symmetry of \( \phi_t \).}
-Since \( \phi_t \in \mathcal{S}(\mathbb{R}) \) and \( \Psi(x) \sim e^{\alpha |x|} \), the integrand is absolutely integrable. By Fubini’s theorem:
+Since \( \phi_t \in \Schwartz \) and \( \Psi(x) \sim e^{\alpha |x|} \), the integrand is absolutely integrable. By Fubini’s theorem:
 \[
 \langle L_t f, g \rangle_{H_\Psi}
-= \int_{\mathbb{R}} f(y) \left( \int_{\mathbb{R}} \phi_t(x - y)\, \overline{g(x)}\, \Psi(x)\, dx \right) dy.
+= \int_{\R} f(y) \left( \int_{\R} \phi_t(x - y)\, \overline{g(x)}\, \Psi(x)\, dx \right) dy.
 \]
 
 Since \( \phi_t \) is even, \( \phi_t(x - y) = \phi_t(y - x) \), and
 \[
-(L_t g)(y) = \int_{\mathbb{R}} \phi_t(y - x)\, g(x)\, dx = \int_{\mathbb{R}} \phi_t(x - y)\, g(x)\, dx.
+(L_t g)(y) = \int_{\R} \phi_t(y - x)\, g(x)\, dx = \int_{\R} \phi_t(x - y)\, g(x)\, dx.
 \]
 Therefore,
 \[
-\overline{(L_t g)(y)} = \int_{\mathbb{R}} \phi_t(x - y)\, \overline{g(x)}\, dx.
+\overline{(L_t g)(y)} = \int_{\R} \phi_t(x - y)\, \overline{g(x)}\, dx.
 \]
 
 \medskip
@@ -38,10 +38,10 @@ Therefore,
 Substituting into the outer integral:
 \[
 \langle L_t f, g \rangle_{H_\Psi}
-= \int_{\mathbb{R}} f(y)\, \overline{(L_t g)(y)}\, \Psi(y)\, dy = \langle f, L_t g \rangle_{H_\Psi}.
+= \int_{\R} f(y)\, \overline{(L_t g)(y)}\, \Psi(y)\, dy = \langle f, L_t g \rangle_{H_\Psi}.
 \]
 
 \medskip
 \noindent\textbf{Conclusion.}
-This verifies that \( L_t \) is symmetric on the Schwartz core \( \mathcal{S}(\mathbb{R}) \subset H_\Psi \). The symmetry follows directly from the real-valuedness and evenness of \( \phi_t \) and ensures that \( L_t \subset L_t^* \). This property is a foundational step in establishing essential self-adjointness of the strong limit \( L_{\mathrm{sym}} \).
+This verifies that \( L_t \) is symmetric on the Schwartz core \( \Schwartz \subset H_\Psi \). The symmetry follows directly from the real-valuedness and evenness of \( \phi_t \) and ensures that \( L_t \subset L_t^* \). This property is a foundational step in establishing essential self-adjointness of the strong limit \( L_{\sym} \).
 \end{proof}

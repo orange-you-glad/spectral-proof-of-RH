@@ -1,0 +1,30 @@
+\begin{lemma}[Failure of Trace-Class Inclusion for \( \alpha \le \pi \)]
+\label{lem:trace_class_failure_alpha_leq_pi}
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define the inverse Fourier transform
+\[
+k(x) := \FT^{-1}[\phi](x), \qquad \text{with } \phi \in PW_\pi(\R).
+\]
+
+Set \( K(x,y) := k(x - y) \) and fix \( \alpha > 0 \). Then:
+\begin{itemize}
+    \item[\textup{(i)}] There exists a constant \( c > 0 \) such that
+    \[
+    |k(x)| \ge c\, e^{-\pi |x|}, \qquad \text{as } |x| \to \infty.
+    \]
+
+    \item[\textup{(ii)}] For any \( \alpha \le \pi \), the conjugated kernel
+    \[
+    K(x,y)\, \Psi_\alpha(x)\Psi_\alpha(y) = k(x - y)\, e^{\alpha(|x| + |y|)}
+    \]
+    does not lie in \( L^1(\R^2) \). That is,
+    \[
+    \iint_{\R^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy = \infty.
+    \]
+
+    \item[\textup{(iii)}] Consequently, for \( \alpha \le \pi \), the convolution operator
+    \[
+    (Lf)(x) := \int_{\R} k(x - y)\, f(y)\, dy
+    \]
+    fails to lie in \( \mathcal{C}_1(\HPsi) \), and Simon’s kernel trace-class criterion does not apply.
+\end{itemize}
+\end{lemma}

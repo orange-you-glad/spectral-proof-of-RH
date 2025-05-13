@@ -3,43 +3,51 @@
 
 \textbf{Operator-Theoretic Foundations}
 \begin{itemize}
-  \item \defref{def:compact-operator} — Compact operators on Hilbert spaces: norm limit of finite-rank operators; discrete spectrum.
-  \item \defref{def:trace-class-operator} — Trace-class operators via singular value summability; \( \mathcal{C}_1(H) \subset \mathcal{K}(H) \).
-  \item \defref{def:trace-norm} — Trace norm \( \|T\|_{\operatorname{Tr}} := \operatorname{Tr}(|T|) \); unitarily invariant, Banach complete.
-  \item \defref{def:selfadjoint-operator} — Self-adjoint operators as maximal symmetric closures; supports spectral theorem.
+  \item \defref{def:compact_operator} — Compact operators on Hilbert spaces: norm limit of finite-rank operators; discrete spectrum.
+  \item \defref{def:trace_class_operator} — Trace-class operators via singular value summability; \( \mathcal{C}_1(H) \subset \mathcal{K}(H) \).
+  \item \defref{def:trace_norm} — Trace norm \( \|T\|_{\Tr} := \Tr(|T|) \); unitarily invariant, Banach complete.
+  \item \defref{def:selfadjoint_operator} — Self-adjoint operators as maximal symmetric closures; supports spectral theorem.
 \end{itemize}
 
 \textbf{Weighted Spaces and Function Classes}
 \begin{itemize}
-  \item \defref{def:exponential-weight} — Exponential weights \( \Psi_\alpha(x) := e^{\alpha |x|} \) and weighted Hilbert spaces \( H_{\Psi_\alpha} \).
-  \item \defref{def:weighted-schwartz-space} — Weighted Schwartz spaces \( \mathcal{S}_w(\mathbb{R}) \subset H_{\Psi_\alpha} \); core for convolution operators.
+  \item \defref{def:exponential_weight} — Exponential weights \( \Psi_\alpha(x) := e^{\alpha |x|} \) and weighted Hilbert spaces \( \HPsi \).
+  \item \defref{def:weighted_schwartz_space} — Weighted Schwartz spaces \( \mathcal{S}_w(\R) \subset \HPsi \); core for convolution operators.
 \end{itemize}
 
 \textbf{Analytic and Spectral Estimates}
 \begin{itemize}
-  \item \lemref{lem:density-schwartz-weighted-L2} — Density of \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \); core for operator domains.
-  \item \lemref{lem:xi-growth-bound} — Exponential type \( \pi \) bound for \( \Xi(\tfrac{1}{2} + i\lambda) \); key for Paley–Wiener analysis.
-  \item \lemref{lem:weighted-L1-inverse-FT-xi} — Weighted \( L^1 \)-integrability of \( \widehat{\Xi} \); ensures convolution kernel decay.
-  \item \lemref{lem:decay-mollified-kernel} — Exponential decay of mollified kernels \( K_t(x,y) \).
-  \item \lemref{lem:L1-integrability-conjugated-kernel} — \( L^1 \)-integrability of \( \widetilde{K}_t \) under exponential conjugation.
-  \item \lemref{lem:uniform-L1-conjugated-kernel} — Uniform kernel bounds ensure trace-norm convergence.
-  \item \lemref{lem:kernel-symmetry} — Evenness and symmetry of the limiting kernel.
+  \item \lemref{lem:density_schwartz_weighted_L2} — Density of \( \Schwartz \subset \HPsi \); core for operator domains.
+  \item \lemref{lem:xi_growth_bound} — Exponential type \( \pi \) bound for \( \Xi(\tfrac{1}{2} + i\lambda) \); key for Paley--Wiener analysis.
+  \item \lemref{lem:weighted_L1_inverse_FT_xi} — Weighted \( L^1 \)-integrability of \( \widehat{\Xi} \); ensures convolution kernel decay.
+  \item \lemref{lem:decay_mollified_kernel} — Exponential decay of mollified kernels \( K_t(x,y) \).
+  \item \lemref{lem:L1_integrability_conjugated_kernel} — \( L^1 \)-integrability of \( \widetilde{K}_t \) under exponential conjugation.
+  \item \lemref{lem:uniform_L1_conjugated_kernel} — Uniform kernel bounds ensure trace-norm convergence.
+  \item \lemref{lem:kernel_symmetry} — Evenness and symmetry of the limiting kernel.
   \item \lemref{lem:trace_class_via_weighted_L1} — Simon’s kernel condition used to establish trace-class property.
-  \item \lemref{lem:trace-class-conjugated-kernel} — Flat-space transfer of trace-class regularity.
+  \item \lemref{lem:trace_class_conjugated_kernel} — Flat-space transfer of trace-class regularity.
+  \item \lemref{lem:trace_class_failure_alpha_leq_pi} — Sharpness of exponential decay: trace-class inclusion fails when \( \alpha \le \pi \).
+  \item \lemref{lem:unitary_conjugation_trace_class} — Schatten norm and trace-class invariance under unitary conjugation.
 \end{itemize}
 
 \textbf{Operator Boundedness, Symmetry, and Compactness}
 \begin{itemize}
-  \item \propref{prop:boundedness-Lt-weighted} — Boundedness of \( L_t \) on \( H_\Psi \) via mollifier decay.
-  \item \propref{prop:compactness-Lt} — Compactness of \( L_t \) via Hilbert–Schmidt estimates.
-  \item \propref{prop:symmetry-Lt-Schwartz} — Symmetry of \( L_t \) on \( \mathcal{S}(\mathbb{R}) \).
-  \item \propref{prop:selfadjointness-Lt} — Self-adjoint extension of \( L_t \) as bounded symmetric operator.
+  \item \propref{prop:boundedness_Lt_weighted} — Boundedness of \( L_t \) on \( H_\Psi \) via mollifier decay.
+  \item \propref{prop:compactness_Lt} — Compactness of \( L_t \) via Hilbert--Schmidt estimates.
+  \item \propref{prop:symmetry_Lt_Schwartz} — Symmetry of \( L_t \) on \( \Schwartz \).
+  \item \propref{prop:selfadjointness_Lt} — Self-adjoint extension of \( L_t \) as bounded symmetric operator.
+  \item \propref{prop:core_schwartz_density} — \( \Schwartz \) is a core for \( L_{\sym} \); graph norm convergence.
+\end{itemize}
+
+\textbf{Canonical Operator Realization}
+\begin{itemize}
+  \item \thmref{thm:canonical_operator_realization} — Canonical construction of \( L_{\sym} \in \mathcal{C}_1(\HPsi) \); spectral determinant identity for \( \Xi(\tfrac{1}{2} + i\lambda) \).
 \end{itemize}
 
 \paragraph{Chapter Closure.}
-This chapter establishes the operator-theoretic and analytic infrastructure for the canonical operator \( L_{\mathrm{sym}} \). Core results include boundedness, kernel decay, trace-class regularity, and self-adjointness, all realized within the weighted space \( H_{\Psi_\alpha} \). These form the analytic backbone for the determinant identity
+This chapter establishes the operator-theoretic and analytic infrastructure for the canonical operator \( L_{\sym} \). Core results include boundedness, kernel decay, trace-class regularity, and self-adjointness, all realized within the weighted space \( \HPsi \). These form the analytic backbone for the determinant identity
 \[
-\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
+\det\nolimits_{\zeta}(I - \lambda L_{\sym})
 = \frac{\Xi\left(\tfrac{1}{2} + i\lambda \right)}{\Xi\left(\tfrac{1}{2} \right)},
 \]
 which will be developed rigorously in the determinant and spectral chapters that follow.

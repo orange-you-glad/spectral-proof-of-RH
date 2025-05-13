@@ -1,39 +1,39 @@
 \begin{proposition}[Boundedness of \( L_t \) on Weighted Hilbert Space]
 \label{prop:boundedness_Lt_weighted}
-Let \( \Psi \colon \mathbb{R} \to (0,\infty) \) be a smooth, strictly positive weight function satisfying
+Let \( \Psi \colon \R \to (0,\infty) \) be a smooth, strictly positive weight function satisfying
 \[
 \Psi(x) \sim e^{\alpha |x|} \quad \text{as } |x| \to \infty,
 \]
 for some fixed \( \alpha > 0 \); that is, there exist constants \( c_1, c_2 > 0 \) such that
 \[
-c_1 e^{\alpha |x|} \le \Psi(x) \le c_2 e^{\alpha |x|}, \quad \forall x \in \mathbb{R}.
+c_1 e^{\alpha |x|} \le \Psi(x) \le c_2 e^{\alpha |x|}, \quad \forall x \in \R.
 \]
 
 Define the exponentially weighted Hilbert space
 \[
-H_\Psi := L^2(\mathbb{R}, \Psi(x)\, dx).
+H_\Psi := L^2(\R, \Psi(x)\, dx).
 \]
 
-Suppose \( \phi_t \in \mathcal{S}(\mathbb{R}) \) is real-valued, even, and satisfies: for each \( N > 0 \), there exists a constant \( C_N(t) > 0 \) such that
+Suppose \( \phi_t \in \Schwartz \) is real-valued, even, and satisfies: for each \( N > 0 \), there exists a constant \( C_N(t) > 0 \) such that
 \[
-|\phi_t(z)| \le C_N(t)\, (1 + |z|)^{-N}, \quad \forall z \in \mathbb{R}.
+|\phi_t(z)| \le C_N(t)\, (1 + |z|)^{-N}, \quad \forall z \in \R.
 \]
 
 Define the convolution operator
 \[
-(L_t f)(x) := \int_{\mathbb{R}} \phi_t(x - y)\, f(y)\, dy, \quad f \in \mathcal{S}(\mathbb{R}).
+(L_t f)(x) := \int_{\R} \phi_t(x - y)\, f(y)\, dy, \quad f \in \Schwartz.
 \]
 
 Then \( L_t \) extends uniquely to a bounded linear operator on \( H_\Psi \), and there exists a constant \( C_t(\alpha) > 0 \) such that
 \[
-\| L_t f \|_{H_\Psi} \le C_t(\alpha) \cdot \| f \|_{H_\Psi}, \quad \forall f \in H_\Psi.
+\| L_t f \|_{H_\Psi} \le C_t(\alpha) \cdot \| f \|_{H_\Psi}, \qquad \forall f \in H_\Psi.
 \]
 
 In particular:
 \begin{itemize}
     \item Each \( L_t \in \mathcal{B}(H_\Psi) \) is well-defined and bounded;
-    \item The family \( \{L_t\}_{t > 0} \subset \mathcal{B}(H_\Psi) \) is uniformly bounded on compact t-intervals;
-    \item The strong operator limit \( L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \) exists on \( H_\Psi \), due to strong convergence on a dense core and uniform boundedness;
+    \item The family \( \{L_t\}_{t > 0} \subset \mathcal{B}(H_\Psi) \) is uniformly bounded on compact \( t \)-intervals;
+    \item The strong operator limit \( L_{\sym} := \lim_{t \to 0^+} L_t \) exists on \( H_\Psi \), due to strong convergence on a dense core and uniform boundedness;
     \item The exponential decay of \( \phi_t \) ensures trace-norm control and convergence in \( \mathcal{C}_1(H_\Psi) \).
 \end{itemize}
 \end{proposition}

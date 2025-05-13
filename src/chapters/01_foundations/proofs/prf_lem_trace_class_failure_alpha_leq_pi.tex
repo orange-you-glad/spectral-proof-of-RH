@@ -1,0 +1,46 @@
+\begin{proof}[Proof of \lemref{lem:trace_class_failure_alpha_leq_pi}]
+\textbf{(i) Lower Envelope Bound for \( k \).}
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \in PW_\pi(\R) \). By the Paley--Wiener theorem (see \cite[Thm.~3.2.4]{Levin1996EntireLectures}), its inverse Fourier transform
+\[
+k(x) := \frac{1}{2\pi} \int_{\R} e^{i\lambda x} \phi(\lambda)\, d\lambda
+\]
+is supported in the interval \( [-\pi, \pi] \) in the complex-analytic sense, and satisfies
+\[
+|k(x)| \le C_\epsilon e^{-(\pi - \epsilon)|x|}, \qquad \forall \epsilon > 0.
+\]
+Moreover, as established in classical estimates (cf. \cite[§4.12]{Titchmarsh1986Zeta}), there exists \( c > 0 \) such that
+\[
+|k(x)| \ge c\, e^{-\pi |x|}, \qquad \text{for all sufficiently large } |x|.
+\]
+
+\medskip
+\noindent\textbf{(ii) Failure of \( L^1(\Psi_\alpha^{\otimes 2}) \) for \( \alpha \le \pi \).}
+Set \( K(x,y) := k(x - y) \) and fix \( \Psi_\alpha(x) := e^{\alpha |x|} \). Then
+\[
+\iint_{\R^2} |K(x,y)|\, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\,dy = \iint_{\R^2} |k(x - y)|\, e^{\alpha(|x| + |y|)}\, dx\,dy.
+\]
+Make the change of variables \( u := x - y \), \( v := y \), so \( x = u + v \), \( dx\,dy = du\,dv \). Then
+\[
+= \int_{\R} |k(u)| \left( \int_{\R} e^{\alpha(|u + v| + |v|)}\, dv \right) du.
+\]
+Use the inequality \( |u + v| + |v| \ge |u| \) to get
+\[
+\int_{\R} e^{\alpha(|u + v| + |v|)}\, dv \ge e^{\alpha |u|} \int_{\R} e^{\alpha |v|}\, dv = C_\alpha\, e^{\alpha |u|}.
+\]
+Hence,
+\[
+\iint |K(x,y)| \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy \ge C_\alpha \int_{\R} |k(u)|\, e^{\alpha |u|} du.
+\]
+From part (i), \( |k(u)| \gtrsim e^{-\pi |u|} \), so for \( \alpha \le \pi \),
+\[
+\int_{\R} |k(u)|\, e^{\alpha |u|} du \gtrsim \int_{\R} e^{-(\pi - \alpha)|u|} du = \infty.
+\]
+
+\medskip
+\noindent\textbf{(iii) Conclusion.}
+We conclude that \( K \notin L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \), so the convolution operator
+\[
+(Lf)(x) := \int_{\R} k(x - y)\, f(y)\, dy
+\]
+fails to be trace class in \( \mathcal{C}_1(\HPsi) \) when \( \alpha \le \pi \). Thus, \( \alpha > \pi \) is sharp for ensuring trace-class regularity of \( L_{\sym} \).
+\end{proof}

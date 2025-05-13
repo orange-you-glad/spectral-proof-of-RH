@@ -1,26 +1,48 @@
 \subsection*{Introduction}
 
-This chapter establishes the analytic infrastructure for defining and analyzing the canonical compact operator \( L_{\mathrm{sym}} \), which realizes the completed Riemann zeta function \( \Xi(s) \) via its Fredholm determinant. The primary goal is to verify that mollified convolution operators associated with the inverse Fourier transform of \( \Xi \) are compact, trace class, and converge in trace norm to a self-adjoint limit operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \).
+This chapter establishes the analytic infrastructure for defining and analyzing the canonical compact operator \( L_{\sym} \), which realizes the completed Riemann zeta function \( \Xi(s) \) via its Fredholm determinant. The primary goal is to verify that mollified convolution operators associated with the inverse Fourier transform of \( \Xi \) are compact, trace class, and converge in trace norm to a self-adjoint limit operator \( L_{\sym} \in \mathcal{C}_1(\HPsi) \).
+
+\begin{center}
+\begin{tikzpicture}[node distance=20pt, every node/.style={align=center},>=Stealth]
+  \node (phi) [draw, rectangle] {\( \phi_t(\lambda) := e^{-t\lambda^2} \Xi(\tfrac{1}{2} + i\lambda) \)};
+  \node (kt) [draw, rectangle, below=of phi] {\( k_t(x) := \FT^{-1}[\phi_t](x) \)};
+  \node (kernel) [draw, rectangle, below=of kt] {\( K_t(x,y) := k_t(x - y) \)};
+  \node (op) [draw, rectangle, below=of kernel] {\( (L_t f)(x) := \int_{\R} K_t(x,y) f(y)\,dy \)};
+  \node (limit) [draw, rectangle, below=of op, yshift=-0cm] {\( L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi) \)};
+  \node (det) [draw, rectangle, below=of limit, yshift=-0cm] {\( \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})} \)};
+
+  \draw[->] (phi) -- (kt);
+  \draw[->] (kt) -- (kernel);
+  \draw[->] (kernel) -- (op);
+  \draw[->] (op) -- (limit);
+  \draw[->] (limit) -- (det);
+\end{tikzpicture}
+\end{center}
+
+\noindent
+This pipeline links mollified spectral data to compact operator realization and determinant recovery.
+
+\medskip
 
 The constructions here verify:
 
 \begin{itemize}
-    \item Schatten-class properties of Hilbert–Schmidt and trace-class operators, following \cite[Ch.~4]{Simon2005TraceIdeals} and \cite[Ch.~VI]{ReedSimon1980I}, including the completeness of \( \mathcal{C}_1 \) and the trace-norm topology.
-    
+    \item Schatten-class properties of Hilbert--Schmidt and trace-class operators, following \cite[Ch.~4]{Simon2005TraceIdeals} and \cite[Ch.~VI]{ReedSimon1980I}, including the completeness of \( \mathcal{C}_1 \) and the trace-norm topology.
+
     \item Sufficient conditions for compactness and self-adjointness of integral operators with symmetric Hermitian kernels, using distributional domains and exponential conjugation.
-    
-    \item The structure of the weighted Schwartz space \( \mathcal{S}_\alpha(\mathbb{R}) \subset L^2(\mathbb{R}, e^{\alpha |x|}\, dx) \), for \( \alpha > \pi \), ensuring Fourier duality and decay control for entire functions of exponential type \( \pi \) \cite{Levin1996EntireLectures}.
-    
+
+    \item The structure of the weighted Schwartz space \( \Schwartz_\alpha(\R) \subset L^2(\R, e^{\alpha |x|}\, dx) \), for \( \alpha > \pi \), ensuring Fourier duality and decay control for entire functions of exponential type \( \pi \) \cite{Levin1996EntireLectures}.
+
     \item Uniform kernel bounds and mollifier admissibility for defining the regularized heat operators \( e^{-t L_t^2} \), together with analytic kernel estimates necessary for short-time trace control and Tauberian convergence.
 \end{itemize}
 
 These ingredients culminate in the construction of mollified convolution operators \( L_t \), and in the verification of trace-norm convergence
 \[
-L_t \to L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \quad \text{as } t \to 0^+.
+L_t \to L_{\sym} \in \mathcal{C}_1(\HPsi) \quad \text{as } t \to 0^+.
 \]
 This limit defines the canonical spectral operator underlying the determinant identity
 \[
-\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
 \]
 which is rigorously established without assuming RH.
 

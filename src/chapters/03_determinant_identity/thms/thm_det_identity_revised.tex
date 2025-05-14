@@ -2,22 +2,22 @@
 \label{thm:det_identity_revised}
 \leavevmode
 \begin{tcolorbox}[colback=gray!3!white,colframe=black!75!white,title={\textbf{Canonical Determinant Identity}}]
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the compact, self-adjoint operator constructed in Section~\ref{sec:operator-construction} via convolution with the inverse Fourier transform of the completed Riemann zeta profile:
+Let \( L_{\sym} \in \TC(\HPsi) \) be the compact, self-adjoint operator constructed in \cref{sec:operator_construction} via convolution with the inverse Fourier transform of the completed Riemann zeta profile:
 \[
-\lambda \mapsto \Xi\left(\tfrac{1}{2} + i\lambda\right).
+\lambda \mapsto \Xi\left( \tfrac{1}{2} + i\lambda \right).
 \]
 
 \medskip
 
 Then the Carleman \(\zeta\)-regularized Fredholm determinant
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym})
 \]
 is an entire function of order one and exact exponential type \( \pi \), satisfying the canonical analytic identity:
 \begin{equation}
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
-\qquad \forall \lambda \in \mathbb{C}.
+\det\nolimits_\zeta(I - \lambda L_{\sym})
+= \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\qquad \forall \lambda \in \C.
 \label{eq:determinant_identity}
 \end{equation}
 
@@ -25,20 +25,20 @@ is an entire function of order one and exact exponential type \( \pi \), satisfy
 
 This identity holds canonically with the following features:
 \begin{itemize}
-  \item \textbf{Spectral Encoding.} The zeros of the determinant coincide with the nontrivial zeros \( \rho \in \mathbb{C} \) of \( \zeta(s) \), via the spectral map
+  \item \textbf{Spectral Encoding.} The zeros of the determinant coincide with the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \), via the spectral map
   \[
-  \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \operatorname{Spec}(L_{\mathrm{sym}}),
+  \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym}),
   \]
   preserving multiplicities.
 
-  \item \textbf{Normalization.} The value \( \Xi(\tfrac{1}{2}) \ne 0 \) is known (see, e.g., \cite[Thm.~2.3]{Titchmarsh1986Zeta}), so the identity is canonically normalized at \( \lambda = 0 \), and
+  \item \textbf{Normalization.} The value \( \Xi(\tfrac{1}{2}) \ne 0 \) is known (see, e.g.,~\cite[Thm.~2.3]{Titchmarsh1986Zeta}), so the identity is canonically normalized at \( \lambda = 0 \), and
   \[
   f(0) = \det\nolimits_\zeta(I) = 1.
   \]
 
   \item \textbf{Hadamard Classification.} The function \( f(\lambda) \in \mathcal{E}_1^\pi \), the Hadamard class of entire functions of order one and exponential type \( \pi \), uniquely determined by their zero set and normalization.
 
-  \item \textbf{Uniqueness.} By Hadamard’s factorization theorem (see \cite[Ch.~3]{Levin1996EntireLectures}), the identity \eqref{eq:determinant-identity} is the unique such function in \( \mathcal{E}_1^\pi \) whose zero set matches the spectrum \( \{ \lambda_\rho = i(\rho - \tfrac{1}{2}) \} \) and whose normalization satisfies \( f(0) = 1 \).
+  \item \textbf{Uniqueness.} By Hadamard’s factorization theorem~\cite[Ch.~3]{Levin1996EntireLectures}, the identity \eqref{eq:determinant_identity} is the unique such function in \( \mathcal{E}_1^\pi \) whose zero set matches the spectrum \( \{ \lambda_\rho = i(\rho - \tfrac{1}{2}) \} \) and whose normalization satisfies \( f(0) = 1 \).
 \end{itemize}
 \end{tcolorbox}
 \end{theorem}

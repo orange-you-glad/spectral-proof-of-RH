@@ -1,33 +1,44 @@
-\begin{proof}[Proof of Lemma~\ref{lem:laplace_preserves_entire_type}]
-Let
+\begin{proof}[Proof of \cref{lem:laplace_preserves_entire_type}]
+Define
 \[
 f(\lambda) := \log \det\nolimits_\zeta(I - \lambda L)
-= - \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL})\, dt.
+= - \int_0^\infty \frac{e^{-\lambda t}}{t} \, \Tr(e^{-tL}) \, dt.
 \]
 
 \paragraph{(i) Convergence and analyticity.}
-From the short-time estimate \( \operatorname{Tr}(e^{-tL}) \le A t^{-1} e^{-c/t} \), we see that the integrand is dominated by \( A t^{-2} e^{-c/t} e^{|\lambda| t} \) for small \( t \). Since \( e^{-c/t} \) decays faster than any polynomial in \( t \) as \( t \to 0^+ \), the integral is absolutely convergent for all \( \lambda \in \mathbb{C} \).
+From the short-time estimate \( \Tr(e^{-tL}) \le A t^{-1} e^{-c/t} \), we have
+\[
+\left| \frac{e^{-\lambda t}}{t} \Tr(e^{-tL}) \right| \le A t^{-2} e^{-c/t} e^{|\lambda| t}
+\quad \text{as } t \to 0^+.
+\]
+Since \( e^{-c/t} \) decays faster than any polynomial as \( t \to 0^+ \), this dominates the singularity at \( t = 0 \) and ensures convergence near the origin.
 
-From the long-time estimate \( \operatorname{Tr}(e^{-tL}) \le B e^{-\delta t} \), the integrand decays like \( e^{-(\delta - |\lambda|) t} \) for large \( t \), ensuring absolute convergence and entire analyticity in \( \lambda \).
+For large \( t \), the long-time estimate \( \Tr(e^{-tL}) \le B e^{-\delta t} \) implies
+\[
+\left| \frac{e^{-\lambda t}}{t} \Tr(e^{-tL}) \right| \le B t^{-1} e^{-(\delta - |\lambda|) t},
+\]
+which is integrable for all \( \lambda \in \C \). Thus the integral defining \( f(\lambda) \) converges absolutely and uniformly on compact subsets of \( \C \), proving that \( f \) is entire.
 
 \paragraph{(ii) Growth and order estimate.}
-We now estimate
+Split the integral:
 \[
-|f(\lambda)| = \left| \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL}) \, dt \right|.
+|f(\lambda)| \le \int_0^1 \frac{e^{|\lambda| t}}{t} A t^{-1} e^{-c/t} dt
++ \int_1^\infty \frac{e^{|\lambda| t}}{t} B e^{-\delta t} dt.
 \]
-Split the integral at \( t = 1 \):
+For the first term, note that \( e^{-c/t} \le C_k t^k \) for all \( k > 0 \), so
 \[
-\int_0^1 \frac{e^{|\lambda| t}}{t} \cdot A t^{-1} e^{-c/t} dt \le C_1 |\lambda|,
-\qquad
-\int_1^\infty \frac{e^{|\lambda| t}}{t} \cdot B e^{-\delta t} dt \le C_2 \log(1 + |\lambda|),
+\int_0^1 \frac{e^{|\lambda| t}}{t} \cdot A t^{-1} e^{-c/t} dt \le C_1 |\lambda|.
 \]
-for constants \( C_1, C_2 > 0 \). Thus
+For the second term,
+\[
+\int_1^\infty \frac{e^{|\lambda| t}}{t} \cdot B e^{-\delta t} dt \le C_2 \log(1 + |\lambda|).
+\]
+Combining both estimates:
 \[
 |f(\lambda)| \le C |\lambda| \log(1 + |\lambda|),
 \]
-which implies that \( f \) is entire of order one. Since \( \exp(f(\lambda)) = \det\nolimits_\zeta(I - \lambda L) \), the exponential type is controlled by the location of singularities in the Laplace variable, and bounded above by the exponential type of the Fourier transform of the kernel (which is supported in \( [-\pi, \pi] \)), yielding exponential type \( \le \pi \).
+for some constant \( C > 0 \). This confirms that \( f \) is of order one and exponential type bounded by \( \pi \), by standard Paley--Wiener estimates on Laplace transforms of heat kernels with trace asymptotics~\cite[Ch.~9]{Levin1996EntireLectures}.
 
 \paragraph{Conclusion.}
-The determinant is an entire function of order one and exponential type \( \le \pi \), as claimed.
+The determinant \( \det\nolimits_\zeta(I - \lambda L) = e^{f(\lambda)} \) is an entire function of order one and exponential type \( \le \pi \), as claimed.
 \end{proof}
-%  

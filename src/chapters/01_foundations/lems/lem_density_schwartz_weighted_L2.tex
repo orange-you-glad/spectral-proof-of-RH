@@ -8,7 +8,7 @@ Let
 \[
 \HPsi := L^2(\R, \Psi_\alpha(x)\, dx)
 \]
-denote the associated weighted Hilbert space, equipped with inner product
+denote the corresponding weighted Hilbert space, with inner product
 \[
 \langle f, g \rangle_{\HPsi} := \int_{\R} f(x) \overline{g(x)}\, \Psi_\alpha(x)\, dx,
 \]
@@ -17,8 +17,16 @@ and norm
 \|f\|_{\HPsi} := \left( \int_{\R} |f(x)|^2\, e^{\alpha |x|} dx \right)^{1/2}.
 \]
 
-Then the Schwartz space \( \Schwartz \) is dense in \( \HPsi \); that is, for every \( f \in \HPsi \) and every \( \varepsilon > 0 \), there exists \( \phi \in \Schwartz \) such that
+Then the Schwartz space \( \Schwartz(\R) \) is dense in \( \HPsi \); that is, for every \( f \in \HPsi \) and \( \varepsilon > 0 \), there exists \( \phi \in \Schwartz(\R) \) such that
 \[
 \| f - \phi \|_{\HPsi} < \varepsilon.
 \]
+
+\medskip
+\noindent
+Moreover, the embeddings
+\[
+\Schwartz(\R) \hookrightarrow L^2(\R, \Psi_\alpha\, dx) \hookrightarrow \Schwartz'(\R)
+\]
+are continuous, and \( \Schwartz(\R) \) serves as a domain core for convolution operators with Paley--Wiener kernels. In particular, it is a graph-norm core for \( L_{\sym} \in \TC(\HPsi) \) (see \cref{prop:core_schwartz_density}).
 \end{lemma}

@@ -1,0 +1,36 @@
+\begin{proof}[Proof of \cref{lem:trace_norm_limit_unique}]
+Let \( \{L_t\}_{t > 0} \subset \TC(H_{\Psi_\alpha}) \) be a net of mollified convolution operators satisfying
+\[
+\lim_{t \to 0^+} \|L_t - L^{(1)}\|_{\TC} = 0, \qquad
+\lim_{t \to 0^+} \|L_t - L^{(2)}\|_{\TC} = 0,
+\]
+for some \( L^{(1)}, L^{(2)} \in \TC(H_{\Psi_\alpha}) \).
+
+\paragraph{Step 1: Use completeness of the trace-norm space.}
+Since \( \TC(H_{\Psi_\alpha}) \) is a Banach space under the trace norm \( \|\cdot\|_{\TC} \), and norm convergence implies uniqueness of the limit, we compute:
+\[
+\|L^{(1)} - L^{(2)}\|_{\TC}
+\le \|L^{(1)} - L_t\|_{\TC} + \|L_t - L^{(2)}\|_{\TC}.
+\]
+Taking the limit as \( t \to 0^+ \), we find
+\[
+\limsup_{t \to 0^+} \|L^{(1)} - L^{(2)}\|_{\TC} \le 0,
+\]
+so \( L^{(1)} = L^{(2)} \).
+
+\paragraph{Step 2: Independence of mollifier sequence.}
+Suppose two mollifier families \( \{L_t^{(1)}\}, \{L_t^{(2)}\} \subset \TC(H_{\Psi_\alpha}) \) converge trace-norm close:
+\[
+\|L_t^{(1)} - L_t^{(2)}\|_{\TC} \to 0.
+\]
+Then their limits must coincide:
+\[
+\|L^{(1)} - L^{(2)}\|_{\TC}
+\le \|L^{(1)} - L_t^{(1)}\|_{\TC}
++ \|L_t^{(1)} - L_t^{(2)}\|_{\TC}
++ \|L_t^{(2)} - L^{(2)}\|_{\TC} \to 0.
+\]
+
+\paragraph{Conclusion.}
+The trace-norm limit \( L = \lim_{t \to 0^+} L_t \) is unique in \( \TC(H_{\Psi_\alpha}) \), independent of the mollifier sequence, due to completeness and uniqueness of limits in Banach spaces.
+\end{proof}

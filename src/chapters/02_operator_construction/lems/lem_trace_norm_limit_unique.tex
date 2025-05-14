@@ -1,0 +1,21 @@
+\begin{lemma}[Uniqueness of Trace-Norm Limit]
+\label{lem:trace_norm_limit_unique}
+Let \( \{L_t\}_{t > 0} \subset \TC(H_{\Psi_\alpha}) \) be a family of mollified convolution operators converging in trace norm:
+\[
+\lim_{t \to 0^+} \| L_t - L \|_{\TC} = 0,
+\]
+for some operator \( L \in \TC(H_{\Psi_\alpha}) \).
+
+Then the limit \( L \) is unique and independent of the mollifier sequence \( \{L_t\} \), provided the convergence occurs in the trace norm. That is, if two mollifier families \( \{L_t^{(1)}\} \), \( \{L_t^{(2)}\} \subset \TC(H_{\Psi_\alpha}) \) satisfy
+\[
+\|L_t^{(1)} - L_t^{(2)}\|_{\TC} \to 0 \quad \text{as } t \to 0^+,
+\]
+and each admits a trace-norm limit, then their limits coincide:
+\[
+\lim_{t \to 0^+} L_t^{(1)} = \lim_{t \to 0^+} L_t^{(2)} = L.
+\]
+
+\medskip
+\noindent
+This follows from the completeness of \( \TC(H_{\Psi_\alpha}) \) as a Banach space. The trace-norm topology ensures uniqueness of the limit and stability under perturbation by mollifiers.
+\end{lemma}

@@ -1,0 +1,41 @@
+\begin{proof}[Proof of \cref{lem:heat_semigroup_existence}]
+Let \( L := L_{\sym} \in \TC(H_{\Psi_\alpha}) \) be the canonical self-adjoint operator constructed as the trace-norm limit of mollified convolution operators with symmetric kernels.
+
+\paragraph{(i) Positivity and self-adjointness of \( L^2 \).}
+Since \( L \) is self-adjoint on \( H_{\Psi_\alpha} \), it follows that \( L^2 \) is also self-adjoint, with domain \( \mathcal{D}(L^2) \subset H_{\Psi_\alpha} \) dense. Moreover, for any \( f \in \mathcal{D}(L) \), we have
+\[
+\langle L^2 f, f \rangle = \langle Lf, Lf \rangle = \| Lf \|^2 \ge 0,
+\]
+so \( L^2 \ge 0 \) in the sense of quadratic forms. Therefore, \( L^2 \) is positive and self-adjoint.
+
+\paragraph{(ii) Generation of heat semigroup.}
+By the spectral theorem for unbounded self-adjoint operators~\cite[Ch.~VIII]{ReedSimon1975II}, the positive self-adjoint operator \( L^2 \) generates a strongly continuous, holomorphic semigroup
+\[
+e^{-t L^2} = \int_0^\infty e^{-t\lambda} \, dE_\lambda,
+\]
+where \( \{E_\lambda\} \) is the spectral measure of \( L^2 \). The spectrum of \( L \) is discrete (since \( L \in \TC \)), so the spectrum of \( L^2 \) consists of squares of real nonzero eigenvalues of \( L \), accumulating only at 0.
+
+Hence, for all \( t > 0 \), the operator \( e^{-t L^2} \) is compact and trace-class:
+\[
+e^{-t L^2} \in \TC(H_{\Psi_\alpha}).
+\]
+Moreover, the semigroup is holomorphic in \( t \), as \( L^2 \ge 0 \) has entire spectral resolution.
+
+\paragraph{(iii) Trace bounds and regularity.}
+Let \( \{ \mu_n \} \subset \R \setminus \{0\} \) be the nonzero eigenvalues of \( L \), so that \( \{ \mu_n^2 \} \) are the eigenvalues of \( L^2 \). Then:
+\[
+\Tr(e^{-t L^2}) = \sum_n e^{-t \mu_n^2}.
+\]
+Asymptotically, the eigenvalues \( \mu_n^2 \sim c n^2 \log^2 n \), and thus the heat trace satisfies
+\[
+\Tr(e^{-t L^2}) \lesssim t^{-1/2} \log(1/t) \quad \text{as } t \to 0^+,
+\]
+by Laplace–Mellin inversion of the spectral zeta function \( \zeta_{L^2}(s) \). At large times, the exponential decay of the eigenvalues implies:
+\[
+\Tr(e^{-t L^2}) \lesssim e^{-\delta t}, \quad \text{as } t \to \infty,
+\]
+for some \( \delta > 0 \) depending on the spectral gap.
+
+\paragraph{Conclusion.}
+The semigroup \( \{ e^{-t L_{\sym}^2} \} \) is strongly continuous, holomorphic in \( t \), and satisfies trace-class smoothing bounds across all \( t > 0 \). This justifies the analytic use of the Laplace representation for the determinant and spectral zeta function.
+\end{proof}

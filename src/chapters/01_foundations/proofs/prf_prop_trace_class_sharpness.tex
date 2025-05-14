@@ -1,0 +1,44 @@
+\begin{proof}[Proof of \cref{prop:trace_class_sharpness}]
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define its inverse Fourier transform
+\[
+k(x) := \frac{1}{2\pi} \int_{\R} e^{i\lambda x} \phi(\lambda)\, d\lambda.
+\]
+Then \( k \in \Schwartz(\R) \), and the associated kernel is \( K(x, y) := k(x - y) \). The weighted kernel norm is
+\[
+\int_{\R^2} |K(x, y)| \Psi_\alpha(x) \Psi_\alpha(y) \, dx\,dy
+= \int_{\R^2} |k(x - y)| e^{\alpha(|x| + |y|)} \, dx\,dy.
+\]
+
+\paragraph{Step 1: Change of variables.}
+Let \( u := x - y \), \( v := y \), so that \( x = u + v \), and \( dx\,dy = du\,dv \). Then
+\[
+\int_{\R^2} |k(x - y)| \Psi_\alpha(x) \Psi_\alpha(y) \, dx\,dy
+= \int_{\R} |k(u)| \left( \int_{\R} e^{\alpha(|u + v| + |v|)}\, dv \right) du.
+\]
+
+\paragraph{Step 2: Lower bound for the inner integral.}
+Using the inequality \( |u + v| + |v| \ge |u| \), we have
+\[
+\int_{\R} e^{\alpha(|u + v| + |v|)}\, dv \ge e^{\alpha |u|} \int_{\R} e^{\alpha |v|}\, dv = C_\alpha e^{\alpha |u|},
+\]
+for a constant \( C_\alpha = \int_{\R} e^{\alpha |v|}\, dv < \infty \).
+
+\paragraph{Step 3: Divergence of the weighted norm.}
+Thus,
+\[
+\int_{\R^2} |K(x, y)| \Psi_\alpha(x) \Psi_\alpha(y) \, dx\,dy \ge C_\alpha \int_{\R} |k(u)| e^{\alpha |u|} \, du.
+\]
+But by Paley--Wiener theory (see \cite[Thm.~3.2.4]{Levin1996EntireLectures}), \( k(u) \notin L^1(\R, e^{\alpha |u|} du) \) when \( \alpha \le \pi \), because \( \phi \) has exponential type \( \pi \) and \( k \sim e^{-\pi |x|} \) is asymptotically optimal (see Lemma~1.23).
+
+Hence,
+\[
+\int_{\R^2} |K(x, y)| \Psi_\alpha(x) \Psi_\alpha(y)\, dx\,dy = \infty \quad \text{for } \alpha \le \pi.
+\]
+
+\paragraph{Conclusion.}
+By Simon’s criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals}, \( K \notin L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\,dx\,dy) \) implies that the associated convolution operator
+\[
+(Lf)(x) := \int_{\R} k(x - y) f(y) \, dy
+\]
+does not lie in \( \TC(H_{\Psi_\alpha}) \). Thus, the condition \( \alpha > \pi \) is sharp.
+\end{proof}

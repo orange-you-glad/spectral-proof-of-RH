@@ -1,6 +1,6 @@
 \subsection*{Introduction}
 
-This chapter establishes the analytic infrastructure for defining and analyzing the canonical compact operator \( L_{\sym} \), which realizes the completed Riemann zeta function \( \Xi(s) \) via its Fredholm determinant. The primary goal is to verify that mollified convolution operators associated with the inverse Fourier transform of \( \Xi \) are compact, trace class, and converge in trace norm to a self-adjoint limit operator \( L_{\sym} \in \mathcal{C}_1(\HPsi) \).
+This chapter establishes the analytic infrastructure for defining and analyzing the canonical compact operator \( L_{\sym} \), which realizes the completed Riemann zeta function \( \Xi(s) \) via its Fredholm determinant. The primary goal is to verify that mollified convolution operators associated with the inverse Fourier transform of \( \Xi \) are compact, trace class, and converge in trace norm to a self-adjoint limit operator \( L_{\sym} \in \TC(\HPsi) \), where the weighted Hilbert space \( \HPsi := L^2(\R, \Psi_\alpha(x) \, dx) \) is equipped with exponential weight \( \Psi_\alpha(x) = e^{\alpha|x|} \) for \( \alpha > \pi \).
 
 \begin{center}
 \begin{tikzpicture}[node distance=20pt, every node/.style={align=center},>=Stealth]
@@ -8,7 +8,7 @@ This chapter establishes the analytic infrastructure for defining and analyzing 
   \node (kt) [draw, rectangle, below=of phi] {\( k_t(x) := \FT^{-1}[\phi_t](x) \)};
   \node (kernel) [draw, rectangle, below=of kt] {\( K_t(x,y) := k_t(x - y) \)};
   \node (op) [draw, rectangle, below=of kernel] {\( (L_t f)(x) := \int_{\R} K_t(x,y) f(y)\,dy \)};
-  \node (limit) [draw, rectangle, below=of op, yshift=-0cm] {\( L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi) \)};
+  \node (limit) [draw, rectangle, below=of op, yshift=-0cm] {\( L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(\HPsi) \)};
   \node (det) [draw, rectangle, below=of limit, yshift=-0cm] {\( \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})} \)};
 
   \draw[->] (phi) -- (kt);
@@ -24,27 +24,29 @@ This pipeline links mollified spectral data to compact operator realization and 
 
 \medskip
 
-The constructions here verify:
+The constructions in this chapter verify:
 
 \begin{itemize}
-    \item Schatten-class properties of Hilbert--Schmidt and trace-class operators, following \cite[Ch.~4]{Simon2005TraceIdeals} and \cite[Ch.~VI]{ReedSimon1980I}, including the completeness of \( \mathcal{C}_1 \) and the trace-norm topology.
+    \item \textbf{Trace-class regularity:} The canonical kernel \( k(x) = \FT^{-1}[\Xi(\tfrac{1}{2} + i\lambda)](x) \) decays like \( e^{-\pi |x|} \), and trace-class inclusion holds if and only if \( \alpha > \pi \); this bound is sharp (\cref{prop:trace_class_sharpness}).
 
-    \item Sufficient conditions for compactness and self-adjointness of integral operators with symmetric Hermitian kernels, using distributional domains and exponential conjugation.
+    \item \textbf{Schatten-class and determinant control:} Operators \( L_t \in \TC(\HPsi) \) admit uniform bounds in the trace-norm ideal, and determinant convergence is ensured by compact kernel decay.
 
-    \item The structure of the weighted Schwartz space \( \Schwartz_\alpha(\R) \subset L^2(\R, e^{\alpha |x|}\, dx) \), for \( \alpha > \pi \), ensuring Fourier duality and decay control for entire functions of exponential type \( \pi \) \cite{Levin1996EntireLectures}.
+    \item \textbf{Essential self-adjointness:} The limit \( L_{\sym} \) is symmetric and essentially self-adjoint on \( \Schwartz(\R) \), by Nelson’s analytic vector theorem (\cref{rem:selfadjoint_analytic_vectors}).
 
-    \item Uniform kernel bounds and mollifier admissibility for defining the regularized heat operators \( e^{-t L_t^2} \), together with analytic kernel estimates necessary for short-time trace control and Tauberian convergence.
+    \item \textbf{Heat semigroup generation:} The semigroup \( \{e^{-t L_{\sym}^2}\}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and trace-class, with precise exponential bounds (\cref{lem:heat_semigroup_existence}).
+
+    \item \textbf{Paley--Wiener analytic control:} The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) lies in the Paley--Wiener class \( \PW{\pi} \), and its inverse Fourier transform belongs to \( L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \). This ensures kernel localization and enables rigorous determinant regularization.
 \end{itemize}
 
 These ingredients culminate in the construction of mollified convolution operators \( L_t \), and in the verification of trace-norm convergence
 \[
-L_t \to L_{\sym} \in \mathcal{C}_1(\HPsi) \quad \text{as } t \to 0^+.
+L_t \to L_{\sym} \in \TC(\HPsi) \quad \text{as } t \to 0^+.
 \]
 This limit defines the canonical spectral operator underlying the determinant identity
 \[
 \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
 \]
-which is rigorously established without assuming RH.
+which is rigorously established in the next chapter, without assuming RH or spectral symmetry.
 
 \medskip
 

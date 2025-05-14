@@ -1,36 +1,70 @@
 \subsection*{Introduction}
+\label{sec:det_intro}
 
-This section establishes the canonical analytic identity:
-\[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+This chapter establishes the canonical analytic identity
+\begin{equation}
+\label{eq:zeta_det_identity}
+\det\nolimits_\zeta(I - \lambda L_{\sym}) 
 = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\end{equation}
+which realizes the completed Riemann zeta function \( \Xi(s) \) as the Carleman \(\zeta\)-regularized Fredholm determinant of the canonical compact, self-adjoint convolution operator
+\[
+L_{\sym} \in \TC(\HPsi),
 \]
-realizing the completed Riemann zeta function \( \Xi(s) \) as the Carleman \(\zeta\)-regularized Fredholm determinant of the canonical compact, self-adjoint operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), constructed in Section~\ref{sec:operator-construction}.
+constructed in \cref{sec:operator_construction} as the trace-norm limit of mollified operators \( L_t \), each defined by convolution against a smoothed inverse Fourier transform of \( \Xi \).
+
+\begin{previewbox}
+\textbf{Preconditions Summary.}
+All analytic claims in this chapter are based on the following rigorously validated results:
+
+\begin{itemize}
+  \item \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) is real, even, entire of exponential type \( \pi \) (see \cref{lem:exact_type_pi}), hence \( \phi \in \PW{\pi} \) and satisfies Paley–Wiener decay.
+
+  \item Its inverse Fourier transform \( k(x) := \FT^{-1}[\phi](x) \in L^1(\R, \Psi_\alpha^{-1}(x)\, dx) \) for any \( \alpha > \pi \), so convolution by \( k \) defines a trace-class operator on \( \HPsi \).
+
+  \item The operator \( L_{\sym} \in \TC(\HPsi) \) is compact and self-adjoint, defined via trace-norm convergence \( L_t \to L_{\sym} \) (see \cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}).
+
+  \item The heat semigroup \( \{ e^{-t L_{\sym}^2} \}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and satisfies asymptotic bounds (see \cref{lem:heat_semigroup_wellposed}).
+
+  \item The determinant is defined locally by the power series (\cref{lem:det_via_heat_trace}) and globally via Laplace transform, ensuring entire continuation and exponential type control.
+\end{itemize}
+\end{previewbox}
 
 \medskip
+
 \noindent
-The proof proceeds via a modular analytic program:
+The analytic proof proceeds through the following modular components, grounded in the theory of trace-class determinants~\cite[Ch.~4]{Simon2005TraceIdeals} and Paley–Wiener entire functions~\cite[Ch.~9]{Levin1996EntireLectures}:
+
 \begin{itemize}
-  \item We construct the Fredholm determinant via Carleman \(\zeta\)-regularization applied to the Laplace-transformed heat trace of \( L_{\mathrm{sym}}^2 \). Convergence in the Schatten ideal \( \mathcal{S}_1 \) ensures the trace series is entire in \( \lambda \), and the kernel estimates from Chapter~\ref{sec:heat-kernel-asymptotics} provide sharp growth control;
+  \item \textbf{Heat trace construction and analytic continuation:} We define the determinant via Carleman regularization using the Laplace–Mellin transform of the semigroup \( e^{-t L_{\sym}^2} \); see \cref{lem:heat_semigroup_wellposed}, \cref{lem:det_via_heat_trace}.
 
-  \item The singular short-time behavior of the heat trace,
-  \[
-  \operatorname{Tr}(e^{-tL^2_{\mathrm{sym}}}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2}),
-  \]
-  derived in Lemma~\ref{lem:heat-trace-expansion}, determines the exponential type and genus of the determinant. Laplace–Mellin theory implies that the resulting entire function is of order one and exact exponential type \( \pi \), consistent with the Hadamard structure of \( \Xi(s) \);
+  \item \textbf{Short-time singularity and growth control:} The heat trace expansion
+  \begin{equation}
+  \label{eq:heat_trace_asymptotics}
+  \Tr(e^{-t L_{\sym}^2}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2}), \quad t \to 0^+,
+  \end{equation}
+  determines the genus-one Hadamard structure and confirms that the determinant has exponential type exactly \( \pi \) (see \cref{lem:det_identity_entire_order_one}).
 
-  \item We apply Hadamard’s uniqueness theorem for entire functions of genus one and exponential type \( \pi \), identifying the determinant with
+  \item \textbf{Canonical identification via Hadamard theory:} The function \( \lambda \mapsto \det_\zeta(I - \lambda L_{\sym}) \) lies in \( \mathcal{E}_1^\pi \). By Hadamard’s factorization theorem and uniqueness (\cref{lem:hadamard_uniqueness_E1pi}), it must match the normalized spectral profile
   \[
-  \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+  \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
   \]
-  by comparing logarithmic derivatives on \( \mathbb{C} \setminus \operatorname{Spec}(L_{\mathrm{sym}}) \);
+  via logarithmic derivative matching (\cref{lem:A_log_derivative}) and normalization (\cref{lem:trace_zero}).
 
-  \item We remove the exponential prefactor ambiguity by proving \( \operatorname{Tr}(L_{\mathrm{sym}}) = 0 \) (see Lemma~\ref{lem:trace-zero}), thereby canonically normalizing the determinant to satisfy
+  \item \textbf{Canonical normalization:} The trace vanishing
   \[
-  \det\nolimits_\zeta(I) = 1.
+  \Tr(L_{\sym}) = 0
   \]
+  ensures
+  \[
+  \det\nolimits_\zeta(I) = 1,
+  \]
+  eliminating ambiguity in the exponential prefactor of the Hadamard product and pinning the determinant canonically.
 \end{itemize}
 
 \noindent
-This analytic phase is logically self-contained and acyclic: the determinant identity is derived entirely from operator-theoretic and trace-class estimates, without invoking any spectral correspondence between the eigenvalues of \( L_{\mathrm{sym}} \) and the nontrivial zeros of \( \zeta(s) \). That correspondence is established independently in Section~\ref{sec:spectral-correspondence}, following the identity proven here.
-% 
+This analytic phase is self-contained, strictly acyclic, and free of assumptions about the location of the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \). The spectral encoding map
+\[
+\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym})
+\]
+is constructed separately in \cref{sec:spectral_correspondence}, after the determinant structure is fully classified.

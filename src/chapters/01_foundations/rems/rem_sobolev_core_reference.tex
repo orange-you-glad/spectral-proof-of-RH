@@ -1,0 +1,20 @@
+\begin{remark}[Core Density and Sobolev Completion]
+\label{rem:sobolev_core_reference}
+The density of \( \Schwartz(\R) \subset H_{\Psi_\alpha} \) can also be justified via Sobolev spaces adapted to exponential weights.
+
+\medskip
+
+Let \( H^s_\alpha(\R) \) denote the weighted Sobolev space defined by
+\[
+H^s_\alpha(\R) := \left\{ f \in L^2_{\mathrm{loc}}(\R) \,\middle|\, \langle D \rangle^s f \in L^2(\R, \Psi_\alpha(x)\, dx) \right\}, \quad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > 0.
+\]
+Then the embeddings
+\[
+\Schwartz(\R) \hookrightarrow H^s_\alpha(\R) \hookrightarrow H_{\Psi_\alpha}
+\]
+are continuous and dense for all \( s \ge 0 \), and can be used to construct a graph-norm core for unbounded convolution operators with exponentially decaying kernels.
+
+\medskip
+
+This functional-analytic perspective complements the analytic vector argument used to establish essential self-adjointness of \( L_{\sym} \) on \( \Schwartz(\R) \) in later chapters. It also justifies stability of mollifier domains and semigroup bounds under Sobolev-scale closure.
+\end{remark}

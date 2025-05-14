@@ -17,13 +17,17 @@ Then the following exponential growth bounds hold:
     \[
     |\phi(\lambda)| \le A\, e^{\pi |\lambda|}, \qquad \forall\, \lambda \in \C.
     \]
-    This reflects the exact exponential type \( \pi \) of \( \Xi(s) \), sharp in the Paley--Wiener sense \cite[Thm.~3.7.1]{Levin1996EntireLectures}.
+    This reflects the exact exponential type \( \pi \) of \( \Xi(s) \). In particular,
+    \[
+    \phi \in \PW{\pi},
+    \]
+    the Paley--Wiener class of entire functions whose Fourier transforms are supported in \( [-\pi, \pi] \); see \cref{def:paley_wiener_class} and \cite[Thm.~3.7.1]{Levin1996EntireLectures}.
 
     \item[\textup{(ii)}] \textbf{Real Axis Growth:} There exists a constant \( A_1 > 0 \) such that
     \[
     |\phi(\lambda)| \le A_1\, e^{\tfrac{\pi}{2} |\lambda|}, \qquad \forall\, \lambda \in \R.
     \]
-    This sharper bound follows from the symmetry \( \Xi(s) = \Xi(1 - s) \) and classical estimates for \( \Gamma\left(\tfrac{s}{2}\right) \) on the critical line \cite[§4.12]{Titchmarsh1986Zeta}.
+    This sharper bound follows from the functional symmetry \( \Xi(s) = \Xi(1 - s) \) and classical Stirling estimates for \( \Gamma\left(\tfrac{s}{2}\right) \) on the critical line; see \cite[§4.12]{Titchmarsh1986Zeta}.
 \end{itemize}
 
 \medskip
@@ -32,5 +36,5 @@ These bounds imply that for any \( t > 0 \), the mollified profiles
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda)
 \]
-belong to the Schwartz space \( \Schwartz \), and that their inverse Fourier transforms \( k_t := \FT^{-1}[\phi_t] \) decay exponentially in space as in \lemref{lem:decay_mollified_kernel}.
+belong to the Schwartz space \( \Schwartz \), and that their inverse Fourier transforms \( k_t := \FT^{-1}[\phi_t] \) decay exponentially in space, as established in \lemref{lem:decay_mollified_kernel}.
 \end{lemma}

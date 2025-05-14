@@ -23,24 +23,30 @@ Equivalently,
 \sup_{0 < t \le 1} \|K_t\|_{\mathcal{C}_1(\Psi_\alpha)} < \infty.
 \]
 
-In particular, for each \( t \in (0,1] \), the associated convolution operator
+\medskip
+\noindent
+In particular, for each \( t \in (0,1] \), the convolution operator
 \[
 L_t f(x) := \int_{\R} K_t(x,y) f(y)\, dy
 \]
-lies in the trace class \( \mathcal{C}_1(\HPsi) \), with uniformly bounded trace norm:
+lies in the trace class \( \TC(\HPsi) \), and its trace norm satisfies
 \[
-\sup_{0 < t \le 1} \|L_t\|_{\mathcal{C}_1(\HPsi)} \le A_3(\alpha).
+\sup_{0 < t \le 1} \|L_t\|_{\TC(\HPsi)} \le A_3(\alpha).
 \]
+
+\medskip
+\noindent
+This estimate follows from the Paley--Wiener theorem: since \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) (see \cref{def:paley_wiener_class}), the mollified profiles \( \phi_t \in \Schwartz(\R) \) satisfy Gaussian-suppressed exponential envelopes. Their inverse Fourier transforms \( K_t(x,y) = k_t(x - y) \) decay uniformly faster than \( e^{-\alpha |x - y|} \), ensuring exponential integrability under conjugation.
 
 \medskip
 \noindent
 This uniform trace-norm control ensures:
 \begin{itemize}
-    \item Convergence in trace norm: \( L_t \to L_{\sym} \in \mathcal{C}_1(\HPsi) \) as \( t \to 0^+ \);
-    \item Uniform convergence of the Fredholm determinants:
+    \item Convergence in trace norm: \( L_t \to L_{\sym} \in \TC(\HPsi) \) as \( t \to 0^+ \);
+    \item Uniform convergence of the zeta-regularized Fredholm determinants:
     \[
     \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym})
     \]
-    locally uniformly in \( \lambda \in \C \).
+    locally uniformly for \( \lambda \in \C \).
 \end{itemize}
 \end{lemma}

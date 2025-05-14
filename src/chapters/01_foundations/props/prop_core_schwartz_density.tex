@@ -1,16 +1,20 @@
 \begin{proposition}[Schwartz Core for Canonical Operator]
 \label{prop:core_schwartz_density}
-Let \( \alpha > \pi \), and let \( L_{\sym} \in \mathcal{C}_1(\HPsi) \) be the canonical convolution operator constructed as the trace-norm limit of mollified convolution operators \( L_t \in \mathcal{B}(\HPsi) \).
+Let \( \alpha > \pi \), and let \( L_{\sym} \in \TC(\HPsi) \) be the canonical self-adjoint convolution operator constructed as the trace-norm limit of mollified convolution operators \( L_t \in \mathcal{B}(\HPsi) \).
 
-Then the Schwartz space \( \Schwartz \subset \HPsi \) is a core for \( L_{\sym} \). That is, for every \( f \in \operatorname{Dom}(L_{\sym}) = \HPsi \), there exists a sequence \( f_n \in \Schwartz \) such that
+Then the Schwartz space \( \Schwartz(\R) \subset \HPsi \) is a core for \( L_{\sym} \); that is, for every \( f \in \operatorname{Dom}(L_{\sym}) \), there exists a sequence \( \{f_n\} \subset \Schwartz(\R) \) such that
 \[
 f_n \to f \quad \text{and} \quad L_{\sym} f_n \to L_{\sym} f \quad \text{in } \HPsi.
 \]
 
 \medskip
 \noindent
-Equivalently, \( \Schwartz \) is dense in \( \HPsi \) with respect to the graph norm of \( L_{\sym} \),
+Equivalently, \( \Schwartz(\R) \) is dense in the domain of \( L_{\sym} \) with respect to the graph norm
 \[
 \|f\|_{\mathrm{graph}} := \left( \|f\|_{\HPsi}^2 + \|L_{\sym} f\|_{\HPsi}^2 \right)^{1/2}.
 \]
+
+\medskip
+\noindent
+This density guarantees that \( \Schwartz \) can be used to test all spectral and trace-class properties of \( L_{\sym} \), and provides the foundation for essential self-adjointness (see \cref{rem:selfadjoint_analytic_vectors}) and heat semigroup generation (see \cref{lem:heat_semigroup_existence}).
 \end{proposition}

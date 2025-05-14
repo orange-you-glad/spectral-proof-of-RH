@@ -1,4 +1,4 @@
-\begin{lemma}[Exact Exponential Type \(\pi\) of \( \Xi(\tfrac{1}{2} + i\lambda) \) and Canonical Determinant]
+\begin{lemma}[Exact Exponential Type \( \pi \) of \( \Xi(\tfrac{1}{2} + i\lambda) \) and Canonical Determinant]
 \label{lem:exact_type_pi}
 Let \( \Xi(s) \) denote the completed Riemann zeta function, and define
 \[
@@ -11,21 +11,20 @@ Then \( f \) is an entire function of order one and exact exponential type \( \p
 \]
 and for every \( \varepsilon > 0 \),
 \[
-|f(\lambda)| = O\left( e^{(\pi + \varepsilon)|\lambda|} \right)
+|f(\lambda)| = \mathcal{O}\left( e^{(\pi + \varepsilon)|\lambda|} \right)
 \quad \text{but} \quad
-|f(\lambda)| \notin O\left( e^{(\pi - \varepsilon)|\lambda|} \right).
+|f(\lambda)| \notin \mathcal{O}\left( e^{(\pi - \varepsilon)|\lambda|} \right).
 \]
 
 \medskip
 \noindent
-Moreover, the same estimate holds for the canonical Fredholm determinant
+Moreover, the same exponential type holds for the canonical determinant
 \[
-\lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}),
+\lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\sym}),
 \]
-which therefore belongs to the sharp Hadamard class \( \mathcal{E}_1^\pi \) of entire functions of order one and exponential type exactly \( \pi \).
+which therefore belongs to the sharp Hadamard class \( \mathcal{E}_1^\pi \) of entire functions of order one and exact exponential type \( \pi \).
 
 \medskip
 \noindent
-The sharpness of the exponential type follows from known asymptotics of \( \Xi(s) \) along vertical lines and from the Paley–Wiener theorem applied to the Fourier transform of the convolution kernel defining \( L_{\mathrm{sym}} \).
+The sharpness of the exponential type follows from classical asymptotics of \( \Xi(s) \) along vertical lines and from the Paley--Wiener theorem applied to the inverse Fourier transform of the convolution kernel defining \( L_{\sym} \). The exponential decay of the kernel implies spectral support in \( [-\pi, \pi] \), enforcing exponential type exactly \( \pi \) for both \( f \) and the Fredholm determinant.
 \end{lemma}
-% 

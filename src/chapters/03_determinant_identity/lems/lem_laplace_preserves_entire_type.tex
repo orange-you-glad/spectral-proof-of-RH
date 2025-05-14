@@ -1,31 +1,26 @@
 \begin{lemma}[Laplace Representation Preserves Entire Function Order and Type]
 \label{lem:laplace_preserves_entire_type}
-Let \( L \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator such that the heat trace satisfies
+Let \( L \in \TC(\HPsi) \) be a compact, self-adjoint operator such that the heat trace satisfies the short- and long-time bounds
 \[
-\operatorname{Tr}(e^{-tL}) \le A t^{-1} e^{-c/t}, \quad \text{as } t \to 0^+,
+\Tr(e^{-tL}) \le A t^{-1} e^{-c/t}, \quad \text{as } t \to 0^+,
+\qquad
+\Tr(e^{-tL}) \le B e^{-\delta t}, \quad \text{as } t \to \infty,
 \]
-and
-\[
-\operatorname{Tr}(e^{-tL}) \le B e^{-\delta t}, \quad \text{as } t \to \infty,
-\]
-for some constants \( A,B,c,\delta > 0 \).
+for constants \( A, B, c, \delta > 0 \).
 
 Then the Laplace integral
 \[
 \log \det\nolimits_\zeta(I - \lambda L)
-= - \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL})\, dt
+= - \int_0^\infty \frac{e^{-\lambda t}}{t} \, \Tr(e^{-tL}) \, dt
 \]
-defines an entire function of order one and exponential type bounded by \( \pi \). That is,
+defines an entire function of order one and exponential type bounded by \( \pi \). That is, for all \( \lambda \in \C \), there exist constants \( C, C' > 0 \) such that
 \[
 \left| \log \det\nolimits_\zeta(I - \lambda L) \right| \le C |\lambda| \log(1 + |\lambda|),
-\]
-and
-\[
+\qquad
 \left| \det\nolimits_\zeta(I - \lambda L) \right| \le C' e^{\pi |\lambda|}.
 \]
 \end{lemma}
 
 \medskip
 \noindent
-The bounds on the heat trace ensure the Laplace transform converges absolutely and uniformly on compact subsets of \( \mathbb{C} \), and Paley–Wiener-type estimates control the exponential type.
-%  
+These heat trace bounds ensure that the Laplace transform converges absolutely and uniformly on compact subsets of \( \C \), and Paley--Wiener-type growth estimates control the entire function order and exponential type~\cite[Ch.~3]{Simon2005TraceIdeals},~\cite[Ch.~9]{Levin1996EntireLectures}.

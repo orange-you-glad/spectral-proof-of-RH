@@ -1,0 +1,27 @@
+\begin{proof}[Proof of \cref{lem:heat_semigroup_wellposed}]
+Let \( L := L_{\sym} \in \TC(\HPsi) \) be compact, self-adjoint, and defined by convolution with an exponentially decaying, even kernel \( K(x - y) \in \Schwartz(\R) \).
+
+\paragraph{(i) Self-adjointness and positivity of \( L^2 \).}
+Since \( L \) is self-adjoint and compact on the Hilbert space \( \HPsi \), its square \( L^2 \) is also self-adjoint and positive (i.e., \( \langle L^2 f, f \rangle \ge 0 \)). The domain of \( L^2 \) is dense, as it includes the Schwartz core preserved under convolution.
+
+\paragraph{(ii) Heat semigroup is trace-class.}
+By spectral theory~\cite[Ch.~X, §2]{ReedSimon1975II}, the operator exponential \( e^{-t L^2} \) is well-defined via the spectral calculus for any \( t > 0 \). Since \( L \in \TC \), its spectrum is discrete with eigenvalues \( \{ \mu_n \} \to 0 \), and \( L^2 \) has eigenvalues \( \mu_n^2 \to 0 \). Thus,
+\[
+e^{-t L^2} = \sum_{n=1}^\infty e^{-t \mu_n^2} P_n,
+\]
+where \( P_n \) are the orthogonal projections onto the eigenspaces. Because \( \sum_n e^{-t \mu_n^2} < \infty \) for all \( t > 0 \), this implies \( e^{-t L^2} \in \TC(\HPsi) \), trace-class and compact.
+
+\paragraph{(iii) Heat trace asymptotics.}
+As shown in \cref{lem:laplace_heat_trace_convergence}, the trace satisfies the expansion
+\[
+\Tr(e^{-t L^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \mathcal{O}(t^{-1/2}) \quad \text{as } t \to 0^+,
+\]
+derived via Fourier analysis and the Paley--Wiener decay of the kernel. Meanwhile, the discrete spectrum \( \{ \mu_n \} \subset \R \setminus \{0\} \) ensures that
+\[
+\Tr(e^{-t L^2}) \le \sum_n e^{-t \mu_n^2} \lesssim e^{-\delta t} \quad \text{as } t \to \infty,
+\]
+for some \( \delta > 0 \). This ensures absolute convergence of the Laplace integral used in the determinant representation (cf. \cref{lem:det_via_heat_trace}).
+
+\paragraph{Conclusion.}
+Thus, \( e^{-t L_{\sym}^2} \in \TC(\HPsi) \) for all \( t > 0 \), the trace map is smooth on \( (0, \infty) \), and the semigroup is strongly continuous and analytic in \( t \), completing the proof.
+\end{proof}

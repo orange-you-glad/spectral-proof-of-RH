@@ -1,36 +1,35 @@
-\begin{proof}[Proof of Lemma~\ref{lem:exact_type_pi}]
+\begin{proof}[Proof of \cref{lem:exact_type_pi}]
 Let \( f(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). It is classical that \( \Xi(s) \) is an entire function of order one and exponential type \( \pi \). This follows from:
 
 \begin{itemize}
   \item The functional equation and integral representation of \( \Xi(s) \),
-  \item The Stirling expansion of \( \Gamma(s/2) \), and
-  \item The Hadamard factorization for entire functions with real zeros of bounded density.
+  \item Stirling’s expansion for \( \Gamma(s/2) \),
+  \item Hadamard factorization for entire functions with real zeros of bounded density.
 \end{itemize}
 
 \paragraph{(i) Upper bound on type.}
-From Titchmarsh~\cite[§10.5]{Titchmarsh1986Zeta}, one has for all \( \varepsilon > 0 \),
+From Titchmarsh~\cite[§10.5]{Titchmarsh1986Zeta}, for every \( \varepsilon > 0 \), there exists \( C_\varepsilon > 0 \) such that
 \[
-|\Xi(\tfrac{1}{2} + i\lambda)| \le C e^{(\pi + \varepsilon)|\lambda|},
+\left| \Xi\left( \tfrac{1}{2} + i\lambda \right) \right| \le C_\varepsilon e^{(\pi + \varepsilon)|\lambda|},
 \]
 establishing exponential type \( \le \pi \).
 
 \paragraph{(ii) Lower bound on type.}
-The lower bound follows from classical results of de Bruijn and Levin~\cite[Chap.~3]{Levin1996EntireLectures}, which state that the exponential type is equal to \( \pi \) if the distribution of the zeros has limiting density \( \frac{\pi}{\log T} \) and the function is real-entire and even.
+The lower bound follows from classical results of de Bruijn and Levin~\cite[Ch.~3]{Levin1996EntireLectures}, which show that the exponential type of an even, real-entire function is determined by the asymptotic density of its zeros.
 
-Furthermore, the exact type is encoded in the asymptotic location of the zeros of \( \Xi(s) \), whose imaginary parts have counting function
+In particular, the counting function for the imaginary parts of the nontrivial zeros satisfies
 \[
-N(T) \sim \frac{T}{2\pi} \log\left(\frac{T}{2\pi e}\right) + O(\log T),
+N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi e} \right) + \mathcal{O}(\log T),
 \]
-implying exponential type at least \( \pi \) by Hadamard theory.
+which implies that the exponential type of \( \Xi(s) \) is at least \( \pi \) via Hadamard theory. Thus, the exponential type is exactly \( \pi \).
 
-\paragraph{(iii) Determinant match.}
-By Theorem~\ref{thm:det_identity_revised}, we have
+\paragraph{(iii) Determinant correspondence.}
+By \cref{thm:det_identity_revised}, the canonical zeta-determinant satisfies
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
-and therefore the determinant inherits the exact same exponential type.
+and therefore inherits the exact exponential type of the numerator.
 
 \paragraph{Conclusion.}
-Both \( \Xi(\tfrac{1}{2} + i\lambda) \) and the canonical determinant belong to the class \( \mathcal{E}_1^\pi \), completing the proof.
+Both \( \Xi\left( \tfrac{1}{2} + i\lambda \right) \) and the canonical determinant \( \lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\sym}) \) belong to the Hadamard class \( \mathcal{E}_1^\pi \), completing the proof.
 \end{proof}
-%  

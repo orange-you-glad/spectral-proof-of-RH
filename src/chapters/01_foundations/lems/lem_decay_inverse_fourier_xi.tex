@@ -9,24 +9,21 @@ Then \( k \in C^\infty(\R) \) is real-valued, even, and satisfies the exponentia
 \[
 |k(x)| \le C_\alpha\, e^{-\alpha |x|}, \qquad \forall\, x \in \R, \quad \text{for any } \alpha > \pi,
 \]
-where \( C_\alpha > 0 \) depends on \( \alpha \), but not on \( x \).
+where \( C_\alpha > 0 \) depends only on \( \alpha \).
 
 \medskip
 \noindent In particular:
 \begin{itemize}
-    \item \( k \in L^1(\R, \Psi_\alpha(x)\, dx) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \);
-    \item The translation-invariant kernel \( K(x,y) := k(x - y) \) satisfies
-    \[
-    K \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy);
-    \]
-    \item The associated convolution operator
-    \[
-    (Lf)(x) := \int_{\R} k(x - y) f(y)\, dy
-    \]
-    lies in the trace class \( \mathcal{C}_1(\HPsi) \) by Simon’s trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+  \item \( k \in L^1(\R, \Psi_\alpha(x)\, dx) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \);
+  \item The kernel \( K(x,y) := k(x - y) \) lies in \( L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \);
+  \item The convolution operator
+  \[
+  (Lf)(x) := \int_{\R} k(x - y) f(y)\, dy
+  \]
+  belongs to the trace class \( \TC(\HPsi) \), by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
 \end{itemize}
 
 \medskip
 \noindent
-This follows from the Paley--Wiener theorem: the exponential type \( \pi \) of \( \phi \) implies that \( \widehat{\phi}(x) \) decays exponentially faster than \( e^{-\alpha |x|} \) for any \( \alpha > \pi \).
+This decay follows from the Paley--Wiener theorem: since \( \phi \in \PW{\pi} \) (see \cref{def:paley_wiener_class}), its inverse Fourier transform \( k(x) \) decays faster than \( e^{-\alpha |x|} \) for every \( \alpha > \pi \). The result quantifies the optimal spatial localization of Paley--Wiener kernels in \( \HPsi \).
 \end{lemma}

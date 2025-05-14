@@ -4,7 +4,7 @@ Let \( t > 0 \), and define the mollified spectral profile
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda\right),
 \]
-where \( \Xi(s) \) is the completed Riemann zeta function—an entire function of order one and exponential type \( \pi \).
+where \( \Xi(s) \) is the completed Riemann zeta function—entire of order one and exponential type \( \pi \).
 
 Then the following exponential decay estimates hold:
 \begin{enumerate}
@@ -12,6 +12,7 @@ Then the following exponential decay estimates hold:
     \[
     |\phi_t(\lambda)| \le C \, e^{\frac{\pi}{2}|\lambda| - t\lambda^2}, \qquad \forall\, \lambda \in \R.
     \]
+    This follows from the Paley--Wiener bound \( \phi \in \PW{\pi} \), with decay strengthened by Gaussian mollification.
 
     \item[\textup{(ii)}] \textbf{Exponential Spatial Kernel Decay:} Define the inverse Fourier kernel
     \[
@@ -29,21 +30,21 @@ Then the following exponential decay estimates hold:
 \end{enumerate}
 
 \noindent
-As a consequence, \( K_t \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \) for any \( \alpha > \pi \), and the associated convolution operator
+As a consequence, \( K_t \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \) for any \( \alpha > \pi \), and the convolution operator
 \[
 L_t f(x) := \int_{\R} K_t(x,y) f(y)\, dy
 \]
-belongs to \( \mathcal{C}_1(\HPsi) \) by Simon’s exponential trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+lies in the trace class \( \TC(\HPsi) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
 
 \medskip
 \noindent
 The uniform bounds in \textup{(iii)} ensure trace-norm convergence
 \[
-L_t \xrightarrow{\ \mathcal{C}_1(\HPsi)\ } L_{\sym},
+L_t \xrightarrow{\ \TC(\HPsi)\ } L_{\sym},
 \]
 and determinant convergence
 \[
-\det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym})
+\det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym}),
 \]
 uniformly on compact subsets of \( \lambda \in \C \).
 \end{lemma}

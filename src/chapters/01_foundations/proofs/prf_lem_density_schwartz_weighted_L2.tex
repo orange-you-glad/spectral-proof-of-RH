@@ -1,64 +1,48 @@
-\begin{proof}[Proof of \lemref{lem:density_schwartz_weighted_L2}]
-Fix \( \alpha > \pi \), and define the exponential weight
+\begin{proof}[Proof of \cref{lem:density_schwartz_weighted_L2}]
+Fix \( \alpha > \pi \), and define the exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \). The associated weighted Hilbert space is
 \[
-\Psi_\alpha(x) := e^{\alpha |x|}.
+\HPsi := L^2(\R, \Psi_\alpha(x)\,dx),
 \]
-Then the associated weighted Hilbert space
+equipped with inner product
 \[
-\HPsi := L^2(\R, \Psi_\alpha(x)\,dx)
+\langle f, g \rangle_{\HPsi} := \int_{\R} f(x)\, \overline{g(x)}\, \Psi_\alpha(x)\, dx,
 \]
-is equipped with inner product
-\[
-\langle f, g \rangle_{\HPsi} := \int_{\R} f(x)\, \overline{g(x)}\, \Psi_\alpha(x)\, dx.
-\]
+and norm \( \|f\|_{\HPsi} := \|f \cdot \Psi_\alpha^{1/2} \|_{L^2(\R)} \).
 
-\medskip
-\noindent\textbf{Step 1: Unitary Reduction to Flat \( L^2 \).}
-Define the unitary transformation
+\paragraph{Step 1: Unitary equivalence to flat \( L^2 \).}
+Define the unitary map:
 \[
-U \colon \HPsi \to L^2(\R), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x),
+U \colon \HPsi \to L^2(\R), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x), \quad \text{with inverse } U^{-1} h(x) = \Psi_\alpha(x)^{-1/2} h(x).
 \]
-with inverse
-\[
-U^{-1}(h)(x) := \Psi_\alpha(x)^{-1/2} h(x).
-\]
-Then for all \( f, g \in \HPsi \), one has
+This transformation preserves the inner product:
 \[
 \langle Uf, Ug \rangle_{L^2} = \langle f, g \rangle_{\HPsi}, \qquad \|Uf\|_{L^2} = \|f\|_{\HPsi}.
 \]
 
-\medskip
-\noindent\textbf{Step 2: Density in Standard \( L^2 \).}
-Let \( f \in \HPsi \), and define \( g := Uf \in L^2(\R) \). Since \( \Schwartz \) is dense in \( L^2(\R) \), for any \( \varepsilon > 0 \) there exists \( \varphi \in \Schwartz \) such that
+\paragraph{Step 2: Density of Schwartz functions.}
+Let \( f \in \HPsi \). Set \( g := Uf \in L^2(\R) \). Since \( \Schwartz(\R) \subset L^2(\R) \) is dense, there exists \( \varphi \in \Schwartz(\R) \) such that
 \[
 \|g - \varphi\|_{L^2} < \varepsilon.
 \]
-Define \( f_\varepsilon := U^{-1}(\varphi) = \Psi_\alpha^{-1/2}(x) \varphi(x) \in \HPsi \). Then
+Define \( f_\varepsilon := U^{-1}(\varphi) = \varphi(x) \cdot \Psi_\alpha(x)^{-1/2} \in \HPsi \), and observe:
 \[
 \|f - f_\varepsilon\|_{\HPsi} = \|Uf - \varphi\|_{L^2} < \varepsilon.
 \]
 
-\medskip
-\noindent\textbf{Step 3: Image of Schwartz is Schwartz.}
-Since \( \varphi \in \Schwartz \) and \( \Psi_\alpha^{-1/2} \in C^\infty(\R) \) with exponential decay, the product
+\paragraph{Step 3: Closure under smooth multiplication.}
+Since \( \varphi \in \Schwartz(\R) \) and \( \Psi_\alpha^{-1/2} \in C^\infty(\R) \) with exponential growth, the product \( \varphi(x) \cdot \Psi_\alpha(x)^{-1/2} \in \Schwartz(\R) \). Hence,
 \[
-f_\varepsilon(x) = \varphi(x) \cdot \Psi_\alpha(x)^{-1/2}
-\]
-belongs to \( \Schwartz \), by standard closure properties of Schwartz space under multiplication by smooth functions of sub-exponential growth. Therefore,
-\[
-f_\varepsilon \in \Schwartz \cap \HPsi, \qquad \|f - f_\varepsilon\|_{\HPsi} < \varepsilon.
+f_\varepsilon \in \Schwartz(\R) \cap \HPsi, \qquad \|f - f_\varepsilon\|_{\HPsi} < \varepsilon.
 \]
 
-\medskip
-\noindent\textbf{Conclusion.}
-As \( f \in \HPsi \) and \( \varepsilon > 0 \) were arbitrary, we conclude that \( \Schwartz \) is dense in \( \HPsi \). This holds for all \( \alpha > 0 \), and in particular for \( \alpha > \pi \), which ensures compatibility with the exponential type of Paley--Wiener kernels derived from \( \Xi \).
+\paragraph{Conclusion.}
+As \( f \in \HPsi \) and \( \varepsilon > 0 \) were arbitrary, it follows that \( \Schwartz(\R) \) is dense in \( \HPsi \). This density holds for all \( \alpha > 0 \), and in particular for \( \alpha > \pi \), matching the critical exponential type for trace-class inclusion of Paley--Wiener kernels.
 
-\medskip
-\noindent\textbf{Functional Consequence.}
-The density \( \Schwartz \subset \HPsi \) provides a common core domain for the convolution operators \( L_t \) and their limit \( L_{\sym} \). In particular, it ensures:
+\paragraph{Spectral consequence.}
+The density \( \Schwartz \subset \HPsi \) provides a graph-norm core for the mollified convolution operators \( L_t \), and for their trace-norm limit \( L_{\sym} \). In particular, it ensures:
 \begin{itemize}
-    \item Symmetry of \( L_t \) under reflection: \( L_t^* = L_t \) on \( \Schwartz \);
-    \item Essential self-adjointness of \( L_{\sym} \) on \( \Schwartz \);
-    \item Justification of heat trace and determinant convergence via mollifier approximation.
+  \item Symmetry: \( L_t^* = L_t \) on \( \Schwartz \);
+  \item Essential self-adjointness of \( L_{\sym} \) and \( L_{\sym}^2 \) (\cref{rem:selfadjoint_analytic_vectors});
+  \item Validity of heat trace asymptotics and determinant convergence via dense domain approximation.
 \end{itemize}
 \end{proof}

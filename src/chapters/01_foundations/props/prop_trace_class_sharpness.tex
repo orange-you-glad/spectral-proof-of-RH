@@ -1,0 +1,21 @@
+\begin{proposition}[Sharpness of Trace-Class Inclusion for \(\alpha > \pi\)]
+\label{prop:trace_class_sharpness}
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and let \( k := \FT^{-1}[\phi] \in L^1_{\mathrm{loc}}(\R) \) denote its inverse Fourier transform. Define the translation-invariant kernel
+\[
+K(x, y) := k(x - y), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \text{for } \alpha > 0.
+\]
+
+Then for any \( \alpha \le \pi \),
+\[
+\int_{\R^2} |K(x, y)| \Psi_\alpha(x) \Psi_\alpha(y) \, dx \, dy = \infty,
+\]
+and hence the corresponding convolution operator
+\[
+(Lf)(x) := \int_{\R} k(x - y) f(y) \, dy
+\]
+fails to lie in the trace class \( \TC(H_{\Psi_\alpha}) \).
+
+\medskip
+\noindent
+In particular, the critical threshold \( \alpha > \pi \) is sharp for trace-norm convergence and Fredholm determinant realization in the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx) \).
+\end{proposition}

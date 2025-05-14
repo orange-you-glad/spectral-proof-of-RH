@@ -1,0 +1,20 @@
+\begin{remark}[Essential Self-Adjointness via Analytic Vectors]
+\label{rem:selfadjoint_analytic_vectors}
+The essential self-adjointness of \( L_{\sym} \) follows from Nelson’s analytic vector theorem.
+
+\medskip
+
+Let \( \{L_t\}_{t > 0} \) be the mollified convolution operators with smooth, rapidly decaying kernels \( k_t \in \Schwartz(\R) \). Each \( L_t \) preserves \( \Schwartz(\R) \), and the limit \( L_{\sym} := \lim_{t \to 0^+} L_t \) acts on a common domain \( \Schwartz(\R) \subset H_{\Psi_\alpha} \).
+
+\medskip
+
+Since every \( f \in \Schwartz(\R) \) satisfies:
+\[
+\|L_{\sym}^n f\|_{H_{\Psi_\alpha}} \le C_n \|f\|_{H_{\Psi_\alpha}} \quad \text{for all } n \in \N,
+\]
+with bounds derived from exponential kernel decay, each \( f \in \Schwartz(\R) \) is an analytic vector for \( L_{\sym} \). By Nelson’s theorem, this implies that \( L_{\sym} \) is essentially self-adjoint on \( \Schwartz(\R) \).
+
+\medskip
+
+This justifies the canonical spectral resolution of \( L_{\sym} \) used in the determinant and zeta analysis of Chapter~\ref{sec:determinant_identity}.
+\end{remark}

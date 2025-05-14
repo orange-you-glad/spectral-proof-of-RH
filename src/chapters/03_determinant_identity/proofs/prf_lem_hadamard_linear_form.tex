@@ -1,38 +1,37 @@
-\begin{proof}[Proof of Lemma~\ref{lem:hadamard_linear_form}]
-Let \( F(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Since \( \Xi(s) \) is entire of order one and genus one, Hadamard’s factorization theorem \cite[Theorem~3.7.1]{Levin1996EntireLectures} implies that
+\begin{proof}[Proof of \cref{lem:hadamard_linear_form}]
+Let \( F(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Since \( \Xi(s) \) is entire of order one and genus one, Hadamard’s factorization theorem~\cite[Thm.~3.7.1]{Levin1996EntireLectures} implies
 \[
 \Xi(s) = e^{A + B s} \prod_{\rho} \left( 1 - \frac{s}{\rho} \right) \exp\left( \frac{s}{\rho} \right),
 \]
-where the product is over all nontrivial zeros \( \rho \) of \( \zeta(s) \), counted with multiplicity. This product converges absolutely since \( \sum_\rho |\rho|^{-2} < \infty \) due to the order-1 growth of \( \Xi \).
+where the product is over all nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \), counted with multiplicity. This product converges absolutely since \( \sum_\rho |\rho|^{-2} < \infty \), a consequence of the order-one growth of \( \Xi \).
 
-\medskip
-Now define the change of variables \( \lambda := -i(s - \tfrac{1}{2}) \), so \( s = \tfrac{1}{2} + i\lambda \). Each zero \( \rho \ne \tfrac{1}{2} \) corresponds to
+\smallskip
+Define the spectral shift \( \lambda := -i(s - \tfrac{1}{2}) \), so that \( s = \tfrac{1}{2} + i\lambda \). Then each nontrivial zero \( \rho \ne \tfrac{1}{2} \) maps to
 \[
 \lambda_\rho := i(\rho - \tfrac{1}{2}),
 \]
-and the zero set of \( F(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) is exactly \( \{ \lambda_\rho \}_{\rho \ne \tfrac{1}{2}} \), symmetric about the origin.
+and the zero set of \( F(\lambda) \) is exactly \( \{ \lambda_\rho \}_{\rho \ne \frac{1}{2}} \), symmetric about the origin.
 
-Substituting into the Hadamard product gives
+Substituting into Hadamard’s product yields
 \[
-F(\lambda) = e^{C_0 + C_1 \lambda} \prod_{\rho \ne \tfrac{1}{2}} \left( 1 - \frac{\lambda}{\lambda_\rho} \right) \exp\left( \frac{\lambda}{\lambda_\rho} \right),
+F(\lambda) = e^{C_0 + C_1 \lambda} \prod_{\rho \ne \frac{1}{2}} \left( 1 - \frac{\lambda}{\lambda_\rho} \right) \exp\left( \frac{\lambda}{\lambda_\rho} \right),
 \]
-where \( C_0, C_1 \in \mathbb{C} \) are constants of integration from Hadamard's theorem.
+for some constants \( C_0, C_1 \in \C \).
 
-\medskip
-By the functional equation \( \Xi(s) = \Xi(1 - s) \), it follows that \( F(\lambda) = F(-\lambda) \), so \( F \) is an even function. This symmetry forces \( C_1 = 0 \), leaving
+\smallskip
+By the functional equation \( \Xi(s) = \Xi(1 - s) \), it follows that \( F(\lambda) = F(-\lambda) \), i.e., \( F \) is even. This symmetry forces \( C_1 = 0 \), and the product simplifies:
 \[
-F(\lambda) = e^{C_0} \prod_{\rho \ne \tfrac{1}{2}} \left( 1 - \frac{\lambda}{\lambda_\rho} \right) \exp\left( \frac{\lambda}{\lambda_\rho} \right).
+F(\lambda) = e^{C_0} \prod_{\rho \ne \frac{1}{2}} \left( 1 - \frac{\lambda}{\lambda_\rho} \right) \exp\left( \frac{\lambda}{\lambda_\rho} \right).
 \]
 
-Evaluating at \( \lambda = 0 \) gives
+Evaluating at \( \lambda = 0 \), we have
 \[
 F(0) = \Xi\left( \tfrac{1}{2} \right) = e^{C_0},
 \]
-so \( C_0 = \log \Xi(\tfrac{1}{2}) \), and we conclude
+so \( C_0 = \log \Xi\left( \tfrac{1}{2} \right) \), and therefore:
 \[
 \Xi\left( \tfrac{1}{2} + i\lambda \right)
-= \Xi\left( \tfrac{1}{2} \right) \prod_{\rho \ne \tfrac{1}{2}} \left( 1 - \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right) \exp\left( \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right),
+= \Xi\left( \tfrac{1}{2} \right) \prod_{\rho \ne \frac{1}{2}} \left( 1 - \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right) \exp\left( \frac{\lambda}{i(\rho - \tfrac{1}{2})} \right),
 \]
-which completes the proof.
+which is the canonical Hadamard factorization of \( F(\lambda) \), completing the proof.
 \end{proof}
-%  

@@ -1,0 +1,25 @@
+\begin{lemma}[Spectral Positivity and Semigroup Generation for \( L_{\sym}^2 \)]
+\label{lem:heat_semigroup_existence}
+Let \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) be the canonical self-adjoint convolution operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx) \) for \( \alpha > \pi \).
+
+Then:
+\begin{enumerate}
+  \item[\textnormal{(i)}] The operator \( L_{\sym}^2 \) is positive, self-adjoint, and densely defined. In particular, \( \Spec(L_{\sym}^2) \subset [0, \infty) \).
+
+  \item[\textnormal{(ii)}] The heat semigroup \( \{e^{-t L_{\sym}^2}\}_{t > 0} \subset \TC(H_{\Psi_\alpha}) \) exists and is strongly continuous, holomorphic in \( t \), and trace-class for all \( t > 0 \).
+
+  \item[\textnormal{(iii)}] The map \( t \mapsto \Tr(e^{-t L_{\sym}^2}) \) is real-analytic on \( (0, \infty) \), and satisfies:
+  \[
+  \Tr(e^{-t L_{\sym}^2}) \lesssim
+  \begin{cases}
+    t^{-1/2} \log(1/t) & \text{as } t \to 0^+, \\
+    e^{-\delta t} & \text{as } t \to \infty,
+  \end{cases}
+  \]
+  for some \( \delta > 0 \) depending on the spectral gap.
+\end{enumerate}
+
+\medskip
+\noindent
+These properties ensure the analytic well-posedness of the Laplace representation of the determinant and the spectral zeta function.
+\end{lemma}

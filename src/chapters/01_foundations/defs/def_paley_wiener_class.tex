@@ -1,0 +1,19 @@
+\begin{definition}[Paley–Wiener Class \(\PW{a}\)]
+\label{def:paley_wiener_class}
+Let \( a > 0 \). The Paley–Wiener class \( \PW{a} \) consists of all entire functions \( f \colon \C \to \C \) such that:
+\begin{itemize}
+  \item \( f \) is of exponential type \( \le a \), i.e.,
+  \[
+  |f(\lambda)| \le C e^{a |\lambda|}, \quad \forall \lambda \in \C,
+  \]
+  for some constant \( C > 0 \); and
+  \item \( f \in L^2(\R) \) and \( \widehat{f} \) has compact support contained in \( [-a, a] \).
+\end{itemize}
+
+\medskip
+\noindent
+This class characterizes the image of \( L^2([-a, a]) \) under the inverse Fourier transform:
+\[
+\PW{a} = \FT^{-1}(L^2([-a, a])).
+\]
+\end{definition}

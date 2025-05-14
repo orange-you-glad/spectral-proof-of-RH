@@ -1,19 +1,18 @@
 \begin{lemma}[Exponential Growth Bound for the Determinant]
 \label{lem:det_growth_bound}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator.
+Let \( L_{\sym} \in \TC(\HPsi) \) be a compact, self-adjoint, trace-class operator.
 
 Then the function
 \[
-\lambda \mapsto \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
+\lambda \mapsto \det\nolimits_{\zeta}(I - \lambda L_{\sym})
 \]
-is an entire function of order one and finite exponential type. Moreover, there exists a constant \( C > 0 \) such that for all \( \lambda \in \mathbb{C} \),
+is an entire function of order one and finite exponential type. Moreover, there exists a constant \( C > 0 \) such that for all \( \lambda \in \C \),
 \[
-\log \left| \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) \right|
+\log \left| \det\nolimits_{\zeta}(I - \lambda L_{\sym}) \right|
 \le C\, |\lambda| \log(1 + |\lambda|).
 \]
 
 \medskip
 \noindent
-That is, \( \det_\zeta(I - \lambda L_{\mathrm{sym}}) \in \mathcal{E}_1 \), the class of entire functions of order one and finite type. The constant \( C \) may be chosen depending only on \( \|L_{\mathrm{sym}}\|_{\mathcal{C}_1} \) and the spectral radius of \( L_{\mathrm{sym}} \).
+That is, \( \det\nolimits_\zeta(I - \lambda L_{\sym}) \in \mathcal{E}_1 \), the class of entire functions of order one and finite type. The constant \( C \) depends only on \( \|L_{\sym}\|_{\TC} \) and the spectral radius of \( L_{\sym} \).
 \end{lemma}
-%  

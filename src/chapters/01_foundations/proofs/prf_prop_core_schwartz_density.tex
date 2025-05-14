@@ -1,41 +1,41 @@
-\begin{proof}[Proof of \propref{prop:core_schwartz_density}]
-Fix \( \alpha > \pi \), and define the weighted Hilbert space
+\begin{proof}[Proof of \cref{prop:core_schwartz_density}]
+Fix \( \alpha > \pi \), and define the exponentially weighted Hilbert space
 \[
-\HPsi := L^2(\R, \Psi_\alpha(x)\, dx), \qquad \text{with } \Psi_\alpha(x) := e^{\alpha |x|}.
+\HPsi := L^2(\R, \Psi_\alpha(x)\, dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}.
 \]
 
-Let \( L_t \) denote the mollified convolution operators
+Let \( L_t \in \mathcal{B}(\HPsi) \) be the mollified convolution operators given by
 \[
-(L_t f)(x) := \int_{\R} k_t(x - y)\, f(y)\, dy,
+(L_t f)(x) := \int_{\R} k_t(x - y) f(y)\, dy,
 \]
-where \( k_t := \FT^{-1}\left[ e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda \right) \right] \in \Schwartz \). Let \( L_{\sym} := \lim_{t \to 0^+} L_t \) in \( \mathcal{C}_1(\HPsi) \).
+where \( k_t := \FT^{-1}\left[ e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda \right) \right] \in \Schwartz(\R) \). The canonical operator \( L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(\HPsi) \) exists in the trace-norm topology by \cref{lem:trace_norm_convergence_Lt_to_Lsym}.
 
-\medskip
-\noindent\textbf{Step 1: Schwartz Stability.}
-Each \( k_t \in \Schwartz \), and convolution preserves Schwartz regularity. Therefore:
+\paragraph{Step 1: Invariance of Schwartz space.}
+Since \( k_t \in \Schwartz \) and convolution preserves regularity, each \( L_t \) maps Schwartz functions into Schwartz functions:
 \[
 L_t(\Schwartz) \subset \Schwartz \cap \HPsi, \qquad \forall t > 0.
 \]
 
-\medskip
-\noindent\textbf{Step 2: Density of \( \Schwartz \) in \( \HPsi \).}
-By \lemref{lem:density_schwartz_weighted_L2}, the Schwartz space is dense in \( \HPsi \). Thus, for every \( f \in \HPsi \) and \( \varepsilon > 0 \), there exists \( f_\varepsilon \in \Schwartz \) such that
+\paragraph{Step 2: Density of \( \Schwartz \subset \HPsi \).}
+By \cref{lem:density_schwartz_weighted_L2}, the Schwartz space is dense in \( \HPsi \). Thus for any \( f \in \HPsi \) and \( \varepsilon > 0 \), there exists \( \phi \in \Schwartz \) such that
 \[
-\|f - f_\varepsilon\|_{\HPsi} < \varepsilon.
+\|f - \phi\|_{\HPsi} < \varepsilon.
 \]
 
-\medskip
-\noindent\textbf{Step 3: Trace-Norm Limit Commutes with Dense Core.}
-Since \( L_t \to L_{\sym} \) in trace norm, we have strong operator convergence: \( L_t f \to L_{\sym} f \) for all \( f \in \HPsi \). In particular, for \( f \in \Schwartz \), we have:
+\paragraph{Step 3: Strong convergence of \( L_t \) on Schwartz.}
+Since \( L_t \to L_{\sym} \) in trace norm (hence in operator norm), we have strong convergence:
 \[
-L_t f \in \Schwartz, \qquad L_t f \to L_{\sym} f \text{ in } \HPsi.
+\|L_t f - L_{\sym} f\|_{\HPsi} \to 0 \quad \text{for all } f \in \HPsi.
+\]
+In particular, this holds for all \( f \in \Schwartz \), and each \( L_t f \in \Schwartz \), so
+\[
+L_{\sym} f = \lim_{t \to 0^+} L_t f \in \HPsi.
 \]
 
-\medskip
-\noindent\textbf{Conclusion.}
-The Schwartz space \( \Schwartz \subset \HPsi \) is invariant under all \( L_t \) and stable under the trace-norm limit. Since it is dense and satisfies
+\paragraph{Conclusion.}
+Given any \( f \in \operatorname{Dom}(L_{\sym}) = \HPsi \), we can choose approximants \( f_n \in \Schwartz \) with
 \[
-f_n \to f, \qquad L_{\sym} f_n \to L_{\sym} f \quad \text{in } \HPsi,
+f_n \to f \quad \text{and} \quad L_{\sym} f_n \to L_{\sym} f \quad \text{in } \HPsi,
 \]
-we conclude that \( \Schwartz \) is a core for \( L_{\sym} \) with respect to the graph norm.
+by combining Step 2 (density) and Step 3 (continuity). Hence, \( \Schwartz(\R) \) is a graph-norm core for \( L_{\sym} \), completing the proof.
 \end{proof}

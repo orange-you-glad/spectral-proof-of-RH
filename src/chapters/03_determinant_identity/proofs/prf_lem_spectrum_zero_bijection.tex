@@ -1,0 +1,38 @@
+\begin{proof}[Proof of \cref{lem:spectrum_zero_bijection}]
+Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \Xi\left(\tfrac{1}{2} + i\lambda\right) / \Xi\left(\tfrac{1}{2}\right) \), by \cref{thm:det_identity_revised}.
+
+\paragraph{(i) Zero to spectrum direction.}
+Let \( \rho \in \C \setminus \{\tfrac{1}{2}\} \) be a nontrivial zero of \( \zeta(s) \), so \( \Xi(\rho) = 0 \). Then \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \) is a zero of \( f(\lambda) \).
+
+Since \( L_{\sym} \in \TC(\HPsi) \) is self-adjoint, its determinant has Hadamard factorization
+\[
+f(\lambda) = \prod_n \left(1 - \frac{\lambda}{\mu_n}\right),
+\]
+where \( \{\mu_n\} \subset \R \setminus \{0\} \) are the eigenvalues of \( L_{\sym} \). So \( \lambda_\rho = \mu_n \) implies
+\[
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+\]
+is an eigenvalue of \( L_{\sym} \). The order of vanishing of \( f \) at \( \lambda_\rho \) matches the algebraic multiplicity of \( \mu_\rho \).
+
+\paragraph{(ii) Spectrum to zero direction.}
+Suppose \( \mu_n \in \Spec(L_{\sym}) \setminus \{0\} \) is an eigenvalue. Then it appears in the determinant factorization, so its reciprocal
+\[
+\lambda_n := \mu_n^{-1}
+\]
+is a zero of \( f(\lambda) \). Therefore, there exists a unique nontrivial zero \( \rho_n \) of \( \zeta(s) \) such that
+\[
+\lambda_n = i(\rho_n - \tfrac{1}{2}) \quad \Rightarrow \quad \rho_n = \tfrac{1}{2} - i\mu_n^{-1},
+\]
+with multiplicity matching the order of \( \Xi \) at \( \rho_n \).
+
+\paragraph{(iii) Symmetry and multiplicity preservation.}
+The functional equation \( \Xi(s) = \Xi(1 - s) \) ensures that nontrivial zeros come in pairs \( \rho, 1 - \rho \), inducing
+\[
+\mu_{1 - \rho} = -\mu_\rho,
+\]
+so the spectrum \( \Spec(L_{\sym}) \) is symmetric about the origin. Since both directions preserve multiplicity, the map
+\[
+\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2})
+\]
+defines a bijection between the nontrivial zeros of \( \zeta \) and the nonzero spectrum of \( L_{\sym} \), with multiplicity correspondence. This completes the proof.
+\end{proof}

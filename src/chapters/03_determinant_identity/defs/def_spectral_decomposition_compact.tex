@@ -1,10 +1,10 @@
 \begin{definition}[Spectral Decomposition of Compact Self-Adjoint Operators]
 \label{def:spectral_decomposition_compact}
-Let \( H \) be a separable complex Hilbert space, and let \( T \in \mathcal{C}_1(H) \) be a compact, self-adjoint operator.
+Let \( H \) be a separable complex Hilbert space, and let \( T \in \TC(H) \) be a compact, self-adjoint operator.
 
-Then there exists an orthonormal basis \( \{ e_n \}_{n=1}^\infty \subset H \) consisting of eigenvectors of \( T \), with associated eigenvalues \( \{ \lambda_n \}_{n=1}^\infty \subset \mathbb{R} \), counted with algebraic multiplicity and satisfying \( \lambda_n \to 0 \) as \( n \to \infty \), such that for all \( f \in H \),
+Then there exists an orthonormal basis \( \{ e_n \}_{n=1}^\infty \subset H \) consisting of eigenvectors of \( T \), with associated eigenvalues \( \{ \lambda_n \}_{n=1}^\infty \subset \R \), counted with algebraic multiplicity and satisfying \( \lambda_n \to 0 \) as \( n \to \infty \), such that for all \( f \in H \),
 \[
-T f = \sum_{n=1}^\infty \lambda_n \langle f, e_n \rangle e_n,
+T f = \sum_{n=1}^\infty \lambda_n \ip{f}{e_n} e_n,
 \]
 where the series converges in the norm topology of \( H \).
 
@@ -14,18 +14,18 @@ This diagonalization expresses \( T \) via the spectral theorem as a normal oper
 \begin{itemize}
   \item The trace is given by
   \[
-  \operatorname{Tr}(T) = \sum_{n=1}^\infty \lambda_n,
+  \Tr(T) = \sum_{n=1}^\infty \lambda_n,
   \]
   which converges absolutely by the trace-class condition;
 
   \item The trace norm satisfies
   \[
-  \|T\|_{\mathcal{C}_1} = \sum_{n=1}^\infty |\lambda_n|;
+  \|T\|_{\TC} = \sum_{n=1}^\infty |\lambda_n|;
   \]
 
-  \item The spectral functional calculus applies: for any holomorphic function \( \phi \) defined on a neighborhood of the spectrum \( \{\lambda_n\} \), the operator \( \phi(T) \colon H \to H \) is given by
+  \item The spectral functional calculus applies: for any holomorphic function \( \phi \) defined on a neighborhood of the spectrum \( \{ \lambda_n \} \), the operator \( \phi(T) \colon H \to H \) is given by
   \[
-  \phi(T) f = \sum_{n=1}^\infty \phi(\lambda_n) \langle f, e_n \rangle e_n.
+  \phi(T) f = \sum_{n=1}^\infty \phi(\lambda_n) \ip{f}{e_n} e_n.
   \]
 \end{itemize}
 
@@ -33,4 +33,3 @@ This diagonalization expresses \( T \) via the spectral theorem as a normal oper
 \noindent
 This Hilbert–Schmidt spectral resolution forms the analytic foundation for trace expansions, heat kernel asymptotics, spectral zeta functions, and Fredholm or Carleman determinant identities associated with \( T \).
 \end{definition}
-% 

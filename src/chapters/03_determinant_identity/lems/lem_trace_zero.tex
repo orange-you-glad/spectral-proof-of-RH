@@ -1,36 +1,35 @@
-\begin{lemma}[Vanishing Trace of \( L_{\mathrm{sym}} \)]
+\begin{lemma}[Vanishing Trace of \( L_{\sym} \)]
 \label{lem:trace_zero}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint convolution operator defined via the inverse Fourier transform of the completed Riemann zeta function:
+Let \( L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint convolution operator defined via the inverse Fourier transform of the completed Riemann zeta function:
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad
-K_{\mathrm{sym}}(x,y) := \widehat{\phi}(x - y).
+K_{\sym}(x,y) := \ft{\phi}(x - y).
 \]
 
 Then the operator satisfies the trace identity:
 \[
-\operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} K_{\mathrm{sym}}(x,x) \, dx = 0.
+\Tr(L_{\sym}) = \int_{\R} K_{\sym}(x,x) \, dx = 0.
 \]
 
 \medskip
 \noindent
 \textbf{Justification.}
-Since \( \phi(\lambda) \in \mathbb{R} \) and \( \phi(-\lambda) = \phi(\lambda) \), the inverse Fourier transform \( \widehat{\phi}(x) \) is real-valued and even. Hence, the diagonal kernel value
+Since \( \phi(\lambda) \in \R \) and \( \phi(-\lambda) = \phi(\lambda) \), the inverse Fourier transform \( \ft{\phi}(x) \) is real-valued and even. Hence, the diagonal kernel
 \[
-K_{\mathrm{sym}}(x,x) = \widehat{\phi}(0)
+K_{\sym}(x,x) = \ft{\phi}(0)
 \]
-is constant. The formal trace becomes
+is constant in \( x \). The formal trace becomes
 \[
-\operatorname{Tr}(L_{\mathrm{sym}}) = \int_{\mathbb{R}} \widehat{\phi}(0) \, dx,
+\Tr(L_{\sym}) = \int_{\R} \ft{\phi}(0) \, dx,
 \]
-which diverges unless \( \widehat{\phi}(0) = 0 \). But by Fourier inversion,
+which diverges unless \( \ft{\phi}(0) = 0 \). But by the Fourier inversion formula,
 \[
-\widehat{\phi}(0) = \frac{1}{2\pi} \int_{\mathbb{R}} \phi(\lambda) \, d\lambda = 0,
+\ft{\phi}(0) = \frac{1}{2\pi} \int_{\R} \phi(\lambda) \, d\lambda = 0,
 \]
-because \( \phi(\lambda) \) is even, entire of exponential type \( \pi \), and has vanishing average due to symmetry and decay of the zeros of \( \Xi \) (cf.~\cite[Ch.~3]{Levin1996EntireLectures}).
+since \( \phi(\lambda) \) is even, entire of exponential type \( \pi \), and its mean value vanishes due to symmetry and zero distribution of \( \Xi \)~\cite[Ch.~3]{Levin1996EntireLectures}.
 
 \medskip
 \noindent
 \textbf{Spectral Consequence.}
-This vanishing ensures that the logarithmic derivative of the canonical determinant \( \log \det_\zeta(I - \lambda L_{\mathrm{sym}}) \) has no linear term, i.e., no \( \lambda \)-term in its Taylor expansion. Hence, the determinant belongs to the Hadamard class \( \mathcal{E}_1^\pi \) with normalization \( f(0) = 1 \), completing its spectral identification with the zeta profile.
-
+This vanishing ensures that the logarithmic derivative of the canonical determinant \( \log \det\nolimits_\zeta(I - \lambda L_{\sym}) \) has no linear term in \( \lambda \); that is, the Taylor expansion around zero contains no linear coefficient. Consequently, the determinant lies in the Hadamard class \( \mathcal{E}_1^\pi \) with normalization \( f(0) = 1 \), uniquely identifying it with the centered zeta profile.
 \end{lemma}

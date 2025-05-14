@@ -1,0 +1,24 @@
+\begin{lemma}[Well-Posedness of the Heat Semigroup \( e^{-t L_{\sym}^2} \)]
+\label{lem:heat_semigroup_wellposed}
+Let \( L_{\sym} \in \TC(\HPsi) \) be the compact, self-adjoint operator constructed via convolution against the inverse Fourier transform of \( \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Then:
+
+\begin{enumerate}
+    \item[\textnormal{(i)}] The square \( L_{\sym}^2 \) is positive, self-adjoint, and densely defined on \( \HPsi \).
+
+    \item[\textnormal{(ii)}] For all \( t > 0 \), the semigroup \( e^{-t L_{\sym}^2} \in \TC(\HPsi) \) is trace-class, compact, and analytic in \( t \).
+
+    \item[\textnormal{(iii)}] The map \( t \mapsto \Tr(e^{-t L_{\sym}^2}) \) is smooth on \( (0, \infty) \), and satisfies the heat trace asymptotics:
+    \[
+    \Tr(e^{-t L_{\sym}^2}) \lesssim
+    \begin{cases}
+    t^{-1/2} \log(1/t) & \text{as } t \to 0^+, \\
+    e^{-\delta t} & \text{as } t \to \infty,
+    \end{cases}
+    \]
+    for some \( \delta > 0 \).
+\end{enumerate}
+
+\medskip
+\noindent
+These properties ensure the well-definedness of the Laplace representation for the determinant and the spectral zeta function, and justify the analytic continuation framework of Chapter~\ref{sec:determinant_identity}.
+\end{lemma}

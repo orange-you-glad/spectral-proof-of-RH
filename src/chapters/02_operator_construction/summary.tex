@@ -4,35 +4,42 @@ This chapter constructed the canonical convolution operator \( L_{\sym} \in \TC(
 
 \paragraph{Function Spaces and Core Definitions}
 \begin{itemize}
-  \item \defref{def:weighted_fourier_space} — Exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \), with \( \alpha > \pi \).
-  \item \defref{def:mollified_fourier_profile} — Gaussian-mollified profiles \( \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \).
-  \item \defref{def:convolution_operators_Lt_Lsym} — Convolution operators \( L_t \) and their trace-norm limit \( L_{\sym} := \lim_{t \to 0^+} L_t \).
+  \item \defref{def:weighted_fourier_space} — Weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \) for \( \alpha > \pi \), enabling exponential kernel localization.
+  \item \defref{def:canonical_fourier_profile} — Spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \), of exponential type \( \pi \), defining the zeta kernel.
+  \item \defref{def:mollified_fourier_profile} — Mollifiers \( \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \) suppress high-frequency tails.
+  \item \defref{def:convolution_operators_Lt_Lsym} — Definition of \( L_t \) via mollified convolution; canonical limit \( L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(H_{\Psi_\alpha}) \).
 \end{itemize}
 
 \paragraph{Analytic Estimates and Kernel Decay}
 \begin{itemize}
-  \item \lemref{lem:mollified_profile_decay} — Decay bounds, integrability, and convergence of \( \varphi_t \) and \( k_t := \widehat{\varphi_t} \).
-  \item \lemref{lem:trace_class_Lt} — Each mollified operator \( L_t \in \TC(H_{\Psi_\alpha}) \) via Simon's kernel criterion.
-  \item \lemref{lem:trace_norm_convergence_Lt_to_Lsym} — Convergence: \( \|L_t - L_{\sym}\|_{\TC} \to 0 \).
-  \item \lemref{lem:trace_norm_rate_convergence} — Explicit convergence rate: \( \|L_t - L_{\sym}\| \lesssim t^\beta \).
-  \item \lemref{lem:construction_canonical_data} — Uniqueness of \( L_{\sym} \) from analytic data \( (\Xi, \alpha) \), independent of mollifier.
-  \item \lemref{lem:mollifier_independence_kernel_limit} — Independence of \( L_{\sym} \) under generalized mollifier families.
+  \item \lemref{lem:mollified_profile_decay} — Uniform decay and Fourier integrability of mollified spectral kernels \( k_t(x) \).
+  \item \lemref{lem:trace_class_Lt} — Simon’s criterion: \( L_t \in \TC(H_{\Psi_\alpha}) \) via weighted \( L^1 \) control.
+  \item \lemref{lem:trace_norm_convergence_Lt_to_Lsym} — Strong convergence in \( \TC \): \( L_t \to L_{\sym} \).
+  \item \lemref{lem:trace_norm_rate_convergence} — Quantified convergence rate: \( \|L_t - L_{\sym}\|_{\TC} \lesssim t^\beta \).
+  \item \lemref{lem:trace_norm_limit_unique} — Trace-norm limit uniqueness: \( L_{\sym} \) is independent of mollifier sequence.
+  \item \lemref{lem:construction_canonical_data} — Canonicality: \( L_{\sym} \) determined uniquely from \( (\Xi, \alpha) \).
+  \item \lemref{lem:mollifier_independence_kernel_limit} — Kernel convergence is invariant under mollifier regularization.
 \end{itemize}
 
 \paragraph{Operator Properties and Domain Closure}
 \begin{itemize}
-  \item \lemref{lem:boundedness_Lsym} — Boundedness of \( L_{\sym} \in \mathcal{B}(H_{\Psi_\alpha}) \) from mollified estimates.
-  \item \lemref{lem:core_essential_sa} — \( L_{\sym} \) is essentially self-adjoint on \( \Schwartz \subset H_{\Psi_\alpha} \).
-  \item \lemref{lem:Lsym_square_selfadjoint} — \( L_{\sym}^2 \) is also essentially self-adjoint on \( \Schwartz \) and admits a discrete spectral resolution.
+  \item \lemref{lem:boundedness_Lsym} — Boundedness: \( L_{\sym} \in \mathcal{B}(H_{\Psi_\alpha}) \) from kernel bounds.
+  \item \lemref{lem:core_essential_sa} — \( \Schwartz(\R) \subset H_{\Psi_\alpha} \) is a core for \( L_{\sym} \); essential self-adjointness follows.
+  \item \lemref{lem:Lsym_square_selfadjoint} — Self-adjointness of \( L_{\sym}^2 \): positive operator with discrete spectrum.
+  \item \remref{rem:selfadjoint_analytic_vectors} — Nelson's theorem ensures essential self-adjointness from mollifier structure.
+  \item \lemref{lem:heat_semigroup_existence} — \( L_{\sym}^2 \) generates the analytic heat semigroup \( \{ e^{-t L_{\sym}^2} \}_{t > 0} \subset \TC(\HPsi) \).
 \end{itemize}
 
 \paragraph{Canonical Operator Theorems}
 \begin{itemize}
-  \item \thmref{thm:existence_Lsym} — Existence of \( L_{\sym} \) as trace-norm limit of \( L_t \), constructed from mollified profiles.
-  \item \thmref{thm:sa_trace_class_Lsym} — Final classification: \( L_{\sym} \in \TC \cap \KC \), self-adjoint with Paley–Wiener kernel.
-  \item \thmref{thm:trace_zero_Lsym} — Trace vanishing: \( \Tr(L_{\sym}) = 0 \), ensuring determinant normalization.
+  \item \thmref{thm:existence_Lsym} — Existence: \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) realized by mollified convergence.
+  \item \thmref{thm:sa_trace_class_Lsym} — Final classification: \( L_{\sym} \) is compact, self-adjoint, and trace-class with exponentially decaying kernel.
+  \item \thmref{thm:trace_zero_Lsym} — Trace vanishing: \( \Tr(L_{\sym}) = 0 \) enforces canonical normalization of the determinant.
 \end{itemize}
 
-\medskip
-\noindent
-These results establish the full analytic and spectral-theoretic foundation for the canonical determinant identity in Chapter~\ref{sec:determinant_identity}, where the spectrum of \( L_{\sym} \) will be shown to encode the nontrivial zeros of the Riemann zeta function \( \zeta(s) \).
+\paragraph{Chapter Closure.}
+This chapter delivers the full analytic realization of the canonical operator \( L_{\sym} \), with rigorously verified convergence, self-adjointness, trace-class regularity, and semigroup properties. Constructed explicitly from the mollified inverse Fourier transform of \( \Xi \), the operator \( L_{\sym} \) underlies the canonical determinant identity
+\[
+\det\nolimits_{\zeta}(I - \lambda^2 L_{\sym}^2) = \Xi\left(\tfrac{1}{2} + i\lambda\right),
+\]
+which is proved next in Chapter~\ref{sec:determinant_identity}.

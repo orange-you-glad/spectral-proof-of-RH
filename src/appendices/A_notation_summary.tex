@@ -1,25 +1,57 @@
 \section{Summary of Notation}
-\label{app:notation-summary}
+\label{app:notation_summary}
 
 \noindent
-Notation is introduced contextually within each chapter. The following analytic objects and conventions are defined globally and recur throughout the manuscript:
+This appendix lists globally defined analytic symbols and conventions. All other notation is introduced locally at first use. For semantic dependencies and usage by chapter, see the DAG in Appendix~\ref{app:dependency-graph}.
 
 \begin{itemize}
-  \item \( \HPsi := L^2(\R, e^{\alpha |x|} \, dx) \): exponentially weighted Hilbert space with fixed exponential weight \( \alpha > \pi \). The weight function is denoted \( \Psi_\alpha(x) := e^{\alpha |x|} \).
+  \item \textbf{Weighted Hilbert Space:}
+  \[
+  \HPsi := L^2(\R, e^{\alpha |x|} \, dx), \quad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+  \]
+  Exponential weight ensures trace-class inclusion of kernels with decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). All spectral operators \( L_t \), \( L_{\sym} \), and heat flows \( e^{-tL^2} \) are realized on \( \HPsi \).
 
-  \item \( L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi) \): the canonical compact, self-adjoint convolution operator in the trace-class \( \mathcal{C}_1 \), defined as the trace-norm limit of mollified approximants \( L_t \) derived from the inverse Fourier transform of the completed zeta function.
+  \item \textbf{Paley–Wiener Class:}
+  \[
+  \PW{a} := \mathcal{PW}_a(\R)
+  \]
+  denotes the Paley–Wiener space of entire functions of exponential type \( a \), i.e., entire functions whose Fourier transforms have support in \( [-a, a] \). The centered spectral profile satisfies
+  \[
+  \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \in \PW{\pi}, \qquad \Rightarrow \qquad \phi^\vee(x) \sim e^{-\pi |x|}.
+  \]
 
-  \item \( \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right) \): the centered Fourier profile of the completed Riemann zeta function, defining the convolution kernel \( k(x) := \FT^{-1}[\phi](x) \) via inverse transform.
+  \item \textbf{Canonical Operator:}
+  \[
+  L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi),
+  \]
+  defined as the trace-norm limit of mollified convolution operators with kernels derived from \( \FT^{-1}[\phi_t] \), where \( \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \). This operator is compact, self-adjoint, and realizes the canonical determinant identity.
 
-  \item \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \): the canonical spectral image of a nontrivial zero \( \rho \in \C \) of \( \zeta(s) \), used in the bijective encoding of the spectrum of \( L_{\sym} \).
+  \item \textbf{Spectral Profile and Kernel:}
+  \[
+  \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right), \qquad k(x) := \FT^{-1}[\phi](x), \qquad K(x,y) := k(x - y).
+  \]
+  This centered profile governs the spectral geometry of \( L_{\sym} \), and appears throughout the determinant and zeta heat trace constructions.
 
-  \item \( \det\nolimits_\zeta(I - \lambda L_{\sym}) := \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)} \): the Carleman \(\zeta\)-regularized Fredholm determinant of \( L_{\sym} \), canonically encoding the spectral zero set of the Riemann zeta function.
+  \item \textbf{Canonical Spectral Map:}
+  \[
+  \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}), \qquad \rho \in \mathbb{C} \text{ zero of } \zeta(s).
+  \]
+  Maps the critical line \( \Re(\rho) = \tfrac{1}{2} \) to the real axis. Used to identify the nontrivial zero set of \( \zeta(s) \) with the spectrum of \( L_{\sym} \).
+
+  \item \textbf{Spectral Determinant:}
+  \[
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) := \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+  \]
+  the Carleman \(\zeta\)-regularized Fredholm determinant of \( L_{\sym} \), matching the Hadamard factorization of \( \Xi \) and encoding the spectral zero data.
 \end{itemize}
 
 \noindent
-The completed Riemann zeta function \( \Xi(s) \) is an entire function of order one and exponential type \( \pi \), satisfying the functional equation \( \Xi(s) = \Xi(1 - s) \). For functional identities, normalizations, and Fourier conventions, see Appendix~\ref{app:reductions-and-conventions}.
+The completed zeta function \( \Xi(s) \) is entire of order one and exponential type \( \pi \), satisfying:
+\[
+\Xi(s) = \Xi(1 - s), \quad \Xi(\tfrac{1}{2} + i\lambda) \in \mathbb{R}, \quad \forall\, \lambda \in \R.
+\]
 
 \medskip
 
 \noindent
-All remaining notation is introduced locally in the chapters where it is first used. Indexing of key theorems and symbols by chapter is provided in Appendix~\ref{app:dependency-graph}.
+For complete analytic provenance of these objects, see Appendices~\ref{app:zeta-function-background} and \ref{app:trace_ideals_review}. The global dependency DAG in Appendix~\ref{app:dependency_graph} shows which results depend on which core symbols.

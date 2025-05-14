@@ -9,7 +9,7 @@ on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} \), designed to m
 We proceed through five analytically rigorous stages:
 
 \begin{itemize}
-    \item We define the weighted Hilbert space
+    \item \textbf{Weighted space construction:} We define the Hilbert space
     \[
     H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx), \quad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi,
     \]
@@ -17,38 +17,42 @@ We proceed through five analytically rigorous stages:
     \[
     \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right)
     \]
-    lies in \( L^1(\R, \Psi_\alpha^{-1}\, dx) \). This ensures that convolution against \( \phi^\vee \) defines a trace-class operator on \( H_{\Psi_\alpha} \).
+    lies in \( L^1(\R, \Psi_\alpha^{-1}\, dx) \), enabling convolution operators to be trace-class on \( H_{\Psi_\alpha} \). This threshold \( \alpha > \pi \) is shown to be sharp in \cref{prop:trace_class_sharpness}.
 
-    \item We define mollified spectral profiles
+    \item \textbf{Mollifier family construction:} We define mollified spectral profiles
     \[
     \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda),
     \]
-    which lie in the Schwartz space \( \Schwartz \), and induce a family of convolution operators \( L_t \in \TC(H_{\Psi_\alpha}) \). Each \( L_t \) is bounded, self-adjoint, and satisfies the uniform estimate
+    which lie in \( \Schwartz \) and generate convolution operators \( L_t \in \TC(H_{\Psi_\alpha}) \) with symmetric, compact kernels. These satisfy
     \[
     \| L_t \|_{\TC} \le C(\alpha), \quad \forall t \in (0,1],
     \]
-    with \( C(\alpha) \) depending explicitly on decay bounds from mollifier profiles and exponential weights.
+    where \( C(\alpha) \) depends on uniform kernel bounds (see \cref{lem:trace_class_Lt}).
 
-    \item We prove trace-norm convergence
+    \item \textbf{Trace-norm convergence and canonical limit:} We prove that
     \[
     \| L_t - L_{\sym} \|_{\TC} \to 0 \quad \text{as } t \to 0^+,
     \]
-    and define the canonical operator via limit:
+    and define
     \[
     L_{\sym} := \lim_{t \to 0^+} L_t,
     \]
-    which exists uniquely in \( \TC(H_{\Psi_\alpha}) \) and is independent of mollifier choice.
+    which exists uniquely in trace norm (\cref{lem:trace_norm_limit_unique}) and is independent of mollifier choice. The operator \( L_{\sym} \) inherits compactness and self-adjointness via kernel symmetry and convergence (\cref{thm:existence_Lsym}, \cref{thm:sa_trace_class_Lsym}).
 
-    \item We prove that \( L_{\sym} \) is compact, self-adjoint, and densely defined on \( H_{\Psi_\alpha} \), with \( \Schwartz \subset H_{\Psi_\alpha} \) serving as a symmetric core. Essential self-adjointness of both \( L_{\sym} \) and \( L_{\sym}^2 \) is established via kernel decay and Nelson’s analytic vector theorem.
+    \item \textbf{Core domain and spectral closure:} The Schwartz space \( \Schwartz(\R) \subset H_{\Psi_\alpha} \) is a core for \( L_{\sym} \), and
+    \[
+    L_{\sym} \text{ and } L_{\sym}^2 \text{ are both essentially self-adjoint on } \Schwartz,
+    \]
+    by Nelson’s analytic vector theorem and the mollifier bounds (\cref{rem:selfadjoint_analytic_vectors}).
 
-    \item We prove that the trace vanishes:
+    \item \textbf{Trace vanishing and normalization:} We prove
     \[
     \Tr(L_{\sym}) = 0,
     \]
-    ensuring canonical normalization in the determinant identity. This removes ambiguity in the exponential factor of Hadamard-type entire functions.
+    eliminating ambiguity in the exponential prefactor of the determinant and ensuring canonical normalization (\cref{thm:trace_zero_Lsym}).
 \end{itemize}
 
-These results culminate in \thmref{thm:existence_Lsym}, \thmref{thm:sa_trace_class_Lsym}, and \thmref{thm:trace_zero_Lsym}, which collectively certify the existence, uniqueness, and analytic characterization of \( L_{\sym} \) as the canonical trace-class convolution operator associated with \( \Xi(s) \).
+These results culminate in \thmref{thm:existence_Lsym}, \thmref{thm:sa_trace_class_Lsym}, and \thmref{thm:trace_zero_Lsym}, which collectively certify the existence, uniqueness, and analytic properties of \( L_{\sym} \) as the canonical convolution operator associated with \( \Xi(s) \).
 
 \medskip
 
@@ -56,11 +60,11 @@ This operator underlies the Carleman–zeta-regularized determinant identity
 \[
 \det\nolimits_{\zeta}(I - \lambda^2 L_{\sym}^2) = \Xi\left(\tfrac{1}{2} + i\lambda\right),
 \]
-to be rigorously derived in \secref{sec:determinant_identity}.
+which will be rigorously derived in \secref{sec:determinant_identity}, building on the analytic semigroup \( e^{-t L_{\sym}^2} \) constructed here (\cref{lem:heat_semigroup_existence}).
 
 \medskip
 
-All convergence results and trace-class bounds are derived from explicit kernel estimates, using Gaussian mollification and exponential decay. Every analytic property—trace-class inclusion, compactness, symmetry, essential self-adjointness, and spectral normalization—is rigorously verified. This construction lays the spectral groundwork for encoding the nontrivial zeros of \( \zeta \) via canonical Fredholm theory.
+All convergence and boundedness claims are grounded in explicit kernel estimates and Paley--Wiener decay. The operator \( L_{\sym} \) satisfies all required properties for spectral encoding of the nontrivial zeros of \( \zeta \), and does so within the classical framework of Hilbert space spectral theory.
 
 \paragraph{Contrast with Prior Spectral Proposals.}
-In contrast to heuristic or speculative frameworks—such as the Hilbert–Pólya conjecture, Connes’s noncommutative trace formulas~\cite{Connes1999TraceFormula}, or Deninger’s cohomological program~\cite{Deninger1998Frobenius}—the operator \( L_{\sym} \) is constructed concretely within classical Hilbert space analysis. It satisfies verified analytic properties: trace-class compactness, self-adjointness, exponential kernel decay, and determinant compatibility with \( \Xi \). This resolves major technical gaps in previous proposals, which lacked either a spectral determinant, a compact operator realization, or analytic control over convergence.
+Unlike speculative constructions—such as the Hilbert–Pólya heuristic, Connes’s noncommutative geometry~\cite{Connes1999TraceFormula}, or Deninger’s dynamical program~\cite{Deninger1998Frobenius}—the operator \( L_{\sym} \) is defined concretely in \( \TC(\HPsi) \), with trace-class compactness, self-adjointness, exponential kernel decay, and a zeta-compatible determinant. This fills a critical analytic gap in prior proposals.

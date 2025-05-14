@@ -1,45 +1,48 @@
-\begin{proof}[Proof of Theorem~\ref{thm:det_identity_revised}]
-Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \).
+\begin{proof}[Proof of \cref{thm:det_identity_revised}]
+Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) \).
 
-\paragraph{(1) Local Power Series Definition.}
-For \( |\lambda| < \|L_{\mathrm{sym}}\|^{-1} \), the logarithm of the determinant admits the convergent trace expansion:
+\paragraph{(1) Local power series definition.}
+For \( |\lambda| < \|L_{\sym}\|^{-1} \), the determinant admits the absolutely convergent trace expansion:
 \[
-\log f(\lambda) = -\sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L_{\mathrm{sym}}^n),
+\log f(\lambda) = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(L_{\sym}^n),
 \]
-which defines a holomorphic function near \( \lambda = 0 \).
+which defines a holomorphic function in a neighborhood of \( \lambda = 0 \).
 
-\paragraph{(2) Entire Extension via Heat Trace.}
-By Lemma~\ref{lem:det_via_heat_trace}, \( f(\lambda) \) admits the Laplace representation
+\paragraph{(2) Entire extension via heat trace.}
+By \cref{lem:det_via_heat_trace} and \cref{lem:laplace_heat_trace_convergence}, \( f(\lambda) \) admits the Laplace representation
 \[
-\log f(\lambda) = -\int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL_{\mathrm{sym}}})\, dt,
+\log f(\lambda) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t L_{\sym}}) \, dt,
 \]
-which converges for all \( \lambda \in \mathbb{C} \), proving that \( f \) is entire.
+which converges for all \( \lambda \in \C \), showing that \( f \) extends to an entire function.
 
-\paragraph{(3) Order and Growth.}
-By Lemma~\ref{lem:det_growth_bound}, the function \( f \) is entire of order one and exponential type at most \( \pi \), with sub-exponential bounds controlling its growth.
+\paragraph{(3) Order and growth.}
+By \cref{lem:det_growth_bound} and \cref{lem:det_identity_entire_order_one}, the function \( f \) is entire of order one and exponential type at most \( \pi \), with logarithmic-exponential bounds:
+\[
+|f(\lambda)| \le C e^{\pi |\lambda|}.
+\]
 
-\paragraph{(4) Matching with \( \Xi \).}
+\paragraph{(4) Matching with \(\Xi\).}
 Define
 \[
 g(\lambda) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
 \]
-By Lemma~\ref{lem:hadamard_linear_form}, the function \( g \) is also entire of order one and exponential type exactly \( \pi \), and satisfies \( g(0) = 1 \). By Lemma~\ref{lem:trace_zero}, \( \operatorname{Tr}(L_{\mathrm{sym}}) = 0 \), so \( f(0) = \det\nolimits_\zeta(I) = 1 \) as well.
+By \cref{lem:hadamard_linear_form,lem:exact_type_pi}, the function \( g \) is entire of order one and exact exponential type \( \pi \), with \( g(0) = 1 \). Similarly, by \cref{lem:trace_zero}, we have \( \Tr(L_{\sym}) = 0 \), so \( f(0) = \det\nolimits_\zeta(I) = 1 \).
 
-\paragraph{(5) Logarithmic Derivative Equality.}
-By Lemma~\ref{lem:A_log_derivative}, the logarithmic derivatives match:
+\paragraph{(5) Logarithmic derivative equality.}
+By \cref{lem:A_log_derivative}, the logarithmic derivative satisfies
 \[
 \frac{d}{d\lambda} \log f(\lambda)
-= \operatorname{Tr}\left( (I - \lambda L_{\mathrm{sym}})^{-1} L_{\mathrm{sym}} \right)
-= \frac{d}{d\lambda} \log g(\lambda).
+= \Tr\left( (I - \lambda L_{\sym})^{-1} L_{\sym} \right)
+= \frac{d}{d\lambda} \log g(\lambda),
 \]
-Thus, \( \log f(\lambda) - \log g(\lambda) \) is constant. Since \( f(0) = g(0) = 1 \), this constant is zero.
+since both sides match the sum over spectral poles arising from the Hadamard factorization. Thus, \( \log f(\lambda) - \log g(\lambda) \) is constant. Because \( f(0) = g(0) = 1 \), this constant is zero.
 
 \paragraph{Conclusion.}
-The functions \( f \) and \( g \) are entire of order one, have matching zero sets (with multiplicity), matching logarithmic derivatives, and equal normalization. By Hadamard's uniqueness theorem, we conclude:
+The functions \( f \) and \( g \) are entire of order one, have matching zeros and logarithmic derivatives, and agree at the origin. By Hadamard’s uniqueness theorem~\cite[Ch.~3]{Levin1996EntireLectures}, we conclude:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
-\quad \text{for all } \lambda \in \mathbb{C},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\quad \text{for all } \lambda \in \C,
 \]
 as claimed.
 \end{proof}
-% 
+s

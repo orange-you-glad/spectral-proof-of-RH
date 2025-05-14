@@ -1,0 +1,30 @@
+\begin{lemma}[Spectral–Zero Bijection for the Canonical Determinant]
+\label{lem:spectrum_zero_bijection}
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical self-adjoint, trace-class convolution operator defined in \cref{sec:operator_construction}, and let
+\[
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\]
+denote its Carleman zeta-regularized Fredholm determinant.
+
+Then:
+
+\begin{enumerate}
+  \item[\textnormal{(i)}] For every nontrivial zero \( \rho \in \C \setminus \{\tfrac{1}{2}\} \) of the Riemann zeta function \( \zeta(s) \), the spectral image
+  \[
+  \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+  \]
+  lies in the spectrum \( \Spec(L_{\sym}) \), and its multiplicity matches the order of the zero at \( \rho \).
+
+  \item[\textnormal{(ii)}] Conversely, every nonzero eigenvalue \( \mu_n \in \Spec(L_{\sym}) \setminus \{0\} \) corresponds to a unique zero \( \rho_n \) of \( \zeta(s) \) such that
+  \[
+  \rho_n := \tfrac{1}{2} - i \mu_n^{-1}.
+  \]
+  The multiplicities agree, and \( f(\lambda_n) = 0 \) where \( \lambda_n := \mu_n^{-1} \).
+
+  \item[\textnormal{(iii)}] The spectrum \( \Spec(L_{\sym}) \setminus \{0\} \subset \R \setminus \{0\} \) is symmetric about the origin, and the map
+  \[
+  \rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+  \]
+  defines a multiplicity-preserving bijection between the nontrivial zeros of \( \zeta \) and the nonzero spectrum of \( L_{\sym} \).
+\end{enumerate}
+\end{lemma}

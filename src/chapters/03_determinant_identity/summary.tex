@@ -2,78 +2,77 @@
 
 \begin{itemize}
   % --- Determinant Foundations ---
-  \item \cref{def:fredholm_determinant} — Classical Fredholm determinant: defined via eigenvalue product for trace-class operators; analytic for all \( \lambda \in \C \).
+  \item \cref{def:fredholm_determinant} — Fredholm determinant: defined via the eigenvalue product for \( T \in \TC \); analytic in \( \lambda \in \C \).
 
-  \item \cref{def:carleman_zeta_determinant} — Carleman \(\zeta\)-regularized determinant: defined by trace-exponential expansion and extended via Laplace representation.
+  \item \cref{def:carleman_zeta_determinant} — Carleman \(\zeta\)-regularized determinant: defined by heat trace Laplace transform; entire extension via spectral zeta theory.
 
-  \item \cref{def:spectral_decomposition_compact} — Spectral decomposition: compact, self-adjoint operators admit a complete orthonormal eigenbasis with discrete spectrum.
+  \item \cref{def:spectral_decomposition_compact} — Spectral decomposition for compact self-adjoint operators: complete orthonormal basis of eigenfunctions with discrete spectrum.
 
-  \item \cref{def:spectral_zeta_function} — Spectral zeta function \( \zeta_{L^2}(s) \): defined via eigenvalues and extended analytically by Mellin transform of the heat trace.
-
+  \item \cref{def:spectral_zeta_function} — Spectral zeta function \( \zeta_{L^2}(s) \): defined by Mellin transform of \( \Tr(e^{-t L^2}) \), with analytic continuation.
+  
   % --- Convergence and Analytic Structure ---
-  \item \cref{lem:kernel_trace_norm_convergence} — Trace-norm convergence: \( L_t \to L_{\sym} \) in \( \TC \), ensuring continuity of determinant and spectrum.
+  \item \cref{lem:kernel_trace_norm_convergence} — Kernel convergence: \( L_t \to L_{\sym} \) in trace norm.
 
-  \item \cref{lem:heat_semigroup_wellposed} — Heat semigroup \( \{e^{-tL_{\sym}^2}\} \subset \TC(\HPsi) \): well-posed, holomorphic in \( t \), with controlled asymptotics.
+  \item \cref{lem:heat_semigroup_wellposed} — Semigroup \( \{e^{-tL_{\sym}^2}\} \subset \TC(\HPsi) \): holomorphic in \( t \), with exponential bounds.
 
-  \item \cref{lem:det_via_heat_trace} — Determinant represented via Laplace transform of the heat trace:
+  \item \cref{lem:det_via_heat_trace} — Determinant defined via Laplace transform:
   \[
   \log \det\nolimits_\zeta(I - \lambda L_{\sym}) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t L_{\sym}}) \, dt.
   \]
 
-  \item \cref{lem:laplace_heat_trace_convergence} — Absolute convergence of the Laplace integral extends the determinant to an entire function of order one.
+  \item \cref{lem:laplace_heat_trace_convergence} — Absolute convergence of the Laplace integral establishes entire extension.
 
-  \item \cref{lem:det_growth_bound} — Growth bound:
+  \item \cref{lem:det_growth_bound} — Growth control:
   \[
   \log |\det\nolimits_\zeta(I - \lambda L_{\sym})| \le C |\lambda| \log(1 + |\lambda|),
   \]
-  placing the determinant in \( \mathcal{E}_1^{\leq \pi} \).
+  showing membership in \( \mathcal{E}_1^{\leq \pi} \).
 
-  \item \cref{lem:det_identity_entire_order_one} — Entire structure: the determinant has exact exponential type \( \pi \), consistent with Paley--Wiener growth.
+  \item \cref{lem:det_identity_entire_order_one} — Entire function has exact exponential type \( \pi \), consistent with Paley–Wiener theory.
 
   % --- Hadamard Structure and Spectral Encoding ---
   \item \cref{lem:exact_type_pi} — Sharp exponential type \( \pi \) for both \( \Xi(\tfrac{1}{2} + i\lambda) \) and the canonical determinant.
 
-  \item \cref{lem:hadamard_linear_form} — Hadamard product structure:
+  \item \cref{lem:hadamard_linear_form} — Hadamard product representation:
   \[
   \Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} \right) \prod_{\rho} \left(1 - \frac{\lambda}{\lambda_\rho}\right) e^{\lambda/\lambda_\rho}.
   \]
 
-  \item \cref{lem:trace_zero} — Canonical normalization:
+  \item \cref{lem:trace_zero} — Trace vanishing:
   \[
   \Tr(L_{\sym}) = 0 \quad \Rightarrow \quad \det\nolimits_\zeta(I) = 1.
   \]
 
   \item \cref{lem:A_log_derivative} — Logarithmic derivative identity:
   \[
-  \frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\sym}) = \Tr\left( (I - \lambda L_{\sym})^{-1} L_{\sym} \right),
+  \frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\sym}) = \Tr\left( (I - \lambda L_{\sym})^{-1} L_{\sym} \right).
   \]
-  valid for \( \lambda^{-1} \notin \Spec(L_{\sym}) \).
 
-  \item \cref{lem:spectrum_zero_bijection} — Multiplicity-preserving bijection:
+  \item \cref{lem:spectrum_zero_bijection} — Spectral encoding:
   \[
   \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}),
   \]
-  and each \( \mu_n \in \Spec(L_{\sym}) \setminus \{0\} \) corresponds to a unique nontrivial zero of \( \zeta \).
+  with bijective multiplicity matching between \( \Spec(L_{\sym}) \setminus \{0\} \) and nontrivial zeros of \( \zeta(s) \).
 
-  \item \cref{lem:hadamard_uniqueness_E1pi} — Entire function uniqueness in \( \mathcal{E}_1^\pi \): determinant is determined by its zero set and normalization.
+  \item \cref{lem:hadamard_uniqueness_E1pi} — Entire function uniqueness in \( \mathcal{E}_1^\pi \): determined by zeros and normalization.
 
   % --- Canonical Identity Theorem ---
   \item \cref{thm:det_identity_revised} — Canonical determinant identity:
   \[
-  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
   \]
-  completing the analytic realization of \( \Xi \) as a spectral determinant.
 
-  % --- Asymptotics and Spectral Density (Bridge to Ch. 4) ---
-  \item \cref{lem:spectral_zeta_from_heat} — Mellin transform continuation of \( \zeta_{L_{\sym}^2}(s) \) via the heat trace.
+  % --- Asymptotics and Spectral Density ---
+  \item \cref{lem:spectral_zeta_from_heat} — Mellin continuation of \( \zeta_{L_{\sym}^2}(s) \) via short-time heat asymptotics.
 
-  \item Corollary (via Tauberian theory) — Spectral counting:
+  \item Corollary (via Tauberian analysis) — Spectral counting function:
   \[
   N(\Lambda) := \#\{ \mu_n^2 \le \Lambda \} \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda,
   \]
-  matching the Riemann--von Mangoldt formula.
+  matching the classical Riemann–von Mangoldt estimate.
 \end{itemize}
 
 \medskip
+
 \noindent
-These results complete the analytic phase of the spectral program. The operator \( L_{\sym} \in \TC(\HPsi) \) canonically realizes the completed zeta function \( \Xi(s) \) via its Carleman determinant. Every analytic invariant—zero set, growth type, and normalization—is uniquely determined. The spectral encoding of \( \zeta(s) \) is completed in Chapter~\ref{sec:spectral_correspondence}.
+These results complete the analytic phase of the spectral program. The operator \( L_{\sym} \in \TC(\HPsi) \) canonically realizes \( \Xi(s) \) as a spectral determinant. All analytic invariants—growth rate, zeros, and normalization—are uniquely fixed. The spectral encoding map is developed next in Chapter~\ref{sec:spectral_correspondence}.

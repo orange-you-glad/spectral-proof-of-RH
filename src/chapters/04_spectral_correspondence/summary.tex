@@ -1,45 +1,46 @@
 \subsection*{Chapter Summary}
 
-This chapter establishes the canonical spectral encoding of the nontrivial zeros of the Riemann zeta function via the compact, self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \). The key results are as follows:
+This chapter establishes a canonical spectral encoding of the nontrivial zeros of the Riemann zeta function via the compact, self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \). The key results are:
 
 \begin{itemize}
-  \item \lemref{lem:zero_to_eigenvalue_injection} — Every nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \) of \( \zeta(s) \) defines a nonzero eigenvalue of \( L_{\sym} \) via the spectral map
+  \item \lemref{lem:zero_to_eigenvalue_injection} — Each nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \) of \( \zeta(s) \) defines a nonzero eigenvalue via
   \[
   \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} \in \Spec(L_{\sym}).
   \]
 
-  \item \lemref{lem:spectral_exhaustivity} — Every nonzero eigenvalue \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) arises from such a zero \( \rho \): surjectivity of the map.
+  \item \lemref{lem:spectral_exhaustivity} — Surjectivity: every \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) arises from some \( \rho \), i.e., from a nontrivial zeta zero.
 
-  \item \lemref{lem:spectral_multiplicity_matching} — The algebraic multiplicity of \( \mu_\rho \) matches the order of vanishing of \( \zeta(s) \) at \( \rho \):
+  \item \lemref{lem:spectral_multiplicity_matching} — Multiplicity preservation:
   \[
   \operatorname{mult}(\mu_\rho) = \operatorname{ord}_\rho(\zeta).
   \]
 
-  \item \lemref{lem:spectral_symmetry} — The spectrum of \( L_{\sym} \) is symmetric under reflection:
+  \item \lemref{lem:spectral_symmetry} — Spectral symmetry:
   \[
   \mu \in \Spec(L_{\sym}) \quad \Longrightarrow \quad -\mu \in \Spec(L_{\sym}),
   \]
   reflecting the functional symmetry \( \zeta(s) = \zeta(1 - s) \).
 
-  \item \lemref{lem:spectral_bijection_consistency} — The spectral map \( \rho \mapsto \mu_\rho \) is a multiplicity-preserving bijection between nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( L_{\sym} \).
+  \item \lemref{lem:spectral_bijection_consistency} — The map \( \rho \mapsto \mu_\rho \) is a multiplicity-preserving bijection from nontrivial zeros of \( \zeta(s) \) to the nonzero spectrum of \( L_{\sym} \).
 
-  \item \thmref{thm:spectral_zero_bijection_revised} — Consolidated bijection:
+  \item \thmref{thm:spectral_zero_bijection_revised} — Consolidated result:
   \[
   \zeta(\rho) = 0 \quad \Longleftrightarrow \quad \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym}),
   \]
-  with multiplicities preserved on both sides.
+  with multiplicities exactly matching.
 \end{itemize}
 
 \begin{quote}
   \textbf{Remark (Spectral Encoding as Analytic Dual).}~
-  This bijection is canonical: the entire spectrum of \( L_{\sym} \) is uniquely determined by the analytic structure of \( \Xi(s) \) via the Fredholm determinant identity. Conversely, as shown in \corref{cor:spectrum_determines_zeta}, the spectrum of \( L_{\sym} \), including multiplicities, fully determines \( \Xi(s) \), and thus recovers the nontrivial zeros of \( \zeta(s) \).
+  This bijection is canonical: the full spectrum of \( L_{\sym} \) is uniquely determined by the analytic structure of \( \Xi(s) \) via the determinant identity. Conversely, as shown in \corref{cor:spectrum_determines_zeta}, the spectrum of \( L_{\sym} \), including multiplicities, fully reconstructs \( \Xi(s) \) and thereby recovers the nontrivial zeros of \( \zeta(s) \).
 \end{quote}
 
-For a visual overview, see Table~\ref{fig:schematic_bijection_table}, which illustrates the spectral encoding map \( \rho \mapsto \mu_\rho \), the symmetry \( \pm \mu \), and the bijection structure between zeros and eigenvalues.
+See Table~\ref{fig:schematic_bijection_table} for a visual overview of the map \( \rho \mapsto \mu_\rho \), its symmetry \( \pm\mu \), and the bijection structure.
 
 \medskip
-\noindent
-This spectral encoding underpins the reformulation of the Riemann Hypothesis in Chapter~\ref{sec:spectral_implications}, where we prove:
+
+This canonical spectral encoding underpins the equivalence
 \[
-\mathrm{RH} \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R.
+\mathrm{RH} \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R,
 \]
+which we prove in Chapter~\ref{sec:spectral_implications}.

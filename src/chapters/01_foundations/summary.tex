@@ -3,52 +3,43 @@
 
 \textbf{Operator-Theoretic Foundations}
 \begin{itemize}
-  \item \defref{def:compact_operator} — Compact operators on Hilbert spaces: norm limits of finite-rank operators with discrete spectrum.
-  \item \defref{def:trace_class_operator} — Trace-class operators via singular value summability: \( \TC(H) \subset \KC(H) \).
-  \item \defref{def:trace_norm} — Trace norm \( \|T\|_{\Tr} := \Tr(|T|) \); unitarily invariant and Banach complete.
-  \item \defref{def:selfadjoint_operator} — Self-adjoint operators: maximal symmetric extensions enabling spectral calculus.
+  \item \defref{def:compact_operator} — Compact operators: norm limits of finite-rank maps with discrete spectrum.
+  \item \defref{def:trace_class_operator}, \defref{def:trace_norm} — Trace-class operators \( T \in \TC(H) \) with finite trace norm \( \|T\|_{\Tr} := \Tr(|T|) \); Banach completeness and unitary invariance.
+  \item \defref{def:selfadjoint_operator} — Self-adjointness as maximal symmetry enabling spectral calculus and semigroup generation.
 \end{itemize}
 
 \textbf{Weighted Spaces and Function Classes}
 \begin{itemize}
-  \item \defref{def:exponential_weight} — Weighted Hilbert spaces \( \HPsi := L^2(\R, e^{\alpha|x|}\,dx) \), defined via exponential weights \( \Psi_\alpha(x) \).
-  \item \defref{def:weighted_schwartz_space} — Schwartz functions \( \Schwartz(\R) \subset \HPsi \) with decay control; domain core for convolution operators.
-  \item \lemref{lem:density_schwartz_weighted_L2} — \( \Schwartz \subset \HPsi \) is dense in norm and graph topology, justifying analytic extension of mollified operators.
-  \item \remref{rem:sobolev_core_reference} — Alternate justification via exponential Sobolev completions: \( \Schwartz \hookrightarrow H^s_\alpha \hookrightarrow \HPsi \).
+  \item \defref{def:exponential_weight}, \defref{def:weighted_schwartz_space} — The space \( \HPsi = L^2(\R, e^{\alpha|x|}\,dx) \), with \( \Schwartz(\R) \subset \HPsi \) a dense core.
+  \item \lemref{lem:density_schwartz_weighted_L2} — Density of \( \Schwartz \subset \HPsi \) in norm and graph topology.
+  \item \remref{rem:sobolev_core_reference} — Alternate justification: \( \Schwartz \hookrightarrow H^s_\alpha \hookrightarrow \HPsi \) via Sobolev embeddings.
 \end{itemize}
 
 \textbf{Analytic and Spectral Estimates}
 \begin{itemize}
-  \item \lemref{lem:xi_growth_bound} — Exponential type \( \pi \) bound for \( \Xi(\tfrac{1}{2} + i\lambda) \); Paley--Wiener class control.
-  \item \lemref{lem:weighted_L1_inverse_FT_xi} — Inverse Fourier transform \( \widehat{\Xi} \in L^1(\R, \Psi_\alpha^{-1}) \) for \( \alpha > \pi \).
-  \item \lemref{lem:decay_mollified_kernel} — Gaussian mollification ensures Schwartz-class kernel \( k_t \in \mathcal{S} \).
-  \item \lemref{lem:L1_integrability_conjugated_kernel} — Conjugated kernels \( \widetilde{K}_t \in L^1(\R^2) \) for trace-class embedding.
-  \item \lemref{lem:uniform_L1_conjugated_kernel} — Uniform kernel bounds ensure convergence \( \|L_t - L_{\sym}\|_{\TC} \to 0 \).
-  \item \lemref{lem:trace_class_via_weighted_L1} — Simon’s criterion for trace-class inclusion via exponential decay of the kernel.
-  \item \lemref{lem:trace_class_conjugated_kernel} — Transfer of trace-class regularity from flat space to weighted setting.
-  \item \lemref{lem:trace_class_failure_alpha_leq_pi} — Trace-class inclusion fails when \( \alpha \le \pi \); exponential decay condition is sharp.
-  \item \propref{prop:trace_class_sharpness} — Weighted kernel integral diverges if \( \alpha \le \pi \); justifies decay threshold.
-  \item \lemref{lem:unitary_conjugation_trace_class} — Trace norm is preserved under unitary conjugation \( U_\alpha \colon \HPsi \to L^2(\R) \).
+  \item \lemref{lem:xi_growth_bound}, \lemref{lem:weighted_L1_inverse_FT_xi} — The profile \( \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \), with inverse transform in \( L^1(\R, \Psi_\alpha^{-1}) \).
+  \item \lemref{lem:decay_mollified_kernel}, \lemref{lem:L1_integrability_conjugated_kernel} — Mollifiers \( k_t \in \Schwartz \), conjugated kernels integrable.
+  \item \lemref{lem:uniform_L1_conjugated_kernel}, \lemref{lem:trace_class_via_weighted_L1} — Trace norm convergence \( \|L_t - L_{\sym}\|_{\TC} \to 0 \) and Simon's trace-class inclusion criterion.
+  \item \lemref{lem:trace_class_conjugated_kernel}, \lemref{lem:trace_class_failure_alpha_leq_pi}, \propref{prop:trace_class_sharpness} — Trace-class fails for \( \alpha \le \pi \): sharp exponential decay threshold.
+  \item \lemref{lem:unitary_conjugation_trace_class} — Trace norm preserved under unitary weight conjugation.
 \end{itemize}
 
-\textbf{Operator Boundedness, Symmetry, and Compactness}
+\textbf{Operator Properties of \texorpdfstring{\( L_t \)}{Lt}}
 \begin{itemize}
-  \item \propref{prop:boundedness_Lt_weighted} — Boundedness of \( L_t \) on \( \HPsi \) via mollified kernel estimates.
-  \item \propref{prop:compactness_Lt} — Compactness of \( L_t \) from Hilbert--Schmidt trace norm control.
-  \item \propref{prop:symmetry_Lt_Schwartz} — Symmetry: \( L_t \) is symmetric on \( \Schwartz \), inherits Hermitian kernel.
-  \item \propref{prop:selfadjointness_Lt} — Self-adjoint extension: \( L_t \in \mathcal{B}(H_{\Psi_\alpha}) \) is self-adjoint if symmetric.
-  \item \propref{prop:core_schwartz_density} — \( \Schwartz \) is a core for \( L_{\sym} \); trace convergence extends via graph norm.
+  \item \propref{prop:boundedness_Lt_weighted}, \propref{prop:compactness_Lt} — Boundedness and compactness of \( L_t \) via mollified kernel structure.
+  \item \propref{prop:symmetry_Lt_Schwartz}, \propref{prop:selfadjointness_Lt} — \( L_t \) is symmetric on \( \Schwartz \) and extends to a self-adjoint operator.
+  \item \propref{prop:core_schwartz_density} — \( \Schwartz \) is a core for the limit operator \( L_{\sym} \).
 \end{itemize}
 
 \textbf{Canonical Operator Realization}
 \begin{itemize}
-  \item \thmref{thm:canonical_operator_realization} — Canonical synthesis: \( L_t \to L_{\sym} \in \TC(\HPsi) \), determining the zeta-determinant operator.
+  \item \thmref{thm:canonical_operator_realization} — Convergence \( L_t \to L_{\sym} \in \TC(\HPsi) \); defines the canonical compact self-adjoint operator realizing the spectral determinant.
 \end{itemize}
 
 \paragraph{Chapter Closure.}
-This chapter establishes the analytic infrastructure and operator-theoretic realization of the canonical convolution operator \( L_{\sym} \in \TC(\HPsi) \), using mollified Paley--Wiener kernels derived from \( \Xi(\tfrac{1}{2} + i\lambda) \). All decay, trace-class inclusion, convergence, and core domain results are proven without reference to RH. This foundation supports the determinant identity:
+This chapter establishes the analytic and operator-theoretic base for all that follows. The canonical convolution operator \( L_{\sym} \in \TC(\HPsi) \) is defined as the trace-norm limit of mollified Fourier convolution operators \( L_t \). Its construction relies on Paley–Wiener estimates, exponential decay, Sobolev density, and trace-class embedding theorems. The determinant identity
 \[
 \det\nolimits_{\zeta}(I - \lambda L_{\sym})
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda \right)}{\Xi\left(\tfrac{1}{2} \right)},
+= \frac{\Xi\left(\tfrac{1}{2} + i\lambda \right)}{\Xi\left(\tfrac{1}{2} \right)}
 \]
-developed in full in Chapter~\ref{sec:determinant_identity}.
+is proven in Chapter~\ref{sec:determinant_identity}, resting entirely on this analytic groundwork.

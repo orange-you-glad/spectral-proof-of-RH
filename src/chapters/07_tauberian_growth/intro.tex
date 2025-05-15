@@ -4,45 +4,45 @@ This chapter establishes the spectral asymptotics of the canonical compact, self
 \[
 L_{\mathrm{sym}} \in \TC(\HPsi),
 \]
-via Laplace–Tauberian inversion of its squared heat semigroup. Using refined small-time asymptotics of the heat trace
+via Laplace–Tauberian inversion of its squared heat semigroup. Using refined short-time asymptotics of the spectral trace
 \[
 \Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}),
 \]
-we recover precise growth estimates for the eigenvalue counting function
+we derive precise growth estimates for the eigenvalue counting function
 \[
 N(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\},
 \]
-and analytically verify compatibility with the Riemann–von Mangoldt zero-counting formula.
+and confirm analytic compatibility with the Riemann–von Mangoldt zero-counting law.
 
 \paragraph{Objectives.}
 \begin{itemize}
   \item \textit{Spectral Growth Bounds.}  
-  From the heat trace envelope
+  From the envelope
   \[
   \Theta(t) \asymp t^{-1/2} \quad \text{as } t \to 0^+,
   \]
-  established in Chapter~\ref{sec:heat_kernel_asymptotics}, we deduce via \lemref{lem:spectral_convexity_estimate} that
+  established in Chapter~\ref{sec:heat_kernel_asymptotics}, we deduce via \lemref{lem:spectral_convexity_estimate} the subconvex bound
   \[
-  N(\Lambda) = O(\Lambda^{1/2+\varepsilon}) \quad \text{for all } \varepsilon > 0,
+  N(\Lambda) = O(\Lambda^{1/2+\varepsilon}) \quad \text{for all } \varepsilon > 0.
   \]
-  confirming subconvex spectral growth. The effective spectral dimension is \( d = 1 \), consistent with a leading law \( N(\Lambda) \sim \Lambda^{1/2} \log \Lambda \).
+  The effective spectral dimension is \( d = 1 \), consistent with leading growth \( N(\Lambda) \sim \Lambda^{1/2} \log \Lambda \).
 
   \item \textit{Tauberian Inversion.}  
-  Applying Korevaar’s refinement of Karamata theory (see \lemref{lem:log_corrected_tauberian_estimate}), we invert the Laplace representation
+  Applying Korevaar’s refinement of Karamata theory (\lemref{lem:log_corrected_tauberian_estimate}), we invert the Laplace relation
   \[
   \Theta(t) = \int_0^\infty e^{-t\lambda} \, dN(\lambda),
   \]
-  and obtain the precise growth law
+  and obtain the sharp asymptotic
   \[
   N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}) \quad \text{as } \Lambda \to \infty.
   \]
-  This follows from the classification \( \Theta \in \mathcal{R}_{1/2}^{\log} \), the class of regularly varying functions of index \( \tfrac{1}{2} \) modulated by a logarithmic factor.
+  This follows from classifying \( \Theta \in \mathcal{R}_{1/2}^{\log} \), i.e., regularly varying with index \( 1/2 \) and logarithmic modulation.
 
   \item \textit{Zeta-Theoretic Compatibility.}  
-  The derived growth law exactly matches the Riemann–von Mangoldt formula for the nontrivial zeros of the Riemann zeta function. This analytic agreement, established in \corref{cor:zeta_compatibility}, provides direct confirmation that the spectrum of \( L_{\mathrm{sym}} \) encodes the zero distribution of \( \zeta(s) \).
+  The derived asymptotic matches the classical Riemann–von Mangoldt formula for zeta zeros. This match, proven in \corref{cor:zeta_compatibility}, confirms that the spectrum of \( L_{\mathrm{sym}} \) encodes the zero distribution of \( \zeta(s) \).
 \end{itemize}
 
-\paragraph{Analytic Inputs from \cref{sec:heat_kernel_asymptotics}.}
+\paragraph{Analytic Inputs from Chapter~\ref{sec:heat_kernel_asymptotics}.}
 
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
@@ -50,15 +50,15 @@ and analytically verify compatibility with the Riemann–von Mangoldt zero-count
 \hline
 \textbf{Source} & \textbf{Analytic Quantity} & \textbf{Role in This Chapter} \\
 \hline
-\textbf{Proposition~\ref{prop:two_sided_heat_trace_bounds}} &
+\propref{prop:two_sided_heat_trace_bounds} &
 \( \Tr(e^{-tL^2}) \asymp t^{-1/2} \) &
 Ensures admissibility for Tauberian envelope bounds \\
 
-\textbf{Proposition~\ref{prop:short_time_heat_expansion}} &
+\propref{prop:short_time_heat_expansion} &
 \( \Tr(e^{-tL^2}) = \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) &
 Triggers Korevaar inversion with logarithmic precision \\
 
-\textbf{Lemma~\ref{lem:log_derivative_determinant}} &
+\lemref{lem:log_derivative_determinant} &
 Spectral zeta representation via heat trace &
 Links eigenvalue asymptotics to determinant structure \\
 \hline

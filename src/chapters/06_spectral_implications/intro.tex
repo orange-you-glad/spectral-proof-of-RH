@@ -4,31 +4,33 @@
 This chapter concludes the analytic–spectral phase of the proof architecture by extracting two definitive consequences from the canonical determinant identity established in \thmref{thm:det_identity_revised}:
 
 \begin{itemize}
-  \item A formal equivalence lemma (\lemref{lem:reality_of_spectrum_and_rh}): \emph{\(\RH\) holds if and only if the spectrum of the canonical operator \( L_{\sym} \) is real};
+  \item A formal equivalence (\lemref{lem:reality_of_spectrum_and_rh}):
+  \[
+  \RH \iff \Spec(L_{\sym}) \subset \R,
+  \]
+  i.e., the Riemann Hypothesis holds if and only if the spectrum of the canonical operator \( L_{\sym} \) is real.
 
-  \item A spectral uniqueness theorem: \emph{Any compact, self-adjoint, trace-class operator realizing the normalized determinant identity for \( \XiR(s) \) is unitarily equivalent to \( L_{\sym} \)}.
+  \item A spectral uniqueness theorem: Any compact, self-adjoint, trace-class operator realizing the normalized determinant identity for \( \XiR(s) \) is unitarily equivalent to \( L_{\sym} \).
 \end{itemize}
 
-\medskip
-
-These results rest analytically on the trace-class heat kernel asymptotics, resolvent regularity, and semigroup convergence bounds developed in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}. All analytic preconditions for the Fredholm determinant and its Laplace representation are justified there, and no assumption of the Riemann Hypothesis is made at any stage.
+These results rest analytically on the trace-class heat kernel asymptotics, resolvent bounds, and Laplace-integrable semigroup convergence established in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}. All preconditions for defining the Fredholm determinant and its Laplace representation are rigorously satisfied. No assumption of the Riemann Hypothesis is made at any stage.
 
 \medskip
 
-We therefore deduce the following:
+Explicitly, we deduce:
 
 \begin{itemize}
-  \item The Riemann Hypothesis is equivalent to the spectral reality of the canonical operator:
+  \item The Riemann Hypothesis is equivalent to spectral reality:
   \[
-    \RH \iff \Spec(L_{\sym}) \subset \R,
+  \RH \iff \Spec(L_{\sym}) \subset \R,
   \]
-  proven constructively in \lemref{lem:reality_of_spectrum_and_rh} and summarized in \corref{cor:spectrum_real_equiv_rh};
+  proven constructively in \lemref{lem:reality_of_spectrum_and_rh} and summarized in \corref{cor:spectrum_real_equiv_rh}.
 
-  \item Let \( L \in \TC(\HPsi) \) be any compact, self-adjoint operator satisfying
+  \item Let \( L \in \TC(\HPsi) \) be any compact, self-adjoint operator such that
   \[
-    \det\nolimits_\zeta(I - \lambda L) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}, \quad \text{for all } \lambda \in \C.
+  \det\nolimits_\zeta(I - \lambda L) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}, \quad \text{for all } \lambda \in \C.
   \]
-  Then \( L \) is unitarily equivalent to \( L_{\sym} \). That is, \( L_{\sym} \) is unique (up to unitary equivalence) within the trace-class realization space of \( \XiR \).
+  Then \( L \) is unitarily equivalent to \( L_{\sym} \). That is, \( L_{\sym} \) is the unique (up to unitary equivalence) trace-class realization of the normalized determinant identity for \( \XiR(s) \).
 \end{itemize}
 
 \medskip
@@ -36,15 +38,13 @@ We therefore deduce the following:
 Together, these results establish the following operator-theoretic principle:
 
 \begin{quote}
-  The analytic structure of the completed Riemann zeta function \( \XiR(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique (up to unitary equivalence) compact, self-adjoint, trace-class operator whose spectrum encodes the Riemann Hypothesis via spectral reality.
+  The analytic structure of the completed Riemann zeta function \( \XiR(s) \), via its Hadamard factorization and functional symmetry, canonically determines a unique (up to unitary equivalence) compact, self-adjoint, trace-class operator whose spectrum encodes the Riemann Hypothesis via spectral reality.
 \end{quote}
 
-This identification finalizes the analytic–spectral chain of implications initiated in Chapter~\ref{sec:determinant_identity}. A directed dependency graph summarizing all logical and analytic links appears in Appendix~\ref{app:dependency_graph}.
-
-\medskip
+This completes the analytic–spectral chain initiated in Chapter~\ref{sec:determinant_identity}. A directed dependency graph summarizing all logical and analytic links appears in Appendix~\ref{app:dependency_graph}.
 
 \paragraph{Analytic Closure.}
-Every implication in this chapter—from determinant identity to spectral reality—is rigorously supported by trace-class semigroup theory, Laplace-convergent kernel bounds, and zeta-function calculus. All such dependencies are either proven in Chapter~\ref{sec:heat_kernel_asymptotics} or explicitly delegated to Appendix~\ref{app:heat_kernel_construction}.
+Every implication in this chapter—from determinant identity to spectral equivalence—is rigorously grounded in trace-class semigroup theory, heat kernel asymptotics, and spectral zeta calculus. All such dependencies are established in Chapter~\ref{sec:heat_kernel_asymptotics} or formally delegated to Appendix~\ref{app:heat_kernel_construction}.
 
 \paragraph{Internal Consistency.}
-All results referenced in this chapter either appear as formal numbered statements or follow directly from earlier proofs. No lemma, identity, or asymptotic estimate used in this chapter is implicitly assumed or omitted. The logical structure of the proof is acyclic and fully transparent.
+All referenced results are formally stated or explicitly cited. No asymptotic estimate, trace identity, or determinant claim is assumed without proof. The chapter’s logical structure is acyclic, transparent, and canonically complete.

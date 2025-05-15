@@ -1,6 +1,11 @@
 \subsection*{Introduction}
 
-This chapter establishes the analytic infrastructure for defining and analyzing the canonical compact operator \( L_{\sym} \), which realizes the completed Riemann zeta function \( \Xi(s) \) via its Fredholm determinant. The primary goal is to verify that mollified convolution operators associated with the inverse Fourier transform of \( \Xi \) are compact, trace class, and converge in trace norm to a self-adjoint limit operator \( L_{\sym} \in \TC(\HPsi) \), where the weighted Hilbert space \( \HPsi := L^2(\R, \Psi_\alpha(x) \, dx) \) is equipped with exponential weight \( \Psi_\alpha(x) = e^{\alpha|x|} \) for \( \alpha > \pi \).
+This chapter constructs the analytic infrastructure necessary to define and analyze the canonical trace-class operator \( L_{\sym} \) that underlies the spectral realization of the Riemann Hypothesis (RH). The operator is obtained as the trace-norm limit of a family of mollified convolution operators \( \{L_t\}_{t > 0} \), defined via inverse Fourier transforms of mollified zeta spectral profiles. These operators act on the exponentially weighted Hilbert space
+\[
+\HPsi := L^2(\R, e^{\alpha |x|} dx), \quad \text{with } \alpha > \pi.
+\]
+
+\vspace{0.5em}
 
 \begin{center}
 \begin{tikzpicture}[node distance=20pt, every node/.style={align=center},>=Stealth]
@@ -19,36 +24,27 @@ This chapter establishes the analytic infrastructure for defining and analyzing 
 \end{tikzpicture}
 \end{center}
 
-\noindent
-This pipeline links mollified spectral data to compact operator realization and determinant recovery.
+\vspace{0.5em}
 
-\medskip
-
-The constructions in this chapter verify:
+The following analytic properties are verified:
 
 \begin{itemize}
-    \item \textbf{Trace-class regularity:} The canonical kernel \( k(x) = \FT^{-1}[\Xi(\tfrac{1}{2} + i\lambda)](x) \) decays like \( e^{-\pi |x|} \), and trace-class inclusion holds if and only if \( \alpha > \pi \); this bound is sharp (\cref{prop:trace_class_sharpness}).
-
-    \item \textbf{Schatten-class and determinant control:} Operators \( L_t \in \TC(\HPsi) \) admit uniform bounds in the trace-norm ideal, and determinant convergence is ensured by compact kernel decay.
-
-    \item \textbf{Essential self-adjointness:} The limit \( L_{\sym} \) is symmetric and essentially self-adjoint on \( \Schwartz(\R) \), by Nelson’s analytic vector theorem (\cref{rem:selfadjoint_analytic_vectors}).
-
-    \item \textbf{Heat semigroup generation:} The semigroup \( \{e^{-t L_{\sym}^2}\}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and trace-class, with precise exponential bounds (\cref{lem:heat_semigroup_existence}).
-
-    \item \textbf{Paley--Wiener analytic control:} The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) lies in the Paley--Wiener class \( \PW{\pi} \), and its inverse Fourier transform belongs to \( L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \). This ensures kernel localization and enables rigorous determinant regularization.
+    \item \textbf{Trace-class inclusion:} The inverse Fourier transform of \( \Xi(\tfrac{1}{2} + i\lambda) \) decays as \( e^{-\pi|x|} \). Operators \( L_t \in \TC(\HPsi) \) are trace class iff \( \alpha > \pi \), with sharpness shown in \propref{prop:trace_class_sharpness}.
+    
+    \item \textbf{Schatten control and convergence:} Uniform trace-norm bounds hold for \( L_t \), and trace-norm convergence \( L_t \to L_{\sym} \) is rigorously established.
+    
+    \item \textbf{Essential self-adjointness:} The limit operator \( L_{\sym} \) is essentially self-adjoint on \( \Schwartz(\R) \), via Nelson's theorem; see \remref{rem:sobolev_core_reference}.
+    
+    \item \textbf{Heat semigroup structure:} The semigroup \( \{e^{-t L_{\sym}^2}\}_{t > 0} \) is holomorphic and trace class, with exponential norm bounds (\lemref{lem:heat_semigroup_existence}).
+    
+    \item \textbf{Paley–Wiener embedding:} The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) belongs to \( \PW{\pi} \), enabling localization and determinant regularization.
 \end{itemize}
 
-These ingredients culminate in the construction of mollified convolution operators \( L_t \), and in the verification of trace-norm convergence
+These properties culminate in a trace-norm convergent operator \( L_{\sym} \in \TC(\HPsi) \), whose zeta-regularized Fredholm determinant satisfies
 \[
-L_t \to L_{\sym} \in \TC(\HPsi) \quad \text{as } t \to 0^+.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
 \]
-This limit defines the canonical spectral operator underlying the determinant identity
-\[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
-\]
-which is rigorously established in the next chapter, without assuming RH or spectral symmetry.
 
-\medskip
+This identity is rigorously proved in Chapter~\ref{sec:determinant_identity} without assuming RH or spectral surjectivity. The analytic tools developed here serve as the base layer for all spectral and determinant arguments to follow.
 
-The analytic architecture developed here underpins all subsequent spectral and determinant identities.
-See Appendix~\ref{app:dependency_graph} for a visual DAG linking these foundational tools to the modular proof of RH.
+For a modular dependency diagram, see \appref{app:dependency_graph}.

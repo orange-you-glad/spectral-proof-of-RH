@@ -2,18 +2,17 @@
 
 The Riemann Hypothesis holds as a formal consequence of the spectral reality of the canonical operator \( L_{\sym} \in \TC(\HPsi) \), constructed as the trace-norm limit of symmetric mollified convolution operators derived from the inverse Fourier transform of the completed zeta function \( \XiR(s) \).
 
-Through analytic kernel estimates, Schatten convergence, and parity preservation, we established that \( L_{\sym} \) is compact, self-adjoint, and trace-class. Its spectrum encodes the nontrivial zeros of \( \zetaR(s) \) via the canonical determinant identity:
+Through kernel decay estimates, Schatten convergence, and parity symmetry, we established that \( L_{\sym} \) is compact, self-adjoint, and trace class. Its spectrum encodes the nontrivial zeros of \( \zetaR(s) \) via the canonical determinant identity:
 \[
 \det\nolimits_\zeta(I - \lambda L_{\sym})
 = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}.
 \]
-This identity defines a multiplicity-preserving correspondence:
+This identity defines a multiplicity-preserving spectral correspondence:
 \[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
-\quad \text{with} \quad
-\mu_\rho \in \Spec(L_{\sym}),
+\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
+\quad \mu_\rho \in \Spec(L_{\sym}),
 \]
-ensured by the Hadamard product structure of the determinant.
+ensured by the Hadamard structure of \( \XiR(s) \).
 
 \medskip
 
@@ -24,22 +23,22 @@ We proved the equivalence:
 \text{RH is true} \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R
 }
 \]
-and verified the spectral reality condition unconditionally using:
+and verified the spectral reality condition unconditionally, using:
 \begin{itemize}
-  \item Self-adjointness and compactness of \( L_{\sym} \);
-  \item Boundedness and positivity of the heat semigroup \( e^{-tL_{\sym}^2} \);
-  \item Convergence and growth control of \( \zeta \)-regularized Fredholm determinants;
-  \item Positivity of the spectral trace distribution \( \phi \mapsto \Tr(\phi(L_{\sym})) \).
+  \item Compactness and self-adjointness of \( L_{\sym} \);
+  \item Positivity and boundedness of the heat semigroup \( e^{-tL_{\sym}^2} \);
+  \item Laplace convergence and growth control of \( \zeta \)-regularized determinants;
+  \item Positivity of the spectral trace functional \( \phi \mapsto \Tr(\phi(L_{\sym})) \).
 \end{itemize}
 
 \medskip
 
 \noindent
-Every component of this proof is modular, analytically self-contained, and part of an acyclic dependency structure documented in \appref{app:dependency_graph}. No step relies on modular forms, automorphic representations, or arithmetic conjectures.
+Every step in the proof is modular, analytically self-contained, and supported by an acyclic dependency structure detailed in \appref{app:dependency_graph}. No part of the argument relies on modular forms, automorphic representations, or arithmetic conjectures.
 
 This chapter completes the canonical spectral resolution of the Riemann Hypothesis: the nontrivial zeros of \( \zetaR(s) \) lie on the critical line as a consequence of the analytic and spectral structure of \( L_{\sym} \).
 
 \medskip
 
 \noindent
-Further refinements—including heat kernel expansions, Tauberian corrections, or spectral models for automorphic \( L \)-functions—are explored in \appref{app:heat_kernel_refinements}, \appref{app:functorial_extensions}, and \appref{app:additional_structures}.
+Further analytic refinements—including higher-order heat kernel expansions, Tauberian corrections, and spectral models for automorphic \( L \)-functions—are explored in \appref{app:heat_kernel_refinements}, \appref{app:functorial_extensions}, and \appref{app:additional_structures}.

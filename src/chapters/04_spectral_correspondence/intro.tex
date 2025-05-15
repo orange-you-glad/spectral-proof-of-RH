@@ -1,18 +1,3 @@
-\begin{previewbox}
-\textbf{Spectral Overview.} This chapter establishes a canonical spectral correspondence between the nontrivial zeros of the Riemann zeta function \( \zetaR(s) \) and the nonzero spectrum of a trace-class operator \( L_{\sym} \in \TC(\HPsi) \), defined via mollified convolution and normalized through a determinant identity:
-\[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}.
-\]
-The spectral map \( \rho = \tfrac{1}{2} + i\gamma \mapsto \mu_\rho := \frac{1}{\gamma} \) encodes zeta zeros into eigenvalues of \( L_{\sym} \), with exact preservation of multiplicities. This bijection is shown to be:
-\begin{itemize}
-  \item injective (\lemref{lem:zero_to_eigenvalue_injection}),
-  \item surjective (\lemref{lem:spectral_exhaustivity}),
-  \item multiplicity-preserving (\lemref{lem:spectral_multiplicity_matching}),
-  \item symmetric under \( \mu \mapsto -\mu \) (\lemref{lem:spectral_symmetry}).
-\end{itemize}
-The bijection culminates in \thmref{thm:spectral_zero_bijection_revised}. Furthermore, the spectral trace \( \Tr(e^{-t L_{\sym}^2}) \) admits a Laplace transform representation (\lemref{lem:spectral_measure_heat_semigroup}) whose Mellin transform recovers \( \XiR(s) \). Finally, in \lemref{lem:reality_of_spectrum_and_rh}, we show that spectral reality is equivalent to the Riemann Hypothesis.
-\end{previewbox}
-
 \subsection*{Introduction}
 \label{sec:intro_spectral_correspondence}
 
@@ -26,38 +11,34 @@ assigns to each nontrivial zero \(\rho \in \C\) a nonzero eigenvalue \(\mu_\rho 
 \]
 
 \medskip
+
 \noindent
-This spectral correspondence is established through a modular chain of analytically independent results:
+This spectral correspondence is developed through a modular chain of analytically independent results:
 
 \begin{itemize}
-  \item \textbf{Injection:} Every nontrivial zero \(\rho\) of \(\zetaR(s)\) yields a nonzero eigenvalue \(\mu_\rho\) of \(L_{\sym}\), via the spectral determinant identity \textbf{(\lemref{lem:zero_to_eigenvalue_injection})}.
+  \item \textbf{Injection:} Every nontrivial zero \(\rho\) of \(\zetaR(s)\) yields a nonzero eigenvalue \(\mu_\rho\) of \(L_{\sym}\) (\lemref{lem:zero_to_eigenvalue_injection}).
   
-  \item \textbf{Surjection:} Conversely, each nonzero eigenvalue \(\mu \in \Spec(L_{\sym}) \setminus \{0\}\) arises from a unique nontrivial zero \(\rho\) with \(\mu = \mu_\rho\) \textbf{(\lemref{lem:spectral_exhaustivity})}.
+  \item \textbf{Surjection:} Every nonzero eigenvalue arises from a unique zero \(\rho\) (\lemref{lem:spectral_exhaustivity}).
   
-  \item \textbf{Multiplicity Matching:} The algebraic multiplicity of each eigenvalue \(\mu_\rho\) equals the order of vanishing of \(\zetaR(s)\) at \(\rho\) \textbf{(\lemref{lem:spectral_multiplicity_matching})}.
+  \item \textbf{Multiplicity Matching:} Eigenvalue multiplicities match the order of vanishing of \(\zetaR(s)\) (\lemref{lem:spectral_multiplicity_matching}).
   
-  \item \textbf{Spectral Symmetry:} The spectrum of \(L_{\sym}\) is symmetric about the origin: \(\mu \in \Spec(L_{\sym}) \Rightarrow -\mu \in \Spec(L_{\sym})\), reflecting the functional equation \(\zetaR(s) = \zetaR(1 - s)\) \textbf{(\lemref{lem:spectral_symmetry})}.
+  \item \textbf{Spectral Symmetry:} The spectrum is symmetric: \( \mu \in \Spec(L_{\sym}) \Rightarrow -\mu \in \Spec(L_{\sym}) \) (\lemref{lem:spectral_symmetry}).
   
-  \item \textbf{Bijection Consistency:} The map \(\rho \mapsto \mu_\rho\) defines a multiplicity-preserving bijection between the multiset of nontrivial zeros of \(\zetaR(s)\) and the multiset \(\Spec(L_{\sym}) \setminus \{0\}\) \textbf{(\lemref{lem:spectral_bijection_consistency})}.
+  \item \textbf{Bijection Consistency:} The map \( \rho \mapsto \mu_\rho \) is a bijection between zeros and the nonzero spectrum (\lemref{lem:spectral_bijection_consistency}).
   
-  \item \textbf{Spectral Trace Representation:} The trace \(\Tr(e^{-t L_{\sym}^2})\) admits a spectral expansion whose Mellin transform recovers \(\XiR(s)\), establishing a spectral measure correspondence \textbf{(\lemref{lem:spectral_measure_heat_semigroup})}.
+  \item \textbf{Spectral Trace Representation:} The heat trace \( \Tr(e^{-t L_{\sym}^2}) \) admits a Laplace transform encoding \( \XiR(s) \) (\lemref{lem:spectral_measure_heat_semigroup}).
   
-  \item \textbf{Reality-RH Equivalence:} The spectrum of \(L_{\sym}\) is real if and only if the nontrivial zeros of \(\zetaR(s)\) lie on the critical line \(\Re(\rho) = \tfrac{1}{2}\), i.e., the Riemann Hypothesis holds \textbf{(\lemref{lem:reality_of_spectrum_and_rh})}.
+  \item \textbf{Reality-RH Equivalence:} Spectral reality \( \Spec(L_{\sym}) \subset \R \) is equivalent to the Riemann Hypothesis (\lemref{lem:reality_of_spectrum_and_rh}).
 \end{itemize}
 
 \medskip
+
 \noindent
-\thmref{thm:spectral_zero_bijection_revised} consolidates these components into the central equivalence:
+\thmref{thm:spectral_zero_bijection_revised} consolidates these into the central equivalence:
 \[
 \Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \,\middle|\, \zetaR(\rho) = 0 \right\},
 \]
-with exact preservation of multiplicity. This bijection is proven unconditionally and without assuming the Riemann Hypothesis. It provides the analytic foundation for the equivalence proven in \secref{sec:spectral_implications}:
+with exact preservation of multiplicity. This bijection is proven unconditionally and without assuming RH. It forms the analytic foundation for the RH equivalence proven in \secref{sec:spectral_implications}:
 \[
 \Spec(L_{\sym}) \subset \R \quad \Longleftrightarrow \quad \text{Riemann Hypothesis}.
 \]
-
-\medskip
-\noindent
-\textbf{Canonical Spectral Schematic.} A diagrammatic summary of the bijective encoding appears in \textbf{Figure~\ref{fig:schematic_bijection_table}}, below.
-
-\input{chapters/04_spectral_correspondence/schematic_bijection_table}

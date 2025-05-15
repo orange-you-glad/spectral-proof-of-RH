@@ -4,7 +4,7 @@
 \input{preamble}
 
 % --- Metadata: Title, Author, Abstract ---
-\input{metadata/frontmatter}
+\input{chapters/00_matter/frontmatter}
 
 \begin{document}
 
@@ -13,24 +13,22 @@ We construct a canonical compact, self-adjoint, trace-class operator \( L_{\math
 \[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-with \(\Xi(s)\) the completed Riemann zeta function.
+where \(\Xi(s)\) denotes the completed Riemann zeta function.
 
-The determinant is shown to be entire of order one and exponential type \( \pi \), providing a canonical spectral realization of the Riemann Hypothesis. The operator arises as the trace-norm limit of a mollified family of convolution operators with kernels given by the inverse Fourier transform of \( \Xi \). The resulting operator has discrete real spectrum \( \mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \) precisely encoding all nontrivial zeros \( \rho \) of \( \zeta(s) \), with correct multiplicities.
+The determinant is shown to be entire of order one and exponential type \( \pi \), providing a canonical spectral realization of the Riemann Hypothesis. The operator arises as the trace-norm limit of a mollified family of convolution operators with kernels given by the inverse Fourier transform of \(\Xi\). The resulting operator has discrete real spectrum \( \mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \) precisely encoding all nontrivial zeros \( \rho \) of \( \zeta(s) \), with correct multiplicities.
 
-We establish analyticity of the heat kernel, derive short-time trace expansions with refined asymptotic control, and extract spectral growth bounds using Korevaar's Tauberian theory, rigorously verifying all required conditions. The spectral determinant identity is proven unconditionally, without assuming surjectivity of the spectral correspondence. A modular chain of spectral rigidity results then establishes the logical equivalence \( \mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \), completing a formal spectral proof of the Riemann Hypothesis.
+We establish analyticity of the heat kernel, derive short-time trace expansions with refined asymptotic control, and extract spectral growth bounds using Korevaar's Tauberian theory. The spectral determinant identity is proven unconditionally. A modular chain of spectral rigidity results establishes the logical equivalence \( \mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \), thereby completing a formal spectral proof of the Riemann Hypothesis.
 
 \medskip
 \noindent
-Additional refinements and functorial generalizations are discussed in Appendices~\ref{app:heat_kernel_refinements} and~\ref{app:additional-structures}, including conjectural extensions to automorphic \( L \)-functions and arithmetic cohomology.
+Refinements and functorial extensions are discussed in Appendices~\ref{app:heat_kernel_refinements} and~\ref{app:additional_structures}, including conjectural generalizations to automorphic \( L \)-functions and motivic cohomology.
 \end{abstract}
 
 \maketitle
 \tableofcontents
 
 % --- Reader Orientation ---
-\input{chapters/00_matter/appendix_guide.tex}
-\input{chapters/00_matter/readers_roadmap.tex}
-\input{chapters/00_matter/prolouge.tex}
+\input{chapters/00_matter/prolouge}
 
 % --- Core Chapters ---
 \input{chapters/01_foundations/foundations}
@@ -52,13 +50,12 @@ Additional refinements and functorial generalizations are discussed in Appendice
 \input{appendices/E_heat_kernel_refinements}
 \input{appendices/F_spectral_numerics}
 \input{appendices/G_additional_structures}
-\input{appendices/H_zeta_function_background}
-\input{appendices/I_trace_ideals_review}
-\input{appendices/J_reductions_and_conventions}
-\input{appendices/K_spectral_physics_link}
+\input{appendices/H_zeta_trace_background}
+\input{appendices/I_reductions_and_conventions}
+\input{appendices/J_spectral_physics_link}
 
 % --- Acknowledgments ---
-\input{metadata/acknowledgments}
+\input{chapters/00_matter/acknowledgments}
 
 % --- References ---
 \bibliographystyle{amsalpha}

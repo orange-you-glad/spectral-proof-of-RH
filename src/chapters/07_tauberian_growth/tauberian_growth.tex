@@ -27,19 +27,19 @@
 \input{chapters/07_tauberian_growth/lems/lem_korevaar_tauberian_constants_verified}
 \input{chapters/07_tauberian_growth/proofs/prf_lem_korevaar_tauberian_constants_verified}
 
-% --- Functional framework link ---
+% --- Functional framework link to spectral counting ---
 \begin{remark}[Functional Class for Tauberian Inversion]
-Let \( \Theta(t) := \operatorname{Tr}(e^{-tL^2_{\mathrm{sym}}}) \) denote the heat trace. Proposition~6.7 implies that
+Let \( \Theta(t) := \operatorname{Tr}(e^{-tL^2_{\mathrm{sym}}}) \) denote the spectral heat trace. Proposition~6.7 implies
 \[
 \Theta(t) \sim \frac{1}{\sqrt{4\pi t}}\log\left(\frac{1}{t}\right)
 \quad \text{as } t \to 0^+.
 \]
-This places \( \Theta \in \mathcal{R}_{1/2}^{\log} \), the class of regularly varying functions of index \( 1/2 \), modulated by a logarithmic term. Its Laplace–Stieltjes inverse, the eigenvalue counting function \( N(\Lambda) \), lies in \( \mathcal{R}_{1/2}^{\log}(\infty) \), with refined asymptotic expansion
+This places \( \Theta \in \mathcal{R}_{1/2}^{\log} \), the class of regularly varying functions of index \( 1/2 \), modulated by logarithmic growth. Its Laplace–Stieltjes inverse, the eigenvalue counting function \( N(\Lambda) \), lies in \( \mathcal{R}_{1/2}^{\log}(\infty) \) and satisfies the refined asymptotic:
 \[
 N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi}\log \Lambda + O(\sqrt{\Lambda}),
 \quad \text{as } \Lambda \to \infty.
 \]
-This is justified by Korevaar's remainder-enhanced Tauberian theorems~\cite[Ch.~III, §5]{Korevaar2004Tauberian}.
+This is justified by Korevaar’s log-corrected Tauberian theorems~\cite[Ch.~III, §5]{Korevaar2004Tauberian}.
 \end{remark}
 
 %------------------------------------------------------------------
@@ -55,5 +55,4 @@ This is justified by Korevaar's remainder-enhanced Tauberian theorems~\cite[Ch.~
 \input{chapters/07_tauberian_growth/proofs/prf_cor_zeta_compatibility}
 
 %------------------------------------------------------------------
-
 \input{chapters/07_tauberian_growth/summary}

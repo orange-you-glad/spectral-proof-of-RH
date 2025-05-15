@@ -1,18 +1,18 @@
-\begin{lemma}[No Extraneous Zeros from Hadamard Exponential]
+\begin{lemma}[No Extraneous Determinant Zeros from Hadamard Exponential]
 \label{lem:no_extraneous_zeros}
 Let
 \[
 f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
-denote the canonical \(\zeta\)-regularized Fredholm determinant associated to \( L_{\sym} \in \TC(\HPsi) \), and suppose
+denote the canonical Carleman \(\zeta\)-regularized Fredholm determinant associated to \( L_{\sym} \in \TC(\HPsi) \), and suppose
 \[
 f(\lambda) = \prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho} \right) \exp\left( \frac{\lambda}{\mu_\rho} \right)
 \]
-is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \), where the product runs over the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zetaR(s) \).
+is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), where the product runs over the nontrivial zeros \( \rho \) of \( \zetaR(s) \).
 
-Then every zero of \( f(\lambda) \) arises from such a \(\rho\), and no extraneous zeros are introduced by the exponential correction in the Hadamard product. That is, the nonzero spectrum of \( L_{\sym} \) satisfies
+Then the Hadamard exponential factor introduces no additional (spurious) zeros: every zero of \( f(\lambda) \) corresponds to a nontrivial zero \( \rho \) of \( \zetaR \), and the nonzero spectrum of \( L_{\sym} \) satisfies
 \[
-\Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho \in \R : \zetaR(\rho) = 0 \right\},
+\Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho \in \R : \zetaR(\rho) = 0 \right\}.
 \]
-with no additional zeros contributed by the Hadamard exponential prefactor.
+Thus, the determinant \(\det\nolimits_\zeta(I - \lambda L_{\sym})\) has no extraneous poles or zeros beyond those explicitly contributed by the spectral zeros \( \mu_\rho \).
 \end{lemma}

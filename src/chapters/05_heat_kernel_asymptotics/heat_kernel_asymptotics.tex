@@ -28,7 +28,8 @@
 \input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_heat_kernel_diagonal_positivity}
 
 %------------------------------------------------------------------
-\subsection{Spectral Trace Properties}
+% Supports determinant identity in Chapter 3 (see \cref{lem:det_via_heat_trace})
+\subsection{Spectral Trace Asymptotics and Determinant Support}
 
 % --- Heat trace expansion and trace-class closure lemma ---
 \input{chapters/05_heat_kernel_asymptotics/lems/lem_heat_trace_expansion}
@@ -37,6 +38,10 @@
 % --- Laplace integrability for determinant definition ---
 \input{chapters/05_heat_kernel_asymptotics/lems/lem_laplace_integrability_heat_trace}
 \input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_laplace_integrability_heat_trace}
+
+% --- Determinant-log derivative connection via heat trace regularization ---
+\input{chapters/05_heat_kernel_asymptotics/lems/lem_log_derivative_determinant}
+\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_log_derivative_determinant}
 
 % --- Two-sided estimate for Tr(e^{-tL^2_sym}) ~ t^{-1/2} ---
 \input{chapters/05_heat_kernel_asymptotics/props/prop_two_sided_heat_trace_bounds}
@@ -55,10 +60,6 @@
 \input{chapters/05_heat_kernel_asymptotics/lems/lem_distributional_trace_asymptotics}
 \input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_distributional_trace_asymptotics}
 
-% --- Determinant-log derivative connection via heat trace regularization ---
-\input{chapters/05_heat_kernel_asymptotics/lems/lem_log_derivative_determinant}
-\input{chapters/05_heat_kernel_asymptotics/proofs/prf_lem_log_derivative_determinant}
-
 % --- Spectral Weyl asymptotics from heat kernel expansion ---
 \input{chapters/05_heat_kernel_asymptotics/props/prop_spectral_counting_weyl}
 \input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_spectral_counting_weyl}
@@ -68,7 +69,8 @@
 \input{chapters/05_heat_kernel_asymptotics/proofs/prf_prop_strong_op_closure_heat}
 
 %------------------------------------------------------------------
-% --- Spectral dimension and trace scaling interpretation ---
+% --- Spectral dimension interpretation of heat trace scaling ---
+%     Analytic bridge to Tauberian spectral asymptotics in Chapter 7
 \input{chapters/05_heat_kernel_asymptotics/rems/rem_spectral_dimension}
 
 %------------------------------------------------------------------

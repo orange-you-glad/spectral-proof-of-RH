@@ -24,7 +24,7 @@ The analytic identity
 \[
 \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
-relies on the following validated properties, derived across Chapters~1–2 and Appendices~\ref{app:zeta_function_background}, \ref{app:trace_ideals_review}:
+relies on the following validated properties, derived across Chapters~1–2 and Appendix~\ref{app:zeta_trace_background}:
 
 \begin{itemize}
   \item \textbf{Spectral Profile Class:} \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) (see \cref{lem:xi_growth_bound}) ensures exponential control.
@@ -52,10 +52,10 @@ relies on the following validated properties, derived across Chapters~1–2 and 
   \textit{See also \remref{rmk:forward_spectral_closure} for forward implications traced in Chapter~6.}
 
   \item \textbf{Chapter 4 — Spectral Bijection:}  
-  Establishes the multiplicity-preserving map \( \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}) \) via \cref{lem:spectrum_zero_bijection}.
+  Establishes the multiplicity-preserving map \( \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}) \) via \cref{lem:spectrum_zero_bijection}, and includes decay analysis in \cref{rem:spectral_dimension}.
 
   \item \textbf{Chapter 5 — Heat Kernel and Trace Asymptotics:}  
-  Derives expansions for \( \Tr(e^{-tL_{\sym}^2}) \), Mellin transforms of zeta functions, and Tauberian bounds.
+  Derives the short-time expansion of \( \Tr(e^{-tL_{\sym}^2}) \), establishes determinant Laplace integrability (\cref{lem:det_via_heat_trace}), log-derivative structure (\cref{lem:log_derivative_determinant}), and Weyl-type counting estimates.
 
   \item \textbf{Chapter 6 — Spectral Rigidity and RH Equivalence:}  
   Proves
@@ -85,14 +85,14 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \textbf{Operator Construction (Ch.~2)} \\
 \text{(\cref{lem:trace_norm_limit_unique}, \cref{rem:selfadjoint_analytic_vectors})} \\[1ex]
 \downarrow \\[1ex]
-\textbf{Determinant Identity (Ch.~3)} \Leftarrow \text{App.~\ref{app:zeta_function_background}, \ref{app:trace_ideals_review}} \\
+\textbf{Determinant Identity (Ch.~3)} \Leftarrow \text{App.~\ref{app:zeta_trace_background}} \\
 \text{(\cref{lem:heat_semigroup_wellposed}, \cref{lem:hadamard_uniqueness_E1pi})} \\[1ex]
 \downarrow \\[1ex]
 \textbf{Spectral Bijection (Ch.~4)} \\
-\text{(\cref{lem:spectrum_zero_bijection})} \\[1ex]
+\text{(\cref{lem:spectrum_zero_bijection}, \cref{rem:spectral_dimension})} \\[1ex]
 \downarrow \\[1ex]
 \textbf{Heat Trace Asymptotics (Ch.~5)} \\
-\text{(Tauberian counting from Laplace-integrated trace)} \\[1ex]
+\text{(Supports \cref{lem:det_via_heat_trace}, \cref{lem:log_derivative_determinant}, Weyl growth)} \\[1ex]
 \downarrow \\[1ex]
 \textbf{Spectral Rigidity \& RH Equivalence (Ch.~6)} \\
 \text{(\thmref{thm:eq_of_rh}, \lemref{lem:spectral_rigidity_determinant}, \thmref{thm:rh_spectral_closure})} \\[1ex]

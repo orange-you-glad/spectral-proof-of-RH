@@ -1,13 +1,11 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectrum-reality-implies-rh}]
-We prove both directions of the equivalence.
-
-First, assume that all zeros of \( \Xi(\tfrac{1}{2} + i\lambda) \) lie on the real axis. Then the canonical determinant identity
+\begin{proof}[Proof of \lemref{lem:reality_of_spectrum_and_rh}]
+Assume first that all zeros of \( \lambda \mapsto \XiR(\tfrac{1}{2} + i\lambda) \) lie on the real axis. Then the canonical determinant identity
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
-has zeros only for real \( \lambda \). Since this determinant arises from the spectrum of the compact, self-adjoint operator \( L_{\mathrm{sym}} \), the location of its zeros implies that all eigenvalues \( \mu_\rho \in \mathbb{R} \), as guaranteed by the spectral theorem.
+has zeros only for real \( \lambda \). Since this determinant arises from the spectrum of a compact, self-adjoint operator \( L_{\sym} \), the location of its zeros implies that all eigenvalues \( \mu_\rho \in \R \), by the spectral theorem.
 
-Conversely, assume that \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is self-adjoint with discrete spectrum \( \{\mu_\rho\} \subset \mathbb{R} \). Then by the canonical eigenvalue encoding
+Conversely, suppose \( L_{\sym} \in \TC(\HPsi) \) is self-adjoint and all eigenvalues \( \mu_\rho \in \R \). Then by the canonical spectral encoding
 \[
 \mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})},
 \]
@@ -15,6 +13,5 @@ it follows that
 \[
 \rho = \tfrac{1}{2} + \frac{1}{i\mu_\rho}.
 \]
-Since \( \mu_\rho \in \mathbb{R} \), this implies \( \operatorname{Re}(\rho) = \tfrac{1}{2} \). Hence, all nontrivial zeros of \( \zeta(s) \) lie on the critical line, and the Riemann Hypothesis holds.
+Since \( \mu_\rho \in \R \), this implies \( \Re(\rho) = \tfrac{1}{2} \). Therefore, all nontrivial zeros of \( \zetaR(s) \) lie on the critical line, and the Riemann Hypothesis holds.
 \end{proof}
-%  

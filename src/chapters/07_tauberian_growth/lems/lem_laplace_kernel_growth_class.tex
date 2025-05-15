@@ -1,29 +1,32 @@
 \begin{lemma}[Laplace Growth Class for Log-Modulated Heat Trace]
 \label{lem:laplace_kernel_growth_class}
-Let \( \Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \) denote the spectral heat trace of the canonical compact, self-adjoint, trace-class operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). Suppose the short-time trace asymptotics satisfy
+
+Let \( \Theta(t) := \Tr(e^{-t L_{\sym}^2}) \) denote the spectral heat trace of the canonical compact, self-adjoint, trace-class operator \( L_{\sym} \in \TC(\HPsi) \). Suppose the short-time trace asymptotic satisfies:
 \[
-\Theta(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2}) \qquad \text{as } t \to 0^+.
+\Theta(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2}),
+\qquad \text{as } t \to 0^+.
 \]
 
 Then:
+
 \begin{enumerate}
-  \item The heat trace \( \Theta(t) \) belongs to the log-modulated regularly varying class at the origin:
+  \item[\textup{(i)}] The heat trace belongs to the log-modulated regular variation class:
   \[
   \Theta \in \mathcal{R}_{1/2}^{\log}(0^+),
   \]
-  i.e., it is regularly varying with index \( \alpha = \tfrac{1}{2} \), modulated by \( \log(1/t) \), as defined in~\cite[Ch.~III, §5]{Korevaar2004Tauberian}.
+  meaning it is regularly varying with index \( \alpha = \tfrac{1}{2} \) and slowly varying term \( \log(1/t) \), as defined in~\cite[Ch.~III, §5]{Korevaar2004Tauberian}.
 
-  \item The Laplace–Stieltjes inverse of \( \Theta(t) \),
+  \item[\textup{(ii)}] The Laplace–Stieltjes inverse,
   \[
-  A(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\},
+  A(\Lambda) := \#\left\{ \mu \in \Spec(L_{\sym}) : \mu^2 \le \Lambda \right\},
   \]
-  satisfies the refined spectral counting law
+  satisfies the asymptotic spectral counting law:
   \[
-  A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda \qquad \text{as } \Lambda \to \infty,
+  A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda,
+  \qquad \text{as } \Lambda \to \infty.
   \]
-  by Korevaar’s log-modified Tauberian theorem~\cite[Thm.~5.5]{Korevaar2004Tauberian}.
 \end{enumerate}
 
 \noindent
-This result confirms that the singular structure of the heat trace precisely encodes the Weyl-type spectral density with logarithmic enhancement, as observed in the canonical spectral determinant associated with the completed zeta function \( \Xi(s) \).
+This confirms that the singular structure of \( \Theta(t) \) encodes a log-enhanced Weyl law, consistent with the density of zeta zeros and the spectral determinant identity associated with the completed zeta function \( \XiR(s) \).
 \end{lemma}

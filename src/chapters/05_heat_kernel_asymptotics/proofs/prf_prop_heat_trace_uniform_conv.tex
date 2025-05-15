@@ -1,42 +1,42 @@
-\begin{proof}[Proof of Proposition~\ref{prop:heat_trace_uniform_conv}]
-Let \( K_t(x,y) \) denote the integral kernel of the semigroup \( e^{-t L_{\mathrm{sym}}^2} \). Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), its square is self-adjoint, nonnegative, and trace class. Consequently, \( K_t(x,y) \) is jointly smooth and exponentially decaying in both variables. The diagonal \( K_t(x,x) \) is smooth and rapidly decaying, and the trace satisfies
+\begin{proof}[Proof of \propref{prop:heat_trace_uniform_conv}]
+Let \( K_t(x,y) \) denote the integral kernel of the semigroup \( e^{-t L_{\sym}^2} \). Since \( L_{\sym} \in \TC(\HPsi) \), its square is self-adjoint, nonnegative, and trace class. Consequently, \( K_t(x,y) \) is jointly smooth and exponentially decaying in both variables. The diagonal \( K_t(x,x) \) is smooth and rapidly decaying, and the trace satisfies
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} K_t(x,x) \, dx,
+\Tr(e^{-t L_{\sym}^2}) = \int_{\R} K_t(x,x) \, dx,
 \]
-by the spectral theorem and Fubini–Tonelli, since the integrand is positive and integrable for all \( t > 0 \).
+by the spectral theorem and Fubini--Tonelli, since the integrand is positive and integrable for all \( t > 0 \).
 
 \paragraph{Step 1: Local Asymptotics.}
-Lemma~\ref{lem:hk_expansion_uniform} provides a local diagonal expansion of the form
+\lemref{lem:hk_expansion_uniform} provides a local diagonal expansion of the form
 \[
 K_t(x,x) = \sum_{n=0}^{N-1} a_n(x) \, t^{n - \frac{1}{2}} + R_N(x,t),
 \]
-where each coefficient function \( a_n(x) \in C^\infty(\mathbb{R}) \) decays faster than any exponential, and the remainder satisfies
+where each coefficient function \( a_n(x) \in C^\infty(\R) \) decays faster than any exponential, and the remainder satisfies
 \[
-|R_N(x,t)| \leq C_N \, t^{N - \frac{1}{2}}, \qquad \forall x \in \mathbb{R}, \; 0 < t \leq t_0.
+|R_N(x,t)| \leq C_N \, t^{N - \frac{1}{2}}, \qquad \forall x \in \R, \; 0 < t \leq t_0.
 \]
 
 \paragraph{Step 2: Global Integrability and Termwise Integration.}
 Because each \( a_n(x) \) lies in the Schwartz class, the coefficients
 \[
-A_n := \int_{\mathbb{R}} a_n(x) \, dx
+A_n := \int_{\R} a_n(x) \, dx
 \]
 are finite for all \( n \). Furthermore, the remainder satisfies
 \[
-\left| \int_{\mathbb{R}} R_N(x,t)\, dx \right| \leq \int_{\mathbb{R}} |R_N(x,t)| \, dx \leq C_N' \, t^{N - \frac{1}{2}},
+\left| \int_{\R} R_N(x,t)\, dx \right| \leq \int_{\R} |R_N(x,t)| \, dx \leq C_N' \, t^{N - \frac{1}{2}},
 \]
 for a suitable constant \( C_N' > 0 \), uniformly in \( t \in (0, t_0] \). This validates termwise integration of the expansion.
 
 \paragraph{Step 3: Assembling the Trace Expansion.}
 We conclude:
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} K_t(x,x) \, dx = \sum_{n=0}^{N-1} A_n \, t^{n - \frac{1}{2}} + R_N(t),
+\Tr(e^{-t L_{\sym}^2}) = \int_{\R} K_t(x,x) \, dx = \sum_{n=0}^{N-1} A_n \, t^{n - \frac{1}{2}} + R_N(t),
 \]
 with \( |R_N(t)| \leq C_N' t^{N - \frac{1}{2}} \) as shown above.
 
 \paragraph{Conclusion.}
 The global heat trace admits a full asymptotic expansion in half-integer powers of \( t \), with coefficients
 \[
-A_n = \int_{\mathbb{R}} a_n(x) \, dx,
+A_n = \int_{\R} a_n(x) \, dx,
 \]
 and remainder estimates uniform on \( (0, t_0] \). This completes the proof.
 \end{proof}

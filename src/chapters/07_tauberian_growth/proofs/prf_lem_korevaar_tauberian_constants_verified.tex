@@ -1,37 +1,37 @@
-\begin{proof}[Proof of Lemma~\ref{lem:korevaar_tauberian_constants_verified}]
+\begin{proof}[Proof of \lemref{lem:korevaar_tauberian_constants_verified}]
 We verify the hypotheses of Korevaar’s Tauberian theorem for log-modulated Laplace transforms~\cite[Ch.~III, Thm.~5.5]{Korevaar2004Tauberian} for the spectral heat trace
 \[
-\Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2},
+\Theta(t) := \Tr(e^{-t L_{\sym}^2}) = \sum_{\mu \in \Spec(L_{\sym})} e^{-t \mu^2},
 \]
-associated with the canonical compact, self-adjoint operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \).
+associated with the canonical compact, self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \).
 
 \paragraph{(i) Nonnegativity and Local Boundedness.}
-Each term in the series satisfies \( e^{-t \mu_n^2} > 0 \), so \( \Theta(t) > 0 \) for all \( t > 0 \), and the function is smooth, nonnegative, and locally bounded.
+Each term in the spectral sum is positive, so \( \Theta(t) > 0 \) for all \( t > 0 \). The function \( \Theta(t) \) is smooth, nonnegative, and locally bounded.
 
 \paragraph{(ii) Laplace–Stieltjes Representation.}
-Define the squared eigenvalue counting function:
+Define the squared spectral counting function:
 \[
-A(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\}.
+A(\Lambda) := \#\left\{ \mu \in \Spec(L_{\sym}) : \mu^2 \le \Lambda \right\}.
 \]
-Then \( A(\Lambda) \) is right-continuous, monotone nondecreasing, and diverges as \( \Lambda \to \infty \). The Laplace–Stieltjes representation holds:
+Then \( A(\Lambda) \) is right-continuous, monotone nondecreasing, and diverges as \( \Lambda \to \infty \). The trace becomes:
 \[
 \Theta(t) = \int_0^\infty e^{-t \lambda} \, dA(\lambda),
 \]
-with convergence guaranteed by the sub-Weyl growth \( A(\Lambda) \lesssim \Lambda^{1/2} \log \Lambda \).
+which is a Laplace–Stieltjes transform, convergent by known subconvex growth \( A(\Lambda) \lesssim \Lambda^{1/2 + \varepsilon} \).
 
 \paragraph{(iii) Log-Modulated Regular Variation.}
-From Proposition~\ref{prop:short_time_heat_expansion}, the heat trace satisfies the refined singular expansion:
+From Proposition~\ref{prop:short_time_heat_expansion}, we have:
 \[
-\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+.
+\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+,
 \]
-This implies \( \Theta \in \mathcal{R}^{\log}_{1/2}(0^+) \), the class of log-modulated regularly varying functions of index \( \alpha = 1/2 \).
+placing \( \Theta \) in the class \( \mathcal{R}^{\log}_{1/2}(0^+) \) — regularly varying with index \( \tfrac{1}{2} \), modulated by a slowly varying function.
 
 \paragraph{(iv) Asymptotic Invertibility.}
-By Lemma~\ref{lem:laplace_kernel_growth_class} (and equivalently Lemma~\ref{lem:tauberian_heat_trace_application}), the inverse Laplace–Stieltjes transform satisfies
+From \lemref{lem:laplace_kernel_growth_class}, the inverse Laplace–Stieltjes transform satisfies:
 \[
-A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda \qquad \text{as } \Lambda \to \infty.
+A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda, \qquad \text{as } \Lambda \to \infty.
 \]
 
 \paragraph{Conclusion.}
-All conditions of Korevaar’s theorem are verified. The application of the log-modulated Tauberian inversion is fully justified, completing the proof.
+All analytic and structural hypotheses of Korevaar’s log-modified Tauberian theorem are satisfied. Hence, the inversion used in \lemref{lem:log_corrected_tauberian_estimate} is rigorously justified.
 \end{proof}

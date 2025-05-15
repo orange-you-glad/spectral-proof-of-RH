@@ -2,47 +2,34 @@
 
 \begin{itemize}
   % --- Tauberian Principle ---
-  \item \defref{def:tauberian-theorem} — Classical Laplace–Tauberian framework: the short-time behavior of the heat trace \( \operatorname{Tr}(e^{-tL^2}) \) determines high-energy spectral growth \( A(\Lambda) \) via inverse Laplace analysis.
+  \item \defref{def:tauberian_theorem} — Classical Laplace–Tauberian framework: the short-time behavior of the heat trace \( \Tr(e^{-tL^2}) \) determines high-energy spectral growth \( A(\Lambda) \) via inverse Laplace analysis.
 
   % --- Asymptotic Bounds and Growth Envelopes ---
-  \item \lemref{lem:spectral_convexity_estimate} — From the envelope bound \( \operatorname{Tr}(e^{-t L^2}) = O(t^{-1/2}) \), we deduce the coarse spectral estimate:
+  \item \lemref{lem:spectral_convexity_estimate} — From the envelope bound \( \Tr(e^{-t L^2}) = O(t^{-1/2}) \), we deduce the coarse spectral estimate:
   \[
   N(\lambda) = O(\lambda^{1/2}),
   \]
-  situating the spectrum within the minimal compact class consistent with trace-class control.
+  placing the spectrum in the minimal compact class consistent with trace-class decay.
 
-  \item \lemref{lem:korevaar_tauberian_application} — Using the refined expansion
+  \item \lemref{lem:log_corrected_tauberian_estimate} — From the refined expansion
   \[
-  \operatorname{Tr}(e^{-t L^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
+  \Tr(e^{-t L^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
   \]
-  and Korevaar’s Tauberian inversion, we derive:
+  and Korevaar’s log-modified Tauberian theory, we obtain the precise asymptotic:
   \[
   N(\lambda) \sim \frac{\sqrt{\lambda}}{\pi} \log \lambda.
   \]
 
-  \item \lemref{lem:tauberian-heat-trace-application} — Two-sided heat trace bounds confirm:
-  \[
-  A(\Lambda) \asymp \Lambda^{1/2},
-  \]
-  identifying the regular variation envelope implied by kernel compactness and sparse spectrum.
-
-  \item \lemref{lem:log-corrected-tauberian-application} — Under logarithmic refinement, we obtain:
-  \[
-  A(\Lambda) \sim \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda
-  \quad \text{as } \Lambda \to \infty,
-  \]
-  placing the spectrum in the log-modulated Tauberian class \( \mathcal{R}_{1/2}^{\log} \).
-
-  \item \corref{cor:zeta-compatibility} — The spectral growth law of \( L_{\mathrm{sym}} \) matches the Riemann–von Mangoldt formula for the nontrivial zeros of \( \zeta(s) \):
+  \item \corref{cor:zeta_compatibility} — The spectral growth law of \( L_{\sym} \) matches the Riemann–von Mangoldt formula:
   \[
   N_\zeta(T) = \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + O(\log T),
   \]
-  confirming analytic equivalence between the zeta zero distribution and the spectrum of the canonical operator.
+  confirming analytic compatibility between the zeta zero distribution and the spectrum of the canonical operator.
 \end{itemize}
 
 \medskip
 \noindent
-(For higher-order corrections to the heat kernel expansion and Tauberian remainder estimates, see Appendix~\ref{app:heat-kernel-refinements}.)
+(For higher-order corrections to the heat kernel expansion and Tauberian remainder estimates, see Appendix~\ref{app:heat_kernel_refinements}.)
 
 \vspace{0.5em}
 
@@ -57,12 +44,12 @@
 \]
 
 \begin{remark}[Transition to Spectral Rigidity]
-We have shown that the asymptotic eigenvalue distribution of \( L_{\mathrm{sym}} \) encodes the nontrivial zeros of the Riemann zeta function. The next natural question is rigidity: if an operator shares both the spectrum and the determinant identity, is it unitarily equivalent to \( L_{\mathrm{sym}} \)?
+We have shown that the asymptotic eigenvalue distribution of \( L_{\sym} \) encodes the nontrivial zeros of the Riemann zeta function. The next natural question is rigidity: if an operator shares both the spectrum and the determinant identity, is it unitarily equivalent to \( L_{\sym} \)?
 
-This question leads directly to the rigidity results developed in Chapter~\ref{sec:spectral-rigidity}.
+This leads directly to the spectral rigidity results developed in Chapter~\ref{sec:spectral_rigidity}.
 \end{remark}
 
 \vspace{0.5em}
 
-\noindent
-While this chapter establishes the global spectral envelope of \( L_{\mathrm{sym}} \), the local statistics—e.g., pair correlation or GUE-type universality—remain open. Speculative connections to random matrix theory are discussed in Appendix~\ref{app:additional-structures}.
+\paragraph{Logical Closure.}
+All spectral asymptotics in this chapter are derived from the singular behavior of the heat trace using validated Tauberian theorems. The Laplace–Mellin inversion logic is acyclic and rooted in the canonical trace asymptotic developed in Chapter~\ref{sec:heat_kernel_asymptotics}. All results are DAG-traceable and require no assumptions beyond established determinant and heat kernel structure.

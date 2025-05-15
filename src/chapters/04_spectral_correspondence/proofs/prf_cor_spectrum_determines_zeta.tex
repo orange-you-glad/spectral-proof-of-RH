@@ -1,27 +1,26 @@
-\begin{proof}[Proof of Corollary~\ref{cor:spectrum_determines_zeta}]
-Since \( L_{\mathrm{sym}} \in \mathcal{C}_1 \) is compact and self-adjoint, the Fredholm determinant
+\begin{proof}[Proof of \corref{cor:spectrum_determines_zeta}]
+Since \( L_{\sym} \in \TC(\HPsi) \) is compact and self-adjoint, its Fredholm determinant satisfies
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \prod_{\mu \in \Spec(L_{\mathrm{sym}})} (1 - \lambda \mu)^{\operatorname{mult}(\mu)}
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \prod_{\mu \in \Spec(L_{\sym})} (1 - \lambda \mu)^{\operatorname{mult}_{\mathrm{spec}}(\mu)},
 \]
-converges absolutely for \( |\lambda| \) sufficiently small and admits meromorphic continuation to \( \mathbb{C} \).
+which converges absolutely for \( |\lambda| \) sufficiently small and admits meromorphic continuation to all of \( \C \).
 
-By Theorem~\ref{thm:spectral_zero_bijection_revised}, the spectral data \( \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \), with multiplicity \( \operatorname{ord}_\rho(\zeta) \), exhausts \( \Spec(L_{\mathrm{sym}}) \setminus \{0\} \).
+By \thmref{thm:spectral_zero_bijection_revised}, the multiset of nonzero spectral values \( \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \), with multiplicities \( \operatorname{ord}_\rho(\zetaR) \), exhausts \( \Spec(L_{\sym}) \setminus \{0\} \).
 
-Rewriting the determinant in terms of \( \rho \), we obtain
+Hence, the determinant admits the expression
 \[
-\log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= - \sum_{\rho} \operatorname{ord}_\rho(\zeta) \log\left(1 - \frac{\lambda}{\lambda_\rho} \right),
-\quad \text{where } \lambda_\rho := i(\rho - \tfrac{1}{2}).
+\log \det\nolimits_\zeta(I - \lambda L_{\sym}) = - \sum_{\rho} \operatorname{ord}_\rho(\zetaR) \log\left(1 - \frac{\lambda}{\lambda_\rho} \right), \qquad \lambda_\rho := i(\rho - \tfrac{1}{2}).
 \]
 
-Exponentiating and comparing with
+Exponentiating, we obtain
 \[
-\frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
-= \prod_{\rho} \left(1 - \frac{\lambda}{\lambda_\rho}\right)^{\operatorname{ord}_\rho(\zeta)},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \prod_{\rho} \left(1 - \frac{\lambda}{\lambda_\rho} \right)^{\operatorname{ord}_\rho(\zetaR)}.
 \]
-we conclude that the spectral data (including multiplicities) uniquely determines \( \Xi(\tfrac{1}{2} + i\lambda) \) up to the normalization constant \( \Xi(\tfrac{1}{2}) \). Since \( \Xi(s) \) is entire of order 1, this suffices to reconstruct it completely.
+Comparing with the Hadamard factorization
+\[
+\frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})} = \prod_{\rho} \left(1 - \frac{\lambda}{\lambda_\rho} \right)^{\operatorname{ord}_\rho(\zetaR)},
+\]
+we conclude that the spectral data—i.e., the multiset \( \Spec(L_{\sym}) \setminus \{0\} \) with algebraic multiplicities—uniquely determines the completed zeta function \( \XiR(s) \) up to the value at the center, \( \XiR(\tfrac{1}{2}) \).
 
-Hence, \( \Spec(L_{\mathrm{sym}}) \setminus \{0\} \) with multiplicities determines \( \Xi \), and thereby the multiset of nontrivial zeros of \( \zeta(s) \).
+Since \( \XiR(s) \) is entire of order one, this normalization suffices to determine \( \XiR(s) \) completely, and thus the multiset of nontrivial zeros of \( \zetaR(s) \).
 \end{proof}
-%  

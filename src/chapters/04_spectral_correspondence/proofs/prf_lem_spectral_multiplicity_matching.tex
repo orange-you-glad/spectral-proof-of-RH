@@ -1,43 +1,40 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectral_multiplicity_matching}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zeta(s) \), and define:
+\begin{proof}[Proof of \lemref{lem:spectral_multiplicity_matching}]
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \), and define:
 \[
 \lambda_\rho := i(\rho - \tfrac{1}{2}), \qquad \mu_\rho := \lambda_\rho^{-1} = \frac{1}{\gamma}.
 \]
 
-\paragraph{Step 1: Zero Order in \texorpdfstring{\( \Xi \)}{Ξ}.}
-By the Hadamard factorization of the completed zeta function \( \Xi(s) \), the composed function
+\paragraph{Step 1: Zero Order in \(\XiR\).}
+By the Hadamard factorization of the completed zeta function \( \XiR(s) \), the composed function
 \[
-\lambda \mapsto \Xi\left( \tfrac{1}{2} + i\lambda \right)
+\lambda \mapsto \XiR\left( \tfrac{1}{2} + i\lambda \right)
 \]
 has a zero of order
 \[
-m_\rho := \operatorname{ord}_\rho(\zeta)
+m_\rho := \operatorname{ord}_\rho(\zetaR)
 \]
-at \( \lambda = \lambda_\rho \), corresponding to the vanishing order of \( \zeta(s) \) at \( \rho \).
+at \( \lambda = \lambda_\rho \), determined by the vanishing order of \( \zetaR(s) \) at \( \rho \).
 
 \paragraph{Step 2: Zero Order in the Determinant.}
-From the canonical determinant identity (Theorem~\ref{thm:det_identity_revised}), we have
+From the canonical determinant identity (\thmref{thm:det_identity_revised}), we have
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}.
 \]
-Since \( \Xi(\tfrac{1}{2}) \neq 0 \), the determinant vanishes at \( \lambda = \lambda_\rho \) with order \( m_\rho \).
+Since \( \XiR(\tfrac{1}{2}) \neq 0 \), the determinant vanishes at \( \lambda = \lambda_\rho \) with order \( m_\rho \).
 
-\paragraph{Step 3: Spectral Multiplicity from Fredholm Product.}
-For compact trace-class self-adjoint operators, the Carleman \(\zeta\)-regularized determinant satisfies the Weierstrass-type identity
+\paragraph{Step 3: Spectral Multiplicity via Fredholm Product.}
+For compact, self-adjoint trace-class operators \( L \in \TC(\HPsi) \), the Carleman \(\zeta\)-regularized Fredholm determinant admits the expansion
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \prod_{\mu \in \operatorname{Spec}(L_{\mathrm{sym}})} (1 - \lambda \mu)^{\operatorname{mult}_{\mathrm{spec}}(\mu)},
+\det\nolimits_\zeta(I - \lambda L) = \prod_{\mu \in \Spec(L)} (1 - \lambda \mu)^{\operatorname{mult}_{\mathrm{spec}}(\mu)},
 \]
-where the product converges absolutely on compact subsets of \( \mathbb{C} \) due to the Schatten–von Neumann condition (see \cite[Theorem 4.2]{Simon2005TraceIdeals}).
+convergent on compact subsets of \( \C \) by the Schatten–von Neumann trace condition; see \cite[Thm.~4.2]{Simon2005TraceIdeals}.
 
-\paragraph{Step 4: Zero Matching.}
-By spectral encoding \( \mu_\rho = \lambda_\rho^{-1} \), the factor \( (1 - \lambda \mu_\rho) \) in the Fredholm expansion contributes a zero at \( \lambda = \lambda_\rho \) of order \( \operatorname{mult}_{\mathrm{spec}}(\mu_\rho) \).
+\paragraph{Step 4: Matching Zero Multiplicities.}
+By spectral encoding, \( \mu_\rho = \lambda_\rho^{-1} \), so the factor \( (1 - \lambda \mu_\rho) \) contributes a zero at \( \lambda = \lambda_\rho \) of order \( \operatorname{mult}_{\mathrm{spec}}(\mu_\rho) \). Comparing with Step 2, we obtain:
+\[
+\operatorname{mult}_{\mathrm{spec}}(\mu_\rho) = \operatorname{ord}_\rho(\zetaR).
+\]
 
 \paragraph{Conclusion.}
-Matching the zero orders in the determinant identity yields
-\[
-\operatorname{mult}_{\mathrm{spec}}(\mu_\rho) = \operatorname{ord}_\rho(\zeta),
-\]
-as claimed.
+The algebraic multiplicity of the eigenvalue \( \mu_\rho \in \Spec(L_{\sym}) \) equals the order of vanishing of \( \zetaR(s) \) at \( \rho \), as claimed.
 \end{proof}
-% 

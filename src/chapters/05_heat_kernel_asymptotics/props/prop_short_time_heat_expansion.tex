@@ -1,22 +1,22 @@
 \begin{proposition}[Refined Short-Time Heat Trace Expansion]
 \label{prop:short_time_heat_expansion}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} \, dx) \) for some \( \alpha > \pi \). Then, as \( t \to 0^+ \), the spectral heat trace satisfies the refined singular expansion:
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha |x|} \, dx) \) for some \( \alpha > \pi \). Then, as \( t \to 0^+ \), the spectral heat trace satisfies the refined singular expansion:
 \[
-\operatorname{Tr}\left(e^{-t L_{\mathrm{sym}}^2}\right)
+\Tr\left(e^{-t L_{\sym}^2}\right)
 = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
 + c_0 \sqrt{t} + o\left( \sqrt{t} \right),
 \]
-for some constant \( c_0 \in \mathbb{R} \), where the remainder \( o(\sqrt{t}) \) vanishes uniformly as \( t \to 0^+ \) over compact subintervals of \( (0, t_0] \).
+for some constant \( c_0 \in \R \), where the remainder \( o(\sqrt{t}) \) vanishes uniformly as \( t \to 0^+ \) over compact subintervals of \( (0, t_0] \).
 
 \medskip
 \noindent
-The leading-order singularity \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) reflects the logarithmic divergence induced by the spectral structure of the mollified convolution kernel defining \( L_{\mathrm{sym}} \). This divergence originates from the genus-one Hadamard structure of the completed zeta function and implies non-integrability of the trace near \( t = 0 \).
+The leading-order singularity \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) reflects the logarithmic divergence induced by the spectral structure of the mollified convolution kernel defining \( L_{\sym} \). This divergence originates from the genus-one Hadamard structure of the completed zeta function and implies non-integrability of the trace near \( t = 0 \).
 
 \medskip
 \noindent
 The correction coefficient \( c_0 \) arises from the first regular term in the local heat kernel expansion and satisfies
 \[
-c_0 := \int_{\mathbb{R}} a_1(x) \, dx,
+c_0 := \int_{\R} a_1(x) \, dx,
 \]
 where the diagonal expansion takes the form
 \[
@@ -25,9 +25,9 @@ K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x)\, t^{n - \frac{1}{2}}.
 
 \medskip
 \noindent
-This refined asymptotic plays a foundational role in the determinant expansion and Tauberian theory developed in Chapters~\ref{sec:determinant-identity} and~\ref{sec:tauberian-growth}. In particular, the logarithmic divergence necessitates analytic continuation in the Laplace transform and underpins the regularized determinant identity:
+This refined asymptotic plays a foundational role in the determinant expansion and Tauberian theory developed in \secref{sec:determinant_identity} and \secref{sec:tauberian_growth}. In particular, the logarithmic divergence necessitates analytic continuation in the Laplace transform and underpins the regularized determinant identity:
 \[
-\log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \operatorname{Tr}\left(e^{-t L_{\mathrm{sym}}^2} \right) \, dt,
+\log \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Tr\left(e^{-t L_{\sym}^2} \right) \, dt,
 \]
 where the integral must be interpreted in the zeta-regularized sense.
 \end{proposition}

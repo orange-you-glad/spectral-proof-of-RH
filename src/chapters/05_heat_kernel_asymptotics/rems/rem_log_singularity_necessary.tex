@@ -1,0 +1,28 @@
+\begin{remark}[Non-Removability of the Logarithmic Singularity]
+\label{rem:log_singularity_necessary}
+The leading-order term
+\[
+\frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
+\]
+in the heat trace expansion is structurally necessary and cannot be eliminated by normalization or subtraction. Its presence is dictated by three independent spectral considerations:
+
+\begin{enumerate}
+  \item \textbf{Hadamard Structure.} The completed Riemann zeta function \( \Xi(s) \) has genus one and exponential type \( \pi \). Its Hadamard factorization forces logarithmic growth in the Mellin–Laplace transform of its spectral profile.
+
+  \item \textbf{Counting Law.} The eigenvalue counting function satisfies
+  \[
+  N(\lambda) \sim C \lambda^{1/2} \log \lambda,
+  \]
+  as shown in \secref{sec:tauberian_growth}. This log-enhanced Weyl law, under Laplace inversion, mandates a leading singular term of the form \( t^{-1/2} \log(1/t) \).
+
+  \item \textbf{Zeta Compatibility.} The regularized determinant \( \det\nolimits_\zeta(L_{\sym}^2) \) is defined via
+  \[
+  \log \det\nolimits_\zeta(L_{\sym}^2) = -\int_0^\infty \frac{\Tr(e^{-t L_{\sym}^2}) - P(t)}{t} \, dt.
+  \]
+  Convergence of this integral requires the parametrix subtraction \( P(t) \) to precisely cancel the \( \log(1/t)/\sqrt{t} \) singularity. If this term were absent, the zeta function \( \zeta_L(s) \) would fail to be analytic at \( s = 0 \), contradicting \lemref{lem:log_derivative_determinant}.
+\end{enumerate}
+
+\medskip
+\noindent
+This logarithmic divergence thus serves as a diagnostic of both the analytic class of the kernel and the spectral dimension of \( L_{\sym} \). It bridges trace behavior, eigenvalue asymptotics, and the entire structure of the canonical determinant.
+\end{remark}

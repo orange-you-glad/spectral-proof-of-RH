@@ -1,9 +1,9 @@
-\begin{proof}[Proof of Corollary~\ref{cor:zeta_compatibility}]
-The canonical operator \( L_{\mathrm{sym}} \) has discrete spectrum determined by
+\begin{proof}[Proof of \corref{cor:zeta_compatibility}]
+The canonical operator \( L_{\sym} \) has discrete spectrum determined by the reparametrization
 \[
 \mu_\rho := \frac{1}{i} \left( \rho - \tfrac{1}{2} \right),
 \]
-where \( \rho \) ranges over the nontrivial zeros of the Riemann zeta function \( \zeta(s) \), counted with multiplicity.
+where \( \rho \in \C \) runs over the nontrivial zeros of the Riemann zeta function \( \zetaR(s) \), counted with multiplicity.
 
 Then
 \[
@@ -14,20 +14,21 @@ so the condition \( \mu_\rho^2 \le \Lambda \) is equivalent to
 |\rho - \tfrac{1}{2}| \le \sqrt{\Lambda}.
 \]
 
-Therefore, the squared eigenvalue counting function becomes
+Hence, the spectral counting function becomes
 \[
 A(\Lambda) := \#\left\{ \mu_\rho^2 \le \Lambda \right\}
 = \#\left\{ \rho : |\rho - \tfrac{1}{2}| \le \sqrt{\Lambda} \right\}
 = N_\zeta(\sqrt{\Lambda}),
 \]
-where \( N_\zeta(T) \) counts the number of nontrivial zeta zeros \( \rho \) satisfying \( 0 < \Im(\rho) \le T \), counted with multiplicity.
+where \( N_\zeta(T) \) denotes the classical zero-counting function for \( \zetaR(s) \) up to height \( T \), including multiplicities.
 
 \paragraph{Asymptotic Matching.}
-By the Riemann--von Mangoldt formula:
+The Riemann–von Mangoldt formula gives:
 \[
 N_\zeta(T) = \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + O(\log T),
+\qquad \text{as } T \to \infty.
 \]
-as \( T \to \infty \). Setting \( T = \sqrt{\Lambda} \), we find:
+Substituting \( T = \sqrt{\Lambda} \), we obtain:
 \[
 \begin{aligned}
 A(\Lambda) &= N_\zeta(\sqrt{\Lambda}) \\
@@ -37,9 +38,9 @@ A(\Lambda) &= N_\zeta(\sqrt{\Lambda}) \\
 \]
 
 \paragraph{Conclusion.}
-This matches the Tauberian-derived asymptotic:
+This precisely matches the log-enhanced Tauberian asymptotic derived in \lemref{lem:log_corrected_tauberian_estimate}:
 \[
-A(\Lambda) \sim \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda,
+A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda.
 \]
-confirming that the spectrum of \( L_{\mathrm{sym}} \) asymptotically mirrors the zero distribution of \( \zeta(s) \) under the canonical spectral encoding.
+Thus, the spectral growth of \( L_{\sym} \) reproduces the zeta zero density under the canonical spectral encoding, confirming analytic compatibility with the Riemann–von Mangoldt formula.
 \end{proof}

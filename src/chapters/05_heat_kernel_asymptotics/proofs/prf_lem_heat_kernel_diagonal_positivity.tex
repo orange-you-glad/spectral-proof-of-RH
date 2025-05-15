@@ -1,17 +1,17 @@
-\begin{proof}[Proof of Lemma~\ref{lem:heat_kernel_diagonal_positivity}]
-Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is compact, self-adjoint, and defined on the weighted Hilbert space \( H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha|x|} dx) \), the spectral theorem yields an orthonormal basis \( \{e_n\}_{n \geq 1} \subset H_{\Psi_\alpha} \) of eigenfunctions with corresponding real eigenvalues \( \mu_n \in \mathbb{R} \) satisfying \( \mu_n \to 0 \). Then for all \( t > 0 \), the heat operator \( e^{-t L_{\mathrm{sym}}^2} \) is trace class and has the spectral expansion:
+\begin{proof}[Proof of \lemref{lem:heat_kernel_diagonal_positivity}]
+Since \( L_{\sym} \in \TC(\HPsi) \) is compact, self-adjoint, and defined on the weighted Hilbert space \( \HPsi = L^2(\R, e^{\alpha|x|} dx) \), the spectral theorem yields an orthonormal basis \( \{e_n\}_{n \geq 1} \subset \HPsi \) of eigenfunctions with corresponding real eigenvalues \( \mu_n \in \R \), satisfying \( \mu_n \to 0 \). Then for all \( t > 0 \), the heat operator \( e^{-t L_{\sym}^2} \) is trace class and admits the spectral expansion:
 \[
 K_t(x,y) = \sum_{n=1}^\infty e^{-t \mu_n^2} \, e_n(x) \, \overline{e_n(y)},
 \]
-with convergence in the Hilbert–Schmidt norm topology and pointwise absolutely for each fixed \( (x,y) \in \mathbb{R}^2 \), due to the trace-class property of \( e^{-t L_{\mathrm{sym}}^2} \).
+with convergence in the Hilbert--Schmidt norm topology and pointwise absolutely for each fixed \( (x,y) \in \R^2 \), due to the trace-class property of \( e^{-t L_{\sym}^2} \).
 
 Restricting to the diagonal \( x = y \), we obtain
 \[
 K_t(x,x) = \sum_{n=1}^\infty e^{-t \mu_n^2} \, |e_n(x)|^2.
 \]
-Each term in the sum is nonnegative, and since \( \sum_{n} e^{-t \mu_n^2} < \infty \), the convergence is absolute and locally uniform in \( x \in \mathbb{R} \). Therefore,
+Each term in the sum is nonnegative, and since \( \sum_{n} e^{-t \mu_n^2} < \infty \), the convergence is absolute and locally uniform in \( x \in \R \). Therefore,
 \[
-K_t(x,x) \geq 0, \qquad \forall x \in \mathbb{R}, \; t > 0.
+K_t(x,x) \geq 0, \qquad \forall x \in \R, \; t > 0.
 \]
 
 This proves pointwise nonnegativity of the heat kernel along the diagonal.

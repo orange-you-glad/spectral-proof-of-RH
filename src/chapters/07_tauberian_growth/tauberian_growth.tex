@@ -7,32 +7,21 @@
 \subsection{Definitions}
 % === Tauberian framework: Laplace growth and spectral inversion ===
 
-\input{chapters/07_tauberian_growth/defs/def_tauberian_theorem}  % Korevaar's Tauberian setup
+\input{chapters/07_tauberian_growth/defs/def_tauberian_theorem}
+\input{chapters/07_tauberian_growth/rems/rmk_karamata_vs_korevaar}
 
 %------------------------------------------------------------------
 \subsection{Tauberian Lemmas and Asymptotic Estimates}
-% === Spectral growth bounds from Laplace transforms and heat trace asymptotics ===
+% === Preliminary convexity bound and Korevaar-class asymptotics ===
 
 \input{chapters/07_tauberian_growth/lems/lem_spectral_convexity_estimate}
 \input{chapters/07_tauberian_growth/proofs/prf_lem_spectral_convexity_estimate}
 
-\input{chapters/07_tauberian_growth/lems/lem_korevaar_tauberian_application}
-\input{chapters/07_tauberian_growth/proofs/prf_lem_korevaar_tauberian_application}
-
-\input{chapters/07_tauberian_growth/lems/lem_tauberian_heat_trace_application}
-\input{chapters/07_tauberian_growth/proofs/prf_lem_tauberian_heat_trace_application}
-
-\input{chapters/07_tauberian_growth/lems/lem_log_corrected_tauberian_application}
-\input{chapters/07_tauberian_growth/proofs/prf_lem_explicit_korevaar_tauberian_bound}
+\input{chapters/07_tauberian_growth/lems/lem_log_corrected_tauberian_estimate}
+\input{chapters/07_tauberian_growth/proofs/prf_lem_log_corrected_tauberian_estimate}
 
 \input{chapters/07_tauberian_growth/lems/lem_laplace_kernel_growth_class}
 \input{chapters/07_tauberian_growth/proofs/prf_lem_laplace_kernel_growth_class}
-
-\input{chapters/07_tauberian_growth/lems/lem_tauberian_log_correction}
-\input{chapters/07_tauberian_growth/proofs/prf_lem_tauberian_log_correction}
-
-\input{chapters/07_tauberian_growth/lems/lem_explicit_korevaar_tauberian_bound}
-\input{chapters/07_tauberian_growth/proofs/prf_lem_explicit_korevaar_tauberian_bound}
 
 % --- Verify all Korevaar Tauberian hypotheses are satisfied ---
 \input{chapters/07_tauberian_growth/lems/lem_korevaar_tauberian_constants_verified}
@@ -55,14 +44,12 @@ This is justified by Korevaar's remainder-enhanced Tauberian theorems~\cite[Ch.~
 
 %------------------------------------------------------------------
 \subsection{Spectral Uniqueness via Tauberian Control}
-% === Inverse application: spectral growth fully encodes zeta zeros ===
 
 \input{chapters/07_tauberian_growth/lems/lem_inverse_spectral_uniqueness}
 \input{chapters/07_tauberian_growth/proofs/prf_lem_inverse_spectral_uniqueness}
 
 %------------------------------------------------------------------
 \subsection{Zeta-Theoretic Consistency}
-% === Spectral asymptotics match Riemann zero-counting asymptotics ===
 
 \input{chapters/07_tauberian_growth/cors/cor_zeta_compatibility}
 \input{chapters/07_tauberian_growth/proofs/prf_cor_zeta_compatibility}

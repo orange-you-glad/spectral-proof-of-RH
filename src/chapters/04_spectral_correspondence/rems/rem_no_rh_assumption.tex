@@ -1,21 +1,22 @@
 \begin{remark}[No RH Assumption Used in Spectral Encoding]
 \label{rem:no_rh_assumption}
-Throughout Chapters~\ref{sec:determinant-identity}–\ref{sec:spectral-correspondence}, all constructions, estimates, and identities are derived without assuming the Riemann Hypothesis.
+Throughout Chapters~\ref{sec:determinant_identity}–\ref{sec:spectral_correspondence}, all constructions, estimates, and identities are derived unconditionally, without assuming the Riemann Hypothesis.
 
 In particular:
 \begin{itemize}
-  \item The construction of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) via mollified convolution is entirely analytic and makes no spectral assumptions.
+  \item The construction of the canonical operator \( L_{\sym} \in \TC(\HPsi) \) via mollified convolution is entirely analytic, based on Fourier-analytic kernel estimates and trace-norm convergence, with no spectral assumptions on the zeros of \( \zetaR \).
+  
   \item The determinant identity
   \[
-  \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
-  = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)}
   \]
-  is derived from explicit kernel estimates and heat-trace asymptotics, independently of RH.
-  \item The Hadamard product and spectral mapping \( \rho \mapsto \mu_\rho \) are constructed from zero loci of \( \Xi \), and their convergence and multiplicity-preserving structure do not rely on RH.
-  \item Trace-class and Schatten norm estimates used to establish convergence and positivity of the heat semigroup are independent of any spectral input from \( \zeta \).
+  is derived explicitly from semigroup estimates, Paley–Wiener bounds, and analytic regularization of the Fredholm determinant, independently of RH.
+
+  \item The Hadamard product and spectral correspondence \( \rho \mapsto \mu_\rho := \tfrac{1}{i(\rho - \tfrac{1}{2})} \) are constructed from the zero set of \( \XiR(s) \), and the bijective structure—including multiplicity preservation—relies solely on analytic properties of entire functions of order one.
+
+  \item All trace-class, Hilbert–Schmidt, and Schatten norm estimates used to control semigroup convergence, determinant growth, and spectral discreteness are proven via analytic kernel bounds and do not require any a priori assumptions about the distribution of zeta zeros.
 \end{itemize}
 
-The Riemann Hypothesis first appears as a theorem in Chapter~\ref{sec:spectral-implications}, where it is shown to be equivalent to the spectral reality of \( L_{\mathrm{sym}} \). No steps in the determinant identity or bijection arguments depend on assuming this spectral condition in advance.
-
+\noindent
+The Riemann Hypothesis first enters as a derived theorem in Chapter~\ref{sec:spectral_implications}, where it is shown to be logically equivalent to the spectral reality condition \( \Spec(L_{\sym}) \subset \R \). No steps in the determinant identity or in the spectral bijection rely on this spectral condition being assumed in advance.
 \end{remark}
-% 

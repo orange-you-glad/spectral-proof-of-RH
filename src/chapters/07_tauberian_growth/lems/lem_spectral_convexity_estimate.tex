@@ -1,29 +1,35 @@
 \begin{lemma}[Spectral Convexity Estimate]
 \label{lem:spectral_convexity_estimate}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \), with \( \alpha > \pi \). Let \( \lambda_n := \mu_n^2 \) denote the nonzero eigenvalues of \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1 \), ordered non-decreasingly and counted with multiplicity.
 
-Then the following hold:
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space
+\[
+\HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \alpha > \pi.
+\]
+Let \( \lambda_n := \mu_n^2 \) denote the nonzero eigenvalues of \( L_{\sym}^2 \in \TC \), ordered non-decreasingly and counted with multiplicity.
+
+Then:
+
 \begin{enumerate}
-  \item[\textnormal{(i)}] There exists a constant \( C > 0 \) such that the spectral counting function
+  \item[\textup{(i)}] There exists a constant \( C > 0 \) such that the spectral counting function
   \[
-  N(\lambda) := \#\left\{ n \in \mathbb{N} : \lambda_n \le \lambda \right\}
+  N(\lambda) := \#\left\{ n \in \N : \lambda_n \le \lambda \right\}
   \]
-  satisfies the convex growth bound
+  satisfies the convex envelope bound
   \[
   N(\lambda) \le C\, \lambda^{1/2}, \qquad \text{for all } \lambda \ge \lambda_0 > 0.
   \]
 
-  \item[\textnormal{(ii)}] The associated Laplace–Stieltjes transform
+  \item[\textup{(ii)}] The associated Laplace–Stieltjes transform
   \[
   \Theta(t) := \int_0^\infty e^{-t\lambda}\, dN(\lambda)
-  = \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
+  = \Tr(e^{-t L_{\sym}^2})
   \]
-  satisfies the short-time upper envelope bound
+  satisfies the short-time upper bound
   \[
   \Theta(t) \lesssim t^{-1/2}, \qquad \text{as } t \to 0^+.
   \]
 \end{enumerate}
 
 \noindent
-This estimate follows directly from Proposition~\ref{prop:two-sided-heat-trace-bounds}, and provides Tauberian admissibility for inversion of the spectral counting function \( N(\lambda) \). The exponent \( \frac{1}{2} \) reflects the effective spectral dimension \( d = 1 \), consistent with log-modified Weyl-type asymptotics.
+This estimate follows directly from Proposition~\ref{prop:two_sided_heat_trace_bounds}, and provides Tauberian admissibility for inversion of the spectral counting function \( N(\lambda) \).
 \end{lemma}

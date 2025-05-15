@@ -1,29 +1,39 @@
-\begin{proof}[Proof of Lemma~\ref{lem:reality_of_spectrum_and_rh}]
-Let \( \rho = \beta + i\gamma \) be a nontrivial zero of \( \zeta(s) \). Then
+\begin{proof}[Proof of \lemref{lem:reality_of_spectrum_and_rh}]
+Let \( \rho = \beta + i\gamma \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \). Define its canonical spectral image:
 \[
-\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{i(\beta - \tfrac{1}{2} + i\gamma)}.
+\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{i((\beta - \tfrac{1}{2}) + i\gamma)}.
 \]
 
-Set \( z := \beta - \tfrac{1}{2} + i\gamma \in \mathbb{C} \). Then
+Set \( z := \beta - \tfrac{1}{2} + i\gamma \in \C \). Then
 \[
-\mu_\rho = \frac{-i}{z} = \frac{-i((\beta - \tfrac{1}{2}) - i\gamma)}{(\beta - \tfrac{1}{2})^2 + \gamma^2}.
-\]
-This yields:
-\[
-\mu_\rho = \frac{\gamma}{(\beta - \tfrac{1}{2})^2 + \gamma^2} - i \cdot \frac{\beta - \tfrac{1}{2}}{(\beta - \tfrac{1}{2})^2 + \gamma^2}.
+\mu_\rho = \frac{-i}{z} = \frac{-i((\beta - \tfrac{1}{2}) - i\gamma)}{(\beta - \tfrac{1}{2})^2 + \gamma^2}
+= \frac{\gamma}{(\beta - \tfrac{1}{2})^2 + \gamma^2}
+- i \cdot \frac{\beta - \tfrac{1}{2}}{(\beta - \tfrac{1}{2})^2 + \gamma^2}.
 \]
 
-Thus, \( \mu_\rho \in \mathbb{R} \) if and only if the imaginary part vanishes:
+Hence, \( \mu_\rho \in \R \) if and only if the imaginary part vanishes:
 \[
-\frac{\beta - \tfrac{1}{2}}{(\beta - \tfrac{1}{2})^2 + \gamma^2} = 0 \quad \Longleftrightarrow \quad \beta = \tfrac{1}{2}.
+\Im(\mu_\rho) = 0 \quad \Longleftrightarrow \quad \beta = \tfrac{1}{2}.
 \]
 
-Therefore, \( \mu_\rho \in \mathbb{R} \) if and only if \( \rho \in \tfrac{1}{2} + i\mathbb{R} \). Since the canonical spectral map \( \rho \mapsto \mu_\rho \) is injective and defined for all nontrivial zeros, we conclude:
+That is,
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
-\quad \iff \quad
-\Re(\rho) = \tfrac{1}{2} \text{ for all } \rho \in \mathcal{Z}_\zeta.
+\mu_\rho \in \R \iff \rho \in \tfrac{1}{2} + i\R.
 \]
-That is, \( \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \iff \mathrm{RH} \), as claimed.
+
+Since the canonical spectral map \( \rho \mapsto \mu_\rho \) is injective and covers all nontrivial zeros of \( \zetaR \), this correspondence implies:
+\[
+\Spec(L_{\sym}) \subset \R \quad \Longleftrightarrow \quad \text{all } \rho \in \mathcal{Z}_\zeta \text{ satisfy } \Re(\rho) = \tfrac{1}{2}.
+\]
+
+\medskip
+
+\noindent
+Equivalently,
+\[
+\boxed{
+\Spec(L_{\sym}) \subset \R \quad \Longleftrightarrow \quad \RH
+}
+\]
+as claimed.
 \end{proof}
-% 

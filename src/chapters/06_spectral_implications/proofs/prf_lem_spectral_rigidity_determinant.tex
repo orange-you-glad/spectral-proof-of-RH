@@ -1,29 +1,30 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectral_rigidity_determinant}]
-Let \( L_1, L_2 \in \mathcal{S}_1(H_{\Psi_\alpha}) \) be compact, self-adjoint trace-class operators such that
+\begin{proof}[Proof of \lemref{lem:spectral_rigidity_determinant}]
+Let \( L_1, L_2 \in \TC(\HPsi) \cap \KC(\HPsi) \) be compact, self-adjoint, trace-class operators satisfying:
 \[
-\det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \quad \forall \lambda \in \mathbb{C},
+\det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \quad \forall \lambda \in \C,
 \]
-and assume \( \det\nolimits_\zeta(I) = 1 \) for both.
+with both determinants normalized at the origin: \( \det\nolimits_\zeta(I) = 1 \).
 
-\paragraph{Step 1: Entire Determinants Encode Spectra.}
-For compact, self-adjoint operators in \( \mathcal{S}_1 \), the zeta-regularized Fredholm determinant has the canonical Hadamard product:
+\paragraph{Step 1: Spectral Encoding via Determinant Structure.}
+For compact, self-adjoint operators in \( \TC \), the zeta-regularized Fredholm determinant admits the canonical Hadamard product expansion:
 \[
 \det\nolimits_\zeta(I - \lambda L_j) = \prod_{\mu \in \Spec(L_j) \setminus \{0\}} (1 - \lambda \mu)^{\operatorname{mult}_{L_j}(\mu)},
 \quad j = 1,2.
 \]
-Since the two determinant functions coincide as entire functions of order one and exponential type \( \pi \), with identical normalization at \( \lambda = 0 \), it follows that their sets of zeros (with multiplicity) coincide. That is,
+Since the two determinants coincide as entire functions of order one and exponential type \( \pi \), and share the normalization \( \det\nolimits_\zeta(I) = 1 \), the identity theorem for entire functions implies that their zero sets (counted with multiplicity) must coincide. Hence:
 \[
 \Spec(L_1) \setminus \{0\} = \Spec(L_2) \setminus \{0\}
 \quad \text{as multisets}.
 \]
 
-\paragraph{Step 2: Spectral Theorem Completion.}
-If both \( L_1 \) and \( L_2 \) act on the same Hilbert space and are self-adjoint with matching spectra and multiplicities, then by the spectral theorem for compact self-adjoint operators, there exists a unitary operator \( U \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) such that
+\paragraph{Step 2: Completion via Spectral Theorem.}
+If \( L_1 \) and \( L_2 \) act on the same Hilbert space \( \HPsi \), then the spectral theorem for compact self-adjoint operators ensures the existence of a unitary operator
 \[
+U \colon \HPsi \to \HPsi
+\quad \text{such that} \quad
 L_2 = U L_1 U^{-1}.
 \]
 
 \paragraph{Conclusion.}
-The determinant identity, combined with trace-class structure and normalization, rigidly determines the operator spectrum up to unitary equivalence. This completes the proof.
+Thus, the Carleman–\(\zeta\)-regularized Fredholm determinant serves as a complete spectral fingerprint for compact, self-adjoint trace-class operators: the analytic data of the determinant determines the operator spectrum uniquely, and—on a fixed Hilbert space—determines the operator itself up to unitary equivalence.
 \end{proof}
-% 

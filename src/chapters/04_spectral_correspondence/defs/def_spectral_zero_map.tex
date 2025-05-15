@@ -1,28 +1,27 @@
 \begin{definition}[Canonical Spectral Map]
 \label{def:spectral_zero_map}
-Let \( \rho \in \mathbb{C} \) be a nontrivial zero of the Riemann zeta function \( \zeta(s) \), so that \( \zeta(\rho) = 0 \) and \( \rho \ne \tfrac{1}{2} \). Define the canonical spectral map
+Let \( \rho \in \C \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \), so that \( \zetaR(\rho) = 0 \) and \( \rho \ne \tfrac{1}{2} \). Define the canonical spectral map
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
 \]
-which sends a zero \( \rho = \tfrac{1}{2} + i\gamma \) to the real number \( \mu_\rho = 1/\gamma \in \mathbb{R} \setminus \{0\} \).
+which sends a zero \( \rho = \tfrac{1}{2} + i\gamma \) to the real number \( \mu_\rho = \frac{1}{\gamma} \in \R \setminus \{0\} \).
 
 \medskip
 \noindent
-This map identifies nontrivial zeta zeros with the nonzero spectrum of the canonical trace-class operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), via the identity
+This map identifies nontrivial zeta zeros with the nonzero spectrum of the canonical trace-class operator \( L_{\sym} \in \TC(\HPsi) \), via the determinant identity
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)},
 \]
-in which the poles of the logarithmic derivative correspond precisely to \( \lambda = \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \).
+in which the poles of the logarithmic derivative correspond precisely to the points \( \lambda = \mu_\rho \in \Spec(L_{\sym}) \).
 
 \medskip
 \noindent
-The inverse map assigns to each nonzero spectral value \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) the corresponding zeta zero:
+The inverse map assigns to each nonzero spectral value \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) the corresponding nontrivial zeta zero:
 \[
 \rho_\mu := \tfrac{1}{2} - \frac{i}{\mu}.
 \]
 
 \medskip
 \noindent
-This bijection preserves multiplicities and encodes the nontrivial zeta zeros in the discrete spectrum of \( L_{\mathrm{sym}} \), forming the foundation for the spectral realization of the Riemann Hypothesis.
+This bijection preserves multiplicities and encodes the nontrivial zeros of \( \zetaR(s) \) in the discrete spectrum of \( L_{\sym} \), providing the analytic substrate for the spectral realization of the Riemann Hypothesis.
 \end{definition}
-% 

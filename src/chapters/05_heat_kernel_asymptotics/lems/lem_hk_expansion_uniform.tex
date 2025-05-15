@@ -1,14 +1,14 @@
 \begin{lemma}[Uniform Short-Time Heat Kernel Expansion]
 \label{lem:hk_expansion_uniform}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator, and let \( K_t(x,y) \) denote the integral kernel of the semigroup \( e^{-t L_{\mathrm{sym}}^2} \), which exists and is jointly smooth for all \( t > 0 \).
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator, and let \( K_t(x,y) \) denote the integral kernel of the semigroup \( e^{-t L_{\sym}^2} \), which exists and is jointly smooth for all \( t > 0 \).
 
 Then as \( t \to 0^+ \), the diagonal heat kernel admits a full short-time asymptotic expansion of the form:
 \[
 K_t(x,x) \sim \sum_{n=0}^\infty a_n(x)\, t^{n - \frac{1}{2}},
 \]
-where \( \{ a_n(x) \} \subset C^\infty(\mathbb{R}) \) are smooth coefficient functions depending on the local structure of the mollified Fourier symbol of \( L_{\mathrm{sym}} \). This expansion is valid uniformly on compact subsets of \( \mathbb{R} \).
+where \( \{ a_n(x) \} \subset C^\infty(\R) \) are smooth coefficient functions depending on the local structure of the mollified Fourier symbol of \( L_{\sym} \). This expansion is valid uniformly on compact subsets of \( \R \).
 
-More precisely, for each \( N \in \mathbb{N} \) and every compact set \( K \subset \mathbb{R} \), there exist constants \( C_N > 0 \) and \( t_0 > 0 \) such that for all \( x \in K \) and \( 0 < t \le t_0 \),
+More precisely, for each \( N \in \N \) and every compact set \( K \subset \R \), there exist constants \( C_N > 0 \) and \( t_0 > 0 \) such that for all \( x \in K \) and \( 0 < t \le t_0 \),
 \[
 \left| K_t(x,x) - \sum_{n=0}^{N-1} a_n(x)\, t^{n - \frac{1}{2}} \right| \le C_N\, t^{N - \frac{1}{2}}.
 \]

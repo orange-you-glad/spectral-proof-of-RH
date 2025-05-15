@@ -22,12 +22,12 @@ For symbol definitions, see Appendix~\ref{app:notation_summary}.
 
 The analytic identity
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
-relies on the following validated properties, derived across Chapters~1–2 and Appendices~\ref{app:zeta-function-background}, \ref{app:trace_ideals_review}:
+relies on the following validated properties, derived across Chapters~1–2 and Appendices~\ref{app:zeta_function_background}, \ref{app:trace_ideals_review}:
 
 \begin{itemize}
-  \item \textbf{Spectral Profile Class:} \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) (see \cref{lem:xi_growth_bound}) ensures exponential control.
+  \item \textbf{Spectral Profile Class:} \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) (see \cref{lem:xi_growth_bound}) ensures exponential control.
 
   \item \textbf{Kernel Localization:} The inverse Fourier transform \( \widehat{\Xi}(x) \in L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \) (see \cref{lem:weighted_L1_inverse_FT_xi}).
 
@@ -42,43 +42,36 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 
 \begin{itemize}
   \item \textbf{Chapter 1 — Foundational Structures:}  
-  Introduces \( H_{\Psi_\alpha} \), Paley--Wiener decay, kernel embedding, trace-class theory. See Chapter~\ref{sec:foundations}.
+  Introduces \( \HPsi \), Paley–Wiener decay, kernel embedding, trace-class theory. See Chapter~\ref{sec:foundations}.
 
   \item \textbf{Chapter 2 — Canonical Operator Construction:}  
   Defines mollifiers \( L_t \), proves trace-norm convergence (\cref{lem:trace_norm_convergence_Lt_to_Lsym}), limit uniqueness (\cref{lem:trace_norm_limit_unique}), and self-adjointness via \cref{rem:selfadjoint_analytic_vectors}.
 
   \item \textbf{Chapter 3 — Determinant Identity:}  
-  Proves the canonical identity via \cref{lem:det_via_heat_trace}, heat trace asymptotics (\cref{lem:heat_semigroup_wellposed}), Hadamard structure (\cref{lem:hadamard_linear_form}), and uniqueness in \( \mathcal{E}_1^\pi \) (\cref{lem:hadamard_uniqueness_E1pi}).
+  Proves the canonical identity via \cref{lem:det_via_heat_trace}, heat trace asymptotics (\cref{lem:heat_semigroup_wellposed}), Hadamard structure (\cref{lem:hadamard_linear_form}), and uniqueness in \( \mathcal{E}_1^\pi \) (\cref{lem:hadamard_uniqueness_E1pi}).  
+  \textit{See also \remref{rmk:forward_spectral_closure} for forward implications traced in Chapter~6.}
 
   \item \textbf{Chapter 4 — Spectral Bijection:}  
-  Proves
-  \[
-  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}),
-  \]
-  via \cref{lem:spectrum_zero_bijection}, establishing a multiplicity-preserving map.
+  Establishes the multiplicity-preserving map \( \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}) \) via \cref{lem:spectrum_zero_bijection}.
 
   \item \textbf{Chapter 5 — Heat Kernel and Trace Asymptotics:}  
-  Derives expansions for \( \Tr(e^{-tL_{\sym}^2}) \), Mellin transform of spectral zeta function, and Tauberian asymptotics.
+  Derives expansions for \( \Tr(e^{-tL_{\sym}^2}) \), Mellin transforms of zeta functions, and Tauberian bounds.
 
   \item \textbf{Chapter 6 — Spectral Rigidity and RH Equivalence:}  
   Proves
   \[
-  \text{RH} \iff \Spec(L_{\sym}) \subset \R,
+  \RH \iff \Spec(L_{\sym}) \subset \R,
   \]
-  using determinant symmetry and spectral structure (Theorem~\ref{thm:eq_of_rh}, Lemma~\ref{lem:spectral_rigidity_determinant}).
+  using determinant identity and spectral structure (see \thmref{thm:eq_of_rh}, \lemref{lem:spectral_rigidity_determinant}, \thmref{thm:rh_spectral_closure}).
 
   \item \textbf{Chapter 7 — Tauberian Growth:}  
-  Quantifies asymptotic growth of the spectral counting function from the trace asymptotics.
+  Extracts spectral asymptotics from Laplace-trace expansions.
 
   \item \textbf{Chapter 8 — Spectral Rigidity:}  
-  Proves trace positivity, spectral injectivity, and RH-invariant determinant constraints.
+  Proves determinant rigidity under positivity, and uniqueness across trace class.
 
   \item \textbf{Chapter 9 — Logical Closure:}  
-  Concludes:
-  \[
-  \text{RH} \iff \Spec(L_{\sym}) \subset \mathbb{R},
-  \]
-  from all prior modular results.
+  Concludes the modular RH equivalence via DAG-saturated results.
 \end{itemize}
 
 \subsection*{Directed Proof Flow Diagram}
@@ -92,7 +85,7 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \textbf{Operator Construction (Ch.~2)} \\
 \text{(\cref{lem:trace_norm_limit_unique}, \cref{rem:selfadjoint_analytic_vectors})} \\[1ex]
 \downarrow \\[1ex]
-\textbf{Determinant Identity (Ch.~3)} \Leftarrow \text{App.~\ref{app:zeta-function-background}, \ref{app:trace_ideals_review}} \\
+\textbf{Determinant Identity (Ch.~3)} \Leftarrow \text{App.~\ref{app:zeta_function_background}, \ref{app:trace_ideals_review}} \\
 \text{(\cref{lem:heat_semigroup_wellposed}, \cref{lem:hadamard_uniqueness_E1pi})} \\[1ex]
 \downarrow \\[1ex]
 \textbf{Spectral Bijection (Ch.~4)} \\
@@ -102,7 +95,7 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \text{(Tauberian counting from Laplace-integrated trace)} \\[1ex]
 \downarrow \\[1ex]
 \textbf{Spectral Rigidity \& RH Equivalence (Ch.~6)} \\
-\text{(Thm~\ref{thm:eq_of_rh}, Lem~\ref{lem:spectral_rigidity_determinant})} \\[1ex]
+\text{(\thmref{thm:eq_of_rh}, \lemref{lem:spectral_rigidity_determinant}, \thmref{thm:rh_spectral_closure})} \\[1ex]
 \downarrow \\[1ex]
 \textbf{Tauberian Growth (Ch.~7)} \\[1ex]
 \downarrow \\[1ex]
@@ -114,4 +107,14 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 
 \subsection*{Conclusion}
 
-Each lemma, theorem, and spectral construction in this manuscript is derived from analytically grounded, strictly acyclic dependencies. No forward assumptions are made regarding RH. This modular proof architecture enables the derivation of the Riemann Hypothesis from operator-theoretic and trace-determinant principles. See Appendix~\ref{app:notation-summary} for symbol reference.
+Each lemma, proposition, and theorem in this manuscript depends only on prior analytic infrastructure or trace-class spectral calculus. No assumption of the Riemann Hypothesis, spectral bijection, or real spectrum is made until it is explicitly proven.
+
+The analytic–spectral chain from the determinant identity to the equivalence
+\[
+\RH \iff \Spec(L_{\sym}) \subset \R
+\]
+is modular, acyclic, and fully resolved in \cref{sec:spectral_implications}, using only results from \cref{sec:heat_kernel_asymptotics} and prior.
+
+Forward dependency disclosure is made explicit in \remref{rmk:forward_spectral_closure}, and the logical completion of the RH equivalence is formalized in \thmref{thm:rh_spectral_closure}.
+
+For notation and analytic symbol definitions, see \appref{app:notation_summary}.

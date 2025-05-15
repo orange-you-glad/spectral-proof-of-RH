@@ -1,17 +1,17 @@
 \begin{proposition}[Uniform Convergence of Heat Trace Expansion]
 \label{prop:heat_trace_uniform_conv}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint, and nonnegative operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx) \), with \( \alpha > \pi \). Let \( K_t(x,y) \) denote the integral kernel of the heat semigroup \( e^{-t L_{\mathrm{sym}}^2} \).
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint, and nonnegative operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha|x|} dx) \), with \( \alpha > \pi \). Let \( K_t(x,y) \) denote the integral kernel of the heat semigroup \( e^{-t L_{\sym}^2} \).
 
 Then as \( t \to 0^+ \), the spectral heat trace admits a global short-time expansion:
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} K_t(x,x)\, dx
+\Tr(e^{-t L_{\sym}^2}) = \int_{\R} K_t(x,x)\, dx
 \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}},
 \]
 with coefficients
 \[
-A_n := \int_{\mathbb{R}} a_n(x)\, dx,
+A_n := \int_{\R} a_n(x)\, dx,
 \]
-where \( a_n(x) \in C^\infty(\mathbb{R}) \) are the diagonal heat kernel coefficients from the local expansion
+where \( a_n(x) \in C^\infty(\R) \) are the diagonal heat kernel coefficients from the local expansion
 \[
 K_t(x,x) \sim \sum_{n=0}^\infty a_n(x)\, t^{n - \frac{1}{2}}, \qquad \text{as } t \to 0^+.
 \]
@@ -19,12 +19,12 @@ Each \( A_n \) is finite due to the exponential decay of \( a_n(x) \) induced by
 
 \medskip
 \noindent
-Moreover, the expansion converges with uniform remainder bounds: for each \( N \in \mathbb{N} \), there exist constants \( C_N > 0 \) and \( t_0 > 0 \) such that for all \( t \in (0, t_0] \),
+Moreover, the expansion converges with uniform remainder bounds: for each \( N \in \N \), there exist constants \( C_N > 0 \) and \( t_0 > 0 \) such that for all \( t \in (0, t_0] \),
 \[
-\left| \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) - \sum_{n=0}^{N-1} A_n\, t^{n - \frac{1}{2}} \right| \leq C_N\, t^{N - \frac{1}{2}}.
+\left| \Tr(e^{-t L_{\sym}^2}) - \sum_{n=0}^{N-1} A_n\, t^{n - \frac{1}{2}} \right| \leq C_N\, t^{N - \frac{1}{2}}.
 \]
 
 \medskip
 \noindent
-This asymptotic holds uniformly on compact time intervals \( (0, t_0] \), and follows from classical parametrix expansion theory, combined with dominated convergence. Since \( e^{-t L_{\mathrm{sym}}^2} \in \mathcal{C}_1 \) and \( K_t(x,x) \in C^\infty(\mathbb{R}) \) with uniform exponential decay, the termwise integral converges for all \( n \), and the expansion defines the singular spectral trace structure used in the determinant and Tauberian growth results of Chapters~\ref{sec:determinant-identity} and~\ref{sec:tauberian-growth}.
+This asymptotic holds uniformly on compact time intervals \( (0, t_0] \), and follows from classical parametrix expansion theory, combined with dominated convergence. Since \( e^{-t L_{\sym}^2} \in \TC \) and \( K_t(x,x) \in C^\infty(\R) \) with uniform exponential decay, the termwise integral converges for all \( n \), and the expansion defines the singular spectral trace structure used in the determinant and Tauberian growth results of \secref{sec:determinant_identity} and \secref{sec:tauberian_growth}.
 \end{proposition}

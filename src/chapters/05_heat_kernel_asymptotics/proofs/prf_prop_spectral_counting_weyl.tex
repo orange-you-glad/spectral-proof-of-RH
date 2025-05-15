@@ -1,23 +1,25 @@
-\begin{proof}[Proof of Proposition~\ref{prop:spectral_counting_weyl}]
-From the refined short-time expansion of the heat trace (see Proposition~\ref{prop:short_time_heat_expansion}), we have:
+\begin{proof}[Proof of \propref{prop:spectral_counting_weyl}]
+From the refined short-time asymptotic of the spectral heat trace (see \propref{prop:short_time_heat_expansion}), we have:
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+.
-\]
-Let \( \{ \mu_n^2 \} \subset (0, \infty) \) denote the nonzero eigenvalues of \( L_{\mathrm{sym}}^2 \), counted with multiplicity, and define the counting function
-\[
-N(\lambda) := \#\{ n : \mu_n^2 \leq \lambda \}.
+\Theta(t) := \Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+.
 \]
 
-By classical Tauberian theorems (cf.~\cite[Thm.~4.12.9]{Korevaar2004Tauberian}), and as made precise in Lemma~\ref{lem:tauberian_heat_trace_application}, a heat trace expansion of the form
+Let \( \{ \mu_n^2 \} \subset (0, \infty) \) denote the nonzero eigenvalues of \( L_{\sym}^2 \), counted with multiplicity, and define the squared spectral counting function:
 \[
-\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
+N(\lambda) := \#\left\{ n \in \N : \mu_n^2 \le \lambda \right\}.
 \]
-as \( t \to 0^+ \) implies that
+
+By Korevaar’s log-corrected Tauberian theorem~\cite[Ch.~III, §5]{Korevaar2004Tauberian}, as applied rigorously in \lemref{lem:log_corrected_tauberian_estimate}, the asymptotic behavior of \( \Theta(t) \) implies:
 \[
-N(\lambda) \sim C \, \lambda^{1/2} \log \lambda, \qquad \text{as } \lambda \to \infty,
+N(\lambda) = \frac{\sqrt{\lambda}}{\pi} \log \lambda + O(\sqrt{\lambda}), \qquad \text{as } \lambda \to \infty.
 \]
-for some constant \( C > 0 \). The logarithmic enhancement reflects the leading singularity in the trace and modifies the usual Weyl law for spectral dimension one.
+
+The logarithmic enhancement reflects the spectral density imposed by the leading singularity in the heat trace and modifies the classical Weyl law for effective spectral dimension \( d = 1 \).
 
 \paragraph{Conclusion.}
-This Tauberian correspondence translates the singular trace asymptotics into a spectral density estimate for the eigenvalues of \( L_{\mathrm{sym}}^2 \), yielding the claimed log-modified growth for the counting function.
+The singular trace asymptotics invert via Laplace–Stieltjes theory to yield the log-modulated Weyl-type growth of the eigenvalue counting function:
+\[
+N(\lambda) \in \mathcal{R}_{1/2}^{\log}(\infty),
+\]
+establishing the spectral growth profile consistent with the canonical zeta determinant and the Riemann–von Mangoldt formula.
 \end{proof}

@@ -1,29 +1,28 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectral_exhaustivity}]
-Let \( \{ \mu_n \} \subset \Spec(L_{\mathrm{sym}}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( L_{\mathrm{sym}} \), counted with algebraic multiplicity.
+\begin{proof}[Proof of \lemref{lem:spectral_exhaustivity}]
+Let \( \{ \mu_n \} \subset \Spec(L_{\sym}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \), counted with algebraic multiplicity.
 
 \paragraph{Step 1: Determinant Zeros Correspond to Zeta Zeros.}
-By Theorem~\ref{thm:det_identity_revised}, we have the exact identity
+By \thmref{thm:det_identity_revised}, the regularized Fredholm determinant satisfies the identity
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}.
 \]
-The right-hand side vanishes precisely at those \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \in \mathbb{C} \) for which \( \rho \) is a nontrivial zero of \( \zeta(s) \). The order of vanishing equals the multiplicity of the zero of \( \zeta \) at \( \rho \).
+The right-hand side vanishes precisely at values \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \in \C \) corresponding to nontrivial zeros \( \rho \in \C \) of the Riemann zeta function \( \zetaR(s) \), with the order of vanishing equal to the multiplicity of the zero at \( \rho \).
 
 \paragraph{Step 2: Spectral Reciprocity.}
-For operators in the trace class \( \mathcal{C}_1 \), the Fredholm determinant \(\det_\zeta(I - \lambda L)\) satisfies the spectral identity:
+For trace-class operators \( L \in \TC(\HPsi) \), the logarithmic Fredholm determinant admits the spectral expansion
 \[
-\log \det\nolimits_\zeta(I - \lambda L) = -\sum_{n=1}^\infty \log(1 - \lambda \mu_n),
+\log \det\nolimits_\zeta(I - \lambda L) = -\sum_{\mu \in \Spec(L)} \log(1 - \lambda \mu),
 \]
-analytically continued where necessary. Hence, the determinant vanishes at \( \lambda = \lambda_\rho \) if and only if \( \mu_\rho := \lambda_\rho^{-1} = \frac{1}{i(\rho - \tfrac{1}{2})} \) lies in \( \Spec(L_{\mathrm{sym}}) \setminus \{0\} \), and the order of vanishing matches the algebraic multiplicity of the corresponding eigenvalue.
+valid for \( \|\lambda L\| < 1 \) and extended by analytic continuation. Therefore, the determinant vanishes at \( \lambda = \lambda_\rho \) if and only if
+\[
+\mu_\rho := \lambda_\rho^{-1} = \frac{1}{i(\rho - \tfrac{1}{2})}
+\]
+is a nonzero eigenvalue of \( L_{\sym} \), and the multiplicity of the zero of the determinant equals the algebraic multiplicity of the eigenvalue \( \mu_\rho \).
 
 \paragraph{Step 3: Exhaustivity.}
-Since \( \Xi(s) \) has no other zeros than those inherited from the nontrivial zeros of \( \zeta(s) \), and the determinant’s zero set fully encodes the spectrum of \( L_{\mathrm{sym}} \) away from zero, it follows that every nonzero eigenvalue of \( L_{\mathrm{sym}} \) must arise from some \( \rho \). The zero eigenvalue is excluded by normalization: \(\Xi(\tfrac{1}{2}) \neq 0\) ensures \(\det_\zeta(I) = 1 \Rightarrow 0 \notin \Spec(L_{\mathrm{sym}})\).
-
-\medskip
-\noindent
-Thus, the map
+Since the entire function \( \XiR(s) \) has no zeros other than the nontrivial zeros of \( \zetaR(s) \), and the determinant encodes the full nonzero spectrum of \( L_{\sym} \), it follows that every eigenvalue \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) arises from some zeta zero \( \rho \), via the relation
 \[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+\mu = \mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})}.
 \]
-is surjective onto the nonzero spectrum of \( L_{\mathrm{sym}} \), preserving algebraic multiplicities.
+Moreover, the normalization \(\XiR(\tfrac{1}{2}) \ne 0\) implies \(\det\nolimits_\zeta(I) = 1\), so \( 0 \notin \Spec(L_{\sym}) \). Thus, the spectral map \( \rho \mapsto \mu_\rho \) is surjective onto \( \Spec(L_{\sym}) \setminus \{0\} \), with multiplicities preserved.
 \end{proof}
-%  

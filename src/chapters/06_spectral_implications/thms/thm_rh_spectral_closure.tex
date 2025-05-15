@@ -1,0 +1,37 @@
+\begin{theorem}[Spectral Canonicalization of the Riemann Hypothesis]
+\label{thm:rh_spectral_closure}
+
+Let \( L_{\sym} \in \TC(\HPsi) \cap \KC(\HPsi) \) be the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+\[
+\HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \alpha > \pi,
+\]
+whose normalized Carleman–\(\zeta\)-regularized Fredholm determinant satisfies:
+\[
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}.
+\]
+
+Then the following analytic–spectral equivalence holds:
+\[
+\boxed{
+\RH \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R
+}
+\]
+
+\noindent
+Moreover, \( L_{\sym} \) is uniquely determined (up to unitary equivalence) among all compact, self-adjoint, trace-class operators realizing this determinant identity. Any other realization is either unitarily equivalent (if self-adjoint), or similar in the algebraic sense (if not).
+
+\medskip
+
+\noindent
+This theorem consolidates the results of:
+\begin{itemize}
+  \item \thmref{thm:det_identity_revised} — Canonical determinant identity;
+  \item \thmref{thm:spectral_zero_bijection_revised} — Spectral bijection;
+  \item \lemref{lem:reality_of_spectrum_and_rh} — Inversion identity \(\mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2}\);
+  \item \thmref{thm:uniqueness_realization} — Unitary uniqueness;
+  \item \lemref{lem:canonical_closure} — Canonical operator closure.
+\end{itemize}
+
+\paragraph{Conclusion.}
+The Riemann Hypothesis is equivalent to the spectral reality of a canonically constructed trace-class operator. The analytic data of \( \XiR(s) \), via determinant factorization, uniquely fixes both its spectrum and operator structure.
+\end{theorem}

@@ -2,19 +2,19 @@
 
 \begin{itemize}
   % --- Definitions ---
-  \item \defref{def:heat-operator} — Definition of the heat semigroup \( e^{-tL^2} \) for compact, self-adjoint operators, including trace-class representation and strong continuity properties.
+  \item \defref{def:heat_operator} — Definition of the heat semigroup \( e^{-tL^2} \) for compact, self-adjoint operators, including trace-class representation and strong continuity properties.
 
   % --- Kernel Bounds and Local Expansion ---
-  \item \lemref{lem:hk-upper-bound} — Upper bound:
+  \item \lemref{lem:hk_upper_bound} — Upper bound:
   \[
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \leq c_2\, t^{-1/2}
+  \Tr(e^{-tL_{\sym}^2}) \leq c_2\, t^{-1/2}
   \quad \text{for small } t,
   \]
-  obtained via spectral partitioning and trace-norm estimates.
+  obtained via spectral partitioning and Schatten norm estimates.
 
-  \item \lemref{lem:hk-lower-bound} — Lower bound:
+  \item \lemref{lem:hk_lower_bound} — Lower bound:
   \[
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \geq c_1\, t^{-1/2},
+  \Tr(e^{-tL_{\sym}^2}) \geq c_1\, t^{-1/2},
   \]
   proving sharpness of the leading singular growth from below.
 
@@ -22,13 +22,13 @@
   \[
   K_t(x,x) \sim \sum_{n=0}^\infty a_n(x)\, t^{n - \frac{1}{2}} \quad \text{as } t \to 0^+,
   \]
-  with \( a_n(x) \in C^\infty(\mathbb{R}) \cap \mathcal{S}(\mathbb{R}) \), valid uniformly on compacts.
+  with \( a_n(x) \in C^\infty(\R) \cap \mathcal{S}(\R) \), valid uniformly on compacts.
 
   % --- Global Trace Expansion ---
-  \item \lemref{lem:heat-trace-expansion} — Trace-class asymptotic expansion:
+  \item \lemref{lem:heat_trace_expansion} — Trace-class asymptotic expansion:
   \[
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}}, \quad
-  A_n := \int_{\mathbb{R}} a_n(x)\, dx,
+  \Tr(e^{-tL_{\sym}^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}}, \quad
+  A_n := \int_{\R} a_n(x)\, dx,
   \]
   with leading singular term
   \[
@@ -36,34 +36,34 @@
   \]
   encoding the genus-one Hadamard structure of the spectral determinant.
 
-  \item \propref{prop:two-sided-heat-trace-bounds} — Two-sided estimate:
+  \item \propref{prop:two_sided_heat_trace_bounds} — Two-sided estimate:
   \[
-  c_1\, t^{-1/2} \leq \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \leq c_2\, t^{-1/2} \quad \text{as } t \to 0^+.
+  c_1\, t^{-1/2} \leq \Tr(e^{-tL_{\sym}^2}) \leq c_2\, t^{-1/2} \quad \text{as } t \to 0^+.
   \]
 
   \item \propref{prop:heat_trace_uniform_conv} — Global expansion with uniform convergence:
   \[
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}},
+  \Tr(e^{-tL_{\sym}^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}},
   \]
   with exponentially decaying error and termwise integrability.
 
   \item \propref{prop:short_time_heat_expansion} — Refined asymptotics:
   \[
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2})
+  \Tr(e^{-tL_{\sym}^2})
   = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
   + c_0 \sqrt{t} + o(\sqrt{t}),
   \]
-  with \( c_0 := \int_{\mathbb{R}} a_1(x)\, dx \). The logarithmic singularity governs determinant growth.
+  with \( c_0 := \int_{\R} a_1(x)\, dx \). The logarithmic singularity governs determinant growth.
 
   % --- Spectral and Determinant Linkages ---
-  \item \lemref{lem:log-derivative-determinant} — Logarithmic derivative of the spectral determinant:
+  \item \lemref{lem:log_derivative_determinant} — Logarithmic derivative of the spectral determinant:
   \[
-  \log \det\nolimits_{\zeta}(L_{\mathrm{sym}}^2)
-  = -\int_0^\infty \frac{\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) - P(t)}{t} \, dt,
+  \log \det\nolimits_{\zeta}(L_{\sym}^2)
+  = -\int_0^\infty \frac{\Tr(e^{-t L_{\sym}^2}) - P(t)}{t} \, dt,
   \]
   where \( P(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) denotes the singular part of the heat trace.
 
-  \item \remref{rem:spectral-dimension} — Spectral dimension and Weyl asymptotics:
+  \item \remref{rem:spectral_dimension} — Spectral dimension and Weyl asymptotics:
   \[
   N(\lambda) \sim C \lambda^{1/2} \log \lambda,
   \]
@@ -72,9 +72,9 @@
 
 \medskip
 
-\noindent\textbf{Transition to Chapter~\ref{sec:tauberian-growth}.}  
-These heat kernel asymptotics provide the analytic backbone for Chapter~\ref{sec:tauberian-growth}, where refined Tauberian methods translate singular trace behavior into precise spectral asymptotics. The logarithmic term in the heat trace emerges as the governing feature for eigenvalue growth, rigidity, and determinant scaling estimates.
+\noindent\textbf{Transition to Chapter~\ref{sec:tauberian_growth}.}  
+These heat kernel asymptotics provide the analytic backbone for Chapter~\ref{sec:tauberian_growth}, where refined Tauberian methods translate singular trace behavior into precise spectral asymptotics. The logarithmic term in the heat trace emerges as the governing feature for eigenvalue growth, rigidity, and determinant scaling estimates.
 
 \medskip
 \noindent
-For numerical illustrations of the heat trace, spectral bijection, and determinant structure, see Appendix~\ref{app:spectral-numerics}. For speculative physical interpretations of the heat trace as a partition function and its spectral dynamics, see Appendix~\ref{app:spectral-physics-link}.
+For numerical illustrations of the heat trace, spectral bijection, and determinant structure, see Appendix~\ref{app:spectral_numerics}. For speculative physical interpretations of the heat trace as a partition function and its spectral dynamics, see Appendix~\ref{app:spectral_physics_link}.

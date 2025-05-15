@@ -1,14 +1,14 @@
-\begin{proof}[Proof of Proposition~\ref{prop:short_time_heat_expansion}]
-Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator. Let \( L_\varepsilon \to L \) in trace norm be a family of mollified convolution approximants constructed via Gaussian regularization in the Fourier domain, as defined in Chapter~\ref{sec:operator_construction}.
+\begin{proof}[Proof of \propref{prop:short_time_heat_expansion}]
+Let \( L := L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint operator. Let \( L_\varepsilon \to L \) in trace norm be a family of mollified convolution approximants constructed via Gaussian regularization in the Fourier domain, as defined in \secref{sec:operator_construction}.
 
 \paragraph{Step 1: Asymptotics for Mollified Approximants.}
-Each \( L_\varepsilon \) is smoothing, self-adjoint, and trace class. Its square \( L_\varepsilon^2 \) defines a bounded pseudodifferential operator with integral kernel \( K^{(\varepsilon)}_t(x,y) \in \mathcal{S}(\mathbb{R}^2) \). The diagonal expansion
+Each \( L_\varepsilon \) is smoothing, self-adjoint, and trace class. Its square \( L_\varepsilon^2 \) defines a bounded pseudodifferential operator with integral kernel \( K^{(\varepsilon)}_t(x,y) \in \mathcal{S}(\R^2) \). The diagonal expansion
 \[
 K^{(\varepsilon)}_t(x,x) \sim \sum_{n=0}^\infty a_n^{(\varepsilon)}(x)\, t^{n - \frac{1}{2}}
 \]
-holds uniformly in \( x \in \mathbb{R} \), with each \( a_n^{(\varepsilon)}(x) \in \mathcal{S}(\mathbb{R}) \). Integration yields the trace expansion
+holds uniformly in \( x \in \R \), with each \( a_n^{(\varepsilon)}(x) \in \mathcal{S}(\R) \). Integration yields the trace expansion
 \[
-\operatorname{Tr}(e^{-t L_\varepsilon^2}) \sim \sum_{n=0}^\infty A_n^{(\varepsilon)}\, t^{n - \frac{1}{2}}, \qquad A_n^{(\varepsilon)} := \int_{\mathbb{R}} a_n^{(\varepsilon)}(x)\, dx.
+\Tr(e^{-t L_\varepsilon^2}) \sim \sum_{n=0}^\infty A_n^{(\varepsilon)}\, t^{n - \frac{1}{2}}, \qquad A_n^{(\varepsilon)} := \int_{\R} a_n^{(\varepsilon)}(x)\, dx.
 \]
 
 In particular, the logarithmic term
@@ -18,24 +18,24 @@ In particular, the logarithmic term
 emerges universally as the leading singularity, reflecting the exponential type and genus-one Hadamard structure of the spectral profile \( \Xi(s) \), as encoded in the mollified kernels.
 
 \paragraph{Step 2: Trace-Class Convergence of the Semigroup.}
-By stability of trace-class semigroups under strong convergence in \( \mathcal{C}_1 \) (see~\cite[Thm.~3.2]{Simon2005TraceIdeals}), we have:
+By stability of trace-class semigroups under strong convergence in \( \TC \) (see~\cite[Thm.~3.2]{Simon2005TraceIdeals}), we have:
 \[
-L_\varepsilon^2 \to L^2 \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}) \quad \Longrightarrow \quad e^{-t L_\varepsilon^2} \to e^{-t L^2} \text{ in } \mathcal{C}_1.
+L_\varepsilon^2 \to L^2 \quad \text{in } \TC(\HPsi) \quad \Longrightarrow \quad e^{-t L_\varepsilon^2} \to e^{-t L^2} \text{ in } \TC.
 \]
 Thus, for all \( t \in (0, t_0] \),
 \[
-\operatorname{Tr}(e^{-t L_\varepsilon^2}) \to \operatorname{Tr}(e^{-t L^2}),
+\Tr(e^{-t L_\varepsilon^2}) \to \Tr(e^{-t L^2}),
 \]
 and the asymptotic expansion transfers to the limit via dominated convergence.
 
 \paragraph{Step 3: Conclusion.}
 Passing to the limit, we conclude that
 \[
-\operatorname{Tr}(e^{-t L^2}) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + o(\sqrt{t}) \quad \text{as } t \to 0^+,
+\Tr(e^{-t L^2}) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + o(\sqrt{t}) \quad \text{as } t \to 0^+,
 \]
 where
 \[
-c_0 := \int_{\mathbb{R}} a_1(x) \, dx.
+c_0 := \int_{\R} a_1(x) \, dx.
 \]
 This completes the proof.
 \end{proof}

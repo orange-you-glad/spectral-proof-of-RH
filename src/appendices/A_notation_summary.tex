@@ -2,56 +2,56 @@
 \label{app:notation_summary}
 
 \noindent
-This appendix lists globally defined analytic symbols and conventions. All other notation is introduced locally at first use. For semantic dependencies and usage by chapter, see the DAG in Appendix~\ref{app:dependency-graph}.
+This appendix collects global analytic symbols and conventions. All other notation is introduced locally at first use. For semantic dependencies and usage by chapter, see the DAG in \appref{app:dependency_graph}.
 
 \begin{itemize}
   \item \textbf{Weighted Hilbert Space:}
   \[
-  \HPsi := L^2(\R, e^{\alpha |x|} \, dx), \quad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+  \HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
   \]
-  Exponential weight ensures trace-class inclusion of kernels with decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). All spectral operators \( L_t \), \( L_{\sym} \), and heat flows \( e^{-tL^2} \) are realized on \( \HPsi \).
+  The exponential weight ensures trace-class inclusion of kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). All spectral operators \( L_t \), \( L_{\sym} \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
 
   \item \textbf{Paley–Wiener Class:}
   \[
   \PW{a} := \mathcal{PW}_a(\R)
   \]
-  denotes the Paley–Wiener space of entire functions of exponential type \( a \), i.e., entire functions whose Fourier transforms have support in \( [-a, a] \). The centered spectral profile satisfies
+  denotes the Paley–Wiener space of entire functions of exponential type \( a \), with Fourier transforms supported in \( [-a, a] \). The centered spectral profile satisfies:
   \[
-  \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \in \PW{\pi}, \qquad \Rightarrow \qquad \phi^\vee(x) \sim e^{-\pi |x|}.
+  \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \in \PW{\pi}, \quad \Rightarrow \quad \phi^\vee(x) \sim e^{-\pi |x|}.
   \]
 
   \item \textbf{Canonical Operator:}
   \[
-  L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi),
+  L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(\HPsi),
   \]
-  defined as the trace-norm limit of mollified convolution operators with kernels derived from \( \FT^{-1}[\phi_t] \), where \( \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \). This operator is compact, self-adjoint, and realizes the canonical determinant identity.
+  defined as a trace-norm limit of mollified convolutions with kernels from \( \FT^{-1}[\phi_t] \), where \( \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \). The operator is compact, self-adjoint, and realizes the canonical determinant identity.
 
   \item \textbf{Spectral Profile and Kernel:}
   \[
-  \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right), \qquad k(x) := \FT^{-1}[\phi](x), \qquad K(x,y) := k(x - y).
+  \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad k(x) := \FT^{-1}[\phi](x), \qquad K(x, y) := k(x - y).
   \]
-  This centered profile governs the spectral geometry of \( L_{\sym} \), and appears throughout the determinant and zeta heat trace constructions.
+  These define the integral kernel of \( L_{\sym} \). The profile \( \phi \) governs spectral decay and determinant structure.
 
   \item \textbf{Canonical Spectral Map:}
   \[
-  \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}), \qquad \rho \in \mathbb{C} \text{ zero of } \zeta(s).
+  \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}), \qquad \rho \in \C \text{ zero of } \zeta(s).
   \]
-  Maps the critical line \( \Re(\rho) = \tfrac{1}{2} \) to the real axis. Used to identify the nontrivial zero set of \( \zeta(s) \) with the spectrum of \( L_{\sym} \).
+  This bijective reparametrization maps the critical line to the real axis, identifying zeros of \( \zetaR \) with eigenvalues of \( L_{\sym} \).
 
   \item \textbf{Spectral Determinant:}
   \[
-  \det\nolimits_\zeta(I - \lambda L_{\sym}) := \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
   \]
-  the Carleman \(\zeta\)-regularized Fredholm determinant of \( L_{\sym} \), matching the Hadamard factorization of \( \Xi \) and encoding the spectral zero data.
+  the Carleman \(\zeta\)-regularized Fredholm determinant. It agrees with the Hadamard factorization of \( \Xi \) and encodes all nontrivial zeta zero data.
 \end{itemize}
 
 \noindent
 The completed zeta function \( \Xi(s) \) is entire of order one and exponential type \( \pi \), satisfying:
 \[
-\Xi(s) = \Xi(1 - s), \quad \Xi(\tfrac{1}{2} + i\lambda) \in \mathbb{R}, \quad \forall\, \lambda \in \R.
+\Xi(s) = \Xi(1 - s), \quad \Xi\left( \tfrac{1}{2} + i\lambda \right) \in \R, \quad \forall\, \lambda \in \R.
 \]
 
 \medskip
 
 \noindent
-For complete analytic provenance of these objects, see Appendices~\ref{app:zeta-function-background} and \ref{app:trace_ideals_review}. The global dependency DAG in Appendix~\ref{app:dependency_graph} shows which results depend on which core symbols.
+For analytic derivations of these objects, see \appref{app:zeta_function_background} and \appref{app:trace_ideals_review}. The global dependency DAG in \appref{app:dependency_graph} maps which constructions rely on which symbols.

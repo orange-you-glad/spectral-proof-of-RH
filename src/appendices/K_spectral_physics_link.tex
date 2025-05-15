@@ -1,55 +1,55 @@
 \section{Spectral Physics Interpretation}
-\label{app:spectral-physics-link}
+\label{app:spectral_physics_link}
 
 \noindent\textbf{[Noncritical Appendix]}  
-This appendix explores speculative physical interpretations of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). While no physical model is constructed here, the operator admits a formal analogy with a quantum Hamiltonian whose spectrum encodes the (rescaled) nontrivial zeros of the Riemann zeta function:
+This appendix explores heuristic physical interpretations of the canonical operator \( L_{\sym} \in \TC(\HPsi) \). No physical model is constructed here. The analogy is strictly formal and logically inert. However, \( L_{\sym} \) admits a structure resembling a quantum Hamiltonian whose spectrum encodes the rescaled nontrivial zeros of the Riemann zeta function:
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) = \left\{ \mu_n := \frac{1}{\gamma_n} \;\middle|\; \zeta\left(\tfrac{1}{2} + i\gamma_n\right) = 0 \right\}.
+\Spec(L_{\sym}) = \left\{ \mu_n := \frac{1}{\gamma_n} \;\middle|\; \zetaR\left(\tfrac{1}{2} + i\gamma_n\right) = 0 \right\}.
 \]
 
 \subsection*{Partition Function Analogy}
 
 The heat trace
 \[
-Z(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}})
+Z(t) := \Tr(e^{-t L_{\sym}})
 \]
-formally resembles a partition function for a quantum system with eigenvalues \( \mu_n \). Its singular short-time expansion,
+resembles a partition function for a quantum system with energy levels \( \mu_n \). Its singular expansion:
 \[
 Z(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2}), \quad t \to 0^+,
 \]
-is typical of Laplace-type operators on singular or arithmetic manifolds, and reflects the logarithmic divergence found in trace formulas for noncompact spaces.
+is typical of Laplace-type operators on singular spaces and reflects divergences observed in trace formulas on noncompact domains.
 
 The zeta-regularized spectral determinant
 \[
-\log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+\log \det\nolimits_\zeta(I - \lambda L_{\sym})
 \]
-acts analogously to a free energy term, consistent with the spectral action principle in noncommutative geometry~\cite{Connes1999TraceFormula, Chamseddine2007SpectralAction}.
+acts analogously to a regularized free energy in statistical mechanics. This reflects the spectral action principle in noncommutative geometry~\cite{Connes1999TraceFormula, Chamseddine2007SpectralAction}.
 
 \subsection*{GUE Statistics and Inverse Spectrum}
 
-Under the spectral map
+Under the map
 \[
 \gamma_n \longmapsto \mu_n := \frac{1}{\gamma_n},
 \]
-the conjectural GUE distribution of zeta zeros~\cite{Montgomery1973PairCorrelation, Berry1986RiemannSpectra} is transformed into a nonlinear spacing distribution on the inverse spectrum \( \{ \mu_n \} \). Level repulsion and rigidity are preserved qualitatively, but the inverse mapping compresses large eigenvalues and emphasizes low-frequency arithmetic structure.
+the conjectured GUE distribution of zeta zeros~\cite{Montgomery1973PairCorrelation, Berry1986RiemannSpectra} transforms into a nonlinear spacing distribution on \( \Spec(L_{\sym}) \). This map compresses high-energy modes and magnifies low-frequency arithmetic structure.
 
-This suggests that \( L_{\mathrm{sym}} \) may model a nonstandard Hamiltonian with inverted arithmetic energy scales—compressing high-energy dynamics into a trace-class framework.
+Thus, \( L_{\sym} \) may be seen as a trace-class compression of an arithmetic Hamiltonian, capturing global zero statistics within an analytic framework.
 
 \subsection*{Caveats and Interpretation}
 
-These analogies are illustrative only and do not influence any analytic result in the manuscript. No physical Hamiltonian, Lagrangian, or path integral formalism is required to define \( L_{\mathrm{sym}} \).
+These analogies do not influence any analytic result in the manuscript. No Hamiltonian, Lagrangian, or path integral is defined here.
 
-Nonetheless, this perspective may guide future inquiry into:
+Nonetheless, this viewpoint may motivate further inquiry into:
 \begin{itemize}
-  \item Quantum mechanical realizations of spectral zeta functions;
-  \item Inverse-spectral ensembles and statistical mechanics of determinant models;
-  \item Hamiltonian or path-integral interpretations of arithmetic trace formulas.
+  \item Quantum realizations of spectral zeta functions;
+  \item Inverse-spectral statistics and trace-class ensembles;
+  \item Hamiltonian interpretations of arithmetic trace formulas.
 \end{itemize}
 
 \medskip
 \noindent
-The operator \( L_{\mathrm{sym}} \) offers a canonical analytic realization of the nontrivial zeta spectrum. Whether it also admits a meaningful quantization or physical interpretation remains an open question—one that sits at the intersection of spectral theory, arithmetic, and quantum geometry.
+The operator \( L_{\sym} \) is a canonical analytic realization of the nontrivial zeta spectrum. Whether it admits a deeper physical interpretation—perhaps via quantization or arithmetic gauge theory—remains open.
 
 \medskip
 \noindent
-For the analytic realization of the spectral equivalence \( \mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \), see Chapter~\ref{sec:spectral-implications}.
+For the analytic realization of the spectral equivalence \( \RH \iff \Spec(L_{\sym}) \subset \R \), see \cref{sec:spectral_implications}.

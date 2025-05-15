@@ -1,20 +1,17 @@
 \section{Trace Ideals and Operator Norms}
 \label{app:trace_ideals_review}
 
-This appendix reviews the classical theory of compact operators, Schatten–von Neumann ideals, trace norms, and determinant expansions. These tools underpin the spectral realization of the completed zeta function \( \Xi(s) \) via the canonical trace-class convolution operator \( L_{\sym} \), and support the analytic infrastructure of Chapters~\ref{sec:operator_construction}–\ref{sec:logical_closure}.
-
-The exposition follows Simon~\cite{Simon2005TraceIdeals}, Reed–Simon~\cite{ReedSimon1980I, ReedSimon1975II}, and classical Fredholm theory.
+This appendix reviews the classical theory of compact operators, Schatten–von Neumann ideals, trace norms, and determinant expansions. These analytic tools underlie the spectral realization of the completed zeta function \( \XiR(s) \) via the canonical trace-class convolution operator \( L_{\sym} \), and support the infrastructure developed across Chapters~\ref{sec:operator_construction}–\ref{sec:logical_closure}.
 
 \subsection*{Schatten–von Neumann Ideals}
 
-Let \( H \) be a separable complex Hilbert space. For \( p \in [1, \infty) \), define:
+Let \( H \) be a separable Hilbert space. For \( p \in [1, \infty) \), define:
 \[
-\mathcal{C}_p(H) := \left\{ T \in \mathcal{K}(H) \;\middle|\; \|T\|_{\mathcal{C}_p} := \left( \sum_{n=1}^\infty \sigma_n(T)^p \right)^{1/p} < \infty \right\},
+\mathcal{C}_p(H) := \left\{ T \in \KC(H) \;\middle|\; \|T\|_{\mathcal{C}_p} := \left( \sum_{n=1}^\infty \sigma_n(T)^p \right)^{1/p} < \infty \right\},
 \]
-where \( \{ \sigma_n(T) \} \) are the singular values of \( T \). Each \( \mathcal{C}_p \) is a Banach *-ideal, closed under adjoints and invariant under unitary conjugation.
+where \( \{\sigma_n(T)\} \) are the singular values of \( T \). Each \( \mathcal{C}_p \) is a Banach *-ideal, stable under adjoint and unitary conjugation.
 
-\medskip
-\noindent
+\smallskip
 Important special cases:
 \begin{itemize}
   \item \( \mathcal{C}_1(H) \): trace-class operators;
@@ -23,13 +20,13 @@ Important special cases:
 
 \subsection*{Trace-Class Operators}
 
-If \( T \in \mathcal{C}_1(H) \), the trace is defined by
+If \( T \in \TC(H) \), then the trace is defined as:
 \[
 \Tr(T) := \sum_n \langle T e_n, e_n \rangle,
 \]
-for any orthonormal basis \( \{e_n\} \subset H \); this definition is independent of the basis.
+for any orthonormal basis \( \{e_n\} \subset H \); the definition is basis-independent.
 
-One has:
+One has the estimates:
 \[
 |\Tr(T)| \le \|T\|_{\TC}, \qquad \|T\| \le \|T\|_{\TC}.
 \]
@@ -37,51 +34,50 @@ One has:
 \subsection*{Structural Properties}
 
 \begin{itemize}
-  \item Ideal nesting:
+  \item Ideal inclusions:
   \[
-  \mathcal{C}_1 \subset \mathcal{C}_2 \subset \KC \subset \mathcal{B},
+  \TC \subset \mathcal{C}_2 \subset \KC \subset \mathcal{B},
   \]
-  where \( \KC \) is the ideal of compact operators and \( \mathcal{B} := \mathcal{B}(H) \) is the bounded operator algebra.
+  where \( \KC \) denotes compact operators and \( \mathcal{B} := \mathcal{B}(H) \) the full bounded algebra.
 
-  \item All \( \mathcal{C}_p \) operators with \( p < \infty \) are compact.
+  \item All \( \mathcal{C}_p \) ideals with \( p < \infty \) are contained in \( \KC \).
 
   \item Trace cyclicity:
   \[
-  \Tr(AB) = \Tr(BA) \quad \text{whenever } A \in \mathcal{C}_1(H),\; B \in \mathcal{B}(H).
+  \Tr(AB) = \Tr(BA), \quad \text{for } A \in \TC, \; B \in \mathcal{B}.
   \]
 \end{itemize}
 
-\subsection*{Fredholm and Carleman Determinants}
+\subsection*{Fredholm and Zeta-Regularized Determinants}
 
-Let \( T \in \mathcal{C}_1(H) \) be compact and trace-class.
+Let \( T \in \TC(H) \) be compact and self-adjoint.
 
-\paragraph{Classical Fredholm determinant:}
+\paragraph{Classical Fredholm Determinant:}
 \[
-\det(I + T) := \prod_n (1 + \lambda_n), \qquad
+\det(I + T) := \prod_n (1 + \lambda_n), \quad
 \log \det(I + T) = \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k} \Tr(T^k),
 \]
-where \( \lambda_n \) are the eigenvalues of \( T \), counted with multiplicity.
+where \( \{\lambda_n\} \) are the eigenvalues of \( T \), counted with multiplicity.
 
-\paragraph{Carleman \(\zeta\)-regularized determinant:}
+\paragraph{Carleman \(\zeta\)-Regularized Determinant:}
 \[
 \det\nolimits_\zeta(I - \lambda T) := \exp\left( -\sum_{k=1}^\infty \frac{\lambda^k}{k} \Tr(T^k) \right), \quad |\lambda| < \|T\|_{\TC}^{-1}.
 \]
-
-For \( T \in \mathcal{C}_1 \) self-adjoint, this series converges absolutely and defines an entire function of order one and exponential type determined by the trace norm. See \cite[Ch.~4]{Simon2005TraceIdeals}.
+For self-adjoint \( T \in \TC \), this converges absolutely and defines an entire function of order one and exponential type governed by the trace norm. See~\cite[Ch.~4]{Simon2005TraceIdeals}.
 
 \subsection*{Spectral Mapping Diagram}
 
 \begin{figure}[ht]
 \centering
-% Insert validated TikZ diagram from Chapter 3
-\caption{Zeta zeros \( \rho \) map via \( \rho \mapsto \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) \) to eigenvalues of the canonical operator \( L_{\sym} \).}
+% Insert validated TikZ or external image file
+\caption{Zeta zeros \( \rho \mapsto \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) \) correspond to the spectrum of \( L_{\sym} \).}
 \label{fig:spectral-mapping}
 \end{figure}
 
 \subsection*{Conclusion}
 
-The analytic theory of compact and trace-class operators, together with zeta-regularized determinants, justifies the canonical identity
+The analytic theory of trace-class operators and \(\zeta\)-regularized determinants justifies the canonical identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})},
 \]
-for a unique compact, self-adjoint operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \). This framework underpins the determinant expansion, heat kernel convergence, and spectral encoding mechanisms culminating in the proof of the Riemann Hypothesis in Chapter~\ref{sec:logical_closure}.
+for the unique compact, self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \). This determinant framework supports the heat kernel expansion, the spectral map \( \rho \mapsto \mu_\rho \), and the analytic equivalence \( \Spec(L_{\sym}) \subset \R \iff \RH \) proven in \cref{sec:logical_closure}.

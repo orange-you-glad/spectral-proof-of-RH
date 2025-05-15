@@ -1,42 +1,45 @@
 \section{Heat Kernel Construction and Spectral Asymptotics}
-\label{app:heat-kernel-construction}
+\label{app:heat_kernel_construction}
 
-This appendix collects technical proofs and derivations that underpin the analytic results of Chapter~\ref{sec:heat-kernel-asymptotics}. All core statements appear there as lemmas or propositions; only justifications are reproduced here for completeness.
+This appendix provides technical derivations and analytic justifications for the heat kernel estimates used in \cref{sec:heat_kernel_asymptotics}. All main statements are stated as lemmas or propositions there; here we give detailed proofs relying on classical spectral theory, trace-class semigroup convergence, and parametrix expansions.
 
 \subsection*{Notation}
 
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \} \subset \mathbb{R} \), where eigenvalues are listed with multiplicities. Define the heat semigroup via spectral functional calculus:
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \} \subset \R \), listed with multiplicities. The heat semigroup is defined via spectral calculus:
 \[
-e^{-t L_{\mathrm{sym}}^2} := \sum_{n=1}^\infty e^{-t \mu_n^2} P_n,
+e^{-t L_{\sym}^2} := \sum_{n=1}^\infty e^{-t \mu_n^2} P_n,
 \]
-where \( P_n \) is the orthogonal projection onto the eigenspace corresponding to \( \mu_n \). Since \( L_{\mathrm{sym}}^2 \ge 0 \) and the spectrum is discrete, this semigroup is trace class for all \( t > 0 \), and the heat trace is analytic:
+where \( P_n \) is the projection onto the eigenspace for \( \mu_n \). Since \( L_{\sym}^2 \ge 0 \) and compact, \( e^{-tL_{\sym}^2} \in \TC \) for all \( t > 0 \), and the trace is:
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2} \cdot \operatorname{mult}(\mu_n).
+\Tr(e^{-t L_{\sym}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2} \cdot \operatorname{mult}(\mu_n).
 \]
 
-The heat kernel admits rapid decay and an asymptotic expansion as \( t \to 0^+ \), forming the analytic backbone of the spectral trace formulations used in Chapters~\ref{sec:heat-kernel-asymptotics} and~\ref{sec:determinant-identity}.
+The kernel \( K_t(x,y) \) of this operator admits off-diagonal exponential decay and a singular short-time expansion. These structures form the analytic base for the spectral trace identities of \secref{sec:heat_kernel_asymptotics} and \secref{sec:determinant_identity}.
 
 \subsection*{Scope of Results}
 
-The lemmas referenced in this appendix validate decay bounds, kernel smoothness, convergence of trace-class expansions, and Laplace inversion formulas used to establish the following global analytic results:
+The lemmas proven here establish:
 
 \begin{itemize}
-  \item \textbf{Short-Time Heat Trace Asymptotics (cf.~Proposition~\ref{prop:short_time_heat_expansion}):}
+  \item Exponential decay of the heat kernel \( K_t(x,y) \in \Schwartz(\R^2) \);
+  \item Positivity and trace-class convergence of \( e^{-t L_{\sym}^2} \);
+  \item Laplace–Mellin representation of the spectral zeta function and zeta determinant;
+  \item Parametrix expansions yielding singular trace asymptotics:
   \[
-  \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
-  \quad \text{as } t \to 0^+.
+  \Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \cdots,
   \]
+  as in \propref{prop:short_time_heat_expansion};
 
-  \item \textbf{Spectral Counting Asymptotics (cf.~Proposition~\ref{prop:spectral-counting-weyl}):}
+  \item Eigenvalue counting law:
   \[
-  A(\Lambda) := \#\left\{ \mu_n^2 \le \Lambda \right\} \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda
-  \quad \text{as } \Lambda \to \infty,
+  N(\lambda) := \#\{ \mu_n^2 \le \lambda \}
+  \sim C \sqrt{\lambda} \log \lambda, \quad \lambda \to \infty,
   \]
-  where \( A(\Lambda) \) is the cumulative counting function for the squared spectrum of \( L_{\mathrm{sym}} \).
+  as proven in \propref{prop:spectral_counting_weyl}.
 \end{itemize}
 
-These asymptotics establish the analytic closure of both the zeta-regularized determinant expansion (Chapter~\ref{sec:determinant-identity}) and the eigenvalue growth law (Chapter~\ref{sec:tauberian-growth}). The kernel positivity and rapid decay properties further support the spectral rigidity and positivity arguments in Chapter~\ref{sec:spectral-rigidity}.
+These results justify the well-posedness of the zeta-regularized determinant and validate the Tauberian analysis in \cref{sec:tauberian_growth}. They also support the rigidity implications derived in \cref{sec:spectral_rigidity}.
 
 \subsection*{Conclusion}
 
-This appendix confirms the analytic backbone of the canonical spectral model for the completed zeta function \( \Xi(s) \), validating that the heat semigroup \( e^{-t L_{\mathrm{sym}}^2} \) governs both the determinant identity and the Tauberian growth needed to resolve the Riemann Hypothesis within a trace-class operator framework.
+This appendix secures the analytic infrastructure underlying the spectral model for the completed zeta function \( \XiR(s) \). It confirms that the heat semigroup \( e^{-t L_{\sym}^2} \) governs both the trace expansion and the determinant growth required to link \( \Spec(L_{\sym}) \) to the zero distribution of \( \zetaR(s) \). The logarithmic singularity in the heat trace—see \remref{rem:log_singularity_necessary}—determines the growth law and necessitates zeta-regularization of the determinant.

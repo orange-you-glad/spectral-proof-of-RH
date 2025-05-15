@@ -1,31 +1,31 @@
-\begin{proof}
-By assumption, \( L \in \mathcal{S}_1(H_{\Psi_\alpha}) \) is compact and self-adjoint, and satisfies the normalized determinant identity
+\begin{proof}[Proof of \lemref{lem:canonical_closure}]
+By assumption, \( L \in \TC(\HPsi) \cap \KC(\HPsi) \) is compact, self-adjoint, and satisfies the normalized spectral determinant identity:
 \[
-\det\nolimits_\zeta(I - \lambda L) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
-\]
-This uniquely determines the eigenvalue multiset of \( L \) (with multiplicities) by trace-class determinant theory (see~\cite[Theorem~4.2]{Simon2005TraceIdeals}).
-
-\smallskip
-
-\textit{(1)} Follows from equality of entire determinant functions: the zeros of the determinant match precisely those of the canonical model, hence the spectral data of \( L \) and \( L_{\mathrm{sym}} \) agree.
-
-\smallskip
-
-\textit{(2)} As both operators are compact and self-adjoint on the same Hilbert space with identical spectrum, the spectral theorem (cf.~\cite[Theorem~VI.16]{ReedSimon1980I}) ensures there exists a unitary operator \( U \) with
-\[
-L = U L_{\mathrm{sym}} U^{-1}.
+\det\nolimits_\zeta(I - \lambda L) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}, \quad \forall \lambda \in \C.
 \]
 
-\smallskip
+\paragraph{(1) Spectral Equality from Determinant Identity.}
+By trace-class determinant theory (see~\cite[Theorem~4.2]{Simon2005TraceIdeals}), the zeta-regularized determinant encodes the nonzero spectrum of \( L \) as a multiset (including algebraic multiplicities). Since the determinant of \( L \) matches that of \( L_{\sym} \), we conclude:
+\[
+\Spec(L) \setminus \{0\} = \Spec(L_{\sym}) \setminus \{0\}.
+\]
 
-\textit{(3)} Therefore, \( L_{\mathrm{sym}} \) is unique up to unitary equivalence within the class of self-adjoint, trace-class realizations of the completed zeta function's determinant identity.
+\paragraph{(2) Unitary Equivalence for Self-Adjoint Case.}
+Both \( L \) and \( L_{\sym} \) are compact, self-adjoint operators on the same separable Hilbert space \( \HPsi \), with matching spectra and multiplicities. By the spectral theorem for compact self-adjoint operators (see~\cite[Theorem~VI.16]{ReedSimon1980I}), there exists a unitary operator \( U \colon \HPsi \to \HPsi \) such that
+\[
+L = U L_{\sym} U^{-1}.
+\]
 
-\smallskip
+\paragraph{(3) Uniqueness of the Canonical Realization.}
+The above shows that \( L_{\sym} \) is unique up to unitary equivalence within the class of compact, self-adjoint, trace-class operators realizing the spectral determinant identity for \( \XiR(s) \).
 
-\textit{(4)} If a non-self-adjoint \( \tilde{L} \in \mathcal{S}_1 \) also satisfies the determinant identity, then its eigenvalue multiset must still match. However, the lack of normality can lead to inequivalent Jordan forms or non-diagonalizability. Thus, such an operator must be similar (but not unitarily equivalent) to \( L_{\mathrm{sym}} \), and only under additional structural constraints can the determinant equality be preserved.
+\paragraph{(4) Similarity Class for Non-Self-Adjoint Realizations.}
+Suppose \( \widetilde{L} \in \TC(\HPsi) \) is not self-adjoint but still satisfies the same determinant identity. Then it must have the same nonzero spectral multiset as \( L_{\sym} \), including multiplicities. While lack of normality may prevent diagonalizability or self-adjointness, spectral similarity implies the existence of an invertible operator \( S \in \mathcal{B}(\HPsi) \) such that
+\[
+\widetilde{L} = S L_{\sym} S^{-1}.
+\]
+This shows that \( \widetilde{L} \) lies in the similarity class of \( L_{\sym} \), even if not in its unitary equivalence class.
 
-\smallskip
-
-Hence, the spectral determinant identity canonically determines \( L_{\mathrm{sym}} \) within the space of compact self-adjoint trace-class operators.
+\paragraph{Conclusion.}
+The spectral determinant identity associated with \( \XiR(s) \), together with trace-class compactness and self-adjointness, canonically determines the operator \( L_{\sym} \) up to unitary equivalence. Any non-self-adjoint realization is algebraically similar to this canonical model, thus completing the closure of the spectral program.
 \end{proof}
-%  

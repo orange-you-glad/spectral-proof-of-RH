@@ -1,14 +1,14 @@
 \section{Classical Properties of the Riemann Zeta Function}
-\label{app:zeta-function-background}
+\label{app:zeta_function_background}
 
-This appendix summarizes the classical analytic properties of the Riemann zeta function \( \zeta(s) \) and its completion \( \Xi(s) \), based on foundational results from Titchmarsh~\cite{Titchmarsh1986Zeta} and Edwards~\cite{Edwards1974Zeta}. These properties form the analytic foundation for the determinant identity and spectral constructions developed in Chapters~\ref{sec:determinant_identity}–\ref{sec:logical-closure}.
+This appendix summarizes the classical analytic properties of the Riemann zeta function \( \zeta(s) \) and its completion \( \Xi(s) \), based on foundational results from Titchmarsh~\cite{Titchmarsh1986Zeta} and Edwards~\cite{Edwards1974Zeta}. These properties form the analytic foundation for the determinant identity and spectral constructions developed in Chapters~\ref{sec:determinant_identity}–\ref{sec:logical_closure}.
 
 \subsection*{The Completed Zeta Function \( \Xi(s) \)}
 
 Define:
 \[
 \Xi(s) := \tfrac{1}{2} s(s - 1) \pi^{-s/2} \Gamma\left( \tfrac{s}{2} \right) \zeta(s),
-\qquad \text{where } \zeta(s) := \sum_{n=1}^\infty n^{-s}, \quad \Re(s) > 1.
+\qquad \text{with } \zeta(s) := \sum_{n=1}^\infty n^{-s}, \quad \Re(s) > 1.
 \]
 
 Then \( \Xi(s) \) satisfies:
@@ -18,33 +18,34 @@ Then \( \Xi(s) \) satisfies:
   \item \textbf{Reality Symmetry:} \( \Xi(s) \in \R \) for real \( s \), and \( \Xi(\bar{s}) = \overline{\Xi(s)} \).
 \end{itemize}
 
-These follow from analytic continuation of \( \zeta(s) \), the functional equation, and Stirling’s expansion of \( \Gamma(s/2) \).
+These facts follow from the functional equation of \( \zeta(s) \), analytic continuation, and Stirling’s formula applied to \( \Gamma(s/2) \).
 
 \subsection*{Zeros and the Riemann Hypothesis}
 
-All nontrivial zeros of \( \zeta(s) \) lie in the critical strip \( 0 < \Re(s) < 1 \), and coincide with the zeros of \( \Xi(s) \). The Riemann Hypothesis (RH) asserts:
+All nontrivial zeros of \( \zeta(s) \) lie in the critical strip \( 0 < \Re(s) < 1 \), and coincide with the zeros of \( \Xi(s) \). The Riemann Hypothesis asserts:
 \[
 \Re(\rho) = \tfrac{1}{2}, \qquad \text{for all nontrivial zeros } \rho.
 \]
-Centering via the map \( s = \tfrac{1}{2} + i\lambda \) aligns the critical line with the real axis, facilitating a spectral formulation in terms of a real self-adjoint operator \( L_{\sym} \) (cf. \cref{sec:operator_construction}).
+
+Centering via \( s = \tfrac{1}{2} + i\lambda \) aligns the critical line with the real axis, facilitating spectral realization via a self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \) (see \cref{sec:operator_construction}).
 
 \subsection*{Hadamard Factorization and Exponential Type}
 
-As an entire function of order one and genus one, \( \Xi(s) \) admits the canonical Hadamard product:
+As an entire function of order one and genus one, \( \Xi(s) \) admits the Hadamard product:
 \[
 \Xi(s) = e^{C_0 + C_1 s} \prod_{\rho} \left( 1 - \frac{s}{\rho} \right) e^{s/\rho},
 \]
-with convergence uniform on compact subsets, where the product ranges over nontrivial zeros \( \rho \in \C \), counted with multiplicity.
+with convergence uniform on compact subsets. The product runs over all nontrivial zeros \( \rho \in \C \), counted with multiplicity.
 
-The centered profile satisfies the sharp growth bound:
+The centered profile satisfies:
 \[
 \Xi\left( \tfrac{1}{2} + i\lambda \right) = \mathcal{O}\left( e^{\pi |\lambda| / 2} \right), \qquad |\lambda| \to \infty,
 \]
-due to the gamma factor’s exponential decay and the Mellin representation of \( \zeta(s) \). Thus, \( \lambda \mapsto \Xi(\tfrac{1}{2} + i\lambda) \) is an entire function of exponential type exactly \( \pi \) (see \cref{lem:exact_type_pi}).
+due to the decay of the gamma factor and Mellin representation. Hence, the map \( \lambda \mapsto \Xi(\tfrac{1}{2} + i\lambda) \) is entire of exponential type exactly \( \pi \) (see \cref{lem:exact_type_pi}).
 
 \subsection*{Centered Spectral Profile and Fourier Analysis}
 
-Define the real entire function:
+Define the centered profile:
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad \lambda \in \R.
 \]
@@ -57,16 +58,16 @@ By the Paley–Wiener theorem, \( \phi \in \PW{\pi} \) implies:
 \[
 \FT^{-1}[\phi](x) \sim e^{-\pi |x|}, \qquad x \to \infty.
 \]
-This centered profile governs the convolution kernel \( k(x) := \FT^{-1}[\phi](x) \), which defines the compact operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) via trace-norm convergence. The kernel's decay is exponentially localized, enabling zeta-regularization and spectral determinant constructions.
+This inverse Fourier transform defines the convolution kernel \( k(x) := \FT^{-1}[\phi](x) \), which yields the compact operator \( L_{\sym} \in \TC(\HPsi) \) by trace-norm convergence. The exponential decay of \( k \) enables heat trace asymptotics and determinant regularization.
 
 \subsection*{Conclusion}
 
-The completed Riemann zeta function \( \Xi(s) \) exhibits the precise analytic properties required for spectral realization:
+The completed Riemann zeta function \( \Xi(s) \) satisfies:
 \begin{itemize}
   \item Entirety and functional symmetry;
-  \item Hadamard factorization with genus one;
-  \item Sharp exponential type \( \pi \) for the centered profile \( \lambda \mapsto \Xi(\tfrac{1}{2} + i\lambda) \);
-  \item Paley–Wiener decay of the associated convolution kernel.
+  \item Genus-one Hadamard factorization;
+  \item Sharp exponential type \( \pi \);
+  \item Paley–Wiener decay of the convolution kernel.
 \end{itemize}
 
-These properties justify the realization of \( \Xi \) as the Fredholm determinant of a trace-class, self-adjoint convolution operator \( L_{\sym} \in \TC(\HPsi) \), and enable the spectral reformulation of RH developed in the main text. The map \( \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \) transforms the critical strip into a real-symmetric spectrum in \( \HPsi \).
+These properties justify the spectral determinant identity realized via \( L_{\sym} \in \TC(\HPsi) \), and enable the analytic equivalence \( \RH \iff \Spec(L_{\sym}) \subset \R \) proven in \cref{sec:spectral_implications}. The reparametrization \( \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \) transforms the critical strip into the real spectrum of \( L_{\sym} \).

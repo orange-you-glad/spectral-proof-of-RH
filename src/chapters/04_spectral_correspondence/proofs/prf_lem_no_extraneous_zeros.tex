@@ -1,36 +1,37 @@
-\begin{proof}[Proof of Lemma~\ref{lem:no_extraneous_zeros}]
+\begin{proof}[Proof of \lemref{lem:no_extraneous_zeros}]
 The canonical determinant is given by
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}.
 \]
-As \( \Xi(s) \) is entire of order 1 and genus 1, its Hadamard factorization takes the form:
+Since \( \XiR(s) \) is an entire function of order 1 and genus 1, its Hadamard factorization admits the form
 \[
-\Xi\left(\tfrac{1}{2} + i\lambda\right)
-= \Xi\left(\tfrac{1}{2}\right)
-\prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho} \right)
+\XiR\left(\tfrac{1}{2} + i\lambda\right)
+= \XiR\left(\tfrac{1}{2}\right) \prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho} \right)
 \exp\left( \frac{\lambda}{\mu_\rho} \right),
 \]
-where \( \mu_\rho := 1/i(\rho - \tfrac{1}{2}) \), and the product is taken over all nontrivial zeros \( \rho \) of \( \zeta(s) \).
+where \( \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \), and the product runs over all nontrivial zeros \( \rho \in \C \) of the Riemann zeta function \( \zetaR(s) \).
 
-The logarithmic derivative of \( f \) is:
+\medskip
+\noindent
+The logarithmic derivative of \( f \) is then
 \[
-\frac{f'(\lambda)}{f(\lambda)}
-= \sum_\rho \left( \frac{1}{\lambda - \mu_\rho} + \frac{1}{\mu_\rho} \right).
+\frac{f'(\lambda)}{f(\lambda)} = \sum_\rho \left( \frac{1}{\lambda - \mu_\rho} + \frac{1}{\mu_\rho} \right),
 \]
-This expression reveals that all poles of \( f'/f \) lie precisely at \( \lambda = \mu_\rho \), with multiplicity matching the order of vanishing of \( \zeta \) at \( \rho \).
+from which it is evident that all poles of \( f'/f \) lie precisely at \( \lambda = \mu_\rho \), with multiplicity equal to the order of vanishing of \( \zetaR(s) \) at \( \rho \).
 
-Now, if the Hadamard exponential prefactor
+\medskip
+\noindent
+The exponential factor
 \[
 \exp\left( \sum_\rho \frac{\lambda}{\mu_\rho} \right)
 \]
-were to introduce new zeros, then \( f(\lambda) \) would vanish at points \( \lambda \notin \{ \mu_\rho \} \), contradicting the spectral correspondence established in Chapter~\ref{sec:spectral_correspondence} and violating the trace-zero normalization \( f(0) = 1 \).
+is entire and nonvanishing, and introduces no additional zeros. If it did, the determinant \( f(\lambda) \) would vanish outside the set \( \{ \mu_\rho \} \), contradicting the spectral realization established in \secref{sec:spectral_correspondence} and violating the trace-zero normalization \( f(0) = 1 \).
 
-Since
+\medskip
+\noindent
+Indeed, since the canonical operator \( L_{\sym} \in \TC(\HPsi) \) is trace class with
 \[
-\operatorname{Tr}(L_{\mathrm{sym}}) = \sum_n \mu_n = 0,
+\Tr(L_{\sym}) = \sum_{\mu \in \Spec(L_{\sym})} \mu = 0,
 \]
-the exponential term introduces no poles or zeros: it is entire and non-vanishing. Therefore, all zeros of \( f \) come from the product over \( \mu_\rho \).
-
+the genus-one exponential term introduces no singularities and preserves the entire character of the determinant. Thus, all zeros of \( f(\lambda) \) arise solely from the Hadamard product over spectral values \( \mu_\rho \), and the spectrum \( \Spec(L_{\sym}) \setminus \{0\} \) coincides with the set of such values.
 \end{proof}
-% 

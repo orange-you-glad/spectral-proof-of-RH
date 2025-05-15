@@ -1,34 +1,38 @@
 \begin{definition}[Tauberian Theorem for Spectral Counting]
 \label{def:tauberian_theorem}
-Let \( L \in \mathcal{C}_1(H) \) be a compact, self-adjoint operator on a separable Hilbert space \( H \), with discrete nonzero spectrum \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \), counted with multiplicity. Define the squared spectral counting function
+
+Let \( L \in \TC(H) \) be a compact, self-adjoint operator on a separable Hilbert space \( H \), with discrete nonzero spectrum \( \{ \mu_n \} \subset \R \setminus \{0\} \), counted with multiplicity. Define the squared spectral counting function
 \[
-A(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\}, \qquad \Lambda > 0.
+A(\Lambda) := \#\left\{ n \in \N : \mu_n^2 \le \Lambda \right\}, \qquad \Lambda > 0.
 \]
 
-Suppose the spectral heat trace admits the short-time asymptotic expansion:
+Suppose the spectral heat trace satisfies the short-time asymptotic expansion:
 \[
-\operatorname{Tr}(e^{-t L^2}) = \frac{C}{t^\alpha} + o(t^{-\alpha}), \qquad \text{as } t \to 0^+,
+\Tr(e^{-t L^2}) = \frac{C}{t^\alpha} + o(t^{-\alpha}), \qquad \text{as } t \to 0^+,
 \]
-for some constant \( C > 0 \) and exponent \( \alpha > 0 \). Then the spectral counting function satisfies the asymptotic law:
+for some constant \( C > 0 \) and exponent \( \alpha > 0 \). Then the spectral counting function obeys:
 \[
 A(\Lambda) \sim \frac{C}{\Gamma(\alpha + 1)} \, \Lambda^\alpha, \qquad \text{as } \Lambda \to \infty.
 \]
 
-\medskip
-\noindent
-This follows by applying the classical Karamata Tauberian theorem to the Laplace–Stieltjes representation:
+This follows from the classical Karamata Tauberian theorem applied to the Laplace–Stieltjes representation:
 \[
-\operatorname{Tr}(e^{-t L^2}) = \int_0^\infty e^{-t \lambda} \, dA(\lambda).
+\Tr(e^{-t L^2}) = \int_0^\infty e^{-t \lambda} \, dA(\lambda).
 \]
 
 \medskip
-\noindent
-If instead the heat trace exhibits log-modulated singular behavior:
+
+If instead the heat trace exhibits logarithmic modulation:
 \[
-\operatorname{Tr}(e^{-t L^2}) \sim \frac{C}{t^\alpha} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+,
+\Tr(e^{-t L^2}) \sim \frac{C}{t^\alpha} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+,
 \]
-then Korevaar’s log-corrected Tauberian theorem~\cite[Ch.~III, §5]{Korevaar2004Tauberian} yields the enhanced spectral counting asymptotic:
+then Korevaar’s log-corrected Tauberian theorem~\cite[Ch.~III, §5]{Korevaar2004Tauberian} yields the refined asymptotic:
 \[
 A(\Lambda) \sim \frac{C}{\Gamma(\alpha + 1)} \, \Lambda^\alpha \log \Lambda, \qquad \text{as } \Lambda \to \infty.
 \]
+
+\medskip
+
+\noindent
+\emph{Remark.} See Appendix~\ref{app:notation_summary} for definitions of the regularly varying classes \( \mathcal{R}_\alpha \) and \( \mathcal{R}_\alpha^{\log} \). Korevaar’s framework guarantees that the leading growth law is uniquely determined by the trace singularity, ensuring spectral asymptotic rigidity.
 \end{definition}

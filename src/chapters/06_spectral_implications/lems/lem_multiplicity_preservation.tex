@@ -1,12 +1,28 @@
 \begin{lemma}[Spectral Multiplicity Preservation]
 \label{lem:multiplicity_preservation}
-Let \( \rho \in \mathbb{C} \) be a nontrivial zero of the Riemann zeta function \( \zeta(s) \), and define the associated canonical eigenvalue
+
+Let \( \rho \in \C \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \), and define its canonical spectral image
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
 \]
-Then \( \mu_\rho \in \Spec(L_{\mathrm{sym}}) \) appears with algebraic multiplicity equal to the order of vanishing of \( \zeta(s) \) at \( \rho \). This multiplicity correspondence follows from the Hadamard factorization of \( \Xi(s) \), whose zeros govern the poles of the logarithmic derivative
+Then \( \mu_\rho \in \Spec(L_{\sym}) \) appears with algebraic multiplicity equal to the order of vanishing of \( \zetaR(s) \) at \( \rho \).
+
+\medskip
+
+\noindent
+This multiplicity correspondence follows from the Hadamard factorization of the completed zeta function \( \XiR(s) \), which governs the zero structure of the normalized Carleman–\(\zeta\)-regularized Fredholm determinant of \( L_{\sym} \in \TC(\HPsi) \cap \KC(\HPsi) \):
 \[
-\frac{d}{d\lambda} \log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}),
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}.
 \]
-matching the spectral multiplicities of the compact, self-adjoint operator \( L_{\mathrm{sym}} \).
+
+Taking the logarithmic derivative, we obtain a meromorphic function whose poles correspond to the spectral values:
+\[
+\frac{d}{d\lambda} \log \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = \sum_{\rho} \frac{m_\rho}{\lambda - \mu_\rho},
+\]
+where \( m_\rho \) is the multiplicity of the zero \( \rho \) of \( \zetaR \), and \( \mu_\rho \) is its spectral image. This expansion reflects the classical Hadamard product representation of \( \XiR(s) \), and matches the spectral resolvent trace identity for trace-class self-adjoint operators.
+
+\medskip
+
+\noindent
+Since \( L_{\sym} \) is compact and self-adjoint, its spectrum consists of isolated real eigenvalues with finite algebraic multiplicity. The residues of the logarithmic derivative coincide with these multiplicities. Therefore, the multiplicity of each spectral point \( \mu_\rho \) matches exactly the order of vanishing of \( \zetaR(s) \) at \( \rho \), as claimed.
 \end{lemma}

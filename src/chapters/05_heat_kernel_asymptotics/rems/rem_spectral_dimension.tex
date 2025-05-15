@@ -2,13 +2,13 @@
 \label{rem:spectral_dimension}
 The two-sided asymptotic estimate
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \asymp t^{-1/2} \qquad \text{as } t \to 0^+
+\Tr(e^{-t L_{\sym}^2}) \asymp t^{-1/2} \qquad \text{as } t \to 0^+
 \]
 admits a natural spectral interpretation: it reflects an effective spectral dimension \( d = 1 \) in the sense of a log-enhanced Weyl law.
 
 \medskip
 \noindent
-Specifically, if the eigenvalue counting function for the squared spectrum of \( L_{\mathrm{sym}} \),
+Specifically, if the eigenvalue counting function for the squared spectrum of \( L_{\sym} \),
 \[
 N(\lambda) := \#\{ n : \mu_n^2 \le \lambda \},
 \]
@@ -16,17 +16,21 @@ satisfies the asymptotic growth law
 \[
 N(\lambda) \sim C \lambda^{1/2} \log \lambda, \qquad \text{as } \lambda \to \infty,
 \]
-then a Tauberian inversion (see Chapter~\ref{sec:tauberian-growth}) implies that
+then a Tauberian inversion (see \secref{sec:tauberian_growth}) implies that
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
+\Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
 \]
-as confirmed in Proposition~\ref{prop:short_time_heat_expansion}.
+as confirmed in \propref{prop:short_time_heat_expansion}.
 
 \medskip
 \noindent
-This aligns \( L_{\mathrm{sym}} \) with pseudodifferential-type operators exhibiting one-dimensional spectral behavior, modulated by logarithmic corrections. It also supports the analytic structure of the zeta-regularized spectral determinant:
+Although \( L_{\sym} \) is not a local differential operator, the spectral decay of its kernel is governed by the Paley--Wiener class of entire functions of exponential type \( \pi \), which ensures that convolution by its Fourier inverse defines a smoothing operator with exponential localization. Consequently, the heat kernel \( K_t(x,y) \) inherits Gaussian decay in \( |x - y| \) and is real-analytic in both variables for all \( t > 0 \). This regularity justifies the application of classical short-time asymptotic machinery (e.g., Seeley parametrix or Gilkey–Greiner expansions), modulo logarithmic corrections.
+
+\medskip
+\noindent
+This aligns \( L_{\sym} \) with pseudodifferential-type operators exhibiting one-dimensional spectral behavior, modulated by logarithmic corrections. It also supports the analytic structure of the zeta-regularized spectral determinant:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \exp\left( - \int_0^\infty \frac{\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) - P(t)}{t} \, e^{-\lambda^2 t} \, dt \right),
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \exp\left( - \int_0^\infty \frac{\Tr(e^{-t L_{\sym}^2}) - P(t)}{t} \, e^{-\lambda^2 t} \, dt \right),
 \]
-where \( P(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) is the parametrix subtraction term. The singularity of the trace near \( t = 0 \) determines the growth and holomorphic domain of the spectral determinant via Laplace–Mellin regularization.
+where \( P(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) is the parametrix subtraction term. The singularity of the trace near \( t = 0 \) determines the growth and holomorphic domain of the spectral determinant via Laplace--Mellin regularization.
 \end{remark}

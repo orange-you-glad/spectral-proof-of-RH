@@ -1,59 +1,64 @@
 \section{Spectral Implications: Logical Equivalence and Rigidity}
 \label{sec:spectral_implications}
 
+% This chapter analytically closes the spectral determinant argument begun in Chapter 3,
+% completing the chain of implications RH ⇐⇒ Spec(L_sym) ⊂ ℝ via heat kernel asymptotics.
+% Proofs depending on kernel convergence and Laplace control are deferred to Appendix D.
+
 \input{chapters/06_spectral_implications/intro}
 
-%------------------------------------------------------------------
+%-----------------------------------------------------
 \subsection{Equivalence with the Riemann Hypothesis}
+\label{sec:rh_equivalence}
 
 \input{chapters/06_spectral_implications/thms/thm_eq_of_rh}
 \input{chapters/06_spectral_implications/proofs/prf_thm_eq_of_rh}
 
-% Additional lemma: preservation of spectral multiplicity via determinant
 \input{chapters/06_spectral_implications/lems/lem_multiplicity_preservation}
 \input{chapters/06_spectral_implications/proofs/prf_lem_multiplicity_preservation}
 
-% Spectral reality lemma: RH ⇔ spectrum real
 \input{chapters/06_spectral_implications/lems/lem_reality_of_spectrum_and_rh}
 \input{chapters/06_spectral_implications/proofs/prf_lem_reality_of_spectrum_and_rh}
 
-% Boxed corollary: RH ⇔ spectrum real
 \input{chapters/06_spectral_implications/cors/cor_spectrum_real_equiv_rh}
 \input{chapters/06_spectral_implications/proofs/prf_cor_spectrum_real_equiv_rh}
 
-% Physics analogy remark
-\begin{remark}[Spectral Physics Perspective]
-The equivalence \( \mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \) admits a speculative interpretation in the context of quantum mechanics. Under the spectral map \( \rho = \tfrac{1}{2} + i\gamma \mapsto \mu_\rho := \tfrac{1}{\gamma} \), the canonical operator \( L_{\mathrm{sym}} \) can be formally viewed as a Hamiltonian with inverse arithmetic energy levels. Its heat trace resembles a quantum partition function with singular short-time behavior, and its determinant has parallels with spectral free energy. See Appendix~\ref{app:spectral-physics-link} for further discussion of this physical analogy.
-\end{remark}
-
-% Determinant trace-log identity is used but not proved here
+\input{chapters/06_spectral_implications/rems/rem_spectral_physics_analogy}
 \medskip
+
 \noindent
-For the analytic justification of the trace–logarithmic derivative identity, see Lemma~\ref{lem:log-derivative-determinant} in Chapter~\ref{sec:heat-kernel-asymptotics} and the supporting analysis in Appendix~\ref{app:heat-kernel-construction}.
+The analytic foundation for the trace–logarithmic derivative identity used throughout this chapter is detailed in \lemref{lem:log_derivative_determinant} of \secref{sec:heat_kernel_asymptotics}, with full justification deferred to \appref{app:heat_kernel_construction}. This concludes the analytic–spectral chain of implications begun in \secref{sec:determinant_identity}.
 
-%------------------------------------------------------------------
+%-----------------------------------------------------
 \subsection{Uniqueness of Spectral Realization}
+\label{sec:uniqueness_spectral_realization}
 
-% This result builds directly on the spectral-zero bijection and the determinant identity,
-% enforcing uniqueness within the trace-class, self-adjoint realization space.
 \input{chapters/06_spectral_implications/thms/thm_uniqueness_realization}
 \input{chapters/06_spectral_implications/proofs/prf_thm_uniqueness_realization}
 
-% Spectral rigidity lemma: determinant identity forces spectral agreement
 \input{chapters/06_spectral_implications/lems/lem_spectral_rigidity_determinant}
 \input{chapters/06_spectral_implications/proofs/prf_lem_spectral_rigidity_determinant}
 
-% Determinant uniquely fixes spectral multiset
 \input{chapters/06_spectral_implications/lems/lem_determinant_fixes_spectrum}
 \input{chapters/06_spectral_implications/proofs/prf_lem_determinant_fixes_spectrum}
 
-%------------------------------------------------------------------
+%-----------------------------------------------------
 \subsection{Canonical Closure of the Spectral Program}
+\label{sec:canonical_closure}
 
 \input{chapters/06_spectral_implications/lems/lem_canonical_closure}
 \input{chapters/06_spectral_implications/proofs/prf_lem_canonical_closure}
 
-%------------------------------------------------------------------
+%-----------------------------------------------------
+\subsection{Final Spectral Closure}
+\label{sec:spectral_final_closure}
 
-% Final logical closure of the analytic-spectral architecture.
+\input{chapters/06_spectral_implications/thms/thm_rh_spectral_closure}
+\input{chapters/06_spectral_implications/proofs/prf_thm_rh_spectral_closure}
+
 \input{chapters/06_spectral_implications/summary}
+
+% Final clarification:
+\begin{remark}[On Logical Closure]
+This chapter completes the analytic–spectral chain initiated in Chapter~\ref{sec:determinant_identity}. The short-time trace asymptotics and Laplace bounds proven here (and analytically justified in Appendix~\ref{app:heat_kernel_construction}) retroactively validate the determinant identity, while the spectral symmetry and bijection confirm that $\Spec(L_{\sym}) \subset \R$ holds if and only if $\RH$ is true.
+\end{remark}

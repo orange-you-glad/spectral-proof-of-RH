@@ -1,8 +1,8 @@
 \begin{proposition}[Spectral Counting Function]
 \label{prop:spectral_counting_weyl}
-Let \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), ordered by increasing absolute value and counted with multiplicity. Define the spectral counting function
+Let \( \{ \mu_n \} \subset \R \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( L_{\sym} \in \TC(\HPsi) \), ordered by increasing absolute value and counted with multiplicity. Define the spectral counting function
 \[
-N(\lambda) := \#\{ n \in \mathbb{N} : \mu_n^2 \leq \lambda \}, \qquad \lambda > 0.
+N(\lambda) := \#\{ n \in \N : \mu_n^2 \leq \lambda \}, \qquad \lambda > 0.
 \]
 Then, as \( \lambda \to \infty \), the function \( N(\lambda) \) satisfies the asymptotic growth law
 \[
@@ -14,7 +14,7 @@ for some constant \( C > 0 \) determined by the leading singularity in the short
 \noindent
 This result follows from the singular expansion
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \cdots \quad \text{as } t \to 0^+,
+\Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \cdots \quad \text{as } t \to 0^+,
 \]
-via a Tauberian inversion argument. In particular, the spectral counting law exhibits sub-Weyl growth with a logarithmic enhancement, reflecting the non-classical scaling of the canonical convolution operator \( L_{\mathrm{sym}} \) on the weighted space \( H_{\Psi_\alpha} \).
+via a Tauberian inversion argument. In particular, the spectral counting law exhibits sub-Weyl growth with a logarithmic enhancement, reflecting the non-classical scaling of the canonical convolution operator \( L_{\sym} \) on the weighted space \( \HPsi \).
 \end{proposition}

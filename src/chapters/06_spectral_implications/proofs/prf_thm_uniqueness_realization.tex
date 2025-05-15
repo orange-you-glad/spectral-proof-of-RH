@@ -1,32 +1,31 @@
-\begin{proof}[Proof of Theorem~\ref{thm:uniqueness_realization}]
-Let \( L \in \mathcal{S}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) be a compact, self-adjoint trace-class operator on the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|}dx) \) for fixed \( \alpha > \pi \). Assume:
+\begin{proof}[Proof of \thmref{thm:uniqueness_realization}]
+Let \( L \in \TC(\HPsi) \cap \KC(\HPsi) \) be a compact, self-adjoint, trace-class operator on the weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha|x|}dx) \), with fixed \( \alpha > \pi \). Suppose:
 \[
-\det\nolimits_\zeta(I - \lambda L) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
-= \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}),
-\quad \text{for all } \lambda \in \mathbb{C}.
+\det\nolimits_\zeta(I - \lambda L) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}
+= \det\nolimits_\zeta(I - \lambda L_{\sym}),
+\quad \forall \lambda \in \C.
 \]
 
-\paragraph{Step 1: Spectral Multiplicity from Determinant Identity.}
-By analytic determinant theory for trace-class operators (see~\cite[Thm. 4.2]{Simon2005TraceIdeals}), the Fredholm determinant
+\paragraph{Step 1: Spectral Data from Determinant Identity.}
+By classical trace-class determinant theory (see~\cite[Thm. 4.2]{Simon2005TraceIdeals}), the normalized Carleman–\(\zeta\)-regularized determinant admits the product representation:
 \[
 \det\nolimits_\zeta(I - \lambda L)
 = \prod_{n=1}^\infty (1 - \lambda \mu_n),
 \]
-encodes the nonzero eigenvalues \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \), counted with multiplicity. Since the determinant of \( L \) agrees identically with that of \( L_{\mathrm{sym}} \), and both are entire functions of order one with the same normalization at \( \lambda = 0 \), we conclude:
+where \( \{ \mu_n \} \subset \R \setminus \{0\} \) are the nonzero eigenvalues of \( L \), counted with algebraic multiplicity. Since this determinant agrees identically with that of \( L_{\sym} \), and both are entire functions of order one normalized by \(\det\nolimits_\zeta(I) = 1\), we conclude:
 \[
-\Spec(L) = \Spec(L_{\mathrm{sym}}),
+\Spec(L) = \Spec(L_{\sym}),
 \quad \text{as multisets}.
 \]
 
-\paragraph{Step 2: Application of Spectral Theorem.}
-Both \( L \) and \( L_{\mathrm{sym}} \) are compact and self-adjoint, and they act on the same separable Hilbert space \( H_{\Psi_\alpha} \). By the spectral theorem for compact self-adjoint operators (see~\cite[Thm. VI.16]{ReedSimon1980I}), any two such operators with matching discrete spectra (counted with multiplicities) are unitarily equivalent. Therefore, there exists a unitary operator
+\paragraph{Step 2: Spectral Equivalence Implies Unitary Equivalence.}
+Since \( L \) and \( L_{\sym} \) are both compact, self-adjoint operators on the same separable Hilbert space \( \HPsi \), and since their spectra (with multiplicities) coincide, the spectral theorem implies that \( L \) is unitarily equivalent to \( L_{\sym} \). That is, there exists a unitary operator
 \[
-U \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha}
+U \colon \HPsi \to \HPsi
 \quad \text{such that} \quad
-L = U L_{\mathrm{sym}} U^{-1}.
+L = U L_{\sym} U^{-1}.
 \]
 
 \paragraph{Conclusion.}
-The operator \( L_{\mathrm{sym}} \) is thus unique, up to unitary equivalence, among all compact, self-adjoint, trace-class operators whose zeta-regularized Fredholm determinant realizes the normalized spectral identity associated with \( \Xi(s) \). This completes the proof.
+The canonical operator \( L_{\sym} \) is thus uniquely determined (up to unitary equivalence) among all compact, self-adjoint, trace-class operators realizing the normalized spectral determinant identity for \( \XiR(s) \). The analytic fingerprint of \( \XiR \)—its order-one entire structure, exponential type, and Hadamard factorization—rigidly determines the operator-theoretic data of \( L_{\sym} \), completing the proof.
 \end{proof}
-%  

@@ -1,38 +1,44 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectral_convexity_estimate}]
-Let \( \{ \lambda_n \} \subset \mathbb{R}_{>0} \) denote the nonzero eigenvalues of \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \), ordered non-decreasingly and counted with multiplicity. Define the spectral counting function
+\begin{proof}[Proof of \lemref{lem:spectral_convexity_estimate}]
+Let \( \{ \lambda_n \} \subset \R_{>0} \) denote the nonzero eigenvalues of \( L_{\sym}^2 \in \TC(\HPsi) \), ordered non-decreasingly and counted with multiplicity. Define the spectral counting function
 \[
-N(\lambda) := \#\left\{ n \in \mathbb{N} : \lambda_n \le \lambda \right\}.
+N(\lambda) := \#\left\{ n \in \N : \lambda_n \le \lambda \right\}.
 \]
 
 \paragraph{Step 1: Heat Trace as Laplace–Stieltjes Transform.}
-Since \( L_{\mathrm{sym}}^2 \) is positive and trace class, the spectral representation gives
+Since \( L_{\sym}^2 \) is positive and trace class, its spectral representation yields:
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n=1}^\infty e^{-t \lambda_n}
+\Tr(e^{-t L_{\sym}^2}) = \sum_{n=1}^\infty e^{-t \lambda_n}
 = \int_0^\infty e^{-t\lambda} \, dN(\lambda),
 \]
-where \( dN(\lambda) = \sum_n \delta_{\lambda_n} \) is a locally finite positive measure.
+where \( dN(\lambda) = \sum_n \delta_{\lambda_n} \) is a locally finite measure.
 
-\paragraph{Step 2: Short-Time Envelope from Chapter~\ref{sec:heat_kernel_asymptotics}.}
-From Proposition~\ref{prop:two_sided_heat_trace_bounds}, we have the upper envelope
+\paragraph{Step 2: Short-Time Envelope from \cref{sec:heat_kernel_asymptotics}.}
+By Proposition~\ref{prop:two_sided_heat_trace_bounds}, the heat trace satisfies:
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \leq c_2 \, t^{-1/2}, \qquad \text{as } t \to 0^+.
+\Tr(e^{-t L_{\sym}^2}) \leq c_2 \, t^{-1/2}, \qquad \text{as } t \to 0^+.
 \]
-Hence,
+Hence, the Laplace integral satisfies:
 \[
 \int_0^\infty e^{-t\lambda} \, dN(\lambda) \lesssim t^{-1/2}.
 \]
 
 \paragraph{Step 3: Tauberian Inversion.}
-By the classical Tauberian theorem for Laplace–Stieltjes transforms (see Definition~\ref{def:tauberian_theorem} and Lemma~\ref{lem:explicit_korevaar_tauberian_bound}), we may conclude:
+Applying the classical Tauberian theorem for Laplace–Stieltjes transforms (see \defref{def:tauberian_theorem}), we obtain:
 \[
-\int_0^\infty e^{-t\lambda} \, dN(\lambda) \lesssim t^{-\alpha} \quad \Longrightarrow \quad N(\lambda) \lesssim \lambda^{\alpha} \quad \text{as } \lambda \to \infty.
+\int_0^\infty e^{-t\lambda} \, dN(\lambda) \lesssim t^{-\alpha}
+\quad \Longrightarrow \quad
+N(\lambda) \lesssim \lambda^{\alpha} \quad \text{as } \lambda \to \infty.
 \]
-Here, \( \alpha = 1/2 \), and thus,
+Setting \( \alpha = 1/2 \), we conclude:
 \[
 N(\lambda) \leq C\, \lambda^{1/2}, \qquad \text{for all } \lambda \ge \lambda_0,
 \]
 for some constants \( C > 0 \), \( \lambda_0 > 0 \).
 
 \paragraph{Conclusion.}
-This proves the spectral convexity estimate and confirms that the counting function lies in the regular variation class \( \mathcal{R}_{1/2} \), providing Tauberian admissibility for further log-corrected asymptotic refinement in Chapter~\ref{sec:tauberian_growth}.
+This establishes the convex growth envelope
+\[
+N(\lambda) = O(\lambda^{1/2}),
+\]
+and confirms that \( N \in \mathcal{R}_{1/2} \), justifying Tauberian admissibility for the refined log-modulated asymptotics proven in \cref{sec:tauberian_growth}.
 \end{proof}

@@ -1,24 +1,33 @@
 \section{Numerical Simulations of the Spectral Model}
-\label{app:spectral-numerics}
+\label{app:spectral_numerics}
 
 \noindent\textbf{[Noncritical Appendix]}  
-This appendix is logically inert: no theorem or lemma in the manuscript depends on this material. All numerical results are exploratory, serving only to illustrate rigorously established constructions. No inference relies on these figures or tables.
+This appendix is logically inert: no theorem or lemma in the manuscript depends on this material. All numerical results are exploratory and illustrative. No conclusion relies on these simulations.
 
 \medskip
 
-The visualizations below illustrate how finite-dimensional approximations of the mollified convolution operator \( L_t \) reflect the structure of the nontrivial zeros \( \rho_n = \tfrac{1}{2} + i\gamma_n \) of the Riemann zeta function, via their spectral images \( \mu_n = 1/\gamma_n \). See~\cite{Bornemann2010FredholmDeterminants} for numerical techniques in Fredholm determinant approximation.
+The figures and tables below visualize spectral approximations of the canonical operator \( L_{\sym} \in \TC(\HPsi) \) constructed via mollified convolution in \cref{sec:operator_construction}. They support:
+
+\begin{itemize}
+  \item Trace-class convergence \( L_t \to L_{\sym} \);
+  \item Spectral bijection \( \rho = \tfrac{1}{2} + i\gamma_n \mapsto \mu_n = 1/\gamma_n \), as proven in \cref{sec:spectral_correspondence};
+  \item Determinant identity \( \det\nolimits_\zeta(I - \lambda L_{\sym}) = \Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2}) \), as derived in \cref{sec:determinant_identity}.
+\end{itemize}
+
+Numerical approximations are based on truncated Fourier inversion and quadrature schemes. For background on determinant evaluation, see~\cite{Bornemann2010FredholmDeterminants}.
 
 \subsection*{Overview and Purpose}
 
-Discretized operators \( L_t^{(N)} \) are constructed from truncated Fourier inversion of the mollified profile
+We define the mollified profile
 \[
 \varphi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right),
 \]
-and used to approximate the eigenvalues \( \mu_n^{(N)} \approx \mu_n \) and determinant profile
+and construct discretized convolution operators \( L_t^{(N)} \) to approximate eigenvalues \( \mu_n^{(N)} \approx \mu_n \) and determinant profiles
 \[
 \det(I - \lambda L_t^{(N)}) \approx \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
 \]
-These simulations visually support the convergence \( L_t \to L_{\mathrm{sym}} \) in trace norm, proven analytically in Chapter~\ref{sec:operator-construction}, and the spectral bijection formalized in Chapter~\ref{sec:spectral-correspondence}.
+
+These simulations visualize analytic results from \cref{sec:operator_construction} and \cref{sec:heat_kernel_asymptotics}.
 
 \subsection*{Eigenvalue Scaling and Determinant Approximation}
 
@@ -77,14 +86,14 @@ These simulations visually support the convergence \( L_t \to L_{\mathrm{sym}} \
 
 \begin{itemize}
   \item Bandlimit: \( \Lambda = 30 \), step size \( \delta = 0.05 \), grid size \( N = 512 \).
-  \item Mollifier scale: \( t = 0.01 \), kernel symmetrized and trace-normalized.
-  \item Empirical error: \( |\mu_n^{(N)} - 1/\gamma_n| = O(t^{1/2} + N^{-1}) \) (no formal bound).
+  \item Mollifier scale: \( t = 0.01 \); kernel is symmetrized and trace-normalized.
+  \item Observed error: \( |\mu_n^{(N)} - 1/\gamma_n| = O(t^{1/2} + N^{-1}) \); no formal error bounds are claimed.
 \end{itemize}
 
 \subsection*{Caveats and Interpretation}
 
 \begin{itemize}
-  \item Operator-norm convergence is visible; trace-norm convergence is analytic.
-  \item Figures are illustrative only—no conclusions rely on this appendix.
-  \item Intended to visualize convergence established rigorously in Chapters~\ref{sec:operator-construction} and~\ref{sec:heat-kernel-asymptotics}.
+  \item Operator-norm convergence is visualized; trace-norm convergence is proven analytically.
+  \item Figures serve as illustration only—no theorem or proof depends on this data.
+  \item Intended to reinforce the analytic constructions in \cref{sec:operator_construction} and \cref{sec:heat_kernel_asymptotics}.
 \end{itemize}

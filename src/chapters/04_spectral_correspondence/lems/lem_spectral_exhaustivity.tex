@@ -1,21 +1,18 @@
-\begin{lemma}[Spectral Exhaustivity of \( L_{\mathrm{sym}} \)]
+\begin{lemma}[Spectral Exhaustivity of \( L_{\sym} \)]
 \label{lem:spectral_exhaustivity}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator, and suppose the regularized determinant identity holds:
+Let \( L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint operator, and suppose the regularized Fredholm determinant identity holds:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
-\qquad \forall \lambda \in \mathbb{C}.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)} \qquad \forall \lambda \in \C.
 \]
 
-Then for every nonzero eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), there exists a unique nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \) of \( \zeta(s) \) such that
+Then for every nonzero eigenvalue \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \), there exists a unique nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \) of the Riemann zeta function \( \zetaR(s) \) such that
 \[
 \mu = \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma}.
 \]
 
-Moreover, the algebraic multiplicity of the eigenvalue \( \mu \) coincides with the order of vanishing of \( \zeta(s) \) at \( \rho \).
+Moreover, the algebraic multiplicity of the eigenvalue \( \mu \) coincides with the order of vanishing of \( \zetaR(s) \) at \( \rho \).
 
 \medskip
 \noindent
-Hence, the canonical spectral map \( \rho \mapsto \mu_\rho \) from nontrivial zeta zeros to \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) is surjective and multiplicity-preserving.
+Hence, the canonical spectral map \( \rho \mapsto \mu_\rho \) from the nontrivial zeros of \( \zetaR(s) \) to the nonzero spectrum \( \Spec(L_{\sym}) \setminus \{0\} \) is surjective and multiplicity-preserving.
 \end{lemma}
-% 

@@ -1,29 +1,29 @@
-\begin{proof}[Proof of Lemma~\ref{lem:determinant_fixes_spectrum}]
-Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L) \) and suppose
+\begin{proof}[Proof of \lemref{lem:determinant_fixes_spectrum}]
+Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L) \), and suppose
 \[
-f(\lambda) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
-= \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}),
-\quad \forall \lambda \in \mathbb{C},
+f(\lambda) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
+= \det\nolimits_\zeta(I - \lambda L_{\sym}),
+\quad \forall \lambda \in \C,
 \]
-with \( L \in \mathcal{S}_1(H_{\Psi_\alpha}) \), compact and self-adjoint, and \( \operatorname{Tr}(L) = 0 \).
+where \( L \in \TC(\HPsi) \cap \KC(\HPsi) \) is compact, self-adjoint, trace-class, and satisfies \( \Tr(L) = 0 \).
 
-\paragraph{Step 1: Entire Function Identity.}
-Both \( f(\lambda) \) and \( \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \) are entire functions of order one and exponential type \( \pi \), normalized so that \( f(0) = 1 \), and with logarithmic derivatives corresponding to trace expansions:
+\paragraph{Step 1: Entire Function Identity and Trace Normalization.}
+Both determinant functions are entire of order one and exponential type \( \pi \), and normalized so that \( f(0) = 1 \). The trace-zero condition removes any exponential prefactor ambiguity in their Hadamard factorization—i.e., no term of the form \( e^{a\lambda} \) appears.
+
+\paragraph{Step 2: Logarithmic Derivative and Spectral Poles.}
+The logarithmic derivative of the determinant is governed by the resolvent trace formula:
 \[
 \frac{d}{d\lambda} \log f(\lambda)
-= \operatorname{Tr}[(I - \lambda L)^{-1} L].
+= \Tr\left[(I - \lambda L)^{-1} L\right],
 \]
+which is meromorphic with simple poles at \( \lambda = 1/\mu \) for each nonzero eigenvalue \( \mu \in \Spec(L) \), with residue equal to the algebraic multiplicity of \( \mu \).
 
-\paragraph{Step 2: Canonical Zero Sets.}
-Since the two determinant functions coincide, their zero sets (with multiplicities) agree. That is, the multiset of poles of their logarithmic derivatives is identical:
+Since the determinant agrees with that of \( L_{\sym} \), these poles match those of the canonical model, and thus:
 \[
-\Spec(L) \setminus \{0\} = \Spec(L_{\mathrm{sym}}) \setminus \{0\}.
+\Spec(L) \setminus \{0\} = \Spec(L_{\sym}) \setminus \{0\}
+\quad \text{as multisets}.
 \]
-
-\paragraph{Step 3: Trace Normalization.}
-The trace-zero condition ensures that any exponential ambiguity in the Hadamard factorization of the determinant is eliminated, i.e., there is no residual \( e^{a\lambda} \) term. This ensures complete spectral rigidity of \( L \) via its determinant.
 
 \paragraph{Conclusion.}
-The nonzero spectrum of \( L \) is uniquely determined by its determinant, and hence matches that of \( L_{\mathrm{sym}} \) with multiplicities. This completes the proof.
+The spectral data of \( L \), away from zero, is completely encoded by the determinant under the trace normalization condition. Therefore, \( L \) and \( L_{\sym} \) have identical nonzero spectra, completing the proof.
 \end{proof}
-% 

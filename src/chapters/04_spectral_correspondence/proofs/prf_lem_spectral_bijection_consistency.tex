@@ -1,25 +1,24 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectral_bijection_consistency}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zeta(s) \), and define
+\begin{proof}[Proof of \lemref{lem:spectral_bijection_consistency}]
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \), and define
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
 \]
 
 \paragraph{Bijection Properties.}
-The following properties are established in earlier results:
+The bijection follows by combining the results of the preceding lemmas:
 
 \begin{itemize}
-  \item By Lemma~\ref{lem:zero_to_eigenvalue_injection}, each nontrivial zero \( \rho \) maps to a nonzero eigenvalue \( \mu_\rho \in \Spec(L_{\mathrm{sym}}) \), and this map is injective with multiplicity preserved.
+  \item By \lemref{lem:zero_to_eigenvalue_injection}, each nontrivial zero \( \rho \) yields a nonzero eigenvalue \( \mu_\rho \in \Spec(L_{\sym}) \), and the map \( \rho \mapsto \mu_\rho \) is injective with multiplicities preserved.
 
-  \item Lemma~\ref{lem:spectral_exhaustivity} shows that every nonzero eigenvalue \( \mu \in \Spec(L_{\mathrm{sym}}) \setminus \{0\} \) arises from such a \( \rho \), establishing surjectivity of the map.
+  \item \lemref{lem:spectral_exhaustivity} establishes that every nonzero eigenvalue \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) arises from such a \( \rho \), thereby proving surjectivity of the map.
 
-  \item Lemma~\ref{lem:spectral_multiplicity_matching} confirms that the algebraic multiplicity of each eigenvalue \( \mu_\rho \) equals the order of vanishing of \( \zeta(s) \) at \( \rho \).
+  \item \lemref{lem:spectral_multiplicity_matching} confirms that the algebraic multiplicity of each eigenvalue \( \mu_\rho \) equals the order of vanishing of \( \zetaR(s) \) at \( \rho \).
 \end{itemize}
 
 \paragraph{Conclusion.}
 Therefore, the map
 \[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+\rho \longmapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
 \]
-is a bijection of multisets between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( L_{\mathrm{sym}} \), preserving algebraic multiplicities. This completes the canonical spectral correspondence enforced by the determinant identity.
+defines a bijection of multisets between the nontrivial zeros of \( \zetaR(s) \) and the nonzero spectrum of the canonical operator \( L_{\sym} \in \TC(\HPsi) \), with multiplicities preserved. This completes the spectral correspondence implied analytically by the determinant identity.
 \end{proof}
-%  

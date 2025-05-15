@@ -2,19 +2,17 @@
 \label{lem:no_extraneous_zeros}
 Let
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
-be the canonical Fredholm determinant associated to \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), and let
+denote the canonical \(\zeta\)-regularized Fredholm determinant associated to \( L_{\sym} \in \TC(\HPsi) \), and suppose
 \[
 f(\lambda) = \prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho} \right) \exp\left( \frac{\lambda}{\mu_\rho} \right)
 \]
-be its genus-one Hadamard product over spectral zeros \( \mu_\rho := 1 / i(\rho - \tfrac{1}{2}) \), where \( \rho \) ranges over nontrivial zeros of \( \zeta(s) \).
+is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \), where the product runs over the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zetaR(s) \).
 
-Then every zero of \( f(\lambda) \) arises from some \( \rho \), and no extraneous zeros are introduced by the exponential prefactor. That is, the set of nonzero eigenvalues of \( L_{\mathrm{sym}} \) is precisely
+Then every zero of \( f(\lambda) \) arises from such a \(\rho\), and no extraneous zeros are introduced by the exponential correction in the Hadamard product. That is, the nonzero spectrum of \( L_{\sym} \) satisfies
 \[
-\left\{ \mu_\rho \in \mathbb{R} : \zeta(\rho) = 0 \right\},
+\Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho \in \R : \zetaR(\rho) = 0 \right\},
 \]
-with no additional zeros contributed by the Hadamard exponential term.
-
+with no additional zeros contributed by the Hadamard exponential prefactor.
 \end{lemma}
-% 

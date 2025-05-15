@@ -1,18 +1,22 @@
-\begin{proof}[Proof of Corollary~\ref{cor:spectrum_real_equiv_rh}]
-This is an immediate consequence of Lemma~\ref{lem:reality_of_spectrum_and_rh}. For each nontrivial zero \( \rho = \beta + i\gamma \) of \( \zeta(s) \), we define the associated eigenvalue
+\begin{proof}[Proof of \corref{cor:spectrum_real_equiv_rh}]
+This is an immediate consequence of \lemref{lem:reality_of_spectrum_and_rh}. For each nontrivial zero \( \rho = \beta + i\gamma \) of the Riemann zeta function \( \zetaR(s) \), we define the associated spectral parameter:
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
 \]
 
-By Lemma~\ref{lem:reality_of_spectrum_and_rh}, we have:
+By \lemref{lem:reality_of_spectrum_and_rh}, this quantity is real if and only if \( \beta = \tfrac{1}{2} \), i.e., \( \rho \) lies on the critical line. Hence:
 \[
-\mu_\rho \in \mathbb{R} \quad \Longleftrightarrow \quad \beta = \tfrac{1}{2}.
+\mu_\rho \in \R \quad \Longleftrightarrow \quad \Re(\rho) = \tfrac{1}{2}.
 \]
-Therefore, all \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \) are real if and only if all nontrivial zeros \( \rho \) lie on the critical line \( \Re(\rho) = \tfrac{1}{2} \). This is precisely the Riemann Hypothesis.
 
-Hence,
+Therefore, all spectral values \( \mu_\rho \in \Spec(L_{\sym}) \) are real if and only if all nontrivial zeros \( \rho \) satisfy \( \Re(\rho) = \tfrac{1}{2} \), which is precisely the Riemann Hypothesis.
+
+\medskip
+
+\noindent
+Thus, we obtain the analytic–spectral equivalence:
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \quad \iff \quad \mathrm{RH}.
+\Spec(L_{\sym}) \subset \R \quad \Longleftrightarrow \quad \RH.
 \]
+This closes the spectral chain of implications initiated by the determinant identity and completes the operator-theoretic reformulation of RH.
 \end{proof}
-% 

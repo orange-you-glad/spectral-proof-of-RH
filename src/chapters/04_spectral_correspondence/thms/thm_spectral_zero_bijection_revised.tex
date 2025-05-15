@@ -1,20 +1,18 @@
 \begin{theorem}[Spectral Bijection with Nontrivial Zeta Zeros]
 \label{thm:spectral_zero_bijection_revised}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator whose Carleman \(\zeta\)-regularized Fredholm determinant satisfies:
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator whose Carleman \(\zeta\)-regularized Fredholm determinant satisfies:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
-\quad \forall \lambda \in \mathbb{C}.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)} \qquad \forall \lambda \in \C.
 \]
 
-Then there is a canonical multiplicity-preserving bijection between:
+Then there exists a canonical multiplicity-preserving bijection between:
 \begin{itemize}
-  \item the multiset of nontrivial zeros \( \rho = \tfrac{1}{2} + i\gamma \) of the Riemann zeta function \( \zeta(s) \), and
-  \item the multiset of nonzero eigenvalues \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \),
+  \item the multiset of nontrivial zeros \( \rho = \tfrac{1}{2} + i\gamma \) of the Riemann zeta function \( \zetaR(s) \), and
+  \item the multiset of nonzero eigenvalues \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \),
 \end{itemize}
 given by the spectral correspondence:
 \[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
+\rho \longmapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
 \]
 
 \medskip
@@ -22,18 +20,18 @@ given by the spectral correspondence:
 \noindent
 This bijection satisfies:
 \begin{itemize}
-  \item \( \mu_\rho \in \mathbb{R} \setminus \{0\} \) for each \( \rho \ne \tfrac{1}{2} \);
-  \item \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}
-  = \left\{ \mu_\rho \mid \zeta(\rho) = 0 \right\} \) as multisets;
-  \item \( \operatorname{ord}_\rho(\zeta) = \operatorname{mult}(\mu_\rho) \), i.e., zero multiplicity equals spectral multiplicity.
+  \item \( \mu_\rho \in \R \setminus \{0\} \) for each \( \rho \ne \tfrac{1}{2} \);
+  \item \( \Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho : \zetaR(\rho) = 0 \right\} \), as multisets;
+  \item \( \operatorname{ord}_\rho(\zetaR) = \operatorname{mult}_{\mathrm{spec}}(\mu_\rho) \), i.e., analytic multiplicity equals spectral multiplicity.
 \end{itemize}
 
 \medskip
+
 \noindent
 This result follows from:
 \begin{enumerate}
-  \item The determinant identity, which ensures that the zero set of the entire function \( \lambda \mapsto \det_\zeta(I - \lambda L_{\mathrm{sym}}) \) matches that of \( \Xi(\tfrac{1}{2} + i\lambda) \);
-  \item The trace-class spectral theorem, which guarantees the determinant’s zeros encode the spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) with multiplicity;
-  \item The fact that \( \Xi(\tfrac{1}{2}) \ne 0 \), ensuring \( \lambda = 0 \) is not a zero of the determinant, so \( 0 \notin \Spec(L_{\mathrm{sym}}) \).
+  \item The determinant identity, which ensures that the zero set of the entire function \( \lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\sym}) \) coincides with the zero set of \( \XiR(\tfrac{1}{2} + i\lambda) \);
+  \item The trace-class spectral theorem, which guarantees that the zeros of the determinant correspond precisely to the nonzero spectrum of \( L_{\sym} \), with multiplicities preserved;
+  \item The normalization \( \XiR(\tfrac{1}{2}) \ne 0 \), which implies \( \lambda = 0 \) is not a zero of the determinant, and thus \( 0 \notin \Spec(L_{\sym}) \).
 \end{enumerate}
 \end{theorem}

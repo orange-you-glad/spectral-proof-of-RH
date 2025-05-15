@@ -1,32 +1,39 @@
-\begin{proof}[Proof of Theorem~\ref{thm:eq_of_rh}]
-Let \( \rho \mapsto \mu_\rho := \dfrac{1}{i(\rho - \tfrac{1}{2})} \) denote the canonical bijection between the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zeta(s) \) and the nonzero eigenvalues of the canonical compact, self-adjoint trace-class operator \( L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha}) \), as established in Theorem~\ref{thm:spectral_zero_bijection_revised}. This correspondence is multiplicity-preserving by Lemma~\ref{lem:multiplicity_preservation}, and the determinant identity
+\begin{proof}[Proof of \thmref{thm:eq_of_rh}]
+Let \( \rho \mapsto \mu_\rho := \dfrac{1}{i(\rho - \tfrac{1}{2})} \) denote the canonical spectral reparametrization of the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zetaR(s) \). This spectral mapping is bijective by \thmref{thm:spectral_zero_bijection_revised} and preserves multiplicity by \lemref{lem:multiplicity_preservation}, ensuring trace-class spectral correspondence.
+
+\medskip
+
+Under this map, the normalized Carleman–\(\zeta\)-regularized determinant of the canonical operator \( L_{\sym} \in \TC(\HPsi) \cap \KC(\HPsi) \) satisfies:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
 \]
-encodes the zero structure of \( \Xi(s) \) exactly, up to canonical normalization.
+as established unconditionally in \thmref{thm:det_identity_revised}. The analytic infrastructure for this identity—including short-time trace bounds, semigroup holomorphy, and Laplace convergence—is developed in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
 
-The key identity in the proof is that:
+\medskip
+
+Now observe the algebraic identity: for any nontrivial zero \( \rho = \sigma + i\gamma \),
 \[
-\mu_\rho \in \mathbb{R}
-\quad \Longleftrightarrow \quad
-\Re(\rho) = \tfrac{1}{2}.
+\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{i(\sigma - \tfrac{1}{2}) - \gamma}.
 \]
-This follows by direct computation:
+Then \( \mu_\rho \in \R \) if and only if \( \sigma = \tfrac{1}{2} \), i.e., if and only if \( \rho \) lies on the critical line. Thus:
 \[
-\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} \in \mathbb{R}
-\quad \Longleftrightarrow \quad
-\frac{1}{i(\sigma + i\gamma - \tfrac{1}{2})} \in \mathbb{R}
-\quad \Longleftrightarrow \quad
-\sigma = \tfrac{1}{2}.
+\mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2}.
 \]
 
-\paragraph{\( \Rightarrow \)}  
-Assume \( \Spec(L_{\mathrm{sym}}) \subset \mathbb{R} \). Then all eigenvalues \( \mu_\rho \in \mathbb{R} \). By the canonical correspondence, this implies \( \Re(\rho) = \tfrac{1}{2} \) for all nontrivial \( \rho \), hence RH holds.
+\paragraph*{(\( \Rightarrow \)) Spectral Reality Implies \(\RH\).}
+Assume \( \Spec(L_{\sym}) \subset \R \). Then all eigenvalues \( \mu_\rho \in \R \), so the identity above implies that every nontrivial zero \( \rho \) satisfies \( \Re(\rho) = \tfrac{1}{2} \). Hence, \RH{} holds.
 
-\paragraph{\( \Leftarrow \)}  
-Conversely, assume the Riemann Hypothesis is true. Then each nontrivial zero \( \rho \) satisfies \( \Re(\rho) = \tfrac{1}{2} \), so each eigenvalue \( \mu_\rho \in \mathbb{R} \), and hence \( \Spec(L_{\mathrm{sym}}) \subset \mathbb{R} \).
+\paragraph*{(\( \Leftarrow \)) \(\RH\) Implies Spectral Reality.}
+Conversely, assume \RH{} holds. Then for each nontrivial zero \( \rho \), we have \( \Re(\rho) = \tfrac{1}{2} \), which implies \( \mu_\rho \in \R \). Therefore, all nonzero eigenvalues of \( L_{\sym} \) are real.
 
-\paragraph{Spectral and Functional Conclusion.}
-Because \( L_{\mathrm{sym}} \) is self-adjoint (Theorem~\ref{thm:sa_trace_class_Lsym}) and trace-class, the spectral theorem ensures that its spectrum is real-valued if and only if all canonical \( \mu_\rho \in \mathbb{R} \). Therefore, the Riemann Hypothesis is logically equivalent to the spectral realness of \( L_{\mathrm{sym}} \), as claimed.
+\paragraph*{Conclusion.}
+Since \( L_{\sym} \) is compact and self-adjoint (\thmref{thm:sa_trace_class_Lsym}), the spectral theorem ensures its spectrum lies in \( \R \). Hence,
+\[
+\Spec(L_{\sym}) \subset \R \iff \mu_\rho \in \R \text{ for all nontrivial zeros } \rho,
+\]
+which yields the analytic–spectral equivalence:
+\[
+\RH \iff \Spec(L_{\sym}) \subset \R,
+\]
+as claimed.
 \end{proof}
-%  

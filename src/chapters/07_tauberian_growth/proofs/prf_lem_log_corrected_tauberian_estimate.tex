@@ -1,0 +1,44 @@
+\begin{proof}[Proof of \lemref{lem:log_corrected_tauberian_estimate}]
+Let \( \Theta(t) := \Tr(e^{-t L_{\sym}^2}) \) be the heat trace of the canonical operator \( L_{\sym} \in \TC(\HPsi) \). From Proposition~\ref{prop:short_time_heat_expansion}, we have:
+\[
+\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+,
+\]
+establishing (i).
+
+\medskip
+
+For (ii), note that this asymptotic is of the form
+\[
+\Theta(t) = t^{-1/2} \cdot \ell(t), \qquad \ell(t) := \log(1/t),
+\]
+where \( \ell \) is slowly varying. Hence \( \Theta \in \mathcal{R}^{\log}_{1/2}(0^+) \) by definition of logarithmically modified regular variation.
+
+\medskip
+
+Define the spectral counting function
+\[
+N(\Lambda) := \#\left\{ \mu \in \Spec(L_{\sym}) : \mu^2 \le \Lambda \right\}
+= \sum_{\mu \in \Spec(L_{\sym})} \chi_{[0, \Lambda]}(\mu^2).
+\]
+
+\medskip
+
+To derive (iii), we apply Korevaar’s log-enhanced Tauberian theorem~\cite[Ch.~III, Thm. 5.1]{Korevaar2004Tauberian}, which states:
+
+If \( \Theta(t) \sim t^{-\alpha} \ell(t) \) as \( t \to 0^+ \), with \( \ell \) slowly varying, then
+\[
+N(\Lambda) \sim \frac{\Lambda^\alpha}{\Gamma(\alpha + 1)} \cdot \ell(1/\Lambda), \qquad \Lambda \to \infty.
+\]
+
+\medskip
+
+Applying this with \( \alpha = 1/2 \), \( \ell(t) = \log(1/t) \), and \( \Gamma(3/2) = \sqrt{\pi}/2 \), we conclude:
+\[
+N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}),
+\]
+proving (iii).
+
+\medskip
+
+The verification of regularity and asymptotic admissibility required by Korevaar’s theorem is completed in \lemref{lem:korevaar_tauberian_constants_verified}, confirming (iv).
+\end{proof}

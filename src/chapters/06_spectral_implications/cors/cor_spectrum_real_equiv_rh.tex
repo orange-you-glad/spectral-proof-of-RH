@@ -1,21 +1,30 @@
 \begin{corollary}[Equivalence of RH with Spectrum Reality]
 \label{cor:spectrum_real_equiv_rh}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical self-adjoint trace-class operator whose Fredholm determinant satisfies
+
+Let \( L_{\sym} \in \TC(\HPsi) \cap \KC(\HPsi) \) be the canonical compact, self-adjoint, trace-class operator whose Carleman–\(\zeta\)-regularized Fredholm determinant satisfies:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
+\det\nolimits_\zeta(I - \lambda L_{\sym})
+= \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)},
+\qquad \forall \lambda \in \C.
 \]
 
-Then the Riemann Hypothesis holds if and only if the spectrum of \( L_{\mathrm{sym}} \) is real:
+Then the Riemann Hypothesis is equivalent to the spectral reality of \( L_{\sym} \):
 \[
 \boxed{
-\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
-\quad \Longleftrightarrow \quad \mathrm{RH}
+\Spec(L_{\sym}) \subset \R
+\quad \Longleftrightarrow \quad \RH
 }
 \]
 
 \noindent
-That is, the nontrivial zeros of \( \zeta(s) \) lie on the critical line \( \Re(s) = \tfrac{1}{2} \) if and only if all eigenvalues of \( L_{\mathrm{sym}} \) are real.
+That is, all nontrivial zeros of the Riemann zeta function \( \zetaR(s) \) lie on the critical line \( \Re(s) = \tfrac{1}{2} \) if and only if every eigenvalue of \( L_{\sym} \) is real.
 
+\medskip
+
+\noindent
+This equivalence follows directly from \thmref{thm:eq_of_rh}, and rests analytically on the determinant identity in \thmref{thm:det_identity_revised}, the spectral bijection in \thmref{thm:spectral_zero_bijection_revised}, and the multiplicity preservation proven in \lemref{lem:multiplicity_preservation}.
+
+\medskip
+
+It constitutes the operator-theoretic core of the analytic–spectral reformulation of the Riemann Hypothesis.
 \end{corollary}
-% 

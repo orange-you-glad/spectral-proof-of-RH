@@ -1,15 +1,19 @@
 \begin{lemma}[Determinant Identity Fixes the Spectrum]
 \label{lem:determinant_fixes_spectrum}
-Let \( L \in \mathcal{S}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint trace-class operator with
-\[
-\det\nolimits_\zeta(I - \lambda L) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
-\]
-for all \( \lambda \in \mathbb{C} \), and assume \( \operatorname{Tr}(L) = 0 \).
 
-Then the nonzero spectrum of \( L \), counted with algebraic multiplicity, coincides with that of the canonical operator \( L_{\mathrm{sym}} \). That is,
+Let \( L \in \TC(\HPsi) \cap \KC(\HPsi) \) be a compact, self-adjoint, trace-class operator satisfying the normalized spectral determinant identity:
 \[
-\Spec(L) \setminus \{0\} = \Spec(L_{\mathrm{sym}}) \setminus \{0\},
+\det\nolimits_\zeta(I - \lambda L) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)},
+\quad \forall \lambda \in \C,
+\]
+and assume its trace vanishes:
+\[
+\Tr(L) = 0.
+\]
+
+Then the nonzero spectrum of \( L \), counted with algebraic multiplicity, coincides with that of the canonical operator \( L_{\sym} \). That is,
+\[
+\Spec(L) \setminus \{0\} = \Spec(L_{\sym}) \setminus \{0\},
 \quad \text{as multisets}.
 \]
 \end{lemma}
-% 

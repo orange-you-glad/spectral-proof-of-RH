@@ -1,36 +1,38 @@
-\begin{proof}[Proof of Lemma~\ref{lem:heat_trace_expansion}]
-\textbf{(i)} Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \subset \mathcal{C}_2 \), we may factor \( L_{\mathrm{sym}} = AB \) with \( A, B \in \mathcal{C}_2 \), the Hilbert–Schmidt class. Then the square satisfies
+\begin{proof}[Proof of \lemref{lem:heat_trace_expansion}]
+\textbf{(i)} Since \( L_{\sym} \in \TC(\HPsi) \subset \mathcal{C}_2 \), we may factor \( L_{\sym} = AB \) with \( A, B \in \mathcal{C}_2 \). Then
 \[
-L_{\mathrm{sym}}^2 = A (BA) B \in \mathcal{C}_1,
+L_{\sym}^2 = A(BA)B \in \TC,
 \]
-because \( \mathcal{C}_2 \cdot \mathcal{C}_2 \subset \mathcal{C}_1 \), by standard Schatten ideal multiplication. Hence, the heat semigroup \( e^{-tL_{\mathrm{sym}}^2} \in \mathcal{C}_1 \) for all \( t > 0 \), and the heat trace
+by Schatten ideal multiplication \( \mathcal{C}_2 \cdot \mathcal{C}_2 \subset \TC \). Hence, the semigroup \( e^{-tL_{\sym}^2} \in \TC \) for all \( t > 0 \), and the heat trace
 \[
-\Theta(t) := \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2})
+\Theta(t) := \Tr(e^{-tL_{\sym}^2})
 \]
-is finite and smooth for all \( t > 0 \).
+is smooth and finite for all \( t > 0 \).
 
-\textbf{(ii)} Let \( \{ \mu_n \}_{n \in \mathbb{N}} \subset \mathbb{R} \) denote the eigenvalues of \( L_{\mathrm{sym}} \), indexed with multiplicity. Since \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1 \), the spectral trace formula yields
+\textbf{(ii)} Let \( \{ \mu_n \}_{n \in \N} \subset \R \) denote the eigenvalues of \( L_{\sym} \), counted with multiplicity. Since \( L_{\sym}^2 \in \TC \), the spectral trace formula gives
 \[
-\operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_{n=1}^{\infty} e^{-t \mu_n^2} < \infty.
+\Tr(e^{-tL_{\sym}^2}) = \sum_{n=1}^{\infty} e^{-t \mu_n^2} < \infty.
 \]
-The spectral theorem ensures that \( e^{-tL_{\mathrm{sym}}^2} \) is a strongly continuous trace-class semigroup.
+By the spectral theorem, \( e^{-tL_{\sym}^2} \) is a strongly continuous, trace-class semigroup.
 
-From Lemma~1.13 and Lemma~2.10, the integral kernel \( K_t(x,y) \) of \( e^{-tL_{\mathrm{sym}}^2} \) is symmetric, smooth, and exponentially decaying. Paley–Wiener theory and the standard parametrix expansion (cf.~\cite[Ch.~III]{Korevaar2004Tauberian}) yield the pointwise diagonal expansion:
+From \lemref{lem:heat_kernel_diagonal_positivity} and \lemref{lem:hk_expansion_uniform}, the kernel \( K_t(x,y) \) of \( e^{-tL_{\sym}^2} \) is smooth, symmetric, and exponentially decaying. Using Paley–Wiener theory and parametrix expansions (cf.~\cite[Ch.~III]{Korevaar2004Tauberian}), we obtain the pointwise asymptotic:
 \[
-K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x) \, t^{n - 1/2}, \qquad t \to 0^+.
+K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x)\, t^{n - 1/2}, \qquad t \to 0^+.
 \]
-Since the kernel is trace-class, integrating term-by-term gives the global expansion:
+Because \( K_t \in \TC \), term-by-term integration yields:
 \[
-\Theta(t) = \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} K_t(x,x) \, dx \sim \sum_{n=0}^{\infty} A_n \, t^{n - 1/2}, \qquad A_n := \int_{\mathbb{R}} a_n(x) \, dx.
+\Theta(t) = \Tr(e^{-tL_{\sym}^2}) = \int_{\R} K_t(x,x) \, dx \sim \sum_{n=0}^{\infty} A_n t^{n - 1/2}, \qquad A_n := \int_{\R} a_n(x) \, dx.
 \]
 
-\textbf{(iii)} The leading-order singularity is dictated by the spectral profile of \( \Xi(s) \), whose Hadamard product involves genus-one exponential type \( \pi \) and a Gaussian damping prefactor. Via Laplace–Mellin Tauberian asymptotics (see Lemma~7.2), this yields the dominant log-corrected term:
+\textbf{(iii)} The leading singularity is governed by the spectral profile of \( \XiR(s) \), which via Hadamard factorization and Gaussian damping implies:
 \[
 \Theta(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \frac{c_0}{\sqrt{t}} + o(t^{-1/2}), \qquad \text{as } t \to 0^+,
 \]
 with
 \[
-c_0 := \int_{\mathbb{R}} a_1(x) \, dx.
+c_0 := \int_{\R} a_1(x)\, dx.
 \]
-This logarithmic divergence near \( t = 0 \) is not Lebesgue integrable, and necessitates analytic regularization of the associated Fredholm determinant via the zeta prescription detailed in Chapter~3. The coefficient \( c_0 \in \mathbb{R} \), though formally computable, is analytically neutral: it plays no role in determinant normalization or spectral bijection.
+
+This logarithmic divergence is not Lebesgue integrable and necessitates analytic continuation for zeta-regularized determinant construction, as developed in Chapter~\ref{sec:determinant_identity}. While \( c_0 \) is formally defined, it plays no role in spectral bijection or determinant normalization.
+
 \end{proof}

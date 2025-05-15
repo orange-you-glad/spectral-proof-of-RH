@@ -1,33 +1,35 @@
 \begin{lemma}[Verification of Korevaar Tauberian Hypotheses]
 \label{lem:korevaar_tauberian_constants_verified}
-Let \( \Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \) denote the spectral heat trace of the canonical compact, self-adjoint, trace-class operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). Define the squared spectral counting function
+
+Let \( \Theta(t) := \Tr(e^{-t L_{\sym}^2}) \) denote the spectral heat trace of the canonical compact, self-adjoint, trace-class operator \( L_{\sym} \in \TC(\HPsi) \). Define the squared spectral counting function:
 \[
-A(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\}.
+A(\Lambda) := \#\left\{ \mu \in \Spec(L_{\sym}) : \mu^2 \le \Lambda \right\}.
 \]
 
-Assume the refined heat trace asymptotic holds:
+Assume the refined short-time heat trace asymptotic holds:
 \[
-\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) \qquad \text{as } t \to 0^+.
+\Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+.
 \]
 
 Then all the conditions of Korevaar’s Tauberian theorem for log-modulated Laplace transforms~\cite[Ch.~III, Thm.~5.5]{Korevaar2004Tauberian} are satisfied:
+
 \begin{enumerate}
-  \item[\textnormal{(i)}] \( \Theta(t) \) is nonnegative and locally bounded, with monotonicity for sufficiently small \( t > 0 \);
-  
-  \item[\textnormal{(ii)}] \( \Theta(t) \) admits the Laplace–Stieltjes representation:
+  \item[\textup{(i)}] \( \Theta(t) \) is nonnegative and locally bounded, and becomes monotonic on some interval \( t \in (0, \varepsilon) \);
+
+  \item[\textup{(ii)}] \( \Theta \) admits the Laplace–Stieltjes representation:
   \[
   \Theta(t) = \int_0^\infty e^{-t \lambda} \, dA(\lambda),
   \]
-  with \( A(\lambda) \) monotone increasing, right-continuous, and diverging as \( \lambda \to \infty \);
-  
-  \item[\textnormal{(iii)}] \( \Theta \in \mathcal{R}_{1/2}^{\log}(0^+) \), i.e., regularly varying at the origin with index \( \rho = \tfrac{1}{2} \), modulated by a logarithmic factor;
-  
-  \item[\textnormal{(iv)}] The Laplace transform is asymptotically invertible under Korevaar’s theorem, yielding the counting function asymptotic:
+  where \( A(\lambda) \) is right-continuous, monotone increasing, and diverges as \( \lambda \to \infty \);
+
+  \item[\textup{(iii)}] \( \Theta \in \mathcal{R}_{1/2}^{\log}(0^+) \), i.e., it is regularly varying at the origin with index \( \tfrac{1}{2} \), modulated by a slowly varying term \( \log(1/t) \);
+
+  \item[\textup{(iv)}] The Laplace transform satisfies the inversion hypotheses of Korevaar’s theorem, and therefore:
   \[
-  A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda \qquad \text{as } \Lambda \to \infty.
+  A(\Lambda) \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda, \qquad \text{as } \Lambda \to \infty.
   \]
 \end{enumerate}
 
 \noindent
-Therefore, the application of Korevaar’s log-modified Tauberian inversion is valid in Lemma~\ref{lem:laplace-kernel-growth-class}, and the asymptotic counting law for the squared spectrum of \( L_{\mathrm{sym}} \) is rigorously justified.
+Hence, all prerequisites for Korevaar’s log-corrected Tauberian inversion are met, and the spectral counting law stated in \lemref{lem:laplace_kernel_growth_class} and \lemref{lem:log_corrected_tauberian_estimate} follows rigorously.
 \end{lemma}

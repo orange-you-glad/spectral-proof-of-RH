@@ -1,33 +1,40 @@
 \begin{lemma}[Canonical Closure of the Spectral Model]
 \label{lem:canonical_closure}
-Let \( L \in \mathcal{S}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator on the exponentially weighted Hilbert space
+
+Let \( L \in \TC(\HPsi) \cap \KC(\HPsi) \) be a compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} \, dx), \qquad \alpha > \pi,
+\HPsi := L^2(\R, e^{\alpha |x|} \, dx), \qquad \alpha > \pi,
 \]
-and suppose that \( L \) satisfies the normalized determinant identity
+and suppose \( L \) satisfies the normalized spectral determinant identity:
 \[
-\det\nolimits_\zeta(I - \lambda L) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}, \qquad \forall \lambda \in \mathbb{C},
+\det\nolimits_\zeta(I - \lambda L) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}, \qquad \forall \lambda \in \C,
 \]
-where \( \Xi(s) \) is the completed Riemann zeta function and the determinant satisfies \( \det_\zeta(I) = 1 \).
+with normalization \( \det\nolimits_\zeta(I) = 1 \), and where \( \XiR(s) \) is the completed Riemann zeta function.
 
 \medskip
 \noindent
 Then:
 \begin{enumerate}
-  \item \( L \) and \( L_{\mathrm{sym}} \) have identical nonzero spectra (as multisets with algebraic multiplicities);
-  \item \( L \) is unitarily equivalent to \( L_{\mathrm{sym}} \): there exists a unitary operator \( U : H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) such that
+  \item The nonzero spectrum of \( L \) coincides with that of the canonical operator \( L_{\sym} \), as multisets with algebraic multiplicities:
   \[
-  L = U L_{\mathrm{sym}} U^{-1};
+  \Spec(L) \setminus \{0\} = \Spec(L_{\sym}) \setminus \{0\};
   \]
-  \item \( L_{\mathrm{sym}} \) is the unique (up to unitary equivalence) compact, self-adjoint trace-class operator realizing the completed zeta function via its canonical Fredholm determinant;
-  \item Any operator \( \widetilde{L} \in \mathcal{S}_1 \) that satisfies the same determinant identity and is not self-adjoint must be similar (in the algebraic sense) to \( L_{\mathrm{sym}} \), preserving eigenvalues and multiplicities. In particular, there exists an invertible \( S \in \mathcal{B}(H_{\Psi_\alpha}) \) such that
+  
+  \item \( L \) is unitarily equivalent to \( L_{\sym} \): there exists a unitary operator \( U \colon \HPsi \to \HPsi \) such that
   \[
-  \widetilde{L} = S L_{\mathrm{sym}} S^{-1},
+  L = U L_{\sym} U^{-1};
   \]
-  but not necessarily with \( S \) unitary.
+  
+  \item \( L_{\sym} \) is the unique (up to unitary equivalence) compact, self-adjoint trace-class operator whose zeta-regularized determinant realizes the spectral identity associated with \( \XiR(s) \);
+  
+  \item If \( \widetilde{L} \in \TC \) satisfies the same determinant identity but is not self-adjoint, then \( \widetilde{L} \) is similar to \( L_{\sym} \) in the algebraic sense: there exists an invertible operator \( S \in \mathcal{B}(\HPsi) \) such that
+  \[
+  \widetilde{L} = S L_{\sym} S^{-1},
+  \]
+  preserving the nonzero spectrum and multiplicities, though not necessarily realized via a unitary conjugation.
 \end{enumerate}
 
 \medskip
 \noindent
-Hence, the spectral determinant of \( \Xi(s) \), together with the trace-class and self-adjoint assumptions, canonically determine the operator \( L_{\mathrm{sym}} \) up to unitary equivalence.
+Hence, the canonical spectral determinant associated with \( \XiR(s) \), under trace-class and self-adjointness, uniquely determines the operator \( L_{\sym} \) up to unitary equivalence, and rigidly constrains all other determinant-realizing models to algebraic similarity. This completes the canonical closure of the spectral model.
 \end{lemma}

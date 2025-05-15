@@ -1,20 +1,20 @@
 \begin{lemma}[Trace-Class Closure and Heat Trace Expansion]
 \label{lem:heat_trace_expansion}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space
+Let \( L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} \, dx), \qquad \alpha > \pi.
+\HPsi := L^2(\R, e^{\alpha|x|} \, dx), \qquad \alpha > \pi.
 \]
 Then the following properties hold:
 \begin{enumerate}
-    \item The squared operator \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is trace class. Consequently, the heat semigroup \( e^{-tL_{\mathrm{sym}}^2} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is trace class for all \( t > 0 \), and the heat trace
+    \item The squared operator \( L_{\sym}^2 \in \TC(\HPsi) \) is trace class. Consequently, the heat semigroup \( e^{-tL_{\sym}^2} \in \TC(\HPsi) \) is trace class for all \( t > 0 \), and the heat trace
     \[
-    \Theta(t) := \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2})
+    \Theta(t) := \Tr(e^{-tL_{\sym}^2})
     \]
     is finite, positive, and smooth in \( t > 0 \).
 
     \item As \( t \to 0^+ \), the trace admits a singular asymptotic expansion of the form
     \[
-    \Theta(t) \sim \sum_{n=0}^{\infty} A_n t^{n - 1/2}, \qquad A_n := \int_{\mathbb{R}} a_n(x) \, dx,
+    \Theta(t) \sim \sum_{n=0}^{\infty} A_n t^{n - 1/2}, \qquad A_n := \int_{\R} a_n(x) \, dx,
     \]
     where the \( a_n(x) \) are local coefficient functions arising from the diagonal heat kernel expansion
     \[
@@ -29,14 +29,14 @@ Then the following properties hold:
     \]
     where
     \[
-    c_0 := \int_{\mathbb{R}} a_1(x) \, dx.
+    c_0 := \int_{\R} a_1(x) \, dx.
     \]
-    The logarithmic behavior renders the integral \( \int_0^\infty \Theta(t) \, dt \) divergent, necessitating analytic continuation via spectral zeta regularization. While the coefficient \( c_0 \in \mathbb{R} \) is formally defined, it does not influence the normalization of the spectral determinant and plays no role in the spectral trace identity or zeta-regularized log-derivative formula.
+    The logarithmic behavior renders the integral \( \int_0^\infty \Theta(t) \, dt \) divergent, necessitating analytic continuation via spectral zeta regularization. While the coefficient \( c_0 \in \R \) is formally defined, it does not influence the normalization of the spectral determinant and plays no role in the spectral trace identity or zeta-regularized log-derivative formula.
 \end{enumerate}
 
 This expansion confirms that \( \Theta(t) \) lies in the class of log-modulated regularly varying functions. In particular, the Laplace integral
 \[
 \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Theta(t) \, dt
 \]
-converges for all \( \lambda \in \mathbb{C} \), and defines the logarithmic derivative of the regularized Fredholm determinant.
+converges for all \( \lambda \in \C \), and defines the logarithmic derivative of the regularized Fredholm determinant.
 \end{lemma}

@@ -32,75 +32,64 @@
 
 \usepackage[capitalize,nameinlink]{cleveref}
 
-%==============================
-% Layout and Font Adjustments
-%==============================
-\linespread{1.12}  % Improves vertical spacing for readability
-\setlength{\headheight}{18pt}
 
 %==============================
-% Custom Column Types
+% Custom Macro Definitions
 %==============================
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
-%==============================
 % Number Systems
-%==============================
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}      % Real numbers
+\newcommand{\C}{\mathbb{C}}      % Complex numbers
+\newcommand{\Z}{\mathbb{Z}}      % Integers
+\newcommand{\N}{\mathbb{N}}      % Natural numbers
+\newcommand{\Q}{\mathbb{Q}}      % Rational numbers
 
-%==============================
 % Function Spaces
-%==============================
-\newcommand{\Lp}[1]{L^{#1}(\R)}
-\newcommand{\Schwartz}{\mathcal{S}(\R)}
-\newcommand{\HPsi}{H_{\Psi}}
-\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Lp}[1]{L^{#1}(\R)}            % General L^p(\R)
+\newcommand{\Schwartz}{\mathcal{S}(\R)}    % Schwartz space
+\newcommand{\HPsi}{H_{\Psi}}               % Weighted Hilbert space
+\newcommand{\Hilb}{\mathcal{H}}            % Abstract Hilbert space symbol
 
-%==============================
 % Operator-Theoretic Objects
-%==============================
-\newcommand{\TC}{\mathcal{B}_1}       % Trace-class operators
-\newcommand{\KC}{\mathcal{K}}         % Compact operators
-\newcommand{\SC}{\mathcal{S}_2}       % Hilbert-Schmidt
-\newcommand{\Tr}{\operatorname{Tr}}   % Trace
-\newcommand{\Spec}{\operatorname{Spec}} 
-\newcommand{\Ran}{\operatorname{Ran}} 
-\newcommand{\Ker}{\operatorname{Ker}} 
-\newcommand{\HS}{\mathrm{HS}}         
-\newcommand{\Lop}{L_t}                % Mollified operator
+\newcommand{\TC}{\mathcal{B}_1}            % Trace-class operators
+\newcommand{\KC}{\mathcal{K}}              % Compact operators
+\newcommand{\SC}{\mathcal{S}_2}            % Hilbert–Schmidt operators
+\newcommand{\Tr}{\ensuremath{\operatorname{Tr}}}      % Trace operator
+\newcommand{\Spec}{\ensuremath{\operatorname{Spec}}}  % Spectrum
+\newcommand{\Ran}{\ensuremath{\operatorname{Ran}}}    % Range
+\newcommand{\Ker}{\ensuremath{\operatorname{Ker}}}    % Kernel
+\newcommand{\HS}{\ensuremath{\mathrm{HS}}}            % Hilbert–Schmidt space
+\newcommand{\Lop}{L_t}                                 % Mollified operator
 
-%==============================
 % Special Functions and Weights
-%==============================
-\newcommand{\XiR}{\Xi}
-\newcommand{\zetaR}{\zeta}
-\newcommand{\PsiW}{\Psi}
-\newcommand{\PsiAlpha}[1]{\exp\!\bigl(\alpha |#1|\bigr)}
+\newcommand{\XiR}{\ensuremath{\Xi}}                   % Completed zeta function
+\newcommand{\zetaR}{\ensuremath{\zeta}}               % Riemann zeta function
+\newcommand{\PsiW}{\ensuremath{\Psi}}                 % Generic exponential weight
+\newcommand{\PsiAlpha}[1]{\exp\!\bigl(\alpha |#1|\bigr)} % Weighted exponential profile
 
-%==============================
+% Weighted Spaces
+\newcommand{\PsiAlphaSpace}[1]{L^2(\R, \PsiAlpha{#1}\,dx)} % Weighted L^2 space
+
 % Special Function Classes
-%==============================
-\newcommand{\PW}[1]{\mathcal{PW}_{#1}(\R)}
+\newcommand{\PW}[1]{\mathcal{PW}_{#1}(\R)}            % Paley–Wiener class
 
-%==============================
-% Fourier Transform Convention
-%==============================
-\newcommand{\FT}{\mathcal{F}}
-\newcommand{\ft}[1]{\widehat{#1}}
+% Fourier Transforms
+\newcommand{\FT}{\mathcal{F}}                         % Fourier transform symbol
+\newcommand{\ft}[1]{\widehat{#1}}                     % Fourier transform notation
 
-%==============================
 % Math Utilities
-%==============================
-\newcommand{\abs}[1]{\left|#1\right|}
-\newcommand{\norm}[1]{\left\|#1\right\|}
-\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\abs}[1]{\left|#1\right|}                 % Absolute value
+\newcommand{\norm}[1]{\left\|#1\right\|}              % Norm
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle} % Inner product
 
-%==============================
+% Labels and Structural Tags
+\newcommand{\sym}{\ensuremath{\mathrm{sym}}}          % Symmetric label
+\newcommand{\op}{\ensuremath{\mathrm{op}}}            % Operator label
+
+% Riemann Hypothesis Macro
+\newcommand{\RH}{\ensuremath{\mathrm{RH}}}            % RH shorthand
+
 % Cross-Reference Shortcuts
-%==============================
 \newcommand{\thmref}[1]{Theorem~\ref{#1}}
 \newcommand{\lemref}[1]{Lemma~\ref{#1}}
 \newcommand{\corref}[1]{Corollary~\ref{#1}}
@@ -110,17 +99,6 @@
 \newcommand{\appref}[1]{Appendix~\ref{#1}}
 \newcommand{\eqnref}[1]{\eqref{#1}}
 \newcommand{\remref}[1]{Remark~\ref{#1}}
-
-%==============================
-% Additional Math Labels
-%==============================
-\newcommand{\sym}{\mathrm{sym}}
-\newcommand{\op}{\mathrm{op}}
-
-%==============================
-% Weighted Spaces (exponential profile)
-%==============================
-\newcommand{\PsiAlphaSpace}[1]{L^2(\R, \PsiAlpha{#1}\,dx)}
 
 %==============================
 % Theorem Environments
@@ -192,3 +170,5 @@
       \vskip -\ht\z@
       \box\z@}}}
 \makeatother
+
+

@@ -1,26 +1,27 @@
-\begin{proof}[Proof of Lemma~\ref{lem:inject_zero_real_spectrum}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \in \mathbb{C} \) be an arbitrary nontrivial zero of the Riemann zeta function \( \zeta(s) \). Under assumption (i), this zero is mapped to a nonzero eigenvalue of \( L_{\mathrm{sym}} \) via the spectral encoding:
+\begin{proof}[Proof of \lemref{lem:inject_zero_real_spectrum}]
+Let \( \rho = \tfrac{1}{2} + i\gamma \in \C \) be a nontrivial zero of \( \zetaR(s) \). By assumption (i), the spectral encoding
 \[
-\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \frac{1}{i}(i\gamma) = \gamma.
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma
 \]
+maps \( \rho \) to a nonzero eigenvalue of \( L_{\sym} \in \TC(\HPsi) \).
 
-\paragraph{Step 1: Reality of Spectrum.}
-Assumption (ii) states that \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \), and that all eigenvalues are real and simple. Hence,
+\paragraph{Step 1: Real Spectrum.}
+Assumption (ii) states that \( \Spec(L_{\sym}) \subset \R \) and all nonzero eigenvalues are simple. Therefore,
 \[
-\mu_\rho = \gamma \in \mathbb{R}.
+\mu_\rho = \gamma \in \R.
 \]
-This immediately implies that \( \rho = \tfrac{1}{2} + i\gamma \) has \( \gamma \in \mathbb{R} \), so
+It follows that \( \rho = \tfrac{1}{2} + i\gamma \) has \( \Im(\rho) = \gamma \in \R \), so
 \[
 \Re(\rho) = \tfrac{1}{2}.
 \]
 
 \paragraph{Step 2: Exhaustion.}
-Since the mapping \( \rho \mapsto \mu_\rho \) is bijective and multiplicity-preserving by hypothesis, every nontrivial zero of \( \zeta(s) \) corresponds to a unique real eigenvalue of \( L_{\mathrm{sym}} \). Therefore, all nontrivial zeros lie on the critical line.
+Since the map \( \rho \mapsto \mu_\rho \) is bijective and multiplicity-preserving, every nontrivial zero corresponds to a unique real eigenvalue. Hence, all nontrivial zeros lie on the critical line.
 
 \paragraph{Conclusion.}
-We conclude that
+The assumption of real, simple spectrum implies
 \[
-\rho \in \operatorname{Zeros}(\zeta(s)) \quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2},
+\rho \in \Spec(\zetaR) \quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2},
 \]
-establishing the Riemann Hypothesis under the stated spectral assumptions.
+thereby proving the Riemann Hypothesis under the stated spectral conditions.
 \end{proof}

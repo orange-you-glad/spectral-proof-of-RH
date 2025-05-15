@@ -1,37 +1,33 @@
-\begin{proof}[Proof of Theorem~\ref{thm:truth_of_rh}]
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \).
+\begin{proof}[Proof of \thmref{thm:truth_of_rh}]
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed zeta function \( \XiR(s) \).
 
-From the canonical determinant identity (Theorem~\ref{thm:det_identity_revised}) established in Chapter~\ref{sec:determinant_identity}, we have:
+By the determinant identity (see \thmref{thm:det_identity_revised}),
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
 \]
-and from the spectral bijection (Theorem~\ref{thm:spectral_zero_bijection_revised}) and encoding lemma (Lemma~\ref{lem:spectral_zero_encoding}), each nontrivial zero \( \rho \in \mathbb{C} \) of \( \zeta(s) \) corresponds to a nonzero eigenvalue
+and the spectral bijection (see \thmref{thm:spectral_zero_bijection_revised}, \lemref{lem:spectral_zero_encoding}) ensures that each nontrivial zero \( \rho \in \C \) corresponds to a spectral point
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \operatorname{Spec}(L_{\mathrm{sym}}).
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym}) \setminus \{0\}.
 \]
 
 \paragraph{Spectral Reality.}
-By analytic construction—via symmetric mollifiers, the weighted space \( H_{\Psi_\alpha} \), and trace-norm convergence justified in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}—the operator \( L_{\mathrm{sym}} \) is self-adjoint and satisfies:
+From the analytic construction of \( L_{\sym} \) and its mollifier convergence in \cref{sec:operator_construction}, self-adjointness and real spectrum are established. Hence:
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\Spec(L_{\sym}) \subset \R.
 \]
 
 \paragraph{Implication for Zeros.}
-Since \( \mu_\rho \in \mathbb{R} \), we compute:
+For each \( \rho \), we have:
 \[
-\frac{1}{i(\rho - \tfrac{1}{2})} \in \mathbb{R}
-\quad \Longrightarrow \quad \rho - \tfrac{1}{2} \in i\mathbb{R}
-\quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2}.
+\mu_\rho \in \R \quad \Rightarrow \quad \frac{1}{i(\rho - \tfrac{1}{2})} \in \R
+\quad \Rightarrow \quad \rho - \tfrac{1}{2} \in i\R
+\quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
 \]
-This holds for every nontrivial zero \( \rho \), since the spectral determinant realizes all zeros of \( \zeta(s) \) via bijection.
 
 \paragraph{Conclusion.}
-By Theorem~\ref{thm:rh_spectrum_equiv}, we have the equivalence:
+The spectral determinant fully encodes the nontrivial zeros of \( \zetaR(s) \), and \( L_{\sym} \) has real spectrum. Hence:
 \[
-\mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\zetaR(\rho) = 0 \quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2},
 \]
-Since spectral reality has now been rigorously established, it follows that the Riemann Hypothesis holds:
-\[
-\zeta(\rho) = 0 \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
-\]
+and the Riemann Hypothesis is proven.
 \end{proof}

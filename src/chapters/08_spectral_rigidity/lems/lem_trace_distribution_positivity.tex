@@ -1,23 +1,25 @@
 \begin{lemma}[Positivity of the Trace Distribution]
 \label{lem:trace_distribution_positivity}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \}_{n \in \mathbb{Z}} \subset \mathbb{R} \), with each eigenvalue repeated according to its finite multiplicity.
 
-Define the spectral trace functional on the Schwartz space \( \mathcal{S}(\mathbb{R}) \) by
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \}_{n \in \Z} \subset \R \), where each eigenvalue appears with its finite multiplicity.
+
+Define the spectral trace functional on the Schwartz space \( \Schwartz(\R) \) by:
 \[
-\phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) := \sum_n \phi(\mu_n).
+\phi \mapsto \Tr(\phi(L_{\sym})) := \sum_n \phi(\mu_n).
 \]
 
-Then the following hold:
+Then:
 \begin{enumerate}
-  \item[\normalfont(i)] The map \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) defines a tempered distribution on \( \mathbb{R} \). That is, it extends continuously to \( \mathcal{S}(\mathbb{R}) \) and satisfies finite-order growth bounds under test function differentiation.
+  \item[\textup{(i)}] The map \( \phi \mapsto \Tr(\phi(L_{\sym})) \) defines a tempered distribution on \( \R \). That is, it extends continuously on \( \Schwartz(\R) \) and satisfies finite-order growth bounds under differentiation.
 
-  \item[\normalfont(ii)] The trace distribution is positive: for every nonnegative test function \( \phi \in \mathcal{S}(\mathbb{R}) \) such that \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \mathbb{R} \), we have
+  \item[\textup{(ii)}] The distribution is positive: for every \( \phi \in \Schwartz(\R) \) with \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \R \), we have:
   \[
-  \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \ge 0.
+  \Tr(\phi(L_{\sym})) \ge 0.
   \]
 \end{enumerate}
 
 \medskip
+
 \noindent
-This distributional positivity reflects the positivity of the spectral measure associated with \( L_{\mathrm{sym}} \), as inherited from the positivity of the heat kernel trace. The analytic justification for this property follows from the short-time trace expansion in Proposition~\ref{prop:heat_trace_uniform_conv}, and the decay and regularity results developed in Appendix~\ref{app:heat-kernel-construction}.
+This positivity reflects the spectral measure structure of \( L_{\sym} \), and is inherited from the positivity of the heat trace \( \Tr(e^{-t L_{\sym}^2}) \) and associated kernel. The analytic justification follows from the short-time convergence results in \propref{prop:heat_trace_uniform_conv} and kernel estimates developed in \appref{app:heat_kernel_construction}.
 \end{lemma}

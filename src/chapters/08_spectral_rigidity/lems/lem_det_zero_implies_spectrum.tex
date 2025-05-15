@@ -1,16 +1,18 @@
 \begin{lemma}[Determinantal Zero Implies Spectral Inclusion]
 \label{lem:det_zero_implies_spectrum}
-Let \( T \in \mathcal{C}_1(H) \) be a compact, self-adjoint operator on a complex Hilbert space \( H \). Suppose the Carleman zeta-regularized Fredholm determinant
+
+Let \( T \in \TC(H) \) be a compact, self-adjoint operator on a complex separable Hilbert space \( H \). Suppose the Carleman \(\zeta\)-regularized Fredholm determinant
 \[
-\det\nolimits_{\zeta}(I - \lambda T)
+\det\nolimits_\zeta(I - \lambda T)
 \]
-vanishes at some \( \lambda \in \mathbb{C} \setminus \{0\} \). Then:
+vanishes at some \( \lambda \in \C \setminus \{0\} \). Then:
 \[
-\lambda^{-1} \in \operatorname{Spec}(T),
+\lambda^{-1} \in \Spec(T),
 \]
-i.e., \( \lambda \in \operatorname{Spec}(T^{-1}) \), and hence \( \lambda \in \operatorname{Spec}(T)^{-1} \).
+i.e., \( \lambda \in \Spec(T^{-1}) \), and hence \( \lambda \in \Spec(T)^{-1} \).
 
 \medskip
+
 \noindent
-That is, any zero of the zeta-regularized determinant corresponds to a nonzero eigenvalue of \( T \), and the set of determinant zeros coincides with the inverse spectrum \( \operatorname{Spec}(T)^{-1} \setminus \{0\} \), counted with multiplicity.
+In other words, every nonzero zero of the determinant corresponds to a nonzero eigenvalue of \( T \), and the determinant zero set coincides with the inverse spectrum \( \Spec(T)^{-1} \setminus \{0\} \), counted with multiplicity.
 \end{lemma}

@@ -1,27 +1,31 @@
 \begin{lemma}[Spectral Encoding of Zeta Zeros]
 \label{lem:spectral_zero_encoding}
-Let \( \rho \in \mathbb{C} \) be a nontrivial zero of the Riemann zeta function \( \zeta(s) \). Define the associated spectral parameter by
+
+Let \( \rho \in \C \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \). Define the associated spectral parameter:
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
 \]
+
 Then:
 \begin{itemize}
-  \item \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), and the multiplicity of \( \mu_\rho \) as an eigenvalue equals the order of the zero \( \rho \) of \( \zeta(s) \);
-  \item Conversely, every nonzero eigenvalue of \( L_{\mathrm{sym}} \) arises uniquely via this mapping from a nontrivial zero of \( \zeta(s) \).
+  \item \( \mu_\rho \in \Spec(L_{\sym}) \setminus \{0\} \), and the multiplicity of \( \mu_\rho \) as an eigenvalue of \( L_{\sym} \) equals the order of the zero \( \rho \) of \( \zetaR(s) \);
+
+  \item Conversely, every nonzero eigenvalue of \( L_{\sym} \) arises uniquely via this mapping from a nontrivial zero \( \rho \in \C \).
 \end{itemize}
 
 \medskip
+
 \noindent
-In particular, the mapping
+In particular, the canonical map
 \[
 \rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
 \]
-defines a bijective, multiplicity-preserving correspondence between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( L_{\mathrm{sym}} \). That is,
+defines a bijective, multiplicity-preserving correspondence between the nontrivial zeros of \( \zetaR(s) \) and the nonzero spectrum of \( L_{\sym} \). That is:
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} = \left\{ \mu_\rho : \zeta(\rho) = 0 \right\},
+\Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho \in \C : \zetaR(\rho) = 0 \right\},
 \]
-with multiplicities matched via the Hadamard product structure of the determinant
+with multiplicities matched via the Hadamard factorization structure of the spectral determinant:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)}.
 \]
 \end{lemma}

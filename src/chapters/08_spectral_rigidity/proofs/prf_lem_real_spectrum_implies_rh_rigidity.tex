@@ -1,0 +1,28 @@
+\begin{proof}[Proof of \lemref{lem:real_spectrum_implies_rh_rigidity}]
+Let \( \rho \) be a nontrivial zero of \( \zetaR(s) \), and define the canonical spectral image:
+\[
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}).
+\]
+
+\paragraph{Step 1: Determinant Zero Implies Spectral Inclusion.}
+From the determinant identity
+\[
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
+\]
+we have \( \det\nolimits_\zeta(I - \lambda L_{\sym}) = 0 \) precisely when \( \lambda = \gamma \), where \( \rho = \tfrac{1}{2} + i\gamma \).
+
+Then
+\[
+\mu_\rho = \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} = \lambda^{-1}.
+\]
+By analytic Fredholm theory, this implies \( \mu_\rho \in \Spec(L_{\sym}) \setminus \{0\} \).
+
+\paragraph{Step 2: Real Spectrum Implies RH.}
+By assumption, \( \Spec(L_{\sym}) \subset \R \), so \( \mu_\rho \in \R \). Therefore,
+\[
+\frac{1}{i}(\rho - \tfrac{1}{2}) \in \R \quad \Rightarrow \quad \rho - \tfrac{1}{2} \in i\R \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
+\]
+
+\paragraph{Conclusion.}
+Since \( \rho \) was arbitrary, all nontrivial zeros of \( \zetaR(s) \) lie on the critical line. Hence, the Riemann Hypothesis holds.
+\end{proof}

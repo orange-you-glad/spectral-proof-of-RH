@@ -1,6 +1,6 @@
 \subsection*{Closure of the Spectral Program}
 
-This chapter concludes the analytic reformulation of the Riemann Hypothesis as a statement of spectral rigidity. We synthesize the spectral, determinantal, and trace-theoretic constructions developed in preceding chapters into a formally closed and logically acyclic equivalence.
+This chapter concludes the analytic reformulation of the Riemann Hypothesis as a statement of spectral rigidity. We synthesize the spectral, determinantal, and trace-theoretic constructions developed in preceding chapters into a formally closed, logically acyclic equivalence.
 
 \medskip
 \noindent
@@ -10,66 +10,70 @@ The logical framework proceeds through the following modular components:
   \item \textbf{Canonical Operator Construction.}  
   A compact, self-adjoint trace-class operator
   \[
-  L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha})
+  L_{\sym} \in \TC(\HPsi)
   \]
-  is constructed as the trace-norm limit of mollified symmetric convolution operators derived from the inverse Fourier transform of the completed zeta function \( \Xi(s) \). Mollifier decay guarantees convergence in Schatten norm.
+  is constructed as the trace-norm limit of mollified symmetric convolution operators derived from the inverse Fourier transform of the completed zeta function \( \XiR(s) \). Gaussian mollifier decay guarantees convergence in Schatten norm.
 
   \item \textbf{Determinant Identity.}  
-  The zeta-regularized Fredholm determinant of \( L_{\mathrm{sym}} \) satisfies:
+  The Carleman \(\zeta\)-regularized Fredholm determinant of \( L_{\sym} \) satisfies:
   \[
-  \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)},
   \]
-  valid for all \( \lambda \in \mathbb{C} \). This identity transfers the zero structure of \( \Xi(s) \) to the spectral data of \( L_{\mathrm{sym}} \).
+  valid for all \( \lambda \in \C \). This identity transfers the zero structure of \( \XiR(s) \) to the spectral data of \( L_{\sym} \).
 
   \item \textbf{Spectral Multiplicity Matching.}  
-  The Hadamard factorization of \( \Xi(s) \) ensures that the order of each zero matches the algebraic multiplicity of the corresponding eigenvalue:
+  The Hadamard factorization of \( \XiR(s) \) ensures that the order of each zero matches the algebraic multiplicity of the corresponding eigenvalue:
   \[
-  \operatorname{ord}_{\rho} \zeta = \operatorname{mult}_{\mu_\rho} L_{\mathrm{sym}},
+  \operatorname{ord}_{\rho} \zetaR = \operatorname{mult}_{\mu_\rho} L_{\sym},
   \]
-  where \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \). Thus, the determinant encodes both location and multiplicity of the zeros.
+  where \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \). Thus, the determinant encodes both the location and multiplicity of the zeros.
 
   \item \textbf{Spectral Realization.}  
-  As established in Lemma~\ref{lem:spectral-zero-encoding}, every nontrivial zero \( \rho \) of \( \zeta(s) \) maps to a nonzero spectral point:
+  By \lemref{lem:spectral_zero_encoding}, every nontrivial zero \( \rho \) of \( \zetaR(s) \) maps to a nonzero spectral point:
   \[
-  \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \operatorname{Spec}(L_{\mathrm{sym}}).
+  \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym}).
   \]
 
   \item \textbf{Spectral Symmetry.}  
-  By Lemma~\ref{lem:spectral-symmetry-lsym}, the spectrum of \( L_{\mathrm{sym}} \) satisfies \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \Rightarrow -\mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \), reflecting the evenness of \( \Xi(\tfrac{1}{2} + i\lambda) \).
+  By \lemref{lem:spectral_symmetry}, the spectrum of \( L_{\sym} \) satisfies:
+  \[
+  \mu \in \Spec(L_{\sym}) \quad \Rightarrow \quad -\mu \in \Spec(L_{\sym}),
+  \]
+  reflecting the evenness of \( \XiR(\tfrac{1}{2} + i\lambda) \).
 
   \item \textbf{Spectral Rigidity and Logical Equivalence.}  
   The condition
   \[
-  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \Spec(L_{\sym}) \subset \R
   \]
   is logically equivalent to the Riemann Hypothesis:
   \[
-  \mathrm{RH} \iff \Re(\rho) = \tfrac{1}{2} \; \forall \rho \in \operatorname{Spec}(\zeta)
-       \iff \mu_\rho \in \mathbb{R} \; \forall \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}).
+  \RH \iff \Re(\rho) = \tfrac{1}{2} \;\text{for all } \rho \in \Spec(\zetaR)
+       \iff \mu_\rho \in \R \;\text{for all } \mu_\rho \in \Spec(L_{\sym}).
   \]
-  This equivalence holds regardless of spectral multiplicity.
+  This equivalence holds independently of spectral simplicity.
 
   \item \textbf{Spectral Completeness.}  
-  Corollary~\ref{cor:spectral-determines-zeta} confirms that the spectrum of \( L_{\mathrm{sym}} \) completely determines the nontrivial zero set of \( \zeta(s) \), giving a canonical operator model of the critical line.
+  By \corref{cor:spectral_determines_zeta}, the spectrum of \( L_{\sym} \) completely determines the nontrivial zero set of \( \zetaR(s) \), giving a canonical trace-class realization of the critical line.
 
   \item \textbf{Trace Positivity and Functional Calculus.}  
-  By Lemma~\ref{lem:trace_distribution_positivity}, the map
+  By \lemref{lem:trace_distribution_positivity}, the map
   \[
-  \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}}))
+  \phi \mapsto \Tr(\phi(L_{\sym}))
   \]
-  defines a positive tempered distribution for all \( \phi \in \mathcal{S}(\mathbb{R}) \) with \( \phi \ge 0 \). This validates the zeta-regularized determinant as a spectral observable and confirms the positivity of the induced spectral measure.
+  defines a positive tempered distribution for all \( \phi \in \Schwartz(\R) \) with \( \phi \ge 0 \). See also \remref{rem:functional_calculus_trace} for domain justification. This confirms the determinant identity is compatible with spectral positivity and trace regularization.
 
   \item \textbf{Analytic Closure.}  
-  The RH equivalence is deduced entirely from:
+  The RH equivalence is derived entirely from:
   \begin{itemize}
-    \item the spectral theorem for compact self-adjoint operators;
-    \item short-time heat trace asymptotics and Gaussian kernel decay;
-    \item the Hadamard factorization of \( \Xi(s) \), normalized at \( s = \tfrac{1}{2} \);
-    \item positivity and convergence of the trace distribution.
+    \item spectral theory for compact self-adjoint operators;
+    \item short-time heat kernel and trace asymptotics;
+    \item Hadamard factorization and exponential type of \( \XiR(s) \);
+    \item spectral determinant theory and distributional positivity.
   \end{itemize}
-  No appeal is made to modular, adelic, or automorphic techniques.
+  No modular, adelic, or arithmetic conjectures are assumed.
 \end{itemize}
 
 \medskip
 \noindent
-The full dependency graph supporting this conclusion is depicted in Figure~\ref{fig:dag_appendix_b}, and formally documented in Appendix~\ref{app:dependency-graph}. The equivalence is established in the main theorem that follows.
+The full analytic dependency graph is diagrammed in \appref{app:dependency_graph} (see Figure~\ref{fig:dag_appendix_b}), and confirms acyclic derivation of the RH equivalence. The main theorem that follows completes the canonical spectral proof.

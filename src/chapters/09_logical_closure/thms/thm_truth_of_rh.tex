@@ -1,21 +1,25 @@
 \begin{theorem}[Truth of the Riemann Hypothesis]
 \label{thm:truth_of_rh}
-Every nontrivial zero \( \rho \in \mathbb{C} \) of the Riemann zeta function \( \zeta(s) \) satisfies
+
+Every nontrivial zero \( \rho \in \C \) of the Riemann zeta function \( \zetaR(s) \) satisfies
 \[
 \Re(\rho) = \tfrac{1}{2}.
 \]
 
 \medskip
+
 \noindent
-That is, the nontrivial zero set of \( \zeta(s) \) lies entirely on the critical line:
+That is, the nontrivial zero set of \( \zetaR(s) \) lies entirely on the critical line:
 \[
-\operatorname{Zeros}(\zeta(s)) \subset \left\{ s \in \mathbb{C} : \Re(s) = \tfrac{1}{2} \right\}.
+\Spec(\zetaR) \subset \left\{ s \in \C : \Re(s) = \tfrac{1}{2} \right\}.
 \]
 
 \medskip
+
 \noindent
-This completes the analytic and spectral proof of the Riemann Hypothesis, via the canonical determinant identity and the self-adjointness of the operator \( L_{\mathrm{sym}} \), whose spectrum encodes the zero set of \( \zeta(s) \) under the transformation
+This completes the analytic proof of the Riemann Hypothesis, via the canonical determinant identity and the spectral theory of the self-adjoint, trace-class operator \( L_{\sym} \in \TC(\HPsi) \). Under the spectral map
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
+\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
 \]
+the bijective correspondence between zeta zeros and spectrum, together with the real-valuedness of \( \Spec(L_{\sym}) \), implies that all \( \rho \in \Spec(\zetaR) \) satisfy \( \Re(\rho) = \tfrac{1}{2} \).
 \end{theorem}

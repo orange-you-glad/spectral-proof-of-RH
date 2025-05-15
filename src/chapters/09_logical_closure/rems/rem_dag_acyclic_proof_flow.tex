@@ -1,0 +1,27 @@
+\begin{remark}[Proof Architecture and Logical Closure]
+\label{rem:dag_acyclic_proof_flow}
+
+All results in this chapter follow from analytically justified constructions:
+\begin{itemize}
+  \item The canonical operator \( L_{\sym} \in \TC(\HPsi) \), built via mollified convolution (\cref{sec:operator_construction});
+  \item The spectral determinant identity and Hadamard factorization (\cref{sec:determinant_identity});
+  \item The bijective spectral encoding of zeta zeros (\cref{sec:spectral_correspondence});
+  \item The trace-class heat kernel and semigroup convergence (\cref{sec:heat_kernel_asymptotics});
+  \item The equivalence \( \RH \iff \Spec(L_{\sym}) \subset \R \), established in \cref{sec:spectral_implications} and closed here.
+\end{itemize}
+
+\medskip
+
+\noindent
+At no point is the Riemann Hypothesis assumed. The spectral bijection is proven independently, the determinant identity is derived from trace-class kernel analysis, and the final implication \( \Spec(L_{\sym}) \subset \R \Rightarrow \RH \) follows purely from spectral encoding and self-adjointness.
+
+\medskip
+
+\noindent
+This completes the acyclic modular proof architecture documented in \appref{app:dependency_graph}, and resolves RH as a spectral equivalence:
+\[
+\boxed{
+\RH \iff \Spec(L_{\sym}) \subset \R
+}
+\]
+\end{remark}

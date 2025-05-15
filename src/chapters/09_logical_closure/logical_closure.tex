@@ -2,66 +2,32 @@
 \label{sec:logical_closure}
 
 % --- Global Setup Remark ---
-\input{chapters/09_logical_closure/remarks/rem_setup_operator_framework}
+\input{chapters/09_logical_closure/rems/rem_setup_operator_framework}
 
 \input{chapters/09_logical_closure/intro}
 
 %------------------------------------------------------------------
 \subsection{Equivalence and Logical Closure}
 
-% --- Spectral ↔ Zero Encoding Lemma (used by both theorems) ---
+% --- Spectral ↔ Zero Encoding Lemma ---
 \input{chapters/09_logical_closure/lems/lem_spectral_zero_encoding}
 \input{chapters/09_logical_closure/proofs/prf_lem_spectral_zero_encoding}
+\input{chapters/09_logical_closure/rems/rem_spectral_zero_bijection_from_determinant}
 
-\begin{remark}
-By Theorem~\ref{thm:spectral-zero-bijection-revised}, the map
-\[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
-\]
-defines a canonical, multiplicity-preserving bijection between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( L_{\mathrm{sym}} \).
-This inverse spectral map is uniquely determined by the vanishing structure of the determinant:
-\[
-\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
-\]
-whose zeros correspond precisely to the values \( \lambda = i(\rho - \tfrac{1}{2}) \), with multiplicity preserved by Hadamard factorization.
-\end{remark}
-
-% === RH is equivalent to spectral reality of L_sym via determinant identity and bijection ===
+% --- RH ⇔ Real Spectrum Equivalence ---
 \input{chapters/09_logical_closure/thms/thm_rh_spectrum_equiv}
 \input{chapters/09_logical_closure/proofs/prf_thm_rh_equiv_spectrum_real}
+\input{chapters/09_logical_closure/rems/rem_hadamard_multiplicity_preservation}
 
-\begin{remark}
-By Hadamard factorization, the multiplicity of a nontrivial zero \( \rho \) of \( \zeta(s) \) matches the order of vanishing of the canonical determinant at \( \lambda = i(\rho - \tfrac{1}{2}) \). Hence, if \( \zeta(s) \) had a multiple zero, the spectrum of \( L_{\mathrm{sym}} \) would reflect this via a repeated eigenvalue.
-This preserves full compatibility between the eigenvalue multiplicity and the analytic genus of \( \Xi(s) \).
-\end{remark}
-
-% === Self-adjointness of L_sym ⇒ spectrum ⊆ ℝ ⇒ RH holds unconditionally ===
+% --- RH follows from self-adjointness ---
 \input{chapters/09_logical_closure/thms/thm_truth_of_rh}
 \input{chapters/09_logical_closure/proofs/prf_thm_truth_of_rh}
 
-% --- Corollary: Full spectral determination of the zeta zeros ---
+% --- Full spectral ↔ zero set determination ---
 \input{chapters/09_logical_closure/cors/cor_spectral_determines_zeta}
 \input{chapters/09_logical_closure/proofs/prf_cor_spectral_determines_zeta}
+\input{chapters/09_logical_closure/rems/rem_trace_positivity_closure}
+\input{chapters/09_logical_closure/rems/rem_dag_acyclic_proof_flow}
 
-\begin{remark}
-By Lemma~\ref{lem:trace_distribution_positivity}, the spectral trace distribution
-\[
-\phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}}))
-\]
-defines a positive tempered distribution on \( \mathbb{R} \). This confirms that the
-functional calculus applied to \( L_{\mathrm{sym}} \) is positivity-preserving for all
-non-negative test functions \( \phi \in \mathcal{S}(\mathbb{R}) \), and ensures
-analytic and spectral compatibility for zeta-regularized dynamics.
-\end{remark}
-
-\begin{remark}[Final Deductive Closure]
-The analytic structure of \( \Xi(s) \) canonically determines the operator \( L_{\mathrm{sym}} \). Its spectral data, via determinant and trace asymptotics, canonically determine the zero set of \( \Xi(s) \). The self-adjointness of \( L_{\mathrm{sym}} \) implies real spectrum, which under the spectral bijection is logically equivalent to RH. Therefore:
-\[
-\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
-\quad \Longleftrightarrow \quad
-\rho = \tfrac{1}{2} + i\gamma \text{ for all } \zeta(\rho) = 0,
-\]
-and thus the Riemann Hypothesis holds.
-\end{remark}
-
+% --- Chapter Summary ---
 \input{chapters/09_logical_closure/summary}

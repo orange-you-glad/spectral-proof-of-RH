@@ -1,16 +1,16 @@
-\begin{proof}[Proof of Corollary~\ref{cor:spectral_determines_zeta}]
-From Lemma~\ref{lem:spectral_zero_encoding}, there exists a bijection between the nontrivial zeros \( \rho \in \mathbb{C} \) of \( \zeta(s) \) and the nonzero spectrum of the canonical operator \( L_{\mathrm{sym}} \), given by:
+\begin{proof}[Proof of \corref{cor:spectral_determines_zeta}]
+From \lemref{lem:spectral_zero_encoding}, there exists a multiplicity-preserving bijection between the nontrivial zeros \( \rho \in \C \) of \( \zetaR(s) \) and the nonzero spectrum of the canonical operator \( L_{\sym} \), given by:
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}, \qquad
-\rho = \tfrac{1}{2} + i\mu_\rho^{-1}.
+\rho = \tfrac{1}{2} + i \mu_\rho^{-1}.
 \]
 
-This correspondence preserves multiplicities due to the structure of the zeta-regularized Fredholm determinant:
+This correspondence preserves multiplicities due to the Hadamard factorization structure of the determinant:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
 \]
-By the Hadamard factorization of \( \Xi(s) \), the entire function is determined solely by its zero set and their orders of vanishing. Thus, the determinant encodes the full analytic structure of the nontrivial zeros of \( \zeta(s) \), multiplicity included.
+whose zeros fully determine \( \XiR(s) \) and thus encode all nontrivial zeta zeros with their correct orders.
 
 \paragraph{Conclusion.}
-Via the inverse map \( \mu \mapsto \rho := \tfrac{1}{2} + i\mu^{-1} \), the nonzero spectrum of \( L_{\mathrm{sym}} \) determines the nontrivial zero set of \( \zeta(s) \), completing the proof.
+The map \( \mu \mapsto \rho := \tfrac{1}{2} + i \mu^{-1} \) defines a canonical bijection from \( \Spec(L_{\sym}) \setminus \{0\} \) to the nontrivial zero set of \( \zetaR(s) \), with multiplicities preserved. Therefore, the spectrum of \( L_{\sym} \) determines the zeros completely.
 \end{proof}

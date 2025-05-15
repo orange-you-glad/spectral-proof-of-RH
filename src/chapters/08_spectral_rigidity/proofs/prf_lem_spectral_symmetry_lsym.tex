@@ -1,24 +1,32 @@
-\begin{proof}[Proof of Lemma~\ref{lem:spectral_symmetry_lsym}]
-The canonical determinant identity is
+\begin{proof}[Proof of \lemref{lem:spectral_symmetry}]
+The canonical determinant identity reads:
 \[
-\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)},
 \]
-where \( \Xi(s) \) is entire of order one and satisfies the functional symmetry
+where \( \XiR(s) \) is entire of order one and satisfies the functional symmetry:
 \[
-\Xi\left(\tfrac{1}{2} + i\lambda\right) = \Xi\left(\tfrac{1}{2} - i\lambda\right).
+\XiR\left(\tfrac{1}{2} + i\lambda\right) = \XiR\left(\tfrac{1}{2} - i\lambda\right).
 \]
-It follows that
+
+Hence,
 \[
-\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \det\nolimits_{\zeta}(I + \lambda L_{\mathrm{sym}}).
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \det\nolimits_\zeta(I + \lambda L_{\sym}),
 \]
+so the determinant is an even function of \( \lambda \).
 
 \paragraph{Spectral Interpretation.}
-For trace-class self-adjoint operators, the zeros of \( \lambda \mapsto \det\nolimits_{\zeta}(I - \lambda L) \) coincide with the reciprocals of the nonzero eigenvalues of \( L \), counted with multiplicity:
+For a compact, self-adjoint trace-class operator \( L \), the zeros of the function
 \[
-\lambda = \frac{1}{\mu} \quad \Longleftrightarrow \quad \mu \in \operatorname{Spec}(L) \setminus \{0\}.
+\lambda \mapsto \det\nolimits_\zeta(I - \lambda L)
 \]
-Thus, if \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \), then so is \( -\mu \), since the set of determinant zeros is invariant under \( \lambda \mapsto -\lambda \).
+occur at \( \lambda = \mu^{-1} \), where \( \mu \in \Spec(L) \setminus \{0\} \), counted with multiplicity.
+
+Since the determinant is even, its zero set is symmetric under \( \lambda \mapsto -\lambda \). Therefore,
+\[
+\mu \in \Spec(L_{\sym}) \quad \Longrightarrow \quad -\mu \in \Spec(L_{\sym}),
+\]
+with matching multiplicities.
 
 \paragraph{Conclusion.}
-Therefore, the spectrum of \( L_{\mathrm{sym}} \) is symmetric under \( \mu \mapsto -\mu \), with multiplicities preserved.
+The spectrum of \( L_{\sym} \) is symmetric under reflection \( \mu \mapsto -\mu \), as claimed.
 \end{proof}

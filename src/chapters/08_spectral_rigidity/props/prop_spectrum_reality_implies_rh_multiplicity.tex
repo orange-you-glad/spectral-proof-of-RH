@@ -1,25 +1,24 @@
 \begin{proposition}[Spectral Reality Implies RH and Simplicity]
 \label{prop:spectrum_reality_implies_rh_multiplicity}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator associated with the completed Riemann zeta function \( \Xi(s) \). Define its spectral Fredholm determinant by
+
+Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator associated with the completed Riemann zeta function \( \XiR(s) \), and define its spectral determinant:
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)}.
 \]
 
-Assume the following:
+Assume:
 \begin{enumerate}
-  \item[\textnormal{(i)}] The spectrum of \( L_{\mathrm{sym}} \) lies entirely on the real line:
+  \item[\textup{(i)}] The spectrum of \( L_{\sym} \) lies entirely on the real axis:
   \[
-  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+  \Spec(L_{\sym}) \subset \R.
   \]
-  \item[\textnormal{(ii)}] Each nonzero eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) has algebraic multiplicity one.
+
+  \item[\textup{(ii)}] Each nonzero eigenvalue \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) is simple (algebraic multiplicity one).
 \end{enumerate}
 
-Then every nontrivial zero \( \rho \) of the Riemann zeta function satisfies the Riemann Hypothesis and is simple:
+Then every nontrivial zero \( \rho \) of the Riemann zeta function satisfies:
 \[
-\zeta(\rho) = 0 \quad \Longrightarrow \quad \Re(\rho) = \tfrac{1}{2}, \quad \operatorname{ord}_\rho(\zeta) = 1.
+\Re(\rho) = \tfrac{1}{2}, \qquad \operatorname{ord}_\rho(\zetaR) = 1,
 \]
-
-\medskip
-\noindent
-That is, the spectral reality and simplicity of the canonical operator \( L_{\mathrm{sym}} \) ensure that all nontrivial zeros of \( \zeta(s) \) lie on the critical line and have multiplicity one.
+i.e., the Riemann Hypothesis holds and all nontrivial zeros are simple.
 \end{proposition}

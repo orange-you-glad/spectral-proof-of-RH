@@ -1,0 +1,26 @@
+\begin{proof}[Proof of \lemref{lem:trace_distribution_positive}]
+Since \( L_{\sym} \in \TC(\HPsi) \) is compact and self-adjoint, it admits a spectral decomposition:
+\[
+L_{\sym} = \sum_n \mu_n \langle \cdot, \psi_n \rangle \psi_n,
+\]
+where \( \{ \psi_n \} \subset \HPsi \) is an orthonormal basis, and \( \{ \mu_n \} \subset \R \) are the eigenvalues, counted with multiplicity.
+
+Let \( \varphi \in \Schwartz(\R) \) be real-valued. Then by the spectral theorem:
+\[
+\varphi(L_{\sym}) = \sum_n \varphi(\mu_n) \langle \cdot, \psi_n \rangle \psi_n,
+\]
+and thus,
+\[
+\Tr(\varphi(L_{\sym})) = \sum_n \varphi(\mu_n).
+\]
+
+If \( \varphi(\lambda) \ge 0 \) for all \( \lambda \in \R \), each term is nonnegative, and hence:
+\[
+\Tr(\varphi(L_{\sym})) \ge 0.
+\]
+
+Since \( \{ \mu_n \} \) has at most polynomial growth and \( \varphi \in \Schwartz(\R) \) has rapid decay, the map \( \varphi \mapsto \Tr(\varphi(L_{\sym})) \) is continuous in the Schwartz topology and defines a tempered distribution.
+
+\paragraph{Conclusion.}
+The spectral trace functional is positive on nonnegative test functions and tempered on \( \Schwartz(\R) \), completing the proof.
+\end{proof}

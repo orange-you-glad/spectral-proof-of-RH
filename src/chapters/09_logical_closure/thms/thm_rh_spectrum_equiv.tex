@@ -1,39 +1,40 @@
 \begin{theorem}[Spectral Equivalence with the Riemann Hypothesis]
 \label{thm:rh_spectrum_equiv}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+
+Let \( L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx),
+\HPsi := L^2(\R, e^{\alpha |x|} dx),
+\qquad \text{for fixed } \alpha > \pi.
 \]
-for fixed weight parameter \( \alpha > \pi \). Let
+Define the canonical spectral map
 \[
 \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
 \]
-denote the spectral image of a nontrivial zero \( \rho \in \mathbb{C} \) of the Riemann zeta function.
+for each nontrivial zero \( \rho \in \C \) of the Riemann zeta function \( \zetaR(s) \).
 
 Then the following are equivalent:
 \begin{enumerate}
-  \item[\textup{(i)}] The Riemann Hypothesis holds: every nontrivial zero \( \rho \in \mathbb{C} \) of \( \zeta(s) \) satisfies
+  \item[\textup{(i)}] The Riemann Hypothesis holds:
   \[
-  \Re(\rho) = \tfrac{1}{2}.
+  \Re(\rho) = \tfrac{1}{2}, \quad \text{for all nontrivial zeros } \rho.
   \]
 
-  \item[\textup{(ii)}] The spectrum of the canonical operator \( L_{\mathrm{sym}} \) lies entirely on the real line:
+  \item[\textup{(ii)}] The spectrum of \( L_{\sym} \) lies entirely on the real line:
   \[
-  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+  \Spec(L_{\sym}) \subset \R.
   \]
 \end{enumerate}
 
 \medskip
+
 \noindent
-This equivalence follows from the canonical spectral mapping
+This equivalence follows from the bijective spectral encoding
 \[
 \rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
 \]
-which defines a multiplicity-preserving bijection between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( L_{\mathrm{sym}} \), as established in Theorem~\ref{thm:spectral-zero-bijection-revised}.
-
-The determinant identity
+which matches nontrivial zeta zeros with the nonzero spectrum of \( L_{\sym} \), as established in \thmref{thm:spectral_zero_bijection_revised}. The Carleman determinant identity
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)}
 \]
-encodes the zero set of \( \zeta(s) \) in the spectral data of \( L_{\mathrm{sym}} \). Thus, reality of the spectrum is logically equivalent to the critical-line condition \( \Re(\rho) = \tfrac{1}{2} \) for all nontrivial zeros \( \rho \).
+ensures that reality of spectrum corresponds exactly to the critical-line condition for all \( \rho \in \Spec(\zetaR) \).
 \end{theorem}

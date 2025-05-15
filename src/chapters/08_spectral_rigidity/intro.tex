@@ -1,60 +1,61 @@
 \subsection*{Introduction}
+\input{chapters/08_spectral_rigidity/rems/rem_structural_role_of_ch8}
 
-This chapter recasts the Riemann Hypothesis as a statement of spectral rigidity: the assertion that the spectrum of the canonical trace-class operator
+This chapter recasts the Riemann Hypothesis as a statement of spectral rigidity: that the spectrum of the canonical trace-class operator
 \[
-L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}),
+L_{\sym} \in \TC(\HPsi),
 \]
-constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \), lies entirely in \( \mathbb{R} \) if and only if all nontrivial zeros of \( \zeta(s) \) lie on the critical line \( \Re(s) = \tfrac{1}{2} \).
+constructed via mollified convolution from the inverse Fourier transform of the completed zeta function \( \XiR(s) \), is real if and only if all nontrivial zeros of \( \zetaR(s) \) lie on the critical line \( \Re(s) = \tfrac{1}{2} \).
 
 \paragraph{Goals.}
 \begin{itemize}
   \item \textit{Spectral Encoding.}  
   The Carleman \(\zeta\)-regularized determinant identity
   \[
-  \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
-  = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
+  \det\nolimits_{\zeta}(I - \lambda L_{\sym})
+  = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}
   \]
-  induces a multiplicity-preserving map
+  defines a multiplicity-preserving map
   \[
   \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
   \]
-  sending nontrivial zeros \( \rho \) of \( \zeta(s) \) to eigenvalues \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \). This encoding intertwines the Hadamard product expansion of \( \Xi(s) \) with the spectral structure of \( L_{\mathrm{sym}} \). We prove that every zero of the determinant corresponds to a spectral eigenvalue.
+  sending nontrivial zeros \( \rho \in \Spec(\zetaR) \) to eigenvalues \( \mu_\rho \in \Spec(L_{\sym}) \). This encoding intertwines the Hadamard factorization of \( \XiR(s) \) with the spectral structure of \( L_{\sym} \). We show that every zero of the determinant corresponds to an eigenvalue.
 
   \item \textit{Spectral Rigidity.}  
-  While \( L_{\mathrm{sym}} \) is self-adjoint and hence has real spectrum by construction, we prove the converse: if all encoded eigenvalues \( \mu_\rho \in \mathbb{R} \), then the corresponding zeros \( \rho \) lie on the critical line. That is,
+  While \( L_{\sym} \) is self-adjoint and hence has real spectrum by construction, we prove the converse: if all encoded eigenvalues \( \mu_\rho \in \R \), then the corresponding zeros lie on the critical line. That is,
   \[
-  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \Spec(L_{\sym}) \subset \R
   \quad \Longleftrightarrow \quad
-  \rho = \tfrac{1}{2} + i\gamma, \quad \gamma \in \mathbb{R}.
+  \Re(\rho) = \tfrac{1}{2}, \quad \text{for all } \rho \in \Spec(\zetaR).
   \]
-  Determinantal vanishing implies spectral inclusion via analytic continuation and Fredholm theory, without requiring an explicit spectral bijection.
+  Determinantal vanishing implies spectral inclusion via analytic continuation and Fredholm theory, without requiring an a priori spectral bijection.
 
   \item \textit{Spectral Symmetry.}  
-  The functional equation \( \Xi(\tfrac{1}{2} + i\lambda) = \Xi(\tfrac{1}{2} - i\lambda) \) implies that the spectrum is symmetric:
+  The functional identity \( \XiR(\tfrac{1}{2} + i\lambda) = \XiR(\tfrac{1}{2} - i\lambda) \) implies symmetry of the spectrum:
   \[
-  \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \quad \Rightarrow \quad -\mu \in \operatorname{Spec}(L_{\mathrm{sym}}),
+  \mu \in \Spec(L_{\sym}) \quad \Rightarrow \quad -\mu \in \Spec(L_{\sym}),
   \]
-  with equal multiplicity. This symmetry follows directly from the evenness of the canonical Fourier profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \).
+  with equal multiplicities. This follows from the evenness of the centered Fourier profile \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \).
 
   \item \textit{Trace Positivity.}  
-  The spectral trace pairing
+  The trace pairing
   \[
-  \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}}))
+  \phi \mapsto \Tr(\phi(L_{\sym}))
   \]
-  defines a positive tempered distribution on \( \mathbb{R} \). In particular,
+  defines a positive tempered distribution on \( \R \). In particular,
   \[
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \ge 0 \quad \text{for all } t > 0,
+  \Tr(e^{-tL_{\sym}^2}) \ge 0, \qquad \forall\, t > 0,
   \]
-  reflecting positivity of the spectral measure under heat kernel regularization. This distributional positivity holds for all nonnegative test functions \( \phi \in \mathcal{S}(\mathbb{R}) \), supporting a harmonic-analytic interpretation of the spectral trace.
+  reflecting positivity of the spectral measure under heat kernel regularization. This distributional positivity holds for all \( \phi \in \Schwartz(\R) \), reinforcing the harmonic-analytic structure of the trace.
 
   \item \textit{Analytic Independence.}  
-  All results in this chapter are derived using classical analytic techniques:
+  All results in this chapter follow from classical analytic theory:
   \begin{itemize}
     \item spectral theory for compact self-adjoint operators;
-    \item Gaussian decay and trace-class convergence of \( e^{-tL_{\mathrm{sym}}^2} \);
-    \item Hadamard factorization and functional identity of \( \Xi(s) \);
-    \item Fredholm determinant theory and zero-to-spectrum transfer;
-    \item and spectral unitarity from orthonormal diagonalization.
+    \item Gaussian-decay kernel convergence and semigroup regularity;
+    \item Hadamard product structure and the functional identity of \( \XiR(s) \);
+    \item Fredholm theory and determinant–spectrum correspondence;
+    \item unitary equivalence via orthonormal diagonalization.
   \end{itemize}
-  No appeal is made to modular forms, trace formulas, or Langlands theory.
+  No input is required from modular forms, trace formulas, or Langlands theory.
 \end{itemize}

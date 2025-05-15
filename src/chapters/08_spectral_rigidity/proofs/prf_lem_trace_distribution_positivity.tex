@@ -1,36 +1,34 @@
-\begin{proof}[Proof of Lemma~\ref{lem:trace_distribution_positivity}]
-Let \( \{ \mu_n \} \subset \mathbb{R} \) denote the discrete spectrum of the compact, self-adjoint operator \( L_{\mathrm{sym}} \), with each eigenvalue repeated according to its finite multiplicity.
+\begin{proof}[Proof of \lemref{lem:trace_distribution_positivity}]
+Let \( \{ \mu_n \} \subset \R \) denote the discrete spectrum of the compact, self-adjoint operator \( L_{\sym} \), with eigenvalues repeated by multiplicity.
 
 \paragraph{(i) Well-Definedness and Temperedness.}
-For \( \phi \in \mathcal{S}(\mathbb{R}) \), the operator \( \phi(L_{\mathrm{sym}}) \) is defined via spectral functional calculus:
+For \( \phi \in \Schwartz(\R) \), the operator \( \phi(L_{\sym}) \) is defined via spectral functional calculus:
 \[
-\phi(L_{\mathrm{sym}}) = \sum_n \phi(\mu_n) P_n,
+\phi(L_{\sym}) = \sum_n \phi(\mu_n) P_n,
 \]
-where \( P_n \) denotes the orthogonal projection onto the eigenspace corresponding to \( \mu_n \), and each \( P_n \) is of finite rank.
+where \( P_n \) is the finite-rank projection onto the eigenspace for \( \mu_n \).
 
-Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), its eigenvalues \( \mu_n \to 0 \) and satisfy \( \sum_n |\mu_n| < \infty \). The Schwartz decay of \( \phi \in \mathcal{S}(\mathbb{R}) \) ensures that for any \( N \in \mathbb{N} \), there exists \( C_N > 0 \) such that
+Since \( L_{\sym} \in \TC(\HPsi) \), we have \( \sum_n |\mu_n| < \infty \), and \( \mu_n \to 0 \). For each \( N \in \N \), there exists \( C_N > 0 \) such that
 \[
 |\phi(\mu_n)| \le C_N (1 + |\mu_n|)^{-N}.
 \]
-Choosing \( N \) large enough yields
+Choosing \( N \) large enough ensures:
 \[
-\sum_n |\phi(\mu_n)| < \infty,
+\sum_n |\phi(\mu_n)| < \infty.
 \]
-so the spectral trace
+Hence, the trace
 \[
-\operatorname{Tr}(\phi(L_{\mathrm{sym}})) := \sum_n \phi(\mu_n)
+\Tr(\phi(L_{\sym})) := \sum_n \phi(\mu_n)
 \]
-is well-defined and finite. Furthermore, the map \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) is continuous on \( \mathcal{S}(\mathbb{R}) \), bounded by a finite collection of Schwartz seminorms. Thus, it defines a tempered distribution on \( \mathbb{R} \).
+is absolutely convergent. Moreover, \( \phi \mapsto \Tr(\phi(L_{\sym})) \) is continuous with respect to the Schwartz topology, and defines a tempered distribution on \( \R \).
 
 \paragraph{(ii) Positivity.}
-If \( \phi \in \mathcal{S}(\mathbb{R}) \) satisfies \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \mathbb{R} \), then
+If \( \phi \in \Schwartz(\R) \) satisfies \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \R \), then:
 \[
-\operatorname{Tr}(\phi(L_{\mathrm{sym}})) = \sum_n \phi(\mu_n) \ge 0,
+\Tr(\phi(L_{\sym})) = \sum_n \phi(\mu_n) \ge 0.
 \]
-since each term in the sum is nonnegative.
-
-This positivity reflects the nonnegativity of the heat kernel \( K_t(x, x) \) and its diagonal integral expansion. In particular, positivity is supported analytically by Proposition~\ref{prop:heat_trace_uniform_conv}, and the full decay and regularity justification in Appendix~\ref{app:heat_kernel_construction}.
+Each term in the sum is nonnegative. This reflects the positivity of the spectral measure associated with \( L_{\sym} \), which arises analytically from the positivity of the heat kernel \( K_t(x,x) \ge 0 \), and is justified by the short-time convergence result \propref{prop:heat_trace_uniform_conv} and kernel regularity developed in \appref{app:heat_kernel_construction}.
 
 \paragraph{Conclusion.}
-The trace pairing \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) defines a positive tempered distribution on \( \mathbb{R} \), as claimed.
+The trace pairing \( \phi \mapsto \Tr(\phi(L_{\sym})) \) defines a positive tempered distribution on \( \R \), as claimed.
 \end{proof}

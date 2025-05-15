@@ -1,0 +1,23 @@
+\begin{proof}[Proof of \thmref{thm:rh_from_real_simple_spectrum}]
+Assume \( L_{\sym} \in \TC(\HPsi) \) satisfies the three stated conditions:
+\begin{enumerate}
+  \item[\textup{(i)}] \( \Spec(L_{\sym}) \subset \R \);
+  \item[\textup{(ii)}] All nonzero eigenvalues \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) are simple;
+  \item[\textup{(iii)}] The spectral determinant satisfies:
+  \[
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}.
+  \]
+\end{enumerate}
+
+\paragraph{Step 1: Determinantal Zeros Correspond to Zeta Zeros.}
+By the determinant identity and analytic Fredholm theory (cf. \lemref{lem:det_zero_implies_spectrum}), each nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \) of \( \zetaR(s) \) corresponds to a spectral eigenvalue \( \mu_\rho = \gamma^{-1} \in \Spec(L_{\sym}) \setminus \{0\} \).
+
+\paragraph{Step 2: Real Spectrum Implies RH.}
+From the encoding \( \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \R \), it follows that \( \Re(\rho) = \tfrac{1}{2} \). Therefore, all nontrivial zeros lie on the critical line, establishing RH.
+
+\paragraph{Step 3: Simplicity of Zeros.}
+Since all nonzero eigenvalues are simple and the spectral map \( \rho \mapsto \mu_\rho \) preserves multiplicity (by \lemref{lem:spectral_encoding_injection}), it follows that each zero of \( \zetaR(s) \) is simple.
+
+\paragraph{Conclusion.}
+Both the Riemann Hypothesis and the simplicity of all nontrivial zeros follow from the spectral assumptions on \( L_{\sym} \).
+\end{proof}

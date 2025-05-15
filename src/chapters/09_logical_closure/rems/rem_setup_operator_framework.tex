@@ -1,0 +1,26 @@
+\begin{remark}[Canonical Operator Framework]
+\label{rem:setup_operator_framework}
+
+Let \( \HPsi := L^2(\R, e^{\alpha|x|} dx) \) denote the exponentially weighted Hilbert space, with fixed weight parameter \( \alpha > \pi \). Throughout this chapter, we work with the canonical operator
+\[
+L_{\sym} \in \TC(\HPsi),
+\]
+constructed in \cref{sec:operator_construction} as the trace-norm limit of mollified symmetric convolution operators derived from the inverse Fourier transform of the completed zeta function \( \XiR(s) \).
+
+The operator \( L_{\sym} \) satisfies:
+\begin{itemize}
+  \item It is compact and self-adjoint with real, discrete spectrum;
+  \item It lies in the trace-class \( \TC(\HPsi) \), with analytic control on heat kernel asymptotics and spectral determinant growth;
+  \item It satisfies the canonical determinant identity:
+  \[
+  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
+  \qquad \forall\, \lambda \in \C,
+  \]
+  where the right-hand side is normalized to 1 at \( \lambda = 0 \). This identity analytically encodes all nontrivial zeros of \( \zetaR(s) \) via spectral calculus.
+\end{itemize}
+
+\medskip
+
+\noindent
+These structural properties are analytically proven in Chapters~\ref{sec:determinant_identity}–\ref{sec:spectral_implications}, and are assumed throughout this chapter without further restatement. No appeal is made to RH or any unproven zero-distribution assumption.
+\end{remark}

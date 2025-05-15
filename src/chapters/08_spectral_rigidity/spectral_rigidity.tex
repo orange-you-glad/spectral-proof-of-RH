@@ -2,13 +2,14 @@
 \label{sec:spectral_rigidity}
 
 \input{chapters/08_spectral_rigidity/intro}
+\input{chapters/08_spectral_rigidity/rems/rem_structural_role_of_ch8}
 
 %------------------------------------------------------------------
 \subsection{Spectral Reality and the Riemann Hypothesis}
 
 % === Spectral encoding from zeta zeros to eigenvalues via the determinant identity ===
 \input{chapters/08_spectral_rigidity/lems/lem_spectral_encoding_injection}
-\input{chapters/08_spectral_rigidity/proofs/prf_spectral_encoding_injection}
+\input{chapters/08_spectral_rigidity/proofs/prf_lem_spectral_encoding_injection}
 
 % === Spectrum is symmetric under mu ↦ -mu due to Xi symmetry ===
 \input{chapters/08_spectral_rigidity/lems/lem_spectral_symmetry}
@@ -26,8 +27,8 @@
 \input{chapters/08_spectral_rigidity/props/prop_spectrum_reality_implies_rh_multiplicity}
 \input{chapters/08_spectral_rigidity/proofs/prf_prop_spectrum_reality_implies_rh_multiplicity}
 
-\input{chapters/08_spectral_rigidity/lems/lem_real_spectrum_implies_rh}
-\input{chapters/08_spectral_rigidity/proofs/prf_lem_real_spectrum_implies_rh}
+\input{chapters/08_spectral_rigidity/lems/lem_real_spectrum_implies_rh_rigidity}
+\input{chapters/08_spectral_rigidity/proofs/prf_lem_real_spectrum_implies_rh_rigidity}
 
 % === Determinant and spectrum uniquely determine the operator ===
 \input{chapters/08_spectral_rigidity/props/prop_inverse_spectral_rigidity}
@@ -39,9 +40,14 @@
 % === Positivity of trace pairing and spectral measure from heat kernel regularization ===
 \input{chapters/08_spectral_rigidity/lems/lem_trace_distribution_positivity}
 \input{chapters/08_spectral_rigidity/proofs/prf_lem_trace_distribution_positivity}
+\input{chapters/08_spectral_rigidity/rems/rem_functional_calculus_trace}
 
 % === Trace functional defines a positive distribution ===
-\input{chapters/08_spectral_rigidity/lems/sublem_trace_distribution_positive}
-\input{chapters/08_spectral_rigidity/proofs/prf_sublem_trace_distribution_positive}
+\input{chapters/08_spectral_rigidity/lems/lem_trace_distribution_positive}
+\input{chapters/08_spectral_rigidity/proofs/prf_lem_trace_distribution_positive}
+
+% === Unified rigidity theorem: RH from spectrum + determinant ===
+\input{chapters/08_spectral_rigidity/thms/thm_rh_from_real_simple_spectrum}
+\input{chapters/08_spectral_rigidity/proofs/prf_thm_rh_from_real_simple_spectrum}
 
 \input{chapters/08_spectral_rigidity/summary}

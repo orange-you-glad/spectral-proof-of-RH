@@ -1,25 +1,35 @@
-\begin{proof}[Proof of Lemma~\ref{lem:det_zero_implies_spectrum}]
-Let \( T \in \mathcal{C}_1(H) \) be compact and self-adjoint. Then its spectrum consists of a discrete set of real eigenvalues \( \{ \mu_n \} \subset \mathbb{R} \setminus \{0\} \), accumulating only at zero.
+\begin{proof}[Proof of \lemref{lem:det_zero_implies_spectrum}]
+Let \( T \in \TC(H) \) be compact and self-adjoint. Then its spectrum consists of a discrete set of real eigenvalues \( \{ \mu_n \} \subset \R \setminus \{0\} \), with \( \mu_n \to 0 \), counted with multiplicity.
 
-The Carleman zeta-regularized Fredholm determinant admits the entire Hadamard product expansion:
+The Carleman \(\zeta\)-regularized determinant admits the canonical Hadamard product:
 \[
-\det\nolimits_{\zeta}(I - \lambda T) = \prod_{n=1}^\infty (1 - \lambda \mu_n),
+\det\nolimits_\zeta(I - \lambda T) = \prod_{n=1}^\infty (1 - \lambda \mu_n),
 \]
-which converges absolutely on compact subsets of \( \mathbb{C} \) since \( \mu_n \to 0 \) and \( T \in \mathcal{C}_1(H) \).
+which converges absolutely on compact subsets of \( \C \), since \( T \in \TC(H) \Rightarrow \sum |\mu_n| < \infty \).
 
-\paragraph{Step 1: Determinant Vanishing Implies Spectral Pole.}
-Suppose \( \det\nolimits_{\zeta}(I - \lambda T) = 0 \) at \( \lambda = \lambda_0 \in \mathbb{C} \setminus \{0\} \). Then there exists some \( n \in \mathbb{N} \) such that:
+\paragraph{Step 1: Determinant Zero Implies Reciprocal Eigenvalue.}
+Suppose
+\[
+\det\nolimits_\zeta(I - \lambda_0 T) = 0, \qquad \lambda_0 \in \C \setminus \{0\}.
+\]
+Then for some index \( n \), we have:
 \[
 1 - \lambda_0 \mu_n = 0 \quad \Longrightarrow \quad \lambda_0 = \mu_n^{-1}.
 \]
 
-\paragraph{Step 2: Inversion and Spectral Inclusion.}
-It follows that \( \mu_n = \lambda_0^{-1} \in \operatorname{Spec}(T) \), and hence \( \lambda_0 \in \operatorname{Spec}(T)^{-1} \). In particular, \( \lambda_0^{-1} \) is an eigenvalue of \( T \), completing the implication.
+\paragraph{Step 2: Spectrum Inclusion.}
+Thus,
+\[
+\lambda_0^{-1} = \mu_n \in \Spec(T),
+\quad \text{and} \quad \lambda_0 \in \Spec(T)^{-1}.
+\]
 
 \paragraph{Conclusion.}
-Zeros of the regularized determinant correspond precisely to the nonzero reciprocal eigenvalues of \( T \). Therefore,
+Every nonzero zero of the determinant corresponds to a nonzero eigenvalue of \( T \), and:
 \[
-\lambda \in \mathbb{C}, \; \det\nolimits_{\zeta}(I - \lambda T) = 0 \quad \Longrightarrow \quad \lambda^{-1} \in \operatorname{Spec}(T),
+\lambda \in \C, \quad \det\nolimits_\zeta(I - \lambda T) = 0
+\quad \Longrightarrow \quad
+\lambda^{-1} \in \Spec(T).
 \]
-as claimed.
+This completes the proof.
 \end{proof}

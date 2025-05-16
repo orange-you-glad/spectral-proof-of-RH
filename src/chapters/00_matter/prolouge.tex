@@ -4,7 +4,7 @@
 \medskip
 
 \noindent
-This manuscript offers a canonical spectral realization of the Riemann Hypothesis (RH) via a trace-class operator whose zeta-regularized determinant recovers the completed Riemann zeta function. It unifies and rigorizes long-standing heuristics—Hilbert–Pólya, Weil’s explicit formula, Selberg trace analogies—into a fully operator-theoretic framework. The narrative is modular, layered, and guided by structural transparency.
+This manuscript offers a canonical spectral realization of the Riemann Hypothesis (RH) via a trace-class operator whose zeta-regularized determinant recovers the completed Riemann zeta function. It unifies and rigorizes long-standing heuristics—Hilbert--Pólya, Weil's explicit formula, Selberg trace analogies—into a fully operator-theoretic framework. The narrative is modular, layered, and guided by structural transparency.
 
 \paragraph*{Scope.} The manuscript constructs a compact, self-adjoint, trace-class operator
 \[
@@ -14,7 +14,21 @@ acting on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} = L^2(\mat
 \[
 \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-where \( \Xi(s) \) is the completed Riemann zeta function. The analytic infrastructure relies only on rigorous trace-class convergence, kernel decay, spectral bijection, and Tauberian growth theory.
+where \( \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s) \) is the completed Riemann zeta function. The analytic infrastructure relies on trace-class convergence, kernel decay, spectral bijection, and Tauberian growth theory.
+
+\paragraph*{Arithmetic Context.} The canonical operator \( L_{\sym} \) resolves the Hilbert--Pólya conjecture: it is a self-adjoint compact operator whose spectrum corresponds bijectively to the imaginary parts of the nontrivial zeros of \( \zeta(s) \). Its construction is rooted in arithmetic analogies. Recall that the Riemann zeta function satisfies both an Euler product
+\[
+\zeta(s) = \prod_p \left(1 - p^{-s}\right)^{-1}, \quad \Re(s) > 1,
+\]
+and a functional equation involving the gamma factor. Moreover, the explicit formula of Riemann--Weil (see~\cite[Chap.~17]{Titchmarsh1986Zeta},~\cite[Chap.~5]{IwaniecKowalski}) relates sums over primes to sums over the nontrivial zeros of \( \zeta(s) \), and suggests a duality akin to the Lefschetz fixed-point formula in \(\ell\)-adic cohomology.
+
+In the function field setting, the Weil conjectures interpret zeta functions of varieties over finite fields as regularized products over Frobenius eigenvalues acting on \(\ell\)-adic cohomology~\cite{Deligne1971WeilI}. Analogously, this manuscript constructs \( L_{\sym} \) from the Fourier transform of \( \Xi(s) \), such that its spectrum \( \mu_\rho = 1 / i(\rho - \tfrac{1}{2}) \) encodes each nontrivial zero \( \rho \) of \( \zeta(s) \), with the determinant identity serving as an analytic lift of the Euler product.
+
+The logarithmic derivative of this determinant recovers a spectral version of the explicit formula, while the trace of \( L_{\sym}^n \) encodes the harmonic moments of the zeta spectrum. The trace of the heat kernel \( \mathrm{Tr}(e^{-tL_{\sym}^2}) \sim \tfrac{\log(1/t)}{\sqrt{t}} \) matches the asymptotics of the zero-counting function \( N(T) \sim \tfrac{T}{2\pi} \log \tfrac{T}{2\pi} \), thereby aligning this operator-theoretic framework with classical number theory.
+
+\paragraph*{Historical Background.} The spectral approach to RH dates to the Hilbert--Pólya conjecture (early 20th century), which posits that the nontrivial zeros of \( \zeta(s) \) are eigenvalues of a suitable self-adjoint operator. Weil~\cite{Weil1952Explicite} reframed this in terms of explicit formulas as arithmetic trace identities. Selberg's trace formula (1956) provided concrete spectral tools for automorphic forms.
+
+More recent developments by Connes~\cite{Connes1999TraceFormula}, Deninger~\cite{Deninger1998Frobenius}, and Berry--Keating~\cite{Berry1986RiemannSpectra} proposed models for the zeta zeros within noncommutative geometry, arithmetic flows, and semiclassical quantum systems. However, none provided a rigorously defined, trace-class operator that matches \( \Xi(s) \) via zeta-regularized determinants. The operator \( L_{\sym} \) constructed here fills that gap.
 
 \paragraph*{Narrative Architecture.} The manuscript is organized into nine core analytic chapters, each logically self-contained:
 
@@ -39,13 +53,6 @@ where \( \Xi(s) \) is the completed Riemann zeta function. The analytic infrastr
 
   \item[\textbf{[S]}] \textbf{Speculative Extensions:} Functorial generalizations (\appref{app:functorial_extensions}), motivic outlooks (\appref{app:additional_structures}), and spectral physics analogies (\appref{app:spectral_physics_link}).
 \end{itemize}
-
-\paragraph*{Arithmetic Context.} The operator \( L_{\sym} \) is a constructive resolution of the Hilbert–Pólya program: a self-adjoint compact operator whose spectrum encodes the nontrivial zeros of \( \zeta(s) \). Unlike prior heuristic or cohomological proposals (e.g., Deninger, Connes, Berry–Keating), this operator is explicitly defined, trace class, and analytically convergent.
-
-It arises from Fourier inversion of the completed zeta function \( \Xi(s) \), with Gaussian mollification ensuring trace-norm convergence. The spectral determinant is constructed via Carleman regularization. Analytic continuation, kernel decay, and Tauberian growth yield the RH equivalence:
-\[
-\Spec(L_{\sym}) \subset \R \quad \Longleftrightarrow \quad \text{RH}.
-\]
 
 \paragraph*{Modular Design.} Each chapter is self-contained, with definitions, propositions, and proofs explicitly localized. Logical dependencies are tracked in the DAG (\appref{app:dependency_graph}), and the reader may follow a linear or modular path. Notation is summarized in Appendix~\ref{app:notation_summary}.
 

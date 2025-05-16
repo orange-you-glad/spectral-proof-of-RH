@@ -167,3 +167,14 @@
       \vskip -\ht\z@
       \box\z@}}}
 \makeatother
+
+% Suppress TOC entries for \subsection*, \subsubsection*, etc.
+\makeatletter
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname if@#1star\endcsname
+    \expandafter\@gobble
+  \else
+    \csname the#1\endcsname\quad
+  \fi
+}
+\makeatother

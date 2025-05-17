@@ -2,18 +2,18 @@
 \label{lem:distributional_trace_asymptotics}
 Let
 \[
-L_{\sym} \in \TC(\HPsi)
+L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha})
 \]
-be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha|x|} dx) \), with \( \alpha > \pi \). Define the spectral heat trace
+be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx) \), with \( \alpha > \pi \). Define the spectral heat trace
 \[
-f(t) := \Tr(e^{-t L_{\sym}^2}), \qquad t > 0.
+f(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}), \qquad t > 0.
 \]
 
 Then as \( t \to 0^+ \), the expansion
 \[
 f(t) \sim \sum_{n=0}^\infty A_n \, t^{n - \frac{1}{2}}
 \]
-holds in the sense of distributions on \( \R_{>0} \). Specifically, for any test function \( \psi \in C_c^\infty((0, \infty)) \),
+holds in the sense of distributions on \( \mathbb{R}_{>0} \). Specifically, for any test function \( \psi \in C_c^\infty((0, \infty)) \),
 \[
 \lim_{\varepsilon \to 0^+} \int_0^\infty f(t) \, \psi(t/\varepsilon) \, dt
 = \sum_{n=0}^\infty A_n \int_0^\infty t^{n - \frac{1}{2}} \, \psi(t)\, dt.
@@ -21,12 +21,12 @@ holds in the sense of distributions on \( \R_{>0} \). Specifically, for any test
 
 \medskip
 \noindent
-This distributional formulation captures the asymptotic structure of \( f(t) \) in a Tauberian scaling window, and governs both the spectral growth rates and the singular structure of the regularized determinant. In particular, the expansion remains valid in the space of tempered distributions \( \mathcal{D}'(\R_{>0}) \), and allows exact Laplace analysis of the trace integral appearing in
+This distributional formulation captures the asymptotic structure of \( f(t) \) in a Tauberian scaling window, and governs both the spectral growth rates and the singular structure of the regularized determinant. In particular, the expansion remains valid in the space of tempered distributions \( \mathcal{D}'(\mathbb{R}_{>0}) \), and allows exact Laplace analysis of the trace integral appearing in
 \[
-\log \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} f(t) \, dt.
+\log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} f(t) \, dt.
 \]
 
 \medskip
 \noindent
-The asymptotic equivalence in \( \mathcal{D}'(\R_{>0}) \) is a classical result of Laplace–Mellin theory; see Korevaar~\cite[Ch.~IV]{Korevaar2004Tauberian} and Hörmander~\cite[Vol.~I, §7.1]{Hormander1983Analysis} for distributional expansions of regularly varying functions and their Laplace transforms.
+The asymptotic equivalence in \( \mathcal{D}'(\mathbb{R}_{>0}) \) is a classical result of Laplace–Mellin theory; see Korevaar~\cite[Ch.~IV]{Korevaar2004Tauberian} and Hörmander~\cite[Vol.~I, §7.1]{Hormander1983Analysis} for distributional expansions of regularly varying functions and their Laplace transforms.
 \end{lemma}

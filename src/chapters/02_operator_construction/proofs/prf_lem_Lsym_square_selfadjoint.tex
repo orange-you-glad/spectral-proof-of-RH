@@ -1,37 +1,37 @@
 \begin{proof}[Proof of \lemref{lem:Lsym_square_selfadjoint}]
-We establish essential self-adjointness of \( L_{\sym}^2 \) on the Schwartz core \( \Schwartz \subset H_{\Psi_\alpha} \).
+We establish essential self-adjointness of \( L_{\mathrm{sym}}^2 \) on the Schwartz core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \).
 
 \paragraph{Step 1: Invariance of the Core.}
-Since \( L_{\sym} \) is defined via convolution with kernel \( k \in \Schwartz \), and convolution preserves \( \Schwartz \), we have
+Since \( L_{\mathrm{sym}} \) is defined via convolution with kernel \( k \in \mathcal{S}(\mathbb{R}) \), and convolution preserves the Schwartz space, we have:
 \[
-L_{\sym} : \Schwartz \to \Schwartz, \quad \Rightarrow \quad L_{\sym}^2 : \Schwartz \to \Schwartz.
+L_{\mathrm{sym}} : \mathcal{S}(\mathbb{R}) \to \mathcal{S}(\mathbb{R}), \quad \Rightarrow \quad L_{\mathrm{sym}}^2 : \mathcal{S}(\mathbb{R}) \to \mathcal{S}(\mathbb{R}).
 \]
-Thus, the domain \( \Schwartz \) is invariant under \( L_{\sym} \) and its square.
+Thus, the domain \( \mathcal{S}(\mathbb{R}) \) is invariant under \( L_{\mathrm{sym}} \) and its square.
 
 \paragraph{Step 2: Symmetry.}
-Because \( L_{\sym} \) is self-adjoint, it follows that
+Because \( L_{\mathrm{sym}} \) is self-adjoint, it follows that
 \[
-\langle L_{\sym}^2 f, g \rangle_{H_{\Psi_\alpha}} = \langle f, L_{\sym}^2 g \rangle_{H_{\Psi_\alpha}}, \qquad \forall f, g \in \Schwartz,
+\langle L_{\mathrm{sym}}^2 f, g \rangle_{H_{\Psi_\alpha}} = \langle f, L_{\mathrm{sym}}^2 g \rangle_{H_{\Psi_\alpha}}, \qquad \forall f, g \in \mathcal{S}(\mathbb{R}),
 \]
-so \( L_{\sym}^2 \) is symmetric on \( \Schwartz \).
+so \( L_{\mathrm{sym}}^2 \) is symmetric on \( \mathcal{S}(\mathbb{R}) \).
 
 \paragraph{Step 3: Nelson's Analytic Vector Criterion.}
-Since \( L_{\sym}^2 \) preserves \( \Schwartz \), and each \( f \in \Schwartz \) satisfies
+Since \( L_{\mathrm{sym}}^2 \) preserves \( \mathcal{S}(\mathbb{R}) \), and each \( f \in \mathcal{S}(\mathbb{R}) \) satisfies
 \[
-\| (L_{\sym}^2)^n f \| < C_n,
+\| (L_{\mathrm{sym}}^2)^n f \| < C_n,
 \]
-the elements of \( \Schwartz \) are analytic vectors for \( L_{\sym}^2 \). Thus, by Nelson’s analytic vector theorem~\cite[Thm.~X.36]{ReedSimon1975II}, we conclude:
+the elements of \( \mathcal{S}(\mathbb{R}) \) are analytic vectors for \( L_{\mathrm{sym}}^2 \). Thus, by Nelson’s analytic vector theorem~\cite[Thm.~X.36]{ReedSimon1975II}, we conclude:
 \[
-L_{\sym}^2 \text{ is essentially self-adjoint on } \Schwartz.
+L_{\mathrm{sym}}^2 \text{ is essentially self-adjoint on } \mathcal{S}(\mathbb{R}).
 \]
 
 \paragraph{Step 4: Spectral Discreteness.}
-Since \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \), we have \( L_{\sym}^2 \in \TC(H_{\Psi_\alpha}) \) as well. Then, by spectral theory of compact self-adjoint operators, the spectrum of \( L_{\sym}^2 \) consists of a discrete sequence of real eigenvalues:
+Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), we have \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) as well. Then, by spectral theory of compact self-adjoint operators, the spectrum satisfies:
 \[
-\Spec(L_{\sym}^2) \subset [0, \infty), \quad \text{accumulating only at zero},
+\operatorname{Spec}(L_{\mathrm{sym}}^2) \subset [0, \infty),
 \]
-each with finite multiplicity.
+and consists of discrete real eigenvalues with finite multiplicity, accumulating only at zero.
 
 \paragraph{Conclusion.}
-The operator \( L_{\sym}^2 \) is essentially self-adjoint on \( \Schwartz \), with closure admitting a discrete spectral resolution. This confirms the functional calculus infrastructure for defining zeta regularizations and heat kernels.
+The operator \( L_{\mathrm{sym}}^2 \) is essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \), with closure admitting a discrete spectral resolution. This confirms the analytic setup for functional calculus, heat kernel expansion, and spectral determinant theory.
 \end{proof}

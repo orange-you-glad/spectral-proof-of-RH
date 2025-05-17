@@ -1,12 +1,13 @@
 \begin{lemma}[Short-Time Upper Bound for the Heat Trace]
 \label{lem:hk_upper_bound}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator with spectrum \( \{ \mu_n \} \subset \R \), and let \( \{ e_n \} \subset \HPsi \) be an orthonormal basis of eigenvectors.
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator with spectrum \( \{ \mu_n \} \subset \mathbb{R} \), and let \( \{ e_n \} \subset H_{\Psi_\alpha} \) be an orthonormal basis of eigenvectors.
 
 Then there exists a constant \( c_2 > 0 \) such that for all \( 0 < t \le 1 \),
 \[
-\Tr\left( e^{-t L_{\sym}^2} \right) \le c_2\, t^{-1/2}.
+\operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) \le c_2\, t^{-1/2}.
 \]
 
+\medskip
 \noindent
 This inequality holds uniformly on compact subintervals of \( (0,1] \), and reflects the spectral scaling of dimension one. The constant \( c_2 \) depends only on the short-time behavior of the diagonal of the heat kernel \( K_t(x,x) \), which admits Gaussian upper bounds in the sense of Varadhan-type estimates.
 \end{lemma}

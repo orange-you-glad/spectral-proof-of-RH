@@ -2,42 +2,45 @@
 \label{lem:trace_class_via_weighted_L1}
 Let \( \alpha > \pi \), and define the exponentially weighted Hilbert space
 \[
-\HPsi := L^2\left(\R, \Psi_\alpha(x)\, dx\right), \qquad \text{with } \Psi_\alpha(x) := e^{\alpha |x|}.
+H_{\Psi_\alpha} := L^2\left(\mathbb{R}, \Psi_\alpha(x)\, dx\right), \qquad \text{with } \Psi_\alpha(x) := e^{\alpha |x|}.
 \]
 
-Let \( K(x,y) \in C^\infty(\R^2) \) be a measurable kernel satisfying the exponential integrability condition:
+Let \( K(x,y) \in C^\infty(\mathbb{R}^2) \) be a measurable kernel satisfying the exponential integrability condition:
 \[
-\iint_{\R^2} |K(x,y)|\, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\, dy < \infty.
+\iint_{\mathbb{R}^2} |K(x,y)|\, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\, dy < \infty.
 \]
 
-Define the integral operator \( T \colon \Schwartz \subset \HPsi \to \HPsi \) by
+Define the integral operator \( T \colon \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) by
 \[
-(Tf)(x) := \int_{\R} K(x,y)\, f(y)\, dy.
+(Tf)(x) := \int_{\mathbb{R}} K(x,y)\, f(y)\, dy.
 \]
 
 Then:
 \begin{itemize}
-    \item \( T \) extends to a bounded operator on \( \HPsi \);
-    \item \( T \in \mathcal{C}_1(\HPsi) \), i.e., trace class;
-    \item Its trace norm satisfies:
+    \item \( T \) extends to a bounded operator on \( H_{\Psi_\alpha} \);
+    \item \( T \in \mathcal{C}_1(H_{\Psi_\alpha}) \), i.e., it is trace class;
+    \item Its trace norm satisfies the bound:
     \[
-    \|T\|_{\mathcal{C}_1(\HPsi)} \le \iint_{\R^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy.
+    \|T\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le \iint_{\mathbb{R}^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy.
     \]
 \end{itemize}
 
 \medskip
 \noindent\textbf{Unitary Reduction.}
-Let \( U \colon \HPsi \to L^2(\R) \) be the unitary map
+Let \( U \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}) \) be the unitary map
 \[
 (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x), \qquad U^{-1} h(x) := \Psi_\alpha(x)^{-1/2} h(x).
 \]
-Then the conjugated operator \( \widetilde{T} := U T U^{-1} \) acts on \( L^2(\R) \) and has kernel
+Then the conjugated operator \( \widetilde{T} := U T U^{-1} \) acts on \( L^2(\mathbb{R}) \) and has kernel
 \[
 \widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
 \]
-By hypothesis, \( \widetilde{K} \in L^1(\R^2) \), and by Simon’s trace-class kernel theorem \cite[Thm.~4.2]{Simon2005TraceIdeals}, it follows that \( \widetilde{T} \in \mathcal{C}_1(L^2(\R)) \). Hence,
+By hypothesis, \( \widetilde{K} \in L^1(\mathbb{R}^2) \), and by Simon’s trace-class kernel theorem \cite[Thm.~4.2]{Simon2005TraceIdeals}, it follows that \( \widetilde{T} \in \mathcal{C}_1(L^2(\mathbb{R})) \). Hence,
 \[
-T = U^{-1} \widetilde{T} U \in \mathcal{C}_1(\HPsi),
+T = U^{-1} \widetilde{T} U \in \mathcal{C}_1(H_{\Psi_\alpha}),
 \]
-with trace norm bounded by the weighted kernel norm.
+with
+\[
+\|T\|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le \| \widetilde{K} \|_{L^1(\mathbb{R}^2)} = \iint_{\mathbb{R}^2} |K(x,y)|\, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy.
+\]
 \end{lemma}

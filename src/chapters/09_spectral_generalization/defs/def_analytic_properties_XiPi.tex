@@ -1,0 +1,29 @@
+\begin{definition}[Analytic Properties of the Completed \texorpdfstring{$L$}{L}-Function \texorpdfstring{$\Xi(s, \pi)$}{Xi(s, pi)}]
+\label{def:analytic_properties_XiPi}
+Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\mathrm{GL}_n) \) be a unitary cuspidal automorphic representation of \( \mathrm{GL}_n(\mathbb{A}_\Q) \). We define the completed \( L \)-function
+\[
+\Xi(s, \pi) := L_\infty(s, \pi) \cdot L(s, \pi),
+\]
+where:
+\begin{itemize}
+  \item \( L(s, \pi) = \prod_p L_p(s, \pi_p) \) is the standard global \( L \)-function associated to \( \pi \),
+  \item \( L_\infty(s, \pi) = \prod_{j = 1}^n \Gamma_\R(s - \mu_j) \) is a product of archimedean Gamma factors,
+  \item \( \Gamma_\R(s) := \pi^{-s/2} \Gamma(s/2) \), and \( \mu_j \in \C \) are the archimedean Langlands parameters of \( \pi \).
+\end{itemize}
+
+Then \( \Xi(s, \pi) \) satisfies the following analytic properties:
+\begin{enumerate}
+  \item \( \Xi(s, \pi) \) extends to an entire function of order one.
+  \item \( \Xi(s, \pi) \) is bounded in vertical strips: for all compact intervals \( I \subset \R \), there exists \( C_I > 0 \) such that
+  \[
+  \sup_{t \in I} \abs{\Xi(\sigma + it, \pi)} \leq C_I, \quad \forall \sigma \in \R.
+  \]
+  \item \( \Xi(s, \pi) \) satisfies a functional equation
+  \[
+  \Xi(s, \pi) = \varepsilon(\pi) \cdot \Xi(1 - s, \widetilde{\pi}),
+  \]
+  where \( \widetilde{\pi} \) is the contragredient representation and \( \varepsilon(\pi) \in \C^\times \).
+\end{enumerate}
+
+These analytic properties are taken as structural inputs in all kernel constructions involving \( \Xi(s, \pi) \), and serve as prerequisites for inverse Fourier analysis and trace-class kernel decay.
+\end{definition}

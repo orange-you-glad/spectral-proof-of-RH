@@ -1,34 +1,34 @@
 \begin{proof}[Proof of \propref{prop:spectrum_reality_implies_rh_multiplicity}]
 Assume:
 \begin{itemize}
-  \item \( L_{\sym} \in \TC(\HPsi) \) is compact and self-adjoint;
-  \item \( \Spec(L_{\sym}) \subset \R \);
-  \item All nonzero eigenvalues \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) are simple.
+  \item \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is compact and self-adjoint;
+  \item \( \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \);
+  \item All nonzero eigenvalues \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) are simple.
 \end{itemize}
 
 Let
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
 \]
 be the canonical spectral determinant. As an entire function of exponential type \( \pi \) and genus one, it admits the Hadamard product:
 \[
 f(\lambda) = \prod_\rho \left(1 - \frac{\lambda}{\mu_\rho} \right) \exp\left( \frac{\lambda}{\mu_\rho} \right),
 \]
-where \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), with \( \rho \in \Spec(\zetaR) \), counted with multiplicity.
+where \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), with \( \rho \in \operatorname{Spec}(\zeta) \), counted with multiplicity.
 
 \paragraph{Step 1: Real Spectrum Implies RH.}
-If \( \mu_\rho \in \R \), then
+If \( \mu_\rho \in \mathbb{R} \), then
 \[
-\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \R \quad \Rightarrow \quad \rho - \tfrac{1}{2} \in i\R \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \mathbb{R} \quad \Rightarrow \quad \rho - \tfrac{1}{2} \in i\mathbb{R} \quad \Rightarrow \quad \operatorname{Re}(\rho) = \tfrac{1}{2}.
 \]
 Hence, all nontrivial zeros lie on the critical line.
 
 \paragraph{Step 2: Simplicity.}
-Each eigenvalue \( \mu_\rho \in \Spec(L_{\sym}) \) has multiplicity one. Since the determinant product preserves multiplicity under the map \( \rho \mapsto \mu_\rho \), the order of vanishing of \( \XiR(s) \) at \( s = \tfrac{1}{2} + i\lambda \) is also one:
+Each eigenvalue \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \) has multiplicity one. Since the determinant product preserves multiplicity under the map \( \rho \mapsto \mu_\rho \), the order of vanishing of \( \Xi(s) \) at \( s = \tfrac{1}{2} + i\lambda \) is also one:
 \[
-\operatorname{ord}_\rho(\zetaR) = \operatorname{ord}_{\mu_\rho}(f) = 1.
+\operatorname{ord}_\rho(\zeta) = \operatorname{ord}_{\mu_\rho}(f) = 1.
 \]
 
 \paragraph{Conclusion.}
-Under the assumptions of real and simple spectrum, all nontrivial zeros of \( \zetaR(s) \) lie on the critical line and are simple, as claimed.
+Under the assumptions of real and simple spectrum, all nontrivial zeros of \( \zeta(s) \) lie on the critical line and are simple, as claimed.
 \end{proof}

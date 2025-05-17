@@ -1,0 +1,18 @@
+\begin{definition}[Weighted Hilbert Space \texorpdfstring{$\Hpsipi$}{Hpsipi}]
+\label{def:Hilbert_space_Lpi}
+Fix a real constant \( \alphapi > 0 \). Define the weighted Hilbert space
+\[
+\Hpsipi := L^2(\R, e^{\alphapi |x|} \, dx),
+\]
+equipped with the inner product
+\[
+\ip{f}{g}_{\Hpsipi} := \int_{\R} f(x) \overline{g(x)} \, e^{\alphapi |x|} \, dx.
+\]
+
+The space \( \Hpsipi \) is a separable Hilbert space, densely and continuously embedded in \( L^2_{\mathrm{loc}}(\R) \), and is closed under convolution by functions satisfying the exponential decay condition in \defref{def:kernel_decay_condition}.
+
+We denote by \( \TC(\Hpsipi) \) the Banach space of trace-class operators on \( \Hpsipi \), with norm
+\[
+\norm{T}_{\TC} := \Tr(|T|), \qquad \text{for } T \in \TC(\Hpsipi).
+\]
+\end{definition}

@@ -1,35 +1,35 @@
-\begin{proof}[Proof of \cref{lem:laplace_heat_trace_convergence}]
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical operator as constructed in \cref{sec:operator_construction}. For all \( t > 0 \), the operator \( e^{-t L_{\sym}^2} \) lies in \( \TC(\HPsi) \) by the spectral theorem and the closure of the trace-class ideal under holomorphic functional calculus. In particular, the trace function
+\begin{proof}[Proof of \lemref{lem:laplace_heat_trace_convergence}]
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical operator as constructed in \secref{sec:operator_construction}. For all \( t > 0 \), the operator \( e^{-t L_{\mathrm{sym}}^2} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) by the spectral theorem and holomorphic functional calculus. In particular, the trace function
 \[
-t \mapsto \Tr(e^{-t L_{\sym}^2})
+t \mapsto \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
 \]
-is smooth and strictly positive for \( t > 0 \), and the semigroup \( \{ e^{-t L_{\sym}^2} \}_{t > 0} \) is strongly continuous and holomorphic in \( t \).
+is smooth and strictly positive for \( t > 0 \), and the semigroup \( \{ e^{-t L_{\mathrm{sym}}^2} \}_{t > 0} \) is strongly continuous and holomorphic in \( t \).
 
 \smallskip
 \noindent
-From the short-time asymptotics in \cref{sec:heat_kernel_asymptotics}, we have
+From the short-time asymptotics in \secref{sec:heat_kernel_asymptotics}, we have
 \[
-\Tr(e^{-t L_{\sym}^2}) \lesssim t^{-1/2} \quad \text{as } t \to 0^+,
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \lesssim t^{-1/2} \quad \text{as } t \to 0^+,
 \]
-with constants uniform on compact subsets. Additionally, the spectral smoothing of \( L_{\sym}^2 \) implies exponential decay:
+uniformly on compact intervals. At large times, spectral smoothing implies
 \[
-\Tr(e^{-t L_{\sym}^2}) \lesssim e^{-ct} \quad \text{as } t \to \infty,
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \lesssim e^{-c t} \quad \text{as } t \to \infty,
 \]
-for some \( c > 0 \).
+for some constant \( c > 0 \).
 
 \smallskip
 \noindent
-The Laplace transform defining the Carleman determinant thus reads
+The Laplace transform defining the Carleman determinant reads
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \exp\left( - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Tr(e^{-t L_{\sym}^2}) \, dt \right),
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+= \exp\left( - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \, dt \right),
 \]
-and converges absolutely for all \( \lambda \in \C \), by comparison with
+and converges absolutely for all \( \lambda \in \mathbb{C} \), since
 \[
-\int_0^\infty \frac{e^{-\lambda^2 t}}{t^{3/2}} \, dt < \infty,
+\int_0^1 \frac{e^{-\lambda^2 t}}{t^{3/2}}\, dt + \int_1^\infty \frac{e^{-\lambda^2 t}}{t} e^{-c t} \, dt < \infty.
 \]
-using the short-time trace bound.
 
 \smallskip
 \noindent
-Finally, since the Laplace transform of the trace-class heat semigroup defines an entire function of order one, and the exponential type is determined by the Paley--Wiener bounds on the spectral kernel, we conclude from \cref{lem:det_identity_entire_order_one} that the determinant has exact exponential type \( \pi \), completing the proof.
+Finally, by \lemref{lem:det_identity_entire_order_one}, the determinant is an entire function of order one and exact exponential type \( \pi \), determined by the spectral bounds of the Paley--Wiener kernel profile. This completes the proof.
 \end{proof}

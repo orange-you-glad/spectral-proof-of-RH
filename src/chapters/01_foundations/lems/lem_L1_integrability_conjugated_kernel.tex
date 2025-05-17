@@ -1,6 +1,6 @@
 \begin{lemma}[\( L^1 \)-Integrability of Conjugated Kernels under Exponential Weights]
 \label{lem:L1_integrability_conjugated_kernel}
-Let \( K \colon \R^2 \to \C \) be a measurable kernel satisfying the decay estimate
+Let \( K \colon \mathbb{R}^2 \to \mathbb{C} \) be a measurable kernel satisfying the decay estimate
 \[
 |K(x,y)| \le C (1 + |x| + |y|)^{-N},
 \]
@@ -9,8 +9,20 @@ for some constants \( C > 0 \), \( N > 0 \). Let \( \Psi_\alpha(x) := e^{\alpha 
 \widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}.
 \]
 
-Then \( \widetilde{K} \in L^1(\R^2) \) provided \( N > 2\alpha \); that is,
+Then \( \widetilde{K} \in L^1(\mathbb{R}^2) \) provided \( N > 2\alpha \); that is,
 \[
-\iint_{\R^2} |\widetilde{K}(x,y)|\, dx\,dy < \infty.
+\iint_{\mathbb{R}^2} |\widetilde{K}(x,y)|\, dx\,dy < \infty.
 \]
+
+\medskip
+\noindent
+In particular, if \( K(x,y) = k(x - y) \) is a translation-invariant kernel with \( k \in \mathcal{S}(\mathbb{R}) \), then \( K \) satisfies the above estimate for all \( N > 0 \), and hence the conjugated kernel \( \widetilde{K} \in L^1(\mathbb{R}^2) \) for any \( \alpha > 0 \).
+
+\medskip
+\noindent
+This lemma applies to mollified canonical kernels such as \( K_t(x,y) := k_t(x - y) \) from \lemref{lem:decay_inverse_fourier_xi}, establishing that the conjugated kernel
+\[
+\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}
+\]
+lies in \( L^1(\mathbb{R}^2) \), and hence that \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \).
 \end{lemma}

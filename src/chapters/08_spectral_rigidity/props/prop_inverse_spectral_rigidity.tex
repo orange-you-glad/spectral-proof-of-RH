@@ -1,24 +1,24 @@
 \begin{proposition}[Inverse Spectral Rigidity]
 \label{prop:inverse_spectral_rigidity}
 
-Let \( L_1, L_2 \in \TC(\HPsi) \) be compact, self-adjoint operators on the exponentially weighted Hilbert space
+Let \( L_1, L_2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact, self-adjoint operators on the exponentially weighted Hilbert space
 \[
-\HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \alpha > \pi.
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \alpha > \pi.
 \]
 Suppose:
 \begin{itemize}
   \item The spectra of \( L_1 \) and \( L_2 \) agree as multisets, including algebraic multiplicities:
   \[
-  \Spec(L_1) = \Spec(L_2).
+  \operatorname{Spec}(L_1) = \operatorname{Spec}(L_2).
   \]
 
   \item Their Carleman \(\zeta\)-regularized determinants agree globally:
   \[
-  \det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \qquad \forall\, \lambda \in \C.
+  \det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \qquad \forall\, \lambda \in \mathbb{C}.
   \]
 \end{itemize}
 
-Then \( L_1 \) and \( L_2 \) are unitarily equivalent: there exists a unitary operator \( U \colon \HPsi \to \HPsi \) such that
+Then \( L_1 \) and \( L_2 \) are unitarily equivalent: there exists a unitary operator \( U \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) such that
 \[
 L_2 = U L_1 U^{-1}.
 \]
@@ -26,7 +26,7 @@ L_2 = U L_1 U^{-1}.
 \medskip
 
 \noindent
-In particular, if both operators arise from the canonical convolution construction associated with the completed zeta function \( \XiR(s) \), then
+In particular, if both operators arise from the canonical convolution construction associated with the completed zeta function \( \Xi(s) \), then
 \[
 L_1 = L_2.
 \]

@@ -1,19 +1,20 @@
 \begin{definition}[Self-Adjoint Operators]\label{def:selfadjoint_operator}
 Let \( H \) be a separable complex Hilbert space, and let \( T \colon \mathcal{D}(T) \subset H \to H \) be a densely defined linear operator.
 
-The operator \( T \) is \emph{self-adjoint} if
+We say \( T \) is \emph{self-adjoint} if:
 \[
-T = T^*, \qquad \text{and} \qquad \mathcal{D}(T) = \mathcal{D}(T^*),
+T = T^* \quad \text{and} \quad \mathcal{D}(T) = \mathcal{D}(T^*),
 \]
-where the adjoint \( T^* \colon \mathcal{D}(T^*) \to H \) is defined as follows: a vector \( g \in H \) lies in \( \mathcal{D}(T^*) \) if there exists \( h \in H \) such that
+where the adjoint \( T^* \colon \mathcal{D}(T^*) \to H \) is defined by: \( g \in \mathcal{D}(T^*) \) if there exists \( h \in H \) such that
 \[
-\langle T f, g \rangle = \langle f, h \rangle \quad \text{for all } f \in \mathcal{D}(T),
+\langle T f, g \rangle = \langle f, h \rangle \quad \text{for all } f \in \mathcal{D}(T), \quad \text{in which case } T^* g := h.
 \]
-in which case \( T^* g := h \). The Riesz representation theorem ensures that \( T^* \) is well-defined and closed.
+
+The adjoint \( T^* \) is always closed. Hence, every self-adjoint operator is closed and densely defined.
 
 \medskip
 \noindent\textbf{Bounded Case.}
-If \( T \in \mathcal{B}(H) \) is bounded and everywhere defined, then self-adjointness reduces to symmetry:
+If \( T \in \mathcal{B}(H) \) is bounded and everywhere defined, then \( T \) is self-adjoint if and only if it is symmetric:
 \[
 \langle T f, g \rangle = \langle f, T g \rangle \quad \text{for all } f, g \in H.
 \]
@@ -24,40 +25,44 @@ A densely defined operator \( T \colon \mathcal{D}(T) \to H \) is \emph{symmetri
 \[
 \langle T f, g \rangle = \langle f, T g \rangle \quad \text{for all } f, g \in \mathcal{D}(T),
 \]
-i.e., \( T \subseteq T^* \). Such an operator is self-adjoint if and only if \( \mathcal{D}(T) = \mathcal{D}(T^*) \).
+i.e., \( T \subseteq T^* \). Such an operator is self-adjoint precisely when equality holds: \( \mathcal{D}(T) = \mathcal{D}(T^*) \) and \( T = T^* \).
 
 \medskip
 \noindent\textbf{Graph Characterization.}
-\( T \) is self-adjoint if and only if its graph
+Let
 \[
-\operatorname{graph}(T) := \{ (f, Tf) \in H \times H : f \in \mathcal{D}(T) \}
+\operatorname{graph}(T) := \{ (f, Tf) \in H \times H : f \in \mathcal{D}(T) \}.
 \]
-is closed and coincides with the graph of its adjoint \( T^* \). In particular, self-adjoint operators are always closed and symmetric, with no proper symmetric extensions.
+Then \( T \) is self-adjoint if and only if \( \operatorname{graph}(T) \) is closed and equals \( \operatorname{graph}(T^*) \). In particular, self-adjoint operators are maximal among symmetric ones.
 
 \medskip
 \noindent\textbf{Spectral Theorem.}
-Every self-adjoint operator \( T \colon \mathcal{D}(T) \to H \) admits a unique spectral decomposition:
+Every self-adjoint operator \( T \colon \mathcal{D}(T) \to H \) admits a unique spectral resolution:
 \[
 T = \int_{\sigma(T)} \lambda \, dE_\lambda,
 \]
-where \( \{ E_\lambda \} \) is a projection-valued measure (PVM) on the Borel subsets of \( \R \), supported on the spectrum \( \sigma(T) \subset \R \). Consequently:
+where \( E_\lambda \) is a projection-valued measure (PVM) on the Borel \( \sigma \)-algebra of \( \mathbb{R} \), supported on the spectrum \( \sigma(T) \subset \mathbb{R} \). In particular:
 \begin{itemize}
-    \item \( \sigma(T) \subset \R \) is closed and non-empty;
-    \item The spectral calculus \( f(T) := \int f(\lambda)\, dE_\lambda \) is well-defined for all bounded Borel functions \( f \colon \R \to \C \);
-    \item The one-parameter unitary group \( \{ e^{itT} \}_{t \in \R} \subset \mathcal{U}(H) \) is strongly continuous.
+    \item \( \sigma(T) \subset \mathbb{R} \) is closed and nonempty;
+    \item For every bounded Borel function \( f \colon \mathbb{R} \to \mathbb{C} \), the spectral calculus
+    \[
+    f(T) := \int_{\sigma(T)} f(\lambda)\, dE_\lambda
+    \]
+    defines a bounded operator \( f(T) \in \mathcal{B}(H) \);
+    \item The one-parameter unitary group \( \{ e^{itT} \}_{t \in \mathbb{R}} \subset \mathcal{U}(H) \) is strongly continuous.
 \end{itemize}
 
 \medskip
 \noindent\textbf{Compact Self-Adjoint Operators.}
-If \( T \in \mathcal{C}_1(H) \cap \operatorname{SA}(H) \), then \( \sigma(T) \subset \R \) consists entirely of isolated eigenvalues of finite multiplicity, with \( \lambda_n \to 0 \). The eigenfunctions form a complete orthonormal basis of \( H \).
+If \( T \in \mathcal{C}_1(H) \cap \operatorname{SA}(H) \), then \( \sigma(T) \subset \mathbb{R} \) consists entirely of isolated eigenvalues of finite multiplicity, with \( \lambda_n \to 0 \). The corresponding eigenfunctions form a complete orthonormal basis of \( H \).
 
 \medskip
 \noindent\textbf{Remarks.}
 \begin{itemize}
-    \item Self-adjointness guarantees real spectrum, a complete functional calculus, and unitary time evolution.
-    \item A symmetric operator \( T_0 \colon \mathcal{D}_0 \to H \) is said to be \emph{essentially self-adjoint} if its closure \( \overline{T_0} \) is self-adjoint. This is essential in spectral theory and quantum mechanics.
-    \item In this manuscript, all mollified convolution operators \( L_t \) and the canonical limit \( L_{\sym} \) are constructed to be essentially self-adjoint on the Schwartz core \( \Schwartz \subset \HPsi \) (cf.~\secref{sec:operator_construction}).
-    \item For symmetric integral operators with Hermitian kernels and exponential damping, self-adjointness follows from symmetry and essential self-adjointness on the core via Friedrichs extensions.
+    \item Self-adjointness implies a full spectral theory and guarantees the reality of the spectrum.
+    \item A symmetric operator \( T_0 \colon \mathcal{D}_0 \to H \) is \emph{essentially self-adjoint} if its closure \( \overline{T_0} \) is self-adjoint. This property ensures unique spectral evolution.
+    \item In this manuscript, the convolution operators \( L_t \), and their limit \( L_{\sym} \), are essentially self-adjoint on \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \); see \secref{sec:operator_construction}.
+    \item For integral operators with Hermitian kernels and exponential damping, essential self-adjointness on a core follows from Friedrichs' extension theorem.
 \end{itemize}
 
 \medskip

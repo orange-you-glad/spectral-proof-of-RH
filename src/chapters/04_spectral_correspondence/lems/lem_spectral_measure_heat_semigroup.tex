@@ -1,26 +1,27 @@
 \begin{lemma}[Spectral Heat Trace Representation]
 \label{lem:spectral_measure_heat_semigroup}
-Let \( L_{\sym} \in \TC(\HPsi) \) be a compact, self-adjoint operator with discrete spectrum \( \{ \mu_\rho \} \subset \R \). Then the associated spectral projection measure \( E_\lambda \) satisfies:
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint operator with discrete spectrum \( \{ \mu_\rho \} \subset \mathbb{R} \). Then the associated spectral projection measure \( E_\lambda \) satisfies:
 \[
-\Tr(e^{-t L_{\sym}^2}) = \int_{\R} e^{-t\lambda^2} \, dN(\lambda),
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} e^{-t\lambda^2} \, dN(\lambda),
 \]
 where the eigenvalue counting function \( N(\lambda) \) is defined by
 \[
 N(\lambda) := \sum_{\mu_\rho \leq \lambda} \operatorname{mult}_{\mathrm{spec}}(\mu_\rho),
 \]
-counting each eigenvalue \( \mu_\rho \in \Spec(L_{\sym}) \) with its algebraic multiplicity.
+counting each eigenvalue \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \) with its algebraic multiplicity.
 
 \medskip
 
 \noindent
 Consequently, the canonical Carleman \(\zeta\)-regularized Fredholm determinant satisfies
 \[
-\log \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = - \int_{\R} \log\left(1 - \frac{\lambda}{\mu} \right) \, dN(\mu),
+\log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
+= - \int_{\mathbb{R}} \log\left(1 - \frac{\lambda}{\mu} \right) \, dN(\mu),
 \]
-valid for all \( \lambda \in \C \setminus \{ \mu_\rho \} \).
+valid for all \( \lambda \in \mathbb{C} \setminus \{ \mu_\rho \} \).
 
 \medskip
 
 \noindent
-In particular, the Laplace transform of the spectral density \( dN(\lambda) \) defines the heat trace, and the Mellin transform of this trace is connected to the completed zeta function \( \XiR(s) \). This forms the analytic backbone for the determinant identity, and reflects classical Tauberian structure in the spirit of \cite{Korevaar2004Tauberian}.
+In particular, the Laplace transform of the spectral density \( dN(\lambda) \) defines the heat trace, and the Mellin transform of this trace connects directly to the completed zeta function \( \Xi(s) \). This forms the analytic backbone for the determinant identity and reflects classical Tauberian structure as in \cite{Korevaar2004Tauberian}.
 \end{lemma}

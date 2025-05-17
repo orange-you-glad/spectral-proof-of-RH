@@ -1,22 +1,22 @@
 \begin{proof}[Proof of \thmref{thm:spectral_zero_bijection_revised}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of the Riemann zeta function \( \zetaR(s) \), and define the corresponding spectral value
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of the Riemann zeta function \( \zeta(s) \), and define the corresponding spectral value
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}).
 \]
 
 \paragraph{Injectivity.}
-By \lemref{lem:zero_to_eigenvalue_injection}, each nontrivial zero \( \rho \) maps to a unique nonzero eigenvalue \( \mu_\rho \in \Spec(L_{\sym}) \), and distinct zeros yield distinct eigenvalues. This confirms the injectivity of the spectral map \( \rho \mapsto \mu_\rho \).
+By \lemref{lem:zero_to_eigenvalue_injection}, each nontrivial zero \( \rho \) maps to a unique nonzero eigenvalue \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \), and distinct zeros yield distinct eigenvalues. This confirms the injectivity of the spectral map \( \rho \mapsto \mu_\rho \).
 
 \paragraph{Surjectivity.}
-By \lemref{lem:spectral_exhaustivity}, every nonzero eigenvalue \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \) arises from some nontrivial zero \( \rho \in \C \), satisfying \( \mu = \mu_\rho \). This proves surjectivity.
+By \lemref{lem:spectral_exhaustivity}, every nonzero eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) arises from some nontrivial zero \( \rho \in \mathbb{C} \), satisfying \( \mu = \mu_\rho \). This proves surjectivity.
 
 \paragraph{Multiplicity Preservation.}
-By \lemref{lem:spectral_multiplicity_matching}, the algebraic multiplicity of each eigenvalue \( \mu_\rho \) equals the order of vanishing of \( \zetaR(s) \) at the corresponding zero \( \rho \). Hence, the spectral map preserves multiplicities.
+By \lemref{lem:spectral_multiplicity_matching}, the algebraic multiplicity of each eigenvalue \( \mu_\rho \) equals the order of vanishing of \( \zeta(s) \) at the corresponding zero \( \rho \). Hence, the spectral map preserves multiplicities.
 
 \paragraph{Conclusion.}
 The map
 \[
-\rho \longmapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+\rho \longmapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
-defines a canonical multiplicity-preserving bijection between the multiset of nontrivial zeros of \( \zetaR(s) \) and the multiset of nonzero eigenvalues of \( L_{\sym} \in \TC(\HPsi) \). This correspondence is uniquely determined by the regularized Fredholm determinant identity and fully realizes the spectral encoding of the Riemann zeta function's zeros.
+defines a canonical multiplicity-preserving bijection between the multiset of nontrivial zeros of \( \zeta(s) \) and the multiset of nonzero eigenvalues of \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). This correspondence is uniquely determined by the regularized Fredholm determinant identity and fully realizes the spectral encoding of the Riemann zeta function's zeros.
 \end{proof}

@@ -1,32 +1,32 @@
 \begin{proof}[Proof of \lemref{lem:hk_expansion_uniform}]
-Let \( L := L_{\sym} \in \TC(\HPsi) \) be the canonical self-adjoint, compact convolution operator, and let \( K_t(x,y) \) denote the integral kernel of the semigroup \( e^{-tL^2} \), defined by functional calculus.
+Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical self-adjoint, compact convolution operator, and let \( K_t(x,y) \) denote the integral kernel of the semigroup \( e^{-tL^2} \), defined via spectral functional calculus.
 
 \paragraph{Step 1: Regularity of the Generator and Kernel.}
 The operator \( L \) is constructed from the inverse Fourier transform of the entire function
 \[
 \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right),
 \]
-which lies in the Paley--Wiener class of exponential type \( \pi \). Its mollified Fourier approximants define convolution operators \( L_\varepsilon \) with kernels in \( \mathcal{S}(\R^2) \), converging in trace norm to \( L \). Consequently, the squared operator \( L^2 \in \TC \) is positive and pseudodifferential, with smooth, rapidly decaying Schwartz kernel.
+which lies in the Paley--Wiener class of exponential type \( \pi \). Its mollified Fourier approximants define convolution operators \( L_\varepsilon \) with kernels in \( \mathcal{S}(\mathbb{R}^2) \), converging in trace norm to \( L \). Consequently, the squared operator \( L^2 \in \mathcal{C}_1 \) is positive and pseudodifferential, with smooth, rapidly decaying kernel.
 
 Standard semigroup theory for positive elliptic operators implies that the heat kernel \( K_t(x,y) \) is jointly smooth in both variables:
 \[
-K_t(x,y) \in C^\infty(\R^2), \qquad \text{for all } t > 0.
+K_t(x,y) \in C^\infty(\mathbb{R}^2), \qquad \text{for all } t > 0.
 \]
 
 \paragraph{Step 2: Diagonal Parametrix Expansion.}
-Classical parametrix constructions for elliptic self-adjoint operators (e.g., Seeley--Gilkey, Reed--Simon~\cite{ReedSimon1978IV}) yield the short-time expansion of the heat kernel along the diagonal:
+Classical parametrix constructions for elliptic self-adjoint operators (e.g., Seeley–Gilkey, Reed–Simon~\cite{ReedSimon1978IV}) yield the short-time expansion of the heat kernel along the diagonal:
 \[
 K_t(x,x) \sim \sum_{n=0}^\infty a_n(x) \, t^{n - \frac{1}{2}}, \qquad \text{as } t \to 0^+,
 \]
-with coefficients \( a_n(x) \in C^\infty(\R) \), explicitly computable from the local symbol of \( L^2 \). The expansion is valid pointwise and locally uniformly, and inherits exponential decay from the smooth kernel structure.
+with coefficients \( a_n(x) \in C^\infty(\mathbb{R}) \), explicitly computable from the local symbol of \( L^2 \). The expansion is valid pointwise and locally uniformly, and inherits exponential decay from the smooth kernel structure.
 
 \paragraph{Step 3: Uniform Bounds on Compacts.}
-Fix any \( N \in \N \) and compact set \( K \subset \R \). Since all terms in the expansion are smooth, the Taylor remainder is uniformly controlled:
+Fix any \( N \in \mathbb{N} \) and compact set \( K \subset \mathbb{R} \). Since all terms in the expansion are smooth, the Taylor remainder is uniformly controlled:
 \[
 \left| K_t(x,x) - \sum_{n=0}^{N-1} a_n(x)\, t^{n - \frac{1}{2}} \right| \le C_N\, t^{N - \frac{1}{2}}, \quad \text{for } x \in K, \; t \in (0, t_0],
 \]
 for some constants \( C_N > 0 \), \( t_0 > 0 \), by standard estimates for semigroup remainders.
 
 \paragraph{Conclusion.}
-We conclude that \( K_t(x,x) \) admits a full short-time asymptotic expansion uniformly over compact subsets of \( \R \), with each coefficient \( a_n(x) \in C^\infty(\R) \). This confirms the claimed uniform diagonal expansion.
+We conclude that \( K_t(x,x) \) admits a full short-time asymptotic expansion uniformly over compact subsets of \( \mathbb{R} \), with each coefficient \( a_n(x) \in C^\infty(\mathbb{R}) \). This confirms the claimed uniform diagonal expansion.
 \end{proof}

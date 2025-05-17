@@ -1,20 +1,25 @@
 \begin{lemma}[Weighted Hilbert--Schmidt Bound]
 \label{lem:kernel_L2_weighted_bound}
-Let \( \alpha > \pi \), and let \( K_t(x,y) \) be the mollified kernel obtained by convolution with an inverse Fourier transform of the mollified profile
+Let \( \alpha > \pi \), and let \( \phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right) \) denote the mollified spectral profile. Define the convolution kernel
 \[
-\phi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right).
+K_t(x,y) := k_t(x - y), \quad \text{where } k_t := \mathcal{F}^{-1}[\phi_t].
 \]
 
-Then:
+Then the weighted Hilbert--Schmidt norm satisfies
 \[
-\iint_{\R^2} |K_t(x,y)|^2 \, e^{\alpha|x|} e^{\alpha|y|} \, dx \, dy < \infty,
+\iint_{\mathbb{R}^2} |K_t(x,y)|^2 \, e^{\alpha|x|} e^{\alpha|y|} \, dx \, dy < \infty,
 \]
-i.e., \( K_t \in L^2(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \).
+i.e., \( K_t \in L^2(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \).
 
 \medskip
-\noindent Consequently, the operator
-\[
-L_t f(x) := \int_{\R} K_t(x,y)\, f(y)\, dy
-\]
-is a Hilbert--Schmidt operator on \( \HPsi \), and therefore compact.
+\noindent Consequently:
+\begin{itemize}
+  \item The operator
+  \[
+  L_t f(x) := \int_{\mathbb{R}} K_t(x,y)\, f(y)\, dy
+  \]
+  defines a Hilbert--Schmidt operator on \( H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx) \);
+  \item Thus \( L_t \in \mathcal{C}_2(H_{\Psi_\alpha}) \subset \mathcal{K}(H_{\Psi_\alpha}) \), and is compact;
+  \item Moreover, since \( k_t \in \mathcal{S}(\mathbb{R}) \subset L^1(\mathbb{R}, \Psi_\alpha^{-1}(x)\, dx) \), we have in fact \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) (see \lemref{lem:weighted_L1_inverse_FT_xi}).
+\end{itemize}
 \end{lemma}

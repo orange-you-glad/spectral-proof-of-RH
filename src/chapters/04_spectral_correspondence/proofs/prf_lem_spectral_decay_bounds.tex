@@ -1,7 +1,7 @@
 \begin{proof}[Proof of \lemref{lem:spectral_decay_bounds}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zetaR(s) \), and define the corresponding eigenvalue of the canonical operator \( L_{\sym} \in \TC(\HPsi) \) by
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of the Riemann zeta function \( \zeta(s) \), and define the corresponding eigenvalue of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) by
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma}.
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \frac{1}{\gamma}.
 \]
 
 \paragraph{Step 1: Zero Counting and Asymptotic Spacing.}
@@ -12,7 +12,7 @@ N(T) = \frac{T}{2\pi} \log \left( \frac{T}{2\pi} \right) + O(T).
 This implies the average spacing between consecutive \( \gamma_n \) behaves like \( \log \gamma_n \), so \( \gamma_n \to \infty \) sublinearly.
 
 \paragraph{Step 2: Spectral Decay via Inversion.}
-Since \( \mu_\rho = 1/\gamma \), the small eigenvalues of \( L_{\sym} \) correspond to large \( \gamma \). From the estimate above, the number of zeros with \( \gamma \geq T \) is
+Since \( \mu_\rho = 1/\gamma \), the small eigenvalues of \( L_{\mathrm{sym}} \) correspond to large \( \gamma \). From the estimate above, the number of zeros with \( \gamma \geq T \) is
 \[
 \#\left\{ \rho : \gamma \geq T \right\} = N(\infty) - N(T) \sim O\left( \frac{T}{\log T} \right).
 \]
@@ -27,6 +27,5 @@ N(x) := \#\left\{ \mu_\rho : |\mu_\rho| \geq x \right\} = O\left( \frac{1}{x \lo
 \]
 
 \paragraph{Step 3: Membership in Schatten Ideals.}
-This decay implies the eigenvalue sequence \( \{ \mu_\rho \} \) lies in \( \ell^p(\R) \) for all \( p > 1 \), and specifically in \( \ell^2 \), verifying that \( L_{\sym} \in \SC(\HPsi) \subset \TC(\HPsi) \), consistent with earlier analysis.
-
+This decay implies the eigenvalue sequence \( \{ \mu_\rho \} \) lies in \( \ell^p(\mathbb{R}) \) for all \( p > 1 \), and specifically in \( \ell^2 \), verifying that \( L_{\mathrm{sym}} \in \mathcal{C}_2(H_{\Psi_\alpha}) \subset \mathcal{C}_1(H_{\Psi_\alpha}) \), consistent with earlier analysis.
 \end{proof}

@@ -1,12 +1,12 @@
 \begin{lemma}[Spectral Decay from Zeta Zero Spacing]
 \label{lem:spectral_decay_bounds}
-Let \( \{ \mu_\rho \} \subset \Spec(L_{\sym}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical operator \( L_{\sym} \in \TC(\HPsi) \), with spectral correspondence
+Let \( \{ \mu_\rho \} \subset \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), with spectral correspondence
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma}
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \frac{1}{\gamma}
 \quad \text{for} \quad \rho = \tfrac{1}{2} + i\gamma.
 \]
 
-Then the eigenvalues \( \mu_\rho \in \R \setminus \{0\} \) satisfy the decay estimate
+Then the eigenvalues \( \mu_\rho \in \mathbb{R} \setminus \{0\} \) satisfy the decay estimate
 \[
 |\mu_\rho| \lesssim \frac{1}{\log |\mu_\rho|} \quad \text{as } |\mu_\rho| \to 0,
 \]
@@ -21,5 +21,9 @@ N(x) = O\left( \frac{1}{x \log (1/x)} \right) \quad \text{as } x \to 0^+.
 
 \medskip
 \noindent
-These estimates follow from classical density bounds for nontrivial zeros of \( \zeta(s) \) and confirm that the spectrum of \( L_{\sym} \) decays superpolynomially. In particular, \( \{ \mu_\rho \} \in \ell^p(\R) \) for all \( p > 1 \), ensuring consistency with \( L_{\sym} \in \TC(\HPsi) \). These decay properties also underpin the Tauberian growth asymptotics developed in Chapter~\ref{sec:tauberian_growth}.
+These estimates follow from classical density bounds for nontrivial zeros of \( \zeta(s) \) and confirm that the spectrum of \( L_{\mathrm{sym}} \) decays superpolynomially. In particular,
+\[
+\{ \mu_\rho \} \in \ell^p(\mathbb{R}) \quad \text{for all } p > 1,
+\]
+ensuring consistency with \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). These decay properties also underpin the Tauberian growth asymptotics developed in Chapter~\ref{sec:tauberian_growth}.
 \end{lemma}

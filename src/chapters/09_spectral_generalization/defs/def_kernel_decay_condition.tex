@@ -1,0 +1,25 @@
+\begin{definition}[Exponential Decay of the Inverse Fourier Kernel]
+\label{def:kernel_decay_condition}
+Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\mathrm{GL}_n) \) and define the mollified spectral profile by
+\[
+\phi_t^{(\pi)}(\lambda) := e^{-t\lambda^2} \cdot \Xi\left(\tfrac{1}{2} + i\lambda, \pi\right),
+\]
+where \( \Xi(s, \pi) \) is the completed \( L \)-function satisfying the analytic properties in \defref{def:analytic_properties_XiPi}.
+
+Let
+\[
+k_t^{(\pi)}(x) := \FT^{-1}\left[\phi_t^{(\pi)}\right](x), \qquad
+K_t^{(\pi)}(x, y) := k_t^{(\pi)}(x - y).
+\]
+
+We say that \( \Xi(s, \pi) \) satisfies the exponential decay condition at weight \( \alphapi > 0 \) if there exists a constant \( \pi_\pi \in (0, \alphapi) \) and \( C_\pi > 0 \), independent of \( t \in (0, 1] \), such that
+\[
+\abs{k_t^{(\pi)}(x)} \leq C_\pi e^{-\pi_\pi |x|}, \qquad \forall x \in \R, \; \forall t \in (0, 1].
+\]
+
+This decay condition ensures that the corresponding convolution operator
+\[
+(\Ltpi f)(x) := \int_{\R} k_t^{(\pi)}(x - y) f(y) \, dy
+\]
+belongs to \( \TC(\Hpsipi) \) for \( \alphapi > \pi_\pi \), and that the family \( \{ \Ltpi \}_{t > 0} \) satisfies uniform trace-norm bounds, enabling trace-norm convergence as \( t \to 0^+ \).
+\end{definition}

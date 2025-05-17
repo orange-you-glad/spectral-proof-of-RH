@@ -1,33 +1,34 @@
-\begin{proof}[Proof of \cref{lem:spectral_zeta_from_heat}]
-Let \( \{ \mu_n \} \subset (0, \infty) \) be the eigenvalues of \( L_{\sym} \), so that \( \{ \mu_n^2 \} \) are the eigenvalues of \( L_{\sym}^2 \). The spectral zeta function
+\begin{proof}[Proof of \lemref{lem:spectral_zeta_from_heat}]
+Let \( \{ \mu_n \} \subset (0, \infty) \) be the eigenvalues of \( L_{\mathrm{sym}} \), so that \( \{ \mu_n^2 \} \) are the eigenvalues of \( L_{\mathrm{sym}}^2 \). The spectral zeta function
 \[
-\zeta_{L_{\sym}^2}(s) := \sum_{n=1}^\infty \mu_n^{-2s}
+\zeta_{L_{\mathrm{sym}}^2}(s) := \sum_{n=1}^\infty \mu_n^{-2s}
 \]
-converges for \( \Re(s) > s_0 \), for some \( s_0 > 0 \) depending on the spectral decay of \( \mu_n \).
+converges for \( \operatorname{Re}(s) > s_0 \), for some \( s_0 > 0 \) depending on the spectral decay of \( \mu_n \).
 
 \paragraph{(i) Mellin representation.}
-Using the standard identity
+Using the identity
 \[
 \mu_n^{-2s} = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} e^{-t \mu_n^2} \, dt,
 \]
-we apply Fubini’s theorem to exchange summation and integration, yielding
+and applying Fubini’s theorem (justified by positivity and trace convergence), we exchange summation and integration:
 \[
-\zeta_{L_{\sym}^2}(s)
+\zeta_{L_{\mathrm{sym}}^2}(s)
 = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \sum_{n=1}^\infty e^{-t \mu_n^2} \, dt
-= \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \Tr(e^{-t L_{\sym}^2}) \, dt,
+= \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \, dt,
 \]
-valid for \( \Re(s) \gg 1 \), where the trace is finite and smooth due to compactness of \( L_{\sym} \) and analyticity of the heat semigroup.
+valid for \( \operatorname{Re}(s) \gg 1 \), where the integrand is smooth and integrable.
 
 \paragraph{(ii) Meromorphic continuation via heat trace asymptotics.}
 Assume the short-time expansion
 \[
-\Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
 \quad \text{as } t \to 0^+.
 \]
-This singularity contributes a logarithmic branch point to the Mellin transform at \( s = \tfrac{1}{2} \), since
+This induces a logarithmic singularity in the Mellin integral near \( s = \tfrac{1}{2} \), since
 \[
 \int_0^\epsilon t^{s - \frac{3}{2}} \log\left( \tfrac{1}{t} \right) \, dt
 \]
-has a non-analytic expansion near \( s = \tfrac{1}{2} \). Additionally, possible infrared singularities may arise at \( s = 0 \) depending on large-\(t\) decay of the trace. Thus, \( \zeta_{L_{\sym}^2}(s) \) extends meromorphically to all of \( \C \), with a logarithmic branch at \( s = \tfrac{1}{2} \), and potentially additional poles or branch points at \( s = 0 \).
+diverges logarithmically as \( s \to \tfrac{1}{2} \). Therefore, \( \zeta_{L_{\mathrm{sym}}^2}(s) \) has a logarithmic branch point at \( s = \tfrac{1}{2} \).
 
+For large \( t \), the decay \( \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \lesssim e^{-\delta t} \) ensures holomorphy for \( \operatorname{Re}(s) \ll 0 \), modulo potential divergence at \( s = 0 \). Thus, \( \zeta_{L_{\mathrm{sym}}^2}(s) \) extends meromorphically to \( \mathbb{C} \), with the stated singularities.
 \end{proof}

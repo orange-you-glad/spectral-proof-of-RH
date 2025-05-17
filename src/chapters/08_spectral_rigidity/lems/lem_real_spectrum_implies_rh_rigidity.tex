@@ -1,27 +1,27 @@
 \begin{lemma}[Spectral Reality Implies the Riemann Hypothesis]
 \label{lem:real_spectrum_implies_rh_rigidity}
 
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \XiR(s) \), acting on the weighted Hilbert space:
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator constructed via mollified convolution from the inverse Fourier transform of the completed Riemann zeta function \( \Xi(s) \), acting on the weighted Hilbert space:
 \[
-\HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \alpha > \pi.
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \alpha > \pi.
 \]
 
 Assume:
 \begin{enumerate}
   \item[\textup{(i)}] The Carleman \(\zeta\)-regularized Fredholm determinant satisfies:
   \[
-  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}, \qquad \forall \lambda \in \C.
+  \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}, \qquad \forall \lambda \in \mathbb{C}.
   \]
 
-  \item[\textup{(ii)}] The spectrum of \( L_{\sym} \) lies entirely on the real axis:
+  \item[\textup{(ii)}] The spectrum of \( L_{\mathrm{sym}} \) lies entirely on the real axis:
   \[
-  \Spec(L_{\sym}) \subset \R.
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
   \]
 \end{enumerate}
 
-Then every nontrivial zero \( \rho \in \C \) of the Riemann zeta function satisfies:
+Then every nontrivial zero \( \rho \in \mathbb{C} \) of the Riemann zeta function satisfies:
 \[
-\Re(\rho) = \tfrac{1}{2}.
+\operatorname{Re}(\rho) = \tfrac{1}{2}.
 \]
 That is, the Riemann Hypothesis holds.
 \end{lemma}

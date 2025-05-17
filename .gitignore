@@ -16,7 +16,7 @@
 *.snm
 *.vrb
 *.run.xml
-*.pdf
+main.pdf
 *.rpi
 
 # Intermediate metadata

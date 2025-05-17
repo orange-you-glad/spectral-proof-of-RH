@@ -2,17 +2,17 @@
 \label{lem:no_extraneous_zeros}
 Let
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
 \]
-denote the canonical Carleman \(\zeta\)-regularized Fredholm determinant associated to \( L_{\sym} \in \TC(\HPsi) \), and suppose
+denote the canonical Carleman \(\zeta\)-regularized Fredholm determinant associated to \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), and suppose
 \[
 f(\lambda) = \prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho} \right) \exp\left( \frac{\lambda}{\mu_\rho} \right)
 \]
-is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), where the product runs over the nontrivial zeros \( \rho \) of \( \zetaR(s) \).
+is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), where the product runs over the nontrivial zeros \( \rho \) of \( \zeta(s) \), counted with multiplicity.
 
-Then the Hadamard exponential factor introduces no additional (spurious) zeros: every zero of \( f(\lambda) \) corresponds to a nontrivial zero \( \rho \) of \( \zetaR \), and the nonzero spectrum of \( L_{\sym} \) satisfies
+Then the Hadamard exponential factor introduces no additional (spurious) zeros: every zero of \( f(\lambda) \) corresponds to a nontrivial zero \( \rho \) of \( \zeta(s) \), and the nonzero spectrum of \( L_{\mathrm{sym}} \) satisfies
 \[
-\Spec(L_{\sym}) \setminus \{0\} = \left\{ \mu_\rho \in \R : \zetaR(\rho) = 0 \right\}.
+\operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} = \left\{ \mu_\rho \in \mathbb{R} : \zeta(\rho) = 0 \right\}.
 \]
-Thus, the determinant \(\det\nolimits_\zeta(I - \lambda L_{\sym})\) has no extraneous poles or zeros beyond those explicitly contributed by the spectral zeros \( \mu_\rho \).
+Thus, the determinant \( \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \) has no extraneous poles or zeros beyond those explicitly contributed by the spectral zeros \( \mu_\rho \).
 \end{lemma}

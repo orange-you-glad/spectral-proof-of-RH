@@ -1,17 +1,17 @@
 \begin{proof}[Proof of \lemref{lem:trace_class_Lt}]
-Let \( H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \), and fix \( \alpha > \pi \). Let \( \phi_t \in \Schwartz \) be the mollified profile, and define the convolution kernel
+Let \( H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \), and fix \( \alpha > \pi \). Let \( \phi_t \in \mathcal{S}(\mathbb{R}) \) be the mollified profile, and define the convolution kernel
 \[
-K_t(x, y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \phi_t(\lambda)\, d\lambda = k_t(x - y),
+K_t(x, y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \phi_t(\lambda)\, d\lambda = k_t(x - y),
 \]
-with \( k_t \in \Schwartz \) by \lemref{lem:mollified_profile_decay}.
+with \( k_t \in \mathcal{S}(\mathbb{R}) \) by \lemref{lem:mollified_profile_decay}.
 
 \smallskip
 \noindent\textbf{Step 1: Unitary Conjugation.}  
 Define the unitary map
 \[
-U : H_{\Psi_\alpha} \to L^2(\R), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x),
+U : H_{\Psi_\alpha} \to L^2(\mathbb{R}), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x),
 \]
-with inverse \( U^{-1}(g)(x) := \Psi_\alpha(x)^{-1/2} g(x) \). Let \( \widetilde{L}_t := U L_t U^{-1} \) be the conjugated operator on \( L^2(\R) \), with integral kernel
+with inverse \( U^{-1}(g)(x) := \Psi_\alpha(x)^{-1/2} g(x) \). Let \( \widetilde{L}_t := U L_t U^{-1} \) be the conjugated operator on \( L^2(\mathbb{R}) \), with integral kernel
 \[
 \widetilde{K}_t(x, y) := \frac{K_t(x, y)}{\sqrt{\Psi_\alpha(x) \Psi_\alpha(y)}}.
 \]
@@ -20,29 +20,29 @@ with inverse \( U^{-1}(g)(x) := \Psi_\alpha(x)^{-1/2} g(x) \). Let \( \widetilde
 \noindent\textbf{Step 2: Trace-Class Criterion.}  
 By assumption,
 \[
-\sup_{0 < t \le 1} \| \widetilde{K}_t \|_{L^1(\R^2)} < \infty.
+\sup_{0 < t \le 1} \| \widetilde{K}_t \|_{L^1(\mathbb{R}^2)} < \infty.
 \]
-Simon’s trace-class kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals} implies \( \widetilde{L}_t \in \TC(L^2(\R)) \), with norm bound:
+Simon’s trace-class kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals} implies \( \widetilde{L}_t \in \mathcal{C}_1(L^2(\mathbb{R})) \), with norm bound:
 \[
-\| \widetilde{L}_t \|_{\TC} \le \| \widetilde{K}_t \|_{L^1(\R^2)}.
+\| \widetilde{L}_t \|_{\mathcal{C}_1} \le \| \widetilde{K}_t \|_{L^1(\mathbb{R}^2)}.
 \]
 
 \smallskip
 \noindent\textbf{Step 3: Transfer to Weighted Space.}  
-Since \( L_t = U^{-1} \widetilde{L}_t U \) and \( U \) is unitary, we conclude:
+Since \( L_t = U^{-1} \widetilde{L}_t U \) and \( U \) is unitary, we conclude by \lemref{lem:unitary_conjugation_trace_class}:
 \[
-L_t \in \TC(H_{\Psi_\alpha}), \qquad \| L_t \|_{\TC(H_{\Psi_\alpha})} = \| \widetilde{L}_t \|_{\TC(L^2)}.
+L_t \in \mathcal{C}_1(H_{\Psi_\alpha}), \qquad \| L_t \|_{\mathcal{C}_1} = \| \widetilde{L}_t \|_{\mathcal{C}_1}.
 \]
 
 \smallskip
 \noindent\textbf{Step 4: Hilbert–Schmidt Inclusion.}  
 Moreover, \lemref{lem:kernel_L2_weighted_bound} ensures:
 \[
-K_t \in L^2(\R^2, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\, dy),
+K_t \in L^2(\mathbb{R}^2, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\, dy),
 \]
-so \( L_t \in \SC(H_{\Psi_\alpha}) \subset \KC(H_{\Psi_\alpha}) \). This independently confirms compactness and gives a secondary check on trace-class regularity.
+so \( L_t \in \mathcal{C}_2(H_{\Psi_\alpha}) \subset \mathcal{K}(H_{\Psi_\alpha}) \). This independently confirms compactness and strengthens the trace-class regularity.
 
 \smallskip
 \noindent\textbf{Conclusion.}  
-The mollified convolution operator \( L_t \in \TC(H_{\Psi_\alpha}) \) for all \( t > 0 \), with uniform trace-norm control on \( (0,1] \). This establishes convergence in \( \TC \) and provides the analytic backbone for the construction of the canonical operator \( L_{\sym} \).
+The mollified convolution operator \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) for all \( t > 0 \), with trace-norm uniformly bounded for \( t \in (0,1] \). This completes the analytic input for the construction of the canonical trace-class operator \( L_{\mathrm{sym}} \).
 \end{proof}

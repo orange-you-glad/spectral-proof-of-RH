@@ -1,12 +1,12 @@
 \begin{lemma}[Tauberian Inversion for Logarithmic Heat Trace]
 \label{lem:tauberian_heat_trace_application}
-Let \( L_{\sym} \in \TC(\HPsi) \) be a canonical compact, self-adjoint operator with squared spectrum \( \{ \mu_n^2 \} \subset (0, \infty) \). Define the eigenvalue counting function
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a canonical compact, self-adjoint operator with squared spectrum \( \{ \mu_n^2 \} \subset (0, \infty) \). Define the eigenvalue counting function
 \[
-N(\lambda) := \#\{ n \in \N : \mu_n^2 \le \lambda \},
+N(\lambda) := \#\{ n \in \mathbb{N} : \mu_n^2 \le \lambda \},
 \]
 and the spectral heat trace
 \[
-\Theta(t) := \Tr(e^{-t L_{\sym}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2}.
+\Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2}.
 \]
 
 \medskip
@@ -19,5 +19,5 @@ for some constant \( C > 0 \). That is, the singular trace behavior implies a su
 
 \medskip
 \noindent
-This implication follows by Laplace–Mellin inversion and classical Tauberian theory for Laplace transforms of regularly varying functions (see Korevaar~\cite[Thm.~4.12.9]{Korevaar2004Tauberian}, Bingham–Goldie–Teugels~\cite[Thm.~1.7.1]{BGT1989RegularVariation}).
+This implication follows by Laplace–Mellin inversion and classical Tauberian theory for Laplace transforms of regularly varying functions; see Korevaar~\cite[Thm.~4.12.9]{Korevaar2004Tauberian} and Bingham–Goldie–Teugels~\cite[Thm.~1.7.1]{BGT1989RegularVariation}.
 \end{lemma}

@@ -1,25 +1,25 @@
 \begin{lemma}[Spectral Zeta Function from Heat Trace]
 \label{lem:spectral_zeta_from_heat}
-Let \( L_{\sym} \in \TC(\HPsi) \) be a compact, self-adjoint, positive operator with discrete, nonzero eigenvalues \( \{ \mu_n \}_{n=1}^\infty \subset (0, \infty) \), and define the spectral zeta function
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint, positive operator with discrete, nonzero eigenvalues \( \{ \mu_n \}_{n=1}^\infty \subset (0, \infty) \), and define the spectral zeta function
 \[
-\zeta_{L_{\sym}^2}(s) := \sum_{n=1}^\infty \mu_n^{-2s}.
+\zeta_{L_{\mathrm{sym}}^2}(s) := \sum_{n=1}^\infty \mu_n^{-2s}.
 \]
 
 Then:
 \begin{enumerate}
-    \item[\textnormal{(i)}] The function \( \zeta_{L_{\sym}^2}(s) \) admits the Mellin representation:
+    \item[\textnormal{(i)}] The function \( \zeta_{L_{\mathrm{sym}}^2}(s) \) admits the Mellin representation:
     \[
-    \zeta_{L_{\sym}^2}(s)
-    = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \Tr(e^{-t L_{\sym}^2}) \, dt,
+    \zeta_{L_{\mathrm{sym}}^2}(s)
+    = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \, dt,
     \]
-    which converges absolutely for \( \Re(s) \gg 1 \), and admits meromorphic continuation to \( \C \) under suitable heat trace asymptotics.
+    which converges absolutely for \( \operatorname{Re}(s) \gg 1 \), and admits meromorphic continuation to \( \mathbb{C} \) under suitable short-time heat trace asymptotics.
 
-    \item[\textnormal{(ii)}] If the short-time trace expansion satisfies
+    \item[\textnormal{(ii)}] If the heat trace satisfies the short-time asymptotic expansion
     \[
-    \Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
+    \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
     \quad \text{as } t \to 0^+,
     \]
-    then \( \zeta_{L_{\sym}^2}(s) \) admits meromorphic continuation to all of \( \C \), with a logarithmic branch point at \( s = \tfrac{1}{2} \), and potentially a singularity at \( s = 0 \) due to infrared divergence.
+    then \( \zeta_{L_{\mathrm{sym}}^2}(s) \) extends meromorphically to \( \mathbb{C} \), with a logarithmic branch point at \( s = \tfrac{1}{2} \), and possibly a simple pole at \( s = 0 \) due to infrared divergence.
 \end{enumerate}
 
 \medskip

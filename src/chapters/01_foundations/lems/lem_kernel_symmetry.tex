@@ -2,7 +2,7 @@
 \label{lem:kernel_symmetry}
 Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define the centered inverse Fourier kernel
 \[
-K_0(x,y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \phi(\lambda)\, d\lambda.
+K_0(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \phi(\lambda)\, d\lambda.
 \]
 
 Fix any \( \alpha > \pi \), and define the exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \), along with the conjugated kernel
@@ -12,15 +12,15 @@ Fix any \( \alpha > \pi \), and define the exponential weight \( \Psi_\alpha(x) 
 
 Then:
 \begin{itemize}
-    \item The kernel \( \widetilde{K}_0(x,y) \) is real-valued: \( \widetilde{K}_0(x,y) \in \R \) for all \( x, y \in \R \);
+    \item The kernel \( \widetilde{K}_0(x,y) \) is real-valued: \( \widetilde{K}_0(x,y) \in \mathbb{R} \) for all \( x, y \in \mathbb{R} \);
     \item The kernel is symmetric: \( \widetilde{K}_0(x,y) = \widetilde{K}_0(y,x) \).
 \end{itemize}
 
 \medskip
 \noindent
-In particular, the conjugated kernel \( \widetilde{K}_0 \) defines a real symmetric integral operator on flat \( L^2(\R) \), and the corresponding unitarily equivalent operator
+In particular, the conjugated kernel \( \widetilde{K}_0 \) defines a real symmetric integral operator on flat \( L^2(\mathbb{R}) \), and the corresponding unitarily equivalent operator
 \[
-L_{\sym} := U^{-1} T_{\widetilde{K}_0} U
+L_{\mathrm{sym}} := U^{-1} T_{\widetilde{K}_0} U
 \]
-is symmetric on \( \HPsi \), where \( (U f)(x) := \Psi_\alpha(x)^{1/2} f(x) \) defines the canonical unitary equivalence between \( \HPsi \) and \( L^2(\R) \).
+is symmetric on \( H_{\Psi_\alpha} \), where \( (U f)(x) := \Psi_\alpha(x)^{1/2} f(x) \) defines the canonical unitary equivalence between \( H_{\Psi_\alpha} \) and \( L^2(\mathbb{R}) \).
 \end{lemma}

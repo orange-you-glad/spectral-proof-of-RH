@@ -1,51 +1,62 @@
 \begin{definition}[Compact Operators]\label{def:compact_operator}
-Let \( H \) be a complex separable Hilbert space, and denote by \( \mathcal{B}(H) \) the Banach algebra of bounded linear operators on \( H \), equipped with the operator norm \( \|T\| := \sup_{\|x\| = 1} \|Tx\| \).
+Let \( H \) be a complex separable Hilbert space, and denote by \( \mathcal{B}(H) \) the Banach algebra of bounded linear operators on \( H \), equipped with the operator norm
+\[
+\|T\| := \sup_{\|x\| = 1} \|Tx\|.
+\]
 
-An operator \( T \in \mathcal{B}(H) \) is said to be \emph{compact} if it satisfies any (and hence all) of the following equivalent properties:
+An operator \( T \in \mathcal{B}(H) \) is called \emph{compact} if it satisfies any (and hence all) of the following equivalent conditions:
 \begin{enumerate}
     \item[\textup{(i)}] The image of the closed unit ball \( B_H := \{ x \in H : \|x\| \leq 1 \} \) under \( T \) has compact closure in the norm topology of \( H \).
-    \item[\textup{(ii)}] For every bounded sequence \( \{x_n\} \subset H \), the image sequence \( \{Tx_n\} \subset H \) has a convergent subsequence.
-    \item[\textup{(iii)}] There exists a sequence \( \{T_n\} \subset \mathcal{F}(H) \) of finite-rank operators such that \( \|T - T_n\|_{\op} \to 0 \) as \( n \to \infty \).
+    \item[\textup{(ii)}] For every bounded sequence \( \{x_n\} \subset H \), the sequence \( \{Tx_n\} \) has a convergent subsequence.
+    \item[\textup{(iii)}] There exists a sequence \( \{T_n\} \subset \mathcal{F}(H) \) of finite-rank operators such that \( \|T - T_n\| \to 0 \) as \( n \to \infty \).
 \end{enumerate}
 
-The set of compact operators \( \mathcal{K}(H) \subset \mathcal{B}(H) \) is a norm-closed, two-sided *-ideal. It satisfies the inclusions
+The collection of compact operators on \( H \) is denoted \( \mathcal{K}(H) \). It is a norm-closed, two-sided *-ideal in \( \mathcal{B}(H) \), and satisfies:
 \[
-\mathcal{F}(H) \subset \mathcal{K}(H) \subset \mathcal{C}_p(H), \quad \text{for all } p > 0,
+\mathcal{F}(H) \subset \mathcal{K}(H) \subset \mathcal{C}_p(H) \quad \text{for all } p > 0,
 \]
-where \( \mathcal{C}_p(H) \) denotes the Schatten \( p \)-class (see \appref{app:zeta_trace_background}).
+where \( \mathcal{C}_p(H) \) denotes the Schatten \( p \)-class of compact operators.
 
 \medskip
 \noindent\textbf{Singular Value Decomposition.}
-Every compact operator \( T \in \mathcal{K}(H) \) admits a singular value decomposition:
+Every compact operator \( T \in \mathcal{K}(H) \) admits a singular value expansion:
 \[
 T = \sum_{n=1}^\infty s_n \langle \cdot, f_n \rangle e_n,
 \]
-where \( \{e_n\}, \{f_n\} \subset H \) are orthonormal systems, and \( s_n \geq 0 \) are the singular values with \( s_n \to 0 \) as \( n \to \infty \). The sum converges in operator norm.
+where \( \{e_n\}, \{f_n\} \subset H \) are orthonormal systems, and \( s_n \geq 0 \) are the singular values of \( T \), with \( s_n \to 0 \) as \( n \to \infty \). The series converges in operator norm.
 
 \medskip
 \noindent\textbf{Spectral Properties.}
-For any compact operator \( T \in \mathcal{K}(H) \):
+If \( T \in \mathcal{K}(H) \), then:
 \begin{itemize}
-    \item The spectrum \( \sigma(T) \subset \mathbb{C} \) is at most countable, with \( \sigma(T) \setminus \{0\} \) consisting entirely of eigenvalues of finite multiplicity.
-    \item The only possible accumulation point of \( \sigma(T) \) is \( 0 \).
-    \item The resolvent set \( \rho(T) := \mathbb{C} \setminus \sigma(T) \) is open.
+    \item The spectrum \( \sigma(T) \subset \C \) is at most countable.
+    \item Every nonzero \( \lambda \in \sigma(T) \) is an eigenvalue of finite multiplicity.
+    \item The only possible accumulation point of \( \sigma(T) \) is zero.
+    \item The resolvent set \( \rho(T) := \C \setminus \sigma(T) \) is open.
 \end{itemize}
 
 \medskip
 \noindent\textbf{Ideal and Closure Properties.}
 \begin{itemize}
-    \item \( \mathcal{K}(H) \) is the closure of the rank-one operators in the operator norm.
-    \item If \( A \in \mathcal{B}(H) \) and \( K \in \mathcal{K}(H) \), then \( AK \in \mathcal{K}(H) \) and \( KA \in \mathcal{K}(H) \); compactness is preserved under bounded left and right multiplication.
+    \item \( \mathcal{K}(H) \) is the operator-norm closure of the rank-one operators.
+    \item If \( A \in \mathcal{B}(H) \) and \( K \in \mathcal{K}(H) \), then \( AK, KA \in \mathcal{K}(H) \).
+    \item Compactness is preserved under bounded left and right multiplication.
 \end{itemize}
 
 \medskip
 \noindent\textbf{Contextual Role.}
-In this manuscript, compactness underpins spectral discreteness, Schatten inclusion, and determinant analyticity. The mollified convolution operators \( L_t \) are shown to be compact on the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx) \) for all \( \alpha > \pi \) (cf. \propref{prop:compactness_Lt}, \lemref{lem:kernel_L2_weighted_bound}). This compactness enables construction of the limit operator \( L_{\sym} \), realization of its spectral resolution, and the well-defined expansion of its Carleman–Fredholm determinant.
+Compactness plays a central role in spectral discreteness, Schatten inclusion, and determinant theory. In this manuscript, the mollified convolution operators \( L_t \) are compact on the weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \) for \( \alpha > \pi \); see \propref{prop:compactness_Lt}, \lemref{lem:kernel_L2_weighted_bound}. This compactness enables:
+
+\begin{itemize}
+    \item Construction of the limit operator \( L_{\sym} \in \mathcal{C}_1(H_{\Psi_\alpha}) \),
+    \item Validity of the canonical Fredholm determinant \( \det_\zeta(I - \lambda L_{\sym}) \),
+    \item Access to full spectral asymptotics via Tauberian theory (cf. \secref{sec:tauberian_growth}).
+\end{itemize}
 
 \medskip
 \noindent\textbf{References.}
 \begin{itemize}
     \item M.~Reed and B.~Simon, \emph{Methods of Modern Mathematical Physics I: Functional Analysis}, Theorem~VI.10~\cite{ReedSimon1980I}.
-    \item B.~Simon, \emph{Trace Ideals and Their Applications}, Chapter~3~\cite{Simon2005TraceIdeals}.
+    \item B.~Simon, \emph{Trace Ideals and Their Applications}, Chapter~3 \cite{Simon2005TraceIdeals}.
 \end{itemize}
 \end{definition}

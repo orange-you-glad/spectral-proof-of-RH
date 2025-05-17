@@ -1,22 +1,22 @@
 \begin{lemma}[Spectral Bijection Consistency]
 \label{lem:spectral_bijection_consistency}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator defined via the spectral determinant identity:
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator defined via the spectral determinant identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}.
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
 \]
 
 Then the canonical spectral map
 \[
-\rho \longmapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+\rho \longmapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
-defines a bijection between the multiset of nontrivial zeros \( \rho \in \C \) of the Riemann zeta function \( \zetaR(s) \), and the multiset of nonzero eigenvalues of \( L_{\sym} \in \TC(\HPsi) \), with multiplicities preserved.
+defines a bijection between the multiset of nontrivial zeros \( \rho \in \mathbb{C} \) of the Riemann zeta function \( \zeta(s) \), and the multiset of nonzero eigenvalues of \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), with multiplicities preserved.
 
 \medskip
 \noindent
 Explicitly,
 \[
-\Spec(L_{\sym}) \setminus \{0\}
-= \left\{ \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \,\middle|\, \zetaR(\rho) = 0 \right\},
+\operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}
+= \left\{ \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \,\middle|\, \zeta(\rho) = 0 \right\},
 \]
-as multisets, i.e., with algebraic multiplicities of eigenvalues equal to the order of vanishing of \( \zetaR(s) \) at \( \rho \).
+as multisets—that is, with algebraic multiplicities of eigenvalues equal to the order of vanishing of \( \zeta(s) \) at \( \rho \).
 \end{lemma}

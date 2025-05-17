@@ -1,20 +1,21 @@
 \begin{proof}[Proof of \lemref{lem:spectral_measure_heat_semigroup}]
 We prove the result using the spectral theorem and trace properties of compact, self-adjoint operators.
 
-Since \( L_{\sym} \in \TC(\HPsi) \) is compact and self-adjoint, it admits a discrete spectral decomposition:
+Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is compact and self-adjoint, it admits a discrete spectral decomposition:
 \[
-L_{\sym} = \sum_{\rho} \mu_\rho P_\rho,
+L_{\mathrm{sym}} = \sum_{\rho} \mu_\rho P_\rho,
 \]
-where each \( \mu_\rho \in \R \) is an eigenvalue with finite multiplicity and \( P_\rho \) denotes the corresponding orthogonal projection.
+where each \( \mu_\rho \in \mathbb{R} \) is an eigenvalue with finite multiplicity and \( P_\rho \) denotes the corresponding orthogonal projection.
 
 \paragraph{Heat Trace via Spectral Functional Calculus.}
 Using the spectral calculus, the heat semigroup satisfies:
 \[
-e^{-t L_{\sym}^2} = \sum_{\rho} e^{-t\mu_\rho^2} P_\rho,
+e^{-t L_{\mathrm{sym}}^2} = \sum_{\rho} e^{-t\mu_\rho^2} P_\rho,
 \]
 and thus the trace is given by:
 \[
-\Tr(e^{-t L_{\sym}^2}) = \sum_{\rho} e^{-t\mu_\rho^2} \Tr(P_\rho) = \sum_{\rho} \operatorname{mult}_{\mathrm{spec}}(\mu_\rho) \, e^{-t\mu_\rho^2}.
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{\rho} e^{-t\mu_\rho^2} \operatorname{Tr}(P_\rho)
+= \sum_{\rho} \operatorname{mult}_{\mathrm{spec}}(\mu_\rho) \, e^{-t\mu_\rho^2}.
 \]
 Define the spectral counting measure
 \[
@@ -22,26 +23,29 @@ dN(\lambda) := \sum_{\rho} \operatorname{mult}_{\mathrm{spec}}(\mu_\rho) \, \del
 \]
 so the trace becomes the Laplace-type integral:
 \[
-\Tr(e^{-t L_{\sym}^2}) = \int_{\R} e^{-t\lambda^2} \, dN(\lambda).
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} e^{-t\lambda^2} \, dN(\lambda).
 \]
 
 \paragraph{Spectral Trace Identity for Test Functions.}
-For any test function \( \phi \in \Schwartz \), the spectral theorem gives
+For any test function \( \phi \in \mathcal{S}(\mathbb{R}) \), the spectral theorem gives
 \[
-\phi(L_{\sym}) = \sum_{\rho} \phi(\mu_\rho) P_\rho,
+\phi(L_{\mathrm{sym}}) = \sum_{\rho} \phi(\mu_\rho) P_\rho,
 \]
 and taking the trace yields:
 \[
-\Tr(\phi(L_{\sym})) = \sum_{\rho} \phi(\mu_\rho) \Tr(P_\rho) = \int_{\R} \phi(\lambda) \, dN(\lambda).
+\operatorname{Tr}(\phi(L_{\mathrm{sym}})) = \sum_{\rho} \phi(\mu_\rho) \operatorname{Tr}(P_\rho)
+= \int_{\mathbb{R}} \phi(\lambda) \, dN(\lambda).
 \]
 
 \paragraph{Fredholm Logarithmic Expansion.}
 The Carleman \(\zeta\)-regularized determinant admits the logarithmic trace representation:
 \[
-\log \det\nolimits_\zeta(I - \lambda L_{\sym}) = - \sum_{\rho} \log\left(1 - \lambda \mu_\rho^{-1} \right) = - \int_{\R} \log\left(1 - \frac{\lambda}{\lambda'} \right) \, dN(\lambda'),
+\log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+= - \sum_{\rho} \log\left(1 - \lambda \mu_\rho^{-1} \right)
+= - \int_{\mathbb{R}} \log\left(1 - \frac{\lambda}{\lambda'} \right) \, dN(\lambda'),
 \]
-valid for \( \lambda \in \C \setminus \{ \mu_\rho \} \). This matches the Hadamard representation for entire functions of order one, whose zero set corresponds to \( \Spec(L_{\sym}) \setminus \{0\} \).
+valid for \( \lambda \in \mathbb{C} \setminus \{ \mu_\rho \} \). This matches the Hadamard representation for entire functions of order one, whose zero set corresponds to \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \).
 
 \paragraph{Conclusion.}
-The trace of the heat semigroup \( e^{-t L_{\sym}^2} \) and the logarithmic expansion of the determinant are both encoded by the counting measure \( dN \), which captures spectral multiplicity. This completes the proof.
+The trace of the heat semigroup \( e^{-t L_{\mathrm{sym}}^2} \) and the logarithmic expansion of the determinant are both encoded by the spectral measure \( dN \), which captures spectral multiplicity. This completes the proof.
 \end{proof}

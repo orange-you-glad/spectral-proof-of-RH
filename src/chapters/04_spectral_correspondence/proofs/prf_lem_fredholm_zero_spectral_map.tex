@@ -1,39 +1,39 @@
 \begin{proof}[Proof of \lemref{lem:fredholm_zero_spectral_map}]
 Let
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})},
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
 as given by \thmref{thm:det_identity_revised}.
 
 \paragraph{(i) Forward Map.}
-Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zetaR(s) \), with multiplicity \( m_\rho \). Then \( f(\lambda) \) vanishes at
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zeta(s) \), with multiplicity \( m_\rho \). Then \( f(\lambda) \) vanishes at
 \[
 \lambda_\rho := i(\rho - \tfrac{1}{2}) = \gamma
 \]
-with order \( m_\rho \), since \( \XiR(\tfrac{1}{2} + i\lambda) \) inherits all zeros from \( \zetaR(s) \). By the Hadamard product structure of the determinant, we have:
+with order \( m_\rho \), since \( \Xi(\tfrac{1}{2} + i\lambda) \) inherits all zeros from \( \zeta(s) \). By the Hadamard product structure of the determinant, we have:
 \[
-f(\lambda) = \prod_{\mu \in \Spec(L_{\sym})} (1 - \lambda \mu)^{\operatorname{mult}(\mu)},
+f(\lambda) = \prod_{\mu \in \operatorname{Spec}(L_{\mathrm{sym}})} (1 - \lambda \mu)^{\operatorname{mult}(\mu)},
 \]
 so that \( \lambda_\rho = 1/\mu_\rho \) is a zero of order \( m_\rho \). Hence,
 \[
-\mu_\rho := \frac{1}{\lambda_\rho} = \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym})
+\mu_\rho := \frac{1}{\lambda_\rho} = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \operatorname{Spec}(L_{\mathrm{sym}})
 \]
-is an eigenvalue with multiplicity equal to the order of vanishing of \( \zetaR(s) \) at \( \rho \).
+is an eigenvalue with multiplicity equal to the order of vanishing of \( \zeta(s) \) at \( \rho \).
 
 \paragraph{(ii) Inverse Map.}
-Let \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \), with multiplicity \( m \). Then \( \lambda := \mu^{-1} \) is a zero of \( f(\lambda) \) of order \( m \), and corresponds to a unique value
+Let \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), with multiplicity \( m \). Then \( \lambda := \mu^{-1} \) is a zero of \( f(\lambda) \) of order \( m \), and corresponds to a unique value
 \[
 \rho := \tfrac{1}{2} + \frac{1}{i\mu}
 \]
-such that \( \zetaR(\rho) = 0 \), and
+such that \( \zeta(\rho) = 0 \), and
 \[
-\mu = \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}.
+\mu = \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}).
 \]
 
 \paragraph{(iii) Bijection of Multisets.}
 The map \( \rho \mapsto \mu_\rho \) is injective, since \( \rho \mapsto \lambda_\rho := i(\rho - \tfrac{1}{2}) \) is injective. By parts (i)–(ii), this map is also surjective and multiplicity-preserving. Hence, the zero set of \( f(\lambda) \) is precisely
 \[
-\left\{ \lambda_\rho := i(\rho - \tfrac{1}{2}) : \zetaR(\rho) = 0 \right\},
+\left\{ \lambda_\rho := i(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\},
 \]
-and the inverse map \( \mu \mapsto \rho = \tfrac{1}{2} + \frac{1}{i\mu} \) recovers the corresponding zeta zero. The canonical map \( \rho \mapsto \mu_\rho \) thus defines a bijection of multisets between the nontrivial zeros of \( \zetaR(s) \) and the nonzero spectrum of \( L_{\sym} \).
+and the inverse map \( \mu \mapsto \rho = \tfrac{1}{2} + \frac{1}{i\mu} \) recovers the corresponding zeta zero. The canonical map \( \rho \mapsto \mu_\rho \) thus defines a bijection of multisets between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( L_{\mathrm{sym}} \).
 \end{proof}

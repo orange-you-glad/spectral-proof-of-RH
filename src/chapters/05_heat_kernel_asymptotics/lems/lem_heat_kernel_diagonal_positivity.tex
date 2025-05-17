@@ -1,19 +1,23 @@
 \begin{lemma}[Positivity of the Heat Kernel Diagonal]
 \label{lem:heat_kernel_diagonal_positivity}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha |x|} dx) \), defined via convolution against the inverse Fourier transform of the completed Riemann zeta profile
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space
+\[
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \alpha > \pi,
+\]
+defined via convolution against the inverse Fourier transform of the completed Riemann zeta profile
 \[
 \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right).
 \]
-Let \( K_t(x, y) \) denote the integral kernel of the heat semigroup operator \( e^{-t L_{\sym}^2} \), for \( t > 0 \).
+Let \( K_t(x, y) \) denote the integral kernel of the heat semigroup operator \( e^{-t L_{\mathrm{sym}}^2} \), for \( t > 0 \).
 
 \medskip
 \noindent
 Then the diagonal values of the heat kernel are pointwise nonnegative:
 \[
-K_t(x,x) \geq 0, \qquad \text{for all } x \in \R, \; t > 0.
+K_t(x,x) \geq 0, \qquad \text{for all } x \in \mathbb{R}, \; t > 0.
 \]
 
 \medskip
 \noindent
-This property follows from the spectral decomposition of the heat semigroup and the positivity of its eigenfunction coefficients, and reflects the fundamental positivity structure of self-adjoint heat kernels.
+This property follows from the spectral decomposition of the heat semigroup and the positivity of its eigenfunction coefficients. It reflects the fundamental positivity structure of self-adjoint heat kernels on real Hilbert spaces.
 \end{lemma}

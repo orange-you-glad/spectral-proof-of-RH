@@ -1,6 +1,6 @@
 \begin{remark}[Functional Calculus for Spectral Trace Pairings]
 \label{rem:functional_calculus_trace}
-For any \( \phi \in \Schwartz(\R) \), the spectral operator \( \phi(L_{\sym}) \) is well-defined via the spectral theorem. Since \( L_{\sym} \in \TC(\HPsi) \), its eigenvalues \( \{ \mu_n \} \subset \R \) satisfy \( \mu_n \to 0 \) and \( \sum_n |\mu_n| < \infty \).
+For any \( \phi \in \mathcal{S}(\mathbb{R}) \), the spectral operator \( \phi(L_{\mathrm{sym}}) \) is well-defined via the spectral theorem. Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), its eigenvalues \( \{ \mu_n \} \subset \mathbb{R} \) satisfy \( \mu_n \to 0 \) and \( \sum_n |\mu_n| < \infty \).
 
 The rapid decay of \( \phi(\mu_n) \) ensures:
 \[
@@ -8,9 +8,12 @@ The rapid decay of \( \phi(\mu_n) \) ensures:
 \]
 so the trace
 \[
-\Tr(\phi(L_{\sym})) := \sum_n \phi(\mu_n)
+\operatorname{Tr}(\phi(L_{\mathrm{sym}})) := \sum_n \phi(\mu_n)
 \]
-is absolutely convergent. Therefore, all trace pairings \( \phi \mapsto \Tr(\phi(L_{\sym})) \) used in this chapter are rigorously defined for test functions \( \phi \in \Schwartz(\R) \).
+is absolutely convergent. Therefore, all trace pairings \( \phi \mapsto \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) used in this chapter are rigorously defined for test functions \( \phi \in \mathcal{S}(\mathbb{R}) \).
 
-This justifies interpreting \( \Tr(\phi(L_{\sym})) \) as a tempered distribution without requiring additional regularization.
+\medskip
+
+\noindent
+This justifies interpreting \( \operatorname{Tr}(\phi(L_{\mathrm{sym}})) \) as a tempered distribution without requiring additional regularization.
 \end{remark}

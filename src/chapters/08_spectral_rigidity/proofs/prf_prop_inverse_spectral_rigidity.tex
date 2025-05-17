@@ -1,25 +1,25 @@
 \begin{proof}[Proof of \propref{prop:inverse_spectral_rigidity}]
-Let \( L_1, L_2 \in \TC(\HPsi) \) be compact, self-adjoint operators satisfying:
+Let \( L_1, L_2 \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact, self-adjoint operators satisfying:
 \[
-\Spec(L_1) = \Spec(L_2), \qquad
-\det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \quad \forall \lambda \in \C.
+\operatorname{Spec}(L_1) = \operatorname{Spec}(L_2), \qquad
+\det\nolimits_\zeta(I - \lambda L_1) = \det\nolimits_\zeta(I - \lambda L_2), \quad \forall \lambda \in \mathbb{C}.
 \]
 
 \paragraph{Step 1: Spectral Theorem and Orthonormal Bases.}
-By the spectral theorem, each \( L_j \) admits an orthonormal basis \( \{e_n^{(j)}\} \subset \HPsi \) with corresponding eigenvalues \( \{\lambda_n\} \subset \R \), repeated with multiplicities, satisfying:
+By the spectral theorem, each \( L_j \) admits an orthonormal basis \( \{e_n^{(j)}\} \subset H_{\Psi_\alpha} \) with corresponding eigenvalues \( \{\lambda_n\} \subset \mathbb{R} \), repeated with multiplicities, satisfying:
 \[
 L_j f = \sum_{n=1}^\infty \lambda_n \langle f, e_n^{(j)} \rangle e_n^{(j)}, \quad j = 1,2.
 \]
 
 \paragraph{Step 2: Determinant Equivalence.}
-Since each operator is trace-class, its Carleman determinant is given by:
+Since each operator is trace class, its Carleman determinant is given by:
 \[
 \det\nolimits_\zeta(I - \lambda L_j) = \prod_{n=1}^\infty (1 - \lambda \lambda_n),
 \]
-which converges absolutely on compact subsets of \( \C \). Equality of determinants for all \( \lambda \in \C \) implies equality of their Hadamard product expansions, and thus the spectrum agrees identically, including multiplicities.
+which converges absolutely on compact subsets of \( \mathbb{C} \). Equality of determinants for all \( \lambda \in \mathbb{C} \) implies equality of their Hadamard product expansions, and thus the spectrum agrees identically, including multiplicities.
 
 \paragraph{Step 3: Construction of Intertwiner.}
-Define a unitary operator \( U \colon \HPsi \to \HPsi \) by \( U e_n^{(1)} := e_n^{(2)} \). This defines an isometry and yields:
+Define a unitary operator \( U \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) by \( U e_n^{(1)} := e_n^{(2)} \). This defines an isometry and yields:
 \[
 U L_1 U^{-1} f = \sum_{n=1}^\infty \lambda_n \langle f, e_n^{(2)} \rangle e_n^{(2)} = L_2 f.
 \]
@@ -29,5 +29,5 @@ L_2 = U L_1 U^{-1}.
 \]
 
 \paragraph{Conclusion.}
-The operators \( L_1 \) and \( L_2 \) are unitarily equivalent. If both arise from the canonical determinant identity for \( \XiR(s) \), then this unitary equivalence coincides with identity, and \( L_1 = L_2 \) by uniqueness of the canonical convolution model.
+The operators \( L_1 \) and \( L_2 \) are unitarily equivalent. If both arise from the canonical determinant identity for \( \Xi(s) \), then this unitary equivalence coincides with identity, and \( L_1 = L_2 \) by uniqueness of the canonical convolution model.
 \end{proof}

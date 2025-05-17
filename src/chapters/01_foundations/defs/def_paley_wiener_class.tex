@@ -1,19 +1,25 @@
-\begin{definition}[Paley–Wiener Class \(\PW{a}\)]
+\begin{definition}[Paley--Wiener Class \(\operatorname{PW}_a(\mathbb{R})\)]
 \label{def:paley_wiener_class}
-Let \( a > 0 \). The Paley–Wiener class \( \PW{a} \) consists of all entire functions \( f \colon \C \to \C \) such that:
+Let \( a > 0 \). The Paley--Wiener class \( \operatorname{PW}_a(\mathbb{R}) \) consists of all entire functions \( f \colon \mathbb{C} \to \mathbb{C} \) such that:
 \begin{itemize}
-  \item \( f \) is of exponential type \( \le a \), i.e.,
+  \item \( f \) is of exponential type \( \le a \), i.e., there exists \( C > 0 \) such that
   \[
-  |f(\lambda)| \le C e^{a |\lambda|}, \quad \forall \lambda \in \C,
+  |f(\lambda)| \le C e^{a |\lambda|}, \quad \forall \lambda \in \mathbb{C};
   \]
-  for some constant \( C > 0 \); and
-  \item \( f \in L^2(\R) \) and \( \widehat{f} \) has compact support contained in \( [-a, a] \).
+  \item The restriction \( f|_{\mathbb{R}} \in L^2(\mathbb{R}) \), and its Fourier transform \( \widehat{f} \) is supported in the interval \( [-a, a] \).
 \end{itemize}
 
 \medskip
 \noindent
-This class characterizes the image of \( L^2([-a, a]) \) under the inverse Fourier transform:
+Equivalently, \( \operatorname{PW}_a(\mathbb{R}) \) is the inverse Fourier image of the compactly supported square-integrable functions:
 \[
-\PW{a} = \FT^{-1}(L^2([-a, a])).
+\operatorname{PW}_a(\mathbb{R}) = \mathcal{F}^{-1}(L^2([-a, a])).
 \]
+
+\medskip
+\noindent\textbf{Remarks.}
+\begin{itemize}
+  \item Functions in \( \operatorname{PW}_a(\mathbb{R}) \) extend analytically to entire functions on \( \mathbb{C} \), with exponential type bounded by \( a \).
+  \item The space \( \operatorname{PW}_a(\mathbb{R}) \) is a closed subspace of \( L^2(\mathbb{R}) \), and plays a central role in the theory of Fourier-analytic bandlimiting.
+\end{itemize}
 \end{definition}

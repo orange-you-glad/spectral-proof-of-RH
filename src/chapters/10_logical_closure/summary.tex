@@ -4,12 +4,11 @@ The Riemann Hypothesis holds as a formal consequence of the spectral reality of 
 
 Through kernel decay estimates, Schatten convergence, and parity symmetry, we established that \( L_{\sym} \) is compact, self-adjoint, and trace class. Its spectrum encodes the nontrivial zeros of \( \zetaR(s) \) via the canonical determinant identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym})
-= \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}.
+\detz(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}.
 \]
 This identity defines a multiplicity-preserving spectral correspondence:
 \[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
+\rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
 \quad \mu_\rho \in \Spec(L_{\sym}),
 \]
 ensured by the Hadamard structure of \( \XiR(s) \).
@@ -20,7 +19,7 @@ ensured by the Hadamard structure of \( \XiR(s) \).
 We proved the equivalence:
 \[
 \boxed{
-\text{RH is true} \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R
+\RH \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R
 }
 \]
 and verified the spectral reality condition unconditionally, using:
@@ -36,6 +35,9 @@ and verified the spectral reality condition unconditionally, using:
 \noindent
 Every step in the proof is modular, analytically self-contained, and supported by an acyclic dependency structure detailed in \appref{app:dependency_graph}. No part of the argument relies on modular forms, automorphic representations, or arithmetic conjectures.
 
+\medskip
+
+\noindent
 This chapter completes the canonical spectral resolution of the Riemann Hypothesis: the nontrivial zeros of \( \zetaR(s) \) lie on the critical line as a consequence of the analytic and spectral structure of \( L_{\sym} \).
 
 \medskip

@@ -27,13 +27,15 @@ expand_tex() {
     echo "$real" >> included.tmp
 
     relpath=$(python3 -c "import os.path; print(os.path.relpath('$file', '$project_root'))")
-    echo "% ===== File: source/$relpath =====" >> "$flatfile"
+    echo "% ===== Begin File: source/$relpath =====" >> "$flatfile"
 
-    while IFS= read -r line || [ -n "$line" ]; do
-        trimmed=$(echo "$line" | sed -E 's/^[[:space:]]*//')
+    while IFS='' read -r line || [ -n "$line" ]; do
+        trimmed="$(printf '%s' "$line" | sed -E 's/^[[:space:]]*//')"
+
         if printf '%s\n' "$trimmed" | grep -Eq '^\\(input|include)\{[^}]+\}'; then
-            included=$(echo "$trimmed" | sed -nE 's/^\\(input|include)\{([^}]+)\}/\2/p')
-            [ -z "$included" ] && echo "$line" >> "$flatfile" && continue
+            # Extract path inside braces
+            included=$(printf '%s' "$trimmed" | sed -nE 's/^\\(input|include)\{([^}]+)\}/\2/p')
+            [ -z "$included" ] && printf '%s\n' "$line" >> "$flatfile" && continue
             case "$included" in
                 *.tex) texfile="$included" ;;
                 *) texfile="${included}.tex" ;;
@@ -45,33 +47,19 @@ expand_tex() {
                 echo "% Missing or invalid include: $included" >> "$flatfile"
             fi
         else
-            echo "$line" >> "$flatfile"
+            printf '%s\n' "$line" >> "$flatfile"
         fi
     done < "$file"
+
+    echo "% ===== End File: source/$relpath =====" >> "$flatfile"
 }
 
+# Preamble header
 {
     echo "% ===== Beginning linearized document ====="
-    echo "\\documentclass[11pt]{article}"
-    echo "\\usepackage{amssymb,amsmath,amsthm}"
-    echo ""
-    echo "\\begin{document}"
-    echo ""
-    echo "\\tableofcontents"
-    echo ""
 } >> "$flatfile"
 
+# Kick off recursive expansion from main.tex
 expand_tex "$main_file"
-
-{
-    echo ""
-    echo "% ===== Bibliography ====="
-    echo "\\bibliographystyle{amsalpha}"
-    echo "\\bibliography{references}"
-    echo ""
-    echo "\\end{document}"
-} >> "$flatfile"
-
-rm -f included.tmp
 
 echo "Successfully built $flatfile cleanly!"

@@ -1,22 +1,22 @@
 \begin{proof}[Proof of \lemref{lem:tauberian_heat_trace_application}]
 Assume the spectral heat trace satisfies
 \[
-\Theta(t) := \Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \quad \text{as } t \to 0^+.
+\Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \quad \text{as } t \to 0^+.
 \]
-Let \( N(\lambda) := \#\{ n : \mu_n^2 \le \lambda \} \) be the eigenvalue counting function for \( L_{\sym}^2 \), and define its Laplace transform:
+Let \( N(\Lambda) := \#\{ n : \mu_n^2 \le \Lambda \} \) be the eigenvalue counting function for \( L_{\mathrm{sym}}^2 \), and define its Laplace transform:
 \[
-\int_0^\infty e^{-t \lambda} \, dN(\lambda) = \Theta(t).
+\int_0^\infty e^{-t \Lambda} \, dN(\Lambda) = \Theta(t).
 \]
 
-This Laplace relation links the distribution function \( N(\lambda) \) to the behavior of \( \Theta(t) \) as \( t \to 0^+ \). Since the singular term
+This Laplace relation links the distribution function \( N(\Lambda) \) to the behavior of \( \Theta(t) \) as \( t \to 0^+ \). Since the singular term
 \[
 \Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t)
 \]
 is slowly varying relative to any \( t^{-\alpha} \) with \( \alpha > 1/2 \), it corresponds under Tauberian inversion to the growth law
 \[
-N(\lambda) \sim C \, \lambda^{1/2} \log \lambda,
+N(\Lambda) \sim C \, \Lambda^{1/2} \log \Lambda,
 \]
-as \( \lambda \to \infty \), for some constant \( C > 0 \). This follows from the extended Karamata–de Haan Tauberian theorem for Laplace transforms (see Korevaar~\cite[Thm.~4.12.9]{Korevaar2004Tauberian}, or BGT~\cite[Thm.~1.7.1]{BGT1989RegularVariation}).
+as \( \Lambda \to \infty \), for some constant \( C > 0 \). This follows from the extended Karamata–de Haan Tauberian theorem for Laplace transforms; see Korevaar~\cite[Thm.~4.12.9]{Korevaar2004Tauberian} and Bingham–Goldie–Teugels~\cite[Thm.~1.7.1]{BGT1989RegularVariation}.
 
 \paragraph{Normalization.}
 In the special case where
@@ -25,8 +25,7 @@ In the special case where
 \]
 the corresponding inverse asymptotic is
 \[
-N(\lambda) \sim \sqrt{\lambda} \log \lambda \quad \text{as } \lambda \to \infty,
+N(\Lambda) \sim \sqrt{\Lambda} \log \Lambda \quad \text{as } \Lambda \to \infty,
 \]
-with multiplicative constant inherited from the Mellin kernel \( t^{s - 1} \). This confirms the log-enhanced Weyl scaling for the squared spectrum of \( L_{\sym} \).
-
+with multiplicative constant inherited from the Mellin kernel \( t^{s - 1} \). This confirms the log-enhanced Weyl scaling for the squared spectrum of \( L_{\mathrm{sym}} \).
 \end{proof}

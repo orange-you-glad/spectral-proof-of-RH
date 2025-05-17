@@ -1,0 +1,20 @@
+\begin{proof}[Proof of \thmref{thm:spec_real_equiv_grh}]
+By \thmref{thm:zero_encoding_general}, the spectrum of \( \Lsympi \in \TC(\Hpsipi) \) encodes the nontrivial zeros of \( \Xi(s, \pi) \) via the bijection
+\[
+\Spec(\Lsympi) = \left\{ \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) : \Xi(\rho, \pi) = 0 \right\},
+\]
+with multiplicities preserved.
+
+\paragraph{(\( \Rightarrow \))} Suppose the Generalized Riemann Hypothesis holds for \( \pi \), i.e., every nontrivial zero \( \rho \) satisfies \( \Re(\rho) = \tfrac{1}{2} \). Then
+\[
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \R,
+\]
+since \( \rho = \tfrac{1}{2} + i\gamma \) implies \( \mu_\rho = \gamma \in \R \). Thus, all elements of \( \Spec(\Lsympi) \) are real.
+
+\paragraph{(\( \Leftarrow \))} Conversely, suppose \( \Spec(\Lsympi) \subset \R \). Let \( \rho \in \C \) be a nontrivial zero of \( \Xi(s, \pi) \), so that \( \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsympi) \subset \R \). Then
+\[
+\rho = \tfrac{1}{2} + i \mu_\rho, \quad \text{with } \mu_\rho \in \R,
+\]
+implying \( \Re(\rho) = \tfrac{1}{2} \). Therefore, all nontrivial zeros of \( \Xi(s, \pi) \) lie on the critical line, and the Generalized Riemann Hypothesis holds for \( \pi \).
+
+\end{proof}

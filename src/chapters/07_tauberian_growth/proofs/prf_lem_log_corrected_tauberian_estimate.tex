@@ -1,5 +1,5 @@
 \begin{proof}[Proof of \lemref{lem:log_corrected_tauberian_estimate}]
-Let \( \Theta(t) := \Tr(e^{-t L_{\sym}^2}) \) be the heat trace of the canonical operator \( L_{\sym} \in \TC(\HPsi) \). From Proposition~\ref{prop:short_time_heat_expansion}, we have:
+Let \( \Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \) be the heat trace of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). From Proposition~\ref{prop:short_time_heat_expansion}, we have:
 \[
 \Theta(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+,
 \]
@@ -7,18 +7,18 @@ establishing (i).
 
 \medskip
 
-For (ii), note that this asymptotic is of the form
+For (ii), this asymptotic has the form
 \[
 \Theta(t) = t^{-1/2} \cdot \ell(t), \qquad \ell(t) := \log(1/t),
 \]
-where \( \ell \) is slowly varying. Hence \( \Theta \in \mathcal{R}^{\log}_{1/2}(0^+) \) by definition of logarithmically modified regular variation.
+where \( \ell \) is slowly varying. Hence \( \Theta \in \mathcal{R}^{\log}_{1/2}(0^+) \) by definition of log-modulated regular variation.
 
 \medskip
 
 Define the spectral counting function
 \[
-N(\Lambda) := \#\left\{ \mu \in \Spec(L_{\sym}) : \mu^2 \le \Lambda \right\}
-= \sum_{\mu \in \Spec(L_{\sym})} \chi_{[0, \Lambda]}(\mu^2).
+N(\Lambda) := \#\left\{ \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) : \mu^2 \le \Lambda \right\}
+= \sum_{\mu \in \operatorname{Spec}(L_{\mathrm{sym}})} \chi_{[0, \Lambda]}(\mu^2).
 \]
 
 \medskip

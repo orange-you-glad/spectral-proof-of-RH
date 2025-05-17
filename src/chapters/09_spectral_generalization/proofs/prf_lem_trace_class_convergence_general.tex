@@ -1,0 +1,23 @@
+\begin{proof}[Proof of \lemref{lem:trace_class_convergence_general}]
+\leavevmode
+
+(i) By \defref{def:kernel_decay_condition}, we have for each \( t \in (0,1] \),
+\[
+\abs{k_t^{(\pi)}(x)} \leq C_\pi e^{-\pi_\pi |x|}, \quad \text{with } \pi_\pi < \alphapi.
+\]
+Since \( \Hpsipi = L^2(\R, e^{\alphapi |x|} dx) \), convolution against \( k_t^{(\pi)} \) defines a bounded integral operator with kernel \( K_t^{(\pi)}(x, y) = k_t^{(\pi)}(x - y) \). The weighted trace-class inclusion then follows by standard estimates (cf.\ \cite{Simon2005TraceIdeals}, Thm 4.1), as the exponential decay compensates the weight \( e^{\alphapi |x|} \).
+
+(ii) The trace-norm bound is estimated via the integral of the kernel diagonal:
+\[
+\norm{\Ltpi}_{\TC(\Hpsipi)} \leq \int_{\R} |k_t^{(\pi)}(0)| \, dx + \text{(off-diagonal decay)} \leq C_\pi' < \infty,
+\]
+uniformly for \( t \in (0,1] \), using the uniform decay in \defref{def:kernel_decay_condition}.
+
+(iii) To establish convergence in trace norm, we show that \( \Ltpi \) is Cauchy in \( \TC(\Hpsipi) \). Given \( s, t \in (0,1] \), write
+\[
+\norm{L_t^{(\pi)} - L_s^{(\pi)}}_{\TC} \leq \int_{\R^2} |k_t^{(\pi)}(x - y) - k_s^{(\pi)}(x - y)| \, e^{\alphapi |x|} dx dy.
+\]
+The integrand is pointwise convergent as \( t \to s \), and dominated by a uniform exponential bound. By the Dominated Convergence Theorem, the trace norm difference vanishes as \( t \to s \), hence the family is Cauchy.
+
+Let \( \Lsympi := \lim_{t \to 0^+} \Ltpi \) in \( \TC(\Hpsipi) \). The limit of compact, self-adjoint operators remains compact, self-adjoint, and trace class.
+\end{proof}

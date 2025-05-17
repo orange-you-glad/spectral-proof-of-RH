@@ -8,20 +8,34 @@
 
 \begin{document}
 
+\begin{center}
+\textit{“The spectrum is the zero set.”}
+\end{center}
+\vspace{1.5em}
+
 \begin{abstract}
-We construct a canonical compact, self-adjoint, trace-class operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha|x|} \, dx) \), for fixed \( \alpha > \pi \). Its Carleman \(\zeta\)-regularized Fredholm determinant satisfies the identity
+We construct a canonical compact, self-adjoint, trace-class operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha|x|} \, dx) \), for fixed \( \alpha > \pi \). Its Carleman \(\zeta\)-regularized Fredholm determinant satisfies the identity:
 \[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-where \(\Xi(s)\) denotes the completed Riemann zeta function.
+where \( \Xi(s) \) denotes the completed Riemann zeta function.
 
-The determinant is shown to be entire of order one and exponential type \( \pi \), providing a canonical spectral realization of the Riemann Hypothesis. The operator arises as the trace-norm limit of a mollified family of convolution operators with kernels given by the inverse Fourier transform of \(\Xi\). The resulting operator has discrete real spectrum \( \mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \) precisely encoding all nontrivial zeros \( \rho \) of \( \zeta(s) \), with correct multiplicities.
+This determinant is entire of order one and exponential type \( \pi \), providing a canonical spectral realization of the Riemann Hypothesis. The operator arises as the trace-norm limit of a mollified family of convolution operators, with kernels defined by the inverse Fourier transform of \( \Xi \). The resulting operator has discrete real spectrum
+\[
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}),
+\]
+encoding all nontrivial zeros \( \rho \) of \( \zeta(s) \), with correct multiplicities.
 
-We establish analyticity of the heat kernel, derive short-time trace expansions with refined asymptotic control, and extract spectral growth bounds using Korevaar's Tauberian theory. The spectral determinant identity is proven unconditionally. A modular chain of spectral rigidity results establishes the logical equivalence \( \mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \), thereby completing a formal spectral proof of the Riemann Hypothesis.
+We establish holomorphy of the heat semigroup, derive short-time trace asymptotics with logarithmic singularity, and recover the spectral counting function via Korevaar’s Tauberian theory. The determinant identity is proven unconditionally. A modular chain of spectral rigidity results yields the logical equivalence
+\[
+\mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R},
+\]
+thereby completing an analytic, acyclic, operator-theoretic proof of the Riemann Hypothesis.
 
 \medskip
+
 \noindent
-Refinements and functorial extensions are discussed in Appendices~\ref{app:heat_kernel_refinements} and~\ref{app:additional_structures}, including conjectural generalizations to automorphic \( L \)-functions and motivic cohomology.
+Refinements and functorial extensions are presented in Appendices~\ref{app:heat_kernel_refinements} and~\ref{app:additional_structures}, including conjectural generalizations to automorphic \( L \)-functions and motivic cohomology.
 \end{abstract}
 
 \maketitle
@@ -41,7 +55,8 @@ Refinements and functorial extensions are discussed in Appendices~\ref{app:heat_
 \input{chapters/06_spectral_implications/spectral_implications}
 \input{chapters/07_tauberian_growth/tauberian_growth}
 \input{chapters/08_spectral_rigidity/spectral_rigidity}
-\input{chapters/09_logical_closure/logical_closure}
+\input{chapters/09_spectral_generalization/spectral_generalization}
+\input{chapters/10_logical_closure/logical_closure}
 
 % --- Appendices ---
 \appendix

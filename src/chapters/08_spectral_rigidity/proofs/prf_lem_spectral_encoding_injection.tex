@@ -1,5 +1,5 @@
 \begin{proof}[Proof of \lemref{lem:spectral_encoding_injection}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zetaR(s) \), and define the associated spectral image:
+Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zeta(s) \), and define the associated spectral image:
 \[
 \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma.
 \]
@@ -7,23 +7,23 @@ Let \( \rho = \tfrac{1}{2} + i\gamma \) be a nontrivial zero of \( \zetaR(s) \),
 \paragraph{Step 1: Determinantal Zeros.}
 By the canonical determinant identity,
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})},
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-the determinant vanishes precisely when \( \XiR(\tfrac{1}{2} + i\lambda) = 0 \), i.e., at \( \lambda = \gamma \) when \( \rho = \tfrac{1}{2} + i\gamma \) is a nontrivial zeta zero.
+the determinant vanishes precisely when \( \Xi(\tfrac{1}{2} + i\lambda) = 0 \), i.e., at \( \lambda = \gamma \) when \( \rho = \tfrac{1}{2} + i\gamma \) is a nontrivial zeta zero.
 
 \paragraph{Step 2: Spectral Correspondence.}
-Since \( L_{\sym} \in \TC(\HPsi) \), analytic Fredholm theory implies that \( \lambda \in \C \) is a zero of the determinant if and only if \( \lambda^{-1} \in \Spec(L_{\sym}) \setminus \{0\} \). Thus,
+Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), analytic Fredholm theory implies that \( \lambda \in \mathbb{C} \) is a zero of the determinant if and only if \( \lambda^{-1} \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \). Thus,
 \[
-\mu_\rho = \frac{1}{\gamma} = \lambda^{-1} \in \Spec(L_{\sym}) \setminus \{0\}.
+\mu_\rho = \frac{1}{\gamma} = \lambda^{-1} \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}.
 \]
 
 \paragraph{Step 3: Multiplicity Preservation.}
-The order of vanishing of the determinant at \( \lambda = \gamma \) matches the multiplicity of the eigenvalue \( \mu_\rho = 1/\gamma \) in \( \Spec(L_{\sym}) \), by Hadamard factorization. This also equals the multiplicity of the zero \( \rho \) of \( \zetaR(s) \).
+The order of vanishing of the determinant at \( \lambda = \gamma \) matches the multiplicity of the eigenvalue \( \mu_\rho = 1/\gamma \) in \( \operatorname{Spec}(L_{\mathrm{sym}}) \), by Hadamard factorization. This also equals the multiplicity of the zero \( \rho \) of \( \zeta(s) \).
 
 \paragraph{Conclusion.}
 The canonical encoding
 \[
 \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
-defines a multiplicity-preserving injection from the nontrivial zeros of \( \zetaR(s) \) into the nonzero spectrum of \( L_{\sym} \), as claimed.
+defines a multiplicity-preserving injection from the nontrivial zeros of \( \zeta(s) \) into the nonzero spectrum of \( L_{\mathrm{sym}} \), as claimed.
 \end{proof}

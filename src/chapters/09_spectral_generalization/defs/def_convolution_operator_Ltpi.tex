@@ -1,0 +1,18 @@
+\begin{definition}[Mollified Convolution Operator \texorpdfstring{$\Ltpi$}{Ltpi}]
+\label{def:convolution_operator_Ltpi}
+Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\mathrm{GL}_n) \) and fix \( \alphapi > 0 \) such that the decay condition of \defref{def:kernel_decay_condition} holds. Let
+\[
+\phi_t^{(\pi)}(\lambda) := e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda, \pi\right),
+\quad \text{and} \quad
+k_t^{(\pi)} := \FT^{-1}[\phi_t^{(\pi)}].
+\]
+
+Define the convolution kernel \( K_t^{(\pi)}(x, y) := k_t^{(\pi)}(x - y) \), and let
+\[
+(\Ltpi f)(x) := \int_{\R} K_t^{(\pi)}(x, y) f(y) \, dy = \int_{\R} k_t^{(\pi)}(x - y) f(y) \, dy.
+\]
+
+Then \( \Ltpi \in \TC(\Hpsipi) \) for all \( t \in (0, 1] \), and the family \( \{ \Ltpi \}_{t > 0} \subset \TC(\Hpsipi) \) is uniformly trace-norm bounded.
+
+We refer to \( \Ltpi \) as the mollified convolution operator associated to \( \pi \), \( t \), and the profile \( \XiPi \).
+\end{definition}

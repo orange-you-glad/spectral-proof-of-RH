@@ -1,51 +1,53 @@
 \begin{proof}[Proof of \lemref{lem:hk_upper_bound}]
-Let \( L_{\sym} \in \TC(\HPsi) \), with spectral decomposition \( L_{\sym} e_n = \mu_n e_n \) for an orthonormal basis \( \{ e_n \} \subset \HPsi \). The heat trace is given by
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), with spectral decomposition \( L_{\mathrm{sym}} e_n = \mu_n e_n \) for an orthonormal basis \( \{ e_n \} \subset H_{\Psi_\alpha} \). The heat trace is given by
 \[
-\Tr(e^{-t L_{\sym}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2},
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2},
 \]
-which converges absolutely since \( L_{\sym}^2 \in \TC \).
+which converges absolutely since \( L_{\mathrm{sym}}^2 \in \mathcal{C}_1 \).
 
 \paragraph{Step 1: Partitioning the Spectrum.}
-Fix \( 0 < t \le 1 \), and define
+Fix \( 0 < t \le 1 \), and define the index sets
 \[
 A_1(t) := \left\{ n : |\mu_n| \le t^{-1/2} \right\}, \quad
 A_2(t) := \left\{ n : |\mu_n| > t^{-1/2} \right\}.
 \]
-We split the trace sum:
+Then
 \[
-\sum_n e^{-t \mu_n^2} = \sum_{n \in A_1(t)} e^{-t \mu_n^2} + \sum_{n \in A_2(t)} e^{-t \mu_n^2}.
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
+= \sum_{n \in A_1(t)} e^{-t \mu_n^2} + \sum_{n \in A_2(t)} e^{-t \mu_n^2}.
 \]
 
-\paragraph{Step 2: Bounds on Each Region.}
-On \( A_1(t) \), we have \( e^{-t \mu_n^2} \le 1 \), so
+\paragraph{Step 2: Estimating Each Sum.}
+For \( n \in A_1(t) \), we have \( e^{-t \mu_n^2} \le 1 \), so
 \[
 \sum_{n \in A_1(t)} e^{-t \mu_n^2} \le |A_1(t)|.
 \]
-On \( A_2(t) \), since \( |\mu_n| > t^{-1/2} \Rightarrow t \mu_n^2 > 1 \Rightarrow e^{-t \mu_n^2} < e^{-1} \), we find
+For \( n \in A_2(t) \), \( |\mu_n| > t^{-1/2} \Rightarrow t \mu_n^2 > 1 \Rightarrow e^{-t \mu_n^2} < e^{-1} \), so
 \[
 \sum_{n \in A_2(t)} e^{-t \mu_n^2} \le e^{-1} \cdot |A_2(t)|.
 \]
 
-\paragraph{Step 3: Bounding Index Set Cardinalities.}
-Note that
+\paragraph{Step 3: Bounding the Cardinalities.}
+Using the trace norm:
 \[
-|\mu_n| \ge t^{-1/2} \quad \text{on } A_2(t) \Rightarrow t^{1/2} |\mu_n| \ge 1.
+\sum_n |\mu_n| = \|L_{\mathrm{sym}}\|_{\mathcal{C}_1},
 \]
-Summing gives
+and \( |\mu_n| \ge t^{-1/2} \) for \( n \in A_2(t) \), so
 \[
-t^{1/2} \sum_{n \in A_1(t) \cup A_2(t)} |\mu_n| \ge |A_1(t)| + |A_2(t)|,
+t^{-1/2} \cdot |A_2(t)| \le \sum_{n \in A_2(t)} |\mu_n| \le \|L_{\mathrm{sym}}\|_{\mathcal{C}_1}.
 \]
-hence
+Hence
 \[
-|A_1(t)| + |A_2(t)| \le t^{-1/2} \sum_n |\mu_n| = t^{-1/2} \|L_{\sym}\|_{\TC}.
+|A_2(t)| \le t^{-1/2} \cdot \|L_{\mathrm{sym}}\|_{\mathcal{C}_1}, \qquad
+|A_1(t)| \le \|L_{\mathrm{sym}}\|_{\mathcal{C}_1} \cdot t^{-1/2}.
 \]
 
 \paragraph{Step 4: Final Estimate.}
-Combining the bounds yields
+Combining gives
 \[
-\Tr(e^{-t L_{\sym}^2})
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
 \le |A_1(t)| + e^{-1} |A_2(t)|
-\le (1 + e^{-1}) \cdot t^{-1/2} \cdot \|L_{\sym}\|_{\TC}.
+\le (1 + e^{-1}) \cdot \|L_{\mathrm{sym}}\|_{\mathcal{C}_1} \cdot t^{-1/2}.
 \]
-Setting \( c_2 := (1 + e^{-1}) \cdot \|L_{\sym}\|_{\TC} \) completes the proof.
+Setting \( c_2 := (1 + e^{-1}) \cdot \|L_{\mathrm{sym}}\|_{\mathcal{C}_1} \) completes the proof.
 \end{proof}

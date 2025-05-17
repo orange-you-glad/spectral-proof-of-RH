@@ -1,10 +1,21 @@
-\begin{lemma}[Essential Self-Adjointness of \( L_{\sym}^2 \)]
+\begin{lemma}[Essential Self-Adjointness of \( L_{\mathrm{sym}}^2 \)]
 \label{lem:Lsym_square_selfadjoint}
-Let \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) be the canonical convolution operator constructed from the inverse Fourier transform of \( \Xi(s) \), for any \( \alpha > \pi \). Then the squared operator \( L_{\sym}^2 \) is essentially self-adjoint on the dense core \( \Schwartz \subset H_{\Psi_\alpha} \), and its closure admits a discrete spectral resolution.
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical convolution operator constructed from the inverse Fourier transform of \( \Xi(s) \), for any \( \alpha > \pi \). Then:
+\begin{itemize}
+  \item The squared operator \( L_{\mathrm{sym}}^2 \) is essentially self-adjoint on the Schwartz space core:
+  \[
+  \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha};
+  \]
 
-That is,
-\[
-\overline{L_{\sym}^2|_{\Schwartz}} = L_{\sym}^2 = \left( L_{\sym}^2 \right)^*,
-\]
-with spectrum contained in \( [0, \infty) \), consisting solely of real eigenvalues with finite multiplicity, accumulating only at zero.
+  \item Its closure is self-adjoint and positive:
+  \[
+  \overline{L_{\mathrm{sym}}^2|_{\mathcal{S}(\mathbb{R})}} = L_{\mathrm{sym}}^2 = \left( L_{\mathrm{sym}}^2 \right)^*;
+  \]
+
+  \item Its spectrum satisfies:
+  \[
+  \operatorname{Spec}(L_{\mathrm{sym}}^2) \subset [0, \infty),
+  \]
+  and consists entirely of discrete eigenvalues of finite multiplicity, with accumulation only at zero.
+\end{itemize}
 \end{lemma}

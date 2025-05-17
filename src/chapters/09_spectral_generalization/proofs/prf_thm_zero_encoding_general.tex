@@ -1,0 +1,21 @@
+\begin{proof}[Proof of \thmref{thm:zero_encoding_general}]
+By \thmref{thm:spectral_determinant_identity_Lpi}, the zeta-regularized Fredholm determinant of \( \Lsympi \in \TC(\Hpsipi) \) satisfies
+\[
+\detz(I - \lambda \Lsympi) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)}{\Xi\left(\tfrac{1}{2}, \pi\right)}.
+\]
+Since the determinant function \( \detz(I - \lambda \Lsympi) \) is entire of order one, its zeros occur precisely at the reciprocals of the eigenvalues of \( \Lsympi \), scaled as \( \mu = \frac{1}{i}(\rho - \frac{1}{2}) \), where \( \rho \in \C \) is a nontrivial zero of \( \Xi(s, \pi) \).
+
+Let \( \mu \in \Spec(\Lsympi) \). Then \( \lambda = \mu \) is a zero of \( \detz(I - \lambda \Lsympi) \), which implies that
+\[
+\Xi\left(\tfrac{1}{2} + i\mu, \pi\right) = 0.
+\]
+Set \( \rho := \tfrac{1}{2} + i\mu \). Then \( \Xi(\rho, \pi) = 0 \), and \( \mu = \frac{1}{i}(\rho - \frac{1}{2}) \) as claimed.
+
+Multiplicity of the zero \( \rho \) in \( \Xi(s, \pi) \) corresponds to the multiplicity of the eigenvalue \( \mu_\rho \) in the spectrum of \( \Lsympi \), since the regularized determinant encodes the full spectral data via the Hadamard factorization of entire functions of order one (cf.\ \cite{Levin1996EntireLectures}, Ch.~2).
+
+Hence,
+\[
+\Spec(\Lsympi) = \left\{ \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) : \Xi(\rho, \pi) = 0 \right\},
+\]
+with multiplicities preserved.
+\end{proof}

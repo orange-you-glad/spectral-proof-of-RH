@@ -1,8 +1,8 @@
-\begin{lemma}[Trace-Norm Convergence \( L_t \to L_{\sym} \)]
+\begin{lemma}[Trace-Norm Convergence \( L_t \to L_{\mathrm{sym}} \)]
 \label{lem:trace_norm_convergence_Lt_to_Lsym}
 Fix \( \alpha > \pi \), and define the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\R, e^{\alpha|x|}\, dx).
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|}\, dx).
 \]
 Let
 \[
@@ -13,53 +13,57 @@ be the canonical Fourier profile.
 Define mollified spectral profiles and convolution kernels by
 \[
 \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda), \qquad
-K_t(x,y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda.
+K_t(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda.
 \]
 Then for each \( t > 0 \), the convolution operator
 \[
-(L_t f)(x) := \int_{\R} K_t(x, y)\, f(y)\, dy
+(L_t f)(x) := \int_{\mathbb{R}} K_t(x, y)\, f(y)\, dy
 \]
 defines a trace-class operator:
 \[
-L_t \in \TC(H_{\Psi_\alpha}), \qquad \sup_{0 < t \le 1} \| L_t \|_{\TC} < \infty.
+L_t \in \mathcal{C}_1(H_{\Psi_\alpha}), \qquad \sup_{0 < t \le 1} \| L_t \|_{\mathcal{C}_1} < \infty.
 \]
-This follows from the exponential decay of \( K_t(x,y) \), implied by Paley--Wiener theory applied to \( \varphi_t \in PW_\pi \cap \Schwartz \)~\cite[Thm.~IX.12]{ReedSimon1975II}, and classical trace-norm criteria for weighted Hilbert spaces~\cite[Ch.~4]{Simon2005TraceIdeals}.
 
 \medskip
+\noindent
+This follows from the exponential decay of \( K_t(x,y) \), implied by Paley--Wiener theory applied to \( \varphi_t \in \operatorname{PW}_\pi \cap \mathcal{S}(\mathbb{R}) \)~\cite[Thm.~IX.12]{ReedSimon1975II}, and classical trace-norm criteria for weighted Hilbert spaces~\cite[Ch.~4]{Simon2005TraceIdeals}.
 
-Define the canonical convolution operator as the Schatten-1 limit:
+\medskip
+\noindent
+Define the canonical convolution operator as the trace-norm limit:
 \[
-L_{\sym} := \lim_{t \to 0^+} L_t \quad \text{in } \TC(H_{\Psi_\alpha}),
+L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}),
 \]
 i.e.,
 \[
-\| L_t - L_{\sym} \|_{\TC} \to 0 \quad \text{as } t \to 0^+.
+\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1} \to 0 \quad \text{as } t \to 0^+.
 \]
 
+\medskip
+\noindent
 This convergence is ensured by the following:
-
 \begin{itemize}
-  \item Pointwise convergence: \( \varphi_t(\lambda) \to \phi(\lambda) \) for all \( \lambda \in \R \);
-  \item Local \( L^1 \)-convergence: \( \varphi_t \to \phi \) in \( L^1_{\mathrm{loc}}(\R) \);
-  \item Uniform trace-norm bounds on \( L_t \), and exponential decay of the mollified kernels \( K_t \);
+  \item Pointwise convergence: \( \varphi_t(\lambda) \to \phi(\lambda) \) for all \( \lambda \in \mathbb{R} \);
+  \item Local \( L^1 \)-convergence: \( \varphi_t \to \phi \) in \( L^1_{\mathrm{loc}}(\mathbb{R}) \);
+  \item Uniform trace-norm bounds on \( L_t \), and exponential decay of \( K_t \);
   \item The limiting kernel
   \[
-  K_{\sym}(x,y) := \frac{1}{2\pi} \int_{\R} e^{i(x-y)\lambda} \phi(\lambda)\, d\lambda
+  K_{\mathrm{sym}}(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x-y)\lambda} \phi(\lambda)\, d\lambda
   \]
-  satisfies \( K_{\sym} \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), so
+  satisfies \( K_{\mathrm{sym}} \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), so
   \[
-  L_{\sym} \in \TC(H_{\Psi_\alpha}).
+  L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}).
   \]
 \end{itemize}
 
 \paragraph{Spectral Implications.}
-Since \( L_t \to L_{\sym} \) in trace norm, we have:
+Since \( L_t \to L_{\mathrm{sym}} \) in trace norm, we have:
 \[
-\Tr\left(e^{-tL_t^2}\right) \to \Tr\left(e^{-tL_{\sym}^2}\right) \quad \text{as } t \to 0^+,
+\operatorname{Tr}\left(e^{-tL_t^2}\right) \to \operatorname{Tr}\left(e^{-tL_{\mathrm{sym}}^2}\right) \quad \text{as } t \to 0^+,
 \]
-and for all \( \lambda \in \R \),
+and for all \( \lambda \in \mathbb{R} \),
 \[
-\det\nolimits_{\zeta}(I - \lambda L_t) \to \det\nolimits_{\zeta}(I - \lambda L_{\sym}).
+\det\nolimits_{\zeta}(I - \lambda L_t) \to \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}).
 \]
 These analytic consequences underpin the spectral determinant identity, rigorously developed in \secref{sec:determinant_identity}.
 \end{lemma}

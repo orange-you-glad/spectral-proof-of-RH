@@ -1,29 +1,30 @@
 \begin{lemma}[Laplace Integrability of the Heat Trace]
 \label{lem:laplace_integrability_heat_trace}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical self-adjoint trace-class operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha|x|} dx) \), with \( \alpha > \pi \). Define the heat trace
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical self-adjoint trace-class operator on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx) \), with \( \alpha > \pi \). Define the heat trace
 \[
-f(t) := \Tr\left(e^{-t L_{\sym}^2}\right), \qquad t > 0.
+f(t) := \operatorname{Tr}\left(e^{-t L_{\mathrm{sym}}^2}\right), \qquad t > 0.
 \]
 Then the following hold:
 \begin{enumerate}
-    \item For every \( \lambda \in \C \), the Laplace-type integral
+    \item[\textnormal{(i)}] For every \( \lambda \in \mathbb{C} \), the Laplace-type integral
     \[
     \int_0^\infty \frac{e^{-\lambda^2 t}}{t} f(t)\, dt
     \]
-    converges absolutely, and defines an entire function of \( \lambda \in \C \).
+    converges absolutely, and defines an entire function of \( \lambda \in \mathbb{C} \).
     
-    \item The associated zeta-regularized Fredholm determinant
+    \item[\textnormal{(ii)}] The associated zeta-regularized Fredholm determinant
     \[
-    \det\nolimits_{\zeta}(I - \lambda L_{\sym}) := \exp\left( -\int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Tr\left(e^{-t L_{\sym}^2}\right) \, dt \right)
+    \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) := \exp\left( -\int_0^\infty \frac{e^{-\lambda^2 t}}{t} \operatorname{Tr}\left(e^{-t L_{\mathrm{sym}}^2}\right) \, dt \right)
     \]
     is entire, and satisfies
     \[
-    \log \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Theta(t)\, dt.
+    \log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Theta(t)\, dt.
     \]
 \end{enumerate}
 
+\medskip
 \noindent
-The integral is well-defined for all \( \lambda \in \C \) due to the singular short-time behavior
+The integral is well-defined for all \( \lambda \in \mathbb{C} \) due to the singular short-time behavior
 \[
 \Theta(t) = \frac{\log(1/t)}{\sqrt{4\pi t}} + \mathcal{O}(t^{-1/2}) \quad \text{as } t \to 0^+,
 \]

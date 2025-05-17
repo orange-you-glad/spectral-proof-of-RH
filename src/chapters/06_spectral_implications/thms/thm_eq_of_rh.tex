@@ -1,13 +1,13 @@
 \begin{theorem}[Spectral Reformulation of the Riemann Hypothesis]
 \label{thm:eq_of_rh}
 
-Let \( L_{\sym} \in \TC(\HPsi) \cap \KC(\HPsi) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
 \[
-\HPsi := \PsiAlphaSpace{x}, \qquad \alpha > \pi,
+H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \alpha > \pi,
 \]
 constructed via mollified convolution with the inverse Fourier transform of the completed zeta profile
 \[
-\phi(\lambda) := \XiR\left( \tfrac{1}{2} + i\lambda \right),
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
 \]
 as rigorously developed in Chapters~\ref{sec:operator_construction}–\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
 
@@ -15,31 +15,33 @@ as rigorously developed in Chapters~\ref{sec:operator_construction}–\ref{sec:h
 
 Suppose its Carleman–\(\zeta\)-regularized Fredholm determinant satisfies the canonical identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
-\qquad \forall \lambda \in \C,
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\qquad \forall \lambda \in \mathbb{C},
 \]
 as proven unconditionally in \thmref{thm:det_identity_revised}.
 
 \medskip
 
-Then the Riemann Hypothesis is equivalent to the spectral reality of \( L_{\sym} \):
+Then the Riemann Hypothesis is equivalent to the spectral reality of \( L_{\mathrm{sym}} \):
 \[
-\RH \iff \Spec(L_{\sym}) \subset \R.
+\RH \quad \Longleftrightarrow \quad \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
 \]
 
 \medskip
 
 \noindent
-Explicitly, for each nontrivial zero \( \rho = \beta + i\gamma \) of \( \zetaR(s) \), define the canonical spectral image:
+Explicitly, for each nontrivial zero \( \rho = \beta + i\gamma \) of \( \zeta(s) \), define the canonical spectral image:
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} = \frac{1}{\gamma} \in \C.
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma \in \mathbb{C}.
 \]
 Then:
 \begin{itemize}
-  \item \( \mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2} \);
+  \item \( \mu_\rho \in \mathbb{R} \iff \operatorname{Re}(\rho) = \tfrac{1}{2} \);
   \item Hence,
   \[
-  \Spec(L_{\sym}) \subset \R \iff \text{ all nontrivial zeros } \rho \text{ lie on the critical line.}
+  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \quad \Longleftrightarrow \quad
+  \text{All nontrivial zeros } \rho \text{ lie on the critical line.}
   \]
 \end{itemize}
 
@@ -48,11 +50,11 @@ Then:
 \noindent
 This equivalence follows from:
 \begin{enumerate}
-  \item The analytic–spectral identity for the determinant of \( L_{\sym} \);
-  \item The bijective spectral map \( \rho \mapsto \mu_\rho \) between nontrivial zeros and the nonzero spectrum of \( L_{\sym} \) (see \thmref{thm:spectral_zero_bijection_revised});
+  \item The analytic–spectral identity for the determinant of \( L_{\mathrm{sym}} \);
+  \item The bijective spectral map \( \rho \mapsto \mu_\rho \) between nontrivial zeros and the nonzero spectrum of \( L_{\mathrm{sym}} \) (see \thmref{thm:spectral_zero_bijection_revised});
   \item The algebraic inversion identity:
   \[
-  \mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2}.
+  \mu_\rho \in \mathbb{R} \iff \operatorname{Re}(\rho) = \tfrac{1}{2}.
   \]
 \end{enumerate}
 

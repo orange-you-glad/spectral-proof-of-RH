@@ -1,20 +1,20 @@
 \begin{remark}[Core Density and Sobolev Completion]
 \label{rem:sobolev_core_reference}
-The density of \( \Schwartz(\R) \subset H_{\Psi_\alpha} \) can also be justified via Sobolev spaces adapted to exponential weights.
+The density of \( \Schwartz(\R) \subset H_{\Psi_\alpha} \) can also be justified through Sobolev-scale completions adapted to exponential weights.
 
 \medskip
 
-Let \( H^s_\alpha(\R) \) denote the weighted Sobolev space defined by
+Let \( H^s_\alpha(\R) \) denote the weighted Sobolev space
 \[
-H^s_\alpha(\R) := \left\{ f \in L^2_{\mathrm{loc}}(\R) \,\middle|\, \langle D \rangle^s f \in L^2(\R, \Psi_\alpha(x)\, dx) \right\}, \quad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > 0.
+H^s_\alpha(\R) := \left\{ f \in L^2_{\mathrm{loc}}(\R) \;\middle|\; \langle D \rangle^s f \in L^2(\R, \Psi_\alpha(x)\, dx) \right\}, \quad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > 0.
 \]
-Then the embeddings
+Then the continuous embeddings
 \[
 \Schwartz(\R) \hookrightarrow H^s_\alpha(\R) \hookrightarrow H_{\Psi_\alpha}
 \]
-are continuous and dense for all \( s \ge 0 \), and can be used to construct a graph-norm core for unbounded convolution operators with exponentially decaying kernels.
+are dense for all \( s \ge 0 \), and provide a natural topology for defining graph cores of unbounded convolution operators with exponential kernel decay.
 
 \medskip
 
-This functional-analytic perspective complements the analytic vector argument used to establish essential self-adjointness of \( L_{\sym} \) on \( \Schwartz(\R) \) in later chapters. It also justifies stability of mollifier domains and semigroup bounds under Sobolev-scale closure.
+This perspective complements the analytic vector argument used to establish essential self-adjointness of \( L_{\sym} \) on \( \Schwartz(\R) \), and justifies the stability of core domains under mollification and unitary conjugation. Under \( U_\alpha f(x) := \Psi_\alpha(x)^{1/2} f(x) \), all Sobolev and Schwartz core properties transfer to the flat setting \( L^2(\R) \), reinforcing the spectral invariance of the domain structure.
 \end{remark}

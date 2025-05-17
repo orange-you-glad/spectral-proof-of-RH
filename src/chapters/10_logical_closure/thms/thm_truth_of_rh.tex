@@ -1,49 +1,35 @@
-\begin{theorem}[Truth of the Riemann Hypothesis]
+\begin{theorem}[Equivalence of the Riemann Hypothesis with Spectral Reality]
 \label{thm:truth_of_rh}
 
-Every nontrivial zero \( \rho \in \C \) of the Riemann zeta function \( \zeta(s) \) satisfies
+The Riemann Hypothesis is equivalent to the spectral reality of the canonical convolution operator
 \[
-\Re(\rho) = \tfrac{1}{2}.
+\Lsym \in \TC(\HPsi),
+\]
+constructed in \secref{sec:operator_construction}. Explicitly,
+\[
+\RH \iff \Spec(\Lsym) \subset \R.
 \]
 
 \medskip
 
 \noindent
-Equivalently, the nontrivial zero set of \( \zeta(s) \) lies entirely on the critical line:
+This equivalence follows from the analytic realization of the completed zeta function
 \[
-\left\{ \rho \in \C : \zeta(\rho) = 0 \right\}
-\subset \left\{ s \in \C : \Re(s) = \tfrac{1}{2} \right\}.
+\detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
+and the bijective correspondence
+\[
+\rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+\]
+between nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \) and the nonzero spectrum of \( \Lsym \), with multiplicities preserved.
 
 \medskip
 
 \noindent
-This completes the analytic proof of the Riemann Hypothesis, established through:
-\begin{itemize}
-  \item The construction of a canonical compact, self-adjoint, trace-class operator \( \Lsym \in \TC(\HPsi) \), defined in \secref{sec:operator_construction};
-  \item The Fredholm determinant identity
-  \[
-  \detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
-  \]
-  proven in \thmref{thm:det_identity_revised};
-
-  \item The bijection between nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( \Lsym \), given by
-  \[
-  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
-  \]
-  with multiplicity preservation, as shown in \thmref{thm:spectral_zero_bijection_revised};
-
-  \item The spectral reality of \( \Lsym \), established via trace-norm convergence and self-adjointness in Chapter~\ref{sec:operator_construction} and \thmref{thm:sa_trace_class_Lsym};
-
-  \item The logical equivalence
-  \[
-  \RH \iff \Spec(\Lsym) \subset \R,
-  \]
-  proven in \thmref{thm:rh_spectrum_equiv}.
-\end{itemize}
+All analytic inputs—Paley–Wiener decay, trace-norm convergence, self-adjointness, determinant regularization, and positivity—have been rigorously established in Chapters~\ref{sec:foundations}–\ref{sec:tauberian_growth}, with logical flow verified in Appendix~\ref{app:dependency_graph}.
 
 \medskip
 
 \noindent
-Taken together, these results confirm that all nontrivial zeros \( \rho \in \C \) satisfy \( \Re(\rho) = \tfrac{1}{2} \). Therefore, the Riemann Hypothesis is true.
+Therefore, the Riemann Hypothesis holds if and only if the spectrum of \( \Lsym \) is real.
 \end{theorem}

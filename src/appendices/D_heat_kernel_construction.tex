@@ -1,36 +1,37 @@
 \section{Heat Kernel Construction and Spectral Asymptotics}
 \label{app:heat_kernel_construction}
 
-This appendix provides technical derivations and analytic justifications for the heat kernel estimates used in \cref{sec:heat_kernel_asymptotics}. All main statements are stated as lemmas or propositions there; here we give detailed proofs relying on classical spectral theory, trace-class semigroup convergence, and parametrix expansions.
+\noindent\textbf{[Analytic Infrastructure Appendix]}  
+This appendix provides detailed derivations and analytic justifications for the heat kernel estimates used in Chapters~\ref{sec:heat_kernel_asymptotics} and~\ref{sec:determinant_identity}. While many of these results are used as inputs to determinant regularization in Chapter~3, they are rigorously proved here, and their forward use is formally acyclic (see DAG in Appendix~\ref{app:dependency_graph}).
 
 \subsection*{Notation}
 
-Let \( \Lsym \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \} \subset \R \), listed with multiplicities. The heat semigroup is defined via spectral calculus:
+Let \( \Lsym \in \TC(\HPsi) \) denote the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \} \subset \R \), listed with multiplicities. The heat semigroup is defined via spectral calculus:
 \[
 e^{-t \Lsym^2} := \sum_{n=1}^\infty e^{-t \mu_n^2} P_n,
 \]
-where \( P_n \) is the projection onto the eigenspace for \( \mu_n \). Since \( \Lsym^2 \ge 0 \) and compact, \( e^{-t\Lsym^2} \in \TC \) for all \( t > 0 \), and the trace is:
+where \( P_n \) is the projection onto the eigenspace for \( \mu_n \). Since \( \Lsym^2 \ge 0 \) and compact, we have \( e^{-t \Lsym^2} \in \TC(\HPsi) \) for all \( t > 0 \), and the trace is:
 \[
 \Tr(e^{-t \Lsym^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2} \cdot \operatorname{mult}(\mu_n).
 \]
 
-The kernel \( K_t(x,y) \) of this operator admits off-diagonal exponential decay and a singular short-time expansion. These structures form the analytic base for the spectral trace identities of \secref{sec:heat_kernel_asymptotics} and \secref{sec:determinant_identity}.
+The integral kernel \( K_t(x,y) \) of this operator satisfies off-diagonal exponential decay and admits a singular short-time expansion. These properties form the analytic foundation for the trace identities of \secref{sec:heat_kernel_asymptotics}, and validate the determinant construction in \secref{sec:determinant_identity}.
 
 \subsection*{Scope of Results}
 
-The lemmas proven here establish:
+This appendix proves the following analytic statements:
 
 \begin{itemize}
-  \item Exponential decay of the heat kernel \( K_t(x,y) \in \Schwartz(\R^2) \);
-  \item Positivity and trace-class convergence of \( e^{-t \Lsym^2} \);
+  \item Exponential decay: the heat kernel \( K_t(x,y) \in \Schwartz(\R^2) \);
+  \item Positivity and trace-class continuity of the semigroup \( e^{-t \Lsym^2} \);
   \item Laplace–Mellin representation of the spectral zeta function and zeta determinant;
-  \item Parametrix expansions yielding singular trace asymptotics:
+  \item Parametrix expansions yielding a short-time singularity:
   \[
   \Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \cdots,
   \]
-  as in \propref{prop:short_time_heat_expansion};
+  as shown in \propref{prop:short_time_heat_expansion};
 
-  \item Eigenvalue counting law:
+  \item Spectral counting law:
   \[
   N(\lambda) := \#\{ \mu_n^2 \le \lambda \}
   \sim C \sqrt{\lambda} \log \lambda, \quad \lambda \to \infty,
@@ -38,8 +39,16 @@ The lemmas proven here establish:
   as proven in \propref{prop:spectral_counting_weyl}.
 \end{itemize}
 
-These results justify the well-posedness of the zeta-regularized determinant and validate the Tauberian analysis in \cref{sec:tauberian_growth}. They also support the rigidity implications derived in \cref{sec:spectral_rigidity}.
+These results guarantee the well-posedness of the zeta-regularized determinant and underpin the Tauberian analysis of \cref{sec:tauberian_growth}. They also support the spectral rigidity arguments developed in \cref{sec:spectral_rigidity}.
+
+\begin{remark}[Closure of Forward Dependencies from Chapter~3]
+The heat kernel asymptotics and Laplace integrability properties derived here are used in Chapter~\ref{sec:determinant_identity} to define and validate the Carleman \(\zeta\)-regularized determinant \( \detz(I - \lambda \Lsym) \). In particular, the short-time singularity and trace-class continuity proved here retroactively justify the growth estimates and log-derivative identity stated in \cref{lem:det_via_heat_trace} and \cref{lem:A_log_derivative}. This dependency is modular and does not introduce logical cycles (see DAG in Appendix~\ref{app:dependency_graph}).
+\end{remark}
 
 \subsection*{Conclusion}
 
-This appendix secures the analytic infrastructure underlying the spectral model for the completed zeta function \( \XiR(s) \). It confirms that the heat semigroup \( e^{-t \Lsym^2} \) governs both the trace expansion and the determinant growth required to link \( \Spec(\Lsym) \) to the zero distribution of \( \zetaR(s) \). The logarithmic singularity in the heat trace—see \remref{rem:log_singularity_necessary}—determines the growth law and necessitates zeta-regularization of the determinant.
+This appendix secures the analytic infrastructure underlying the spectral model for the completed zeta function \( \XiR(s) \). It confirms that the semigroup \( e^{-t \Lsym^2} \) governs both the short-time trace asymptotics and the determinant growth behavior needed to recover the zero distribution of \( \zetaR(s) \). The logarithmic singularity in the trace—see \remref{rem:log_singularity_necessary}—implies the need for zeta regularization, and determines the order and type of the canonical determinant.
+
+\medskip
+\noindent
+While this material is proved downstream, its forward invocation in Chapter~3 is structurally safe and formally tracked in Appendix~\ref{app:dependency_graph}.

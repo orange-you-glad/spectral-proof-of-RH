@@ -8,9 +8,7 @@ Let \( U \colon \mathcal{H} \to \widetilde{\mathcal{H}} \) be a unitary isomorph
 Then for all \( 1 \le p \le \infty \),
 \[
 T \in \mathcal{C}_p(\mathcal{H}) \quad \Longleftrightarrow \quad \widetilde{T} \in \mathcal{C}_p(\widetilde{\mathcal{H}}),
-\]
-and
-\[
+\quad \text{and} \quad
 \| \widetilde{T} \|_{\mathcal{C}_p} = \| T \|_{\mathcal{C}_p}.
 \]
 
@@ -18,8 +16,9 @@ and
 \noindent In particular:
 \begin{itemize}
   \item If \( T \in \mathcal{C}_1(\mathcal{H}) \), then \( \widetilde{T} \in \mathcal{C}_1(\widetilde{\mathcal{H}}) \) with equal trace norm;
-  \item The spectra are equal: \( \sigma(\widetilde{T}) = \sigma(T) \);
-  \item The regularized determinants coincide:
+  \item Spectral properties are preserved: \( \sigma(\widetilde{T}) = \sigma(T) \);
+  \item Self-adjointness and compactness are preserved: \( T = T^* \iff \widetilde{T} = \widetilde{T}^* \), and similarly for compactness;
+  \item Zeta-regularized determinants agree:
   \[
   \det\nolimits_\zeta(I - \lambda T) = \det\nolimits_\zeta(I - \lambda \widetilde{T}), \qquad \forall \lambda \in \mathbb{C}.
   \]
@@ -27,5 +26,5 @@ and
 
 \medskip
 \noindent
-This lemma applies, for example, when \( \mathcal{H} = H_{\Psi_\alpha} \), \( \widetilde{\mathcal{H}} = L^2(\mathbb{R}) \), and \( U f(x) := \Psi_\alpha(x)^{1/2} f(x) \) is the exponential conjugation map.
+This applies in particular when \( \mathcal{H} = H_{\Psi_\alpha} \), \( \widetilde{\mathcal{H}} = L^2(\mathbb{R}) \), and \( U f(x) := \Psi_\alpha(x)^{1/2} f(x) \) is the canonical exponential conjugation. In this setting, the operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) is unitarily equivalent to a symmetric, trace-class integral operator on flat \( L^2(\mathbb{R}) \), with identical spectrum, trace norm, and determinant structure.
 \end{lemma}

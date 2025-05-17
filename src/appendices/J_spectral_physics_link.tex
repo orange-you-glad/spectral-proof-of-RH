@@ -2,10 +2,7 @@
 \label{app:spectral_physics_link}
 
 \noindent\textbf{[Noncritical Appendix]}  
-This appendix explores heuristic physical interpretations of the canonical operator \( \Lsym \in \TC(\HPsi) \). While no physical model is constructed, the formal structure of \( \Lsym \) suggests an intriguing analogy to quantum Hamiltonians whose spectra encode arithmetic information—specifically, the rescaled nontrivial zeros of the Riemann zeta function:
-\[
-\Spec(\Lsym) = \left\{ \mu_n := \frac{1}{\gamma_n} \;\middle|\; \zetaR\left(\tfrac{1}{2} + i\gamma_n\right) = 0 \right\}.
-\]
+This appendix explores speculative physical interpretations of the canonical operator \( \Lsym \in \TC(\HPsi) \). No physical model is constructed or required for any analytic result. However, the spectral properties of \( \Lsym \) exhibit formal analogies to quantum Hamiltonians and thermodynamic systems, suggesting a broader perspective on the arithmetic structure of the Riemann zeta function.
 
 \subsection*{Partition Function Analogy}
 
@@ -13,17 +10,17 @@ The spectral trace
 \[
 Z(t) := \Tr(e^{-t \Lsym})
 \]
-resembles a thermal partition function for a quantum system with discrete energy levels \( \mu_n \). Its short-time singular expansion,
+bears resemblance to a thermal partition function for a quantum system with discrete energy levels \( \mu_n \). Its short-time singular expansion,
 \[
 Z(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2}), \qquad t \to 0^+,
 \]
-is reminiscent of Laplacians on singular or noncompact spaces and echoes ultraviolet divergences in heat kernel regularizations. This behavior is governed by the Hadamard structure of \( \Xi(s) \) and mirrors thermodynamic divergences in low-temperature limits.
+evokes ultraviolet divergences found in heat kernel regularization and noncompact spectral problems. This behavior mirrors the analytic structure of \( \Xi(s) \) and informs the Mellin construction of the canonical determinant.
 
-The zeta-regularized determinant
+The zeta-regularized Fredholm determinant
 \[
 \detz(I - \lambda \Lsym)
 \]
-then plays the role of a regularized spectral free energy, with its logarithm analogous to the thermodynamic potential. This is formalized analytically in \cref{thm:det_identity_revised}.
+can then be interpreted as a spectral free energy, with its logarithm analogous to a thermodynamic potential or generating function. This correspondence is formalized in \cref{thm:det_identity_revised}.
 
 \subsection*{GUE Statistics and Inverse Spectrum}
 
@@ -31,38 +28,39 @@ Under the nonlinear spectral map
 \[
 \gamma_n \longmapsto \mu_n := \frac{1}{\gamma_n},
 \]
-the conjectured GUE statistics of the imaginary parts \( \gamma_n \)~\cite{Montgomery1973PairCorrelation, Berry1986RiemannSpectra} transform into a compressed and arithmetically sensitive spectrum \( \mu_n \in \Spec(\Lsym) \). This inversion:
+the conjectured GUE statistics for the zeros \( \gamma_n \)~\cite{Montgomery1973PairCorrelation, Berry1986RiemannSpectra} transform into a compressed spectrum \( \mu_n \in \Spec(\Lsym) \). This inversion:
 \begin{itemize}
-  \item Compresses high-energy random matrix behavior;
-  \item Amplifies low-lying arithmetic structure;
-  \item Suggests a renormalized trace-class Hamiltonian for the global arithmetic dynamics of \( \zeta(s) \).
+  \item Compresses the large-\( \gamma \) regime of the original zeta spectrum;
+  \item Amplifies the small-\( \gamma \) behavior, enhancing sensitivity to low-lying arithmetic structure;
+  \item Suggests a trace-class “infrared Hamiltonian” with finite spectral data encoding global arithmetic dynamics.
 \end{itemize}
 
-From this perspective, \( \Lsym \) acts as a spectral compression of the Riemann dynamics—akin to a thermodynamically regularized Hamiltonian in an arithmetic phase space.
+Viewed through this lens, \( \Lsym \) resembles a thermodynamically regularized Hamiltonian for a yet-unknown arithmetic quantum system.
 
 \subsection*{Interpretation and Outlook}
 
-These analogies do not influence any analytic result in the manuscript. No Lagrangian, path integral, or physical model is defined. However, this perspective may motivate future work on:
+These analogies do not influence the analytic construction of \( \Lsym \) or the proof of spectral equivalence with RH. No Lagrangian, path integral, or operator quantization is proposed. However, this speculative framework may inspire future investigations into:
+
 \begin{itemize}
-  \item Quantum spectral models for zeta functions;
-  \item Trace-class operator analogs of quantum field theories;
-  \item Thermodynamic interpretations of arithmetic zeta regularization;
-  \item Gauge-theoretic constructions of arithmetic spectral flows.
+  \item Quantum models for zeta spectra;
+  \item Trace-class Hamiltonians in arithmetic field theories;
+  \item Thermodynamic interpretations of regularized determinants;
+  \item Gauge-theoretic or categorical constructions of spectral flows.
 \end{itemize}
 
 \medskip
 \noindent
-The operator \( \Lsym \) canonically encodes the analytic continuation, functional symmetry, and zero distribution of \( \Xi(s) \). Whether it admits a quantized or physical realization remains open. Its thermodynamic properties invite further exploration into arithmetic statistical mechanics.
+While conjectural, the spectral encoding properties of \( \Lsym \) provide fertile ground for exploring connections between arithmetic analysis and statistical mechanics. Whether these analogies admit formal mathematical models remains an open and intriguing question.
 
 \medskip
 \noindent
-For the analytic resolution of
+For the analytic proof of the equivalence
 \[
 \RH \iff \Spec(\Lsym) \subset \R,
 \]
 see Chapter~\ref{sec:spectral_implications}.
 
-\subsection*{Analogy Table: Zeta Physics Correspondence}
+\subsection*{Analogy Table: Zeta–Physics Correspondence}
 
 \begin{center}
 \small
@@ -71,7 +69,7 @@ see Chapter~\ref{sec:spectral_implications}.
                         |>{\raggedright\arraybackslash}X
                         |>{\raggedright\arraybackslash}X|}
 \hline
-\textbf{Zeta-Theoretic Object} & \textbf{Physical Interpretation} & \textbf{Formal Analog} \\
+\textbf{Zeta-Theoretic Object} & \textbf{Physics Interpretation} & \textbf{Formal Analog} \\
 \hline
 \( \gamma_n \) (imaginary part of zero) &
 Quantum momentum or energy level &
@@ -86,19 +84,19 @@ Partition function at temperature \( t^{-1} \) &
 Heat kernel trace; canonical ensemble \\
 
 \( \detz(I - \lambda \Lsym) \) &
-Zeta-regularized free energy &
+Regularized free energy or partition determinant &
 \( \log \mathcal{Z}(\lambda) \) in QFT \\
 
 \( \Theta(t) \sim t^{-1/2} \log(1/t) \) &
 Ultraviolet divergence &
-Spectral density blowup; short-time limit \\
+Spectral density blowup; short-time heat asymptotics \\
 
 \( \zeta_{\Lsym^2}(s) \) &
 Spectral zeta function or internal energy &
 Mellin transform of heat trace \\
 
 \( \Xi(s) \) &
-Spectral partition function &
+Canonical spectral partition function &
 Determinant over arithmetic spectrum \\
 \hline
 \end{tabularx}
@@ -106,4 +104,4 @@ Determinant over arithmetic spectrum \\
 
 \medskip
 \noindent
-This analogy table heuristically aligns the spectral properties of \( \Lsym \) with thermodynamic and quantum constructs. While not mathematically rigorous, it may inspire future operator-theoretic interpretations of arithmetic physics.
+This heuristic table aligns analytic spectral data with thermodynamic and quantum analogs. While not mathematically formalized here, such analogies may guide future developments in the interface between number theory and mathematical physics.

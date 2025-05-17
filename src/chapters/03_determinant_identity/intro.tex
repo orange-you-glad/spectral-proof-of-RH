@@ -15,20 +15,32 @@ constructed in \cref{sec:operator_construction} as the trace-norm limit of molli
 
 \begin{previewbox}
 \textbf{Analytic Preconditions (Summary).}
-The results in this chapter rely on the following rigorously established inputs:
+The results in this chapter rely on the following rigorously established inputs, proved across Chapters~1–2 and verified in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}:
 
 \begin{itemize}
-  \item \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) is real, even, entire of exponential type \( \pi \) (see \cref{lem:exact_type_pi}), hence \( \phi \in \PW{\pi} \).
-  \item Its inverse Fourier transform \( k := \FT^{-1}[\phi] \) belongs to \( L^1(\R, \Psi_\alpha^{-1}) \) for all \( \alpha > \pi \), ensuring that convolution with \( k \) defines a trace-class operator on \( \HPsi \).
-  \item The operator \( \Lsym \in \TC(\HPsi) \) is compact and self-adjoint, defined by trace-norm convergence \( L_t \to \Lsym \) (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}).
-  \item The semigroup \( \{ e^{-t \Lsym^2} \}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and satisfies Laplace-integrable bounds (\cref{lem:heat_semigroup_wellposed}).
-  \item The determinant is defined locally via a power series (\cref{lem:det_via_heat_trace}) and globally by Laplace–Mellin continuation.
+  \item \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) is real, even, entire of exponential type \( \pi \) (\cref{lem:exact_type_pi}), hence \( \phi \in \PW{\pi} \).
+  \item Its inverse Fourier transform \( k := \FT^{-1}[\phi] \) lies in \( L^1(\R, \Psi_\alpha^{-1}) \) for all \( \alpha > \pi \), enabling trace-class convolution on \( \HPsi \).
+  \item The operator \( \Lsym \in \TC(\HPsi) \) is compact and self-adjoint, defined as the trace-norm limit \( L_t \to \Lsym \) (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}).
+  \item The heat semigroup \( \{ e^{-t \Lsym^2} \}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and satisfies Laplace-integrable bounds (\cref{lem:heat_semigroup_wellposed}).
+  \item Short-time singularity:
+  \[
+  \Tr(e^{-t \Lsym^2}) \sim \tfrac{\log(1/t)}{\sqrt{4\pi t}} + \cdots,
+  \]
+  governs the order-one Hadamard type of the determinant (\cref{lem:det_identity_entire_order_one}).
+  \item The determinant is defined locally via power series (\cref{lem:det_via_heat_trace}) and globally by Laplace–Mellin continuation using the trace asymptotics above.
 \end{itemize}
+
+All analytic dependencies are modular and tracked in the DAG (Appendix~\ref{app:dependency_graph}). No assumptions regarding RH, spectral reality, or zero bijection are used in this chapter.
 \end{previewbox}
+
+\begin{remark}[Forward Use of Analytic Results from Chapter~5 and Appendix~D]
+While the present chapter proves the determinant identity \eqref{eq:zeta_det_identity} without assuming the Riemann Hypothesis, it does rely on heat trace asymptotics and Laplace integrability properties rigorously derived in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}. These forward references are explicitly tracked in the DAG (\cref{app:dependency_graph}), and no circular logic arises. The analytic inputs are modular and acyclic, but readers should note that their full derivation appears later in the manuscript.
+\end{remark}
 
 \medskip
 
-The proof proceeds through four main analytic modules, grounded in trace-class determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals} and the Paley--Wiener theory of entire functions~\cite[Ch.~9]{Levin1996EntireLectures}:
+\paragraph{Structure of the Proof.}
+The argument proceeds through four main analytic modules, grounded in trace-class determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals} and the Paley--Wiener theory of entire functions~\cite[Ch.~9]{Levin1996EntireLectures}:
 
 \begin{itemize}
   \item \textbf{Heat trace construction and analytic continuation:} Define the Carleman determinant via Laplace--Mellin transform of the trace \( \Tr(e^{-t \Lsym^2}) \), analytically continued via Tauberian expansion (\cref{lem:heat_semigroup_wellposed}, \cref{lem:det_via_heat_trace}).

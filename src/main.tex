@@ -20,28 +20,30 @@ We construct a canonical compact, self-adjoint, trace-class operator \( L_{\math
 \]
 where \( \Xi(s) \) denotes the completed Riemann zeta function.
 
-This determinant is entire of order one and exponential type \( \pi \), providing a canonical spectral realization of the Riemann Hypothesis. The operator arises as the trace-norm limit of a mollified family of convolution operators, with kernels defined by the inverse Fourier transform of \( \Xi \). The resulting operator has discrete real spectrum
+This determinant is entire of order one and exponential type \( \pi \), and provides a canonical spectral encoding of the nontrivial zeros of \( \zeta(s) \). The operator \( L_{\mathrm{sym}} \) arises as the trace-norm limit of mollified convolution operators with kernels derived from the inverse Fourier transform of \( \Xi \). Its spectrum
 \[
-\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}),
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
-encoding all nontrivial zeros \( \rho \) of \( \zeta(s) \), with correct multiplicities.
+matches the set of nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \), with multiplicities preserved.
 
-We establish holomorphy of the heat semigroup, derive short-time trace asymptotics with logarithmic singularity, and recover the spectral counting function via Korevaar’s Tauberian theory. The determinant identity is proven unconditionally. A modular chain of spectral rigidity results yields the logical equivalence
+We prove holomorphy of the associated heat semigroup, establish short-time trace asymptotics with logarithmic singularity, and recover the spectral counting function via Korevaar’s Tauberian theory. These analytic results collectively establish the formal equivalence:
 \[
-\mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R},
+\mathrm{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
 \]
-thereby completing an analytic, acyclic, operator-theoretic proof of the Riemann Hypothesis.
 
 \medskip
 
 \noindent
-Refinements and functorial extensions are presented in Appendices~\ref{app:heat_kernel_refinements} and~\ref{app:additional_structures}, including conjectural generalizations to automorphic \( L \)-functions and motivic cohomology.
+Refinements and generalizations are presented in Appendices~\ref{app:heat_kernel_refinements} and~\ref{app:additional_structures}, including conjectural extensions to automorphic \( L \)-functions and motivic frameworks.
 
-\textbf{Trace-class threshold:} It is crucial that \( \alpha > \pi \) in order for the inverse Fourier transform of \( \Xi \) to yield a trace-class kernel; \lemref{lem:trace_class_failure_alpha_leq_pi} proves this condition is both necessary and sufficient.
-
+\textbf{Trace-class threshold:} The exponential weight parameter \( \alpha > \pi \) is both necessary and sufficient for trace-class regularity of the kernel; see \lemref{lem:trace_class_failure_alpha_leq_pi}.
 \end{abstract}
 
 \maketitle
+
+\vspace{1em}
+\noindent\textit{Note: This manuscript is modularly structured. Later chapters assume results proved in earlier ones but are logically acyclic; see Appendix~\ref{app:dependency_graph} for a DAG overview.}
+
 \setcounter{tocdepth}{1}
 \tableofcontents
 

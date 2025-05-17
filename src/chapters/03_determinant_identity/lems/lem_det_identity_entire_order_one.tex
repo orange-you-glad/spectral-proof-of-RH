@@ -4,16 +4,15 @@ Let \( \Lsym \in \TC(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class
 \[
 H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \text{for } \alpha > \pi.
 \]
-
-Then the map
+Then the Carleman \(\zeta\)-regularized determinant
 \[
 \lambda \mapsto \detz(I - \lambda \Lsym)
 \]
-extends to an entire function on \( \mathbb{C} \) of order one and exponential type \( \pi \). That is, there exists a constant \( C > 0 \) such that for all \( \lambda \in \mathbb{C} \),
+extends to an entire function on \( \mathbb{C} \) of order one and exponential type exactly \( \pi \). That is, there exists a constant \( C > 0 \) such that
 \[
-\left| \detz(I - \lambda \Lsym) \right| \le C e^{\pi |\lambda|}.
+\left| \detz(I - \lambda \Lsym) \right| \le C e^{\pi |\lambda|}, \qquad \forall\, \lambda \in \mathbb{C}.
 \]
-In particular,
+Hence,
 \[
 \detz(I - \lambda \Lsym) \in \mathcal{E}_1^\pi,
 \]
@@ -21,5 +20,9 @@ the Hadamard class of entire functions of order one and exact exponential type \
 
 \medskip
 \noindent
-The exponential type is governed by the Paley--Wiener theorem~\cite[Ch.~9]{Levin1996EntireLectures}, which bounds the growth of entire functions whose Fourier transforms have compact support. In this case, the support of the kernel’s Fourier transform \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \), inherited from the exponential type of \( \Xi(s) \), restricts the convolution kernel \( K(x - y) \) to type \( \pi \). This control on kernel growth ensures that the Fredholm determinant exhibits exactly exponential type \( \pi \).
+\textbf{Proof Sketch.} This follows from the trace-class Fredholm determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals} and Paley–Wiener control on the kernel. The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) implies that the convolution kernel \( K(x - y) = \FT^{-1}[\phi](x - y) \) decays exponentially at rate \( \pi \). Via the short-time heat kernel trace expansion
+\[
+\Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2}) \quad \text{as } t \to 0^+,
+\]
+and Laplace–Mellin regularization (see \cref{lem:det_via_heat_trace}), the singularity structure at \( s = 0 \) determines the order, while the Paley–Wiener exponential type of the kernel bounds the entire growth of the determinant by \( \pi \). The logarithmic singularity is critical for confirming the genus-one Hadamard structure.
 \end{lemma}

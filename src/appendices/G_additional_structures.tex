@@ -2,45 +2,46 @@
 \label{app:additional_structures}
 
 \noindent\textbf{[Noncritical Appendix]}  
-This appendix is logically inert: no theorem, lemma, or proof in the main manuscript depends on this material. It records speculative extensions of the canonical spectral framework to broader arithmetic contexts and conjectural cohomological models.
+This appendix is logically inert: no theorem, lemma, or proof in the main manuscript depends on this material. It records speculative extensions of the canonical spectral framework to broader arithmetic contexts and conjectural cohomological models. These ideas are exploratory and intended to guide future investigations, rather than to serve as established results.
 
 \subsection*{Spectral Generalizations}
 
 \begin{itemize}
   \item \textbf{Functorial \( L \)-Functions.}  
-  Given a completed automorphic \( L \)-function \( \Lambda_\pi(s) \), define:
+  Given a completed automorphic \( L \)-function \( \Lambda_\pi(s) \), one may conjecturally define a spectral envelope
   \[
   \Psi_\pi(x) := \left| \Lambda_\pi\left( \tfrac{1}{2} + i x \right) \right|^2, \quad
-  H_{\Psi_\pi} := L^2(\R, \Psi_\pi(x) dx).
+  H_{\Psi_\pi} := L^2(\R, \Psi_\pi(x) dx),
   \]
-  One may conjecture the existence of a compact, self-adjoint, trace-class operator \( L_\pi \in \TC(H_{\Psi_\pi}) \) such that
+  and postulate the existence of a compact, self-adjoint, trace-class operator \( L_\pi \in \TC(H_{\Psi_\pi}) \) satisfying
   \[
   \detz(I - \lambda L_\pi) = \frac{\Lambda_\pi(\tfrac{1}{2} + i\lambda)}{\Lambda_\pi(\tfrac{1}{2})}.
   \]
-  This would generalize the canonical determinant identity of \cref{sec:determinant_identity}, as explored in \appref{app:functorial_extensions}.
+  This would generalize the canonical determinant identity established for \( \XiR(s) \) in \cref{sec:determinant_identity}, and is explored heuristically in \appref{app:functorial_extensions}.
 
   \item \textbf{Cohomological Realization over \( \Spec(\Z) \).}  
-  In the frameworks proposed by Deninger~\cite{Deninger1998Frobenius}, one expects a Frobenius-type operator \( \mathrm{Frob} \) acting on a conjectural cohomology of \( \Spec(\Z) \), satisfying:
+  In the frameworks proposed by Deninger~\cite{Deninger1998Frobenius}, one expects a Frobenius-type operator \( \mathrm{Frob} \) acting on a hypothetical cohomology of \( \Spec(\Z) \), satisfying a trace formula
   \[
   \det\nolimits_{\mathrm{reg}}(I - u \cdot \mathrm{Frob}) = \zeta(u),
   \]
-  analogously to the Lefschetz trace formula in étale cohomology. In this context, \( \Lsym \) may act as a spectral or Laplacian realization of Frobenius, as suggested in~\cite{Connes1999TraceFormula}.
+  analogous to the Lefschetz formula in étale cohomology. In this view, \( \Lsym \) might admit interpretation as a spectral or Laplace-type realization of such a Frobenius operator, consistent with the trace formula perspective of Connes~\cite{Connes1999TraceFormula}.
 
   \item \textbf{Higher-Rank Langlands Extensions.}  
-  For a reductive group \( G \), one may conjecture a canonical operator \( L_{\sym,G} \in \TC(H_{\Psi_G}) \) such that
+  For a reductive group \( G \), one may conjecture the existence of a canonical operator \( L_{\sym,G} \in \TC(H_{\Psi_G}) \) such that
   \[
   \detz(I - \lambda L_{\sym,G}) = \frac{\Lambda^G(\tfrac{1}{2} + i\lambda)}{\Lambda^G(\tfrac{1}{2})},
   \]
-  where \( \Lambda^G(s) \) is the Langlands \( L \)-function for \( G \) or its dual \( {}^LG \). Such constructions might emerge from trace formulas, shtuka moduli, or geometric spectral categories.
+  where \( \Lambda^G(s) \) denotes the Langlands \( L \)-function attached to \( G \) or its dual group \( {}^LG \). Such operators could emerge from trace formulas, moduli of shtukas, or categorified spectral constructions.
 \end{itemize}
 
 \subsection*{Outlook}
 
-These conjectural directions suggest that the determinant identity developed here is part of a broader spectral framework linking global \( L \)-functions with trace-class operator theory. If realized, this would unify:
+The canonical determinant identity derived here for \( \XiR(s) \) suggests a broader framework in which global \( L \)-functions admit trace-class operator realizations. If such spectral models can be constructed uniformly, they may offer a pathway toward unifying:
+
 \begin{itemize}
-  \item Analytic continuation and functional equations via Fredholm determinants;
-  \item Zeta-zero multiplicities via trace identities and spectral regularization;
-  \item Langlands functoriality via categorical or moduli-theoretic spectral constructions.
+  \item Analytic continuation and functional equations via determinant regularization;
+  \item Spectral encodings of zero multiplicities via Fredholm factorization;
+  \item Functorial correspondences in the Langlands program via analytic operators or categorical traces.
 \end{itemize}
 
-While not needed for the analytic proof of RH, these ideas reinforce the potential for a universal spectral model for global arithmetic \( L \)-functions—extending the analytic realization of \( \XiR(s) \) constructed in this manuscript and guiding future analytic, arithmetic, and categorical developments.
+These directions remain conjectural and speculative. They are not used in the analytic realization of the Riemann Hypothesis presented in this manuscript but may serve as conceptual guideposts for future arithmetic, analytic, and categorical developments.

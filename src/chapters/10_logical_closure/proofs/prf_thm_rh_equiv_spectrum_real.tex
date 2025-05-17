@@ -1,38 +1,31 @@
 \begin{proof}[Proof of \thmref{thm:rh_spectrum_equiv}]
-Let \( \rho = \tfrac{1}{2} + i\gamma \in \C \) be a nontrivial zero of the Riemann zeta function. By the determinant identity,
+Let \( \rho = \tfrac{1}{2} + i\gamma \in \C \) be a nontrivial zero of the Riemann zeta function. Define the canonical spectral image:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma.
 \]
-and the bijective correspondence in \lemref{lem:spectral_zero_encoding}, each such \( \rho \) corresponds to a nonzero spectral value
-\[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym}),
-\]
-with multiplicities preserved via Hadamard factorization.
+By the determinant identity (see \thmref{thm:det_identity_revised}) and the bijection established in \thmref{thm:spectral_zero_bijection_revised}, each such \( \rho \) corresponds to a nonzero spectral value \( \mu_\rho \in \Spec(\Lsym) \), with multiplicities preserved.
 
 \paragraph{(i) \( \Rightarrow \) (ii)}
-Assume RH holds, i.e., each \( \rho = \tfrac{1}{2} + i\gamma \) has \( \gamma \in \R \). Then:
+Assume the Riemann Hypothesis holds. Then every nontrivial zero satisfies \( \rho = \tfrac{1}{2} + i\gamma \) with \( \gamma \in \R \). Therefore,
 \[
-\mu_\rho = \frac{1}{i(i\gamma)} = -\frac{1}{\gamma} \in \R.
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma \in \R.
 \]
-Since the spectrum of \( L_{\sym} \) consists of the \( \mu_\rho \)'s (plus possibly 0), it follows that
+Thus, all nonzero eigenvalues of \( \Lsym \) lie on the real line, so
 \[
-\Spec(L_{\sym}) \subset \R.
+\Spec(\Lsym) \subset \R.
 \]
 
 \paragraph{(ii) \( \Rightarrow \) (i)}
-Assume \( \Spec(L_{\sym}) \subset \R \). Then for each nontrivial zero \( \rho \),
+Conversely, suppose \( \Spec(\Lsym) \subset \R \). Then for each nontrivial zero \( \rho \), the associated \( \mu_\rho \in \Spec(\Lsym) \subset \R \). But then:
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \R.
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \R \quad \Rightarrow \quad \rho - \tfrac{1}{2} \in i\R \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
 \]
-Thus,
-\[
-\rho - \tfrac{1}{2} \in i\R \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
-\]
-Hence, RH holds.
+Hence, all nontrivial zeros lie on the critical line.
 
 \paragraph{Conclusion.}
-The spectrum of \( L_{\sym} \) is real if and only if all nontrivial zeros of \( \zetaR(s) \) lie on the critical line. This proves the equivalence:
+The canonical spectral map \( \rho \mapsto \mu_\rho \) matches the zero set of \( \zeta(s) \) with the nonzero spectrum of \( \Lsym \). Therefore,
 \[
-\RH \iff \Spec(L_{\sym}) \subset \R.
+\RH \iff \Spec(\Lsym) \subset \R,
 \]
+as claimed. This establishes a logically closed, operator-theoretic equivalence.
 \end{proof}

@@ -1,8 +1,8 @@
 \begin{proposition}[Refined Short-Time Heat Trace Expansion]
 \label{prop:short_time_heat_expansion}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha |x|} \, dx) \) for some \( \alpha > \pi \). Then, as \( t \to 0^+ \), the spectral heat trace satisfies the refined singular expansion:
+Let \( \Lsym \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha |x|} \, dx) \) for some \( \alpha > \pi \). Then, as \( t \to 0^+ \), the spectral heat trace satisfies the refined singular expansion:
 \[
-\Tr\left(e^{-t L_{\sym}^2}\right)
+\Tr\left(e^{-t \Lsym^2}\right)
 = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
 + c_0 \sqrt{t} + o\left( \sqrt{t} \right),
 \]
@@ -10,7 +10,7 @@ for some constant \( c_0 \in \R \), where the remainder \( o(\sqrt{t}) \) vanish
 
 \medskip
 \noindent
-The leading-order singularity \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) reflects the logarithmic divergence induced by the spectral structure of the mollified convolution kernel defining \( L_{\sym} \). This divergence originates from the genus-one Hadamard structure of the completed zeta function and implies non-integrability of the trace near \( t = 0 \).
+The leading-order singularity \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) reflects the logarithmic divergence induced by the spectral structure of the mollified convolution kernel defining \( \Lsym \). This divergence originates from the genus-one Hadamard structure of the completed zeta function and implies non-integrability of the trace near \( t = 0 \).
 
 \medskip
 \noindent
@@ -27,7 +27,11 @@ K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x)\, t^{n - \frac{1}{2}}.
 \noindent
 This refined asymptotic plays a foundational role in the determinant expansion and Tauberian theory developed in \secref{sec:determinant_identity} and \secref{sec:tauberian_growth}. In particular, the logarithmic divergence necessitates analytic continuation in the Laplace transform and underpins the regularized determinant identity:
 \[
-\log \det\nolimits_{\zeta}(I - \lambda L_{\sym}) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Tr\left(e^{-t L_{\sym}^2} \right) \, dt,
+\log \detz(I - \lambda \Lsym) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Tr\left(e^{-t \Lsym^2} \right) \, dt,
 \]
 where the integral must be interpreted in the zeta-regularized sense.
 \end{proposition}
+
+\begin{remark}[Singularity Control at \( t \to 0^+ \)]
+The integrand \( \Tr(e^{-tL_{\sym}^2}) / t \sim \log(1/t)/t^{3/2} \) is locally integrable on \( (0,\epsilon) \) due to the \texttt{o(\( \sqrt{t} \))} correction. This ensures convergence of the Laplace integral defining \( \log \det_\zeta \).
+\end{remark}

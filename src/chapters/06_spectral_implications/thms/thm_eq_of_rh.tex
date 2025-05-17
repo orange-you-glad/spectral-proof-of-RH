@@ -1,47 +1,42 @@
 \begin{theorem}[Spectral Reformulation of the Riemann Hypothesis]
 \label{thm:eq_of_rh}
-
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+Let \( \Lsym \in \TC(\HPsi) \cap \KC(\HPsi) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \alpha > \pi,
+\HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \alpha > \pi,
 \]
-constructed via mollified convolution with the inverse Fourier transform of the completed zeta profile
-\[
-\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
-\]
-as rigorously developed in Chapters~\ref{sec:operator_construction}–\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
+constructed via trace-norm limits of symmetric mollified convolution operators as described in Chapters~\ref{sec:operator_construction}–\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
 
 \medskip
 
-Suppose its Carleman–\(\zeta\)-regularized Fredholm determinant satisfies the canonical identity:
+Suppose the associated Carleman \(\zeta\)-regularized Fredholm determinant satisfies the canonical identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
-\qquad \forall \lambda \in \mathbb{C},
+\detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\qquad \forall \lambda \in \C,
 \]
-as proven unconditionally in \thmref{thm:det_identity_revised}.
+as proven in \thmref{thm:det_identity_revised}.
 
 \medskip
 
-Then the Riemann Hypothesis is equivalent to the spectral reality of \( L_{\mathrm{sym}} \):
+Then the Riemann Hypothesis is equivalent to the spectral reality of \( \Lsym \):
 \[
-\RH \quad \Longleftrightarrow \quad \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\RH \quad \Longleftrightarrow \quad \Spec(\Lsym) \subset \R.
 \]
 
 \medskip
 
 \noindent
-Explicitly, for each nontrivial zero \( \rho = \beta + i\gamma \) of \( \zeta(s) \), define the canonical spectral image:
+More precisely, for each nontrivial zero \( \rho = \beta + i\gamma \) of \( \zeta(s) \), define the canonical spectral image:
 \[
-\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma \in \mathbb{C}.
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma \in \C.
 \]
 Then:
 \begin{itemize}
-  \item \( \mu_\rho \in \mathbb{R} \iff \operatorname{Re}(\rho) = \tfrac{1}{2} \);
-  \item Hence,
+  \item \( \mu_\rho \in \R \) if and only if \( \operatorname{Re}(\rho) = \tfrac{1}{2} \);
+  \item Therefore,
   \[
-  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \Spec(\Lsym) \subset \R
   \quad \Longleftrightarrow \quad
-  \text{All nontrivial zeros } \rho \text{ lie on the critical line.}
+  \text{All nontrivial zeros } \rho \text{ lie on the critical line}.
   \]
 \end{itemize}
 
@@ -50,16 +45,17 @@ Then:
 \noindent
 This equivalence follows from:
 \begin{enumerate}
-  \item The analytic–spectral identity for the determinant of \( L_{\mathrm{sym}} \);
-  \item The bijective spectral map \( \rho \mapsto \mu_\rho \) between nontrivial zeros and the nonzero spectrum of \( L_{\mathrm{sym}} \) (see \thmref{thm:spectral_zero_bijection_revised});
-  \item The algebraic inversion identity:
+  \item The canonical determinant identity for \( \Lsym \);
+  \item The bijective, multiplicity-preserving spectral map
   \[
-  \mu_\rho \in \mathbb{R} \iff \operatorname{Re}(\rho) = \tfrac{1}{2}.
+  \rho \longmapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}),
   \]
+  proven in \thmref{thm:spectral_zero_bijection_revised}, which identifies the nontrivial zeros of \( \zeta(s) \) with the nonzero spectrum of \( \Lsym \);
+  \item The algebraic implication \( \mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2} \).
 \end{enumerate}
 
 \medskip
 
 \noindent
-Thus, the Riemann Hypothesis is equivalent to the condition that the entire spectrum of a canonical trace-class operator lies on the real line. This establishes a logically acyclic, operator-theoretic reformulation of RH within the framework of Fredholm theory and spectral determinant calculus.
+Thus, the Riemann Hypothesis is logically equivalent to the condition that the entire spectrum of a canonical trace-class operator lies on the real line. This establishes a fully operator-theoretic reformulation of RH, grounded in analytic Fredholm theory and zeta-regularized determinant calculus.
 \end{theorem}

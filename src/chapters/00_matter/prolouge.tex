@@ -4,42 +4,42 @@
 \medskip
 
 \noindent
-This manuscript constructs a canonical trace-class operator whose \(\zeta\)-regularized Fredholm determinant recovers the completed Riemann zeta function, thereby proving the Riemann Hypothesis (RH) via spectral means. The narrative builds on longstanding heuristics—Hilbert--Pólya, Weil's explicit formula, and Selberg's trace framework—elevating them into a rigorous operator-theoretic setting. The approach is acyclic, modular, and analytically complete.
+This manuscript constructs a canonical trace-class operator whose \(\zeta\)-regularized Fredholm determinant recovers the completed Riemann zeta function, thereby proving the Riemann Hypothesis (\(\RH\)) via spectral means. The narrative builds on longstanding heuristics—Hilbert--Pólya, Weil's explicit formula, and Selberg's trace framework—elevating them into a rigorous operator-theoretic setting. The approach is acyclic, modular, and analytically complete.
 
 \paragraph*{Scope.}
 We construct a compact, self-adjoint, trace-class operator
 \[
-L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}),
+\Lsym \in \TC(H_{\Psi_\alpha}),
 \]
-acting on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha|x|} dx) \), for any fixed \( \alpha > \pi \). Its Carleman–\(\zeta\)-regularized determinant satisfies:
+acting on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} = \PsiAlphaSpace{x} \), for any fixed \( \alpha > \pi \). Its Carleman--\(\zeta\)-regularized determinant satisfies:
 \[
-\det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-where \( \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2} \Gamma(s/2) \zeta(s) \) is the completed Riemann zeta function. The proof infrastructure rests on trace-class convergence, Paley--Wiener decay, spectral zeta function regularity, and Tauberian inversion.
+where \( \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2} \Gamma(s/2) \zeta(s) \) denotes the completed Riemann zeta function. The proof infrastructure rests on trace-class convergence, Paley--Wiener decay, spectral zeta function regularity, and Tauberian inversion. The critical decay threshold \( \alpha > \pi \) is sharp, as established in \lemref{lem:trace_class_failure_alpha_leq_pi}.
 
 \paragraph*{Arithmetic Context.}
-The canonical operator \( L_{\mathrm{sym}} \) fulfills the Hilbert--Pólya conjecture: it is a self-adjoint compact operator whose spectrum corresponds bijectively to the imaginary parts of the nontrivial zeros of \( \zeta(s) \). Its construction draws from arithmetic analogies. Recall that \( \zeta(s) \) admits both an Euler product and a functional equation, and that the explicit formula of Riemann--Weil relates primes to zeta zeros through a spectral duality akin to the Lefschetz trace formula.
+The canonical operator \( \Lsym \) fulfills the Hilbert--Pólya conjecture: it is a self-adjoint compact operator whose spectrum corresponds bijectively to the imaginary parts of the nontrivial zeros of \( \zeta(s) \). Its construction draws from arithmetic analogies. Recall that \( \zeta(s) \) admits both an Euler product and a functional equation, and that the explicit formula of Riemann--Weil relates primes to zeta zeros through a spectral duality akin to the Lefschetz trace formula.
 
-In the function field case, the Weil conjectures interpret zeta functions of varieties over finite fields as regularized traces of Frobenius on \(\ell\)-adic cohomology~\cite{Deligne1971WeilI}. Analogously, we construct \( L_{\mathrm{sym}} \) from the inverse Fourier transform of \( \Xi(s) \), such that its spectrum
+In the function field case, the Weil conjectures interpret zeta functions of varieties over finite fields as regularized traces of Frobenius on \(\ell\)-adic cohomology~\cite{Deligne1971WeilI}. Analogously, we construct \( \Lsym \) from the inverse Fourier transform of \( \Xi(s) \), such that its spectrum
 \[
 \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
 encodes each nontrivial zero \( \rho \) of \( \zeta(s) \). The determinant identity analytically lifts the Euler product to the Hilbert space level.
 
 \paragraph*{Spectral Synthesis.}
-The logarithmic derivative of the determinant recovers a spectral form of the explicit formula. The traces \( \operatorname{Tr}(L_{\mathrm{sym}}^n) \) yield harmonic moments of the zero distribution. The heat trace asymptotics
+The logarithmic derivative of the determinant recovers a spectral form of the explicit formula. The traces \( \Tr(\Lsym^n) \) yield harmonic moments of the zero distribution. The heat trace asymptotics
 \[
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \tfrac{1}{\sqrt{t}} \log(1/t)
+\Tr(e^{-t \Lsym^2}) \sim \tfrac{1}{\sqrt{t}} \log(1/t)
 \]
 recover the classical zero-counting function \( N(T) \sim \tfrac{T}{2\pi} \log \tfrac{T}{2\pi} \), aligning the trace-class analytic construction with number-theoretic density theorems.
 
 \paragraph*{Historical Context.}
-The spectral approach to RH originates in the early 20th century with the Hilbert--Pólya conjecture. Weil~\cite{Weil1952Explicite} reframed this as an arithmetic trace formula. Selberg introduced the first trace identity for eigenvalues in the automorphic setting (1956). Later, Connes~\cite{Connes1999TraceFormula}, Deninger~\cite{Deninger1998Frobenius}, and Berry--Keating~\cite{Berry1986RiemannSpectra} proposed frameworks involving noncommutative geometry, quantum mechanics, and flows on arithmetic moduli.
+The spectral approach to \(\RH\) originates in the early 20th century with the Hilbert--Pólya conjecture. Weil~\cite{Weil1952Explicite} reframed this as an arithmetic trace formula. Selberg introduced the first trace identity for eigenvalues in the automorphic setting (1956). Later, Connes~\cite{Connes1999TraceFormula}, Deninger~\cite{Deninger1998Frobenius}, and Berry--Keating~\cite{Berry1986RiemannSpectra} proposed frameworks involving noncommutative geometry, quantum mechanics, and flows on arithmetic moduli.
 
-However, none provided a rigorously defined trace-class operator matching \( \Xi(s) \) via a zeta-regularized determinant. The operator \( L_{\mathrm{sym}} \) constructed herein achieves this.
+However, none provided a rigorously defined trace-class operator matching \( \Xi(s) \) via a zeta-regularized determinant. The operator \( \Lsym \) constructed herein achieves this.
 
 \paragraph*{Narrative Architecture.}
-The manuscript is structured into nine analytic chapters:
+The manuscript is structured into ten analytic chapters:
 
 \begin{itemize}
   \item[\textbf{1}] \textbf{Foundations:} Operator topology, kernel decay, Schatten embeddings.
@@ -47,10 +47,11 @@ The manuscript is structured into nine analytic chapters:
   \item[\textbf{3}] \textbf{Determinant Identity:} Zeta identity and spectral expansion.
   \item[\textbf{4}] \textbf{Spectral Correspondence:} Encoding of zeros as eigenvalues.
   \item[\textbf{5}] \textbf{Heat Trace:} Laplace singularity and Tauberian link.
-  \item[\textbf{6}] \textbf{Spectral Equivalence:} RH \( \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \).
+  \item[\textbf{6}] \textbf{Spectral Equivalence:} \( \RH \iff \Spec(\Lsym) \subset \R \).
   \item[\textbf{7}] \textbf{Tauberian Growth:} Counting law from heat trace singularity.
   \item[\textbf{8}] \textbf{Spectral Rigidity:} Positivity, uniqueness, and operator identification.
-  \item[\textbf{9}] \textbf{RH Proven:} Completion of the analytic–spectral program.
+  \item[\textbf{9}] \textbf{Spectral Generalization:} Functorial lift to automorphic \( L \)-functions.
+  \item[\textbf{10}] \textbf{Logical Closure:} Completion of the analytic–spectral proof.
 \end{itemize}
 
 \paragraph*{Appendix Guide.}
@@ -58,9 +59,9 @@ The appendices support, extend, and contextualize the core argument:
 
 \begin{itemize}
   \item[\textbf{[A]}] \textbf{Foundational:} Notation (\appref{app:notation_summary}), dependency DAG (\appref{app:dependency_graph}), trace-class background (\appref{app:zeta_trace_background}), and kernel construction (\appref{app:heat_kernel_construction}).
-  \item[\textbf{[E]}] \textbf{Enhancements:} Refined kernel asymptotics (\appref{app:heat_kernel_refinements}), numerical evidence (\appref{app:spectral_numerics}).
-  \item[\textbf{[S]}] \textbf{Speculative:} Functorial generalizations (\appref{app:functorial_extensions}), motivic and physics analogies (\appref{app:additional_structures}, \appref{app:spectral_physics_link}).
+  \item[\textbf{[E]}] \textbf{Enhancements:} Refined kernel asymptotics (\appref{app:heat_kernel_refinements}), numerical simulations (\appref{app:spectral_numerics}).
+  \item[\textbf{[S]}] \textbf{Speculative:} Functorial extensions (\appref{app:functorial_extensions}), motivic and physics analogies (\appref{app:additional_structures}, \appref{app:spectral_physics_link}).
 \end{itemize}
 
 \paragraph*{Conclusion.}
-This manuscript should be read as a layered construction: a spectral bridge between \( \Xi(\tfrac{1}{2}+i\lambda) \) and \( \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) \), culminating in a canonical, acyclic, operator-theoretic proof of the Riemann Hypothesis.
+This manuscript should be read as a layered construction: a spectral bridge between \( \Xi(\tfrac{1}{2} + i\lambda) \) and \( \detz(I - \lambda \Lsym) \), culminating in a canonical, acyclic, operator-theoretic proof of the Riemann Hypothesis.

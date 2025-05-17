@@ -16,7 +16,7 @@ Then:
 \[
 \widehat{\Xi} \in L^1(\mathbb{R}, e^{-\alpha |x|}\, dx),
 \]
-i.e., there exists \( A_\alpha > 0 \) such that
+i.e., there exists a constant \( A_\alpha > 0 \) such that
 \[
 \int_{\mathbb{R}} |\widehat{\Xi}(x)| \, e^{-\alpha |x|}\, dx \le A_\alpha.
 \]
@@ -31,15 +31,15 @@ belongs to \( L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \), and t
 \[
 (L f)(x) := \int_{\mathbb{R}} \widehat{\Xi}(x - y) f(y)\, dy
 \]
-lies in the trace class \( \operatorname{TC}(H_{\Psi_\alpha}) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+lies in the trace class \( \TC(H_{\Psi_\alpha}) \) by Simon’s kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals}.
 
 \medskip
 \noindent
-This decay follows from the Paley--Wiener theorem: since \( \phi \in \operatorname{PW}_\pi(\mathbb{R}) \) (see \defref{def:paley_wiener_class}), its inverse Fourier transform satisfies
+This decay follows from the Paley--Wiener theorem: since \( \phi \in \PW{\pi} \) (see \defref{def:paley_wiener_class}), its inverse Fourier transform satisfies
 \[
 |\widehat{\Xi}(x)| = \mathcal{O}(e^{-\pi |x|}),
 \]
-and thus lies in \( L^1(\mathbb{R}, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \).
+and thus lies in \( L^1(\mathbb{R}, e^{-\alpha |x|}\, dx) \) for all \( \alpha > \pi \).
 
 \medskip
 \noindent

@@ -1,30 +1,30 @@
 \begin{proof}[Proof of \lemref{lem:det_via_heat_trace}]
-Let \( L := L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be compact and self-adjoint.
+Let \( L := \Lsym \in \TC(H_{\Psi_\alpha}) \) be compact and self-adjoint.
 
 \paragraph{(i) Local power series expansion.}
-Since \( L \in \mathcal{C}_1 \), each power \( L^n \in \mathcal{C}_1 \), and the trace-logarithmic identity
+Since \( L \in \TC \), each power \( L^n \in \TC \), and the trace-logarithmic identity
 \[
-\log \det\nolimits_\zeta(I - \lambda L)
-= - \sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L^n)
+\log \detz(I - \lambda L)
+= - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(L^n)
 \]
-converges absolutely for \( |\lambda| < \|L\|^{-1} \). This follows from submultiplicativity of Schatten norms and the estimate \( \|L^n\|_{\mathcal{C}_1} \le \|L\|^n \). Hence, \( \log \det\nolimits_\zeta(I - \lambda L) \) defines a holomorphic function near \( \lambda = 0 \), consistent with classical Fredholm determinant theory.
+converges absolutely for \( |\lambda| < \|L\|^{-1} \). This follows from submultiplicativity of Schatten norms and the estimate \( \|L^n\|_{\TC} \le \|L\|^n \). Hence, \( \log \detz(I - \lambda L) \) defines a holomorphic function near \( \lambda = 0 \), consistent with classical Fredholm determinant theory.
 
 \paragraph{(ii) Analytic continuation via heat trace.}
-By spectral theory for compact self-adjoint operators, the heat semigroup \( e^{-tL} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) for all \( t > 0 \), and the trace
+By spectral theory for compact self-adjoint operators, the heat semigroup \( e^{-tL} \in \TC(H_{\Psi_\alpha}) \) for all \( t > 0 \), and the trace
 \[
-\operatorname{Tr}(e^{-tL}) = \sum_{n=1}^\infty e^{-t\lambda_n}
+\Tr(e^{-tL}) = \sum_{n=1}^\infty e^{-t\lambda_n}
 \]
-is finite. From small-time asymptotics (see \secref{sec:heat_kernel_asymptotics}) we have
+is finite. From small-time asymptotics (see \secref{sec:heat_kernel_asymptotics}), we have
 \[
-\operatorname{Tr}(e^{-tL}) \lesssim t^{-1} e^{-c/t} \quad \text{as } t \to 0^+,
+\Tr(e^{-tL}) \lesssim t^{-1} e^{-c/t} \quad \text{as } t \to 0^+,
 \]
 for some \( c > 0 \), and exponential decay as \( t \to \infty \). These bounds guarantee convergence of the Laplace representation.
 
 \paragraph{Conclusion.}
 Thus, the determinant admits the integral representation
 \[
-\log \det\nolimits_\zeta(I - \lambda L)
-= - \int_0^\infty \frac{e^{-\lambda t}}{t} \operatorname{Tr}(e^{-tL}) \, dt,
+\log \detz(I - \lambda L)
+= - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-tL}) \, dt,
 \]
-which converges absolutely for all \( \lambda \in \mathbb{C} \). This representation provides an analytic continuation of \( \log \det\nolimits_\zeta(I - \lambda L) \) to an entire function of exponential type, extending the local trace expansion globally.
+which converges absolutely for all \( \lambda \in \mathbb{C} \). This representation provides an analytic continuation of \( \log \detz(I - \lambda L) \) to an entire function of exponential type, extending the local trace expansion globally.
 \end{proof}

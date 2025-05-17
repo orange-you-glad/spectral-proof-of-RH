@@ -2,7 +2,7 @@
 \label{thm:det_identity_revised}
 \leavevmode
 \begin{tcolorbox}[colback=gray!3!white,colframe=black!75!white,title={\textbf{Canonical Determinant Identity}}]
-Let \( L_{\sym} \in \TC(\HPsi) \) be the compact, self-adjoint operator constructed in \cref{sec:operator_construction} via convolution with the inverse Fourier transform of the completed Riemann zeta profile:
+Let \( \Lsym \in \TC(\HPsi) \) be the compact, self-adjoint operator constructed in \cref{sec:operator_construction} via convolution with the inverse Fourier transform of the completed Riemann zeta profile:
 \[
 \lambda \mapsto \Xi\left( \tfrac{1}{2} + i\lambda \right).
 \]
@@ -11,11 +11,11 @@ Let \( L_{\sym} \in \TC(\HPsi) \) be the compact, self-adjoint operator construc
 
 Then the Carleman \(\zeta\)-regularized Fredholm determinant
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym})
+f(\lambda) := \detz(I - \lambda \Lsym)
 \]
 is an entire function of order one and exact exponential type \( \pi \), satisfying the canonical analytic identity:
 \begin{equation}
-\det\nolimits_\zeta(I - \lambda L_{\sym})
+\detz(I - \lambda \Lsym)
 = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \qquad \forall \lambda \in \C.
 \label{eq:determinant_identity}
@@ -27,13 +27,13 @@ This identity holds canonically with the following features:
 \begin{itemize}
   \item \textbf{Spectral Encoding.} The zeros of the determinant coincide with the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \), via the spectral map
   \[
-  \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})} \in \Spec(L_{\sym}),
+  \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym),
   \]
   preserving multiplicities.
 
   \item \textbf{Normalization.} The value \( \Xi(\tfrac{1}{2}) \ne 0 \) is known (see, e.g.,~\cite[Thm.~2.3]{Titchmarsh1986Zeta}), so the identity is canonically normalized at \( \lambda = 0 \), and
   \[
-  f(0) = \det\nolimits_\zeta(I) = 1.
+  f(0) = \detz(I) = 1.
   \]
 
   \item \textbf{Hadamard Classification.} The function \( f(\lambda) \in \mathcal{E}_1^\pi \), the Hadamard class of entire functions of order one and exponential type \( \pi \), uniquely determined by their zero set and normalization.

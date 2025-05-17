@@ -5,9 +5,9 @@ Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \
 k(x) := \widehat{\phi}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda x} \phi(\lambda)\, d\lambda.
 \]
 
-Then \( k \in C^\infty(\mathbb{R}) \) is real-valued, even, and satisfies the exponential decay estimate:
+Then \( k \in C^\infty(\mathbb{R}) \) is real-valued, even, and satisfies the exponential decay estimate
 \[
-|k(x)| \le C_\alpha\, e^{-\alpha |x|}, \qquad \forall\, x \in \mathbb{R}, \quad \text{for any } \alpha > \pi,
+|k(x)| \le C_\alpha\, e^{-\alpha |x|}, \qquad \forall x \in \mathbb{R}, \quad \text{for any } \alpha > \pi,
 \]
 where \( C_\alpha > 0 \) depends only on \( \alpha \).
 
@@ -18,12 +18,12 @@ where \( C_\alpha > 0 \) depends only on \( \alpha \).
   \item The kernel \( K(x,y) := k(x - y) \) lies in \( L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \);
   \item The convolution operator
   \[
-  (Lf)(x) := \int_{\mathbb{R}} k(x - y) f(y)\, dy
+  (L f)(x) := \int_{\mathbb{R}} k(x - y) f(y)\, dy
   \]
-  belongs to the trace class \( \operatorname{TC}(H_{\Psi_\alpha}) \), by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+  belongs to the trace class \( \TC(H_{\Psi_\alpha}) \), by Simon’s kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals}.
 \end{itemize}
 
 \medskip
 \noindent
-This decay follows from the Paley--Wiener theorem: since \( \phi \in \operatorname{PW}_\pi(\mathbb{R}) \) (see \defref{def:paley_wiener_class}), its inverse Fourier transform \( k(x) \) decays faster than \( e^{-\alpha |x|} \) for every \( \alpha > \pi \). The result quantifies the optimal spatial localization of Paley--Wiener kernels in \( H_{\Psi_\alpha} \).
+This decay follows from the Paley--Wiener theorem: since \( \phi \in \PW{\pi} \) (see \defref{def:paley_wiener_class}), its inverse Fourier transform \( k(x) \) decays faster than \( e^{-\alpha |x|} \) for every \( \alpha > \pi \). The result quantifies the optimal spatial localization of Paley--Wiener kernels in \( H_{\Psi_\alpha} \).
 \end{lemma}

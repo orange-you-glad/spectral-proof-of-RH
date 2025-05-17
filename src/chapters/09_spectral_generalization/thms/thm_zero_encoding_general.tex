@@ -1,8 +1,13 @@
-\begin{theorem}[Spectral Encoding of Nontrivial Zeros of \texorpdfstring{$L(s, \pi)$}{L(s, pi)}]
+\begin{theorem}[Spectral Encoding of Nontrivial Zeros of \( L(s, \pi) \)]
 \label{thm:zero_encoding_general}
-Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\mathrm{GL}_n) \), and assume the analytic properties of \( \Xi(s, \pi) \) from \defref{def:analytic_properties_XiPi}, the exponential kernel decay condition in \defref{def:kernel_decay_condition}, and the determinant identity of \thmref{thm:spectral_determinant_identity_Lpi}.
+Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\GL_n) \) be a unitary cuspidal automorphic representation. Assume:
+\begin{itemize}
+  \item The analytic properties of the completed \( L \)-function \( \Xi(s, \pi) \), as stated in \defref{def:analytic_properties_XiPi};
+  \item The exponential kernel decay condition from \defref{def:kernel_decay_condition};
+  \item The zeta-regularized determinant identity from \thmref{thm:spectral_determinant_identity_Lpi}.
+\end{itemize}
 
-Then the eigenvalues of the operator \( \Lsympi \in \TC(\Hpsipi) \) encode the nontrivial zeros of \( L(s, \pi) \). Specifically:
+Then the eigenvalues of the operator \( \Lsympi \in \TC(\Hpsipi) \) canonically encode the nontrivial zeros of \( L(s, \pi) \). Explicitly:
 \[
 \Spec(\Lsympi) = \left\{ \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) : \Xi(\rho, \pi) = 0 \right\},
 \]

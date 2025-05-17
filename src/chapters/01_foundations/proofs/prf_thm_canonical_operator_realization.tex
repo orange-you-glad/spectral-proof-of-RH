@@ -4,47 +4,47 @@ Let \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) and define the mollified
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda), \quad t > 0.
 \]
-By \lemref{lem:xi_growth_bound}, \( \phi \in PW_\pi(\R) \), and thus each \( \phi_t \in \Schwartz \). Define the inverse Fourier transform \( k_t := \FT^{-1}[\phi_t] \in \Schwartz \), and the associated convolution kernel \( K_t(x,y) := k_t(x - y) \).
+By \lemref{lem:xi_growth_bound}, we have \( \phi \in \PW{\pi} \), hence each \( \phi_t \in \Schwartz \). Define the inverse Fourier transform \( k_t := \FT^{-1}[\phi_t] \in \Schwartz \), and the associated convolution kernel \( K_t(x,y) := k_t(x - y) \).
 
-By \lemref{lem:uniform_L1_conjugated_kernel}, the conjugated kernels \( \widetilde{K}_t(x,y) := K_t(x,y) \Psi_\alpha(x) \Psi_\alpha(y) \) lie uniformly in \( L^1(\R^2) \) for \( \alpha > \pi \), and the associated operators \( L_t \in \mathcal{C}_1(\HPsi) \) satisfy
+By \lemref{lem:uniform_L1_conjugated_kernel}, the conjugated kernels \( \widetilde{K}_t(x,y) := K_t(x,y) \Psi_\alpha(x) \Psi_\alpha(y) \) lie uniformly in \( L^1(\R^2) \) for \( \alpha > \pi \), and the associated operators \( L_t \in \TC(\HPsi) \) satisfy
 \[
-\sup_{0 < t \le 1} \| L_t \|_{\mathcal{C}_1(\HPsi)} < \infty.
+\sup_{0 < t \le 1} \| L_t \|_{\TC(\HPsi)} < \infty.
 \]
-Therefore, \( L_t \) forms a norm-bounded family in the trace-class ideal. Since \( \phi_t \to \phi \) in \( L^1(\R) \), we obtain convergence in the trace norm:
+Therefore, \( \{L_t\} \) forms a norm-bounded family in the trace-class ideal. Since \( \phi_t \to \phi \) in \( L^1(\R) \), we obtain convergence in the trace norm:
 \[
-\lim_{t \to 0^+} \| L_t - L_{\sym} \|_{\mathcal{C}_1(\HPsi)} = 0
+\lim_{t \to 0^+} \| L_t - \Lsym \|_{\TC(\HPsi)} = 0
 \]
-for some \( L_{\sym} \in \mathcal{C}_1(\HPsi) \). By \propref{prop:selfadjointness_Lt} and \propref{prop:core_schwartz_density}, the limit \( L_{\sym} \) is self-adjoint and compact.
+for some limit \( \Lsym \in \TC(\HPsi) \). By \propref{prop:selfadjointness_Lt} and \propref{prop:core_schwartz_density}, the limit operator \( \Lsym \) is self-adjoint and compact.
 
 \medskip
 \noindent\textbf{(ii) Determinant Identity and Spectral Encoding.}
-Since \( L_{\sym} \in \mathcal{C}_1(\HPsi) \), the Carleman--Fredholm determinant is defined via the standard trace formula:
+Since \( \Lsym \in \TC(\HPsi) \), the Carleman--Fredholm determinant is defined via the standard trace formula:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) := \prod_n (1 - \lambda \lambda_n) e^{\lambda \lambda_n}.
+\detz(I - \lambda \Lsym) := \prod_n (1 - \lambda \lambda_n) e^{\lambda \lambda_n}.
 \]
-By continuity of the determinant under trace-norm limits (see \cite[Ch.~4]{Simon2005TraceIdeals}), and by the exponential decay of \( \phi_t \), we have:
+By continuity of the determinant under trace-norm limits~\cite[Ch.~4]{Simon2005TraceIdeals}, and by the exponential decay of \( \phi_t \), we have:
 \[
-\det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\sym}) \quad \text{uniformly on compact } \lambda.
+\detz(I - \lambda L_t) \to \detz(I - \lambda \Lsym) \quad \text{uniformly on compact subsets of } \lambda.
 \]
 By construction of \( \phi \) from \( \Xi \), we recover the identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
 \]
-This matches the Hadamard product of \( \Xi \) and encodes the spectrum via
+This matches the Hadamard product of \( \Xi \), and encodes the spectrum via
 \[
-\Spec(L_{\sym}) = \left\{ \tfrac{1}{i}(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\},
+\Spec(\Lsym) = \left\{ \tfrac{1}{i}(\rho - \tfrac{1}{2}) \;\middle|\; \zeta(\rho) = 0 \right\},
 \]
 with spectral symmetry implied by the evenness of \( \phi \) and kernel symmetry (\lemref{lem:kernel_symmetry}).
 
 \medskip
 \noindent\textbf{(iii) Schwartz Core and Kernel Properties.}
-By \lemref{lem:density_schwartz_weighted_L2} and \propref{prop:core_schwartz_density}, the Schwartz space \( \Schwartz \subset \HPsi \) is a graph-norm core for \( L_{\sym} \), satisfying:
+By \lemref{lem:density_schwartz_weighted_L2} and \propref{prop:core_schwartz_density}, the Schwartz space \( \Schwartz \subset \HPsi \) is a graph-norm core for \( \Lsym \), satisfying
 \[
-f_n \to f \quad \text{and} \quad L_{\sym} f_n \to L_{\sym} f \quad \text{in } \HPsi.
+f_n \to f \quad \text{and} \quad \Lsym f_n \to \Lsym f \quad \text{in } \HPsi.
 \]
 The convolution kernel \( k := \FT^{-1}[\phi] \) is real, even, and exponentially decaying by \lemref{lem:decay_inverse_fourier_xi}, ensuring that \( K(x,y) := k(x - y) \) defines a real symmetric integral operator with \( K \in L^1(\Psi_\alpha^{\otimes 2}) \cap L^2(\Psi_\alpha^{\otimes 2}) \).
 
 \medskip
 \noindent\textbf{Conclusion.}
-The operator \( L_{\sym} \in \mathcal{C}_1(\HPsi) \) is self-adjoint, compact, and canonically realizes \( \Xi \) via its Fredholm determinant. The spectral data encoded by \( \Xi \) correspond bijectively to the spectrum of \( L_{\sym} \), providing the analytic foundation for the determinant identity and spectral implications developed in later chapters.
+The operator \( \Lsym \in \TC(\HPsi) \) is self-adjoint, compact, and canonically realizes \( \Xi \) via its Fredholm determinant. The spectral data encoded by \( \Xi \) correspond bijectively to the spectrum of \( \Lsym \), providing the analytic foundation for the determinant identity and spectral implications developed in subsequent chapters.
 \end{proof}

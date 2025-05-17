@@ -1,6 +1,6 @@
 \subsection*{Introduction}
 
-This chapter constructs the analytic infrastructure necessary to define and analyze the canonical trace-class operator \( L_{\sym} \) that underlies the spectral realization of the Riemann Hypothesis (RH). The operator is obtained as the trace-norm limit of a family of mollified convolution operators \( \{L_t\}_{t > 0} \), defined via inverse Fourier transforms of mollified zeta spectral profiles. These operators act on the exponentially weighted Hilbert space
+This chapter constructs the analytic infrastructure necessary to define and analyze the canonical trace-class operator \( \Lsym \) that underlies the spectral realization of the Riemann Hypothesis (\( \RH \)). The operator is obtained as the trace-norm limit of a family of mollified convolution operators \( \{L_t\}_{t > 0} \), defined via inverse Fourier transforms of mollified zeta spectral profiles. These operators act on the exponentially weighted Hilbert space
 \[
 \HPsi := L^2(\R, e^{\alpha |x|} dx), \quad \text{with } \alpha > \pi.
 \]
@@ -13,8 +13,8 @@ This chapter constructs the analytic infrastructure necessary to define and anal
   \node (kt) [draw, rectangle, below=of phi] {\( k_t(x) := \FT^{-1}[\phi_t](x) \)};
   \node (kernel) [draw, rectangle, below=of kt] {\( K_t(x,y) := k_t(x - y) \)};
   \node (op) [draw, rectangle, below=of kernel] {\( (L_t f)(x) := \int_{\R} K_t(x,y) f(y)\,dy \)};
-  \node (limit) [draw, rectangle, below=of op, yshift=-0cm] {\( L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(\HPsi) \)};
-  \node (det) [draw, rectangle, below=of limit, yshift=-0cm] {\( \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})} \)};
+  \node (limit) [draw, rectangle, below=of op, yshift=-0cm] {\( \Lsym := \lim_{t \to 0^+} L_t \in \TC(\HPsi) \)};
+  \node (det) [draw, rectangle, below=of limit, yshift=-0cm] {\( \detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})} \)};
 
   \draw[->] (phi) -- (kt);
   \draw[->] (kt) -- (kernel);
@@ -29,22 +29,22 @@ This chapter constructs the analytic infrastructure necessary to define and anal
 The following analytic properties are verified:
 
 \begin{itemize}
-    \item \textbf{Trace-class inclusion:} The inverse Fourier transform of \( \Xi(\tfrac{1}{2} + i\lambda) \) decays as \( e^{-\pi|x|} \). Operators \( L_t \in \TC(\HPsi) \) are trace class iff \( \alpha > \pi \), with sharpness shown in \propref{prop:trace_class_sharpness}.
+    \item \textbf{Trace-class inclusion:} The inverse Fourier transform of \( \Xi(\tfrac{1}{2} + i\lambda) \) decays as \( e^{-\pi|x|} \). Operators \( L_t \in \TC(\HPsi) \) are trace class if and only if \( \alpha > \pi \), with sharpness shown in \propref{prop:trace_class_sharpness}.
     
-    \item \textbf{Schatten control and convergence:} Uniform trace-norm bounds hold for \( L_t \), and trace-norm convergence \( L_t \to L_{\sym} \) is rigorously established.
+    \item \textbf{Schatten control and convergence:} Uniform trace-norm bounds hold for \( L_t \), and trace-norm convergence \( L_t \to \Lsym \) is rigorously established.
     
-    \item \textbf{Essential self-adjointness:} The limit operator \( L_{\sym} \) is essentially self-adjoint on \( \Schwartz(\R) \), via Nelson's theorem; see \remref{rem:sobolev_core_reference}.
+    \item \textbf{Essential self-adjointness:} The limit operator \( \Lsym \) is essentially self-adjoint on \( \Schwartz \), via Nelson's theorem; see \remref{rem:sobolev_core_reference}.
     
-    \item \textbf{Heat semigroup structure:} The semigroup \( \{e^{-t L_{\sym}^2}\}_{t > 0} \) is holomorphic and trace class, with exponential norm bounds (\lemref{lem:heat_semigroup_existence}).
+    \item \textbf{Heat semigroup structure:} The semigroup \( \{e^{-t \Lsym^2}\}_{t > 0} \) is holomorphic and trace class, with exponential norm bounds; see \lemref{lem:heat_semigroup_existence}.
     
-    \item \textbf{Paley–Wiener embedding:} The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) belongs to \( \PW{\pi} \), enabling localization and determinant regularization.
+    \item \textbf{Paley--Wiener embedding:} The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) belongs to the Paley--Wiener class \( \PW{\pi} \), enabling localization and determinant regularization.
 \end{itemize}
 
-These properties culminate in a trace-norm convergent operator \( L_{\sym} \in \TC(\HPsi) \), whose zeta-regularized Fredholm determinant satisfies
+These properties culminate in a trace-norm convergent operator \( \Lsym \in \TC(\HPsi) \), whose zeta-regularized Fredholm determinant satisfies
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
+\detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
 \]
 
-This identity is rigorously proved in Chapter~\ref{sec:determinant_identity} without assuming RH or spectral surjectivity. The analytic tools developed here serve as the base layer for all spectral and determinant arguments to follow.
+This identity is rigorously proved in \secref{sec:determinant_identity}, without assuming \( \RH \) or spectral surjectivity. The analytic tools developed here serve as the base layer for all spectral and determinant arguments to follow.
 
 For a modular dependency diagram, see \appref{app:dependency_graph}.

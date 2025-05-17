@@ -1,16 +1,20 @@
-\begin{theorem}[Zeta-Regularized Determinant Identity for \texorpdfstring{$\Xi(s,\pi)$}{Xi(s, pi)}]
+\begin{theorem}[Zeta-Regularized Determinant Identity for \( \Xi(s,\pi) \)]
 \label{thm:spectral_determinant_identity_Lpi}
-Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\mathrm{GL}_n) \), and assume the analytic properties of \( \Xi(s, \pi) \) as in \defref{def:analytic_properties_XiPi}, and the kernel decay condition in \defref{def:kernel_decay_condition}.
+Let \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\GL_n) \) be a unitary cuspidal automorphic representation. Suppose:
+\begin{itemize}
+  \item \( \Xi(s, \pi) \) satisfies the analytic conditions in \defref{def:analytic_properties_XiPi};
+  \item the inverse Fourier kernel satisfies the exponential decay condition in \defref{def:kernel_decay_condition} for some \( \alphapi > \pi_\pi \).
+\end{itemize}
 
-Let \( \Lsympi \in \TC(\Hpsipi) \) denote the limit operator
+Let \( \Lsympi \in \TC(\Hpsipi) \) be the trace-norm limit
 \[
 \Lsympi := \lim_{t \to 0^+} \Ltpi,
 \]
-where \( \Ltpi \) is the mollified convolution operator defined in \defref{def:convolution_operator_Ltpi}. Then the following identity holds:
+where \( \Ltpi \) is the mollified convolution operator defined in \defref{def:convolution_operator_Ltpi}. Then the Carleman \(\zeta\)-regularized Fredholm determinant satisfies the identity:
 \[
 \detz(I - \lambda \Lsympi) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)}{\Xi\left(\tfrac{1}{2}, \pi\right)},
 \qquad \forall \lambda \in \C.
 \]
-Here \( \detz \) denotes the Carleman zeta-regularized Fredholm determinant on \( \TC(\Hpsipi) \).
 
+Here \( \detz \) denotes the Carleman zeta-regularized determinant on \( \TC(\Hpsipi) \).
 \end{theorem}

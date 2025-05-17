@@ -1,4 +1,4 @@
-\begin{lemma}[Trace-Norm Convergence \( L_t \to L_{\mathrm{sym}} \)]
+\begin{lemma}[Trace-Norm Convergence \( L_t \to \Lsym \)]
 \label{lem:trace_norm_convergence_Lt_to_Lsym}
 Fix \( \alpha > \pi \), and define the exponentially weighted Hilbert space
 \[
@@ -21,22 +21,22 @@ Then for each \( t > 0 \), the convolution operator
 \]
 defines a trace-class operator:
 \[
-L_t \in \mathcal{C}_1(H_{\Psi_\alpha}), \qquad \sup_{0 < t \le 1} \| L_t \|_{\mathcal{C}_1} < \infty.
+L_t \in \TC(H_{\Psi_\alpha}), \qquad \sup_{0 < t \le 1} \| L_t \|_{\TC} < \infty.
 \]
 
 \medskip
 \noindent
-This follows from the exponential decay of \( K_t(x,y) \), implied by Paley--Wiener theory applied to \( \varphi_t \in \operatorname{PW}_\pi \cap \mathcal{S}(\mathbb{R}) \)~\cite[Thm.~IX.12]{ReedSimon1975II}, and classical trace-norm criteria for weighted Hilbert spaces~\cite[Ch.~4]{Simon2005TraceIdeals}.
+This follows from the exponential decay of \( K_t(x,y) \), implied by Paley--Wiener theory applied to \( \varphi_t \in \PW{\pi} \cap \Schwartz \)~\cite[Thm.~IX.12]{ReedSimon1975II}, and classical trace-norm criteria for weighted Hilbert spaces~\cite[Ch.~4]{Simon2005TraceIdeals}.
 
 \medskip
 \noindent
 Define the canonical convolution operator as the trace-norm limit:
 \[
-L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t \quad \text{in } \mathcal{C}_1(H_{\Psi_\alpha}),
+\Lsym := \lim_{t \to 0^+} L_t \quad \text{in } \TC(H_{\Psi_\alpha}),
 \]
 i.e.,
 \[
-\| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1} \to 0 \quad \text{as } t \to 0^+.
+\| L_t - \Lsym \|_{\TC} \to 0 \quad \text{as } t \to 0^+.
 \]
 
 \medskip
@@ -48,22 +48,22 @@ This convergence is ensured by the following:
   \item Uniform trace-norm bounds on \( L_t \), and exponential decay of \( K_t \);
   \item The limiting kernel
   \[
-  K_{\mathrm{sym}}(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x-y)\lambda} \phi(\lambda)\, d\lambda
+  K_{\sym}(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x-y)\lambda} \phi(\lambda)\, d\lambda
   \]
-  satisfies \( K_{\mathrm{sym}} \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), so
+  satisfies \( K_{\sym} \in L^1(\mathbb{R}^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), so
   \[
-  L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}).
+  \Lsym \in \TC(H_{\Psi_\alpha}).
   \]
 \end{itemize}
 
 \paragraph{Spectral Implications.}
-Since \( L_t \to L_{\mathrm{sym}} \) in trace norm, we have:
+Since \( L_t \to \Lsym \) in trace norm, we have:
 \[
-\operatorname{Tr}\left(e^{-tL_t^2}\right) \to \operatorname{Tr}\left(e^{-tL_{\mathrm{sym}}^2}\right) \quad \text{as } t \to 0^+,
+\Tr\left(e^{-tL_t^2}\right) \to \Tr\left(e^{-t\Lsym^2}\right) \quad \text{as } t \to 0^+,
 \]
 and for all \( \lambda \in \mathbb{R} \),
 \[
-\det\nolimits_{\zeta}(I - \lambda L_t) \to \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}).
+\detz(I - \lambda L_t) \to \detz(I - \lambda \Lsym).
 \]
 These analytic consequences underpin the spectral determinant identity, rigorously developed in \secref{sec:determinant_identity}.
 \end{lemma}

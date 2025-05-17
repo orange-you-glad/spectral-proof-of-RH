@@ -6,7 +6,7 @@ Let \( H \) be a separable complex Hilbert space, and let \( T \colon H \to H \)
 \noindent
 The \emph{Carleman \(\zeta\)-regularized determinant} of the operator \( I - \lambda T \) is defined via the trace-exponential formula:
 \[
-\det\nolimits_\zeta(I - \lambda T) := \exp\left( - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(T^n) \right),
+\detz(I - \lambda T) := \exp\left( - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(T^n) \right),
 \]
 which converges absolutely for \( |\lambda| < R^{-1} \), where
 \[
@@ -16,9 +16,9 @@ is the exponential growth rate of the Schatten trace powers.
 
 \medskip
 \noindent
-If \( T \in \TC(H) \), then the series converges for all \( \lambda \in \C \), and \( \det\nolimits_\zeta(I - \lambda T) \) defines an entire function of order one and finite exponential type. In this case, the Carleman determinant coincides with the classical Fredholm determinant:
+If \( T \in \TC(H) \), then the series converges for all \( \lambda \in \C \), and \( \detz(I - \lambda T) \) defines an entire function of order one and finite exponential type. In this case, the Carleman determinant coincides with the classical Fredholm determinant:
 \[
-\det\nolimits_\zeta(I - \lambda T)
+\detz(I - \lambda T)
 = \prod_{n=1}^\infty (1 - \lambda \lambda_n),
 \]
 where \( \{ \lambda_n \} \subset \C \) are the eigenvalues of \( T \), counted with algebraic multiplicity.

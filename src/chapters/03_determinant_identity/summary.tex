@@ -9,26 +9,26 @@
   \item \cref{def:spectral_decomposition_compact} — Spectral decomposition for compact self-adjoint operators: complete orthonormal basis of eigenfunctions with discrete spectrum.
 
   \item \cref{def:spectral_zeta_function} — Spectral zeta function \( \zeta_{L^2}(s) \): defined by Mellin transform of \( \Tr(e^{-t L^2}) \), with analytic continuation.
-  
-  % --- Convergence and Analytic Structure ---
-  \item \cref{lem:kernel_trace_norm_convergence} — Kernel convergence: \( L_t \to L_{\sym} \) in trace norm.
 
-  \item \cref{lem:heat_semigroup_wellposed} — Semigroup \( \{e^{-tL_{\sym}^2}\} \subset \TC(\HPsi) \): holomorphic in \( t \), with exponential bounds.
+  % --- Convergence and Analytic Structure ---
+  \item \cref{lem:kernel_trace_norm_convergence} — Kernel convergence: \( L_t \to \Lsym \) in trace norm.
+
+  \item \cref{lem:heat_semigroup_wellposed} — Semigroup \( \{e^{-t\Lsym^2}\} \subset \TC(\HPsi) \): holomorphic in \( t \), with exponential bounds.
 
   \item \cref{lem:det_via_heat_trace} — Determinant defined via Laplace transform:
   \[
-  \log \det\nolimits_\zeta(I - \lambda L_{\sym}) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t L_{\sym}}) \, dt.
+  \log \detz(I - \lambda \Lsym) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t \Lsym}) \, dt.
   \]
 
   \item \cref{lem:laplace_heat_trace_convergence} — Absolute convergence of the Laplace integral establishes entire extension.
 
   \item \cref{lem:det_growth_bound} — Growth control:
   \[
-  \log |\det\nolimits_\zeta(I - \lambda L_{\sym})| \le C |\lambda| \log(1 + |\lambda|),
+  \log |\detz(I - \lambda \Lsym)| \le C |\lambda| \log(1 + |\lambda|),
   \]
   showing membership in \( \mathcal{E}_1^{\leq \pi} \).
 
-  \item \cref{lem:det_identity_entire_order_one} — Entire function has exact exponential type \( \pi \), consistent with Paley–Wiener theory.
+  \item \cref{lem:det_identity_entire_order_one} — Entire function has exact exponential type \( \pi \), consistent with Paley--Wiener theory.
 
   % --- Hadamard Structure and Spectral Encoding ---
   \item \cref{lem:exact_type_pi} — Sharp exponential type \( \pi \) for both \( \Xi(\tfrac{1}{2} + i\lambda) \) and the canonical determinant.
@@ -40,39 +40,49 @@
 
   \item \cref{lem:trace_zero} — Trace vanishing:
   \[
-  \Tr(L_{\sym}) = 0 \quad \Rightarrow \quad \det\nolimits_\zeta(I) = 1.
+  \Tr(\Lsym) = 0 \quad \Rightarrow \quad \detz(I) = 1.
   \]
 
   \item \cref{lem:A_log_derivative} — Logarithmic derivative identity:
   \[
-  \frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\sym}) = \Tr\left( (I - \lambda L_{\sym})^{-1} L_{\sym} \right).
+  \frac{d}{d\lambda} \log \detz(I - \lambda \Lsym) = \Tr\left( (I - \lambda \Lsym)^{-1} \Lsym \right).
   \]
 
   \item \cref{lem:spectrum_zero_bijection} — Spectral encoding:
   \[
-  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}),
+  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym),
   \]
-  with bijective multiplicity matching between \( \Spec(L_{\sym}) \setminus \{0\} \) and nontrivial zeros of \( \zeta(s) \).
+  with bijective multiplicity matching between \( \Spec(\Lsym) \setminus \{0\} \) and nontrivial zeros of \( \zeta(s) \).
 
   \item \cref{lem:hadamard_uniqueness_E1pi} — Entire function uniqueness in \( \mathcal{E}_1^\pi \): determined by zeros and normalization.
 
   % --- Canonical Identity Theorem ---
   \item \cref{thm:det_identity_revised} — Canonical determinant identity:
   \[
-  \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+  \detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
   \]
 
   % --- Asymptotics and Spectral Density ---
-  \item \cref{lem:spectral_zeta_from_heat} — Mellin continuation of \( \zeta_{L_{\sym}^2}(s) \) via short-time heat asymptotics.
+  \item \cref{lem:spectral_zeta_from_heat} — Mellin continuation of \( \zeta_{\Lsym^2}(s) \) via short-time heat asymptotics.
 
   \item Corollary (via Tauberian analysis) — Spectral counting function:
   \[
   N(\Lambda) := \#\{ \mu_n^2 \le \Lambda \} \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda,
   \]
-  matching the classical Riemann–von Mangoldt estimate.
+  matching the classical Riemann--von Mangoldt estimate.
 \end{itemize}
 
 \medskip
 
 \noindent
-These results complete the analytic phase of the spectral program. The operator \( L_{\sym} \in \TC(\HPsi) \) canonically realizes \( \Xi(s) \) as a spectral determinant. All analytic invariants—growth rate, zeros, and normalization—are uniquely fixed. The spectral encoding map is developed next in Chapter~\ref{sec:spectral_correspondence}.
+These results complete the analytic phase of the spectral program. The canonical operator \( \Lsym \in \TC(\HPsi) \) realizes \( \Xi(s) \) as a zeta-regularized Fredholm determinant, with all analytic invariants—growth rate, zero set, multiplicities, and normalization—uniquely fixed.
+
+\medskip
+
+\noindent
+The spectral encoding map \( \rho \mapsto \mu_\rho \) is developed and proven bijective in Chapter~\ref{sec:spectral_correspondence}. The logical implications of spectral structure for the Riemann Hypothesis begin in Chapter~\ref{sec:spectral_implications} and are fully closed in Chapter~\ref{sec:logical_closure}.
+
+\medskip
+
+\noindent
+See Appendix~\ref{app:dependency_graph} for a formal DAG tracing the analytic–spectral equivalence chain.

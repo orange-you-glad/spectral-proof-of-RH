@@ -1,33 +1,38 @@
-\begin{theorem}[Existence of the Canonical Operator \( L_{\sym} \)]
+\begin{theorem}[Existence of the Canonical Operator \( \Lsym \)]
 \label{thm:existence_Lsym}
-Let \( \varphi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right) \) be the mollified Fourier profiles, and let \( L_t \) denote the corresponding convolution operators acting on
+Let
 \[
-H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
+\varphi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right)
+\]
+be the mollified Fourier profiles, and let \( L_t \) denote the corresponding convolution operators acting on
+\[
+H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx),
+\quad \text{where } \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
 \]
 
 Then:
 \begin{enumerate}
-  \item[\textnormal{(i)}] For each \( t > 0 \), the operator \( L_t \in \TC(H_{\Psi_\alpha}) \) is compact and trace-class.
+  \item[\textnormal{(i)}] For each \( t > 0 \), the operator \( L_t \in \TC(H_{\Psi_\alpha}) \) is compact and trace class.
 
   \item[\textnormal{(ii)}] The trace-norm limit
   \[
-  L_{\sym} := \lim_{t \to 0^+} L_t \quad \text{in } \TC(H_{\Psi_\alpha})
+  \Lsym := \lim_{t \to 0^+} L_t \quad \text{in } \TC(H_{\Psi_\alpha})
   \]
   exists and defines a compact trace-class operator:
   \[
-  L_{\sym} \in \TC(H_{\Psi_\alpha}) \cap \KC(H_{\Psi_\alpha}).
+  \Lsym \in \TC(H_{\Psi_\alpha}) \cap \KC(H_{\Psi_\alpha}).
   \]
 
-  \item[\textnormal{(iii)}] The operator \( L_{\sym} \) is self-adjoint on \( H_{\Psi_\alpha} \), with domain given by the closure of \( \Schwartz \subset H_{\Psi_\alpha} \).
+  \item[\textnormal{(iii)}] The operator \( \Lsym \) is self-adjoint on \( H_{\Psi_\alpha} \), with domain given by the closure of \( \Schwartz \subset H_{\Psi_\alpha} \).
 
-  \item[\textnormal{(iv)}] The trace of \( L_{\sym} \) vanishes:
+  \item[\textnormal{(iv)}] The trace of \( \Lsym \) vanishes:
   \[
-  \Tr(L_{\sym}) = 0.
+  \Tr(\Lsym) = 0.
   \]
   This ensures canonical normalization in the spectral determinant identity.
 \end{enumerate}
 
 \medskip
 \noindent
-This theorem establishes the existence of a canonical compact operator associated with the analytic structure of the completed Riemann zeta function \( \Xi(s) \), realized as the trace-norm limit of mollified spectral convolution operators. The operator \( L_{\sym} \) provides the analytic foundation for the zeta-regularized determinant identity and the spectral encoding of the nontrivial zeros of \( \zeta(s) \), developed in Chapters~\ref{sec:determinant_identity} and~\ref{sec:spectral_correspondence}.
+This theorem establishes the existence of a canonical compact operator associated with the analytic structure of the completed Riemann zeta function \( \Xi(s) \), realized as the trace-norm limit of mollified spectral convolution operators. The operator \( \Lsym \) provides the analytic foundation for the zeta-regularized determinant identity and the spectral encoding of the nontrivial zeros of \( \zeta(s) \), developed in Chapters~\ref{sec:determinant_identity} and~\ref{sec:spectral_correspondence}.
 \end{theorem}

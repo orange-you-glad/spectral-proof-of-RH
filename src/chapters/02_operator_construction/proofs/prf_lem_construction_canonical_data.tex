@@ -1,7 +1,7 @@
 \begin{proof}[Proof of \lemref{lem:construction_canonical_data}]
 Let \( \eta_\epsilon(x) := \frac{1}{\epsilon \sqrt{\pi}} e^{-x^2 / \epsilon^2} \) be the standard Gaussian mollifier. Then:
 \[
-\eta_\epsilon \in \Schwartz, \quad \eta_\epsilon \ge 0, \quad \int_{\R} \eta_\epsilon(x)\, dx = 1, \quad \eta_\epsilon \to \delta_0 \text{ in } \Schwartz'.
+\eta_\epsilon \in \Schwartz, \quad \eta_\epsilon \ge 0, \quad \int_{\R} \eta_\epsilon(x)\, dx = 1, \quad \eta_\epsilon \to \delta_0 \text{ in } \mathcal{S}'.
 \]
 
 Let \( \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right) \) and define its inverse Fourier transform:
@@ -44,5 +44,5 @@ The trace-norm limit
 \[
 L_{\sym} := \lim_{\epsilon \to 0^+} L_\epsilon \in \TC(H_{\Psi_\alpha})
 \]
-exists and is independent of the mollifier \( \eta \). It is canonically determined by the analytic input \( (\Xi, \alpha) \), establishing \( L_{\sym} \) as the unique trace-class convolution operator encoding the spectral data of the completed Riemann zeta function.
+exists and is independent of the mollifier \( \eta \). It is canonically determined by the analytic input \( (\Xi, \alpha) \), establishing \( \Lsym \) as the unique trace-class convolution operator encoding the spectral data of the completed Riemann zeta function.
 \end{proof}

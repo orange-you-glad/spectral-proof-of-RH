@@ -5,13 +5,13 @@ This appendix provides technical derivations and analytic justifications for the
 
 \subsection*{Notation}
 
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \} \subset \R \), listed with multiplicities. The heat semigroup is defined via spectral calculus:
+Let \( \Lsym \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator with discrete real spectrum \( \{ \mu_n \} \subset \R \), listed with multiplicities. The heat semigroup is defined via spectral calculus:
 \[
-e^{-t L_{\sym}^2} := \sum_{n=1}^\infty e^{-t \mu_n^2} P_n,
+e^{-t \Lsym^2} := \sum_{n=1}^\infty e^{-t \mu_n^2} P_n,
 \]
-where \( P_n \) is the projection onto the eigenspace for \( \mu_n \). Since \( L_{\sym}^2 \ge 0 \) and compact, \( e^{-tL_{\sym}^2} \in \TC \) for all \( t > 0 \), and the trace is:
+where \( P_n \) is the projection onto the eigenspace for \( \mu_n \). Since \( \Lsym^2 \ge 0 \) and compact, \( e^{-t\Lsym^2} \in \TC \) for all \( t > 0 \), and the trace is:
 \[
-\Tr(e^{-t L_{\sym}^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2} \cdot \operatorname{mult}(\mu_n).
+\Tr(e^{-t \Lsym^2}) = \sum_{n=1}^\infty e^{-t \mu_n^2} \cdot \operatorname{mult}(\mu_n).
 \]
 
 The kernel \( K_t(x,y) \) of this operator admits off-diagonal exponential decay and a singular short-time expansion. These structures form the analytic base for the spectral trace identities of \secref{sec:heat_kernel_asymptotics} and \secref{sec:determinant_identity}.
@@ -22,11 +22,11 @@ The lemmas proven here establish:
 
 \begin{itemize}
   \item Exponential decay of the heat kernel \( K_t(x,y) \in \Schwartz(\R^2) \);
-  \item Positivity and trace-class convergence of \( e^{-t L_{\sym}^2} \);
+  \item Positivity and trace-class convergence of \( e^{-t \Lsym^2} \);
   \item Laplace–Mellin representation of the spectral zeta function and zeta determinant;
   \item Parametrix expansions yielding singular trace asymptotics:
   \[
-  \Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \cdots,
+  \Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + \cdots,
   \]
   as in \propref{prop:short_time_heat_expansion};
 
@@ -42,4 +42,4 @@ These results justify the well-posedness of the zeta-regularized determinant and
 
 \subsection*{Conclusion}
 
-This appendix secures the analytic infrastructure underlying the spectral model for the completed zeta function \( \XiR(s) \). It confirms that the heat semigroup \( e^{-t L_{\sym}^2} \) governs both the trace expansion and the determinant growth required to link \( \Spec(L_{\sym}) \) to the zero distribution of \( \zetaR(s) \). The logarithmic singularity in the heat trace—see \remref{rem:log_singularity_necessary}—determines the growth law and necessitates zeta-regularization of the determinant.
+This appendix secures the analytic infrastructure underlying the spectral model for the completed zeta function \( \XiR(s) \). It confirms that the heat semigroup \( e^{-t \Lsym^2} \) governs both the trace expansion and the determinant growth required to link \( \Spec(\Lsym) \) to the zero distribution of \( \zetaR(s) \). The logarithmic singularity in the heat trace—see \remref{rem:log_singularity_necessary}—determines the growth law and necessitates zeta-regularization of the determinant.

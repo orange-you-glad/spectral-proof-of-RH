@@ -1,14 +1,14 @@
-\begin{proof}[Proof of \cref{lem:kernel_trace_norm_convergence}]
+\begin{proof}[Proof of \lemref{lem:kernel_trace_norm_convergence}]
 Let \( \varphi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define the limiting profile \( \varphi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Set
 \[
 K_t(x,y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \varphi_t(\lambda)\, d\lambda, \qquad
 K(x,y) := \frac{1}{2\pi} \int_{\R} e^{i(x - y)\lambda} \varphi(\lambda)\, d\lambda.
 \]
 
-Let \( \PsiAlpha{x} := e^{\alpha |x|} \), with fixed \( \alpha > \pi \), and define the exponentially conjugated kernels
+Let \( \Psi_\alpha(x) := e^{\alpha |x|} \), with fixed \( \alpha > \pi \), and define the exponentially conjugated kernels
 \[
-\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\PsiAlpha{x} \PsiAlpha{y}}}, \qquad
-\widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\PsiAlpha{x} \PsiAlpha{y}}}.
+\widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\Psi_\alpha(x) \Psi_\alpha(y)}}, \qquad
+\widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x) \Psi_\alpha(y)}}.
 \]
 
 \paragraph{Step 1: Pointwise convergence and uniform integrability.}
@@ -28,13 +28,13 @@ Since \( \widetilde{L}_t \) and \( \widetilde{L} \) are integral operators on \(
 \]
 
 \paragraph{Step 3: Transfer to the weighted space.}
-Let \( U \colon \HPsi \to L^2(\R) \) be the unitary transformation \( Uf(x) := \sqrt{\PsiAlpha{x}} f(x) \). Then
+Let \( U \colon \HPsi \to L^2(\R) \) be the unitary transformation \( Uf(x) := \sqrt{\Psi_\alpha(x)}\, f(x) \). Then
 \[
-L_t = U^{-1} \widetilde{L}_t U, \qquad L_{\sym} = U^{-1} \widetilde{L} U.
+L_t = U^{-1} \widetilde{L}_t U, \qquad \Lsym = U^{-1} \widetilde{L} U.
 \]
 By unitary invariance of Schatten norms,
 \[
-\| L_t - L_{\sym} \|_{\TC(\HPsi)} = \| \widetilde{L}_t - \widetilde{L} \|_{\TC(L^2)} \to 0
+\| L_t - \Lsym \|_{\TC(\HPsi)} = \| \widetilde{L}_t - \widetilde{L} \|_{\TC(L^2)} \to 0
 \]
 as \( t \to 0^+ \). This completes the proof.
 \end{proof}

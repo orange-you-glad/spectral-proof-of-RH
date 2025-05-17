@@ -1,5 +1,5 @@
 \begin{proof}[Proof of \propref{prop:selfadjointness_Lt}]
-Let \( H_\Psi := L^2(\R, \Psi(x)\, dx) \), where \( \Psi \) is a smooth, strictly positive exponential weight satisfying \( \Psi(x) \sim e^{\alpha|x|} \) as \( |x| \to \infty \), for some \( \alpha > 0 \).
+Let \( H_\Psi := L^2(\R, \Psi(x)\, dx) \), where \( \Psi \colon \R \to (0,\infty) \) is a smooth exponential weight satisfying \( \Psi(x) \sim e^{\alpha|x|} \) as \( |x| \to \infty \), for some fixed \( \alpha > 0 \).
 
 \medskip
 \noindent\textbf{Step 1: Boundedness and Symmetry on a Dense Core.}
@@ -7,19 +7,19 @@ By \propref{prop:boundedness_Lt_weighted}, the operator
 \[
 (L_t f)(x) := \int_{\R} \phi_t(x - y)\, f(y)\, dy
 \]
-extends to a bounded linear operator \( L_t \in \mathcal{B}(H_\Psi) \). By \propref{prop:symmetry_Lt_Schwartz}, \( L_t \) is symmetric on the dense subspace \( \Schwartz \subset H_\Psi \), meaning:
+extends to a bounded linear operator \( L_t \in \mathcal{B}(H_\Psi) \). Moreover, by \propref{prop:symmetry_Lt_Schwartz}, \( L_t \) is symmetric on the dense subspace \( \Schwartz \subset H_\Psi \), that is,
 \[
 \langle L_t f, g \rangle_{H_\Psi} = \langle f, L_t g \rangle_{H_\Psi}, \qquad \forall f, g \in \Schwartz.
 \]
 
 \medskip
-\noindent\textbf{Step 2: Self-Adjointness of Bounded Symmetric Operator.}
-By a standard result in operator theory (see \cite[Theorem~VI.1]{ReedSimon1980I}), any bounded symmetric operator defined on a dense subspace of a Hilbert space extends uniquely to a self-adjoint operator. Thus,
+\noindent\textbf{Step 2: Self-Adjointness of a Bounded Symmetric Operator.}
+It is a standard result in functional analysis (see~\cite[Theorem~VI.1]{ReedSimon1980I}) that a bounded symmetric operator defined on a dense domain in a Hilbert space extends uniquely to a bounded self-adjoint operator on the whole space. Hence, the adjoint satisfies
 \[
-L_t^* = L_t \qquad \text{on all of } H_\Psi.
+L_t^* = L_t \qquad \text{in } \mathcal{B}(H_\Psi).
 \]
 
 \medskip
 \noindent\textbf{Conclusion.}
-The operator \( L_t \in \mathcal{B}(H_\Psi) \) is self-adjoint. Hence, it admits a spectral resolution via the spectral theorem, supporting zeta-function regularization, semigroup analysis, and Fredholm determinant identities developed in later chapters.
+The operator \( L_t \in \mathcal{B}(H_\Psi) \) is self-adjoint. It therefore admits a spectral resolution via the spectral theorem, supporting the functional calculus required for zeta regularization, heat kernel asymptotics, and Fredholm determinant identities developed in Chapters~\ref{sec:determinant_identity} and~\ref{sec:heat_kernel_asymptotics}.
 \end{proof}

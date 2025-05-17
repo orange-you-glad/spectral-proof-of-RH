@@ -1,26 +1,25 @@
 \begin{lemma}[Determinant Identity Defines an Entire Function of Order One and Type \( \pi \)]
 \label{lem:det_identity_entire_order_one}
-
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator on the weighted Hilbert space
+Let \( \Lsym \in \TC(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator on the weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx), \qquad \text{for } \alpha > \pi.
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \text{for } \alpha > \pi.
 \]
 
 Then the map
 \[
-\lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+\lambda \mapsto \detz(I - \lambda \Lsym)
 \]
 extends to an entire function on \( \mathbb{C} \) of order one and exponential type \( \pi \). That is, there exists a constant \( C > 0 \) such that for all \( \lambda \in \mathbb{C} \),
 \[
-\left| \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \right| \le C e^{\pi |\lambda|}.
+\left| \detz(I - \lambda \Lsym) \right| \le C e^{\pi |\lambda|}.
 \]
 In particular,
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \in \mathcal{E}_1^\pi,
+\detz(I - \lambda \Lsym) \in \mathcal{E}_1^\pi,
 \]
 the Hadamard class of entire functions of order one and exact exponential type \( \pi \).
 
 \medskip
 \noindent
-The exponential type is governed by the Paley--Wiener theorem~\cite[Ch.~9]{Levin1996EntireLectures}, which bounds the growth of entire functions whose Fourier transforms have compact support. In this case, the support of the kernel’s Fourier transform \( \widehat{\phi} \), inherited from the exponential type of \( \Xi(s) \), restricts the convolution kernel \( K(x - y) \) to type \( \pi \). This control on kernel growth ensures that the Fredholm determinant exhibits exactly exponential type \( \pi \).
+The exponential type is governed by the Paley--Wiener theorem~\cite[Ch.~9]{Levin1996EntireLectures}, which bounds the growth of entire functions whose Fourier transforms have compact support. In this case, the support of the kernel’s Fourier transform \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \), inherited from the exponential type of \( \Xi(s) \), restricts the convolution kernel \( K(x - y) \) to type \( \pi \). This control on kernel growth ensures that the Fredholm determinant exhibits exactly exponential type \( \pi \).
 \end{lemma}

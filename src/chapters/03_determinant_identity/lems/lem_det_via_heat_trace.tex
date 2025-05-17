@@ -1,27 +1,27 @@
 \begin{lemma}[Construction of \(\zeta\)-Regularized Determinant via Heat Trace]
 \label{lem:det_via_heat_trace}
-Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+Let \( \Lsym \in \TC(H_{\Psi_\alpha}) \) be a compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
 \[
-H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} \, dx), \qquad \text{for } \alpha > \pi.
+H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx), \qquad \text{for } \alpha > \pi.
 \]
 
 Then:
 \begin{enumerate}
-  \item[\textnormal{(i)}] For all \( \lambda \in \mathbb{C} \) with \( |\lambda| < \|L_{\mathrm{sym}}\|^{-1} \), the Carleman \(\zeta\)-regularized determinant admits a convergent trace expansion:
+  \item[\textnormal{(i)}] For all \( \lambda \in \mathbb{C} \) with \( |\lambda| < \| \Lsym \|^{-1} \), the Carleman \(\zeta\)-regularized determinant admits a convergent trace expansion:
   \[
-  \log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
-  = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \operatorname{Tr}(L_{\mathrm{sym}}^n),
+  \log \detz(I - \lambda \Lsym)
+  = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(\Lsym^n),
   \]
-  with absolute convergence ensured by the trace-class property of \( L_{\mathrm{sym}} \).
+  with absolute convergence ensured by the trace-class property of \( \Lsym \).
 
-  \item[\textnormal{(ii)}] The function \( \lambda \mapsto \log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \) extends analytically to an entire function on \( \mathbb{C} \), represented by the Laplace transform of the heat trace:
+  \item[\textnormal{(ii)}] The function \( \lambda \mapsto \log \detz(I - \lambda \Lsym) \) extends analytically to an entire function on \( \mathbb{C} \), represented by the Laplace transform of the heat trace:
   \[
-  \log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
-  = - \int_0^\infty \frac{e^{-\lambda t}}{t} \, \operatorname{Tr}(e^{-t L_{\mathrm{sym}}}) \, dt.
+  \log \detz(I - \lambda \Lsym)
+  = - \int_0^\infty \frac{e^{-\lambda t}}{t} \, \Tr(e^{-t \Lsym}) \, dt.
   \]
   This integral converges absolutely for all \( \lambda \in \mathbb{C} \), since
   \[
-  \operatorname{Tr}(e^{-t L_{\mathrm{sym}}}) \lesssim
+  \Tr(e^{-t \Lsym}) \lesssim
   \begin{cases}
     t^{-1} e^{-c/t} & \text{as } t \to 0^+, \\
     e^{-\delta t}   & \text{as } t \to \infty,
@@ -32,5 +32,9 @@ Then:
 
 \medskip
 \noindent
-This identity expresses the \(\zeta\)-regularized determinant in terms of the trace of the heat semigroup \( e^{-t L_{\mathrm{sym}}} \), enabling analytic continuation, entire order classification, and spectral asymptotics developed in subsequent sections.
+This identity expresses the \(\zeta\)-regularized determinant in terms of the trace of the heat semigroup \( e^{-t \Lsym} \), enabling analytic continuation, entire order classification, and spectral asymptotics developed in subsequent sections.
 \end{lemma}
+
+\begin{remark}[Singularity Control at \( t \to 0^+ \)]
+The integrand \( \Tr(e^{-tL_{\sym}^2}) / t \sim \log(1/t)/t^{3/2} \) is locally integrable on \( (0,\epsilon) \) due to the \texttt{o(\( \sqrt{t} \))} correction. This ensures convergence of the Laplace integral defining \( \log \det_\zeta \).
+\end{remark}

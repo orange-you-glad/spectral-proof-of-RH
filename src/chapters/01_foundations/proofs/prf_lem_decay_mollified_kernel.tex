@@ -9,7 +9,7 @@ K_t(x,y) := k_t(x - y) = \frac{1}{2\pi} \int_{\R} e^{i\lambda(x - y)} \phi_t(\la
 \]
 
 \paragraph{(i) Fourier Envelope Decay.}
-The function \( \Xi(s) \) is entire of exponential type \( \pi \), and satisfies (see \cite[Thm.~3.7.1]{Levin1996EntireLectures}, \cite[§4.12]{Titchmarsh1986Zeta}):
+The function \( \Xi(s) \) is entire of exponential type \( \pi \), and satisfies (see~\cite[Thm.~3.7.1]{Levin1996EntireLectures}, \cite[§4.12]{Titchmarsh1986Zeta}):
 \[
 \left| \Xi\left( \tfrac{1}{2} + i\lambda \right) \right| \le C_0\, e^{\frac{\pi}{2} |\lambda|}, \quad \forall \lambda \in \R.
 \]
@@ -17,9 +17,9 @@ Therefore,
 \[
 |\phi_t(\lambda)| \le C_0\, e^{-t\lambda^2 + \frac{\pi}{2}|\lambda|}.
 \]
-Completing the square:
+Completing the square gives:
 \[
--t\lambda^2 + \frac{\pi}{2}|\lambda| \le -\frac{t}{2} \lambda^2 + \frac{\pi^2}{8t},
+-t\lambda^2 + \frac{\pi}{2}|\lambda| \le -\tfrac{t}{2} \lambda^2 + \frac{\pi^2}{8t},
 \]
 so
 \[
@@ -27,13 +27,13 @@ so
 \]
 
 \paragraph{(ii) Spatial Kernel Decay via Paley--Wiener.}
-The profile \( \phi_t \in \Schwartz \) has exponential type \( \pi \), so by the Paley--Wiener theorem (see \cite[Ch.~IX.4]{ReedSimon1975II}),
+Since \( \phi_t \in \Schwartz \) and has exponential type \( \pi \), the Paley--Wiener theorem (see~\cite[Ch.~IX.4]{ReedSimon1975II}) implies:
 \[
 |k_t(x)| \le C_t' e^{-(\pi - \epsilon)|x|}, \quad \forall \epsilon > 0,
 \]
 for some constant \( C_t' > 0 \). Thus,
 \[
-|K_t(x,y)| = |k_t(x - y)| \le C_t' e^{-b_t |x - y|}, \quad \text{with } b_t := \pi - \epsilon.
+|K_t(x,y)| = |k_t(x - y)| \le C_t'\, e^{-b_t |x - y|}, \quad \text{with } b_t := \pi - \epsilon.
 \]
 
 \paragraph{(iii) Uniformity for Small \( t \).}
@@ -43,14 +43,14 @@ Since the exponential type of \( \phi_t \) is independent of \( t \), and the Ga
 \]
 
 \paragraph{Conclusion.}
-From the above bounds:
+From the above:
 \begin{itemize}
-    \item[\textup{(i)}] \( \phi_t(\lambda) \in \Schwartz \), with decay controlled by Gaussian and exponential envelope;
+    \item[\textup{(i)}] \( \phi_t(\lambda) \in \Schwartz \), with decay controlled by both Gaussian and exponential envelope;
     \item[\textup{(ii)}] \( K_t(x,y) = k_t(x - y) \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\,dy) \) for all \( \alpha > \pi \);
-    \item[\textup{(iii)}] The trace-class bound follows from Simon's criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}:
+    \item[\textup{(iii)}] The trace-class bound follows from Simon's kernel\\ criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals}:
     \[
-    L_t f(x) := \int_{\R} K_t(x,y)\, f(y)\, dy \in \mathcal{C}_1(\HPsi),
+    L_t f(x) := \int_{\R} K_t(x,y)\, f(y)\, dy \in \TC(\HPsi),
     \]
-    with trace-norm uniformly bounded for \( t \in (0, t_0] \), ensuring convergence \( L_t \to L_{\sym} \) in \( \mathcal{C}_1 \) and determinant convergence as \( t \to 0^+ \).
+    with trace-norm uniformly bounded for \( t \in (0, t_0] \), ensuring convergence \( L_t \to \Lsym \) in \( \TC(\HPsi) \) and determinant convergence as \( t \to 0^+ \).
 \end{itemize}
 \end{proof}

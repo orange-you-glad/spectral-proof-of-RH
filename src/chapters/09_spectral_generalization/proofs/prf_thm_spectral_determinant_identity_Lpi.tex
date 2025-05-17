@@ -1,19 +1,18 @@
 \begin{proof}[Proof of \thmref{thm:spectral_determinant_identity_Lpi}]
-Let \( \phi_t^{(\pi)}(\lambda) := e^{-t\lambda^2} \Xi\left(\tfrac{1}{2} + i\lambda, \pi\right) \), and let \( k_t^{(\pi)} := \FT^{-1}[\phi_t^{(\pi)}] \) be its inverse Fourier transform. By the exponential decay assumption in \defref{def:kernel_decay_condition}, the associated convolution operator \( \Ltpi \in \TC(\Hpsipi) \) for all \( t > 0 \), and \( \Ltpi \to \Lsympi \in \TC(\Hpsipi) \) as \( t \to 0^+ \), by \lemref{lem:trace_class_convergence_general}.
+Let \( \phi_t^{(\pi)}(\lambda) := e^{-t\lambda^2} \, \Xi\left(\tfrac{1}{2} + i\lambda, \pi\right) \), and let \( k_t^{(\pi)} := \FT^{-1}[\phi_t^{(\pi)}] \) be its inverse Fourier transform. By the exponential decay assumption in \defref{def:kernel_decay_condition}, the associated convolution operator \( \Ltpi \in \TC(\Hpsipi) \) for all \( t > 0 \), and \( \Ltpi \to \Lsympi \in \TC(\Hpsipi) \) as \( t \to 0^+ \), by \lemref{lem:trace_class_convergence_general}.
 
-By the spectral theorem, since each \( \Ltpi \) is trace class and self-adjoint, the Fredholm determinant \( \detz(I - \lambda \Ltpi) \) exists and defines an entire function in \( \lambda \in \C \). Moreover, for each \( t > 0 \),
+By the spectral theorem, since each \( \Ltpi \) is trace class and self-adjoint, the Fredholm determinant \( \detz(I - \lambda \Ltpi) \) exists and defines an entire function in \( \lambda \in \C \). Moreover, for each \( t > 0 \), the mollified identity
 \[
-\detz(I - \lambda \Ltpi) = \frac{\FT } 
-= \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right) \cdot e^{-t\lambda^2}}{\Xi\left(\tfrac{1}{2}, \pi\right)},
+\detz(I - \lambda \Ltpi) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right) \cdot e^{-t\lambda^2}}{\Xi\left(\tfrac{1}{2}, \pi\right)}
 \]
-by direct computation of the Fourier transform of \( \phi_t^{(\pi)} \).
+holds by direct computation of the Fourier–Laplace transform.
 
 Taking the trace-norm limit \( t \to 0^+ \), we have
 \[
 \lim_{t \to 0^+} \detz(I - \lambda \Ltpi)
 = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)}{\Xi\left(\tfrac{1}{2}, \pi\right)},
 \]
-since \( \exp(-t\lambda^2) \to 1 \) uniformly on compact subsets of \( \C \), and the determinant is continuous under trace-norm convergence (see~\cite{Simon2005TraceIdeals}, Thm 6.5).
+since \( \exp(-t\lambda^2) \to 1 \) uniformly on compact subsets of \( \C \), and the determinant is continuous under trace-norm convergence~\cite[Thm.~6.5]{Simon2005TraceIdeals}.
 
 Thus, the determinant identity holds for the limit operator \( \Lsympi \):
 \[

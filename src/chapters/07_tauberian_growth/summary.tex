@@ -2,10 +2,10 @@
 
 \begin{itemize}
   % --- Tauberian Principle ---
-  \item \defref{def:tauberian_theorem} — Classical Laplace–Tauberian framework: short-time behavior of the heat trace \( \Tr(e^{-tL^2}) \) determines high-energy spectral growth \( N(\Lambda) \) via inverse Laplace analysis.
+  \item \defref{def:tauberian_theorem} — Classical Laplace–Tauberian framework: short-time behavior of the heat trace \( \Tr(e^{-t\Lsym^2}) \) determines high-energy spectral growth \( N(\Lambda) \) via inverse Laplace analysis.
 
   % --- Asymptotic Bounds and Growth Envelopes ---
-  \item \lemref{lem:spectral_convexity_estimate} — From the envelope \( \Tr(e^{-t L^2}) = O(t^{-1/2}) \), we deduce the coarse growth bound:
+  \item \lemref{lem:spectral_convexity_estimate} — From the envelope \( \Tr(e^{-t \Lsym^2}) = O(t^{-1/2}) \), we deduce the coarse growth bound:
   \[
   N(\lambda) = O(\lambda^{1/2+\varepsilon}),
   \]
@@ -13,18 +13,18 @@
 
   \item \lemref{lem:log_corrected_tauberian_estimate} — From the refined expansion
   \[
-  \Tr(e^{-t L^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
+  \Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
   \]
   Korevaar’s Tauberian theory yields the sharp asymptotic:
   \[
   N(\lambda) \sim \frac{\sqrt{\lambda}}{\pi} \log \lambda.
   \]
 
-  \item \corref{cor:zeta_compatibility} — The spectral growth law for \( L_{\sym} \) matches the Riemann–von Mangoldt formula:
+  \item \corref{cor:zeta_compatibility} — The spectral growth law for \( \Lsym \) matches the Riemann–von Mangoldt formula:
   \[
   N_\zeta(T) = \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + O(\log T),
   \]
-  confirming analytic agreement between the spectrum of \( L_{\sym} \) and the zero-counting function for \( \zeta(s) \).
+  confirming analytic agreement between the spectrum of \( \Lsym \) and the zero-counting function for \( \zeta(s) \).
 \end{itemize}
 
 \medskip
@@ -44,7 +44,7 @@
 \]
 
 \begin{remark}[Transition to Spectral Rigidity]
-We have shown that the asymptotic eigenvalue distribution of \( L_{\sym} \) encodes the nontrivial zeros of the Riemann zeta function. The next natural question is rigidity: if an operator shares both the spectrum and the determinant identity, is it unitarily equivalent to \( L_{\sym} \)?
+We have shown that the asymptotic eigenvalue distribution of \( \Lsym \) encodes the nontrivial zeros of the Riemann zeta function. The next natural question is rigidity: if an operator shares both the spectrum and the determinant identity, is it unitarily equivalent to \( \Lsym \)?
 
 This question leads directly to the spectral rigidity results in Chapter~\ref{sec:spectral_rigidity}.
 \end{remark}

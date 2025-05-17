@@ -1,28 +1,30 @@
 \begin{proof}[Proof of \lemref{lem:spectral_exhaustivity}]
-Let \( \{ \mu_n \} \subset \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), counted with algebraic multiplicity.
+Let \( \{ \mu_n \} \subset \Spec(\Lsym) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( \Lsym \in \TC(H_{\Psi_\alpha}) \), counted with algebraic multiplicity.
 
 \paragraph{Step 1: Determinant Zeros Correspond to Zeta Zeros.}
-By \thmref{thm:det_identity_revised}, the regularized Fredholm determinant satisfies the identity:
+By \thmref{thm:det_identity_revised}, the canonical Fredholm determinant satisfies
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-The right-hand side vanishes precisely at values \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \in \mathbb{C} \), corresponding to nontrivial zeros \( \rho \in \mathbb{C} \) of the Riemann zeta function \( \zeta(s) \), with the order of vanishing equal to the multiplicity of \( \rho \).
+which is an entire function of order one and exponential type \( \pi \). The right-hand side vanishes precisely at \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \in \C \), where \( \rho \in \C \) is a nontrivial zero of \( \zeta(s) \). The order of vanishing equals the multiplicity of the zero in the Hadamard product of \( \Xi(s) \).
 
-\paragraph{Step 2: Spectral Reciprocity.}
-For trace-class operators \( L \in \mathcal{C}_1(H_{\Psi_\alpha}) \), the logarithmic Fredholm determinant admits the spectral expansion
+\paragraph{Step 2: Spectral Inclusion via Fredholm Theory.}
+Since \( \Lsym \in \TC \), analytic Fredholm theory (cf.~\cite[Thm.~3.1]{Simon2005TraceIdeals}) implies:
 \[
-\log \det\nolimits_\zeta(I - \lambda L) = -\sum_{\mu \in \operatorname{Spec}(L)} \log(1 - \lambda \mu),
+\lambda^{-1} \in \Spec(\Lsym) \setminus \{0\} \quad \Longleftrightarrow \quad \detz(I - \lambda \Lsym) = 0,
 \]
-valid for \( \|\lambda L\| < 1 \) and extended by analytic continuation. Therefore, the determinant vanishes at \( \lambda = \lambda_\rho \) if and only if
+with multiplicities preserved. Thus for each \( \lambda_\rho = i(\rho - \tfrac{1}{2}) \), we obtain
 \[
-\mu_\rho := \lambda_\rho^{-1} = \frac{1}{i}(\rho - \tfrac{1}{2})
+\mu := \lambda_\rho^{-1} = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym).
 \]
-is a nonzero eigenvalue of \( L_{\mathrm{sym}} \), and the multiplicity of the zero of the determinant equals the algebraic multiplicity of the eigenvalue \( \mu_\rho \).
 
-\paragraph{Step 3: Exhaustivity.}
-Since the entire function \( \Xi(s) \) has no zeros other than the nontrivial zeros of \( \zeta(s) \), and the determinant encodes the complete nonzero spectrum of \( L_{\mathrm{sym}} \), it follows that every eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) arises from some zeta zero \( \rho \), via the relation:
+\paragraph{Step 3: Spectral Exhaustivity.}
+The Hadamard factorization of \( \Xi(s) \) guarantees that \( \detz(I - \lambda \Lsym) \) has no zeros other than the \( \lambda_\rho \) above. Hence, all nonzero eigenvalues of \( \Lsym \) arise from the spectral map
 \[
-\mu = \mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}).
+\mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}),
 \]
-Moreover, the normalization \( \Xi(\tfrac{1}{2}) \ne 0 \) implies \( \det\nolimits_\zeta(I) = 1 \), so \( 0 \notin \operatorname{Spec}(L_{\mathrm{sym}}) \). Thus, the spectral map \( \rho \mapsto \mu_\rho \) is surjective onto \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), with multiplicities preserved.
+for some zero \( \rho \) of \( \zeta(s) \). The multiplicities match because both determinant and spectrum admit order-one Hadamard structures, and the determinant encodes all of \( \Spec(\Lsym) \setminus \{0\} \).
+
+\paragraph{Conclusion.}
+Every nonzero eigenvalue of \( \Lsym \) corresponds to a unique nontrivial zeta zero \( \rho \), and multiplicities match exactly. This establishes surjectivity and completes the spectral bijection.
 \end{proof}

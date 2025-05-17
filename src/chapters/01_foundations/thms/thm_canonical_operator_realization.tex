@@ -7,28 +7,30 @@ Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \) denote the 
 
 Construct the mollified convolution operators
 \[
-L_t f(x) := \int_{\R} \FT^{-1}\left[ e^{-t\lambda^2} \phi(\lambda) \right](x - y) f(y)\, dy,
+L_t f(x) := \int_{\R} \FT^{-1}\left[ e^{-t\lambda^2} \phi(\lambda) \right](x - y)\, f(y)\, dy,
 \]
-which are real, symmetric, compact operators in \( \mathcal{C}_1(\HPsi) \). Then the following hold:
+which are real, symmetric, compact operators in \( \TC(\HPsi) \). Then the following hold:
 
 \begin{itemize}
     \item[\textup{(i)}] The trace-norm limit
     \[
-    L_{\sym} := \lim_{t \to 0^+} L_t \in \mathcal{C}_1(\HPsi)
+    \Lsym := \lim_{t \to 0^+} L_t \in \TC(\HPsi)
     \]
     exists, is self-adjoint, and compact.
 
-    \item[\textup{(ii)}] The determinant
+    \item[\textup{(ii)}] The zeta-regularized determinant
     \[
-    \det\nolimits_\zeta(I - \lambda L_{\sym}) := \prod_n (1 - \lambda \lambda_n) e^{\lambda \lambda_n} = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+    \detz(I - \lambda \Lsym) := \prod_n (1 - \lambda \lambda_n)\, e^{\lambda \lambda_n}
+    = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
     \]
     is entire of order one and encodes the nontrivial zero set of \( \zeta(s) \) via the spectral realization
     \[
-    \Spec(L_{\sym}) = \left\{ \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \,\middle|\, \zeta(\rho) = 0,\; \Re(\rho) = \tfrac{1}{2} \right\}.
+    \Spec(\Lsym) = \left\{ \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \,\middle|\, \zeta(\rho) = 0,\; \Re(\rho) = \tfrac{1}{2} \right\}.
     \]
 
-    \item[\textup{(iii)}] The space \( \Schwartz \subset \HPsi \) is a core for \( L_{\sym} \), and the kernel of \( L_{\sym} \) is symmetric, real, and exponentially decaying off the diagonal.
+    \item[\textup{(iii)}] The space \( \Schwartz \subset \HPsi \) is a core for \( \Lsym \), and the kernel of \( \Lsym \) is symmetric, real, and exponentially decaying off the diagonal.
 \end{itemize}
 
-This operator \( L_{\sym} \) is the analytic centerpiece of the spectral determinant identity developed in Chapters~\ref{sec:determinant_identity} through \ref{sec:spectral_implications}, and governs the spectral encoding of the Riemann Hypothesis via its real spectrum.
+\noindent
+This operator \( \Lsym \) is the analytic centerpiece of the spectral determinant identity developed in Chapters~\ref{sec:determinant_identity} through~\ref{sec:spectral_implications}, and governs the spectral encoding of the Riemann Hypothesis via its real spectrum.
 \end{theorem}

@@ -1,15 +1,15 @@
-\begin{proof}[Proof of \cref{lem:det_growth_bound}]
-Let \( L := L_{\sym} \in \TC(\HPsi) \) be compact and self-adjoint.
+\begin{proof}[Proof of \lemref{lem:det_growth_bound}]
+Let \( L := \Lsym \in \TC(\HPsi) \) be compact and self-adjoint.
 
 \paragraph{(i) Local power series estimate.}
 By \cref{lem:det_via_heat_trace}, the zeta-regularized determinant admits the trace-logarithmic expansion
 \[
-\log \det\nolimits_\zeta(I - \lambda L)
+\log \detz(I - \lambda L)
 = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(L^n),
 \]
 which converges absolutely for \( |\lambda| < \|L\|^{-1} \). Since \( |\Tr(L^n)| \le \|L\|^n \), we obtain the estimate
 \[
-\left| \log \det\nolimits_\zeta(I - \lambda L) \right|
+\left| \log \detz(I - \lambda L) \right|
 \le \sum_{n=1}^\infty \frac{|\lambda|^n \|L\|^n}{n}
 = -\log(1 - |\lambda| \|L\|),
 \]
@@ -18,7 +18,7 @@ which controls growth near the origin.
 \paragraph{(ii) Global growth bound via Laplace representation.}
 For all \( \lambda \in \C \), the determinant also admits the Laplace representation
 \[
-\log \det\nolimits_\zeta(I - \lambda L)
+\log \detz(I - \lambda L)
 = - \int_0^\infty \frac{e^{-\lambda t}}{t} \, \Tr(e^{-tL}) \, dt.
 \]
 From the heat trace asymptotics in \cref{sec:heat_kernel_asymptotics}, there exist constants \( C_1, C_2, c, \delta > 0 \) such that
@@ -38,7 +38,7 @@ Split the Laplace integral at \( t = 1 \). Then:
 \paragraph{Conclusion.}
 Combining both contributions yields the estimate
 \[
-\log \left| \det\nolimits_\zeta(I - \lambda L) \right| \le C\, |\lambda| \log(1 + |\lambda|),
+\log \left| \detz(I - \lambda L) \right| \le C\, |\lambda| \log(1 + |\lambda|),
 \]
-for some constant \( C > 0 \). Hence \( \det\nolimits_\zeta(I - \lambda L) \) is an entire function of order one and finite exponential type, as claimed.
+for some constant \( C > 0 \). Hence \( \detz(I - \lambda L) \) is an entire function of order one and finite exponential type, as claimed.
 \end{proof}

@@ -4,12 +4,12 @@
 This chapter establishes the canonical identity
 \begin{equation}
 \label{eq:zeta_det_identity}
-\det\nolimits_\zeta(I - \lambda L_{\sym}) 
+\detz(I - \lambda \Lsym) 
 = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \end{equation}
 realizing the completed Riemann zeta function \( \Xi(s) \) as the Carleman \(\zeta\)-regularized Fredholm determinant of the canonical convolution operator
 \[
-L_{\sym} \in \TC(\HPsi),
+\Lsym \in \TC(\HPsi),
 \]
 constructed in \cref{sec:operator_construction} as the trace-norm limit of mollified operators \( L_t \) defined by convolution with smoothed inverse Fourier transforms of \( \Xi \).
 
@@ -20,34 +20,34 @@ The results in this chapter rely on the following rigorously established inputs:
 \begin{itemize}
   \item \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) is real, even, entire of exponential type \( \pi \) (see \cref{lem:exact_type_pi}), hence \( \phi \in \PW{\pi} \).
   \item Its inverse Fourier transform \( k := \FT^{-1}[\phi] \) belongs to \( L^1(\R, \Psi_\alpha^{-1}) \) for all \( \alpha > \pi \), ensuring that convolution with \( k \) defines a trace-class operator on \( \HPsi \).
-  \item The operator \( L_{\sym} \in \TC(\HPsi) \) is compact and self-adjoint, defined by trace-norm convergence \( L_t \to L_{\sym} \) (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}).
-  \item The semigroup \( \{ e^{-t L_{\sym}^2} \}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and satisfies Laplace-integrable bounds (\cref{lem:heat_semigroup_wellposed}).
+  \item The operator \( \Lsym \in \TC(\HPsi) \) is compact and self-adjoint, defined by trace-norm convergence \( L_t \to \Lsym \) (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}).
+  \item The semigroup \( \{ e^{-t \Lsym^2} \}_{t > 0} \subset \TC(\HPsi) \) exists, is holomorphic in \( t \), and satisfies Laplace-integrable bounds (\cref{lem:heat_semigroup_wellposed}).
   \item The determinant is defined locally via a power series (\cref{lem:det_via_heat_trace}) and globally by Laplace–Mellin continuation.
 \end{itemize}
 \end{previewbox}
 
 \medskip
 
-The proof proceeds through four main analytic modules, grounded in trace-class determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals} and the Paley–Wiener theory of entire functions~\cite[Ch.~9]{Levin1996EntireLectures}:
+The proof proceeds through four main analytic modules, grounded in trace-class determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals} and the Paley--Wiener theory of entire functions~\cite[Ch.~9]{Levin1996EntireLectures}:
 
 \begin{itemize}
-  \item \textbf{Heat trace construction and analytic continuation:} Define the Carleman determinant via Laplace–Mellin transform of the trace \( \Tr(e^{-t L_{\sym}^2}) \), analytically continued via Tauberian expansion (\cref{lem:heat_semigroup_wellposed}, \cref{lem:det_via_heat_trace}).
+  \item \textbf{Heat trace construction and analytic continuation:} Define the Carleman determinant via Laplace--Mellin transform of the trace \( \Tr(e^{-t \Lsym^2}) \), analytically continued via Tauberian expansion (\cref{lem:heat_semigroup_wellposed}, \cref{lem:det_via_heat_trace}).
 
   \item \textbf{Short-time singularity and growth control:} As \( t \to 0^+ \), the expansion
   \[
-  \Tr(e^{-t L_{\sym}^2}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2})
+  \Tr(e^{-t \Lsym^2}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2})
   \]
   controls the logarithmic singularity and determines the genus-one Hadamard type of the determinant (\cref{lem:det_identity_entire_order_one}).
 
-  \item \textbf{Hadamard uniqueness and spectral identification:} The determinant \( \lambda \mapsto \det_\zeta(I - \lambda L_{\sym}) \in \mathcal{E}_1^\pi \), the space of entire functions of order one and type \( \pi \). Via Hadamard's factorization and uniqueness (\cref{lem:hadamard_uniqueness_E1pi}), it must match the normalized zeta profile, established via logarithmic derivative matching (\cref{lem:A_log_derivative}) and trace centering (\cref{lem:trace_zero}).
+  \item \textbf{Hadamard uniqueness and spectral identification:} The determinant \( \lambda \mapsto \detz(I - \lambda \Lsym) \in \mathcal{E}_1^\pi \), the space of entire functions of order one and type \( \pi \). Via Hadamard's factorization and uniqueness (\cref{lem:hadamard_uniqueness_E1pi}), it must match the normalized zeta profile, established via logarithmic derivative matching (\cref{lem:A_log_derivative}) and trace centering (\cref{lem:trace_zero}).
 
   \item \textbf{Canonical normalization:} The trace vanishing
   \[
-  \Tr(L_{\sym}) = 0
+  \Tr(\Lsym) = 0
   \]
   ensures the normalization
   \[
-  \det\nolimits_\zeta(I) = 1,
+  \detz(I) = 1,
   \]
   eliminating ambiguity in the Hadamard exponential prefactor and uniquely anchoring the determinant.
 \end{itemize}
@@ -56,6 +56,6 @@ The proof proceeds through four main analytic modules, grounded in trace-class d
 
 This analytic phase is fully self-contained, strictly modular, and free of spectral assumptions (e.g., no reliance on RH or spectral bijection). The spectral encoding
 \[
-\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym})
+\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym)
 \]
 is developed independently in Chapter~\ref{sec:spectral_correspondence}, after the determinant structure is canonically established.

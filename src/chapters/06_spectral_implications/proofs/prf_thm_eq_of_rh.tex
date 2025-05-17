@@ -1,39 +1,36 @@
 \begin{proof}[Proof of \thmref{thm:eq_of_rh}]
-Let \( \rho \mapsto \mu_\rho := \dfrac{1}{i}(\rho - \tfrac{1}{2}) \) denote the canonical spectral reparametrization of the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zeta(s) \). This spectral mapping is bijective by \thmref{thm:spectral_zero_bijection_revised} and preserves multiplicity by \lemref{lem:multiplicity_preservation}, ensuring trace-class spectral correspondence.
+Let \( \rho \mapsto \mu_\rho := \dfrac{1}{i}(\rho - \tfrac{1}{2}) \) denote the canonical spectral reparametrization of the nontrivial zeros \( \rho \) of the Riemann zeta function \( \zeta(s) \). This map is bijective and multiplicity-preserving by \thmref{thm:spectral_zero_bijection_revised} and \lemref{lem:multiplicity_preservation}, ensuring complete spectral correspondence with the nonzero eigenvalues of \( \Lsym \in \TC(\HPsi) \).
 
 \medskip
 
-Under this map, the normalized Carleman–\(\zeta\)-regularized determinant of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \cap \mathcal{K}(H_{\Psi_\alpha}) \) satisfies:
+By \thmref{thm:det_identity_revised}, the Carleman \(\zeta\)-regularized Fredholm determinant of \( \Lsym \) satisfies:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\qquad \forall \lambda \in \C.
 \]
-as established unconditionally in \thmref{thm:det_identity_revised}. The analytic infrastructure for this identity—including short-time trace bounds, semigroup holomorphy, and Laplace convergence—is developed in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
+This identity is constructed without assuming RH and rests on analytic inputs from Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
 
 \medskip
 
-Now observe the algebraic identity: for any nontrivial zero \( \rho = \sigma + i\gamma \),
+Now observe the algebraic implication: for any nontrivial zero \( \rho = \sigma + i\gamma \),
 \[
-\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) = \frac{1}{i(\sigma - \tfrac{1}{2}) - \gamma}.
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma + i(\sigma - \tfrac{1}{2}).
 \]
-Then \( \mu_\rho \in \mathbb{R} \) if and only if \( \sigma = \tfrac{1}{2} \), i.e., if and only if \( \rho \) lies on the critical line. Thus:
+Thus,
 \[
-\mu_\rho \in \mathbb{R} \iff \operatorname{Re}(\rho) = \tfrac{1}{2}.
+\mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2}.
 \]
 
-\paragraph*{(\( \Rightarrow \)) Spectral Reality Implies \(\RH\).}
-Assume \( \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \). Then all eigenvalues \( \mu_\rho \in \mathbb{R} \), so the identity above implies that every nontrivial zero \( \rho \) satisfies \( \operatorname{Re}(\rho) = \tfrac{1}{2} \). Hence, \(\RH\) holds.
+\paragraph*{\( \Rightarrow \): Spectral Reality Implies \(\RH\).}
+Assume \( \Spec(\Lsym) \subset \R \). Then each \( \mu_\rho \in \R \), so the identity above implies that \( \Re(\rho) = \tfrac{1}{2} \). Hence, all nontrivial zeros lie on the critical line and RH holds.
 
-\paragraph*{(\( \Leftarrow \)) \(\RH\) Implies Spectral Reality.}
-Conversely, assume \(\RH\) holds. Then for each nontrivial zero \( \rho \), we have \( \operatorname{Re}(\rho) = \tfrac{1}{2} \), which implies \( \mu_\rho \in \mathbb{R} \). Therefore, all nonzero eigenvalues of \( L_{\mathrm{sym}} \) are real.
+\paragraph*{\( \Leftarrow \): \(\RH\) Implies Spectral Reality.}
+Conversely, assume RH holds. Then for each \( \rho \), \( \Re(\rho) = \tfrac{1}{2} \), which implies \( \mu_\rho \in \R \). Therefore, all nonzero eigenvalues of \( \Lsym \) are real. By self-adjointness and the spectral theorem, \( \Spec(\Lsym) \subset \R \).
 
 \paragraph*{Conclusion.}
-Since \( L_{\mathrm{sym}} \) is compact and self-adjoint (\thmref{thm:sa_trace_class_Lsym}), the spectral theorem ensures its spectrum lies in \( \mathbb{R} \). Hence,
+The spectrum of \( \Lsym \) is real if and only if all nontrivial zeros of \( \zeta(s) \) lie on the critical line. This establishes the analytic–spectral equivalence
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \iff \mu_\rho \in \mathbb{R} \text{ for all nontrivial zeros } \rho,
+\RH \iff \Spec(\Lsym) \subset \R,
 \]
-which yields the analytic–spectral equivalence:
-\[
-\RH \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R},
-\]
-as claimed.
+completing the modular operator-theoretic reformulation of the Riemann Hypothesis.
 \end{proof}

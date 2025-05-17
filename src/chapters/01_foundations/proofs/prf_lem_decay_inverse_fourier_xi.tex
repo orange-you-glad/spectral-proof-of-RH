@@ -1,12 +1,12 @@
 \begin{proof}[Proof of \lemref{lem:decay_inverse_fourier_xi}]
-Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \Xi(s) \) is the completed Riemann zeta function. As established in \lemref{lem:xi_growth_bound}, \( \phi \in PW_\pi(\R) \) is entire of exponential type \( \pi \), real-valued, and even, with
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), where \( \Xi(s) \) is the completed Riemann zeta function. As established in \lemref{lem:xi_growth_bound}, \( \phi \in \PW{\pi} \) is entire of exponential type \( \pi \), real-valued, and even, with
 \[
 |\phi(\lambda)| \le C\, e^{\pi |\lambda|}, \qquad \forall \lambda \in \R.
 \]
 
 \medskip
 \noindent\textbf{Step 1: Exponential Decay via Paley--Wiener.}
-By the Paley--Wiener theorem for \( PW_\pi \) functions (see \cite[Thm.~3.2.4]{Levin1996EntireLectures}, \cite[Ch.~IX.4]{ReedSimon1975II}), the inverse Fourier transform
+By the Paley--Wiener theorem for functions in \( \PW{\pi} \) (see~\cite[Thm.~3.2.4]{Levin1996EntireLectures}, \cite[Ch.~IX.4]{ReedSimon1975II}), the inverse Fourier transform
 \[
 k(x) := \FT^{-1}[\phi](x) = \frac{1}{2\pi} \int_{\R} e^{i\lambda x} \phi(\lambda)\, d\lambda
 \]
@@ -21,7 +21,7 @@ Since \( \phi \) is real-valued and even, Fourier inversion implies \( k(x) \in 
 
 \medskip
 \noindent\textbf{Step 3: Weighted Integrability.}
-For any fixed \( \alpha > \pi \), define \( \Psi_\alpha(x) := e^{\alpha |x|} \). Then
+Fix \( \alpha > \pi \), and define \( \Psi_\alpha(x) := e^{\alpha |x|} \). Then
 \[
 \int_{\R} |k(x)|\, \Psi_\alpha(x)\, dx = \int_{\R} |k(x)|\, e^{\alpha |x|} dx < \infty,
 \]
@@ -40,7 +40,7 @@ C \int_{\R} |k(z)|\, \Psi_\alpha(z)\, dz < \infty.
 \]
 Hence \( K \in L^1(\R^2, \Psi_\alpha(x)\Psi_\alpha(y)\, dx\, dy) \), and the associated convolution operator
 \[
-(Lf)(x) := \int_{\R} k(x - y) f(y)\, dy
+(L f)(x) := \int_{\R} k(x - y) f(y)\, dy
 \]
-belongs to \( \mathcal{C}_1(\HPsi) \) by Simon’s kernel criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+belongs to \( \TC(\HPsi) \) by Simon’s trace-class kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals}.
 \end{proof}

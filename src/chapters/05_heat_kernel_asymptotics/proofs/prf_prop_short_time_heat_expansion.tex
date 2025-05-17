@@ -1,12 +1,12 @@
 \begin{proof}[Proof of \propref{prop:short_time_heat_expansion}]
-Let \( L := L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint operator. Let \( L_\varepsilon \to L \) in trace norm be a family of mollified convolution approximants constructed via Gaussian regularization in the Fourier domain, as defined in \secref{sec:operator_construction}.
+Let \( L := \Lsym \in \TC(\HPsi) \) denote the canonical compact, self-adjoint operator. Let \( L_\varepsilon \to L \) in trace norm be a family of mollified convolution approximants constructed via Gaussian regularization in the Fourier domain, as defined in \secref{sec:operator_construction}.
 
 \paragraph{Step 1: Asymptotics for Mollified Approximants.}
-Each \( L_\varepsilon \) is smoothing, self-adjoint, and trace class. Its square \( L_\varepsilon^2 \) defines a bounded pseudodifferential operator with integral kernel \( K^{(\varepsilon)}_t(x,y) \in \mathcal{S}(\R^2) \). The diagonal expansion
+Each \( L_\varepsilon \) is smoothing, self-adjoint, and trace class. Its square \( L_\varepsilon^2 \) defines a bounded pseudodifferential operator with integral kernel \( K^{(\varepsilon)}_t(x,y) \in \Schwartz(\R^2) \). The diagonal expansion
 \[
 K^{(\varepsilon)}_t(x,x) \sim \sum_{n=0}^\infty a_n^{(\varepsilon)}(x)\, t^{n - \frac{1}{2}}
 \]
-holds uniformly in \( x \in \R \), with each \( a_n^{(\varepsilon)}(x) \in \mathcal{S}(\R) \). Integration yields the trace expansion
+holds uniformly in \( x \in \R \), with each \( a_n^{(\varepsilon)}(x) \in \Schwartz(\R) \). Integration yields the trace expansion
 \[
 \Tr(e^{-t L_\varepsilon^2}) \sim \sum_{n=0}^\infty A_n^{(\varepsilon)}\, t^{n - \frac{1}{2}}, \qquad A_n^{(\varepsilon)} := \int_{\R} a_n^{(\varepsilon)}(x)\, dx.
 \]

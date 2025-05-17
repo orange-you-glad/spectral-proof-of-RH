@@ -17,33 +17,33 @@ lies in \( \TC(H_{\Psi_\alpha}) \), and is compact and self-adjoint. Here \( k_t
 \paragraph{(ii) Trace-Norm Convergence.}
 By \lemref{lem:trace_norm_convergence_Lt_to_Lsym}, the family \( \{L_t\}_{t > 0} \subset \TC(H_{\Psi_\alpha}) \) converges in trace norm:
 \[
-\| L_t - L_{\sym} \|_{\TC} \to 0 \quad \text{as } t \to 0^+,
+\| L_t - \Lsym \|_{\TC} \to 0 \quad \text{as } t \to 0^+,
 \]
-for a unique limit \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \), since \( \TC \) is a Banach ideal.
+for a unique limit \( \Lsym \in \TC(H_{\Psi_\alpha}) \), since \( \TC \) is a Banach ideal.
 
 \paragraph{(iii) Compactness of the Limit.}
-Trace-norm convergence implies convergence in operator norm. Since \( \KC(H_{\Psi_\alpha}) \) is norm-closed, we obtain
+Trace-norm convergence implies convergence in operator norm. Since \( \KC(H_{\Psi_\alpha}) \) is norm closed, we obtain:
 \[
-L_{\sym} \in \KC(H_{\Psi_\alpha}).
+\Lsym \in \KC(H_{\Psi_\alpha}).
 \]
 
 \paragraph{(iv) Self-Adjointness of the Limit.}
-By \lemref{lem:core_essential_sa}, the restriction of \( L_{\sym} \) to \( \Schwartz \subset H_{\Psi_\alpha} \) is essentially self-adjoint, and its closure defines a unique self-adjoint operator:
+By \lemref{lem:core_essential_sa}, the restriction of \( \Lsym \) to \( \Schwartz \subset H_{\Psi_\alpha} \) is essentially self-adjoint, and its closure defines a unique self-adjoint operator:
 \[
-L_{\sym} = L_{\sym}^*.
+\Lsym = \Lsym^*.
 \]
 
 \paragraph{(v) Trace Normalization.}
 By \thmref{thm:trace_zero_Lsym}, the trace vanishes:
 \[
-\Tr(L_{\sym}) = 0.
+\Tr(\Lsym) = 0.
 \]
 This enforces canonical normalization in the zeta-regularized determinant:
 \[
-\det\nolimits_{\zeta}(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
-ensuring that \( \det\nolimits_{\zeta}(I) = 1 \).
+ensuring that \( \detz(I) = 1 \).
 
 \paragraph{Conclusion.}
-The operator \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \cap \KC(H_{\Psi_\alpha}) \) is self-adjoint with zero trace and arises canonically as the analytic limit of mollified spectral convolution operators. This completes the construction.
+The operator \( \Lsym \in \TC(H_{\Psi_\alpha}) \cap \KC(H_{\Psi_\alpha}) \) is self-adjoint with zero trace and arises canonically as the analytic limit of mollified spectral convolution operators. This completes the construction.
 \end{proof}

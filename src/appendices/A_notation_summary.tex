@@ -9,7 +9,7 @@ This appendix collects global analytic symbols and conventions. All other notati
   \[
   \HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
   \]
-  The exponential weight ensures trace-class inclusion of kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). All spectral operators \( L_t \), \( L_{\sym} \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
+  The exponential weight ensures trace-class inclusion of kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). All spectral operators \( L_t \), \( \Lsym \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
 
   \item \textbf{Paley–Wiener Class:}
   \[
@@ -22,7 +22,7 @@ This appendix collects global analytic symbols and conventions. All other notati
 
   \item \textbf{Canonical Operator:}
   \[
-  L_{\sym} := \lim_{t \to 0^+} L_t \in \TC(\HPsi),
+  \Lsym := \lim_{t \to 0^+} L_t \in \TC(\HPsi),
   \]
   defined as the trace-norm limit of mollified convolutions with kernels from \( \FT^{-1}[\phi_t] \), where \( \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \). The operator is compact, self-adjoint, and realizes the canonical determinant identity.
 
@@ -30,17 +30,17 @@ This appendix collects global analytic symbols and conventions. All other notati
   \[
   \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad k(x) := \FT^{-1}[\phi](x), \qquad K(x, y) := k(x - y).
   \]
-  These define the integral kernel of \( L_{\sym} \). The profile \( \phi \) governs spectral decay and determinant structure.
+  These define the integral kernel of \( \Lsym \). The profile \( \phi \) governs spectral decay and determinant structure.
 
   \item \textbf{Canonical Spectral Map:}
   \[
   \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}), \qquad \rho \in \C \text{ zero of } \zeta(s).
   \]
-  This bijective reparametrization maps the critical line to the real axis, identifying zeros of \( \zetaR \) with eigenvalues of \( L_{\sym} \).
+  This bijective reparametrization maps the critical line to the real axis, identifying zeros of \( \zetaR \) with eigenvalues of \( \Lsym \).
 
   \item \textbf{Spectral Determinant:}
   \[
-  \det\nolimits_\zeta(I - \lambda L_{\sym}) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+  \detz(I - \lambda \Lsym) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
   \]
   the Carleman \(\zeta\)-regularized Fredholm determinant. It matches the Hadamard factorization of \( \Xi \) and encodes all nontrivial zero data.
 \end{itemize}

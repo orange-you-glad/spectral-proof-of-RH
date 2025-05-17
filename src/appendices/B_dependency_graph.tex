@@ -22,99 +22,71 @@ For symbol definitions, see Appendix~\ref{app:notation_summary}.
 
 The analytic identity
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
+\detz(I - \lambda \Lsym) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
 relies on the following validated properties, derived across Chapters~1–2 and Appendix~\ref{app:zeta_trace_background}:
 
-\begin{itemize}
-  \item \textbf{Spectral Profile Class:} \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) (see \cref{lem:xi_growth_bound}) ensures exponential control.
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Property} & \textbf{Summary and Source} \\
+\hline
+\textbf{Spectral Profile Class} & \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) ensures exponential control (\cref{lem:xi_growth_bound}). \\
+\textbf{Kernel Localization} & \( \widehat{\Xi}(x) \in L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \) (\cref{lem:weighted_L1_inverse_FT_xi}). \\
+\textbf{Operator Regularity} & \( \Lsym \in \TC(\HPsi) \) is compact, self-adjoint, and uniquely defined (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}). \\
+\textbf{Heat Semigroup Well-Posedness} & \( e^{-t\Lsym^2} \in \TC(\HPsi) \), analytic with decay bounds (\cref{lem:heat_semigroup_existence}, \cref{lem:heat_semigroup_wellposed}). \\
+\textbf{Determinant Growth and Entirety} & \( \detz \) is entire of exponential type \( \pi \), matching trace data (\cref{lem:det_identity_entire_order_one}). \\
+\hline
+\end{tabularx}
+\end{center}
 
-  \item \textbf{Kernel Localization:} The inverse Fourier transform \( \widehat{\Xi}(x) \in L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \) (see \cref{lem:weighted_L1_inverse_FT_xi}).
+\subsection*{Directed Acyclic Graph (Visual Overview)}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  node distance=1.4cm and 2.6cm,
+  every node/.style={draw, align=center, rounded corners=3pt, font=\small, fill=gray!5, text width=4.8cm},
+  arrow/.style={-{Stealth}, thick}
+]
 
-  \item \textbf{Operator Regularity:} \( L_{\sym} \in \TC(\HPsi) \) is compact, self-adjoint, and uniquely defined (see \cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}).
+\node (ch1) {Ch.~1\\Foundational Structures};
+\node (ch2) [below=of ch1] {Ch.~2\\Operator Construction};
+\node (ch3) [below=of ch2] {Ch.~3\\Determinant Identity};
+\node (ch4) [right=of ch3] {Ch.~4\\Spectral Bijection};
+\node (ch5) [below=of ch3] {Ch.~5\\Heat Kernel Asymptotics};
+\node (ch6) [right=of ch5] {Ch.~6\\RH Equivalence};
+\node (ch7) [below=of ch5] {Ch.~7\\Tauberian Growth};
+\node (ch8) [right=of ch7] {Ch.~8\\Spectral Rigidity};
+\node (ch9) [below=of ch7] {Ch.~9\\Logical Closure};
 
-  \item \textbf{Heat Semigroup Well-Posedness:} The semigroup \( \{ e^{-tL_{\sym}^2} \}_{t > 0} \subset \TC(\HPsi) \) is analytic and satisfies spectral decay (see \cref{lem:heat_semigroup_existence}, \cref{lem:heat_semigroup_wellposed}).
+\draw[arrow] (ch1) -- (ch2);
+\draw[arrow] (ch2) -- (ch3);
+\draw[arrow] (ch3) -- (ch5);
+\draw[arrow] (ch5) -- (ch7);
+\draw[arrow] (ch7) -- (ch9);
 
-  \item \textbf{Determinant Growth and Entirety:} The determinant is entire of exponential type \( \pi \) (see \cref{lem:det_identity_entire_order_one}) and matches spectral trace data.
-\end{itemize}
+\draw[arrow] (ch3) -- (ch4);
+\draw[arrow] (ch4) -- (ch6);
+\draw[arrow] (ch5) -- (ch6);
+\draw[arrow] (ch6) -- (ch8);
+\draw[arrow] (ch8) -- (ch9);
 
-\subsection*{Modular Proof Hierarchy}
-
-\begin{itemize}
-  \item \textbf{Chapter 1 — Foundational Structures:}  
-  Introduces \( \HPsi \), Paley–Wiener decay, kernel embedding, trace-class theory. See Chapter~\ref{sec:foundations}.
-
-  \item \textbf{Chapter 2 — Canonical Operator Construction:}  
-  Defines mollifiers \( L_t \), proves trace-norm convergence (\cref{lem:trace_norm_convergence_Lt_to_Lsym}), limit uniqueness (\cref{lem:trace_norm_limit_unique}), and self-adjointness via \cref{rem:selfadjoint_analytic_vectors}.
-
-  \item \textbf{Chapter 3 — Determinant Identity:}  
-  Proves the canonical identity via \cref{lem:det_via_heat_trace}, heat trace asymptotics (\cref{lem:heat_semigroup_wellposed}), Hadamard structure (\cref{lem:hadamard_linear_form}), and uniqueness in \( \mathcal{E}_1^\pi \) (\cref{lem:hadamard_uniqueness_E1pi}).  
-  \textit{See also \remref{rmk:forward_spectral_closure} for forward implications traced in Chapter~6.}
-
-  \item \textbf{Chapter 4 — Spectral Bijection:}  
-  Establishes the multiplicity-preserving map \( \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}) \) via \cref{lem:spectrum_zero_bijection}, and includes decay analysis in \cref{rem:spectral_dimension}.
-
-  \item \textbf{Chapter 5 — Heat Kernel and Trace Asymptotics:}  
-  Derives the short-time expansion of \( \Tr(e^{-tL_{\sym}^2}) \), establishes determinant Laplace integrability (\cref{lem:det_via_heat_trace}), log-derivative structure (\cref{lem:log_derivative_determinant}), and Weyl-type counting estimates.
-
-  \item \textbf{Chapter 6 — Spectral Rigidity and RH Equivalence:}  
-  Proves
-  \[
-  \RH \iff \Spec(L_{\sym}) \subset \R,
-  \]
-  using determinant identity and spectral structure (see \thmref{thm:eq_of_rh}, \lemref{lem:spectral_rigidity_determinant}, \thmref{thm:rh_spectral_closure}).
-
-  \item \textbf{Chapter 7 — Tauberian Growth:}  
-  Extracts spectral asymptotics from Laplace-trace expansions.
-
-  \item \textbf{Chapter 8 — Spectral Rigidity:}  
-  Proves determinant rigidity under positivity, and uniqueness across trace class.
-
-  \item \textbf{Chapter 9 — Logical Closure:}  
-  Concludes the modular RH equivalence via DAG-saturated results.
-\end{itemize}
-
-\subsection*{Directed Proof Flow Diagram}
-\phantomsection
-\label{fig:dag_appendix_b}
-
-\[
-\begin{array}{c}
-\textbf{Foundations (Ch.~1, $\alpha > \pi$)} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Operator Construction (Ch.~2)} \\
-\text{(\cref{lem:trace_norm_limit_unique}, \cref{rem:selfadjoint_analytic_vectors})} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Determinant Identity (Ch.~3)} \Leftarrow \text{App.~\ref{app:zeta_trace_background}} \\
-\text{(\cref{lem:heat_semigroup_wellposed}, \cref{lem:hadamard_uniqueness_E1pi})} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Spectral Bijection (Ch.~4)} \\
-\text{(\cref{lem:spectrum_zero_bijection}, \cref{rem:spectral_dimension})} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Heat Trace Asymptotics (Ch.~5)} \\
-\text{(Supports \cref{lem:det_via_heat_trace}, \cref{lem:log_derivative_determinant}, Weyl growth)} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Spectral Rigidity \& RH Equivalence (Ch.~6)} \\
-\text{(\thmref{thm:eq_of_rh}, \lemref{lem:spectral_rigidity_determinant}, \thmref{thm:rh_spectral_closure})} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Tauberian Growth (Ch.~7)} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Spectral Rigidity (Ch.~8)} \\[1ex]
-\downarrow \\[1ex]
-\textbf{Logical Closure: RH Holds (Ch.~9)}
-\end{array}
-\]
+\end{tikzpicture}
+\caption{Directed acyclic graph of analytic dependencies. Arrows represent logical flow between chapters.}
+\label{fig:dag_visual}
+\end{figure}
 
 \subsection*{Conclusion}
 
-Each lemma, proposition, and theorem in this manuscript depends only on prior analytic infrastructure or trace-class spectral calculus. No assumption of the Riemann Hypothesis, spectral bijection, or real spectrum is made until it is explicitly proven.
+Each lemma, proposition, and theorem in this manuscript depends only on prior analytic infrastructure or trace-class spectral calculus. No assumption of the Riemann Hypothesis, spectral bijection, or spectral reality is made until explicitly proven.
 
-The analytic–spectral chain from the determinant identity to the equivalence
+The analytic–spectral chain from the determinant identity to the RH equivalence
 \[
-\RH \iff \Spec(L_{\sym}) \subset \R
+\RH \iff \Spec(\Lsym) \subset \R
 \]
-is modular, acyclic, and fully resolved in \cref{sec:spectral_implications}, using only results from \cref{sec:heat_kernel_asymptotics} and prior.
+is modular, acyclic, and fully closed in \cref{sec:logical_closure}, relying only on results from Chapters~1–8 and the analytic infrastructure in Appendix~\ref{app:zeta_trace_background}.
 
-Forward dependency disclosure is made explicit in \remref{rmk:forward_spectral_closure}, and the logical completion of the RH equivalence is formalized in \thmref{thm:rh_spectral_closure}.
+Forward dependency disclosure is given in \remref{rmk:forward_spectral_closure}, and the full analytic equivalence is formally stated in \thmref{thm:rh_spectrum_equiv} and concluded in \thmref{thm:truth_of_rh}.
 
-For notation and analytic symbol definitions, see \appref{app:notation_summary}.
+For symbol reference, see Appendix~\ref{app:notation_summary}.

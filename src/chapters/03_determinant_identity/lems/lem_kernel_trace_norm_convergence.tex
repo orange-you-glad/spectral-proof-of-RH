@@ -1,43 +1,42 @@
 \begin{lemma}[Trace-Norm Convergence of Mollified Convolution Kernels]
 \label{lem:kernel_trace_norm_convergence}
-
 Let \( H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx) \) be the exponentially weighted Hilbert space with fixed weight parameter \( \alpha > \pi \). Let
 \[
 \varphi_t(\lambda) := e^{-t\lambda^2} \cdot \Xi\left( \tfrac{1}{2} + i\lambda \right)
 \]
 be the Gaussian-damped spectral profile, and define the mollified convolution operators \( L_t \colon H_{\Psi_\alpha} \to H_{\Psi_\alpha} \) by
 \[
-L_t f(x) := \int_{\mathbb{R}} K_t(x - y) f(y) \, dy, \qquad \text{with } K_t := \mathcal{F}^{-1}[\varphi_t].
+L_t f(x) := \int_{\mathbb{R}} K_t(x - y)\, f(y)\, dy, \qquad \text{with } K_t := \FT^{-1}[\varphi_t].
 \]
 
-Let \( L_{\mathrm{sym}} \) be the canonical limit operator defined by convolution with the inverse Fourier transform of the centered zeta profile:
+Let \( \Lsym \) be the canonical limit operator defined by convolution with the inverse Fourier transform of the centered zeta profile:
 \[
-K := \mathcal{F}^{-1}\left[ \Xi\left(\tfrac{1}{2} + i\lambda \right) \right].
+K := \FT^{-1}\left[ \Xi\left(\tfrac{1}{2} + i\lambda \right) \right].
 \]
 
 \medskip
 \noindent
-Then the mollified operators \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \) converge to \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) in trace norm:
+Then the mollified operators \( L_t \in \TC(H_{\Psi_\alpha}) \) converge to \( \Lsym \in \TC(H_{\Psi_\alpha}) \) in trace norm:
 \[
-\lim_{t \to 0^+} \| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1} = 0.
+\lim_{t \to 0^+} \| L_t - \Lsym \|_{\TC} = 0.
 \]
 
 \medskip
 \noindent
 In particular:
 \begin{itemize}
-  \item Each \( L_t \) and \( L_{\mathrm{sym}} \) is compact, with continuous kernel in the weighted space
+  \item Each \( L_t \) and \( \Lsym \) is compact, with continuous kernel in the weighted space
   \[
-  L^2\left( \mathbb{R}^2, e^{\alpha |x|} e^{\alpha |y|} \, dx \, dy \right).
+  L^2\left( \mathbb{R}^2, \Psi_\alpha(x) \Psi_\alpha(y) \, dx \, dy \right).
   \]
-  \item The convergence holds in all Schatten classes \( \mathcal{C}_p \) for \( p \ge 1 \), including \( \mathcal{C}_1 \);
+  \item The convergence holds in all Schatten classes \( \mathcal{C}_p \) for \( p \ge 1 \), including \( \TC \);
   \item The traces and zeta-regularized determinants satisfy
   \[
-  \lim_{t \to 0^+} \operatorname{Tr}(L_t^n) = \operatorname{Tr}(L_{\mathrm{sym}}^n), \qquad \forall n \in \mathbb{N},
+  \lim_{t \to 0^+} \Tr(L_t^n) = \Tr(\Lsym^n), \qquad \forall n \in \mathbb{N},
   \]
   and hence
   \[
-  \det\nolimits_\zeta(I - \lambda L_t) \to \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}})
+  \detz(I - \lambda L_t) \to \detz(I - \lambda \Lsym)
   \]
   uniformly on compact subsets of \( \lambda \in \mathbb{C} \), by trace-norm continuity of the zeta determinant~\cite[Ch.~4]{Simon2005TraceIdeals}.
 \end{itemize}

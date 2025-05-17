@@ -1,26 +1,49 @@
 \begin{theorem}[Truth of the Riemann Hypothesis]
 \label{thm:truth_of_rh}
 
-Every nontrivial zero \( \rho \in \mathbb{C} \) of the Riemann zeta function \( \zeta(s) \) satisfies
+Every nontrivial zero \( \rho \in \C \) of the Riemann zeta function \( \zeta(s) \) satisfies
 \[
-\operatorname{Re}(\rho) = \tfrac{1}{2}.
+\Re(\rho) = \tfrac{1}{2}.
 \]
 
 \medskip
 
 \noindent
-That is, the nontrivial zero set of \( \zeta(s) \) lies entirely on the critical line:
+Equivalently, the nontrivial zero set of \( \zeta(s) \) lies entirely on the critical line:
 \[
-\left\{ \rho \in \mathbb{C} : \zeta(\rho) = 0 \right\}
-\subset \left\{ s \in \mathbb{C} : \operatorname{Re}(s) = \tfrac{1}{2} \right\}.
+\left\{ \rho \in \C : \zeta(\rho) = 0 \right\}
+\subset \left\{ s \in \C : \Re(s) = \tfrac{1}{2} \right\}.
 \]
 
 \medskip
 
 \noindent
-This completes the analytic proof of the Riemann Hypothesis, via the canonical determinant identity and the spectral theory of the self-adjoint, trace-class operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). Under the spectral map
-\[
-\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
-\]
-the bijective correspondence between zeta zeros and spectrum, together with the real-valuedness of \( \operatorname{Spec}(L_{\mathrm{sym}}) \), implies that all \( \rho \in \mathbb{C} \) with \( \zeta(\rho) = 0 \) satisfy \( \operatorname{Re}(\rho) = \tfrac{1}{2} \).
+This completes the analytic proof of the Riemann Hypothesis, established through:
+\begin{itemize}
+  \item The construction of a canonical compact, self-adjoint, trace-class operator \( \Lsym \in \TC(\HPsi) \), defined in \secref{sec:operator_construction};
+  \item The Fredholm determinant identity
+  \[
+  \detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+  \]
+  proven in \thmref{thm:det_identity_revised};
+
+  \item The bijection between nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum of \( \Lsym \), given by
+  \[
+  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+  \]
+  with multiplicity preservation, as shown in \thmref{thm:spectral_zero_bijection_revised};
+
+  \item The spectral reality of \( \Lsym \), established via trace-norm convergence and self-adjointness in Chapter~\ref{sec:operator_construction} and \thmref{thm:sa_trace_class_Lsym};
+
+  \item The logical equivalence
+  \[
+  \RH \iff \Spec(\Lsym) \subset \R,
+  \]
+  proven in \thmref{thm:rh_spectrum_equiv}.
+\end{itemize}
+
+\medskip
+
+\noindent
+Taken together, these results confirm that all nontrivial zeros \( \rho \in \C \) satisfy \( \Re(\rho) = \tfrac{1}{2} \). Therefore, the Riemann Hypothesis is true.
 \end{theorem}

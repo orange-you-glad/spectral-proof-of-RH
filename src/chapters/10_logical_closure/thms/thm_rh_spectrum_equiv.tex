@@ -1,40 +1,41 @@
 \begin{theorem}[Spectral Equivalence with the Riemann Hypothesis]
 \label{thm:rh_spectrum_equiv}
 
-Let \( L_{\sym} \in \TC(\HPsi) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
+Let \( \Lsym \in \TC(\HPsi) \) denote the canonical compact, self-adjoint, trace-class operator on the exponentially weighted Hilbert space
 \[
-\HPsi := L^2(\R, e^{\alpha |x|} dx),
-\qquad \text{for fixed } \alpha > \pi.
+\HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \text{for fixed } \alpha > \pi.
 \]
-Define the canonical spectral map
+Define the canonical spectral image
 \[
-\mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
-for each nontrivial zero \( \rho \in \C \) of the Riemann zeta function \( \zetaR(s) \).
+for each nontrivial zero \( \rho \in \C \) of the Riemann zeta function \( \zeta(s) \).
 
-Then the following are equivalent:
+Then the following are logically equivalent:
 \begin{enumerate}
   \item[\textup{(i)}] The Riemann Hypothesis holds:
   \[
   \Re(\rho) = \tfrac{1}{2}, \quad \text{for all nontrivial zeros } \rho.
   \]
 
-  \item[\textup{(ii)}] The spectrum of \( L_{\sym} \) lies entirely on the real line:
+  \item[\textup{(ii)}] The spectrum of \( \Lsym \) lies entirely on the real axis:
   \[
-  \Spec(L_{\sym}) \subset \R.
+  \Spec(\Lsym) \subset \R.
   \]
 \end{enumerate}
 
 \medskip
 
 \noindent
-This equivalence follows from the bijective spectral encoding
-\[
-\rho \mapsto \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})},
-\]
-which matches nontrivial zeta zeros with the nonzero spectrum of \( L_{\sym} \), as established in \thmref{thm:spectral_zero_bijection_revised}. The Carleman determinant identity
-\[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)}
-\]
-ensures that reality of spectrum corresponds exactly to the critical-line condition for all \( \rho \in \Spec(\zetaR) \).
+This equivalence follows from:
+\begin{itemize}
+  \item The determinant identity for \( \Lsym \), proven in \thmref{thm:det_identity_revised};
+  \item The canonical spectral bijection \( \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), established in \thmref{thm:spectral_zero_bijection_revised};
+  \item The fact that \( \mu_\rho \in \R \iff \Re(\rho) = \tfrac{1}{2} \).
+\end{itemize}
+
+\medskip
+
+\noindent
+Thus, the Riemann Hypothesis is true if and only if the spectrum of the canonical trace-class operator \( \Lsym \) is real. This provides a complete operator-theoretic reformulation of RH within the zeta-determinant framework.
 \end{theorem}

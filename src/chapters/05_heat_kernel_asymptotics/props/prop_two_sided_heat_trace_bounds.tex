@@ -1,19 +1,19 @@
 \begin{proposition}[Two-Sided Heat Trace Bounds]
 \label{prop:two_sided_heat_trace_bounds}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha|x|} dx) \) for \( \alpha > \pi \), with discrete real spectrum \( \{\mu_n\} \subset \R \).
+Let \( \Lsym \in \TC(\HPsi) \) be the canonical compact, self-adjoint operator on the exponentially weighted Hilbert space \( \HPsi := L^2(\R, e^{\alpha|x|} dx) \) for \( \alpha > \pi \), with discrete real spectrum \( \{\mu_n\} \subset \R \).
 
 Then there exist constants \( c_1, c_2 > 0 \) and \( t_0 > 0 \) such that for all \( t \in (0, t_0] \),
 \[
 c_1\, t^{-1/2}
 \;\le\;
-\Tr\left( e^{-t L_{\sym}^2} \right)
+\Tr\left( e^{-t \Lsym^2} \right)
 \;\le\;
 c_2\, t^{-1/2}.
 \]
 Explicitly, one may take
 \[
-c_1 := \frac{1}{4 \, \| L_{\sym} \|_{\TC}}, \qquad
-c_2 := (1 + e^{-1}) \cdot \| L_{\sym} \|_{\TC},
+c_1 := \frac{1}{4 \, \| \Lsym \|_{\TC}}, \qquad
+c_2 := (1 + e^{-1}) \cdot \| \Lsym \|_{\TC},
 \]
 as established in \lemref{lem:hk_lower_bound} and \lemref{lem:hk_upper_bound}, respectively.
 

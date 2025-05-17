@@ -1,5 +1,5 @@
 \begin{proof}[Proof of \lemref{lem:trace_norm_convergence_Lt_to_Lsym}]
-We show that the mollified convolution operators \( L_t \) converge in trace norm to the canonical operator \( L_{\sym} \) on the weighted Hilbert space \( H_{\Psi_\alpha} \). The strategy is to conjugate into flat space, control the kernels via uniform bounds, and apply Simon’s convergence theorem for integral operators.
+We show that the mollified convolution operators \( L_t \) converge in trace norm to the canonical operator \( \Lsym \) on the weighted Hilbert space \( H_{\Psi_\alpha} \). The strategy is to conjugate into flat space, control the kernels via uniform bounds, and apply Simon’s convergence theorem for integral operators.
 
 \paragraph{Step 1: Operator Conjugation.}
 Fix \( \alpha > \pi \), and define the exponential weight \( \Psi_\alpha(x) := e^{\alpha |x|} \), so that
@@ -12,7 +12,7 @@ U : H_{\Psi_\alpha} \to L^2(\R), \qquad (Uf)(x) := \Psi_\alpha(x)^{1/2} f(x)
 \]
 denote the unitary conjugation operator. Then define the conjugated operators
 \[
-\widetilde{L}_t := U L_t U^{-1}, \qquad \widetilde{L} := U L_{\sym} U^{-1},
+\widetilde{L}_t := U L_t U^{-1}, \qquad \widetilde{L} := U \Lsym U^{-1},
 \]
 which act on \( L^2(\R) \) with integral kernels
 \[
@@ -49,15 +49,15 @@ By Simon’s kernel convergence theorem~\cite[Thm.~3.1]{Simon2005TraceIdeals}, t
 \]
 
 \paragraph{Step 4: Pullback to Weighted Space.}
-Since \( L_t = U^{-1} \widetilde{L}_t U \), and \( L_{\sym} = U^{-1} \widetilde{L} U \), we obtain by unitary invariance of the trace norm:
+Since \( L_t = U^{-1} \widetilde{L}_t U \), and \( \Lsym = U^{-1} \widetilde{L} U \), we obtain by unitary invariance of the trace norm:
 \[
-\| L_t - L_{\sym} \|_{\TC(H_{\Psi_\alpha})} = \| \widetilde{L}_t - \widetilde{L} \|_{\TC(L^2)} \to 0.
+\| L_t - \Lsym \|_{\TC(H_{\Psi_\alpha})} = \| \widetilde{L}_t - \widetilde{L} \|_{\TC(L^2)} \to 0.
 \]
 
 \paragraph{Conclusion.}
 Thus,
 \[
-L_t \to L_{\sym} \quad \text{in } \TC(H_{\Psi_\alpha}) \quad \text{as } t \to 0^+,
+L_t \to \Lsym \quad \text{in } \TC(H_{\Psi_\alpha}) \quad \text{as } t \to 0^+,
 \]
 which implies convergence of all spectral invariants, including heat traces and Fredholm determinants, as developed in \secref{sec:determinant_identity}.
 \end{proof}

@@ -1,61 +1,62 @@
 \begin{proof}[Proof of \thmref{thm:trace_zero_Lsym}]
-Let \( L_{\sym} \in \TC(H_{\Psi_\alpha}) \) be the canonical convolution operator defined by
+Let \( \Lsym \in \TC(H_{\Psi_\alpha}) \) be the canonical convolution operator defined by
 \[
-(L_{\sym} f)(x) := \int_{\R} \widehat{\Xi}(x - y) f(y)\, dy,
+(\Lsym f)(x) := \int_{\R} \widehat{\Xi}(x - y)\, f(y)\, dy,
 \]
-where \( \widehat{\Xi} := \phi^\vee \) is the inverse Fourier transform of the centered spectral profile \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Since \( \phi \in PW_\pi(\R) \), the Paley–Wiener theorem ensures \( \widehat{\Xi} \in \Schwartz \), real-valued and even.
+where \( \widehat{\Xi} := \phi^\vee \) is the inverse Fourier transform of the centered spectral profile \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Since \( \phi \in \PW{\pi}(\R) \), the Paley--Wiener theorem ensures \( \widehat{\Xi} \in \Schwartz \), real-valued and even.
 
 \paragraph{Naive Trace Kernel Computation.}
 If \( K(x, y) := \widehat{\Xi}(x - y) \), then the diagonal kernel is
 \[
 K(x, x) = \widehat{\Xi}(0),
 \]
-which would naïvely suggest:
+which might naïvely suggest:
 \[
-\Tr(L_{\sym}) = \int_{\R} K(x, x) \Psi_\alpha(x)\, dx = \widehat{\Xi}(0) \cdot \|\Psi_\alpha\|_{L^1}.
+\Tr(\Lsym) = \int_{\R} K(x, x)\, \Psi_\alpha(x)\, dx = \widehat{\Xi}(0) \cdot \|\Psi_\alpha\|_{L^1}.
 \]
-But this computation does not account for spectral centering and determinant normalization.
+But this computation does not account for spectral centering or determinant normalization.
 
 \paragraph{Step 1: Spectral Trace via Determinant Expansion.}
-Since \( L_{\sym} \) is trace-class and self-adjoint, the Fredholm determinant
+Since \( \Lsym \) is trace class and self-adjoint, its Fredholm determinant
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \prod_{n}(1 - \lambda \lambda_n) e^{\lambda \lambda_n},
+\detz(I - \lambda \Lsym) = \prod_{n}(1 - \lambda \lambda_n)\, e^{\lambda \lambda_n}
 \]
 satisfies
 \[
-\log \det\nolimits_\zeta(I - \lambda L_{\sym}) = -\sum_{n=1}^\infty \frac{\lambda^k}{k} \Tr(L_{\sym}^k),
+\log \detz(I - \lambda \Lsym) = -\sum_{k=1}^\infty \frac{\lambda^k}{k} \Tr(\Lsym^k),
 \]
-so the coefficient of \( \lambda \) is \( -\Tr(L_{\sym}) \).
+so the coefficient of \( \lambda \) is \( -\Tr(\Lsym) \).
 
-However, from Chapter~\ref{sec:determinant_identity}, we know:
+From Chapter~\ref{sec:determinant_identity}, we have
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
+\detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
-and thus
+hence
 \[
-\log \det\nolimits_\zeta(I - \lambda L_{\sym}) = \log \Xi\left( \tfrac{1}{2} + i\lambda \right) - \log \Xi\left( \tfrac{1}{2} \right).
+\log \detz(I - \lambda \Lsym) = \log \Xi\left( \tfrac{1}{2} + i\lambda \right) - \log \Xi\left( \tfrac{1}{2} \right).
 \]
+
 Since \( \Xi(s) \) is even about \( s = \tfrac{1}{2} \), its Taylor expansion at \( \lambda = 0 \) contains no linear term:
 \[
 \Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} \right) + O(\lambda^2).
 \]
 Therefore,
 \[
-\frac{d}{d\lambda} \log \det\nolimits_\zeta(I - \lambda L_{\sym}) \bigg|_{\lambda = 0} = 0,
+\left.\frac{d}{d\lambda} \log \detz(I - \lambda \Lsym)\right|_{\lambda = 0} = 0,
 \]
 which implies
 \[
-\Tr(L_{\sym}) = 0.
+\Tr(\Lsym) = 0.
 \]
 
 \paragraph{Conclusion.}
 The trace vanishes:
 \[
-\Tr(L_{\sym}) = 0,
+\Tr(\Lsym) = 0,
 \]
 fixing the exponential ambiguity in the determinant
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-and enforcing canonical normalization \( \det\nolimits_\zeta(I) = 1 \), required for Hadamard uniqueness of the entire function on the right-hand side.
+and enforcing canonical normalization \( \detz(I) = 1 \), required for Hadamard uniqueness of the entire function on the right-hand side.
 \end{proof}

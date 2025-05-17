@@ -1,16 +1,17 @@
 \subsection*{Introduction}
+\label{sec:intro_tauberian_growth}
 
 This chapter establishes the spectral asymptotics of the canonical compact, self-adjoint, trace-class operator
 \[
-L_{\mathrm{sym}} \in \TC(\HPsi),
+\Lsym \in \TC(\HPsi),
 \]
 via Laplace–Tauberian inversion of its squared heat semigroup. Using refined short-time asymptotics of the spectral trace
 \[
-\Theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}),
+\Theta(t) := \Tr(e^{-t \Lsym^2}),
 \]
 we derive precise growth estimates for the eigenvalue counting function
 \[
-N(\Lambda) := \#\left\{ n \in \mathbb{N} : \mu_n^2 \le \Lambda \right\},
+N(\Lambda) := \#\left\{ n \in \N : \mu_n^2 \le \Lambda \right\},
 \]
 and confirm analytic compatibility with the Riemann–von Mangoldt zero-counting law.
 
@@ -39,7 +40,7 @@ and confirm analytic compatibility with the Riemann–von Mangoldt zero-counting
   This follows from classifying \( \Theta \in \mathcal{R}_{1/2}^{\log} \), i.e., regularly varying with index \( 1/2 \) and logarithmic modulation.
 
   \item \textit{Zeta-Theoretic Compatibility.}  
-  The derived asymptotic matches the classical Riemann–von Mangoldt formula for zeta zeros. This match, proven in \corref{cor:zeta_compatibility}, confirms that the spectrum of \( L_{\mathrm{sym}} \) encodes the zero distribution of \( \zeta(s) \).
+  The derived asymptotic matches the classical Riemann–von Mangoldt formula for zeta zeros. This match, proven in \corref{cor:zeta_compatibility}, confirms that the spectrum of \( \Lsym \) encodes the zero distribution of \( \zeta(s) \).
 \end{itemize}
 
 \paragraph{Analytic Inputs from Chapter~\ref{sec:heat_kernel_asymptotics}.}
@@ -51,11 +52,11 @@ and confirm analytic compatibility with the Riemann–von Mangoldt zero-counting
 \textbf{Source} & \textbf{Analytic Quantity} & \textbf{Role in This Chapter} \\
 \hline
 \propref{prop:two_sided_heat_trace_bounds} &
-\( \Tr(e^{-tL^2}) \asymp t^{-1/2} \) &
+\( \Tr(e^{-t \Lsym^2}) \asymp t^{-1/2} \) &
 Ensures admissibility for Tauberian envelope bounds \\
 
 \propref{prop:short_time_heat_expansion} &
-\( \Tr(e^{-tL^2}) = \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) &
+\( \Tr(e^{-t \Lsym^2}) = \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) &
 Triggers Korevaar inversion with logarithmic precision \\
 
 \lemref{lem:log_derivative_determinant} &

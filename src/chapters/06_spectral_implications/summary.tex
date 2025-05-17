@@ -3,24 +3,24 @@
 \begin{itemize}
   \item \corref{cor:spectrum_real_equiv_rh} — \textbf{Equivalence: RH \( \iff \) Spectral Reality}
   \[
-  \RH \quad \Longleftrightarrow \quad \Spec(L_{\sym}) \subset \R.
+  \RH \quad \Longleftrightarrow \quad \Spec(\Lsym) \subset \R.
   \]
   Proven via \lemref{lem:reality_of_spectrum_and_rh}, which analyzes the canonical spectral map
   \[
   \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}).
   \]
-  The eigenvalue \( \mu_\rho \in \R \) if and only if \( \Re(\rho) = \tfrac{1}{2} \), hence RH is equivalent to \( L_{\sym} \) having real spectrum.
+  The eigenvalue \( \mu_\rho \in \R \) if and only if \( \Re(\rho) = \tfrac{1}{2} \), hence RH is equivalent to \( \Lsym \) having real spectrum.
 
-  \item \thmref{thm:uniqueness_realization} — \textbf{Uniqueness of Spectral Realization}
+  \item \thmref{thm:uniqueness_realization} — \textbf{Uniqueness of Spectral Realization}  
   Any compact, self-adjoint operator \( L \in \TC(\HPsi) \) satisfying
   \[
-  \det\nolimits_\zeta(I - \lambda L) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
+  \detz(I - \lambda L) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
   \quad \text{for all } \lambda \in \C
   \]
-  is unitarily equivalent to \( L_{\sym} \). Thus, \( L_{\sym} \) is unique (up to unitary equivalence) among all trace-class, self-adjoint realizations of the determinant identity.
+  is unitarily equivalent to \( \Lsym \). Thus, \( \Lsym \) is unique (up to unitary equivalence) among all trace-class, self-adjoint realizations of the determinant identity.
 
-  \item \lemref{lem:canonical_closure} — \textbf{Canonical Closure of the Spectral Program}
-  The completed zeta function \( \XiR(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique operator \( L_{\sym} \in \TC(\HPsi) \). Any other realization matching the determinant identity is either unitarily equivalent (if self-adjoint), or algebraically similar (if not). No non-trace-class operator can satisfy the identity.
+  \item \lemref{lem:canonical_closure} — \textbf{Canonical Closure of the Spectral Program}  
+  The completed zeta function \( \XiR(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique operator \( \Lsym \in \TC(\HPsi) \). Any other realization matching the determinant identity is either unitarily equivalent (if self-adjoint), or algebraically similar (if not). No non-trace-class operator can satisfy the identity.
 \end{itemize}
 
 \medskip
@@ -28,7 +28,7 @@
 These results complete the analytic–spectral realization phase of the modular proof. The Riemann Hypothesis is reinterpreted as a real-spectrum criterion for a uniquely defined, trace-class, self-adjoint operator.
 
 \paragraph{Logical Closure.}
-All implications—spectral, determinant-theoretic, and bijective—are rigorously derived from trace-class spectral theory and analytically justified foundations. The full DAG of dependencies appears in Appendix~\ref{app:dependency_graph}.
+All implications are rigorously derived from trace-class spectral theory. The full logical dependency graph appears in \appref{app:dependency_graph}.
 
 \paragraph{Internal Consistency.}
 Every lemma, theorem, and corollary in this chapter is either explicitly proved or cited from earlier chapters. No auxiliary assumptions are made. All spectral identities are validated using estimates developed in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.

@@ -1,17 +1,17 @@
 \begin{proof}[Proof of \cref{thm:det_identity_revised}]
-Let \( f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) \).
+Let \( f(\lambda) := \detz(I - \lambda \Lsym) \).
 
 \paragraph{(1) Local power series definition.}
-For \( |\lambda| < \|L_{\sym}\|^{-1} \), the determinant admits the absolutely convergent trace expansion:
+For \( |\lambda| < \|\Lsym\|^{-1} \), the determinant admits the absolutely convergent trace expansion:
 \[
-\log f(\lambda) = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(L_{\sym}^n),
+\log f(\lambda) = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(\Lsym^n),
 \]
 which defines a holomorphic function in a neighborhood of \( \lambda = 0 \).
 
 \paragraph{(2) Entire extension via heat trace.}
 By \cref{lem:det_via_heat_trace} and \cref{lem:laplace_heat_trace_convergence}, \( f(\lambda) \) admits the Laplace representation
 \[
-\log f(\lambda) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t L_{\sym}}) \, dt,
+\log f(\lambda) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t \Lsym}) \, dt,
 \]
 which converges for all \( \lambda \in \C \), showing that \( f \) extends to an entire function.
 
@@ -26,13 +26,13 @@ Define
 \[
 g(\lambda) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
 \]
-By \cref{lem:hadamard_linear_form,lem:exact_type_pi}, the function \( g \) is entire of order one and exact exponential type \( \pi \), with \( g(0) = 1 \). Similarly, by \cref{lem:trace_zero}, we have \( \Tr(L_{\sym}) = 0 \), so \( f(0) = \det\nolimits_\zeta(I) = 1 \).
+By \cref{lem:hadamard_linear_form,lem:exact_type_pi}, the function \( g \) is entire of order one and exact exponential type \( \pi \), with \( g(0) = 1 \). Similarly, by \cref{lem:trace_zero}, we have \( \Tr(\Lsym) = 0 \), so \( f(0) = \detz(I) = 1 \).
 
 \paragraph{(5) Logarithmic derivative equality.}
 By \cref{lem:A_log_derivative}, the logarithmic derivative satisfies
 \[
 \frac{d}{d\lambda} \log f(\lambda)
-= \Tr\left( (I - \lambda L_{\sym})^{-1} L_{\sym} \right)
+= \Tr\left( (I - \lambda \Lsym)^{-1} \Lsym \right)
 = \frac{d}{d\lambda} \log g(\lambda),
 \]
 since both sides match the sum over spectral poles arising from the Hadamard factorization. Thus, \( \log f(\lambda) - \log g(\lambda) \) is constant. Because \( f(0) = g(0) = 1 \), this constant is zero.
@@ -40,9 +40,8 @@ since both sides match the sum over spectral poles arising from the Hadamard fac
 \paragraph{Conclusion.}
 The functions \( f \) and \( g \) are entire of order one, have matching zeros and logarithmic derivatives, and agree at the origin. By Hadamard’s uniqueness theorem~\cite[Ch.~3]{Levin1996EntireLectures}, we conclude:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
+\detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
 \quad \text{for all } \lambda \in \C,
 \]
 as claimed.
 \end{proof}
-s

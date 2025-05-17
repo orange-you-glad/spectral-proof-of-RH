@@ -1,4 +1,4 @@
-\section{Zeta Functions and Trace-Class Operators: Analytic Background}
+\section{Zeta Functions and Trace-Class Operators}
 \label{app:zeta_trace_background}
 
 This appendix summarizes the core analytic properties of the completed Riemann zeta function and trace-class operator theory that are used throughout the spectral determinant construction. For comprehensive background, see~\cite{Titchmarsh1986Zeta, Simon2005TraceIdeals, Bornemann2010FredholmDeterminants}.
@@ -13,7 +13,7 @@ and satisfies the functional equation
 \[
 \Xi(s) = \Xi(1 - s).
 \]
-It is entire of order one and type \( \pi \), real on the real axis, and admits a Hadamard factorization
+It is entire of order one and exponential type \( \pi \), real on the real axis, and admits a Hadamard factorization
 \[
 \Xi(s) = \Xi(\tfrac{1}{2}) \prod_{\rho} \left(1 - \frac{s - \tfrac{1}{2}}{\rho - \tfrac{1}{2}}\right) e^{(s - \tfrac{1}{2})/(\rho - \tfrac{1}{2})},
 \]
@@ -45,6 +45,17 @@ For unbounded operators \( L \) with compact resolvent and nonnegative spectrum 
 \log \det\nolimits_\zeta(L) := - \left. \frac{d}{ds} \zeta_L(s) \right|_{s=0}, \quad \text{where } \zeta_L(s) := \sum_{\lambda > 0} \lambda^{-s}.
 \]
 If \( L = T^2 \) with \( T \in \TC(H) \), and \( \Tr(e^{-tL}) \sim \frac{\log(1/t)}{\sqrt{4\pi t}} + \cdots \), then the determinant growth is controlled by the log-singularity, and matches the Hadamard structure of \( \Xi \).
+
+\paragraph{Comparison with Elliptic Zeta-Regularization.}
+In classical spectral geometry, \( \zeta(s) \)-regularization is defined for positive-definite elliptic operators (e.g., Laplacians on compact manifolds), whose heat traces admit small-time expansions of the form
+\[
+\Tr(e^{-t\Delta}) \sim \sum_{n=0}^\infty a_n t^{(n-d)/2}.
+\]
+In contrast, the operator \( \Lsym^2 \) is not local and admits a leading singularity
+\[
+\Tr(e^{-t \Lsym^2}) \sim \frac{\log(1/t)}{\sqrt{4\pi t}} + \cdots.
+\]
+This logarithmic divergence prevents direct application of the classical Mellin framework. The determinant here is defined via Laplace-Carleman regularization, which accommodates the singular trace by subtracting a parametrix (see \remref{rem:spectral_dimension}). This regularization matches the Hadamard structure of \( \Xi(s) \) and is tailored to trace-class convolution operators.
 
 \subsection*{Schatten Classes and Trace Ideals}
 

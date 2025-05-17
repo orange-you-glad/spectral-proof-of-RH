@@ -32,6 +32,7 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \hline
 \textbf{Property} & \textbf{Summary and Source} \\
 \hline
+\textbf{Exponential Weight Threshold} & \( \alpha > \pi \) is necessary and sufficient for kernel inclusion in \( \TC(\HPsi) \); sharp trace-class cutoff established in \cref{lem:trace_class_failure_alpha_leq_pi}. \\
 \textbf{Spectral Profile Class} & \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) ensures exponential control (\cref{lem:xi_growth_bound}). \\
 \textbf{Kernel Localization} & \( \widehat{\Xi}(x) \in L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \) (\cref{lem:weighted_L1_inverse_FT_xi}). \\
 \textbf{Operator Regularity} & \( \Lsym \in \TC(\HPsi) \) is compact, self-adjoint, and uniquely defined (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}). \\
@@ -44,6 +45,7 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \subsection*{Directed Acyclic Graph (Visual Overview)}
 \begin{figure}[ht]
 \centering
+\scalebox{0.87}{
 \begin{tikzpicture}[
   node distance=1.4cm and 2.6cm,
   every node/.style={draw, align=center, rounded corners=3pt, font=\small, fill=gray!5, text width=4.8cm},
@@ -73,11 +75,11 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \draw[arrow] (ch8) -- (ch9);
 
 \end{tikzpicture}
+}
 \caption{Directed acyclic graph of analytic dependencies. Arrows represent logical flow between chapters.}
 \label{fig:dag_visual}
 \end{figure}
 
-\subsection*{Conclusion}
 
 Each lemma, proposition, and theorem in this manuscript depends only on prior analytic infrastructure or trace-class spectral calculus. No assumption of the Riemann Hypothesis, spectral bijection, or spectral reality is made until explicitly proven.
 
@@ -86,6 +88,8 @@ The analytic–spectral chain from the determinant identity to the RH equivalenc
 \RH \iff \Spec(\Lsym) \subset \R
 \]
 is modular, acyclic, and fully closed in \cref{sec:logical_closure}, relying only on results from Chapters~1–8 and the analytic infrastructure in Appendix~\ref{app:zeta_trace_background}.
+
+A structurally critical constraint in this chain is the exponential weight threshold \( \alpha > \pi \), which governs the trace-class viability of all kernel realizations and appears as the base node of this DAG (\cref{lem:trace_class_failure_alpha_leq_pi}).
 
 Forward dependency disclosure is given in \remref{rmk:forward_spectral_closure}, and the full analytic equivalence is formally stated in \thmref{thm:rh_spectrum_equiv} and concluded in \thmref{thm:truth_of_rh}.
 

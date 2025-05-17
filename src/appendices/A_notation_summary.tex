@@ -5,11 +5,11 @@
 This appendix collects global analytic symbols and conventions. All other notation is introduced locally at first use. For semantic dependencies and usage by chapter, see the DAG in \appref{app:dependency_graph}.
 
 \begin{itemize}
-  \item \textbf{Weighted Hilbert Space:}
+    \item \textbf{Weighted Hilbert Space:}
   \[
   \HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
   \]
-  The exponential weight ensures trace-class inclusion of kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). All spectral operators \( L_t \), \( \Lsym \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
+  The exponential weight ensures trace-class inclusion of kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). The threshold \( \alpha > \pi \) is sharp: for \( \alpha \le \pi \), the canonical kernel fails to lie in \( L^1(\R^2, \Psi_\alpha \otimes \Psi_\alpha) \) and no trace-class realization exists. All spectral operators \( L_t \), \( \Lsym \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
 
   \item \textbf{Paley–Wiener Class:}
   \[

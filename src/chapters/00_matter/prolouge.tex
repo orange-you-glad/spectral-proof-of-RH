@@ -15,7 +15,9 @@ acting on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} = \PsiAlph
 \[
 \detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-where \( \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2} \Gamma(s/2) \zeta(s) \) denotes the completed Riemann zeta function. The proof infrastructure rests on trace-class convergence, Paley--Wiener decay, spectral zeta function regularity, and Tauberian inversion. The critical decay threshold \( \alpha > \pi \) is sharp, as established in \lemref{lem:trace_class_failure_alpha_leq_pi}.
+where \( \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2} \Gamma(s/2) \zeta(s) \) denotes the completed Riemann zeta function. The analytic infrastructure rests on trace-class convergence, Paley--Wiener decay, spectral zeta function regularity, and Tauberian inversion.
+
+The exponential decay threshold \( \alpha > \pi \) is structurally critical: it is both necessary and sufficient for the convolution kernel derived from \( \Xi \) to yield a trace-class operator. This sharp boundary governs all subsequent spectral constructions and is formally established in \lemref{lem:trace_class_failure_alpha_leq_pi}.
 
 \paragraph*{Arithmetic Context.}
 The canonical operator \( \Lsym \) fulfills the Hilbert--Pólya conjecture: it is a self-adjoint compact operator whose spectrum corresponds bijectively to the imaginary parts of the nontrivial zeros of \( \zeta(s) \). Its construction draws from arithmetic analogies. Recall that \( \zeta(s) \) admits both an Euler product and a functional equation, and that the explicit formula of Riemann--Weil relates primes to zeta zeros through a spectral duality akin to the Lefschetz trace formula.

@@ -2,7 +2,9 @@
 import os
 import sys
 
-ROOT_DIR = "src/chapters"
+from scripts import common
+
+ROOT_DIR = common.ROOT_DIR
 TARGET_DIRS = ["thms", "lems", "props", "cors"]
 PROOF_DIR = "proofs"
 

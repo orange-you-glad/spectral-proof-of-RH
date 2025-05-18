@@ -1,43 +1,21 @@
 #!/usr/bin/env python3
-import os
-import re
 import sys
 
-ROOT_DIR = "src/chapters"
-VALID_PREFIXES = ["thm", "lem", "def", "prop", "cor", "rmk"]
+from scripts import common
 
-
-def find_tex_files(root):
-    for dirpath, _, filenames in os.walk(root):
-        for filename in filenames:
-            if filename.endswith(".tex"):
-                yield os.path.join(dirpath, filename)
-
-
-def expected_label_from_filename(filename):
-    name = os.path.splitext(os.path.basename(filename))[0]
-    for prefix in VALID_PREFIXES:
-        if name.startswith(f"{prefix}_"):
-            suffix = name[len(prefix) + 1:]
-            return f"{prefix}:{suffix}"
-    return None
+ROOT_DIR = common.ROOT_DIR
 
 
 def validate_labels():
     errors = []
 
-    for path in find_tex_files(ROOT_DIR):
-        with open(path, "r", encoding="utf-8") as file:
-            content = file.read()
-
-        expected = expected_label_from_filename(path)
+    for path in common.find_tex_files(ROOT_DIR):
+        expected = common.expected_label_from_filename(path)
         if expected:
-            match = re.search(r"\\label\{([^}]+)\}", content)
-            if not match:
+            actual = common.find_label_in_tex(path)
+            if actual is None:
                 errors.append(f"❌ Missing \\label{{...}} in {path}")
                 continue
-
-            actual = match.group(1).strip()
             if actual != expected:
                 errors.append(
                     f"❌ Mismatched label in {path}\n"

@@ -27,7 +27,7 @@ This repository enforces a strict and deterministic layout for maximal reproduci
 * 📂 `src/`: All LaTeX source files
 * 📂 `chapters/`: Modular chapter-based layout
 * 📂 `scripts/`: CI tools and validation scripts
-* 📂 `metadata/`: Dependency maps and label files
+* 📂 `metadata/`: Legacy dependency maps and label files (generated via `make metadata`; deprecated and may be absent)
 * 📄 `preamble.tex`: Global macros and notations
 * 📄 `main.tex`: Manuscript compilation driver
 

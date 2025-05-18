@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
+import os
 import sys
 
 VERSION_FILE = "VERSION"
 
 
 def read_version():
+    if not os.path.isfile(VERSION_FILE):
+        print(f"❌ VERSION file not found at {VERSION_FILE}")
+        sys.exit(1)
     with open(VERSION_FILE, "r") as f:
-        return f.read().strip()
+        content = f.read().strip()
+    if not content:
+        print("❌ VERSION file is empty.")
+        sys.exit(1)
+    return content
 
 
 def write_version(v):

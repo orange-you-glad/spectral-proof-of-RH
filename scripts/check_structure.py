@@ -60,7 +60,7 @@ def check_all_sections():
     all_errors = []
     for section in os.listdir(ROOT_DIR):
         if section in IGNORE_SECTIONS:
-            print(f"⏭️ Skipping ignored section: {section}")
+            print(f"⏭  Skipping {section}")
             continue
 
         section_path = os.path.join(ROOT_DIR, section)

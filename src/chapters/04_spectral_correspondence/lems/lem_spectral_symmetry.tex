@@ -1,42 +1,8 @@
-\begin{proof}[Proof of \lemref{lem:spectral_symmetry}]
-Let \( \phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right) \). Since \( \Xi(s) \) is entire and satisfies the functional equation \( \Xi(s) = \Xi(1 - s) \), it follows that \( \phi(\lambda) \) is real-valued and even on \( \mathbb{R} \); that is,
+\begin{lemma}[Spectral Symmetry]
+\label{lem:spectral_symmetry}
+Let $L_{\sym}$ be the canonical self-adjoint operator on $\HPsi$. Then
 \[
-\phi(-\lambda) = \phi(\lambda), \qquad \overline{\phi(\lambda)} = \phi(\lambda).
+\mu \in \Spec(L_{\sym}) \quad \Longrightarrow \quad -\mu \in \Spec(L_{\sym}),
 \]
-
-Define the convolution kernel
-\[
-k(x - y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi(\lambda)\, d\lambda,
-\]
-and set \( K(x, y) := k(x - y) \). Then \( K(x, y) = K(y, x) \in \mathbb{R} \), since
-\[
-k(x - y) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{i\lambda(x - y)} \phi(\lambda)\, d\lambda = \frac{1}{2\pi} \int_{\mathbb{R}} e^{-i\lambda(x - y)} \phi(-\lambda)\, d\lambda = k(y - x).
-\]
-
-Let \( \widetilde{L}_{\mathrm{sym}} \colon L^2(\mathbb{R}) \to L^2(\mathbb{R}) \) be the convolution operator defined by
-\[
-(\widetilde{L}_{\mathrm{sym}} f)(x) := \int_{\mathbb{R}} K(x, y) f(y)\, dy.
-\]
-Then \( \widetilde{L}_{\mathrm{sym}} \) is a compact, real, symmetric, and self-adjoint operator on \( L^2(\mathbb{R}) \).
-
-\paragraph{Step 1: Spectral Symmetry in \( L^2(\mathbb{R}) \).}
-By the spectral theorem for compact self-adjoint operators on real Hilbert spaces, the spectrum of \( \widetilde{L}_{\mathrm{sym}} \) is symmetric about the origin:
-\[
-\mu \in \operatorname{Spec}(\widetilde{L}_{\mathrm{sym}}) \quad \Longrightarrow \quad -\mu \in \operatorname{Spec}(\widetilde{L}_{\mathrm{sym}}),
-\]
-with equality of algebraic multiplicities.
-
-\paragraph{Step 2: Transfer via Unitary Equivalence.}
-Let \( U \colon H_{\Psi_\alpha} \to L^2(\mathbb{R}) \) be the unitary operator defined by \( (Uf)(x) := \sqrt{\Psi_\alpha(x)} f(x) \), where \( \Psi_\alpha(x) := e^{\alpha |x|} \). Then the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) satisfies
-\[
-L_{\mathrm{sym}} = U^{-1} \widetilde{L}_{\mathrm{sym}} U.
-\]
-Since unitary equivalence preserves spectrum and multiplicities, we conclude:
-\[
-\mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \quad \Longrightarrow \quad -\mu \in \operatorname{Spec}(L_{\mathrm{sym}}),
-\]
-and
-\[
-\operatorname{mult}_{\mathrm{spec}}(\mu) = \operatorname{mult}_{\mathrm{spec}}(-\mu).
-\]
-\end{proof}
+with identical spectral multiplicities.
+\end{lemma}

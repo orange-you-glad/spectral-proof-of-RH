@@ -67,8 +67,10 @@ Since `L_sym` is self-adjoint by construction, its spectrum is real — thereby 
 
 The analytic argument is complete. Classical results (e.g., Korevaar’s Tauberian theorem, trace expansions) are cited but not fully rederived. A formalization pipeline (e.g., Lean) is anticipated and modularized for future development.
 
----
+### Updates May 17th 2025
+The Manuscript has been submitted to the Annals of Mathemetics.
 
+---
 
 ## 📍 Author
 

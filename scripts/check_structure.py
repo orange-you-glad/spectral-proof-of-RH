@@ -2,10 +2,12 @@
 import os
 import sys
 
-ROOT_DIR = "src/chapters"
+from scripts import common
+
+ROOT_DIR = common.ROOT_DIR
 REQUIRED_FILES = ["intro.tex", "summary.tex"]
 REQUIRED_SUBDIRS = ["defs", "lems", "thms", "props", "cors", "rems", "proofs"]
-VALID_PREFIXES = ["thm", "lem", "def", "prop", "cor", "rmk"]
+VALID_PREFIXES = common.VALID_PREFIXES
 
 # Ignore these directories (e.g., frontmatter or non-modular sections)
 IGNORE_SECTIONS = {"00_matter", "metadata", ".DS_Store"}

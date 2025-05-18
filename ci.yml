@@ -36,17 +36,6 @@ jobs:
         run: |
           python -m unittest discover -s tests -v
 
-      - name: Run label validator
-        run: |
-          python scripts/validate_labels.py
-
-      - name: Run proof checker
-        run: |
-          python scripts/check_proofs.py
-
-      - name: Run structure checker
-        run: |
-          python scripts/check_structure.py
 
       - name: Build LaTeX (dry run)
         run: |

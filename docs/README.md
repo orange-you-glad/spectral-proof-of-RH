@@ -1,4 +1,4 @@
-# A CANONICAL SPECTRAL DETERMINANT AND SPECTRAL EQUIVALENCE FORMULATION OF THE RIEMANN HYPOTHESIS
+# A Canonical Spectral Determinant and Spectral Equivalence Formulation of the Riemann Hypothesis
 
 ## **1. Orientation: What is this Proof?**
 

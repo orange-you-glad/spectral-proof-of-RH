@@ -16,7 +16,6 @@ build:
 
 clean:
 	latexmk -C -cd src/
-	rm -rf src/metadata/
 
 lint:
 	chktex -q -n1 -n2 -n18 $(MAIN_TEX)

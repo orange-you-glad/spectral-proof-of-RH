@@ -1,0 +1,40 @@
+[project]
+name = "spectral-proof-of-RH"
+version = "0.99.0"
+description = "Formal spectral determinant realization of the Riemann Hypothesis"
+authors = [
+  { name = "Robert Martone", email = "iheartweb@gmail.com" }
+]
+requires-python = ">=3.11"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+include = '\.py$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.mypy_cache
+  | \.venv
+  | _build
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I"]
+exclude = ["docs", "build", ".venv", "__pypackages__"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+exclude = 'build|docs|\.venv'
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

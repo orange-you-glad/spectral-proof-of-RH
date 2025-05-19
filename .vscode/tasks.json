@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Check LaTeX + DAG + Code Hygiene",
+            "type": "shell",
+            "command": "make check",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Format Python (Black)",
+            "type": "shell",
+            "command": "make format",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "Lint Python (Ruff)",
+            "type": "shell",
+            "command": "make lint",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "Type Check (Mypy)",
+            "type": "shell",
+            "command": "make typecheck",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "Deploy Versioned PDF",
+            "type": "shell",
+            "command": "make deploy",
+            "group": "none",
+            "problemMatcher": []
+        },
+        {
+            "label": "Bump Patch Version",
+            "type": "shell",
+            "command": "make bump",
+            "group": "none",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -7,12 +7,14 @@ on:
       - '**.py'
       - '.github/workflows/ci.yml'
       - 'Makefile'
+      - 'VERSION'
   pull_request:
     paths:
       - '**.tex'
       - '**.py'
       - '.github/workflows/ci.yml'
       - 'Makefile'
+      - 'VERSION'
 
 jobs:
   validate:
@@ -20,28 +22,26 @@ jobs:
     name: Structural + Hygiene Checks
 
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: 📦 Install Python dependencies
         run: |
           pip install -r scripts/requirements.txt || true
 
-      - name: Run tests
+      - name: 📦 Install LaTeX + checkcites
         run: |
-          python -m unittest discover -s tests -v
+          sudo apt-get update
+          sudo apt-get install -y latexmk texlive-full
+          pip install checkcites
 
+      - name: 🧪 Run full integrity suite (Makefile-driven)
+        run: make check
 
-      - name: Build LaTeX (dry run)
-        run: |
-          sudo apt-get update && sudo apt-get install -y latexmk texlive-full
-          latexmk -pdf -cd -interaction=nonstopmode -halt-on-error src/main.tex
-
-      - name: Check LaTeX log
-        run: |
-          python tests/check_latex_log.py
+      - name: 📄 Check LaTeX log for warnings/errors
+        run: python tests/check_latex_log.py

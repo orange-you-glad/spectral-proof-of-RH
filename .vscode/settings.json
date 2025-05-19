@@ -1,0 +1,21 @@
+{
+    // Auto-format Python on save using Black
+    "editor.formatOnSave": true,
+    // Explicitly set Black as the Python formatter
+    "python.formatting.provider": "black",
+    // Run Ruff fixes on save (requires Ruff VS Code extension)
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    // Enable Python linters
+    "python.linting.enabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.linting.ruffArgs": [
+        "--config=pyproject.toml"
+    ],
+    // Enable Mypy type checking
+    "python.linting.mypyEnabled": true,
+    // Respect workspace-local virtual environments
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.venvPath": "${workspaceFolder}"
+}

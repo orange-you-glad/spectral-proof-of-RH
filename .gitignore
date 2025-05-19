@@ -28,7 +28,7 @@ src/**/all_*.tex
 *.swp
 *.swo
 .DS_Store
-.vscode/
+# .vscode/
 .idea/
 
 # Python cache

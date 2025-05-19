@@ -1,4 +1,314 @@
 {
-  "n1": ["n2"],
-  "n2": []
+  "cor:functorial_lifting_spec_encoding": [],
+  "cor:spectral_determines_zeta": [],
+  "cor:spectrum_determines_zeta": [],
+  "cor:spectrum_real_equiv_rh": [],
+  "cor:zeta_compatibility": [],
+  "def:Hilbert_space_Lpi": [],
+  "def:analytic_properties_XiPi": [],
+  "def:canonical_fourier_profile": [],
+  "def:carleman_zeta_determinant": [],
+  "def:compact_operator": [],
+  "def:convolution_operator_Ltpi": [],
+  "def:convolution_operators_Lt_Lsym": [],
+  "def:exponential_weight": [],
+  "def:fredholm_determinant": [],
+  "def:heat_operator": [],
+  "def:kernel_decay_condition": [
+    "lem:trace_class_convergence_general",
+    "thm:spectral_determinant_identity_Lpi"
+  ],
+  "def:mollified_fourier_profile": [],
+  "def:paley_wiener_class": [],
+  "def:selfadjoint_operator": [],
+  "def:spectral_decomposition_compact": [],
+  "def:spectral_zero_map": [],
+  "def:spectral_zeta_function": [],
+  "def:tauberian_theorem": [
+    "lem:spectral_convexity_estimate"
+  ],
+  "def:trace_class_operator": [],
+  "def:trace_norm": [],
+  "def:unitary_conjugation_operator": [],
+  "def:weighted_fourier_space": [],
+  "def:weighted_schwartz_space": [],
+  "def:weighted_trace_norm_space": [],
+  "lem:A_log_derivative": [
+    "thm:det_identity_revised"
+  ],
+  "lem:L1_integrability_conjugated_kernel": [],
+  "lem:Lsym_square_selfadjoint": [],
+  "lem:boundedness_Lsym": [],
+  "lem:canonical_closure": [],
+  "lem:construction_canonical_data": [],
+  "lem:core_essential_sa": [
+    "thm:existence_Lsym",
+    "thm:sa_trace_class_Lsym"
+  ],
+  "lem:decay_inverse_fourier_xi": [
+    "thm:canonical_operator_realization"
+  ],
+  "lem:decay_mollified_kernel": [
+    "lem:uniform_L1_conjugated_kernel",
+    "lem:xi_growth_bound"
+  ],
+  "lem:density_schwartz_weighted_L2": [
+    "prop:boundedness_Lt_weighted",
+    "prop:core_schwartz_density",
+    "thm:canonical_operator_realization"
+  ],
+  "lem:det_continuity_trace_norm": [],
+  "lem:det_growth_bound": [
+    "lem:det_identity_entire_order_one",
+    "thm:det_identity_revised"
+  ],
+  "lem:det_identity_entire_order_one": [
+    "lem:laplace_heat_trace_convergence",
+    "thm:det_identity_revised"
+  ],
+  "lem:det_via_heat_trace": [
+    "lem:det_growth_bound",
+    "lem:heat_semigroup_wellposed",
+    "thm:det_identity_revised"
+  ],
+  "lem:det_zero_implies_spectrum": [
+    "thm:rh_from_real_simple_spectrum"
+  ],
+  "lem:determinant_fixes_spectrum": [],
+  "lem:distributional_trace_asymptotics": [],
+  "lem:exact_type_pi": [],
+  "lem:fourier_symmetry_reflection": [],
+  "lem:fredholm_zero_spectral_map": [],
+  "lem:hadamard_fredholm_multiplicity": [],
+  "lem:hadamard_linear_form": [],
+  "lem:hadamard_linear_form,lem:exact_type_pi": [
+    "thm:det_identity_revised"
+  ],
+  "lem:hadamard_uniqueness_E1pi": [],
+  "lem:heat_kernel_diagonal_positivity": [
+    "lem:heat_trace_expansion"
+  ],
+  "lem:heat_semigroup_existence": [],
+  "lem:heat_semigroup_wellposed": [],
+  "lem:heat_trace_expansion": [
+    "lem:distributional_trace_asymptotics",
+    "lem:laplace_integrability_heat_trace"
+  ],
+  "lem:hk_expansion_uniform": [
+    "lem:heat_trace_expansion",
+    "prop:heat_trace_uniform_conv"
+  ],
+  "lem:hk_lower_bound": [
+    "prop:two_sided_heat_trace_bounds"
+  ],
+  "lem:hk_upper_bound": [
+    "lem:laplace_integrability_heat_trace",
+    "prop:two_sided_heat_trace_bounds"
+  ],
+  "lem:inject_zero_real_spectrum": [],
+  "lem:inverse_spectral_uniqueness": [],
+  "lem:kernel_L2_weighted_bound": [
+    "lem:trace_class_Lt"
+  ],
+  "lem:kernel_symmetry": [
+    "lem:core_essential_sa",
+    "thm:canonical_operator_realization"
+  ],
+  "lem:kernel_trace_norm_convergence": [],
+  "lem:korevaar_tauberian_constants_verified": [
+    "lem:log_corrected_tauberian_estimate"
+  ],
+  "lem:laplace_heat_trace_convergence": [
+    "lem:heat_semigroup_wellposed",
+    "thm:det_identity_revised"
+  ],
+  "lem:laplace_integrability_heat_trace": [],
+  "lem:laplace_kernel_growth_class": [
+    "lem:korevaar_tauberian_constants_verified"
+  ],
+  "lem:laplace_preserves_entire_type": [],
+  "lem:log_corrected_tauberian_estimate": [
+    "cor:zeta_compatibility",
+    "lem:korevaar_tauberian_constants_verified",
+    "prop:spectral_counting_weyl"
+  ],
+  "lem:log_derivative_determinant": [
+    "lem:multiplicity_preservation"
+  ],
+  "lem:mollified_profile_decay": [
+    "lem:kernel_trace_norm_convergence",
+    "lem:trace_class_Lt",
+    "lem:trace_norm_convergence_Lt_to_Lsym"
+  ],
+  "lem:mollifier_independence_kernel_limit": [],
+  "lem:multiplicity_preservation": [
+    "thm:eq_of_rh"
+  ],
+  "lem:no_extraneous_zeros": [],
+  "lem:real_spectrum_implies_rh_rigidity": [],
+  "lem:reality_of_spectrum_and_rh": [
+    "cor:spectrum_real_equiv_rh"
+  ],
+  "lem:spectral_bijection_consistency": [],
+  "lem:spectral_convexity_estimate": [],
+  "lem:spectral_decay_bounds": [],
+  "lem:spectral_encoding_injection": [
+    "thm:rh_from_real_simple_spectrum"
+  ],
+  "lem:spectral_exhaustivity": [
+    "lem:spectral_bijection_consistency",
+    "thm:spectral_zero_bijection_revised"
+  ],
+  "lem:spectral_measure_heat_semigroup": [],
+  "lem:spectral_multiplicity_matching": [
+    "lem:spectral_bijection_consistency",
+    "thm:spectral_zero_bijection_revised"
+  ],
+  "lem:spectral_rigidity_determinant": [],
+  "lem:spectral_symmetry": [
+    "lem:spectral_symmetry_lsym"
+  ],
+  "lem:spectral_zero_encoding": [
+    "cor:spectral_determines_zeta"
+  ],
+  "lem:spectral_zeta_from_heat": [],
+  "lem:spectrum_zero_bijection": [],
+  "lem:tauberian_heat_trace_application": [],
+  "lem:trace_class_Lt": [
+    "thm:existence_Lsym",
+    "thm:sa_trace_class_Lsym"
+  ],
+  "lem:trace_class_conjugated_kernel": [],
+  "lem:trace_class_convergence_general": [
+    "thm:spectral_determinant_identity_Lpi"
+  ],
+  "lem:trace_class_failure_alpha_leq_pi": [],
+  "lem:trace_class_via_weighted_L1": [],
+  "lem:trace_distribution_positive": [],
+  "lem:trace_distribution_positivity": [],
+  "lem:trace_norm_convergence_Lt_to_Lsym": [
+    "prop:core_schwartz_density",
+    "thm:existence_Lsym",
+    "thm:sa_trace_class_Lsym"
+  ],
+  "lem:trace_norm_limit_unique": [],
+  "lem:trace_norm_rate_convergence": [],
+  "lem:trace_zero": [
+    "thm:det_identity_revised"
+  ],
+  "lem:uniform_L1_conjugated_kernel": [
+    "lem:kernel_L2_weighted_bound",
+    "lem:kernel_trace_norm_convergence",
+    "thm:canonical_operator_realization"
+  ],
+  "lem:unitary_conjugation_trace_class": [
+    "lem:trace_class_Lt"
+  ],
+  "lem:weighted_L1_inverse_FT_xi": [],
+  "lem:weighted_trace_norm_duality": [],
+  "lem:xi_growth_bound": [
+    "lem:decay_inverse_fourier_xi",
+    "lem:mollified_profile_decay",
+    "lem:weighted_L1_inverse_FT_xi",
+    "thm:canonical_operator_realization"
+  ],
+  "lem:zero_to_eigenvalue_injection": [
+    "lem:spectral_bijection_consistency",
+    "thm:spectral_zero_bijection_revised"
+  ],
+  "prop:boundedness_Lt_weighted": [
+    "lem:boundedness_Lsym",
+    "prop:selfadjointness_Lt"
+  ],
+  "prop:compactness_Lt": [],
+  "prop:core_schwartz_density": [
+    "thm:canonical_operator_realization"
+  ],
+  "prop:heat_trace_uniform_conv": [
+    "lem:trace_distribution_positivity"
+  ],
+  "prop:inverse_spectral_rigidity": [],
+  "prop:selfadjointness_Lt": [
+    "thm:canonical_operator_realization"
+  ],
+  "prop:short_time_heat_expansion": [
+    "lem:korevaar_tauberian_constants_verified",
+    "lem:log_corrected_tauberian_estimate",
+    "lem:log_derivative_determinant",
+    "prop:spectral_counting_weyl"
+  ],
+  "prop:spectral_counting_weyl": [],
+  "prop:spectrum_reality_implies_rh_multiplicity": [],
+  "prop:strong_op_closure_heat": [],
+  "prop:symmetry_Lt_Schwartz": [
+    "prop:selfadjointness_Lt"
+  ],
+  "prop:trace_class_sharpness": [],
+  "prop:two_sided_heat_trace_bounds": [
+    "lem:spectral_convexity_estimate"
+  ],
+  "rem:aut_representation_context": [],
+  "rem:dag_acyclic_proof_flow": [],
+  "rem:functional_calculus_trace": [],
+  "rem:generalized_trace_decay": [],
+  "rem:hadamard_multiplicity_preservation": [],
+  "rem:log_singularity_necessary": [],
+  "rem:no_rh_assumption": [],
+  "rem:selfadjoint_analytic_vectors": [
+    "lem:density_schwartz_weighted_L2"
+  ],
+  "rem:setup_operator_framework": [],
+  "rem:sobolev_core_reference": [],
+  "rem:spectral_dimension": [],
+  "rem:spectral_generalization_scope": [],
+  "rem:spectral_zero_bijection_from_determinant": [],
+  "rem:structural_role_of_ch8": [],
+  "rem:trace_positivity_closure": [],
+  "rmk:contextual_link_prologue": [],
+  "rmk:forward_spectral_closure": [],
+  "rmk:karamata_vs_korevaar": [],
+  "rmk:rh_equivalence_forward_ref": [],
+  "rmk:spectral_physics_analogy": [],
+  "rmk:spectral_symmetry_forward_ref": [],
+  "rmk:spectrum_Lt_real_discrete": [],
+  "thm:canonical_operator_realization": [],
+  "thm:det_identity_revised": [
+    "cor:spectrum_determines_zeta",
+    "lem:exact_type_pi",
+    "lem:fredholm_zero_spectral_map",
+    "lem:hadamard_fredholm_multiplicity",
+    "lem:multiplicity_preservation",
+    "lem:spectral_exhaustivity",
+    "lem:spectral_multiplicity_matching",
+    "lem:spectrum_zero_bijection",
+    "lem:zero_to_eigenvalue_injection",
+    "thm:eq_of_rh",
+    "thm:rh_spectrum_equiv",
+    "thm:truth_of_rh"
+  ],
+  "thm:eq_of_rh": [],
+  "thm:existence_Lsym": [],
+  "thm:rh_from_real_simple_spectrum": [],
+  "thm:rh_spectral_closure": [],
+  "thm:rh_spectrum_equiv": [],
+  "thm:sa_trace_class_Lsym": [],
+  "thm:spec_real_equiv_grh": [],
+  "thm:spectral_determinant_identity_Lpi": [
+    "cor:functorial_lifting_spec_encoding",
+    "thm:zero_encoding_general"
+  ],
+  "thm:spectral_zero_bijection_revised": [
+    "cor:spectrum_determines_zeta",
+    "thm:eq_of_rh",
+    "thm:rh_spectrum_equiv",
+    "thm:truth_of_rh"
+  ],
+  "thm:trace_zero_Lsym": [
+    "thm:existence_Lsym"
+  ],
+  "thm:truth_of_rh": [],
+  "thm:uniqueness_realization": [],
+  "thm:zero_encoding_general": [
+    "thm:spec_real_equiv_grh"
+  ]
 }

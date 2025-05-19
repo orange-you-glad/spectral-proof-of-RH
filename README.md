@@ -1,4 +1,4 @@
-# A Canonical Spectral Proof of the Riemann Hypothesis
+# A CANONICAL SPECTRAL DETERMINANT AND SPECTRAL EQUIVALENCE FORMULATION OF THE RIEMANN HYPOTHESIS
 
 This repository contains a modular, formally structured manuscript that constructs a canonical trace-class operator whose Fredholm determinant exactly recovers the completed Riemann zeta function — establishing a precise spectral equivalence with the Riemann Hypothesis.
 

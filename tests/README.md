@@ -23,7 +23,7 @@ python -m unittest discover -s tests -v
 
 All CI pipelines call this command on **every commit and pull request**.
 
-Additional structural and DAG checks are invoked from `scripts/` and `dag/`. Any failure results in an immediate, non-negotiable **build block**.
+Additional DAG and metadata checks are run from `dag/` and `scripts/`. Any failure results in an immediate, non-negotiable **build block**.
 
 ---
 
@@ -39,8 +39,6 @@ All LaTeX files under `src/chapters/` with a formal prefix (`thm_`, `lem_`, `def
 | ------------------------------ | ---------------------------------- |
 | `thm_spectral_equivalence.tex` | `\label{thm:spectral_equivalence}` |
 
-This ensures bi-directional traceability and reference safety.
-
 ---
 
 ### 2. 📜 Proof Presence Enforcement
@@ -51,8 +49,6 @@ Each formal object must have a **corresponding proof file**:
 | ------------------------------ | ------------------------------------- |
 | `thm_spectral_equivalence.tex` | `proofs/prf_spectral_equivalence.tex` |
 
-Every theorem, lemma, corollary, or proposition must be backed by a uniquely-named, chapter-local proof file.
-
 ---
 
 ### 3. 📁 Canonical Chapter Directory Shape
@@ -62,8 +58,6 @@ Each chapter directory must include:
 * `intro.tex` — motivational overview (non-formal)
 * `summary.tex` — recap only (no new declarations)
 * subdirectories: `defs/`, `lems/`, `thms/`, `props/`, `cors/`, `rems/`, `proofs/`
-
-Missing any of these is a blocking error.
 
 ---
 
@@ -81,7 +75,40 @@ Examples of disallowed filenames:
 * `lem:spectrum?.tex`
 * `prop-Zeta&Trace.tex`
 
-Violators are rejected by the test suite and cannot be committed.
+---
+
+### 5. 🧱 Environment Extraction Enforcement
+
+All formal environments must live in their designated subfolders:
+
+| Environment Type      | Required Directory |
+| --------------------- | ------------------ |
+| `\begin{theorem}`     | `thms/`            |
+| `\begin{lemma}`       | `lems/`            |
+| `\begin{definition}`  | `defs/`            |
+| `\begin{proposition}` | `props/`           |
+| `\begin{corollary}`   | `cors/`            |
+| `\begin{remark}`      | `rems/`            |
+| `\begin{proof}`       | `proofs/`          |
+
+Any environment found inline will raise a structural hygiene failure.
+
+---
+
+### 6. 🧪 Cross-Reference and Citation Sanity
+
+* All `\ref`, `\cite`, and `\eqref` commands must resolve.
+* Unused `.bib` entries are flagged.
+* Label backlinks are checked for logical usage symmetry.
+
+---
+
+### 7. 📐 Preamble Consistency *(in progress)*
+
+A preamble consistency agent will soon validate:
+
+* All custom macros (`\lemref{}`, `\specmap{}`, etc.) are defined in a shared source.
+* No chapter silently overrides or redefines common notation.
 
 ---
 
@@ -113,50 +140,28 @@ This layer enforces acyclic, topologically valid inference flows and ensures:
 python dag/dag_audit.py --check
 ```
 
-This checks:
-
-* Acyclicity
-* Existence of all nodes
-* Hash validation
-* Topological ordering of spectral paths
-
----
-
-### ✳️ Optional: Spectral Path Annotations
-
-Spectral inference objects (e.g. `spec:lsym_trace`) can be tracked and verified for inclusion in RH-equivalence chains:
-
-```json
-["spec:lsym_trace", "thm:spectral_equivalence"]
-```
-
 ---
 
 ## 📘 Lean Coherence Gate
 
-When Lean is activated, the test suite additionally requires:
+When Lean integration is active:
 
 ```bash
 lake build
 ```
 
-Each analytic object (`theorem`, `lemma`, etc.) **must be mirrored in Lean**, using a matching name in the formalization.
-
-* All Lean files must compile **without warnings or errors**
-* Formal logic and analytic manuscript must evolve **in lockstep**
+Each theorem/lemma must have a matching Lean declaration. Compilation without warnings or errors is mandatory. Formal and analytic content must evolve together.
 
 ---
 
 ## 🔐 Summary
 
 * 💯 No commit or pull request may bypass this test suite.
-* 🧩 All formal objects must be traceable from file → label → proof → Lean.
-* 🧠 DAG audit layer ensures logical and spectral soundness.
-* 📏 Directory and filename hygiene are strictly enforced.
+* 🧩 All formal objects must be traceable from file → label → proof → DAG → Lean.
+* 🧠 DAG audit layer guarantees logical and spectral consistency.
+* 📏 Structural and lexical hygiene are strictly enforced.
 
----
-
-As new invariants are introduced, this README and the test infrastructure **must** be updated. All logic-critical metadata (e.g., spectral node hashes, critical equivalence paths) must be encoded in the DAG layer.
+As new invariants are introduced, this README **must be updated**.
 
 **Failure anywhere means failure everywhere.**
 

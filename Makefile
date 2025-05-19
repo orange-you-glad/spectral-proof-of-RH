@@ -1,4 +1,4 @@
-	# File: Makefile
+# File: Makefile
 
 VERSION_FILE = VERSION
 VERSION      = $(shell cat $(VERSION_FILE))
@@ -7,18 +7,21 @@ MAIN_PDF     = src/main.pdf
 FINAL_NAME   = spectral_determinant_RH_equivalence_v$(VERSION).pdf
 FINAL_PATH   = docs/$(FINAL_NAME)
 
-.PHONY: all deploy check clean bump bump-minor bump-major dag-refresh
+.PHONY: all deploy check clean bump bump-minor bump-major dag-refresh dag-analyze \
+        structure labels proofs docs-lint texlog-lint modifications \
+        dag checkcites compile pdf stats label_backlinks modularity \
+        lint format-check typecheck
 
-# Full pipeline: validate and release
+# 🚀 Full pipeline: validate and release
 all: check deploy
 
-# Run all validation tests
-# Run all validation tests
+# 🧪 Run all validation tests
 check: structure labels proofs docs-lint texlog-lint modifications \
-       dag-refresh checkcites dag compile pdf stats \
+       dag-refresh checkcites dag dag-analyze compile pdf stats \
        label_backlinks modularity \
        lint format-check typecheck
 
+# 📁 Structural integrity checks
 structure:
 	@echo "🔍 Checking chapter structure..."
 	PYTHONPATH=. python3 tests/check_structure.py
@@ -31,18 +34,39 @@ proofs:
 	@echo "🔍 Checking that all formal objects have proofs..."
 	PYTHONPATH=. python3 tests/check_proofs.py
 
+# 📚 Lint Markdown and LaTeX logs
+docs-lint:
+	@echo "🔍 Linting Markdown docs..."
+	python3 scripts/docs_lint.py
+
+texlog-lint:
+	@echo "🔍 Inspecting LaTeX log..."
+	python3 scripts/lint_tex_log.py
+
+# 🔒 DAG policies
+modifications:
+	@echo "🔍 Checking modifications against DAG policy..."
+	python3 scripts/check_modifications.py
+
+dag-refresh:
+	@echo "🔁 Regenerating DAG nodes and edges..."
+	python3 scripts/generate_dag.py
+
+dag:
+	@echo "🔍 Validating DAG node/edge consistency..."
+	PYTHONPATH=. python3 dag/dag_audit.py --check
+
+dag-analyze:
+	@echo "📊 Analyzing DAG structure and critical paths..."
+	python3 scripts/analyze_dot.py
+
+# 🔍 Citation integrity
 checkcites:
 	@echo "🔍 Running checkcites on main.aux..."
 	latexmk -pdf -silent $(MAIN_TEX)
 	checkcites -f -v src/main.aux
 
-dag-refresh:
-	python3 scripts/generate_dag.py
-
-dag:
-	       @echo "🔍 Validating DAG node/edge consistency..."
-	       PYTHONPATH=. python3 dag/dag_audit.py --check
-
+# 🧱 Compilation & output checks
 compile:
 	@echo "🔍 Verifying full LaTeX compile from scratch..."
 	PYTHONPATH=. python3 tests/check_compile_latexmk.py
@@ -69,17 +93,17 @@ modularity:
 	PYTHONPATH=. python3 tests/check_all_props_extracted.py
 	PYTHONPATH=. python3 tests/check_all_cors_extracted.py
 
-# Deployment: copy compiled main.pdf to versioned docs output
+# 🚢 Deployment
 deploy:
 	@echo "📤 Deploying PDF to $(FINAL_PATH)"
 	cp $(MAIN_PDF) $(FINAL_PATH)
 	@echo "✅ Done."
 
-# Cleanup
+# 🧼 Clean-up
 clean:
 	rm -f docs/spectral_determinant_RH_equivalence_v*.pdf
 
-# Version bumping
+# 📦 Version bumping
 bump:
 	python3 scripts/bump_version.py patch
 
@@ -89,27 +113,15 @@ bump-minor:
 bump-major:
 	python3 scripts/bump_version.py major
 
-# Code Quality Targets
+# 🧪 Code Quality
 lint:
 	@echo "🔍 Running Ruff for code linting..."
 	ruff .
 
 format-check:
 	@echo "🧪 Verifying formatting with Black..."
-	black --check.
+	black --check .
 
 typecheck:
 	@echo "🔍 Running Mypy for type checking..."
 	mypy .
-
-docs-lint:
-	@echo "🔍 Linting Markdown docs..."
-	python3 scripts/docs_lint.py
-
-texlog-lint:
-	@echo "🔍 Inspecting LaTeX log..."
-	python3 scripts/lint_tex_log.py
-
-modifications:
-	@echo "🔍 Checking modifications against DAG policy..."
-	python3 scripts/check_modifications.py

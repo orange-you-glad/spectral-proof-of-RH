@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Render DAG edges to Graphviz dot."""
-from __future__ import annotations
+"""Render DAG edges to Graphviz dot format."""
 
+from __future__ import annotations
 import json
 from pathlib import Path
 
@@ -11,16 +11,31 @@ DOT_OUT = ROOT / "dag.dot"
 
 
 def main() -> None:
-    data = json.load(EDGES.open())
+    # Load edge list
+    edges = json.load(EDGES.open())
+
+    # Collect all node IDs
+    nodes = set()
+    for src, dst in edges:
+        nodes.add(src)
+        nodes.add(dst)
+
     with DOT_OUT.open("w", encoding="utf-8") as f:
         f.write("digraph DAG {\n")
-        for src, dst_list in data.items():
-            if not dst_list:
-                f.write(f"    {src};\n")
-            for dst in dst_list:
-                f.write(f"    {src} -> {dst};\n")
+        f.write("  rankdir=LR;\n")  # optional: left-to-right layout
+        f.write("  node [shape=box, fontsize=10];\n")
+
+        # Emit all edges
+        for src, dst in edges:
+            f.write(f'    "{src}" -> "{dst}";\n')
+
+        # Emit orphan nodes (not referenced in edges)
+        for node in sorted(nodes):
+            f.write(f'    "{node}";\n')
+
         f.write("}\n")
-    print(f"✅ wrote {DOT_OUT}")
+
+    print(f"✅ Wrote DAG with {len(nodes)} nodes and {len(edges)} edges to {DOT_OUT}")
 
 
 if __name__ == "__main__":

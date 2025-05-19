@@ -1,7 +1,5 @@
-# Required for LaTeX citation/reference validation
-checkcites>=1.0.0
-
-# For all test scripts (label validation, DAG, modularity checks, etc.)
+# Python dependencies only
 pandas>=1.5
 networkx>=2.8
+pydot>=1.4
 tabulate>=0.9

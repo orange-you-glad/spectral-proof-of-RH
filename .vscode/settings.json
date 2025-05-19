@@ -5,7 +5,7 @@
     "python.formatting.provider": "black",
     // Run Ruff fixes on save (requires Ruff VS Code extension)
     "editor.codeActionsOnSave": {
-        "source.fixAll": true
+        "source.fixAll": "explicit"
     },
     // Enable Python linters
     "python.linting.enabled": true,

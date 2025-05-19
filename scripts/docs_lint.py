@@ -14,20 +14,28 @@ Example output::
 """
 from __future__ import annotations
 
-import os
 import re
 import sys
+from pathlib import Path
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = Path(__file__).resolve().parent.parent
 HEADER_RE = re.compile(r"^(#+) ")
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 TABLE_DIVIDER_RE = re.compile(r"^\s*\|(?:\s*:?-+:?\s*\|)+\s*$")
 
+EXCLUDE_DIRS = {".venv", "site-packages", "dist-info", "__pycache__"}
 
-def check_file(path: str) -> list[str]:
+
+def should_exclude(path: Path) -> bool:
+    return any(part in EXCLUDE_DIRS for part in path.parts)
+
+
+def check_file(path: Path) -> list[str]:
     errors: list[str] = []
-    with open(path, "r", encoding="utf-8") as f:
-        lines = f.readlines()
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except Exception as e:
+        return [f"{path}: ⚠️ error reading file ({e})"]
 
     # header nesting
     prev = 0
@@ -40,19 +48,19 @@ def check_file(path: str) -> list[str]:
             prev = level
 
     # required section
-    if "## Usage" not in "".join(lines):
+    if "## Usage" not in "\n".join(lines):
         errors.append(f"{path}: missing '## Usage' section")
 
     # broken relative links
-    for m in LINK_RE.finditer("".join(lines)):
+    for m in LINK_RE.finditer("\n".join(lines)):
         link = m.group(1)
         if "://" in link or link.startswith("#"):
             continue
-        target = os.path.join(os.path.dirname(path), link)
-        if not os.path.exists(target):
+        target = path.parent / link
+        if not target.exists():
             errors.append(f"{path}: broken link {link}")
 
-    # malformed tables - look for a header row followed by a divider
+    # malformed tables
     for idx, line in enumerate(lines[:-1]):
         if "|" in line and "|" in lines[idx + 1]:
             if TABLE_DIVIDER_RE.match(lines[idx + 1]):
@@ -65,16 +73,17 @@ def check_file(path: str) -> list[str]:
 
 def main() -> None:
     all_errors: list[str] = []
-    for dirpath, _, filenames in os.walk(ROOT):
-        for fname in filenames:
-            if fname.endswith(".md"):
-                path = os.path.join(dirpath, fname)
-                all_errors.extend(check_file(path))
+    for md_file in ROOT.rglob("*.md"):
+        if should_exclude(md_file):
+            continue
+        all_errors.extend(check_file(md_file))
+
     if all_errors:
         for err in all_errors:
             print(err)
         print("\n🔥 Documentation lint failed.")
         sys.exit(1)
+
     print("✅ Documentation lint passed.")
 
 

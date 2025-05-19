@@ -2,7 +2,7 @@
 import os
 import sys
 
-from scripts import common
+from tests import common
 
 ROOT_DIR = common.ROOT_DIR
 TARGET_DIRS = ["thms", "lems", "props", "cors"]

@@ -25,13 +25,13 @@ lint:
 check: structure labels proofs
 
 structure:
-	python3 scripts/check_structure.py
+        python3 tests/check_structure.py
 
 labels:
-	python3 scripts/validate_labels.py
+        python3 tests/validate_labels.py
 
 proofs:
-	python3 scripts/check_proofs.py
+        python3 tests/check_proofs.py
 
 metadata:
 	python3 scripts/generate_index.py

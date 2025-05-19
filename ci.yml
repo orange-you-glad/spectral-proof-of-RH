@@ -44,4 +44,4 @@ jobs:
 
       - name: Check LaTeX log
         run: |
-          python scripts/check_latex_log.py
+          python tests/check_latex_log.py

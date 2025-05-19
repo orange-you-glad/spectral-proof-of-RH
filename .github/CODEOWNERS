@@ -1,18 +1,18 @@
 # CODEOWNERS automatically request reviews on pull requests
 
 # Chapters
-/src/chapters/01_* @robert-martone
-/src/chapters/02_* @robert-martone
-/src/chapters/03_* @robert-martone
-/src/chapters/04_* @robert-martone
-/src/chapters/05_* @robert-martone
-/src/chapters/06_* @robert-martone
-/src/chapters/07_* @robert-martone
-/src/chapters/08_* @robert-martone
-/src/chapters/09_* @robert-martone
+/src/chapters/01_* @orange-you-glad
+/src/chapters/02_* @orange-you-glad
+/src/chapters/03_* @orange-you-glad
+/src/chapters/04_* @orange-you-glad
+/src/chapters/05_* @orange-you-glad
+/src/chapters/06_* @orange-you-glad
+/src/chapters/07_* @orange-you-glad
+/src/chapters/08_* @orange-you-glad
+/src/chapters/09_* @orange-you-glad
 
 # Automation and metadata
-/scripts/ @robert-martone
-/tests/ @robert-martone
-/dag/ @robert-martone
-/agents/ @robert-martone
+/scripts/ @orange-you-glad
+/tests/ @orange-you-glad
+/dag/ @orange-you-glad
+/agents/ @orange-you-glad

@@ -1,0 +1,18 @@
+# CODEOWNERS automatically request reviews on pull requests
+
+# Chapters
+/src/chapters/01_* @orange-you-glad
+/src/chapters/02_* @orange-you-glad
+/src/chapters/03_* @orange-you-glad
+/src/chapters/04_* @orange-you-glad
+/src/chapters/05_* @orange-you-glad
+/src/chapters/06_* @orange-you-glad
+/src/chapters/07_* @orange-you-glad
+/src/chapters/08_* @orange-you-glad
+/src/chapters/09_* @orange-you-glad
+
+# Automation and metadata
+/scripts/ @orange-you-glad
+/tests/ @orange-you-glad
+/dag/ @orange-you-glad
+/agents/ @orange-you-glad

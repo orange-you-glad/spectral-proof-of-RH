@@ -1,0 +1,112 @@
+{
+  "00_matter": {
+    "lines": 145,
+    "missing_proofs": 0,
+    "thm": 0,
+    "lem": 0,
+    "def": 0,
+    "prop": 0,
+    "cor": 0,
+    "rmk": 0
+  },
+  "01_foundations": {
+    "lines": 2549,
+    "missing_proofs": 9,
+    "thm": 1,
+    "lem": 15,
+    "def": 8,
+    "prop": 6,
+    "cor": 0,
+    "rmk": 1
+  },
+  "02_operator_construction": {
+    "lines": 1650,
+    "missing_proofs": 6,
+    "thm": 3,
+    "lem": 11,
+    "def": 5,
+    "prop": 0,
+    "cor": 0,
+    "rmk": 1
+  },
+  "03_determinant_identity": {
+    "lines": 1439,
+    "missing_proofs": 5,
+    "thm": 1,
+    "lem": 15,
+    "def": 4,
+    "prop": 0,
+    "cor": 0,
+    "rmk": 1
+  },
+  "04_spectral_correspondence": {
+    "lines": 942,
+    "missing_proofs": 2,
+    "thm": 1,
+    "lem": 10,
+    "def": 1,
+    "prop": 0,
+    "cor": 1,
+    "rmk": 1
+  },
+  "05_heat_kernel_asymptotics": {
+    "lines": 1184,
+    "missing_proofs": 1,
+    "thm": 0,
+    "lem": 9,
+    "def": 1,
+    "prop": 5,
+    "cor": 0,
+    "rmk": 0
+  },
+  "06_spectral_implications": {
+    "lines": 702,
+    "missing_proofs": 0,
+    "thm": 3,
+    "lem": 5,
+    "def": 0,
+    "prop": 0,
+    "cor": 1,
+    "rmk": 0
+  },
+  "07_tauberian_growth": {
+    "lines": 679,
+    "missing_proofs": 2,
+    "thm": 0,
+    "lem": 5,
+    "def": 1,
+    "prop": 0,
+    "cor": 1,
+    "rmk": 1
+  },
+  "08_spectral_rigidity": {
+    "lines": 755,
+    "missing_proofs": 1,
+    "thm": 1,
+    "lem": 6,
+    "def": 0,
+    "prop": 2,
+    "cor": 0,
+    "rmk": 1
+  },
+  "09_spectral_generalization": {
+    "lines": 407,
+    "missing_proofs": 4,
+    "thm": 3,
+    "lem": 1,
+    "def": 4,
+    "prop": 0,
+    "cor": 1,
+    "rmk": 0
+  },
+  "10_logical_closure": {
+    "lines": 514,
+    "missing_proofs": 0,
+    "thm": 2,
+    "lem": 1,
+    "def": 0,
+    "prop": 0,
+    "cor": 1,
+    "rmk": 0
+  }
+}

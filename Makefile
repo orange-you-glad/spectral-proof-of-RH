@@ -14,7 +14,7 @@ all: check deploy
 
 # Run all validation tests
 # Run all validation tests
-check: structure labels proofs \
+check: structure labels proofs docs-lint texlog-lint modifications \
        checkcites dag compile pdf stats \
        label_backlinks modularity \
        lint format-check typecheck
@@ -96,5 +96,17 @@ format-check:
 	black --check.
 
 typecheck:
-	@echo "🔍 Running Mypy for type checking..."
-	mypy .
+        @echo "🔍 Running Mypy for type checking..."
+        mypy .
+
+docs-lint:
+       @echo "🔍 Linting Markdown docs..."
+       python3 scripts/docs_lint.py
+
+texlog-lint:
+       @echo "🔍 Inspecting LaTeX log..."
+       python3 scripts/lint_tex_log.py
+
+modifications:
+       @echo "🔍 Checking modifications against DAG policy..."
+       python3 scripts/check_modifications.py

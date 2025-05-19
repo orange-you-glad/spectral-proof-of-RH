@@ -47,6 +47,19 @@ All agents must respect:
 
 ---
 
+## 🔧 Contributor Automation Agents
+
+| Agent Name                | Role Description                            | Target Files            |
+| ------------------------- | ------------------------------------------- | ----------------------- |
+| `docs-lint-agent`         | Lints Markdown docs for headers and links   | `*.md`                  |
+| `tex-log-agent`           | Parses LaTeX logs for warnings              | `src/main.log`          |
+| `label-csv-agent`         | Generates `metadata/labels.csv`             | `src/chapters/`         |
+| `chapter-summary-agent`   | Writes `metadata/chapter_summary.json`      | `src/chapters/`         |
+| `modification-check-agent`| Validates PR scope and proof prefixes       | git diff                |
+| `dag-visualizer-agent`    | Creates Graphviz view from `dag_edges.json` | `dag/`                  |
+
+---
+
 ## 🧘 Lean & Formalization Agents
 
 | Agent Name        | Responsibility                                          | Target                    |

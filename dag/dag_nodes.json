@@ -1,0 +1,4 @@
+{
+  "n1": {"label": "thm:example", "chapter": "01_foundations"},
+  "n2": {"label": "lem:support", "chapter": "01_foundations"}
+}

@@ -1,42 +1,40 @@
-# Paths and file names
-MAIN_TEX=src/main.tex
-PDF_NAME=manuscript
-PDF_SRC=src/$(PDF_NAME).pdf
-PDF_DEST=docs/$(PDF_NAME).pdf
-VERSION_FILE=VERSION
+# File: Makefile
 
-.PHONY: all build clean lint check structure labels proofs metadata deploy \
-        bump bump-minor bump-major
+VERSION_FILE = VERSION
+VERSION      = $(shell cat $(VERSION_FILE))
+MAIN_PDF     = src/main.pdf
+FINAL_NAME   = spectral_determinant_RH_equivalence_v$(VERSION).pdf
+FINAL_PATH   = docs/$(FINAL_NAME)
 
-# Default: full build and deploy
-all: build deploy
+.PHONY: all deploy check clean bump bump-minor bump-major
 
-build:
-	latexmk -pdf -jobname=$(PDF_NAME) -cd $(MAIN_TEX)
+# Full pipeline: validate and release
+all: check deploy
 
-clean:
-	latexmk -C -cd src/
-
-lint:
-	chktex -q -n1 -n2 -n18 $(MAIN_TEX)
-
-# CI structural checks
+# Run all validation tests
 check: structure labels proofs
 
 structure:
-        python3 tests/check_structure.py
+	@echo "Checking structure..."
+	PYTHONPATH=. python3 tests/check_structure.py
 
 labels:
-        python3 tests/validate_labels.py
+	@echo "Validating labels..."
+	PYTHONPATH=. python3 tests/validate_labels.py
 
 proofs:
-        python3 tests/check_proofs.py
+	@echo "Verifying proof mapping..."
+	PYTHONPATH=. python3 tests/check_proofs.py
 
-metadata:
-	python3 scripts/generate_index.py
+# Deployment: tag and copy versioned PDF
+deploy:
+	@echo "Deploying PDF to $(FINAL_PATH)"
+	cp $(MAIN_PDF) $(FINAL_PATH)
+	@echo "Done."
 
-deploy: build
-	python3 scripts/deploy_pdf.py
+# Cleanup
+clean:
+	rm -f docs/spectral_determinant_RH_equivalence_v*.pdf
 
 # Version bumping
 bump:

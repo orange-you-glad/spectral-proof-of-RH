@@ -41,3 +41,7 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y latexmk texlive-full
           latexmk -pdf -cd -interaction=nonstopmode -halt-on-error src/main.tex
+
+      - name: Check LaTeX log
+        run: |
+          python scripts/check_latex_log.py

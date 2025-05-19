@@ -8,6 +8,7 @@ sys.path.append(str(Path(__file__).resolve().parents[1] / "scripts"))
 import validate_labels
 import check_proofs
 import check_structure
+import check_latex_log
 
 
 class ValidateLabelsTests(unittest.TestCase):
@@ -78,6 +79,31 @@ class StructureCheckerTests(unittest.TestCase):
                 self.fail(f"check_structure exited {e}")
             finally:
                 check_structure.ROOT_DIR = old_root
+
+
+class LatexLogCheckerTests(unittest.TestCase):
+    def test_check_latex_log_success(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            log = Path(tmpdir) / "main.log"
+            log.write_text("This is a clean build\n")
+            old_paths = check_latex_log.LOG_PATHS
+            check_latex_log.LOG_PATHS = [str(log)]
+            try:
+                check_latex_log.main()
+            except SystemExit as e:
+                self.fail(f"check_latex_log exited {e}")
+            finally:
+                check_latex_log.LOG_PATHS = old_paths
+
+    def test_check_latex_log_failure(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            log = Path(tmpdir) / "main.log"
+            log.write_text("Overfull \\hbox (2.0pt too wide) in paragraph")
+            old_paths = check_latex_log.LOG_PATHS
+            check_latex_log.LOG_PATHS = [str(log)]
+            with self.assertRaises(SystemExit):
+                check_latex_log.main()
+            check_latex_log.LOG_PATHS = old_paths
 
 
 if __name__ == "__main__":

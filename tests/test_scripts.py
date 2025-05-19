@@ -1,14 +1,11 @@
-import sys
 import tempfile
 from pathlib import Path
 import unittest
 
-sys.path.append(str(Path(__file__).resolve().parents[1] / "scripts"))
-
-import validate_labels
-import check_proofs
-import check_structure
-import check_latex_log
+import tests.validate_labels as validate_labels
+import tests.check_proofs as check_proofs
+import tests.check_structure as check_structure
+import tests.check_latex_log as check_latex_log
 
 
 class ValidateLabelsTests(unittest.TestCase):

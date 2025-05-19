@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 
-from scripts import common
+from tests import common
 
 ROOT_DIR = common.ROOT_DIR
 

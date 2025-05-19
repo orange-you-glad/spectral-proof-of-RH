@@ -94,6 +94,8 @@ For a fully rendered version with math formatting and typeset proofs:
 
 👉 [View the Docs on GitHub](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
 
+For an overview of the dependency graph, see [docs/DAG_TOUR.md](docs/DAG_TOUR.md).
+
 You can also compile the manuscript from source using `main.tex`.
 
 ## 📖 License

@@ -1,0 +1,45 @@
+#!/bin/sh
+# pre-commit hook enforcing proof hygiene and DAG updates
+
+fail() {
+  echo "❌ $1" >&2
+  exit 1
+}
+
+# Inline proof or remark check
+if git diff --cached --name-only -- '*.tex' | grep -q '.'; then
+  if git diff --cached -p -- '*.tex' | grep -n '\\begin{proof}' >/dev/null; then
+    fail 'Inline proofs detected. Extract to proofs/ before committing.'
+  fi
+  if git diff --cached -p -- '*.tex' | grep -n '\\begin{remark}' >/dev/null; then
+    fail 'Inline remarks detected. Extract to rems/ before committing.'
+  fi
+fi
+
+# Label matches file name
+python3 - <<'PY'
+import os,sys,re,subprocess
+from pathlib import Path
+from tests import common
+changed=[p for p in subprocess.check_output(['git','diff','--cached','--name-only']).decode().splitlines() if p.endswith('.tex')]
+for path in changed:
+    expected=common.expected_label_from_filename(path)
+    if not expected:
+        continue
+    actual=common.find_label_in_tex(path)
+    if actual and actual!=expected:
+        print(f"label mismatch in {path}: expected {expected}, found {actual}")
+        sys.exit(1)
+PY
+if [ $? -ne 0 ]; then
+  fail 'Label validation failed.'
+fi
+
+# DAG edge modification check
+if git diff --cached --name-only | grep -q 'dag/dag_edges.json'; then
+  if ! git diff --cached --name-only | grep -q 'dag/dag_nodes.json'; then
+    fail 'DAG edges changed without dag_nodes.json update.'
+  fi
+fi
+
+exit 0

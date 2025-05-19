@@ -1,0 +1,18 @@
+# CODEOWNERS automatically request reviews on pull requests
+
+# Chapters
+/src/chapters/01_* @robert-martone
+/src/chapters/02_* @robert-martone
+/src/chapters/03_* @robert-martone
+/src/chapters/04_* @robert-martone
+/src/chapters/05_* @robert-martone
+/src/chapters/06_* @robert-martone
+/src/chapters/07_* @robert-martone
+/src/chapters/08_* @robert-martone
+/src/chapters/09_* @robert-martone
+
+# Automation and metadata
+/scripts/ @robert-martone
+/tests/ @robert-martone
+/dag/ @robert-martone
+/agents/ @robert-martone

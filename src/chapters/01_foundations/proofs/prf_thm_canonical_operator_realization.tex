@@ -14,7 +14,7 @@ Therefore, \( \{L_t\} \) forms a norm-bounded family in the trace-class ideal. S
 \[
 \lim_{t \to 0^+} \| L_t - \Lsym \|_{\TC(\HPsi)} = 0
 \]
-for some limit \( \Lsym \in \TC(\HPsi) \). By \propref{prop:selfadjointness_Lt} and \propref{prop:core_schwartz_density}, the limit operator \( \Lsym \) is self-adjoint and compact.
+for some limit \( \Lsym \in \TC(\HPsi) \). The convergence structure is justified in \lemref{lem:trace_class_Lt} and \lemref{lem:trace_norm_convergence_Lt_to_Lsym}. By \propref{prop:selfadjointness_Lt} and \propref{prop:core_schwartz_density}, the limit operator \( \Lsym \) is self-adjoint and compact.
 
 \medskip
 \noindent\textbf{(ii) Determinant Identity and Spectral Encoding.}
@@ -28,9 +28,9 @@ By continuity of the determinant under trace-norm limits~\cite[Ch.~4]{Simon2005T
 \]
 By construction of \( \phi \) from \( \Xi \), we recover the identity:
 \[
-\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
-This matches the Hadamard product of \( \Xi \), and encodes the spectrum via
+as established in \thmref{thm:det_identity_revised}. This matches the Hadamard product of \( \Xi \), and encodes the spectrum via
 \[
 \Spec(\Lsym) = \left\{ \tfrac{1}{i}(\rho - \tfrac{1}{2}) \;\middle|\; \zeta(\rho) = 0 \right\},
 \]

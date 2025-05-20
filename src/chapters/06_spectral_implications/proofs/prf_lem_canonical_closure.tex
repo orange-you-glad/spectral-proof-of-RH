@@ -3,12 +3,14 @@ By assumption, \( L \in \TC(\HPsi) \cap \KC(\HPsi) \) is compact, self-adjoint, 
 \[
 \det\nolimits_\zeta(I - \lambda L) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}, \quad \forall \lambda \in \C.
 \]
+This identity is canonically associated with the operator \( L_{\sym} \) via \thmref{thm:det_identity_revised}, and encodes the full spectral data of the Riemann zeta function.
 
 \paragraph{(1) Spectral Equality from Determinant Identity.}
 By trace-class determinant theory (see~\cite[Theorem~4.2]{Simon2005TraceIdeals}), the zeta-regularized determinant encodes the nonzero spectrum of \( L \) as a multiset (including algebraic multiplicities). Since the determinant of \( L \) matches that of \( L_{\sym} \), we conclude:
 \[
 \Spec(L) \setminus \{0\} = \Spec(L_{\sym}) \setminus \{0\}.
 \]
+This spectral identity follows from the Hadamard factorization argument in \lemref{lem:spectral_rigidity_determinant}.
 
 \paragraph{(2) Unitary Equivalence for Self-Adjoint Case.}
 Both \( L \) and \( L_{\sym} \) are compact, self-adjoint operators on the same separable Hilbert space \( \HPsi \), with matching spectra and multiplicities. By the spectral theorem for compact self-adjoint operators (see~\cite[Theorem~VI.16]{ReedSimon1980I}), there exists a unitary operator \( U \colon \HPsi \to \HPsi \) such that
@@ -17,7 +19,7 @@ L = U L_{\sym} U^{-1}.
 \]
 
 \paragraph{(3) Uniqueness of the Canonical Realization.}
-The above shows that \( L_{\sym} \) is unique up to unitary equivalence within the class of compact, self-adjoint, trace-class operators realizing the spectral determinant identity for \( \XiR(s) \).
+The above shows that \( L_{\sym} \) is unique up to unitary equivalence within the class of compact, self-adjoint, trace-class operators realizing the spectral determinant identity for \( \XiR(s) \). This confirms the uniqueness result of \thmref{thm:uniqueness_realization}.
 
 \paragraph{(4) Similarity Class for Non-Self-Adjoint Realizations.}
 Suppose \( \widetilde{L} \in \TC(\HPsi) \) is not self-adjoint but still satisfies the same determinant identity. Then it must have the same nonzero spectral multiset as \( L_{\sym} \), including multiplicities. While lack of normality may prevent diagonalizability or self-adjointness, spectral similarity implies the existence of an invertible operator \( S \in \mathcal{B}(\HPsi) \) such that

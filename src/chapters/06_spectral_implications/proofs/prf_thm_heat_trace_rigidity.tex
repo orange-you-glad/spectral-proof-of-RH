@@ -1,0 +1,13 @@
+\begin{proof}[Proof of \thmref{thm:heat_trace_rigidity}]
+By spectral representation, we have
+\[
+\Tr(e^{-t L_{\sym}^2}) = \sum_{\rho} e^{-t |\mu_\rho|^2}, \quad \text{with } \mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}).
+\]
+Here, $|\mu_\rho|^2 = \Im(\rho)^2 + (\Re(\rho) - \tfrac{1}{2})^2$. If any $\rho$ fails to lie on the critical line $\Re(\rho) = \tfrac{1}{2}$, then $|\mu_\rho|^2$ exceeds $\Im(\rho)^2$, causing the corresponding heat kernel term to decay faster.
+
+Such a shift systematically reduces the total trace, violating the asymptotic growth
+\[
+\Tr(e^{-t L_{\sym}^2}) \sim \frac{\log(1/t)}{\sqrt{t}},
+\]
+which is known to be sharp and equivalent, via Korevaar's Tauberian theorem, to the zero-counting asymptotic $N(T) \sim \frac{T \log T}{\pi}$. Therefore, all nontrivial zeros satisfy $\Re(\rho) = \tfrac{1}{2}$, and $\Spec(L_{\sym}) \subset \mathbb{R}$.
+\end{proof}

@@ -1,9 +1,9 @@
 \begin{proof}[Proof of \lemref{lem:spectral_zero_encoding}]
-From the determinant identity (see \cref{sec:determinant_identity}), we have:
+From the determinant identity in \thmref{thm:det_identity_revised}, we have:
 \[
 \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
 \]
-where \( \XiR(s) \) is the completed Riemann zeta function. The zeros of the determinant coincide with the zeros of \( \XiR(\tfrac{1}{2} + i\lambda) \), and their multiplicities are preserved via Hadamard factorization.
+where \( \XiR(s) \) is the completed Riemann zeta function. The zeros of the determinant coincide with the zeros of \( \XiR(\tfrac{1}{2} + i\lambda) \), and their multiplicities are preserved via Hadamard factorization, as described in \lemref{lem:hadamard_linear_form}. The normalization at \( \lambda = 0 \) follows from \lemref{lem:trace_zero}.
 
 \paragraph{Forward Map.}
 Let \( \rho \in \C \) be a nontrivial zero of \( \zetaR(s) \), so \( \XiR(\rho) = 0 \) and \( \rho = \tfrac{1}{2} + i\lambda \) for some \( \lambda \in \C \). Define
@@ -14,7 +14,7 @@ Then the determinant vanishes at \( \lambda \), so by analytic Fredholm theory,
 \[
 \mu_\rho = \lambda^{-1} \in \Spec(L_{\sym}) \setminus \{0\}.
 \]
-The multiplicity of the zero \( \rho \) of \( \XiR(s) \) equals the algebraic multiplicity of the eigenvalue \( \mu_\rho \), since both are encoded in the same Hadamard product.
+The multiplicity of the zero \( \rho \) of \( \XiR(s) \) equals the algebraic multiplicity of the eigenvalue \( \mu_\rho \), since both are encoded in the same Hadamard product expansion.
 
 \paragraph{Reverse Map.}
 Conversely, let \( \mu \in \Spec(L_{\sym}) \setminus \{0\} \). Then the determinant vanishes at \( \lambda := \mu^{-1} \), so

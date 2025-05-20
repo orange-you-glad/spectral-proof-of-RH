@@ -10,15 +10,15 @@ so that
 
 \smallskip
 \noindent\textbf{Step 1: Spectral Decay of the Difference.}  
-Since \( \phi \in PW_\pi(\R) \), we have the envelope bound:
+Since \( \phi \in PW_\pi(\R) \), the exponential type of \( \Xi(s) \) ensures the envelope bound:
 \[
 |\phi(\lambda)| \le C e^{\frac{\pi}{2} |\lambda|}, \qquad \forall \lambda \in \R,
 \]
-and for small \( t \),
+as shown in \lemref{lem:xi_growth_bound}. For small \( t \),
 \[
-|e^{-t\lambda^2} - 1| \le t \lambda^2.
+|e^{-t\lambda^2} - 1| \le t \lambda^2,
 \]
-Thus,
+yielding:
 \[
 |\varphi_t(\lambda) - \phi(\lambda)| \le C t \lambda^2 e^{\frac{\pi}{2}|\lambda|}.
 \]
@@ -53,9 +53,9 @@ This implies
 
 \smallskip
 \noindent\textbf{Step 4: Conclusion via Simon’s Criterion.}  
-By Simon’s trace-class kernel estimate~\cite[Thm.~4.2]{Simon2005TraceIdeals}, we conclude:
+By Simon’s trace-class kernel estimate~\cite[Thm.~4.2]{Simon2005TraceIdeals} and the convergence result in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}, we conclude:
 \[
 \| L_t - L_{\sym} \|_{\TC(H_{\Psi_\alpha})} \lesssim t^\beta,
 \]
-uniformly for all \( \alpha > \pi \), with constants independent of \( \alpha \).
+uniformly for all \( \alpha > \pi \), with constants independent of \( \alpha \). The rate bound aligns with the asymptotic structure of the determinant constructed in \lemref{lem:trace_class_Lt}.
 \end{proof}

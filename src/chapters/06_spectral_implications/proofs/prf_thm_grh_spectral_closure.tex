@@ -1,0 +1,39 @@
+\begin{proof}[Proof of \thmref{thm:grh_spectral_closure}]
+Let \( \{ \mu_n \} \subset \Spec(L_{\sym}^{(\pi)}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical compact, self-adjoint operator \( L_{\sym}^{(\pi)} \in \TC(H_{\Psi_\alpha}) \), counted with algebraic multiplicity. Here \( \pi \in \mathcal{A}_{\text{cusp}}(\mathrm{GL}_n) \) is a cuspidal automorphic representation.
+
+\paragraph{Step 1: Determinant Zeros Correspond to Zeta Zeros.}
+By \thmref{thm:det_identity_revised}, the canonical Fredholm determinant for \( L_{\sym}^{(\pi)} \) satisfies:
+\[
+\det_\zeta(I - \lambda L_{\sym}^{(\pi)}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\]
+which is an entire function of order one and exponential type \( \pi \). The right-hand side vanishes precisely at \( \lambda_\rho := i(\rho - \tfrac{1}{2}) \in \mathbb{C} \), where \( \rho \in \mathbb{C} \) is a nontrivial zero of the automorphic L-function \( L(s, \pi) \). The order of vanishing equals the multiplicity of the zero in the Hadamard product of \( \Xi(s) \).
+
+\paragraph{Step 2: Spectral Inclusion via Fredholm Theory.}
+Since \( L_{\sym}^{(\pi)} \in \TC \), analytic Fredholm theory (cf.~\cite[Thm.~3.1]{Simon2005TraceIdeals}) implies:
+\[
+\lambda^{-1} \in \Spec(L_{\sym}^{(\pi)}) \setminus \{0\} \quad \Longleftrightarrow \quad \det_\zeta(I - \lambda L_{\sym}^{(\pi)}) = 0,
+\]
+with multiplicities preserved. Thus for each \( \lambda_\rho = i(\rho - \tfrac{1}{2}) \), we obtain:
+\[
+\mu := \lambda_\rho^{-1} = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}^{(\pi)}).
+\]
+
+\paragraph{Step 3: Spectral Exhaustivity.}
+The Hadamard factorization of \( \Xi(s) \) guarantees that \( \det_\zeta(I - \lambda L_{\sym}^{(\pi)}) \) has no zeros other than the \( \lambda_\rho \) above. Hence, all nonzero eigenvalues of \( L_{\sym}^{(\pi)} \) arise from the spectral map:
+\[
+\mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+\]
+for some zero \( \rho \) of the automorphic L-function \( L(s, \pi) \). The multiplicities match because both determinant and spectrum admit order-one Hadamard structures, and the determinant encodes all of \( \Spec(L_{\sym}^{(\pi)}) \setminus \{0\} \).
+
+\paragraph{Step 4: GRH and Spectral Reality.}
+The reality of the spectrum of \( L_{\sym}^{(\pi)} \) implies that all eigenvalues \( \mu_\rho \in \mathbb{R} \), which further implies that the nontrivial zeros of the automorphic L-function \( L(s, \pi) \) must lie on the **critical line** \( \Re(s) = \frac{1}{2} \). This exactly corresponds to the **Generalized Riemann Hypothesis (GRH)** for \( L(s, \pi) \).
+
+\paragraph{Conclusion.}
+The spectral reality of \( L_{\sym}^{(\pi)} \) implies the GRH for the associated automorphic L-function \( L(s, \pi) \), and vice versa. Thus, we conclude that:
+\[
+\boxed{
+\text{GRH} \quad \Longleftrightarrow \quad \Spec(L_{\sym}^{(\pi)}) \subset \R \quad \forall \, \pi \in \mathcal{A}_{\text{cusp}}(\mathrm{GL}_n)
+}
+\]
+This completes the proof of the equivalence.
+\end{proof}

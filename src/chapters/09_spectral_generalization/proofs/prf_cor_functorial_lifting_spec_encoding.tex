@@ -1,4 +1,10 @@
 \begin{proof}[Proof of \corref{cor:functorial_lifting_spec_encoding}]
 This follows from the spectral determinant identity of \thmref{thm:spectral_determinant_identity_Lpi},
-which transfers the zero set of $\Xi(s,\pi)$ to the eigenvalues of $\Lsympi$.
+which transfers the zero set of \( \Xi(s, \pi) \) to the eigenvalues of \( \Lsympi \), under the decay hypothesis of \defref{def:kernel_decay_condition}.
+
+By \thmref{thm:zero_encoding_general}, each nontrivial zero \( \rho \) of \( \Xi(s, \pi) \) corresponds to a unique eigenvalue \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsympi) \), with multiplicities preserved. Hence, any automorphic functorial lift \( \pi \mapsto \pi' \) inducing an identity of completed \( L \)-functions \( \Xi(s, \pi) = \Xi(s, \pi') \) leads to an identity of spectral determinants and matching spectra:
+\[
+\Spec(\Lsympi) = \Spec(\Lsympipi).
+\]
+This compatibility confirms that spectral encoding is preserved under functorial lifts.
 \end{proof}

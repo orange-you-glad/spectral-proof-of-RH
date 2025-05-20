@@ -1,0 +1,18 @@
+\begin{proof}[Proof of \corref{cor:grh_real_equiv_spectral_reality}]
+Let \( L_{\sym}^{(\pi)} \) be the canonical compact, self-adjoint, trace-class operator associated with the automorphic L-function \( L(s, \pi) \) for \( \pi \in \mathcal{A}_{\text{cusp}}(\mathrm{GL}_n) \). We aim to show the equivalence between the \emph{Generalized Riemann Hypothesis (GRH)} and the spectral reality of \( L_{\sym}^{(\pi)} \).
+
+\paragraph{Step 1: GRH Implies Spectral Reality.}
+If the \emph{Generalized Riemann Hypothesis (GRH)} holds for \( L(s, \pi) \), then all nontrivial zeros of \( L(s, \pi) \) lie on the critical line \( \Re(s) = \frac{1}{2} \). By \lemref{lem:grh_spectral_reality}, this implies that the spectrum of the canonical operator \( L_{\sym}^{(\pi)} \) is real. Specifically, the eigenvalues \( \mu_n \) of \( L_{\sym}^{(\pi)} \) correspond to the nontrivial zeros of \( L(s, \pi) \), which must all lie on the critical line due to the reality condition on the eigenvalues.
+
+\paragraph{Step 2: Spectral Reality Implies GRH.}
+Conversely, suppose that the spectrum of \( L_{\sym}^{(\pi)} \) is real. By \lemref{lem:grh_spectral_reality}, the nontrivial zeros of \( L(s, \pi) \) must lie on the critical line \( \Re(s) = \frac{1}{2} \). Thus, the \emph{Generalized Riemann Hypothesis (GRH)} holds for \( L(s, \pi) \).
+
+\paragraph{Conclusion.}
+Since both directions have been established, we conclude that the following equivalence holds:
+\[
+\boxed{
+\textit{Generalized Riemann Hypothesis (GRH)} \quad \Longleftrightarrow \quad \Spec(L_{\sym}^{(\pi)}) \subset \mathbb{R} \quad \forall \, \pi \in \mathcal{A}_{\text{cusp}}(\mathrm{GL}_n)
+}
+\]
+This completes the proof.
+\end{proof}

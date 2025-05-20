@@ -1,10 +1,6 @@
 \section{Spectral Implications: Logical Equivalence and Rigidity}
 \label{sec:spectral_implications}
 
-% This chapter analytically closes the spectral determinant argument begun in Chapter 3,
-% completing the chain of implications RH ⇐⇒ Spec(L_sym) ⊂ ℝ via heat kernel asymptotics.
-% Proofs depending on kernel convergence and Laplace control are deferred to Appendix D.
-
 \input{chapters/06_spectral_implications/intro}
 
 %-----------------------------------------------------
@@ -53,15 +49,29 @@ The trace–logarithmic derivative identity used throughout this chapter is prov
 \subsection{Final Spectral Closure}
 \label{sec:spectral_final_closure}
 
+\input{chapters/06_spectral_implications/thms/thm_heat_trace_rigidity}
+\input{chapters/06_spectral_implications/proofs/prf_thm_heat_trace_rigidity}
+
 \input{chapters/06_spectral_implications/thms/thm_rh_spectral_closure}
 \input{chapters/06_spectral_implications/proofs/prf_thm_rh_spectral_closure}
 
+%-----------------------------------------------------
+\subsection{Generalization to Automorphic L-functions (GRH)}
+\label{sec:grh_equivalence}
+
+\input{chapters/06_spectral_implications/thms/thm_grh_spectral_closure}
+\input{chapters/06_spectral_implications/proofs/prf_thm_grh_spectral_closure}
+
+\input{chapters/06_spectral_implications/lems/lem_grh_spectral_reality}
+\input{chapters/06_spectral_implications/proofs/prf_lem_grh_spectral_reality}
+
+\input{chapters/06_spectral_implications/cors/cor_grh_real_equiv_spectral_reality}
+\input{chapters/06_spectral_implications/proofs/prf_cor_grh_real_equiv_spectral_reality}
+
+%-----------------------------------------------------
+\subsection{Summary and Final Remarks}
+\label{sec:spectral_summary}
+
 \input{chapters/06_spectral_implications/summary}
 
-% Final clarification:
-\begin{remark}[On Logical Closure]
-This chapter completes the analytic–spectral chain initiated in Chapter~\ref{sec:determinant_identity}. The short-time trace asymptotics and Laplace integrability justified in Appendix~\ref{app:heat_kernel_construction} retroactively validate the determinant identity, while spectral symmetry and bijection confirm that
-\[
-\Spec(L_{\sym}) \subset \R \quad \Longleftrightarrow \quad \RH.
-\]
-\end{remark}
+\input{chapters/06_spectral_implications/rems/rem_logical_closure}

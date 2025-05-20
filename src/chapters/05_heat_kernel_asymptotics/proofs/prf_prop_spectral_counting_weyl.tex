@@ -1,5 +1,5 @@
 \begin{proof}[Proof of \propref{prop:spectral_counting_weyl}]
-From the refined short-time asymptotic of the spectral heat trace (see \propref{prop:short_time_heat_expansion}), we have:
+From the refined short-time asymptotic of the spectral heat trace (see \propref{prop:short_time_heat_expansion} and \lemref{lem:heat_trace_expansion}), we have:
 \[
 \Theta(t) := \Tr(e^{-t L_{\sym}^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right), \qquad \text{as } t \to 0^+.
 \]
@@ -14,7 +14,7 @@ By Korevaar’s log-corrected Tauberian theorem~\cite[Ch.~III, §5]{Korevaar2004
 N(\lambda) = \frac{\sqrt{\lambda}}{\pi} \log \lambda + O(\sqrt{\lambda}), \qquad \text{as } \lambda \to \infty.
 \]
 
-The logarithmic enhancement reflects the spectral density imposed by the leading singularity in the heat trace and modifies the classical Weyl law for effective spectral dimension \( d = 1 \).
+This growth rate is derived from the singularity structure of the heat kernel trace, which in turn depends on the trace-class nature of \( L_{\sym} \) and its kernel decay (see \lemref{lem:trace_class_Lt}). The logarithmic enhancement reflects the spectral density imposed by the leading singularity and modifies the classical Weyl law for effective spectral dimension \( d = 1 \).
 
 \paragraph{Conclusion.}
 The singular trace asymptotics invert via Laplace–Stieltjes theory to yield the log-modulated Weyl-type growth of the eigenvalue counting function:

@@ -1,5 +1,5 @@
 \begin{proof}[Proof of \lemref{lem:trace_distribution_positivity}]
-Let \( \{ \mu_n \} \subset \R \) denote the discrete spectrum of the compact, self-adjoint operator \( L_{\sym} \), with eigenvalues repeated by multiplicity.
+Let \( \{ \mu_n \} \subset \R \) denote the discrete spectrum of the compact, self-adjoint operator \( L_{\sym} \), with eigenvalues repeated by multiplicity. The trace-class property of \( L_{\sym} \in \TC(\HPsi) \) is established in \lemref{lem:trace_class_Lt}.
 
 \paragraph{(i) Well-Definedness and Temperedness.}
 For \( \phi \in \Schwartz(\R) \), the operator \( \phi(L_{\sym}) \) is defined via spectral functional calculus:
@@ -8,7 +8,7 @@ For \( \phi \in \Schwartz(\R) \), the operator \( \phi(L_{\sym}) \) is defined v
 \]
 where \( P_n \) is the finite-rank projection onto the eigenspace for \( \mu_n \).
 
-Since \( L_{\sym} \in \TC(\HPsi) \), we have \( \sum_n |\mu_n| < \infty \), and \( \mu_n \to 0 \). For each \( N \in \N \), there exists \( C_N > 0 \) such that
+Since \( \mu_n \to 0 \) and \( \sum_n |\mu_n| < \infty \), for each \( N \in \N \), there exists \( C_N > 0 \) such that
 \[
 |\phi(\mu_n)| \le C_N (1 + |\mu_n|)^{-N}.
 \]
@@ -20,14 +20,14 @@ Hence, the trace
 \[
 \Tr(\phi(L_{\sym})) := \sum_n \phi(\mu_n)
 \]
-is absolutely convergent. Moreover, \( \phi \mapsto \Tr(\phi(L_{\sym})) \) is continuous with respect to the Schwartz topology, and defines a tempered distribution on \( \R \).
+is absolutely convergent. Moreover, \( \phi \mapsto \Tr(\phi(L_{\sym})) \) is continuous with respect to the Schwartz topology and defines a tempered distribution on \( \R \).
 
 \paragraph{(ii) Positivity.}
 If \( \phi \in \Schwartz(\R) \) satisfies \( \phi(\lambda) \ge 0 \) for all \( \lambda \in \R \), then:
 \[
 \Tr(\phi(L_{\sym})) = \sum_n \phi(\mu_n) \ge 0.
 \]
-Each term in the sum is nonnegative. This reflects the positivity of the spectral measure associated with \( L_{\sym} \), which arises analytically from the positivity of the heat kernel \( K_t(x,x) \ge 0 \), and is justified by the short-time convergence result \propref{prop:heat_trace_uniform_conv} and kernel regularity developed in \appref{app:heat_kernel_construction}.
+Each term in the sum is nonnegative. This reflects the positivity of the spectral measure associated with \( L_{\sym} \), which arises analytically from the pointwise positivity of the heat kernel \( K_t(x,x) \ge 0 \), as ensured by kernel diagonal positivity and uniform convergence in \propref{prop:heat_trace_uniform_conv} and the kernel construction in \lemref{lem:heat_kernel_diagonal_positivity}.
 
 \paragraph{Conclusion.}
 The trace pairing \( \phi \mapsto \Tr(\phi(L_{\sym})) \) defines a positive tempered distribution on \( \R \), as claimed.

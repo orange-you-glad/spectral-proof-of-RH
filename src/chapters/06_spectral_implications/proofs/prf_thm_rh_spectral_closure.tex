@@ -1,0 +1,33 @@
+\begin{proof}[Proof of \thmref{thm:rh_spectral_closure}]
+Let \( L_{\sym} \in \TC(\HPsi) \cap \KC(\HPsi) \) denote the canonical operator constructed via mollified convolution from the inverse Fourier transform of \( \XiR(s) \), as in \thmref{thm:canonical_operator_realization}.
+
+\paragraph{(1) Canonical Spectral Determinant Identity.}
+By construction, \( L_{\sym} \) satisfies the zeta-regularized Fredholm determinant identity
+\[
+\detz(I - \lambda L_{\sym}) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)},
+\]
+as established in \thmref{thm:det_identity_revised}. This identity is entire of order one, normalized at \( \lambda = 0 \), and classifies the spectrum of \( L_{\sym} \) by Hadamard factorization.
+
+\paragraph{(2) Spectral Bijection.}
+By the canonical spectral encoding \thmref{thm:spectral_zero_bijection_revised}, there is a bijection between the nontrivial zeros \( \rho \) of \( \zetaR(s) \) and the nonzero eigenvalues \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\sym}) \). This bijection preserves multiplicities and symmetry. See \lemref{lem:spectral_encoding_injection}.
+
+\paragraph{(3) Spectral Reality Implies \(\RH\).}
+Suppose \( \Spec(L_{\sym}) \subset \R \). Then for each nontrivial zero \( \rho \), the associated spectral value \( \mu_\rho \) is real, so
+\[
+\mu_\rho \in \R \quad \Rightarrow \quad \rho \in \tfrac{1}{2} + i\R.
+\]
+This establishes the Riemann Hypothesis. See \lemref{lem:reality_of_spectrum_and_rh} and \lemref{lem:det_zero_implies_spectrum}.
+
+\paragraph{(4) \(\RH\) Implies Spectral Reality.}
+Assume \(\RH\) holds. Then each nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \), with \( \gamma \in \R \), corresponds to
+\[
+\mu_\rho = \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma \in \R.
+\]
+Hence, all nonzero spectral values of \( L_{\sym} \) are real.
+
+\paragraph{(5) Uniqueness and Spectral Rigidity.}
+By \thmref{thm:uniqueness_realization} and \lemref{lem:canonical_closure}, any compact, self-adjoint operator \( L \in \TC(\HPsi) \) satisfying the same determinant identity must be unitarily equivalent to \( L_{\sym} \). If \( L \) is not self-adjoint but satisfies the same determinant identity, then \( L \sim L_{\sym} \) in the algebraic similarity class, preserving spectrum and multiplicities.
+
+\paragraph{Conclusion.}
+The spectral reality of the canonical operator \( L_{\sym} \) is logically equivalent to the Riemann Hypothesis. The determinant identity uniquely determines its spectrum and operator structure.
+\end{proof}

@@ -18,10 +18,10 @@
 \textbf{Analytic and Spectral Estimates}
 \begin{itemize}
   \item \lemref{lem:xi_growth_bound}, \lemref{lem:weighted_L1_inverse_FT_xi} — The profile \( \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \), with inverse transform in \( L^1(\R, \Psi_\alpha^{-1}) \).
-  \item \lemref{lem:decay_mollified_kernel}, \lemref{lem:L1_integrability_conjugated_kernel} — Mollifiers \( k_t \in \Schwartz \), conjugated kernels integrable.
-  \item \lemref{lem:uniform_L1_conjugated_kernel}, \lemref{lem:trace_class_via_weighted_L1} — Trace norm convergence \( \|L_t - \Lsym\|_{\TC} \to 0 \) and Simon’s trace-class inclusion criterion.
+  \item \lemref{lem:decay_mollified_kernel}, \lemref{lem:L1_integrability_conjugated_kernel}, \lemref{lem:mollified_profile_decay} — Mollifiers \( k_t \in \Schwartz \), with exponential decay and integrability.
+  \item \lemref{lem:uniform_L1_conjugated_kernel}, \lemref{lem:trace_class_via_weighted_L1}, \lemref{lem:trace_norm_convergence_Lt_to_Lsym} — Trace norm convergence \( \|L_t - \Lsym\|_{\TC} \to 0 \); Simon’s trace-class inclusion criterion.
   \item \lemref{lem:trace_class_conjugated_kernel}, \lemref{lem:trace_class_failure_alpha_leq_pi}, \propref{prop:trace_class_sharpness} — \textbf{Sharp exponential threshold: trace-class fails for \( \alpha \le \pi \)}.
-  \item \lemref{lem:unitary_conjugation_trace_class} — Trace norm preserved under unitary weight conjugation.
+  \item \lemref{lem:unitary_conjugation_trace_class}, \lemref{lem:kernel_L2_weighted_bound} — Trace norm preserved under unitary weight conjugation; weighted \( L^2 \)-kernel estimates.
 \end{itemize}
 
 \textbf{Operator Properties of \texorpdfstring{\( L_t \)}{Lt}}
@@ -37,10 +37,9 @@
 \end{itemize}
 
 \paragraph{Chapter Closure.}
-This chapter establishes the analytic and operator-theoretic base for all that follows. The canonical convolution operator \( \Lsym \in \TC(\HPsi) \) is defined as the trace-norm limit of mollified Fourier convolution operators \( L_t \). Its construction relies on Paley--Wiener estimates, exponential decay, Sobolev density, and trace-class embedding theorems. A structurally critical threshold emerges: \( \alpha > \pi \) is both necessary and sufficient for trace-class inclusion, marking the sharp boundary for spectral realization (\lemref{lem:trace_class_failure_alpha_leq_pi}). The determinant identity
+This chapter establishes the analytic and operator-theoretic base for all that follows. The canonical convolution operator \( \Lsym \in \TC(\HPsi) \) is defined as the trace-norm limit of mollified Fourier convolution operators \( L_t \), as shown in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}. Its construction relies on Paley--Wiener estimates, exponential decay (\lemref{lem:mollified_profile_decay}), Sobolev density, and trace-class embedding theorems (\lemref{lem:trace_class_Lt}). A structurally critical threshold emerges: \( \alpha > \pi \) is both necessary and sufficient for trace-class inclusion, marking the sharp boundary for spectral realization (\lemref{lem:trace_class_failure_alpha_leq_pi}). The determinant identity
 \[
 \detz(I - \lambda \Lsym)
 = \frac{\Xi\left(\tfrac{1}{2} + i\lambda \right)}{\Xi\left(\tfrac{1}{2} \right)}
 \]
-is proven in \secref{sec:determinant_identity}, resting entirely on this analytic groundwork.
-
+is proven in \thmref{thm:det_identity_revised}, resting entirely on this analytic groundwork.

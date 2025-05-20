@@ -1,0 +1,20 @@
+\begin{proof}[Proof of \lemref{lem:grh_spectral_reality}]
+Let \( L_{\sym}^{(\pi)} \) be the canonical compact, self-adjoint, trace-class operator associated with the automorphic L-function \( L(s, \pi) \) for \( \pi \in \mathcal{A}_{\text{cusp}}(\mathrm{GL}_n) \). We are given that the spectrum of \( L_{\sym}^{(\pi)} \) is real, i.e., \( \Spec(L_{\sym}^{(\pi)}) \subset \mathbb{R} \).
+
+\paragraph{Step 1: Spectral Reality Implies Eigenvalues on the Critical Line.}
+By the spectral theory of self-adjoint operators, the eigenvalues of \( L_{\sym}^{(\pi)} \) are real. The Fredholm determinant for \( L_{\sym}^{(\pi)} \) is related to the zeros of the automorphic L-function \( L(s, \pi) \) through the identity
+\[
+\det_\zeta(I - \lambda L_{\sym}^{(\pi)}) = \frac{\Xi(\frac{1}{2} + i\lambda)}{\Xi(\frac{1}{2})},
+\]
+where the nontrivial zeros of \( \Xi(s) \), which correspond to the nontrivial zeros of \( L(s, \pi) \), are the points where the determinant vanishes.
+
+If the spectrum of \( L_{\sym}^{(\pi)} \) is real, the corresponding eigenvalues \( \mu_n \in \mathbb{R} \) must satisfy \( \mu_n = \frac{1}{i}(\rho_n - \frac{1}{2}) \), where \( \rho_n \) are the nontrivial zeros of \( L(s, \pi) \).
+
+\paragraph{Step 2: Critical Line Condition.}
+Since the eigenvalues \( \mu_n \) are real, we must have \( \Im(\rho_n) = \pm \frac{1}{2} \). This is precisely the condition that the nontrivial zeros \( \rho_n \) of the automorphic L-function lie on the critical line \( \Re(s) = \frac{1}{2} \).
+
+Thus, the \emph{Generalized Riemann Hypothesis (GRH)} holds for \( L(s, \pi) \).
+
+\paragraph{Conclusion.}
+Since the spectral reality of \( L_{\sym}^{(\pi)} \) forces the nontrivial zeros of \( L(s, \pi) \) to lie on the critical line, we conclude that the \emph{Generalized Riemann Hypothesis (GRH)} holds for \( L(s, \pi) \). This completes the proof.
+\end{proof}

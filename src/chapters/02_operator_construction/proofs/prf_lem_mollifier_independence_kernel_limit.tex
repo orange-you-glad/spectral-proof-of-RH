@@ -7,7 +7,7 @@ Let \( \{\varphi_t\}_{t > 0} \subset \Schwartz \) be a mollifier family satisfyi
   \item Decay: \( \varphi_t \in L^1 \cap L^2 \cap L^1(\Psi_\alpha\, dx) \) for all \( t > 0 \).
 \end{itemize}
 
-Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define its inverse Fourier transform \( \widehat{\Xi}(x) := \phi^\vee(x) \in L^1(\R, \Psi_\alpha^{-1}(x)\, dx) \). Define mollified spatial kernels:
+Let \( \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \), and define its inverse Fourier transform \( \widehat{\Xi}(x) := \phi^\vee(x) \in L^1(\R, \Psi_\alpha^{-1}(x)\, dx) \). The decay of \( \widehat{\Xi} \) is guaranteed by \lemref{lem:xi_growth_bound}. Define mollified spatial kernels:
 \[
 \widehat{\Xi}_t := \varphi_t * \widehat{\Xi} \in \Schwartz \cap L^1(\R, \Psi_\alpha\, dx),
 \]
@@ -25,7 +25,7 @@ satisfies
 \[
 K_t^{(\varphi)} \in L^1(\R^2, \Psi_\alpha(x) \Psi_\alpha(y)\, dx\, dy),
 \]
-and hence \( L_t^{(\varphi)} \in \TC(H_{\Psi_\alpha}) \). Symmetry of both \( \varphi_t \) and \( \widehat{\Xi} \) ensures that \( L_t^{(\varphi)} \) is self-adjoint.
+and hence \( L_t^{(\varphi)} \in \TC(H_{\Psi_\alpha}) \). Symmetry of both \( \varphi_t \) and \( \widehat{\Xi} \) ensures that \( L_t^{(\varphi)} \) is self-adjoint. The convergence structure is inherited from \lemref{lem:trace_class_Lt}.
 
 \paragraph{(ii) Independence and Trace-Norm Convergence.}  
 Let \( \varphi_t, \tilde{\varphi}_t \) be two mollifier families satisfying the above properties. Then:
@@ -49,7 +49,7 @@ and \( \varphi_t - \tilde{\varphi}_t \to 0 \) in \( \Schwartz' \), we obtain
 \[
 \| \widehat{\Xi}_t - \widehat{\widetilde{\Xi}}_t \|_{L^1(\R, \Psi_\alpha)} \to 0
 \]
-by dominated convergence, using uniform exponential decay of the mollified kernels.
+by dominated convergence, using uniform exponential decay of the mollified kernels as established in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}.
 
 \paragraph{Conclusion.}  
 The limiting operator

@@ -1,4 +1,10 @@
 {
+  "cor:dag_closure": {
+    "chapter": 3,
+    "file": "src/chapters/03_determinant_identity/cors/cor_dag_closure.tex",
+    "hash": "ec50e5f2d03e188e948e2956c6c50cac819f869a5744ef6b4e9b482f64f3a378",
+    "type": "corollary"
+  },
   "cor:functorial_lifting_spec_encoding": {
     "chapter": 9,
     "file": "src/chapters/09_spectral_generalization/cors/cor_functorial_lifting_spec_encoding.tex",
@@ -8,7 +14,7 @@
   "cor:spectral_determines_zeta": {
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/cors/cor_spectral_determines_zeta.tex",
-    "hash": "edc3da94ccec92378027b781401d08cbe49adb21bcb34bffb5b3b26d501dd3b1",
+    "hash": "6f16f220c316fc4810d3b3baf7e5aa45bf1635f5a6786fac36df9d3d9b1c35ec",
     "type": "corollary"
   },
   "cor:spectrum_determines_zeta": {
@@ -32,7 +38,7 @@
   "def:Hilbert_space_Lpi": {
     "chapter": 9,
     "file": "src/chapters/09_spectral_generalization/defs/def_Hilbert_space_Lpi.tex",
-    "hash": "0a5414984fefce4cbe8f36e6dba2cc098744eabbf1fc94a29b58e0b0e0a2ebb2",
+    "hash": "62822696de4c4633c322742de22e799ef269bc9e0c89357cac9a85327f0fd84f",
     "type": "definition"
   },
   "def:analytic_properties_XiPi": {
@@ -56,7 +62,7 @@
   "def:compact_operator": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/defs/def_compact_operator.tex",
-    "hash": "7398eca598435cd04df391f52556b4b6dc3a610a021670e0cb94101e95515a51",
+    "hash": "8cafc4f55136ef6c260c888ec24a0a8f72003763e17642d26b0d77fefda43dd3",
     "type": "definition"
   },
   "def:convolution_operator_Ltpi": {
@@ -74,7 +80,7 @@
   "def:exponential_weight": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/defs/def_exponential_weight.tex",
-    "hash": "c2e542ea3a1d46e21985829a8983498575c630f35cd35f19cd2368d672f4f3b1",
+    "hash": "f5b05c259c8e093f4866269aebffc750597f035dffac5119cf43a8355b6f8c25",
     "type": "definition"
   },
   "def:fredholm_determinant": {
@@ -116,7 +122,7 @@
   "def:spectral_decomposition_compact": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/defs/def_spectral_decomposition_compact.tex",
-    "hash": "0f9e4ef75114e0808ec6a82ab0054a19fd3f9d8680b1c8797c02f6d430a49d62",
+    "hash": "c9b21ac296267b5b432a6fc491da4860e19a44245df82ddbada0e240e0e31bbf",
     "type": "definition"
   },
   "def:spectral_zero_map": {
@@ -140,7 +146,7 @@
   "def:trace_class_operator": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/defs/def_trace_class_operator.tex",
-    "hash": "9165009c8e90703990b6c574cf1c29a7a07ee5d7a5977a1b7bf17ec2b4fb76a0",
+    "hash": "e0da64b48cedd4d973c966a7cdf03b6c52fed687099515dabd8916f5fbd41960",
     "type": "definition"
   },
   "def:trace_norm": {
@@ -188,7 +194,13 @@
   "lem:Lsym_square_selfadjoint": {
     "chapter": 2,
     "file": "src/chapters/02_operator_construction/lems/lem_Lsym_square_selfadjoint.tex",
-    "hash": "db9c04f18ee9a77375bb94bccaaa1e8e591060cfa4bb6da273b09a11a38652df",
+    "hash": "8638cad7ec9abeff27a3c5b3697356b1db4b8cf1e9fda58a6127adc5be77e344",
+    "type": "lemma"
+  },
+  "lem:analytic_closure_core": {
+    "chapter": 3,
+    "file": "src/chapters/03_determinant_identity/lems/lem_analytic_closure_core.tex",
+    "hash": "ac2dc3bd9027b0b6d253d6dbc72c0c0357af871adb235962f76525fd25cafdd7",
     "type": "lemma"
   },
   "lem:boundedness_Lsym": {
@@ -200,13 +212,13 @@
   "lem:canonical_closure": {
     "chapter": 6,
     "file": "src/chapters/06_spectral_implications/lems/lem_canonical_closure.tex",
-    "hash": "ac39f5746d56286138e924c35e5c49254070c29a8351bc2624ff90894c23bf32",
+    "hash": "171fbb6e61347dc6d0a4394e74cb7ebad00aa5ef350a522d5f7ab60501056d3f",
     "type": "lemma"
   },
   "lem:construction_canonical_data": {
     "chapter": 2,
     "file": "src/chapters/02_operator_construction/lems/lem_construction_canonical_data.tex",
-    "hash": "755c8e58e740afd5d5bbccba0c1be5bd574bb4b6ceece4dbfb72d04946ede814",
+    "hash": "dde76ede96e7ac9b4429158b3b60f65103518c2e5d0ac348dcfc0dc71fdedd5e",
     "type": "lemma"
   },
   "lem:core_essential_sa": {
@@ -266,7 +278,7 @@
   "lem:determinant_fixes_spectrum": {
     "chapter": 6,
     "file": "src/chapters/06_spectral_implications/lems/lem_determinant_fixes_spectrum.tex",
-    "hash": "9998dedfde035eb9f533a63e2eec10f52d067de072b27df96371cb891192a455",
+    "hash": "ccfb2fe2469a59a0ba00d3da409656d16f7dc358e8c6bd1744abb9a1ff8c7112",
     "type": "lemma"
   },
   "lem:distributional_trace_asymptotics": {
@@ -512,7 +524,7 @@
   "lem:spectral_symmetry": {
     "chapter": 4,
     "file": "src/chapters/04_spectral_correspondence/lems/lem_spectral_symmetry.tex",
-    "hash": "41eb282b9601d76399d2267b888677f9496fbdcdbb2d866da72031cdfa23d1be",
+    "hash": "93f29b6f639b5eebfc587c75e5f5f35f2880c5892bf4f4255ef8bb0674fd7996",
     "type": "lemma"
   },
   "lem:spectral_zero_encoding": {
@@ -524,19 +536,13 @@
   "lem:spectral_zeta_from_heat": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/lems/lem_spectral_zeta_from_heat.tex",
-    "hash": "70951c16bcbb3e02d8293a0776a8ca2c7c1fd8306b13d8a71029171283b8318b",
+    "hash": "50977483c62f047eab47b46bfc6e7ec90f29aae08a6d345c8cb9a4c13b2064f1",
     "type": "lemma"
   },
   "lem:spectrum_zero_bijection": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/lems/lem_spectrum_zero_bijection.tex",
     "hash": "cf9ec2fb7720f43cd220da64dc236c757022cdb957289f7116d5b5f389e649f6",
-    "type": "lemma"
-  },
-  "lem:tauberian_heat_trace_application": {
-    "chapter": 5,
-    "file": "src/chapters/05_heat_kernel_asymptotics/lems/lem_tauberian_heat_trace_application.tex",
-    "hash": "5b258d49989faaf8dc6974f4e77201729d98bf9a4e5149bdd1e351b63607296d",
     "type": "lemma"
   },
   "lem:trace_class_Lt": {
@@ -560,7 +566,7 @@
   "lem:trace_class_failure_alpha_leq_pi": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/lems/lem_trace_class_failure_alpha_leq_pi.tex",
-    "hash": "000c86042cf9c49ba874158d6ff578d082971901f2f03148e8a222e52247cd15",
+    "hash": "2e86b10d79af49e95d802bd279c13f078624dd43f99bf22756fb8ddc9c8ed5b9",
     "type": "lemma"
   },
   "lem:trace_class_via_weighted_L1": {
@@ -572,7 +578,7 @@
   "lem:trace_distribution_positive": {
     "chapter": 8,
     "file": "src/chapters/08_spectral_rigidity/lems/lem_trace_distribution_positive.tex",
-    "hash": "f3be479624e7dcdd205a89711e6c18631fb6cc223c15a95e89af687fad786948",
+    "hash": "e05eea6ee606fb668ae79efa791bc957fe867daf25dca1720f1dd96b35121f27",
     "type": "lemma"
   },
   "lem:trace_distribution_positivity": {
@@ -596,7 +602,7 @@
   "lem:trace_norm_rate_convergence": {
     "chapter": 2,
     "file": "src/chapters/02_operator_construction/lems/lem_trace_norm_rate_convergence.tex",
-    "hash": "f5f5b83badf0beead35594e0ffadb931952a173b0c950d052b99fa60e89d66d9",
+    "hash": "96d7016389075da94652ce508526a6571e7305d236fade60be26c7691db75e5d",
     "type": "lemma"
   },
   "lem:trace_zero": {
@@ -626,7 +632,7 @@
   "lem:weighted_trace_norm_duality": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/lems/lem_weighted_trace_norm_duality.tex",
-    "hash": "9488723623712f2472de339475fd6315915e32b5287c00d3e9f0b81577b571b0",
+    "hash": "c5803bcfe2c8185e60a5bd3de8187961048efce3bcaf7bfc4ea245aac942fa2e",
     "type": "lemma"
   },
   "lem:xi_growth_bound": {
@@ -668,7 +674,7 @@
   "prop:inverse_spectral_rigidity": {
     "chapter": 8,
     "file": "src/chapters/08_spectral_rigidity/props/prop_inverse_spectral_rigidity.tex",
-    "hash": "39843e0724e3dc8d953c4d704ff8a23cff308c1729f88401ede5a4ef952eb077",
+    "hash": "88dfea2d7df1c2825a86b82790970e73ab4d1be117b48c7acb1d38e1efe6a354",
     "type": "proposition"
   },
   "prop:selfadjointness_Lt": {
@@ -698,7 +704,7 @@
   "prop:strong_op_closure_heat": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/props/prop_strong_op_closure_heat.tex",
-    "hash": "733cea1c7d661425af2a9677826fceb30831fba93623f233c5801926b13625de",
+    "hash": "af84245a27fb722b289bcb07341b5c8fc237343c3972897ee175101e8f52eca8",
     "type": "proposition"
   },
   "prop:symmetry_Lt_Schwartz": {
@@ -710,7 +716,7 @@
   "prop:trace_class_sharpness": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/props/prop_trace_class_sharpness.tex",
-    "hash": "2ac1c83bf2b3d9113b4dfed41bd466158fcdab2a4f4de4629c775383edd3996a",
+    "hash": "593ed1b36e406eab9bfb349078a4654608af82230d8e795e56b4bdb23fb45b50",
     "type": "proposition"
   },
   "prop:two_sided_heat_trace_bounds": {
@@ -725,22 +731,34 @@
     "hash": "9be90649436938016eb57da0c00088bb90c31f39471f3baf12c6a31b01619b9e",
     "type": "remark"
   },
+  "rem:contextual_link_prologue": {
+    "chapter": 1,
+    "file": "src/chapters/01_foundations/rems/rem_contextual_link_prologue.tex",
+    "hash": "2aa7547580a788e54e3f2309887accdccfccc405dd055d1f8785cb1009bf456a",
+    "type": "remark"
+  },
   "rem:dag_acyclic_proof_flow": {
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/rems/rem_dag_acyclic_proof_flow.tex",
-    "hash": "99bde817a439d5eab5f60ba981c88b48522f17629f21d4d785ac955667d69428",
+    "hash": "89b4b58d75d9488e4b2c6926fac765c74ebf56c5c8c5686062eeed7df62f7c55",
+    "type": "remark"
+  },
+  "rem:forward_spectral_closure": {
+    "chapter": 3,
+    "file": "src/chapters/03_determinant_identity/rems/rem_forward_spectral_closure.tex",
+    "hash": "a6cee71081d6271d7e8eaea5b125227fb46161e07f051e3726af2a93c457fc74",
     "type": "remark"
   },
   "rem:functional_calculus_trace": {
     "chapter": 8,
     "file": "src/chapters/08_spectral_rigidity/rems/rem_functional_calculus_trace.tex",
-    "hash": "b6e7492e33eeed7a729c76a0d1688a5f4fcbd26ad04fedd5dd7d874e1c61c5e2",
+    "hash": "6055af89a23e1c4c85e1a22ab75bb2a6e2c3ed9888eaa0d4867f8ff07660c126",
     "type": "remark"
   },
   "rem:generalized_trace_decay": {
     "chapter": 9,
     "file": "src/chapters/09_spectral_generalization/rems/rem_generalized_trace_decay.tex",
-    "hash": "3599608dfa716fa04f396ce2146a49468cf91e043da608bc5967db2982e0ddd1",
+    "hash": "1f07d3cc4a741f3eb0476c2e758481199d61daa45b6fe66ae3a491940f9ce335",
     "type": "remark"
   },
   "rem:hadamard_multiplicity_preservation": {
@@ -749,16 +767,34 @@
     "hash": "c465e4723cd6695d2919eb6d6488d29ce789b70078a3637864a544c0a0c68946",
     "type": "remark"
   },
+  "rem:karamata_vs_korevaar": {
+    "chapter": 7,
+    "file": "src/chapters/07_tauberian_growth/rems/rem_karamata_vs_korevaar.tex",
+    "hash": "32e780248d8d2b9f1225d9ad1c78a46c87f11f1d131088c331c5d835b54dc168",
+    "type": "remark"
+  },
   "rem:log_singularity_necessary": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/rems/rem_log_singularity_necessary.tex",
-    "hash": "20a275e2bdb2e9b844f72cc03b4146f2a8b99ad1b32656ecc12cbbc560f2aff3",
+    "hash": "447d53ddf2773f060beef565ced43bcacff65e33000637e6bfea3de1527cc869",
+    "type": "remark"
+  },
+  "rem:logical_closure": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/rems/rem_logical_closure.tex",
+    "hash": "d825fe4134cd8284db96c4f8b304e0ae1c4f9cd6de76745a1eb500b238b6de18",
     "type": "remark"
   },
   "rem:no_rh_assumption": {
     "chapter": 4,
     "file": "src/chapters/04_spectral_correspondence/rems/rem_no_rh_assumption.tex",
-    "hash": "2db6ad0e011164be2c4199561e6f1b332a04431065ac158f511e03229fb7a21a",
+    "hash": "13615e4743b8ab45e8465064749de3eb1d45e7749ccce55d5f59fe37afd801eb",
+    "type": "remark"
+  },
+  "rem:rh_equivalence_forward_ref": {
+    "chapter": 4,
+    "file": "src/chapters/04_spectral_correspondence/rems/rem_rh_equivalence_forward_ref.tex",
+    "hash": "5a3be18a847a4b9fd9042842efd68677cfc4250f3156cbbb18008bf4b3d980bd",
     "type": "remark"
   },
   "rem:selfadjoint_analytic_vectors": {
@@ -782,13 +818,25 @@
   "rem:spectral_dimension": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/rems/rem_spectral_dimension.tex",
-    "hash": "8c7fef245b030137a55ab679d34e3c3741f66470c74afff965b236adb9677329",
+    "hash": "50e9d28f90c2838c264d35d3d5dfd5f3e6c4b620e070b30e1d4bfb77af542f48",
     "type": "remark"
   },
   "rem:spectral_generalization_scope": {
     "chapter": 9,
     "file": "src/chapters/09_spectral_generalization/rems/rem_spectral_generalization_scope.tex",
-    "hash": "91b468db7b42954415d35f3d888d973d0c5f74d4d04b083b0f413f458756ef56",
+    "hash": "ca402df70e421b7a84e1715465f1beec2f1d42f8ef463dbfbc6f163a382d785c",
+    "type": "remark"
+  },
+  "rem:spectral_physics_analogy": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/rems/rem_spectral_physics_analogy.tex",
+    "hash": "ce6796c623189a4008bc4dda248260cf32e00126c7f11f10e93daa90ed4d80da",
+    "type": "remark"
+  },
+  "rem:spectral_symmetry_forward_ref": {
+    "chapter": 8,
+    "file": "src/chapters/08_spectral_rigidity/rems/rem_spectral_symmetry_forward_ref.tex",
+    "hash": "e13319bb02e70c9c6cf8977d0cf8113a853a6aafc1e3365e7f72beb2bfa51e8f",
     "type": "remark"
   },
   "rem:spectral_zero_bijection_from_determinant": {
@@ -797,10 +845,16 @@
     "hash": "457bce1f93750d16f9cdcc16e514f6e65409ae96d524fe35bda3a1b0243f9a23",
     "type": "remark"
   },
+  "rem:spectrum_Lt_real_discrete": {
+    "chapter": 2,
+    "file": "src/chapters/02_operator_construction/rems/rem_spectrum_Lt_real_discrete.tex",
+    "hash": "50954555ca101c7db1ad85848c25d1f2364101101686cd298d044837506c5ff0",
+    "type": "remark"
+  },
   "rem:structural_role_of_ch8": {
     "chapter": 8,
     "file": "src/chapters/08_spectral_rigidity/rems/rem_structural_role_of_ch8.tex",
-    "hash": "1e028dc05f2c515a59655992ebca982afbc3e3b2b471cd7bd3b8a587df3bc7dd",
+    "hash": "3e878501b2203173d3ec74810e1e4d90ae7bd1b42cf8c2a262aee95cf0f9921f",
     "type": "remark"
   },
   "rem:trace_positivity_closure": {
@@ -809,58 +863,22 @@
     "hash": "5d6f50310e56083cd65b9bc28076676365970127b3d89da88f50c6d95cec22e6",
     "type": "remark"
   },
-  "rmk:contextual_link_prologue": {
-    "chapter": 1,
-    "file": "src/chapters/01_foundations/rems/rmk_contextual_link_prologue.tex",
-    "hash": "631ae2c5f6511474f4acc6de836ac957d77453936a6ffb6e45254659165fdb18",
-    "type": "remark"
-  },
-  "rmk:forward_spectral_closure": {
+  "rem:zeta_trace_singularity": {
     "chapter": 3,
-    "file": "src/chapters/03_determinant_identity/rems/rmk_forward_spectral_closure.tex",
-    "hash": "1fd992b90ad9ec638527205ea9f14c1d32c1c76b0ec1814c1e51d7c4bd250f3c",
-    "type": "remark"
-  },
-  "rmk:karamata_vs_korevaar": {
-    "chapter": 7,
-    "file": "src/chapters/07_tauberian_growth/rems/rmk_karamata_vs_korevaar.tex",
-    "hash": "1d67aa31efbf2d681adaf88abbc5e48562c733de5bd1d2213e3cd26ed59558b8",
-    "type": "remark"
-  },
-  "rmk:rh_equivalence_forward_ref": {
-    "chapter": 4,
-    "file": "src/chapters/04_spectral_correspondence/rems/rmk_rh_equivalence_forward_ref.tex",
-    "hash": "a13aab9caad3c16571d24b93403b981e88157cd5c903a1b8771390e2b3a33ce6",
-    "type": "remark"
-  },
-  "rmk:spectral_physics_analogy": {
-    "chapter": 6,
-    "file": "src/chapters/06_spectral_implications/rems/rem_spectral_physics_analogy.tex",
-    "hash": "58a77bffbdcfc93358256c1274c388cf48df26a392f78697ad0c7a33467b4d74",
-    "type": "remark"
-  },
-  "rmk:spectral_symmetry_forward_ref": {
-    "chapter": 8,
-    "file": "src/chapters/08_spectral_rigidity/rems/rmk_spectral_symmetry_forward_ref.tex",
-    "hash": "9c4f69a9d2ab87a41ce787fda59c8a062b5ea9ee71d8a6c5c4d29a6c5a043a53",
-    "type": "remark"
-  },
-  "rmk:spectrum_Lt_real_discrete": {
-    "chapter": 2,
-    "file": "src/chapters/02_operator_construction/rems/rmk_spectrum_Lt_real_discrete.tex",
-    "hash": "ef9a8cf661337cc916647d136dcf590128e8a46eaca70948fbe0a37ce0e7d66f",
+    "file": "src/chapters/03_determinant_identity/rems/rem_zeta_trace_singularity.tex",
+    "hash": "def988b0b847ec36ec61dedaf5d8a075145dd4c39790d91a257e3e84a57a7974",
     "type": "remark"
   },
   "thm:canonical_operator_realization": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/thms/thm_canonical_operator_realization.tex",
-    "hash": "a79ddaaaa180303b9d6b78eb6e0b563d5cff7cc196547569d92e498b5db8dfc1",
+    "hash": "b6fd97d41f67d541f3490274367651dd5982758353d3e39ee620b48bb9ab492c",
     "type": "theorem"
   },
   "thm:det_identity_revised": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/thms/thm_det_identity_revised.tex",
-    "hash": "6ae398cfb1408ce6dec17dff3ee22ec42b576bc8ee788f9f0f60373f623a213c",
+    "hash": "574e05fb29af78d73cf4f4663dc0113b90dbd8b6b5ee4a592f2a1ac0761ef46d",
     "type": "theorem"
   },
   "thm:eq_of_rh": {
@@ -875,6 +893,12 @@
     "hash": "478d5d04c49c053cb8427831ad7cd621487d6955183fbdc217c85cc21de52d32",
     "type": "theorem"
   },
+  "thm:heat_trace_rigidity": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/thms/thm_heat_trace_rigidity.tex",
+    "hash": "1b0a42704d52b55a9081f3eb95cbbd33f61a5c2883def839e2432b57e1443d54",
+    "type": "theorem"
+  },
   "thm:rh_from_real_simple_spectrum": {
     "chapter": 8,
     "file": "src/chapters/08_spectral_rigidity/thms/thm_rh_from_real_simple_spectrum.tex",
@@ -884,7 +908,7 @@
   "thm:rh_spectral_closure": {
     "chapter": 6,
     "file": "src/chapters/06_spectral_implications/thms/thm_rh_spectral_closure.tex",
-    "hash": "6152a5175ff45a3ea068dc877666eaddf9c0a91878d546d6570dcf8d109d7887",
+    "hash": "22fd871f6ca181c40d2a52350088a03e00b851e2f54918d260c4c7b88de2456c",
     "type": "theorem"
   },
   "thm:rh_spectrum_equiv": {
@@ -926,7 +950,7 @@
   "thm:truth_of_rh": {
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/thms/thm_truth_of_rh.tex",
-    "hash": "068e383e09745a0cd22200d0f62d3bef251e219360322dfd64a72e97115a2d46",
+    "hash": "59c918dd3ddb9c24e79750e5d8b25b57c2bad35f3e62d5d8b9a95f33ecd2a6b6",
     "type": "theorem"
   },
   "thm:uniqueness_realization": {

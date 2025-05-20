@@ -1,4 +1,4 @@
-\begin{proof}[Proof of \cref{thm:det_identity_revised}]
+\begin{proof}[Proof of \thmref{thm:det_identity_revised}]
 Let \( f(\lambda) := \detz(I - \lambda \Lsym) \).
 
 \paragraph{(1) Local power series definition.}
@@ -6,30 +6,31 @@ For \( |\lambda| < \|\Lsym\|^{-1} \), the determinant admits the absolutely conv
 \[
 \log f(\lambda) = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(\Lsym^n),
 \]
-which defines a holomorphic function in a neighborhood of \( \lambda = 0 \).
+which defines a holomorphic function in a neighborhood of \( \lambda = 0 \). The convergence of this expansion is ensured by trace-class regularity, which follows from the decay bounds in \lemref{lem:trace_class_Lt}, itself relying on \lemref{lem:mollified_profile_decay} and \lemref{lem:xi_growth_bound}.
 
 \paragraph{(2) Entire extension via heat trace.}
-By \cref{lem:det_via_heat_trace} and \cref{lem:laplace_heat_trace_convergence}, \( f(\lambda) \) admits the Laplace representation
+By \lemref{lem:det_via_heat_trace} and \lemref{lem:laplace_heat_trace_convergence}, \( f(\lambda) \) admits the Laplace representation
 \[
 \log f(\lambda) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t \Lsym}) \, dt,
 \]
-which converges for all \( \lambda \in \C \), showing that \( f \) extends to an entire function.
+which converges for all \( \lambda \in \C \), showing that \( f \) extends to an entire function. The asymptotic control of the integrand stems from \lemref{lem:heat_trace_expansion} and \lemref{lem:trace_norm_convergence_Lt_to_Lsym}.
 
 \paragraph{(3) Order and growth.}
-By \cref{lem:det_growth_bound} and \cref{lem:det_identity_entire_order_one}, the function \( f \) is entire of order one and exponential type at most \( \pi \), with logarithmic-exponential bounds:
+By \lemref{lem:det_growth_bound} and \lemref{lem:det_identity_entire_order_one}, the function \( f \) is entire of order one and exponential type at most \( \pi \), with logarithmic-exponential bounds:
 \[
 |f(\lambda)| \le C e^{\pi |\lambda|}.
 \]
+The kernel decay required for these bounds is guaranteed by \lemref{lem:kernel_L2_weighted_bound}, \lemref{lem:mollified_profile_decay}, and \lemref{lem:xi_growth_bound}.
 
 \paragraph{(4) Matching with \(\Xi\).}
 Define
 \[
 g(\lambda) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
 \]
-By \cref{lem:hadamard_linear_form,lem:exact_type_pi}, the function \( g \) is entire of order one and exact exponential type \( \pi \), with \( g(0) = 1 \). Similarly, by \cref{lem:trace_zero}, we have \( \Tr(\Lsym) = 0 \), so \( f(0) = \detz(I) = 1 \).
+By \lemref{lem:hadamard_linear_form} and \lemref{lem:exact_type_pi}, the function \( g \) is entire of order one and exact exponential type \( \pi \), with \( g(0) = 1 \). Similarly, by \lemref{lem:trace_zero}, we have \( \Tr(\Lsym) = 0 \), so \( f(0) = \detz(I) = 1 \).
 
 \paragraph{(5) Logarithmic derivative equality.}
-By \cref{lem:A_log_derivative}, the logarithmic derivative satisfies
+By \lemref{lem:A_log_derivative}, the logarithmic derivative satisfies
 \[
 \frac{d}{d\lambda} \log f(\lambda)
 = \Tr\left( (I - \lambda \Lsym)^{-1} \Lsym \right)
@@ -43,5 +44,5 @@ The functions \( f \) and \( g \) are entire of order one, have matching zeros a
 \detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
 \quad \text{for all } \lambda \in \C,
 \]
-as claimed.
+as claimed. This completes the spectral determinant identity constructed in \thmref{thm:canonical_operator_realization}.
 \end{proof}

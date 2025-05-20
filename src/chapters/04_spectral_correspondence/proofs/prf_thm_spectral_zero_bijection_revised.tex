@@ -5,13 +5,13 @@ Let \( \rho = \tfrac{1}{2} + i\gamma \in \C \) be a nontrivial zero of the Riema
 \]
 
 \paragraph{Injectivity.}
-By \lemref{lem:zero_to_eigenvalue_injection}, the map \( \rho \mapsto \mu_\rho \in \Spec(\Lsym) \) is injective and multiplicity-preserving. Each nontrivial zero corresponds to a unique nonzero eigenvalue of \( \Lsym \), as guaranteed by the spectral theory of compact trace-class operators and the analytic structure of the Fredholm determinant.
+By \lemref{lem:zero_to_eigenvalue_injection}, the map \( \rho \mapsto \mu_\rho \in \Spec(\Lsym) \) is injective and multiplicity-preserving. Each nontrivial zero corresponds to a unique nonzero eigenvalue of \( \Lsym \), as guaranteed by the spectral theory of compact trace-class operators and the analytic structure of the Fredholm determinant. The analytic encoding is constructed via \thmref{thm:det_identity_revised}, whose determinant identity ensures that no non-zeta-related poles contribute.
 
 \paragraph{Surjectivity.}
-By \lemref{lem:spectral_exhaustivity}, every nonzero eigenvalue \( \mu \in \Spec(\Lsym) \setminus \{0\} \) arises from some nontrivial zero \( \rho \in \C \), via the inverse map \( \mu \mapsto \rho := \tfrac{1}{2} + i\mu \). The determinant \( \detz(I - \lambda \Lsym) \) admits no extraneous zeros.
+By \lemref{lem:spectral_exhaustivity}, every nonzero eigenvalue \( \mu \in \Spec(\Lsym) \setminus \{0\} \) arises from some nontrivial zero \( \rho \in \C \), via the inverse map \( \mu \mapsto \rho := \tfrac{1}{2} + i\mu \). The determinant \( \detz(I - \lambda \Lsym) \) admits no extraneous zeros, a fact which depends on the weighted decay class assumptions in \lemref{lem:trace_class_Lt} and kernel construction via \lemref{lem:mollified_profile_decay}.
 
 \paragraph{Multiplicity Preservation.}
-By \lemref{lem:spectral_multiplicity_matching}, the multiplicity of each eigenvalue \( \mu_\rho \in \Spec(\Lsym) \) matches the order of vanishing of \( \zeta(s) \) at \( \rho \). This is ensured by the Hadamard factorization of \( \Xi(s) \) and the spectral representation of the Fredholm determinant.
+By \lemref{lem:spectral_multiplicity_matching}, the multiplicity of each eigenvalue \( \mu_\rho \in \Spec(\Lsym) \) matches the order of vanishing of \( \zeta(s) \) at \( \rho \). This is ensured by the Hadamard factorization of \( \Xi(s) \) and the spectral representation of the Fredholm determinant developed in \thmref{thm:det_identity_revised}.
 
 \paragraph{Conclusion.}
 The spectral map

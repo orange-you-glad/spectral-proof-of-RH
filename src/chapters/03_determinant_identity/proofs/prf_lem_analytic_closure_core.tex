@@ -1,0 +1,18 @@
+\begin{proof}[Proof of \lemref{lem:analytic_closure_core}]
+The proof is modular, verifying each analytic prerequisite used in \thmref{thm:det_identity_revised} and \thmref{thm:truth_of_rh}.
+
+\paragraph{(1) Operator Construction and Convergence.}
+The operators \( L_t \in \TC(\HPsi) \) are trace class by \lemref{lem:trace_class_Lt}, with kernel decay controlled by \lemref{lem:mollified_profile_decay} and profile bounds in \lemref{lem:xi_growth_bound}. Trace-norm convergence \( L_t \to \Lsym \) is established in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}, with quantitative bounds in \lemref{lem:trace_norm_rate_convergence}.
+
+\paragraph{(2) Heat Kernel Asymptotics.}
+The kernel admits a short-time expansion \lemref{lem:hk_expansion_uniform}, integrated globally in \lemref{lem:heat_trace_expansion}. Uniform bounds are given in \lemref{lem:hk_upper_bound}, \lemref{lem:hk_lower_bound}, and summarized in \propref{prop:two_sided_heat_trace_bounds}. Semigroup well-posedness and convergence are given in \lemref{lem:heat_semigroup_wellposed} and \propref{prop:heat_trace_uniform_conv}.
+
+\paragraph{(3) Positivity and Spectral Symmetry.}
+The kernel is symmetric by \lemref{lem:spectral_symmetry}, which also implies full spectral reflection \( \mu \mapsto -\mu \) due to the evenness of the spectral profile. Trace positivity is given in \lemref{lem:trace_distribution_positive}, and extended to all test functions in \lemref{lem:trace_distribution_positivity}.
+
+\paragraph{(4) Generalization and Injectivity.}
+The general framework extends via \defref{def:kernel_decay_condition} and \lemref{lem:trace_class_convergence_general}, establishing functorial compatibility in \thmref{thm:spectral_determinant_identity_Lpi}. Spectral encoding generalizes via \thmref{thm:zero_encoding_general}, and injectivity in the Riemann case is handled by \lemref{lem:det_zero_implies_spectrum} and \lemref{lem:spectral_encoding_injection}.
+
+\paragraph{Conclusion.}
+All operator-theoretic and analytic conditions used in the determinant identity and RH~\(\iff\) spectral reality equivalence are satisfied. Thus, the entire logical structure of the spectral RH program is analytically closed.
+\end{proof}

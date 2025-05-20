@@ -35,6 +35,10 @@ Then open in VS Code:
 ```bash
 code .
 ```
+## Usage
+
+Run `make check` before submitting patches and use `make deploy` to build docs.
+
 
 ---
 

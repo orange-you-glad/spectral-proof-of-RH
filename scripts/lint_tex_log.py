@@ -6,9 +6,11 @@ import os
 import re
 import sys
 
-LOG_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "src", "main.log"
-)
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_PATHS = [
+    os.path.join(ROOT_DIR, "src", "main.log"),
+    os.path.join(ROOT_DIR, "src", "manuscript.log"),
+]
 
 OVERFULL_RE = re.compile(r"Overfull \\hbox")
 UNDERFULL_RE = re.compile(r"Underfull \\vbox")
@@ -33,8 +35,21 @@ def parse_log(path: str) -> list[str]:
     return errors
 
 
+def find_log() -> str | None:
+    for path in LOG_PATHS:
+        if os.path.isfile(path):
+            return path
+    return None
+
+
 def main() -> None:
-    issues = parse_log(LOG_PATH)
+    log_path = find_log()
+    if log_path is None:
+        print(f"❌ no log file found in: {', '.join(LOG_PATHS)}")
+        print("\n🔥 LaTeX log lint failed.")
+        sys.exit(1)
+
+    issues = parse_log(log_path)
     if issues:
         for issue in issues:
             print(f"❌ {issue}")

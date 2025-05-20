@@ -13,7 +13,7 @@ Every rule enforced here supports:
 
 ---
 
-## 🚀 Running the Suite
+## Usage
 
 All tests are executed via Python’s built-in `unittest` module:
 
@@ -37,7 +37,10 @@ All LaTeX files under `src/chapters/` with a formal prefix (`thm_`, `lem_`, `def
 
 | File                           | Required Label                     |
 | ------------------------------ | ---------------------------------- |
+
+
 | `thm_spectral_equivalence.tex` | `\label{thm:spectral_equivalence}` |
+
 
 ---
 
@@ -46,8 +49,11 @@ All LaTeX files under `src/chapters/` with a formal prefix (`thm_`, `lem_`, `def
 Each formal object must have a **corresponding proof file**:
 
 | Formal File                    | Required Proof File                   |
+
 | ------------------------------ | ------------------------------------- |
+
 | `thm_spectral_equivalence.tex` | `proofs/prf_spectral_equivalence.tex` |
+
 
 ---
 
@@ -83,13 +89,21 @@ All formal environments must live in their designated subfolders:
 
 | Environment Type      | Required Directory |
 | --------------------- | ------------------ |
+
 | `\begin{theorem}`     | `thms/`            |
+
 | `\begin{lemma}`       | `lems/`            |
+
 | `\begin{definition}`  | `defs/`            |
+
 | `\begin{proposition}` | `props/`           |
+
 | `\begin{corollary}`   | `cors/`            |
+
 | `\begin{remark}`      | `rems/`            |
+
 | `\begin{proof}`       | `proofs/`          |
+
 
 Any environment found inline will raise a structural hygiene failure.
 

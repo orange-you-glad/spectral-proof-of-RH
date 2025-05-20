@@ -4,3 +4,7 @@
 2. Move each lemma proof to `proofs/`.
 3. Update the theorem statement file with clear references to lemmas.
 4. Update DAG edges to reflect the new dependencies.
+
+## Usage
+
+Refactor large theorems using this process and ensure the DAG remains acyclic.

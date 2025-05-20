@@ -29,6 +29,10 @@ This repository enforces a strict and deterministic layout for maximal reproduci
 * 📂 `scripts/`: CI tools and validation scripts
 * 📄 `preamble.tex`: Global macros and notations
 * 📄 `main.tex`: Manuscript compilation driver
+## Usage
+
+Run `make check` to verify the full integrity suite and `make deploy` to build the PDF in `docs/`.
+
 
 Thank you for the clarification — you're referring to the actual status of the proof of the Riemann Hypothesis within your manuscript. Here's a concise and precise update suitable for inclusion in the manuscript itself (e.g. in the introduction or prologue):
 

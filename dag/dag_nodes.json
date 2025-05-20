@@ -11,6 +11,12 @@
     "hash": "4f7e0449f9de4908bbc7d3b8d47eecd9c8285867895e1672a5d207d1522e3ea7",
     "type": "corollary"
   },
+  "cor:grh_real_equiv_spectral_reality": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/cors/cor_grh_real_equiv_spectral_reality.tex",
+    "hash": "a0b1d85c2a0f7e618fd14c0a1961cee9e5e104c28c26d4d26d1554a1ad863d93",
+    "type": "corollary"
+  },
   "cor:spectral_determines_zeta": {
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/cors/cor_spectral_determines_zeta.tex",
@@ -303,6 +309,12 @@
     "chapter": 4,
     "file": "src/chapters/04_spectral_correspondence/lems/lem_fredholm_zero_spectral_map.tex",
     "hash": "eaac5bc4e5c57e57591d262cf5b571ca1067baa10552bdc4ab205d95b9604b50",
+    "type": "lemma"
+  },
+  "lem:grh_spectral_reality": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/lems/lem_grh_spectral_reality.tex",
+    "hash": "92714cb298d632a1fc4ecb76c649eb55c4e751213b97613ff06e3a1732af4022",
     "type": "lemma"
   },
   "lem:hadamard_fredholm_multiplicity": {
@@ -891,6 +903,12 @@
     "chapter": 2,
     "file": "src/chapters/02_operator_construction/thms/thm_existence_Lsym.tex",
     "hash": "478d5d04c49c053cb8427831ad7cd621487d6955183fbdc217c85cc21de52d32",
+    "type": "theorem"
+  },
+  "thm:grh_spectral_closure": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/thms/thm_grh_spectral_closure.tex",
+    "hash": "b6330a47fff23090cfdb3d1fc3ce7ac633279e7cd9de825ec8d08ca1862936aa",
     "type": "theorem"
   },
   "thm:heat_trace_rigidity": {

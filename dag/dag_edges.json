@@ -504,6 +504,10 @@
     "prop:two_sided_heat_trace_bounds"
   ],
   [
+    "lem:grh_spectral_reality",
+    "cor:grh_real_equiv_spectral_reality"
+  ],
+  [
     "lem:reality_of_spectrum_and_rh",
     "cor:spectrum_real_equiv_rh"
   ],
@@ -562,6 +566,10 @@
   [
     "thm:spectral_zero_bijection_revised",
     "thm:eq_of_rh"
+  ],
+  [
+    "thm:det_identity_revised",
+    "thm:grh_spectral_closure"
   ],
   [
     "lem:canonical_closure",

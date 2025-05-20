@@ -1,4 +1,4 @@
-✅ wrote dag/dag_nodes.json (161 nodes)
+✅ wrote dag/dag_nodes.json (164 nodes)
 
 [debug] prf_lem_L1_integrability_conjugated_kernel.tex references in lem:L1_integrability_conjugated_kernel:
 
@@ -289,6 +289,9 @@
   → lem:hk_lower_bound [OK]
   → lem:hk_upper_bound [OK]
 
+[debug] prf_cor_grh_real_equiv_spectral_reality.tex references in cor:grh_real_equiv_spectral_reality:
+  → lem:grh_spectral_reality [OK]
+
 [debug] prf_cor_spectrum_real_equiv_rh.tex references in cor:spectrum_real_equiv_rh:
   → lem:reality_of_spectrum_and_rh [OK]
 
@@ -298,6 +301,8 @@
   → thm:uniqueness_realization [OK]
 
 [debug] prf_lem_determinant_fixes_spectrum.tex references in lem:determinant_fixes_spectrum:
+
+[debug] prf_lem_grh_spectral_reality.tex references in lem:grh_spectral_reality:
 
 [debug] prf_lem_multiplicity_preservation.tex references in lem:multiplicity_preservation:
   → lem:log_derivative_determinant [OK]
@@ -319,6 +324,9 @@
   ⏭️ sec:heat_kernel_asymptotics [skipped non-logical]
   → thm:det_identity_revised [OK]
   → thm:spectral_zero_bijection_revised [OK]
+
+[debug] prf_thm_grh_spectral_closure.tex references in thm:grh_spectral_closure:
+  → thm:det_identity_revised [OK]
 
 [debug] prf_thm_heat_trace_rigidity.tex references in thm:heat_trace_rigidity:
 
@@ -433,7 +441,7 @@
   → thm:det_identity_revised [OK]
   → thm:spectral_determinant_identity_Lpi [OK]
   → thm:spectral_zero_bijection_revised [OK]
-✅ wrote dag/dag_edges.json (201 edges)
+✅ wrote dag/dag_edges.json (203 edges)
 📊 DAG Health Analysis
 Total Nodes               : 80
 Total Edges               : 100

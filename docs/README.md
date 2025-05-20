@@ -17,6 +17,10 @@ The proof unfolds as a chain of structural correspondences:
 * **Define** a zeta-regularized determinant for this operator and show it reproduces the completed zeta function.
 * **Match** each eigenvalue of the operator with a shifted nontrivial zeta zero.
 * **Use** the reality of the operator’s spectrum (guaranteed by self-adjointness) to deduce that all zeros lie on the critical line.
+## Usage
+
+Compile the LaTeX sources with `make deploy` or view the pre-built PDF in the `docs/` folder.
+
 
 In this sense, the Riemann Hypothesis becomes a geometric statement about where the spectrum of a real operator lives: on the real line.
 

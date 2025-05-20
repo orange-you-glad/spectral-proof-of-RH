@@ -24,3 +24,7 @@ Nodes reference their source files via labels and are listed in `dag/dag_nodes.j
 
 Always run `make check` to verify that the DAG remains acyclic and all nodes are
 accounted for.
+
+## Usage
+
+Run `python dag/dag_audit.py --check` to verify the graph, and view `dag/dag.dot` for a visualization.

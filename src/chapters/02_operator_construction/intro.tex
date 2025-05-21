@@ -28,6 +28,12 @@ The construction unfolds in five analytically rigorous stages:
     ensuring uniqueness of the zeta-determinant normalization (\thmref{thm:trace_zero_Lsym}).
 \end{itemize}
 
+The proof of trace-norm convergence deserves special emphasis.  We use uniform trace-norm bounds on the mollified family \(\{L_t\}\), exponential decay of the kernels, and dominated convergence on the weighted Hilbert space.  Explicit estimates show that
+\[
+  \|L_t-\Lsym\|_{\TC} \le C\,t^{1/2}
+\]
+for small \(t\), ensuring that \(L_t\to\Lsym\) not only pointwise but with quantitative control.  This convergence, combined with essential self-adjointness on the Schwartz core, yields the well-defined operator used throughout the spectral analysis.
+
 These results culminate in the spectral operator \( \Lsym \), rigorously defined in \( \TC(H_{\Psi_\alpha}) \), and endowed with trace-class regularity, self-adjointness, and analytic semigroup generation (\lemref{lem:heat_semigroup_existence}).
 
 \medskip

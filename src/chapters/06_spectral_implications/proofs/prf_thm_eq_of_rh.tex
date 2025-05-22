@@ -10,6 +10,12 @@ By \thmref{thm:det_identity_revised}, the Carleman \(\zeta\)-regularized Fredhol
 \]
 This identity is constructed without assuming RH and rests on analytic inputs from Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}, particularly the convergence and singularity structure derived in \lemref{lem:heat_trace_expansion}, \lemref{lem:trace_class_Lt}, and \lemref{lem:kernel_trace_norm_convergence}.
 
+The Fredholm product factorization of \(\detz(I-\lambda \Lsym)\) yields a one-to-one correspondence between its nonzero zeros and the eigenvalues \(\mu\) of \(\Lsym\).  Concretely,
+\begin{equation*}
+\detz(I-\lambda \Lsym) = \Xi\left(\tfrac{1}{2}+i\lambda\right)/\Xi\left(\tfrac{1}{2}\right) = \prod_{\rho} \Bigl(1-\frac{\lambda}{\mu_{\rho}}\Bigr),
+\end{equation*}
+where the product ranges over all nontrivial zeros \(\rho\) and \(\mu_{\rho} = \tfrac{1}{i}(\rho-\tfrac{1}{2})\).  The Tauberian arguments of Chapter~\ref{sec:tauberian_growth} show that this product converges absolutely and that the eigenvalue counting function agrees with the classical Riemann--von Mangoldt formula.  Hence each zero of \(\Xi(s)\) produces an eigenvalue of \(\Lsym\), and no additional spectral points occur.  Combined with \lemref{lem:log_corrected_tauberian_estimate}, this identifies the spectral counting function of \(\Lsym\) precisely with the zeta zero counting function.
+
 \medskip
 
 Now observe the algebraic implication: for any nontrivial zero \( \rho = \sigma + i\gamma \),

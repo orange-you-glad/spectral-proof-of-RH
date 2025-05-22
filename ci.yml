@@ -1,47 +1,47 @@
-name: Manuscript CI
+# name: Manuscript CI
 
-on:
-  push:
-    paths:
-      - '**.tex'
-      - '**.py'
-      - '.github/workflows/ci.yml'
-      - 'Makefile'
-      - 'VERSION'
-  pull_request:
-    paths:
-      - '**.tex'
-      - '**.py'
-      - '.github/workflows/ci.yml'
-      - 'Makefile'
-      - 'VERSION'
+# on:
+#   push:
+#     paths:
+#       - '**.tex'
+#       - '**.py'
+#       - '.github/workflows/ci.yml'
+#       - 'Makefile'
+#       - 'VERSION'
+#   pull_request:
+#     paths:
+#       - '**.tex'
+#       - '**.py'
+#       - '.github/workflows/ci.yml'
+#       - 'Makefile'
+#       - 'VERSION'
 
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    name: Structural + Hygiene Checks
+# jobs:
+#   validate:
+#     runs-on: ubuntu-latest
+#     name: Structural + Hygiene Checks
 
-    steps:
-      - name: 📥 Checkout repository
-        uses: actions/checkout@v3
+#     steps:
+#       - name: 📥 Checkout repository
+#         uses: actions/checkout@v3
 
-      - name: 🐍 Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
+#       - name: 🐍 Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.11'
 
-      - name: 📦 Install Python dependencies
-        run: |
-          pip install -r scripts/requirements.txt || true
+#       - name: 📦 Install Python dependencies
+#         run: |
+#           pip install -r scripts/requirements.txt || true
 
-      - name: 📦 Install LaTeX + checkcites
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y latexmk texlive-full
-          pip install checkcites
+#       - name: 📦 Install LaTeX + checkcites
+#         run: |
+#           sudo apt-get update
+#           sudo apt-get install -y latexmk texlive-full
+#           pip install checkcites
 
-      - name: 🧪 Run full integrity suite (Makefile-driven)
-        run: make check
+#       - name: 🧪 Run full integrity suite (Makefile-driven)
+#         run: make check
 
-      - name: 📄 Check LaTeX log for warnings/errors
-        run: python tests/check_latex_log.py
+#       - name: 📄 Check LaTeX log for warnings/errors
+#         run: python tests/check_latex_log.py

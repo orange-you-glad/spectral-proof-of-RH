@@ -2,51 +2,60 @@
 \label{app:heat_kernel_refinements}
 
 \noindent\textbf{[LOGICALLY INERT Appendix — Noncritical]}  
-This appendix is not used in any analytic argument within Chapters~1–9. It explores potential refinements of the short-time heat trace asymptotics for the canonical operator
+This appendix is analytically and logically independent from Chapters~1–9. It explores conjectural refinements of the short-time asymptotic expansion of the heat trace
 \[
 \Theta(t) := \Tr(e^{-t \Lsym^2}),
 \]
-under assumptions stronger than those required to prove the Riemann Hypothesis.
+under assumptions stronger than those required for the determinant identity or the RH equivalence.
 
 \subsection*{Refined Expansion Structure}
 
-If the spectrum \( \{ \mu_n \} \subset \Spec(\Lsym) \) exhibits additional arithmetic structure—such as regular gaps, symmetry constraints, or controlled multiplicity decay—then the heat trace may admit a sharper expansion:
+If the eigenvalues \( \{\mu_n\} \subset \Spec(\Lsym) \) exhibit additional arithmetic structure—such as regular spacing, symmetry under a motivic duality, or controlled multiplicity decay—then \( \Theta(t) \) may admit a sharper expansion of the form:
 \[
 \Theta(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
 + \frac{c_0}{\sqrt{t}} + o\left( \frac{1}{\sqrt{t}} \right),
-\qquad t \to 0^+,
+\quad t \to 0^+,
 \]
-for some constant \( c_0 \in \R \) reflecting subleading spectral contributions.
+for some constant \( c_0 \in \R \) encoding subleading spectral contributions.
 
-Analogous expansions appear for Laplace-type operators on singular manifolds, stratified spaces, or logarithmic densities. See~\cite{Seeley1967ComplexPowers, Gilkey1995Invariance, Vaillant2001HeatKernel} for classical treatments.
+Such refinements mirror expansions for Laplace-type operators on singular or stratified spaces and are structurally comparable to known asymptotics in~\cite{Seeley1967ComplexPowers, Gilkey1995Invariance, Vaillant2001HeatKernel}.
 
 \subsection*{Implications for Tauberian Asymptotics}
 
-If such refined expansions hold, then the eigenvalue counting function
+If such refined trace expansions hold, then the eigenvalue counting function
 \[
 A(\Lambda) := \#\left\{ \mu_n^2 \le \Lambda \right\}
 \]
-admits a subleading Weyl-type asymptotic:
+admits a subleading Weyl-like asymptotic:
 \[
-A(\Lambda) = \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda + C_1 \Lambda^{1/2} + o(\Lambda^{1/2}),
+A(\Lambda) = \frac{1}{2\pi} \Lambda^{1/2} \log \Lambda
++ C_1 \Lambda^{1/2} + o(\Lambda^{1/2}),
 \]
-where \( C_1 \in \R \) reflects spectral torsion or motivic degeneracies.
+where \( C_1 \in \R \) reflects spectral torsion, degeneracy, or motivic correction terms.
 
-These refinements echo corrections found in higher-rank Selberg trace formulas and extended Tauberian theories~\cite{Korevaar2004Tauberian}.
+These refinements are consistent with extended Tauberian theorems and appear in higher-rank trace formulas and heat asymptotics~\cite{Korevaar2004Tauberian}.
 
 \subsection*{Analytic Outlook}
 
-Explicit identification of \( c_0 \) and \( C_1 \)—via Mellin transforms of \( \Theta(t) \), residues of the spectral zeta function \( \zeta_{L^2}(s) := \Tr(\Lsym^{-2s}) \), or via analytic continuation of associated Dirichlet series—could refine the analytic profile of \( \XiR(s) \).
-
-While these terms play no role in the determinant identity or the RH equivalence proven in \cref{sec:spectral_implications}, they may be useful for:
-
+Identification of \( c_0 \) and \( C_1 \) via:
 \begin{itemize}
-  \item Computing analytic torsion or secondary spectral invariants;
-  \item Extending trace identities to modular or functorial lifts;
-  \item Verifying compatibility with automorphic \( L \)-functions (\appref{app:functorial_extensions});
-  \item Studying subleading corrections to zeta-regularized determinants~\cite{Elizalde1994ZetaRegularization}.
+  \item Mellin transforms of \( \Theta(t) \),
+  \item Residues and continuation of the spectral zeta function \( \zeta_{\Lsym^2}(s) = \Tr(\Lsym^{-2s}) \),
+  \item Or analytic structure of auxiliary Dirichlet series,
 \end{itemize}
+could refine the analytic profile of the determinant and inform higher-order spectral statistics for \( \XiR(s) \).
 
 \medskip
-\noindent
-These conjectural refinements are analytically consistent with the canonical spectral model developed here but are not required for any core result.
+
+These terms play no role in the core determinant identity or RH equivalence proven in \cref{sec:spectral_implications}, but they may prove useful for:
+
+\begin{itemize}
+  \item Computing analytic torsion and spectral entropy;
+  \item Extending trace identities to modular and functorial contexts;
+  \item Testing compatibility with automorphic lifts (\appref{app:functorial_extensions});
+  \item Quantifying subleading corrections in zeta-regularized determinants~\cite{Elizalde1994ZetaRegularization}.
+\end{itemize}
+
+\subsection*{Conclusion}
+
+These conjectural refinements are analytically consistent with the canonical spectral model but remain speculative. They invite further investigation into the finer spectral geometry of \( L_{\mathrm{sym}} \), beyond what is required for the determinant identity or the equivalence with RH.

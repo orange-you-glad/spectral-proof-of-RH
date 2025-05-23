@@ -2,8 +2,13 @@
 \label{cor:spectrum_determines_zeta}
 Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical self-adjoint trace-class operator satisfying
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
 \]
+as shown in \thmref{thm:det_identity_revised}.
 
-Then the multiset spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), counted with algebraic multiplicities, uniquely determines the completed zeta function \( \Xi(s) \), up to the normalization constant \( \Xi(\tfrac{1}{2}) \). Consequently, the spectrum also determines the nontrivial zeros of the Riemann zeta function \( \zeta(s) \), including their multiplicities.
+Then the multiset spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), counted with algebraic multiplicities, uniquely determines the completed zeta function \( \Xi(s) \), up to the normalization constant \( \Xi(\tfrac{1}{2}) \).
+
+\medskip
+\noindent
+By \lemref{lem:spectrum_zero_bijection}, the nonzero spectrum encodes all nontrivial zeros of \( \zeta(s) \), with multiplicities preserved. By \lemref{lem:hadamard_uniqueness_E1pi}, any entire function in \( \mathcal{E}_1^\pi \) (such as the canonical determinant) is uniquely determined by its zeros and normalization. The normalization \( f(0) = 1 \) is ensured by the trace vanishing result in \lemref{lem:trace_zero}. Hence, the spectrum alone determines \( \Xi(s) \).
 \end{corollary}

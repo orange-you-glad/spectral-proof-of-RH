@@ -13,8 +13,9 @@ Then the logarithm of the zeta-regularized determinant of \( L_{\mathrm{sym}}^2 
 \]
 where \( P(t) \) denotes the full singular part of the short-time asymptotic expansion:
 \[
-P(t) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}} = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + \cdots.
+P(t) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}} = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + c_0 \sqrt{t} + \cdots,
 \]
+as described in \lemref{lem:heat_trace_expansion} and derived from the pointwise kernel structure in \lemref{lem:hk_expansion_uniform}.
 
 \medskip
 \noindent
@@ -22,10 +23,11 @@ This identity is justified by the Laplace–Mellin representation of the spectra
 \[
 \zeta_L(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \, dt,
 \]
-combined with analytic subtraction of \( P(t) \) near \( t = 0 \) to ensure convergence at \( s = 0 \). The regularized logarithmic derivative thus computes
+as given in \lemref{lem:spectral_zeta_from_heat}, combined with analytic subtraction of \( P(t) \) near \( t = 0 \) to ensure convergence at \( s = 0 \). The regularized logarithmic derivative thus computes
 \[
--\zeta_L'(0) = \log \det\nolimits_\zeta(L_{\mathrm{sym}}^2).
+-\zeta_L'(0) = \log \det\nolimits_\zeta(L_{\mathrm{sym}}^2),
 \]
+in agreement with the Laplace representation in \lemref{lem:det_via_heat_trace}.
 
 \medskip
 \noindent

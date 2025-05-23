@@ -1,0 +1,24 @@
+\begin{proof}[Proof of \lemref{lem:automorphic_kernel_analytic}]
+By assumption, the function
+\[
+\phi_\pi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda, \pi \right)
+\]
+is entire and satisfies exponential type bounds of the form:
+\[
+|\phi_\pi(\lambda)| \le C_\pi e^{\pi_\pi |\lambda|}, \quad \forall \lambda \in \mathbb{C}.
+\]
+
+Therefore, \( \phi_\pi \in \PW{\pi_\pi} \), and by the Paley–Wiener theorem (see, e.g.,~\cite[Thm.~IX.12]{ReedSimon1975II}), the inverse Fourier transform
+\[
+k^{(\pi)}(x) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i x \lambda} \phi_\pi(\lambda) \, d\lambda
+\]
+is a smooth function supported in no compact interval but decaying exponentially. Since \( \phi_\pi \) is entire and of exponential type, its inverse transform \( k^{(\pi)} \) lies in the Schwartz space \( \mathcal{S}(\R) \), and is real-valued and even if \( \phi_\pi \) satisfies the usual symmetry conditions for self-adjoint convolution kernels.
+
+Furthermore, the analyticity of \( \phi_\pi \) as a function of \( \lambda \) implies that the kernel
+\[
+K^{(\pi)}(x, y) := k^{(\pi)}(x - y)
+\]
+inherits analyticity in the spectral parameter \( \lambda \) via its definition as \( \mathcal{F}^{-1}[\phi_\pi] \). Since \( \phi_\pi \in \PW{\pi_\pi} \), all higher derivatives in \( \lambda \) also belong to \( \PW{\pi_\pi} \), ensuring real-analytic dependence of \( K^{(\pi)} \) on \( \lambda \) as a parameter in the kernel’s generator.
+
+Hence the operator family defined by convolution against \( k^{(\pi)} \) varies holomorphically in \( \lambda \), completing the proof.
+\end{proof}

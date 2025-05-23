@@ -1,71 +1,71 @@
 \subsection*{Summary}
 
-This chapter reformulates the Riemann Hypothesis as a statement of spectral rigidity: the spectrum and determinant of the canonical operator \( \Lsym \in \TC(\HPsi) \) determine both the location and multiplicity of all nontrivial zeros of \( \zeta(s) \).
+This chapter reformulates the Riemann Hypothesis as a statement of spectral rigidity: the spectrum and determinant of the canonical operator \( \Lsym \in \TC(\HPsi) \) determine both the location and multiplicity of all nontrivial zeros of the Riemann zeta function.
 
+\textbf{Key Spectral Rigidity Results}
 \begin{itemize}
-  \item \lemref{lem:spectral_encoding_injection} — The canonical determinant identity defines a multiplicity-preserving injection
+  \item \lemref{lem:spectral_encoding_injection} — Spectral encoding injection:
   \[
-  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}),
   \]
-  from the nontrivial zeros of \( \zeta(s) \) into \( \Spec(\Lsym) \setminus \{0\} \).
+  sends zeta zeros \( \rho \) into \( \Spec(\Lsym) \setminus \{0\} \), preserving multiplicity.
 
-  \item \lemref{lem:det_zero_implies_spectrum} — Each zero of the determinant corresponds to an eigenvalue:
+  \item \lemref{lem:det_zero_implies_spectrum} — Every zero of the determinant corresponds to a spectral eigenvalue:
   \[
   \detz(I - \lambda \Lsym) = 0 \iff \lambda^{-1} \in \Spec(\Lsym).
   \]
 
-  \item \lemref{lem:inject_zero_real_spectrum} — If \( \Spec(\Lsym) \subset \R \), then all nontrivial zeros lie on the critical line:
+  \item \lemref{lem:inject_zero_real_spectrum} — Spectral reality implies critical-line alignment:
   \[
   \Spec(\Lsym) \subset \R \quad \Rightarrow \quad \Re(\rho) = \tfrac{1}{2}.
   \]
 
-  \item \lemref{lem:real_spectrum_implies_rh_rigidity} — This implication holds without assuming bijectivity or simplicity, relying only on spectral reality and the determinant identity.
+  \item \lemref{lem:real_spectrum_implies_rh_rigidity} — This implication holds without assuming spectral simplicity or bijection; it relies only on the determinant identity.
 
-  \item \propref{prop:spectrum_reality_implies_rh_multiplicity} — If the spectrum is real and simple, then:
+  \item \propref{prop:spectrum_reality_implies_rh_multiplicity} — If the spectrum is real and simple, then all zeta zeros are simple:
   \[
-  \Re(\rho) = \tfrac{1}{2}, \qquad \operatorname{ord}_\rho(\zeta) = 1.
+  \Re(\rho) = \tfrac{1}{2}, \quad \operatorname{ord}_\rho(\zeta) = 1.
   \]
 
-  \item \thmref{thm:rh_from_real_simple_spectrum} — If \( \Lsym \) has real, simple spectrum and satisfies the determinant identity, then RH holds and all nontrivial zeros are simple.
+  \item \thmref{thm:rh_from_real_simple_spectrum} — Under spectral simplicity and reality, RH and simplicity of all nontrivial zeros follow.
 
-  \item \lemref{lem:spectral_symmetry} — Spectral symmetry \( \mu \mapsto -\mu \) follows from the functional equation \( \Xi(s) = \Xi(1 - s) \).
-
-  \item \lemref{lem:trace_distribution_positivity} — The trace pairing
+  \item \lemref{lem:spectral_symmetry} — Spectral symmetry:
   \[
-  \phi \mapsto \Tr(\phi(\Lsym))
+  \mu \in \Spec(\Lsym) \Rightarrow -\mu \in \Spec(\Lsym),
   \]
-  defines a positive tempered distribution.
+  from functional symmetry of \( \Xi(s) \).
 
-  \item \lemref{lem:trace_distribution_positive} — Positivity extends to all nonnegative Schwartz functions. See \remref{rem:functional_calculus_trace} for justification.
+  \item \lemref{lem:trace_distribution_positivity} — The map \( \phi \mapsto \Tr(\phi(\Lsym)) \) defines a positive tempered distribution.
 
-  \item \propref{prop:inverse_spectral_rigidity} — Any two trace-class self-adjoint operators with the same determinant and spectrum are unitarily equivalent.
+  \item \lemref{lem:trace_distribution_positive} — Positivity extends to all nonnegative \( \phi \in \Schwartz(\R) \); see \remref{rem:functional_calculus_trace}.
+
+  \item \propref{prop:inverse_spectral_rigidity} — Any two trace-class self-adjoint operators with identical determinant and spectrum are unitarily equivalent.
 \end{itemize}
 
 \medskip
 
-Together, these results confirm that the Riemann Hypothesis follows purely from the spectral and determinant data of \( \Lsym \). This chapter completes the implication:
+\textbf{Conclusion and Equivalence}
+These results prove the logical implication:
 \[
-\Spec(\Lsym) \subset \R \quad \Longrightarrow \quad \RH,
+\Spec(\Lsym) \subset \R \quad \Rightarrow \quad \RH,
 \]
-and closes the analytic loop initiated in \thmref{thm:eq_of_rh}. The closure is reflected structurally in the dependency graph (\appref{app:dependency_graph}).
+closing the analytic loop initiated in \thmref{thm:eq_of_rh}. Together with the determinant identity, this rigidity completes the spectral reformulation of RH.
 
 \medskip
 
-\noindent
-\textbf{Remarks.}
+\textbf{Remarks}
 \begin{itemize}
-  \item Spectral simplicity suffices—but is not required—for RH.
-  \item The determinant–spectrum map arises intrinsically from Fredholm theory and the Hadamard structure of \( \Xi(s) \).
+  \item Spectral simplicity strengthens the RH claim but is not required.
+  \item The spectrum–zero correspondence arises from Hadamard structure and Fredholm theory.
   \item Trace positivity reflects harmonic-analytic regularity of the spectral measure.
-  \item Under Fourier diagonalization \( \mathcal{F}_L \), the trace pairing becomes integration against the spectral measure.
+  \item Under Fourier diagonalization, the trace pairing becomes integration against the spectral spectral measure.
 \end{itemize}
 
 \medskip
 
-\noindent
-\textbf{Forward Link.}  
-The final chapter consolidates these results into a logically complete equivalence:
+\textbf{Forward Link}
+All results culminate in the final logical equivalence:
 \[
 \RH \iff \Spec(\Lsym) \subset \R,
 \]
-as proven in \thmref{thm:truth_of_rh}.
+proven in \thmref{thm:truth_of_rh}, and logically grounded in the DAG structure of \appref{app:dependency_graph}.

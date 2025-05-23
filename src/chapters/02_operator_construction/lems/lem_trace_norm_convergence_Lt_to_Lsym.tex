@@ -8,7 +8,7 @@ Let
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)
 \]
-be the canonical Fourier profile.
+be the canonical Fourier profile (see \lemref{lem:xi_growth_bound}).
 
 Define mollified spectral profiles and convolution kernels by
 \[
@@ -21,12 +21,9 @@ Then for each \( t > 0 \), the convolution operator
 \]
 defines a trace-class operator:
 \[
-L_t \in \TC(H_{\Psi_\alpha}), \qquad \sup_{0 < t \le 1} \| L_t \|_{\TC} < \infty.
+L_t \in \TC(H_{\Psi_\alpha}), \qquad \sup_{0 < t \le 1} \| L_t \|_{\TC} < \infty,
 \]
-
-\medskip
-\noindent
-This follows from the exponential decay of \( K_t(x,y) \), implied by Paley--Wiener theory applied to \( \varphi_t \in \PW{\pi} \cap \Schwartz \)~\cite[Thm.~IX.12]{ReedSimon1975II}, and classical trace-norm criteria for weighted Hilbert spaces~\cite[Ch.~4]{Simon2005TraceIdeals}.
+as established in \lemref{lem:trace_class_Lt}, with kernel decay confirmed in \lemref{lem:decay_mollified_kernel}.
 
 \medskip
 \noindent
@@ -45,7 +42,7 @@ This convergence is ensured by the following:
 \begin{itemize}
   \item Pointwise convergence: \( \varphi_t(\lambda) \to \phi(\lambda) \) for all \( \lambda \in \mathbb{R} \);
   \item Local \( L^1 \)-convergence: \( \varphi_t \to \phi \) in \( L^1_{\mathrm{loc}}(\mathbb{R}) \);
-  \item Uniform trace-norm bounds on \( L_t \), and exponential decay of \( K_t \);
+  \item Uniform trace-norm bounds on \( L_t \), and exponential decay of \( K_t \) (\lemref{lem:decay_mollified_kernel});
   \item The limiting kernel
   \[
   K_{\sym}(x,y) := \frac{1}{2\pi} \int_{\mathbb{R}} e^{i(x-y)\lambda} \phi(\lambda)\, d\lambda

@@ -1,34 +1,41 @@
 \subsection*{Summary}
 
+This chapter establishes the equivalence between the Riemann Hypothesis and spectral reality for the canonical operator \( \Lsym \), and proves its uniqueness among trace-class realizations of the determinant identity.
+
+\textbf{Main Results}
 \begin{itemize}
-  \item \corref{cor:spectrum_real_equiv_rh} — \textbf{Equivalence: RH \( \iff \) Spectral Reality}
+  \item \corref{cor:spectrum_real_equiv_rh} — \textbf{Equivalence: Riemann Hypothesis \( \iff \) Spectral Reality}
   \[
   \RH \quad \Longleftrightarrow \quad \Spec(\Lsym) \subset \mathbb{R}.
   \]
-  Proven via \lemref{lem:reality_of_spectrum_and_rh}, which analyzes the canonical spectral map
+  Proven via \lemref{lem:reality_of_spectrum_and_rh}, based on the canonical spectral map
   \[
-  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}).
+  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}),
   \]
-  The eigenvalue \( \mu_\rho \in \mathbb{R} \) if and only if \( \Re(\rho) = \tfrac{1}{2} \), hence RH is equivalent to \( \Lsym \) having real spectrum.
+  which sends RH \( \iff \Re(\rho) = \tfrac{1}{2} \) to \( \mu_\rho \in \R \).
 
-  \item \thmref{thm:uniqueness_realization} — \textbf{Uniqueness of Spectral Realization}
-  Any compact, self-adjoint operator \( L \in \TC(\HPsi) \) satisfying
+  \item \thmref{thm:uniqueness_realization} — \textbf{Spectral Uniqueness Theorem}
+  Any compact, self-adjoint operator \( L \in \TC(\HPsi) \) satisfying the normalized determinant identity
   \[
-  \det_\zeta(I - \lambda L) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
-  \quad \text{for all } \lambda \in \mathbb{C}
+  \det_\zeta(I - \lambda L) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}, \quad \forall \lambda \in \C,
   \]
-  is unitarily equivalent to \( \Lsym \). Thus, \( \Lsym \) is unique (up to unitary equivalence) among all trace-class, self-adjoint realizations of the determinant identity.
+  must be unitarily equivalent to \( \Lsym \). Thus, \( \Lsym \) is unique—up to unitary equivalence—among all spectral realizations of the zeta determinant.
 
   \item \lemref{lem:canonical_closure} — \textbf{Canonical Closure of the Spectral Program}
-  The completed zeta function \( \XiR(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique operator \( \Lsym \in \TC(\HPsi) \). Any other realization matching the determinant identity is either unitarily equivalent (if self-adjoint), or algebraically similar (if not). No non-trace-class operator can satisfy the identity.
+  The completed zeta function \( \XiR(s) \) canonically determines the unique operator \( \Lsym \in \TC(\HPsi) \) whose spectrum encodes RH. Any other realization either coincides with \( \Lsym \) (modulo conjugation) or violates analytic constraints. Non-trace-class operators cannot satisfy the determinant identity.
 \end{itemize}
 
 \medskip
 
-These results complete the analytic–spectral realization phase of the modular proof. The Riemann Hypothesis is reinterpreted as a real-spectrum criterion for a uniquely defined, trace-class, self-adjoint operator. This statement is now logically equivalent to RH, as shown in \thmref{thm:eq_of_rh} and grounded in the determinant identity \thmref{thm:det_identity_revised}.
+\textbf{Logical Equivalence with RH}
+These results complete the spectral realization phase of the proof. The Riemann Hypothesis is rephrased as:
+\[
+\RH \iff \Spec(\Lsym) \subset \mathbb{R},
+\]
+a purely operator-theoretic criterion grounded in canonical zeta-determinant identity (\thmref{thm:det_identity_revised}) and spectral encoding of zeros (\thmref{thm:spectral_zero_bijection_revised}).
 
 \paragraph{Logical Closure.}
-All implications are rigorously derived from trace-class spectral theory. The full logical dependency graph appears in \appref{app:dependency_graph}.
+All dependencies are derived using trace-class operator theory, spectral convergence, and heat kernel asymptotics. The logical DAG is fully acyclic and documented in \appref{app:dependency_graph}.
 
 \paragraph{Internal Consistency.}
-Every lemma, theorem, and corollary in this chapter is either explicitly proved or cited from earlier chapters. No auxiliary assumptions are made. All spectral identities are validated using estimates developed in \thmref{thm:det_identity_revised} and heat kernel bounds from Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.
+All theorems and lemmas are either proven in this chapter or cited from earlier results. No assumption of RH or hidden regularity is made. The determinant structure is fully justified via prior estimates from Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}.

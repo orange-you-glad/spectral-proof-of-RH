@@ -21,7 +21,7 @@ Then the following exponential growth bounds hold:
     \[
     \phi \in \PW{\pi},
     \]
-    the Paley--Wiener class of entire functions whose Fourier transforms are supported in \( [-\pi, \pi] \); see \cref{def:paley_wiener_class} and \cite[Thm.~3.7.1]{Levin1996EntireLectures}.
+    the Paley--Wiener class of entire functions whose Fourier transforms are supported in \( [-\pi, \pi] \); see \defref{def:paley_wiener_class} and \cite[Thm.~3.7.1]{Levin1996EntireLectures}.
 
     \item[\textup{(ii)}] \textbf{Real Axis Growth:} There exists a constant \( A_1 > 0 \) such that
     \[
@@ -36,5 +36,5 @@ These bounds imply that for any \( t > 0 \), the mollified profiles
 \[
 \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda)
 \]
-belong to the Schwartz space \( \Schwartz \), and that their inverse Fourier transforms \( k_t := \FT^{-1}[\phi_t] \) decay exponentially in space, as established in \lemref{lem:decay_mollified_kernel}.
+belong to the Schwartz space \( \Schwartz \), and their inverse Fourier transforms \( k_t := \FT^{-1}[\phi_t] \) decay exponentially in space, as proven in \lemref{lem:decay_mollified_kernel}, and support trace-class inclusion of kernels as used in \lemref{lem:decay_inverse_fourier_xi} and \lemref{lem:weighted_L1_inverse_FT_xi}.
 \end{lemma}

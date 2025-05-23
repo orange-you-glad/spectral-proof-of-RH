@@ -1,37 +1,53 @@
 \subsection*{Summary}
 
-This chapter extends the canonical spectral determinant framework from the Riemann zeta function to the class of completed automorphic \( L \)-functions \( \Xi(s, \pi) \), where \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\GL_n) \) is a unitary cuspidal automorphic representation. Assuming standard analytic continuation and boundedness properties for \( \Xi(s, \pi) \), along with exponential decay of its inverse Fourier transform, we constructed:
+This chapter extends the canonical spectral determinant framework from the Riemann zeta function to the class of completed automorphic \( L \)-functions
+\[
+\Xi(s, \pi), \quad \pi \in \mathcal{A}_{\mathrm{cusp}}(\GL_n),
+\]
+where \( \pi \) is a unitary cuspidal automorphic representation. Under standard assumptions of analytic continuation, functional symmetry, and exponential decay of the inverse Fourier kernel, we constructed:
 
+\textbf{Functorial Operator Framework}
 \begin{itemize}
-  \item A family of mollified convolution operators \( \{ \Ltpi \}_{t > 0} \subset \TC(\Hpsipi) \), with exponential kernel decay and uniform trace-norm control;
-
-  \item A canonical limit operator \( \Lsympi \in \TC(\Hpsipi) \), obtained via trace-norm convergence, satisfying the determinant identity
+  \item A family of mollified convolution operators
   \[
-  \detz(I - \lambda \Lsympi) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)}{\Xi\left(\tfrac{1}{2}, \pi\right)};
+  \{ \Ltpi \}_{t > 0} \subset \TC(\Hpsipi),
+  \]
+  with exponential decay and uniform trace-norm control;
+
+  \item A canonical limit operator \( \Lsympi \in \TC(\Hpsipi) \), obtained via trace-norm convergence as \( t \to 0^+ \), defining the spectral realization of \( \Xi(s, \pi) \);
+\end{itemize}
+
+\textbf{Spectral Determinant and Encoding}
+\begin{itemize}
+  \item A determinant identity:
+  \[
+  \detz(I - \lambda \Lsympi) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)}{\Xi\left(\tfrac{1}{2}, \pi\right)},
   \]
   as formalized in \thmref{thm:spectral_determinant_identity_Lpi};
 
-  \item A multiplicity-preserving spectral encoding
+  \item A canonical spectral encoding map:
   \[
-  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsympi),
+  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsympi),
   \]
-  matching the nontrivial zeros of \( L(s, \pi) \) with the nonzero spectrum of \( \Lsympi \), as shown in \thmref{thm:zero_encoding_general};
+  matching the nontrivial zeros of \( L(s, \pi) \) with the nonzero spectrum of \( \Lsympi \), preserving multiplicities (\thmref{thm:zero_encoding_general});
+\end{itemize}
 
-  \item A spectral equivalence:
+\textbf{Spectral Equivalence with GRH}
+\begin{itemize}
+  \item A generalized RH equivalence:
   \[
   \GRH(\pi) \iff \Spec(\Lsympi) \subset \R,
   \]
-  generalizing the RH \( \iff \) spectrum reality equivalence to the automorphic setting, as proven in \thmref{thm:spec_real_equiv_grh}.
+  proven in \thmref{thm:spec_real_equiv_grh}, generalizing the spectral RH equivalence to all \( \GL_n \)-automorphic cases.
 \end{itemize}
 
 \medskip
 
-These results validate the extension of the analytic–spectral framework from \( \zeta(s) \) to all \( \GL_n \)-automorphic representations, conditional on standard analytic properties of \( \Xi(s, \pi) \) and kernel localization. The structure is modular, zeta-compatible, and uniform across automorphic rank. This provides a blueprint for future extensions to motivic, Artin, and non-\( \GL_n \) \( L \)-functions, as outlined in \appref{app:functorial_extensions}.
+These results postulate a modular, zeta-compatible generalization of the spectral framework for all \( \GL_n \)-automorphic representations. Under analytic assumptions on \( \Xi(s, \pi) \), they validate functorial extensions of determinant identities and spectral encoding maps. This framework provides a blueprint for potential extensions to Artin, motivic, and non-\( \GL_n \) \( L \)-functions, as outlined in \appref{app:functorial_extensions}.
 
-\medskip
-
-The next chapter returns to the Riemann case and completes the logical closure of the spectral program, formally establishing the equivalence
+\paragraph{Forward Link.}
+The final chapter returns to the Riemann case and completes the logical closure of the spectral program, formally establishing the equivalence
 \[
 \RH \iff \Spec(\Lsym) \subset \R,
 \]
-within the fully validated determinant and spectral structure of the canonical operator \( \Lsym \).
+within the validated determinant framework of \( \Lsym \).

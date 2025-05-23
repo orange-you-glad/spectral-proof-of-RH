@@ -5,11 +5,11 @@ Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical compact, self-adjoint operato
 \[
 \HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \alpha > \pi,
 \]
-and suppose the determinant identity holds:
+constructed via trace-norm convergence from real, even mollified kernels as in \thmref{thm:canonical_operator_realization}. Suppose the determinant identity holds:
 \[
 \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)},
 \]
-where \( \XiR(s) \) is the completed Riemann zeta function.
+as established in \thmref{thm:det_identity_revised}.
 
 Then the spectrum of \( L_{\sym} \) is symmetric under reflection:
 \[
@@ -20,7 +20,5 @@ with multiplicities preserved.
 \medskip
 
 \noindent
-This spectral symmetry follows from the functional identity \( \XiR(\tfrac{1}{2} + i\lambda) = \XiR(\tfrac{1}{2} - i\lambda) \), which implies that the spectral determinant is even in \( \lambda \). The corresponding convolution kernel is real and even, so \( L_{\sym} \) commutes with parity, inducing symmetry of its spectrum.
-\thmref{thm:canonical_operator_realization}
-\thmref{thm:det_identity_revised}
+This spectral symmetry follows from the functional identity \( \XiR(\tfrac{1}{2} + i\lambda) = \XiR(\tfrac{1}{2} - i\lambda) \), which implies that the spectral determinant is even in \( \lambda \). The Hadamard factorization structure described in \lemref{lem:hadamard_linear_form} encodes this evenness as spectral root symmetry. Moreover, the convolution kernel of \( L_{\sym} \) is real and even, so the operator commutes with parity, which reinforces the symmetry of its spectrum.
 \end{lemma}

@@ -1,0 +1,18 @@
+\begin{proposition}[Operator-Theoretic Form of Weil’s Explicit Formula]
+\label{prop:explicit_formula_operator}
+
+Let \( L_{\sym} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical self-adjoint trace-class operator defined by convolution with the inverse Fourier transform of \( \Xi\left(\tfrac{1}{2} + i\lambda\right) \). Let \( \{ \mu_\rho \} \subset \mathbb{R} \) denote its spectrum, where \( \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) \) and \( \zeta(\rho) = 0 \).
+
+Then for any Schwartz-class test function \( h \in \mathcal{S}(\mathbb{R}) \) with inverse Fourier transform \( g := \mathcal{F}^{-1}[h] \in \mathcal{S}(\mathbb{R}) \), the spectral trace pairing satisfies:
+\[
+\sum_{\rho} h(\mu_\rho) = \sum_{n=1}^{\infty} \frac{\Lambda(n)}{\sqrt{n}} \left( g(\log n) + g(-\log n) \right)
++ \textnormal{(Archimedean contribution)}.
+\]
+
+Here:
+- \( \Lambda(n) \) is the von Mangoldt function,
+- The left-hand side arises as the spectral trace \( \sum h(\mu_\rho) \),
+- The right-hand side recovers Weil’s explicit formula in distributional form.
+
+This equality realizes the Riemann explicit formula as a spectral identity for \( L_{\sym} \).
+\end{proposition}

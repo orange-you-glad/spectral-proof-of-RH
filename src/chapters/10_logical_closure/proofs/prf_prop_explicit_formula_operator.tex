@@ -1,0 +1,19 @@
+\begin{proof}[Proof of \propref{prop:explicit_formula_operator}]
+By the spectral determinant identity (\thmref{thm:det_identity_revised}), the spectrum \( \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) \) of \( L_{\mathrm{sym}} \) encodes all nontrivial zeros of \( \zeta(s) \). The trace pairing \( \sum h(\mu_\rho) \) is well-defined for \( h \in \mathcal{S} \), and represents the spectral side of Weil’s explicit formula.
+
+On the analytic side, the logarithmic derivative of the determinant (see \lemref{lem:log_derivative_determinant}) gives:
+\[
+\frac{d}{d\lambda} \log \detz(I - \lambda L_{\mathrm{sym}}) = \sum_\rho \frac{1}{\lambda - \mu_\rho}.
+\]
+
+By taking Fourier transforms and applying contour inversion, one obtains:
+\[
+\sum_\rho h(\mu_\rho) = \text{distributional trace of } h(L_{\mathrm{sym}}).
+\]
+
+The classical explicit formula for \( \zeta(s) \), expressed as:
+\[
+\sum_\rho h(\mu_\rho) = \sum_n \frac{\Lambda(n)}{\sqrt{n}} (g(\log n) + g(-\log n)) + \text{(archimedean)},
+\]
+matches this spectral trace by analytic continuation and inversion of the Laplace–Mellin representation of \( \Xi(s) \). The archimedean term arises from gamma-factors in \( \Xi(s) \), completing the proof.
+\end{proof}

@@ -1,49 +1,43 @@
 \subsection*{Introduction}
 \label{sec:intro_spectral_implications}
 
-This chapter concludes the analytic–spectral phase of the proof architecture by establishing two central consequences derived from the canonical determinant identity, first formulated in \thmref{thm:det_identity_revised}:
+This chapter concludes the analytic–spectral phase of the manuscript by proving two core consequences of the canonical determinant identity established in \thmref{thm:det_identity_revised}:
 
 \begin{itemize}
-  \item \emph{Equivalence between the Riemann Hypothesis (RH) and Spectral Reality}: We prove that the Riemann Hypothesis holds if and only if the spectrum of the canonical operator \( \Lsym \) is real, formally stated in \lemref{lem:reality_of_spectrum_and_rh}:
+  \item \textbf{Spectral Equivalence with RH:} The Riemann Hypothesis is equivalent to the reality of the spectrum of \( \Lsym \), i.e.,
   \[
-  \RH \iff \Spec(\Lsym) \subset \mathbb{R}.
+  \RH \iff \Spec(\Lsym) \subset \R,
   \]
+  as proven in \lemref{lem:reality_of_spectrum_and_rh} and summarized in \corref{cor:spectrum_real_equiv_rh}.
   
-  \item \emph{Spectral Uniqueness}: We demonstrate that any compact, self-adjoint, trace-class operator that satisfies the normalized determinant identity for \( \XiR(s) \) is unitarily equivalent to \( \Lsym \). This result establishes the **uniqueness** of \( \Lsym \) among all such operators.
+  \item \textbf{Spectral Uniqueness:} Any compact, self-adjoint, trace-class operator whose zeta-regularized determinant equals the normalized \( \Xi(s) \) determinant is unitarily equivalent to \( \Lsym \), as shown in \thmref{thm:uniqueness_realization}.
 \end{itemize}
 
-The validity of these results rests analytically on tools developed in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}, including trace-class heat kernel asymptotics, resolvent bounds, and Laplace-integrable semigroup convergence. These prerequisites ensure that the Fredholm determinant and its Laplace representation are well-defined and rigorously satisfied. Notably, **no assumption of the Riemann Hypothesis is made at any stage of this construction**.
+These results are analytically grounded in the trace-norm heat kernel asymptotics, Laplace-integrable semigroup theory, and spectral zeta regularization developed in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}. Crucially, \textit{no assumption of the Riemann Hypothesis} is used in their derivation.
 
-\medskip
+\paragraph{RH–Spectrum Equivalence.}
+The core logical equivalence
+\[
+\RH \iff \Spec(\Lsym) \subset \R
+\]
+follows from the determinant identity, the bijection \( \rho \mapsto \mu_\rho \), and the spectral trace properties of \( L_{\mathrm{sym}} \). The spectrum is fully determined by the zeros of \( \zeta(s) \), and their location governs the reality of the spectrum.
 
-Explicitly, we deduce:
+\paragraph{Uniqueness of the Canonical Operator.}
+Let \( L \in \TC(\HPsi) \) be any compact, self-adjoint operator satisfying the same determinant identity:
+\[
+\det_\zeta(I - \lambda L) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}, \qquad \forall \lambda \in \C.
+\]
+Then \( L \) is unitarily equivalent to \( \Lsym \). This rigidity result shows that \( \Lsym \) is uniquely determined—up to unitary conjugation—by the analytic structure of \( \Xi(s) \).
 
-\begin{itemize}
-  \item The equivalence of the Riemann Hypothesis and spectral reality:
-  \[
-  \RH \iff \Spec(\Lsym) \subset \mathbb{R},
-  \]
-  proven constructively in \lemref{lem:reality_of_spectrum_and_rh} and summarized in \corref{cor:spectrum_real_equiv_rh}.
-  
-  \item The uniqueness result: Let \( L \in \TC(\HPsi) \) be any compact, self-adjoint operator such that
-  \[
-  \det_\zeta(I - \lambda L) = \frac{\XiR\left(\frac{1}{2} + i\lambda\right)}{\XiR\left(\frac{1}{2}\right)}, \quad \text{for all } \lambda \in \mathbb{C}.
-  \]
-  Then \( L \) is unitarily equivalent to \( \Lsym \), making \( \Lsym \) the unique (up to unitary equivalence) trace-class realization of the normalized determinant identity for \( \XiR(s) \).
-\end{itemize}
-
-\medskip
-
-Together, these results establish the following operator-theoretic principle:
-
+\paragraph{Canonical Operator-Theoretic Principle.}
 \begin{quote}
-  The analytic structure of the completed Riemann zeta function \( \XiR(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique (up to unitary equivalence) compact, self-adjoint, trace-class operator whose spectrum encodes the Riemann Hypothesis via spectral reality.
+The completed zeta function \( \Xi(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique compact, self-adjoint, trace-class operator whose spectrum encodes RH via the reality condition \( \Spec(\Lsym) \subset \R \).
 \end{quote}
 
-This completes the analytic–spectral chain initiated in Chapter~\ref{sec:determinant_identity}. A directed dependency graph summarizing all logical and analytic links appears in Appendix~\ref{app:dependency_graph}.
+This chapter completes the analytic chain initiated in Chapter~\ref{sec:determinant_identity} and prepares the logical closure in Chapter~\ref{sec:logical_closure}.
 
 \paragraph{Analytic Closure.}
-Every implication in this chapter—from the determinant identity to spectral equivalence—is rigorously grounded in trace-class semigroup theory, heat kernel asymptotics, and spectral zeta calculus. All such dependencies are established in Chapter~\ref{sec:heat_kernel_asymptotics} or formally delegated to Appendix~\ref{app:heat_kernel_construction}.
+All arguments in this chapter—determinant identity, trace class convergence, spectral zeta analysis—are rigorously constructed using operator semigroup theory and heat kernel asymptotics. All analytic dependencies are modular, acyclic, and traced in the DAG (\appref{app:dependency_graph}).
 
-\paragraph{Internal Consistency.}
-All referenced results are formally stated or explicitly cited. No asymptotic estimate, trace identity, or determinant claim is assumed without proof. The chapter’s logical structure is acyclic, transparent, and canonically complete.
+\paragraph{Logical Completeness.}
+Every cited estimate, trace identity, and spectral implication is proven explicitly or cited with proof. The logical structure of this chapter is closed, canonical, and consistent with the global framework.

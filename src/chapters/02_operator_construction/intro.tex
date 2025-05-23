@@ -4,45 +4,51 @@ This chapter constructs the canonical compact, self-adjoint, trace-class operato
 \[
 \Lsym \in \TC(H_{\Psi_\alpha}),
 \]
-on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \), designed to spectrally encode the nontrivial zeros of the completed Riemann zeta function \( \Xi(s) \).
+on the exponentially weighted Hilbert space \( H_{\Psi_\alpha} := L^2(\R, e^{\alpha |x|} dx) \), designed to spectrally encode the nontrivial zeros of the completed Riemann zeta function \( \Xi(s) \) via a zeta-regularized determinant.
 
-The construction unfolds in five analytically rigorous stages:
+The analytic realization unfolds in five rigorously structured stages:
 
 \begin{itemize}
-    \item \textbf{Weighted space and spectral profile:} The decay of \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) implies that its inverse Fourier transform lies in \( L^1(\R, \Psi_\alpha^{-1}) \) for \( \alpha > \pi \), ensuring kernel integrability. This yields convolution operators that are trace class on \( H_{\Psi_\alpha} \). The sharpness of this exponential decay threshold is established in \propref{prop:trace_class_sharpness}.
-
-    \item \textbf{Mollifier family \( L_t \):} Mollified profiles
+    \item \textbf{Weighted space and spectral profile:} The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \) belongs to the Paley--Wiener class \( \PW{\pi} \), and its inverse Fourier transform \( k(x) \) satisfies exponential decay. For \( \alpha > \pi \), the associated kernel is integrable in \( H_{\Psi_\alpha} \), yielding trace-class convolution operators. The optimal threshold \( \alpha > \pi \) is proved to be both necessary and sufficient; see \propref{prop:trace_class_sharpness}.
+    
+    \item \textbf{Mollifier family \( L_t \):} Introducing mollified spectral profiles
     \[
-    \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda)
+    \varphi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda),
     \]
-    define convolution operators \( L_t \in \TC(H_{\Psi_\alpha}) \) with uniformly bounded trace norms and symmetric kernels. Each \( L_t \) is compact, self-adjoint, and well-posed for regularization.
+    we define convolution operators \( L_t \in \TC(H_{\Psi_\alpha}) \) with uniformly bounded trace norms. Each \( L_t \) is compact, symmetric, and self-adjoint, forming a regularized approximation scheme for \( \Lsym \).
 
-    \item \textbf{Trace-norm limit and canonicality:} We prove that \( L_t \to \Lsym \) in the trace-norm topology as \( t \to 0^+ \), and that this limit is independent of mollifier choice. Uniqueness is verified in \lemref{lem:trace_norm_limit_unique}, and canonical convergence is formalized in \thmref{thm:existence_Lsym}.
+    \item \textbf{Trace-norm limit and canonicality:} We show that \( L_t \to \Lsym \) in the trace-norm topology as \( t \to 0^+ \), and that this limit is independent of the mollifier. Canonical convergence and uniqueness are established in \lemref{lem:trace_norm_limit_unique} and \thmref{thm:existence_Lsym}.
 
-    \item \textbf{Core domain and essential self-adjointness:} The Schwartz space \( \Schwartz(\R) \) is a common core for \( \Lsym \) and \( \Lsym^2 \). By Nelson’s theorem, both are essentially self-adjoint on \( \Schwartz \) (\lemref{lem:core_essential_sa}, \lemref{lem:Lsym_square_selfadjoint}).
+    \item \textbf{Core domain and essential self-adjointness:} The Schwartz space \( \Schwartz(\R) \) serves as a common core for both \( \Lsym \) and \( \Lsym^2 \). By Nelson’s analytic vector theorem, these operators are essentially self-adjoint on \( \Schwartz \); see \lemref{lem:core_essential_sa} and \lemref{lem:Lsym_square_selfadjoint}.
 
-    \item \textbf{Trace normalization:} We prove the centering identity
+    \item \textbf{Trace normalization:} The operator \( \Lsym \) is centered, with vanishing trace:
     \[
     \Tr(\Lsym) = 0,
     \]
-    ensuring uniqueness of the zeta-determinant normalization (\thmref{thm:trace_zero_Lsym}).
+    ensuring normalization of the zeta-determinant; see \thmref{thm:trace_zero_Lsym}.
 \end{itemize}
-
-The proof of trace-norm convergence deserves special emphasis.  We use uniform trace-norm bounds on the mollified family \(\{L_t\}\), exponential decay of the kernels, and dominated convergence on the weighted Hilbert space.  Explicit estimates show that
-\[
-  \|L_t-\Lsym\|_{\TC} \le C\,t^{1/2}
-\]
-for small \(t\), ensuring that \(L_t\to\Lsym\) not only pointwise but with quantitative control.  This convergence, combined with essential self-adjointness on the Schwartz core, yields the well-defined operator used throughout the spectral analysis.
-
-These results culminate in the spectral operator \( \Lsym \), rigorously defined in \( \TC(H_{\Psi_\alpha}) \), and endowed with trace-class regularity, self-adjointness, and analytic semigroup generation (\lemref{lem:heat_semigroup_existence}).
 
 \medskip
 
-This operator forms the analytic base of the determinant identity
+\noindent
+The proof of trace-norm convergence deserves special emphasis. Using dominated convergence, uniform trace-norm bounds on the mollified family \( \{L_t\} \), and kernel decay estimates, we show:
+\[
+  \|L_t - \Lsym\|_{\TC} \le C\,t^{1/2}
+\]
+for small \( t \), providing quantitative control on the approximation. This, combined with the self-adjoint structure on a common core, yields a well-defined spectral operator.
+
+\medskip
+
+The operator \( \Lsym \) thus constructed is compact, self-adjoint, trace class, and generates a holomorphic heat semigroup \( \{e^{-t \Lsym^2}\}_{t > 0} \) on \( H_{\Psi_\alpha} \); see \lemref{lem:heat_semigroup_existence}.
+
+\medskip
+
+\noindent
+This operator forms the analytic base of the determinant identity:
 \[
 \detz(I - \lambda^2 \Lsym^2) = \Xi\left(\tfrac{1}{2} + i\lambda\right),
 \]
-established in Chapter~\ref{sec:determinant_identity} using heat kernel methods and Paley--Wiener theory.
+which is rigorously established in Chapter~\ref{sec:determinant_identity} using Laplace–Mellin regularization and Paley--Wiener theory.
 
 \paragraph{Comparison to Prior Spectral Models.}
-Unlike heuristic proposals such as Hilbert--Pólya, or frameworks by Connes~\cite{Connes1999TraceFormula} and Deninger~\cite{Deninger1998Frobenius}, the operator \( \Lsym \) is rigorously constructed within classical Hilbert space theory, with explicit control over domain, norm, trace, and convergence. It satisfies all analytic prerequisites for a canonical determinant realization of the Riemann zeta function.
+Unlike heuristic frameworks such as Hilbert--Pólya or the spectral traces of Connes~\cite{Connes1999TraceFormula} and Deninger~\cite{Deninger1998Frobenius}, the operator \( \Lsym \) is rigorously constructed within classical Hilbert space analysis. It enjoys explicit control over domain, trace, convergence, and self-adjoint structure, and fulfills all analytic prerequisites for a canonical spectral realization of \( \Xi(s) \) and its zeros.

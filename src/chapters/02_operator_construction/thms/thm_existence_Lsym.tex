@@ -12,7 +12,7 @@ H_{\Psi_\alpha} := L^2(\R, \Psi_\alpha(x)\, dx),
 
 Then:
 \begin{enumerate}
-  \item[\textnormal{(i)}] For each \( t > 0 \), the operator \( L_t \in \TC(H_{\Psi_\alpha}) \) is compact and trace class.
+  \item[\textnormal{(i)}] For each \( t > 0 \), the operator \( L_t \in \TC(H_{\Psi_\alpha}) \) is compact and trace class (see \lemref{lem:trace_class_Lt}).
 
   \item[\textnormal{(ii)}] The trace-norm limit
   \[
@@ -20,16 +20,17 @@ Then:
   \]
   exists and defines a compact trace-class operator:
   \[
-  \Lsym \in \TC(H_{\Psi_\alpha}) \cap \KC(H_{\Psi_\alpha}).
+  \Lsym \in \TC(H_{\Psi_\alpha}) \cap \KC(H_{\Psi_\alpha}),
   \]
+  as established in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}.
 
-  \item[\textnormal{(iii)}] The operator \( \Lsym \) is self-adjoint on \( H_{\Psi_\alpha} \), with domain given by the closure of \( \Schwartz \subset H_{\Psi_\alpha} \).
+  \item[\textnormal{(iii)}] The operator \( \Lsym \) is self-adjoint on \( H_{\Psi_\alpha} \), with domain given by the closure of \( \Schwartz \subset H_{\Psi_\alpha} \) (see \lemref{lem:core_essential_sa}).
 
   \item[\textnormal{(iv)}] The trace of \( \Lsym \) vanishes:
   \[
-  \Tr(\Lsym) = 0.
+  \Tr(\Lsym) = 0,
   \]
-  This ensures canonical normalization in the spectral determinant identity.
+  ensuring canonical normalization of the determinant (see \thmref{thm:trace_zero_Lsym}).
 \end{enumerate}
 
 \medskip

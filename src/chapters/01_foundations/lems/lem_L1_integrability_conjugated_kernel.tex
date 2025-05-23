@@ -16,13 +16,13 @@ Then \( \widetilde{K} \in L^1(\mathbb{R}^2) \) provided \( N > 2\alpha \); that 
 
 \medskip
 \noindent
-In particular, if \( K(x,y) = k(x - y) \) is a translation-invariant kernel with \( k \in \mathcal{S}(\mathbb{R}) \), then \( K \) satisfies the above estimate for all \( N > 0 \), and hence the conjugated kernel \( \widetilde{K} \in L^1(\mathbb{R}^2) \) for any \( \alpha > 0 \).
+In particular, if \( K(x,y) = k(x - y) \) is a translation-invariant kernel with \( k \in \mathcal{S}(\mathbb{R}) \), then \( K \) satisfies the above estimate for all \( N > 0 \), and hence \( \widetilde{K} \in L^1(\mathbb{R}^2) \) for any \( \alpha > 0 \).
 
 \medskip
 \noindent
-This lemma applies to mollified canonical kernels such as \( K_t(x,y) := k_t(x - y) \) from \lemref{lem:decay_inverse_fourier_xi}, establishing that the conjugated kernel
+This lemma applies to mollified canonical kernels \( K_t(x,y) := k_t(x - y) \) as in \lemref{lem:decay_mollified_kernel}, where exponential decay of \( k_t \) follows from the Paley–Wiener growth of \( \phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda) \) (see \lemref{lem:xi_growth_bound}). Consequently, the conjugated kernel
 \[
 \widetilde{K}_t(x,y) := \frac{K_t(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}
 \]
-lies in \( L^1(\mathbb{R}^2) \), and hence that \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \).
+lies in \( L^1(\mathbb{R}^2) \), and the operator \( L_t \in \mathcal{C}_1(H_{\Psi_\alpha}) \), as confirmed in \lemref{lem:trace_class_Lt}.
 \end{lemma}

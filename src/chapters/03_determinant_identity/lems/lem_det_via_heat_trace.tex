@@ -12,14 +12,14 @@ Then:
   \log \detz(I - \lambda \Lsym)
   = - \sum_{n=1}^\infty \frac{\lambda^n}{n} \Tr(\Lsym^n),
   \]
-  with absolute convergence ensured by the trace-class property of \( \Lsym \).
+  with absolute convergence ensured by trace-class properties of \( \Lsym \), and normalization confirmed in \thmref{thm:trace_zero_Lsym}.
 
   \item[\textnormal{(ii)}] The function \( \lambda \mapsto \log \detz(I - \lambda \Lsym) \) extends analytically to an entire function on \( \mathbb{C} \), represented by the Laplace transform of the heat trace:
   \[
   \log \detz(I - \lambda \Lsym)
   = - \int_0^\infty \frac{e^{-\lambda t}}{t} \, \Tr(e^{-t \Lsym}) \, dt.
   \]
-  This integral converges absolutely for all \( \lambda \in \mathbb{C} \), since
+  This Laplace representation converges absolutely for all \( \lambda \in \mathbb{C} \), since
   \[
   \Tr(e^{-t \Lsym}) \lesssim
   \begin{cases}
@@ -27,14 +27,14 @@ Then:
     e^{-\delta t}   & \text{as } t \to \infty,
   \end{cases}
   \]
-  for some constants \( c, \delta > 0 \).
+  for some constants \( c, \delta > 0 \), as established in \lemref{lem:heat_semigroup_wellposed}.
 \end{enumerate}
 
 \medskip
 \noindent
-This identity expresses the \(\zeta\)-regularized determinant in terms of the trace of the heat semigroup \( e^{-t \Lsym} \), enabling analytic continuation, entire order classification, and spectral asymptotics developed in subsequent sections.
+This identity expresses the \(\zeta\)-regularized determinant in terms of the trace of the heat semigroup \( e^{-t \Lsym} \), enabling analytic continuation, entire order classification, and spectral asymptotics developed in subsequent sections such as \lemref{lem:A_log_derivative}.
 \end{lemma}
 
 \begin{remark}[Singularity Control at \( t \to 0^+ \)]
-The integrand \( \Tr(e^{-tL_{\sym}^2}) / t \sim \log(1/t)/t^{3/2} \) is locally integrable on \( (0,\epsilon) \) due to the \texttt{o(\( \sqrt{t} \))} correction. This ensures convergence of the Laplace integral defining \( \log \det_\zeta \).
+The integrand \( \Tr(e^{-tL_{\sym}^2}) / t \sim \log(1/t)/t^{3/2} \) is locally integrable on \( (0,\epsilon) \) due to the \( o(\sqrt{t}) \) correction, as controlled in \lemref{lem:heat_semigroup_wellposed}. This ensures convergence of the Laplace integral defining \( \log \det_\zeta \).
 \end{remark}

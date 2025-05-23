@@ -2,8 +2,9 @@
 \label{thm:spectral_zero_bijection_revised}
 Let \( \Lsym \in \TC(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator constructed in \secref{sec:operator_construction}, whose Carleman \(\zeta\)-regularized Fredholm determinant satisfies
 \[
-\detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)} \qquad \forall \lambda \in \C.
+\detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)} \qquad \forall \lambda \in \C,
 \]
+as established in \thmref{thm:det_identity_revised}.
 
 Then the map
 \[
@@ -25,7 +26,7 @@ with multiplicities preserved:
 This correspondence satisfies:
 \begin{itemize}
   \item \( \mu_\rho \in \R \setminus \{0\} \) if and only if \( \rho \in \C \) lies on the critical line \( \Re(\rho) = \tfrac{1}{2} \);
-  \item \( \Spec(\Lsym) \setminus \{0\} = \left\{ \tfrac{1}{i}(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\} \), as multisets.
+  \item \( \Spec(\Lsym) \setminus \{0\} = \left\{ \tfrac{1}{i}(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\} \), as multisets (see \lemref{lem:spectrum_zero_bijection}).
 \end{itemize}
 
 \medskip
@@ -35,6 +36,6 @@ This result follows from:
 \begin{enumerate}
   \item The injection \( \rho \mapsto \mu_\rho \in \Spec(\Lsym) \), proven in \lemref{lem:zero_to_eigenvalue_injection};
   \item The surjection \( \mu \mapsto \rho := \tfrac{1}{2} + i\mu \), proven in \lemref{lem:spectral_exhaustivity};
-  \item The multiplicity matching ensured by the Hadamard factorization of \( \Xi(s) \) and the spectral Fredholm determinant structure.
+  \item The multiplicity matching ensured by the Hadamard factorization of \( \Xi(s) \) (see \lemref{lem:hadamard_linear_form}) and the Fredholm determinant structure of the spectrum.
 \end{enumerate}
 \end{theorem}

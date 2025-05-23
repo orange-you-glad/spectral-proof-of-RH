@@ -2,14 +2,17 @@
 \label{lem:trace_norm_rate_convergence}
 Let \( \alpha > \pi \), and let \( L_t, L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) denote the mollified and limiting convolution operators associated with the spectral profile
 \[
-\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
 \]
+as in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}.
 
 Then there exist constants \( C > 0 \), \( \beta \in (0, \tfrac{1}{2}) \), and \( t_0 > 0 \) such that
 \[
 \| L_t - L_{\mathrm{sym}} \|_{\mathcal{C}_1(H_{\Psi_\alpha})} \le C t^\beta, \qquad \forall\, t \in (0, t_0),
 \]
 with constants independent of \( \alpha \), provided \( \alpha > \pi \) is fixed.
-\thmref{thm:canonical_operator_realization}
-\thmref{thm:det_identity_revised}
+
+\medskip
+\noindent
+The proof relies on exponential decay estimates for the mollified kernels \( K_t(x,y) \) in \lemref{lem:decay_mollified_kernel}, and the exponential type bound on \( \phi \in \PW{\pi} \) given by \lemref{lem:xi_growth_bound}. The convergence rate refines the qualitative limit of \lemref{lem:trace_norm_convergence_Lt_to_Lsym}, and is used to quantify the analytic structure of the canonical determinant (see \thmref{thm:det_identity_revised} and \thmref{thm:canonical_operator_realization}).
 \end{lemma}

@@ -1,11 +1,12 @@
 \section{Zeta Functions and Trace-Class Operators}
 \label{app:zeta_trace_background}
 
-This appendix summarizes the core analytic properties of the completed Riemann zeta function and trace-class operator theory that are used throughout the spectral determinant construction. For comprehensive background, see~\cite{Titchmarsh1986Zeta, Simon2005TraceIdeals, Bornemann2010FredholmDeterminants}.
+\noindent
+This appendix summarizes analytic properties of the completed Riemann zeta function and trace-class operator theory used throughout the spectral determinant construction. For detailed background, see~\cite{Titchmarsh1986Zeta, Simon2005TraceIdeals, Bornemann2010FredholmDeterminants}.
 
 \subsection*{The Completed Zeta Function \( \Xi(s) \)}
 
-The completed Riemann zeta function is defined as
+The completed Riemann zeta function is defined by
 \[
 \Xi(s) := \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
 \]
@@ -13,59 +14,69 @@ and satisfies the functional equation
 \[
 \Xi(s) = \Xi(1 - s).
 \]
-It is entire of order one and exponential type \( \pi \), real on the real axis, and admits a Hadamard factorization
+It is entire of order one and exponential type \( \pi \), real-valued on the real axis, and admits a Hadamard factorization:
 \[
-\Xi(s) = \Xi(\tfrac{1}{2}) \prod_{\rho} \left(1 - \frac{s - \tfrac{1}{2}}{\rho - \tfrac{1}{2}}\right) e^{(s - \tfrac{1}{2})/(\rho - \tfrac{1}{2})},
+\Xi(s) = \Xi\left(\tfrac{1}{2}\right) \prod_{\rho} \left(1 - \frac{s - \tfrac{1}{2}}{\rho - \tfrac{1}{2}}\right) e^{(s - \tfrac{1}{2})/(\rho - \tfrac{1}{2})},
 \]
-where the product is over nontrivial zeros \( \rho \in \mathbb{C} \) of \( \zeta(s) \), symmetric with respect to the critical line \( \Re(s) = \tfrac{1}{2} \).
+where the product is over nontrivial zeros \( \rho \in \mathbb{C} \), symmetric about \( \Re(s) = \tfrac{1}{2} \).
 
 Let
 \[
-\phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right).
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
 \]
-Then \( \phi \) is real, even, and entire of exponential type \( \pi \), and hence lies in the Paley–Wiener class \( \PW{\pi} \). This ensures that its inverse Fourier transform decays exponentially:
+Then \( \phi \) is real, even, entire of exponential type \( \pi \), and belongs to the Paley–Wiener class \( \PW{\pi} \). Its inverse Fourier transform decays exponentially:
 \[
-\widehat{\phi}(x) := \int_{\R} \phi(\lambda)e^{2\pi i x \lambda} \, d\lambda
+\widehat{\phi}(x) := \int_{\R} \phi(\lambda) e^{2\pi i x \lambda} \, d\lambda
 \in L^1(\R, e^{\alpha|x|}dx) \quad \text{for all } \alpha < \pi.
 \]
 
 \subsection*{Fredholm and Carleman Determinants}
 
-Let \( T \in \TC(H) \) be a trace-class operator. The Fredholm determinant is defined by
+Let \( T \in \TC(H) \) be trace class. The Fredholm determinant is defined by
 \[
 \det(I - \lambda T) := \prod_{n=1}^\infty (1 - \lambda \mu_n),
 \]
-where \( \{ \mu_n \} \subset \C \) are the eigenvalues of \( T \), counted with algebraic multiplicity. The determinant is entire in \( \lambda \) and satisfies
+where \( \mu_n \in \C \) are the eigenvalues of \( T \), counted with multiplicities. This determinant is entire in \( \lambda \), and satisfies
 \[
-\frac{d}{d\lambda} \log \det(I - \lambda T) = \Tr\left((I - \lambda T)^{-1}T\right).
+\frac{d}{d\lambda} \log \det(I - \lambda T) = \Tr\left((I - \lambda T)^{-1} T\right).
 \]
 
-For unbounded operators \( L \) with compact resolvent and nonnegative spectrum (e.g., \( L_{\sym}^2 \)), the zeta-regularized determinant is defined by
+For unbounded nonnegative operators \( L \) with compact resolvent (e.g., \( \Lsym^2 \)), the zeta-regularized determinant is defined by
 \[
-\log \det\nolimits_\zeta(L) := - \left. \frac{d}{ds} \zeta_L(s) \right|_{s=0}, \quad \text{where } \zeta_L(s) := \sum_{\lambda > 0} \lambda^{-s}.
+\log \det\nolimits_\zeta(L) := - \left. \frac{d}{ds} \zeta_L(s) \right|_{s=0}, \quad
+\zeta_L(s) := \sum_{\lambda > 0} \lambda^{-s}.
 \]
-If \( L = T^2 \) with \( T \in \TC(H) \), and \( \Tr(e^{-tL}) \sim \frac{\log(1/t)}{\sqrt{4\pi t}} + \cdots \), then the determinant growth is controlled by the log-singularity, and matches the Hadamard structure of \( \Xi \).
 
-\paragraph{Comparison with Elliptic Zeta-Regularization.}
-In classical spectral geometry, \( \zeta(s) \)-regularization is defined for positive-definite elliptic operators (e.g., Laplacians on compact manifolds), whose heat traces admit small-time expansions of the form
+If \( L = T^2 \) with \( T \in \TC(H) \), and
+\[
+\Tr(e^{-tL}) \sim \frac{\log(1/t)}{\sqrt{4\pi t}} + \cdots,
+\]
+then \( \log \det_\zeta(L) \) grows as a genus-one Hadamard product, matching the structure of \( \Xi \).
+
+\paragraph{Comparison: Elliptic vs. Convolutional Regularization.}
+For elliptic operators (e.g., Laplacians on compact manifolds), the classical zeta function arises from:
 \[
 \Tr(e^{-t\Delta}) \sim \sum_{n=0}^\infty a_n t^{(n-d)/2}.
 \]
-In contrast, the operator \( \Lsym^2 \) is not local and admits a leading singularity
+In contrast, \( \Lsym^2 \) is convolutional and admits a leading singularity:
 \[
 \Tr(e^{-t \Lsym^2}) \sim \frac{\log(1/t)}{\sqrt{4\pi t}} + \cdots.
 \]
-This logarithmic divergence prevents direct application of the classical Mellin framework. The determinant here is defined via Laplace-Carleman regularization, which accommodates the singular trace by subtracting a parametrix (see \remref{rem:spectral_dimension}). This regularization matches the Hadamard structure of \( \Xi(s) \) and is tailored to trace-class convolution operators.
+This divergence requires Laplace–Carleman regularization, subtracting a singular parametrix (see \remref{rem:spectral_dimension}). The result matches the growth and structure of the canonical determinant for \( \Xi(s) \).
 
 \subsection*{Schatten Classes and Trace Ideals}
 
-Let \( \mathcal{H} \) be a separable Hilbert space and let \( T \in \mathcal{B}(\mathcal{H}) \). The singular values \( s_n(T) \) are the eigenvalues of \( |T| := (T^*T)^{1/2} \). The Schatten ideal \( \mathcal{C}_p(\mathcal{H}) \) is defined by
+Let \( \mathcal{H} \) be a separable Hilbert space, and \( T \in \mathcal{B}(\mathcal{H}) \). The singular values \( s_n(T) \) are the eigenvalues of \( |T| := (T^*T)^{1/2} \). The Schatten class \( \mathcal{C}_p(\mathcal{H}) \) is defined by
 \[
 \|T\|_{\mathcal{C}_p} := \left( \sum_{n=1}^\infty s_n(T)^p \right)^{1/p} < \infty.
 \]
-We have inclusions \( \TC(\mathcal{H}) := \mathcal{C}_1(\mathcal{H}) \subset \mathcal{C}_2(\mathcal{H}) \subset \mathcal{K}(\mathcal{H}) \), and trace-class operators satisfy
+We have inclusions
+\[
+\TC(\mathcal{H}) := \mathcal{C}_1(\mathcal{H}) \subset \mathcal{C}_2(\mathcal{H}) \subset \mathcal{K}(\mathcal{H}),
+\]
+and trace-class operators satisfy
 \[
 \Tr(T) = \sum_{n=1}^\infty \langle T e_n, e_n \rangle, \quad \text{for any orthonormal basis } \{ e_n \}.
 \]
 
-If \( T \in \TC(\HPsi) \) and \( T = T^* \), the trace pairing \( \phi \mapsto \Tr(\phi(T)) \) defines a tempered distribution for all \( \phi \in \mathcal{S}(\R) \). This underlies the spectral measure positivity results in Chapter~\ref{sec:spectral_rigidity}.
+If \( T \in \TC(\HPsi) \) and \( T = T^* \), the trace functional \( \phi \mapsto \Tr(\phi(T)) \) extends to a tempered distribution on \( \R \), for all \( \phi \in \mathcal{S}(\R) \). This underlies the spectral positivity results in Chapter~\ref{sec:spectral_rigidity}.

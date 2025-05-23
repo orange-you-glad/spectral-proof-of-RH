@@ -2,34 +2,34 @@
 \label{app:spectral_numerics}
 
 \noindent\textbf{[Noncritical Appendix]}  
-This appendix is logically inert: no theorem or lemma in the manuscript depends on this material. All numerical results are exploratory and illustrative. No conclusion relies on these simulations.
+This appendix is logically inert: no theorem or lemma in the manuscript depends on this material. All numerical simulations are exploratory and illustrative. No conclusion relies on them.
 
 \medskip
 
-The figures and tables below visualize spectral approximations of the canonical operator \( L_{\sym} \in \TC(\HPsi) \) constructed via mollified convolution in \cref{sec:operator_construction}. They support:
+The figures and tables below visualize spectral approximations of the canonical operator \( L_{\sym} \in \TC(\HPsi) \), constructed via mollified convolution in \cref{sec:operator_construction}. They provide numerical support for:
 
 \begin{itemize}
-  \item Trace-class convergence \( L_t \to L_{\sym} \);
-  \item Spectral bijection \( \rho = \tfrac{1}{2} + i\gamma_n \mapsto \mu_n = 1/\gamma_n \), as proven in \cref{sec:spectral_correspondence};
-  \item Determinant identity \( \det\nolimits_\zeta(I - \lambda L_{\sym}) = \Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2}) \), as derived in \cref{sec:determinant_identity}.
+  \item Trace-norm convergence \( L_t \to L_{\sym} \);
+  \item The spectral bijection \( \rho = \tfrac{1}{2} + i\gamma_n \mapsto \mu_n = 1/\gamma_n \), as proven in \cref{sec:spectral_correspondence};
+  \item The determinant identity \( \detz(I - \lambda L_{\sym}) = \Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2}) \), as derived in \cref{sec:determinant_identity}.
 \end{itemize}
 
-While not part of the formal proof, these experiments visually corroborate the theoretical results.  In particular, they illustrate the rapid decay of \(\|L_t-L_{\sym}\|_{\TC}\) and the matching of eigenvalue distributions with zeta zeros, complementing the Tauberian analysis in Chapter~\ref{sec:tauberian_growth}.
+These experiments visually corroborate the theoretical results. In particular, they illustrate the rapid decay of \( \|L_t - L_{\sym}\|_{\TC} \) and the alignment of eigenvalue distributions with zeta zeros, complementing the Tauberian analysis in Chapter~\ref{sec:tauberian_growth}.
 
-Numerical approximations are based on truncated Fourier inversion and quadrature schemes. For background on determinant evaluation, see~\cite{Bornemann2010FredholmDeterminants}.
+Numerical approximations are based on truncated Fourier inversion and quadrature schemes. For background on numerical determinant computation, see~\cite{Bornemann2010FredholmDeterminants}.
 
 \subsection*{Overview and Purpose}
 
-We define the mollified profile
+We define the mollified spectral profile
 \[
 \varphi_t(\lambda) := e^{-t\lambda^2} \, \Xi\left( \tfrac{1}{2} + i\lambda \right),
 \]
-and construct discretized convolution operators \( L_t^{(N)} \) to approximate eigenvalues \( \mu_n^{(N)} \approx \mu_n \) and determinant profiles
+and construct discretized convolution operators \( L_t^{(N)} \) to approximate eigenvalues \( \mu_n^{(N)} \approx \mu_n \) and determinant profiles:
 \[
 \det(I - \lambda L_t^{(N)}) \approx \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
 \]
 
-These simulations visualize analytic results from \cref{sec:operator_construction} and \cref{sec:heat_kernel_asymptotics}.
+These simulations visualize analytic results from Chapters~\ref{sec:operator_construction} and~\ref{sec:heat_kernel_asymptotics}.
 
 \subsection*{Eigenvalue Scaling and Determinant Approximation}
 
@@ -80,7 +80,7 @@ These simulations visualize analytic results from \cref{sec:operator_constructio
     \addlegendentry{Reference \( \Xi(\tfrac{1}{2} + i\lambda) / \Xi(\tfrac{1}{2}) \)}
   \end{axis}
 \end{tikzpicture}
-\caption{Heuristic comparison of numerical determinant and normalized zeta profile.}
+\caption{Heuristic comparison: numerical determinant vs. normalized zeta profile.}
 \label{fig:det-vs-xi}
 \end{figure}
 
@@ -88,14 +88,14 @@ These simulations visualize analytic results from \cref{sec:operator_constructio
 
 \begin{itemize}
   \item Bandlimit: \( \Lambda = 30 \), step size \( \delta = 0.05 \), grid size \( N = 512 \).
-  \item Mollifier scale: \( t = 0.01 \); kernel is symmetrized and trace-normalized.
-  \item Observed error: \( |\mu_n^{(N)} - 1/\gamma_n| = O(t^{1/2} + N^{-1}) \); no formal error bounds are claimed.
+  \item Mollifier scale: \( t = 0.01 \); kernel symmetrized and trace-normalized.
+  \item Observed error: \( |\mu_n^{(N)} - 1/\gamma_n| = O(t^{1/2} + N^{-1}) \). No rigorous error bounds are asserted.
 \end{itemize}
 
 \subsection*{Caveats and Interpretation}
 
 \begin{itemize}
-  \item Operator-norm convergence is visualized; trace-norm convergence is proven analytically.
-  \item Figures serve as illustration only—no theorem or proof depends on this data.
-  \item Intended to reinforce the analytic constructions in \cref{sec:operator_construction} and \cref{sec:heat_kernel_asymptotics}.
+  \item Operator-norm convergence is visualized; trace-norm convergence is established analytically.
+  \item Figures are illustrative only—no theorem or lemma depends on numerical output.
+  \item The simulations reinforce analytic constructions from Chapters~\ref{sec:operator_construction} and~\ref{sec:heat_kernel_asymptotics}.
 \end{itemize}

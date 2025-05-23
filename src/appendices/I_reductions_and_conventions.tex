@@ -1,47 +1,45 @@
 \section{Reductions and Conventions}
 \label{app:reductions_and_conventions}
 
-This appendix records global analytic conventions and structural assumptions used throughout the manuscript. These ensure convergence, compactness, and spectral closure across all operator-theoretic constructions. No result in the core chapters depends on unstated analytic input.
+\noindent
+This appendix records global analytic conventions and structural assumptions used throughout the manuscript. These ensure convergence, compactness, and spectral closure across all operator-theoretic constructions. No result in the core chapters relies on unstated analytic input.
 
 \subsection*{Hilbert Space Framework}
 
-All Hilbert spaces \( H \) are complex, separable, and equipped with the standard inner product. All operators \( T \colon H \to H \) are assumed linear and bounded unless otherwise stated.
+All Hilbert spaces \( H \) are complex, separable, and equipped with the standard Hermitian inner product. Unless otherwise stated, all operators \( T \colon H \to H \) are linear, bounded, and densely defined.
 
-Operator convergence statements (e.g., \( L_t \to \Lsym \)) are understood in the trace norm \( \|\cdot\|_{\TC} \), unless otherwise specified. Self-adjointness and Schatten class inclusions are justified via kernel decay and Fourier-analytic estimates, as in~\cite{Simon2005TraceIdeals, ReedSimon1980I}.
+Operator convergence statements (e.g., \( L_t \to \Lsym \)) are understood in the trace norm \( \|\cdot\|_{\TC} \), unless specified otherwise. Self-adjointness and Schatten class inclusions are verified via kernel decay and Paley–Wiener theory~\cite{Simon2005TraceIdeals, ReedSimon1980I}.
 
 \subsection*{Fourier Transform Convention}
 
-We use the unitary Fourier transform on \( L^2(\R) \):
+We use the unitary Fourier transform on \( L^2(\R) \), defined by:
 \[
 \FT f(\lambda) := \frac{1}{\sqrt{2\pi}} \int_{\R} f(x)\, e^{-i\lambda x}\, dx,
-\]
-with:
-\[
-\FT^{-1} = \FT, \qquad \FT^2 f(x) = f(-x).
+\qquad \FT^{-1} = \FT, \qquad \FT^2 f(x) = f(-x).
 \]
 
-Convolution operators diagonalize under \( \FT \), and even real-valued convolution profiles yield self-adjoint operators on \( L^2 \).
+Convolution operators diagonalize under \( \FT \), and even real-valued convolution profiles yield self-adjoint operators.
 
-\subsection*{Spectral Domain}
+\subsection*{Spectral Domain and Normalization}
 
-Spectral variables \( \lambda \in \R \) are centered via \( s = \tfrac{1}{2} + i\lambda \), aligning the critical line with the real axis. This normalization is used throughout to formulate the determinant identity using real spectral data.
+Spectral variables \( \lambda \in \R \) are centered via \( s = \tfrac{1}{2} + i\lambda \), so that the critical line \( \Re(s) = \tfrac{1}{2} \) maps to \( \lambda \in \R \). This convention aligns spectral reality with the Riemann Hypothesis and is used throughout for determinant normalization.
 
-No global fields, adèles, or automorphic representations are assumed in Chapters~\ref{sec:foundations}–\ref{sec:logical_closure}. All results are derived from classical real and complex analysis. Functorial extensions to automorphic \( L \)-functions are proposed in \appref{app:functorial_extensions}.
+No use of global fields, adèles, or automorphic representations appears in Chapters~\ref{sec:foundations}–\ref{sec:logical_closure}. All core results derive from classical real and complex analysis. Extensions to automorphic \( L \)-functions are proposed separately in \appref{app:functorial_extensions}.
 
 \subsection*{Weight Function Normalization}
 
-The fixed exponential weight is:
+The canonical exponential weight is:
 \[
 \Psi_\alpha(x) := e^{\alpha |x|}, \qquad \alpha > \pi.
 \]
 This ensures:
 \begin{itemize}
-  \item Integrability of \( \FT^{-1}[\Xi(\tfrac{1}{2} + i\lambda)] \);
-  \item Trace-class convergence of \( L_t \to \Lsym \);
-  \item Validity of short-time heat kernel expansions and Laplace integrability.
+  \item Integrability of the kernel \( \FT^{-1}[\Xi(\tfrac{1}{2} + i\lambda)] \in L^1(\R, \Psi_\alpha) \);
+  \item Trace-class convergence \( L_t \to \Lsym \in \TC(\HPsi) \);
+  \item Validity of heat trace asymptotics and Laplace regularization for the zeta determinant.
 \end{itemize}
 
-Alternative weights, such as \( |\Xi(\tfrac{1}{2} + ix)|^2 \), are not used due to insufficient decay for compact operator theory.
+Alternate weights such as \( |\Xi(\tfrac{1}{2} + ix)|^2 \) are not used due to insufficient decay for compactness in the trace-norm topology.
 
 \subsection*{Spectral Parameterization}
 
@@ -49,10 +47,13 @@ The centered spectral profile is defined by:
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad \lambda \in \R.
 \]
-This choice guarantees:
+This parameterization ensures:
 \begin{itemize}
-  \item Even symmetry: \( \phi(-\lambda) = \phi(\lambda) \);
-  \item Self-adjoint convolution operators with kernel \( \FT^{-1}[\phi] \);
-  \item Spectral encoding: \( \rho = \tfrac{1}{2} + i\gamma \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) = \gamma^{-1} \);
+  \item Symmetry: \( \phi(-\lambda) = \phi(\lambda) \), hence \( \Lsym \) is self-adjoint;
+  \item Spectral kernel structure \( k(x) := \FT^{-1}[\phi](x) \), with real, even convolution profile;
+  \item Spectral encoding via the canonical map:
+  \[
+  \rho = \tfrac{1}{2} + i\gamma \quad \longmapsto \quad \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) = \gamma;
+  \]
   \item Canonical realization of \( \Xi(s) \) as a zeta-regularized Fredholm determinant.
 \end{itemize}

@@ -5,17 +5,17 @@
 This appendix collects global analytic symbols and conventions. All other notation is introduced locally at first use. For semantic dependencies and usage by chapter, see the DAG in \appref{app:dependency_graph}.
 
 \begin{itemize}
-    \item \textbf{Weighted Hilbert Space:}
+  \item \textbf{Weighted Hilbert Space:}
   \[
   \HPsi := L^2(\R, e^{\alpha |x|} dx), \qquad \Psi_\alpha(x) := e^{\alpha |x|}, \quad \alpha > \pi.
   \]
-  The exponential weight ensures trace-class inclusion of kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). The threshold \( \alpha > \pi \) is sharp: for \( \alpha \le \pi \), the canonical kernel fails to lie in \( L^1(\R^2, \Psi_\alpha \otimes \Psi_\alpha) \) and no trace-class realization exists. All spectral operators \( L_t \), \( \Lsym \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
+  This exponential weight ensures trace-class inclusion of convolution kernels with Fourier decay \( \widehat{\phi}(x) \sim e^{-\pi |x|} \). The threshold \( \alpha > \pi \) is sharp: for \( \alpha \le \pi \), the canonical kernel fails to lie in \( L^1(\R^2, \Psi_\alpha \otimes \Psi_\alpha) \), and no trace-class realization exists. All operators \( L_t \), \( \Lsym \), and semigroups \( e^{-tL^2} \) act on \( \HPsi \).
 
   \item \textbf{Paley–Wiener Class:}
   \[
   \PW{a} := \mathcal{PW}_a(\R)
   \]
-  denotes the Paley–Wiener space of entire functions of exponential type \( a \), with Fourier transforms supported in \( [-a, a] \). The centered spectral profile satisfies:
+  denotes the Paley–Wiener space of entire functions of exponential type \( a \), i.e., those with Fourier transforms supported in \( [-a, a] \). The centered spectral profile satisfies:
   \[
   \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right) \in \PW{\pi}, \quad \Rightarrow \quad \phi^\vee(x) \sim e^{-\pi |x|}.
   \]
@@ -24,34 +24,44 @@ This appendix collects global analytic symbols and conventions. All other notati
   \[
   \Lsym := \lim_{t \to 0^+} L_t \in \TC(\HPsi),
   \]
-  defined as the trace-norm limit of mollified convolutions with kernels from \( \FT^{-1}[\phi_t] \), where \( \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \in \Schwartz \). The operator is compact, self-adjoint, and realizes the canonical determinant identity.
+  defined as the trace-norm limit of mollified convolution operators with kernels from
+  \[
+  k_t(x) := \FT^{-1}[\phi_t](x), \quad \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda).
+  \]
+  The operator is compact, self-adjoint, and satisfies the canonical determinant identity.
 
   \item \textbf{Spectral Profile and Kernel:}
   \[
-  \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \qquad k(x) := \FT^{-1}[\phi](x), \qquad K(x, y) := k(x - y).
+  \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right), \quad
+  k(x) := \FT^{-1}[\phi](x), \quad
+  K(x, y) := k(x - y).
   \]
-  These define the integral kernel of \( \Lsym \). The profile \( \phi \) governs spectral decay and determinant structure.
+  These define the convolution kernel for \( \Lsym \). The decay of \( \phi \in \PW{\pi} \) governs trace-class regularity and determinant growth.
 
   \item \textbf{Canonical Spectral Map:}
   \[
-  \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}), \qquad \rho \in \C \text{ zero of } \zeta(s).
+  \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}), \qquad
+  \rho \in \mathcal{Z}(\zeta).
   \]
-  This bijective reparametrization maps the critical line to the real axis, identifying zeros of \( \zetaR \) with eigenvalues of \( \Lsym \).
+  This bijective reparametrization maps the critical line to the real axis and encodes the zeta zeros into the spectrum of \( \Lsym \).
 
   \item \textbf{Spectral Determinant:}
   \[
   \detz(I - \lambda \Lsym) := \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
   \]
-  the Carleman \(\zeta\)-regularized Fredholm determinant. It matches the Hadamard factorization of \( \Xi \) and encodes all nontrivial zero data.
+  the Carleman \(\zeta\)-regularized Fredholm determinant of \( \Lsym \), encoding all nontrivial zeros and normalized via trace centering.
 \end{itemize}
+
+\medskip
 
 \noindent
 The completed zeta function \( \Xi(s) \) is entire of order one and exponential type \( \pi \), satisfying:
 \[
-\Xi(s) = \Xi(1 - s), \quad \Xi\left( \tfrac{1}{2} + i\lambda \right) \in \R, \quad \forall\, \lambda \in \R.
+\Xi(s) = \Xi(1 - s), \qquad
+\Xi\left( \tfrac{1}{2} + i\lambda \right) \in \R \quad \forall\, \lambda \in \R.
 \]
 
 \medskip
 
 \noindent
-For analytic derivations of these constructions, see \appref{app:zeta_trace_background}. The global dependency DAG in \appref{app:dependency_graph} maps which chapters rely on which analytic structures.
+For analytic derivations of these constructions, see \appref{app:zeta_trace_background}. The full dependency DAG appears in \appref{app:dependency_graph}, summarizing which chapters rely on each core analytic object.

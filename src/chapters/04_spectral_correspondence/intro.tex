@@ -3,40 +3,41 @@
 
 This chapter rigorously establishes the canonical bijection between the nontrivial zeros of the Riemann zeta function \( \zetaR(s) \) and the nonzero spectrum of the trace-class operator \( \Lsym \in \TC(\HPsi) \), constructed in \secref{sec:operator_construction} and analytically normalized in \secref{sec:determinant_identity}. The spectral identification map
 \[
-\rho = \tfrac{1}{2} + i\gamma \quad \longmapsto \quad \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma
+\rho := \tfrac{1}{2} + i\gamma \quad \longmapsto \quad \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma
 \]
-assigns to each nontrivial zero \( \rho \in \C \) a nonzero eigenvalue \( \mu_\rho \in \R \setminus \{0\} \), and realizes the completed Riemann zeta function \( \XiR(s) \) as the \(\zeta\)-regularized Fredholm determinant of the canonical operator:
+assigns to each nontrivial zero \( \rho \in \C \) a nonzero eigenvalue \( \mu_\rho \in \R \setminus \{0\} \), and realizes the completed Riemann zeta function \( \XiR(s) \) as the \(\zeta\)-regularized Fredholm determinant:
 \[
 \detz(I - \lambda \Lsym) = \frac{\XiR\left( \tfrac{1}{2} + i\lambda \right)}{\XiR\left( \tfrac{1}{2} \right)}.
 \]
 
 \medskip
 
-This spectral correspondence is developed through a modular chain of analytically independent results:
+The correspondence between zeros and spectral values is developed through a chain of analytically independent results:
 
 \begin{itemize}
-  \item \textbf{Injection:} Every nontrivial zero \( \rho \) of \( \zetaR(s) \) yields a nonzero eigenvalue \( \mu_\rho \in \Spec(\Lsym) \) (\lemref{lem:zero_to_eigenvalue_injection}).
-  
-  \item \textbf{Surjection:} Every nonzero eigenvalue arises from a unique zero \( \rho \in \C \) (\lemref{lem:spectral_exhaustivity}).
-  
-  \item \textbf{Multiplicity Matching:} Eigenvalue multiplicities match the order of vanishing of \( \zetaR(s) \) (\lemref{lem:spectral_multiplicity_matching}).
-  
-  \item \textbf{Spectral Symmetry:} The spectrum is symmetric: \( \mu \in \Spec(\Lsym) \Rightarrow -\mu \in \Spec(\Lsym) \) (\lemref{lem:spectral_symmetry}).
-  
-  \item \textbf{Bijection Consistency:} The map \( \rho \mapsto \mu_\rho \) is a bijection between zeros and the nonzero spectrum (\lemref{lem:spectral_bijection_consistency}).
-  
-  \item \textbf{Spectral Trace Representation:} The heat trace \( \Tr(e^{-t \Lsym^2}) \) admits a Laplace transform encoding \( \XiR(s) \) (\lemref{lem:spectral_measure_heat_semigroup}).
-  
-  \item \textbf{Reality–RH Equivalence:} Spectral reality \( \Spec(\Lsym) \subset \R \) is equivalent to the Riemann Hypothesis (\lemref{lem:reality_of_spectrum_and_rh}).
+  \item \textbf{Injection:} Every nontrivial zero \( \rho \in \mathcal{Z}(\zetaR) \) induces a nonzero eigenvalue \( \mu_\rho \in \Spec(\Lsym) \) (\lemref{lem:zero_to_eigenvalue_injection}).
+
+  \item \textbf{Surjection:} Every nonzero eigenvalue arises from a unique zero \( \rho \in \mathcal{Z}(\zetaR) \) (\lemref{lem:spectral_exhaustivity}).
+
+  \item \textbf{Multiplicity Matching:} Spectral multiplicities coincide with zero multiplicities (\lemref{lem:spectral_multiplicity_matching}).
+
+  \item \textbf{Spectral Symmetry:} The spectrum satisfies \( \mu \in \Spec(\Lsym) \Rightarrow -\mu \in \Spec(\Lsym) \) (\lemref{lem:spectral_symmetry}), reflecting functional equation symmetry.
+
+  \item \textbf{Bijection Consistency:} The map \( \rho \mapsto \mu_\rho \) defines a bijection between the zero multiset and the nonzero spectrum of \( \Lsym \) (\lemref{lem:spectral_bijection_consistency}).
+
+  \item \textbf{Spectral Trace Realization:} The spectral trace \( \Tr(e^{-t \Lsym^2}) \) admits a Laplace transform encoding of \( \XiR(s) \), justifying analytic continuation (\lemref{lem:spectral_measure_heat_semigroup}).
+
+  \item \textbf{Reality–RH Equivalence:} The Riemann Hypothesis is equivalent to spectral reality:
+  \[
+  \Spec(\Lsym) \subset \R \quad \Longleftrightarrow \quad \text{RH},
+  \]
+  as proven in \lemref{lem:reality_of_spectrum_and_rh}.
 \end{itemize}
 
 \medskip
 
-\thmref{thm:spectral_zero_bijection_revised} consolidates these into the central equivalence:
+The central result of this chapter, \thmref{thm:spectral_zero_bijection_revised}, consolidates the analytic chain into the canonical identity:
 \[
 \Spec(\Lsym) \setminus \{0\} = \left\{ \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \,\middle|\, \zetaR(\rho) = 0 \right\},
 \]
-with exact preservation of multiplicity. This bijection is proven unconditionally and without assuming RH. It forms the analytic foundation for the RH equivalence proven in \secref{sec:spectral_implications}:
-\[
-\Spec(\Lsym) \subset \R \quad \Longleftrightarrow \quad \text{Riemann Hypothesis}.
-\]
+with exact preservation of multiplicities. This bijection is proven unconditionally and without assuming RH, and establishes the spectral encoding framework used in subsequent equivalence theorems in \cref{sec:spectral_implications}.

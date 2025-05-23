@@ -2,14 +2,19 @@
 \label{lem:spectral_bijection_consistency}
 Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator defined via the spectral determinant identity:
 \[
-\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
+\det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
 \]
+as given in \thmref{thm:det_identity_revised}.
 
 Then the canonical spectral map
 \[
 \rho \longmapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
 defines a bijection between the multiset of nontrivial zeros \( \rho \in \mathbb{C} \) of the Riemann zeta function \( \zeta(s) \), and the multiset of nonzero eigenvalues of \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), with multiplicities preserved.
+
+\medskip
+\noindent
+This follows from injectivity of the map (see \lemref{lem:zero_to_eigenvalue_injection}), surjectivity (see \lemref{lem:spectral_exhaustivity}), and explicit multiplicity preservation (see \lemref{lem:spectral_multiplicity_matching}). These are unified in the spectral bijection formulation of \lemref{lem:spectrum_zero_bijection}.
 
 \medskip
 \noindent

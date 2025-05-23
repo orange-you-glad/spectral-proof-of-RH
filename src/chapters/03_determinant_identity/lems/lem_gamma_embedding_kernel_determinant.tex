@@ -1,0 +1,24 @@
+\begin{lemma}[Gamma Embedding in Kernel and Determinant]
+\label{lem:gamma_embedding_kernel_determinant}
+Let \( \Xi(s) := \tfrac{1}{2} s(s-1) \pi^{-s/2} \Gamma\left(\tfrac{s}{2}\right) \zeta(s) \) be the completed Riemann zeta function, and define the canonical spectral profile by
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+Then:
+\begin{enumerate}
+  \item \( \phi \in \PW{\pi} \) is an entire function of exponential type \( \pi \) (see \lemref{lem:xi_growth_bound}), and its inverse Fourier transform
+  \[
+  k(x) := \mathcal{F}^{-1}[\phi](x)
+  \]
+  defines a real, even, rapidly decaying function (see \lemref{lem:decay_inverse_fourier_xi}).
+
+  \item The Gamma factor \( \Gamma\left(\tfrac{1}{4} + \tfrac{i\lambda}{2} \right) \) appears in \( \phi(\lambda) \) and contributes Gaussian decay in \( \lambda \), ensuring integrability of \( \phi \) and decay of \( k(x) \). This guarantees trace-class inclusion of the associated convolution operator.
+
+  \item The spectral trace
+  \[
+  \Tr(e^{-t L_{\mathrm{sym}}^2}) \quad \text{and} \quad \detz(I - \lambda L_{\mathrm{sym}})
+  \]
+  incorporate the archimedean Gamma factor via this analytic structure. The decay properties contribute to short-time singularity (see \lemref{lem:heat_semigroup_wellposed}) and enable the Laplace construction of the determinant (see \lemref{lem:det_via_heat_trace}).
+\end{enumerate}
+\end{lemma}

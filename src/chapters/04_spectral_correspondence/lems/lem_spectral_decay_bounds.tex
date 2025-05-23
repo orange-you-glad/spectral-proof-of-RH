@@ -3,8 +3,9 @@
 Let \( \{ \mu_\rho \} \subset \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \) denote the nonzero eigenvalues of the canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), with spectral correspondence
 \[
 \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \frac{1}{\gamma}
-\quad \text{for} \quad \rho = \tfrac{1}{2} + i\gamma.
+\quad \text{for} \quad \rho = \tfrac{1}{2} + i\gamma,
 \]
+as given by \lemref{lem:spectrum_zero_bijection}.
 
 Then the eigenvalues \( \mu_\rho \in \mathbb{R} \setminus \{0\} \) satisfy the decay estimate
 \[
@@ -21,9 +22,9 @@ N(x) = O\left( \frac{1}{x \log (1/x)} \right) \quad \text{as } x \to 0^+.
 
 \medskip
 \noindent
-These estimates follow from classical density bounds for nontrivial zeros of \( \zeta(s) \) and confirm that the spectrum of \( L_{\mathrm{sym}} \) decays superpolynomially. In particular,
+These estimates follow from classical density bounds for nontrivial zeros of \( \zeta(s) \), as reflected in the Hadamard structure of the determinant (see \lemref{lem:det_identity_entire_order_one}), and confirm that the spectrum of \( L_{\mathrm{sym}} \) decays superpolynomially. In particular,
 \[
 \{ \mu_\rho \} \in \ell^p(\mathbb{R}) \quad \text{for all } p > 1,
 \]
-ensuring consistency with \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \). These decay properties also underpin the Tauberian growth asymptotics developed in Chapter~\ref{sec:tauberian_growth}.
+ensuring consistency with \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) and the trace norm bounds from \lemref{lem:heat_semigroup_wellposed}. These decay properties also underpin the spectral density formulation in \lemref{lem:spectral_measure_heat_semigroup} and motivate the Tauberian asymptotics developed in Chapter~\ref{sec:tauberian_growth}.
 \end{lemma}

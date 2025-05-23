@@ -1,55 +1,60 @@
 \subsection*{Introduction}
 \label{sec:intro_heat_kernel_asymptotics}
 
-This chapter establishes sharp two-sided bounds and a detailed asymptotic structure for the short-time behavior of the spectral heat trace
+This chapter develops a detailed short-time analysis of the spectral heat trace
 \[
 \Tr(e^{-t \Lsym^2}),
 \]
-where \( \Lsym \in \TC(\HPsi) \) is the canonical compact, self-adjoint convolution operator constructed in \secref{sec:operator_construction}. The operator \( \Lsym \) generates a strongly continuous, trace-class contraction semigroup \( e^{-t\Lsym^2} \in \TC(\HPsi) \cap \mathcal{B}(\HPsi) \) for all \( t > 0 \), defined via the spectral theorem and classical heat kernel calculus~\cite[Ch.~X]{ReedSimon1978IV}, \cite[Ch.~3]{Simon2005TraceIdeals}.
+where \( \Lsym \in \TC(\HPsi) \) is the canonical compact, self-adjoint operator constructed in \secref{sec:operator_construction}. The operator \( \Lsym \) generates a strongly continuous, holomorphic, trace-class contraction semigroup
+\[
+e^{-t \Lsym^2} \in \TC(\HPsi) \cap \mathcal{B}(\HPsi), \qquad t > 0,
+\]
+defined via the spectral theorem and classical heat kernel calculus~\cite[Ch.~X]{ReedSimon1978IV}, \cite[Ch.~3]{Simon2005TraceIdeals}.
 
 \paragraph{Two-Sided Heat Trace Bounds.}
-We prove the existence of constants \( c_1, c_2 > 0 \), \( t_0 > 0 \) such that
+We establish that for some constants \( c_1, c_2 > 0 \) and \( t_0 > 0 \),
 \[
-c_1\, t^{-1/2} \le \Tr(e^{-t \Lsym^2}) \le c_2\, t^{-1/2}
-\quad \text{for all } 0 < t \le t_0,
+c_1\, t^{-1/2} \le \Tr(e^{-t \Lsym^2}) \le c_2\, t^{-1/2}, \qquad \text{for all } 0 < t \le t_0.
 \]
-uniformly on compact subintervals of \( (0, t_0] \). This reflects a spectral dimension \( d = 1 \), with inverse-square generator spectrum and logarithmic correction from analytic structure.
+These estimates reflect a spectral dimension of one, with inverse-square spectral density and a logarithmic singularity governed by the analytic structure of \( \Xi(s) \).
 
 \paragraph{Analytic Framework.}
-The asymptotics are derived from the analytic and operator-theoretic structure of the semigroup and its integral kernel. Key ingredients include:
+The asymptotic expansion is derived using operator-theoretic tools, kernel analysis, and Paley–Wiener theory. Key analytic components include:
 \begin{itemize}
-  \item Gaussian mollification and Paley--Wiener decay of the Fourier profile defining \( \Lsym \), ensuring Schwartz-class approximants~\cite[Ch.~IX]{ReedSimon1975II}, \cite[Ch.~9]{Levin1996EntireLectures}.
-  \item Positivity and off-diagonal Gaussian decay of the kernel \( K_t(x, y) \), with diagonal positivity from \lemref{lem:heat_kernel_diagonal_positivity}.
-  \item Trace-norm convergence \( L_t \to \Lsym \) and heat trace convergence via compactness and dominated convergence.
-  \item Pointwise diagonal expansion
+  \item Gaussian mollification and exponential decay of the Fourier profile \( \phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda) \), ensuring Schwartz-class inverse transforms~\cite[Ch.~IX]{ReedSimon1975II}, \cite[Ch.~9]{Levin1996EntireLectures}.
+  \item Positivity and diagonal structure of the kernel \( K_t(x, y) \), including \( K_t(x, x) > 0 \) from \lemref{lem:heat_kernel_diagonal_positivity}, and off-diagonal Gaussian decay.
+  \item Trace-norm convergence \( L_t \to \Lsym \) and heat trace convergence under dominated convergence on \( \HPsi \).
+  \item Pointwise asymptotic expansion of the kernel and its trace:
   \[
   \begin{aligned}
   K_t(x,x) &\sim \sum_{n=0}^\infty a_n(x)\, t^{n - 1/2}, \\
-  \Rightarrow \quad
-  \Tr(e^{-t \Lsym^2}) &\sim \sum_{n=0}^\infty A_n\, t^{n - 1/2},
-  \qquad A_n := \int_{\R} a_n(x)\, dx.
+  \Tr(e^{-t \Lsym^2}) &\sim \sum_{n=0}^\infty A_n\, t^{n - 1/2}, \quad A_n := \int_{\R} a_n(x)\, dx,
   \end{aligned}
   \]
-  This includes an explicit logarithmic singularity and its refinement (\lemref{lem:heat_trace_expansion}, \propref{prop:short_time_heat_expansion}).
+  with an explicit logarithmic singularity controlled in \lemref{lem:heat_trace_expansion} and \propref{prop:short_time_heat_expansion}.
 \end{itemize}
 
-\paragraph{Spectral Class.}
-The singular structure of the trace function \( \Theta(t) := \Tr(e^{-t \Lsym^2}) \) places it in the class \( \mathcal{R}_{1/2}^{\log}(0^+) \), i.e., log-modified regularly varying functions of index \( -1/2 \). This classification governs Tauberian inversion and spectral density extraction.
+\paragraph{Spectral Class and Regular Variation.}
+The singular behavior of the trace function \( \Theta(t) := \Tr(e^{-t \Lsym^2}) \) places it in the log-modulated regularly varying class
+\[
+\Theta(t) \in \mathcal{R}_{1/2}^{\log}(0^+),
+\]
+which is essential for Tauberian inversion and spectral growth analysis.
 
 \paragraph{Determinant and Spectral Implications.}
-The exact expansion
+The refined expansion
 \[
-\Tr(e^{-t \Lsym^2}) = \frac{\log(1/t)}{\sqrt{4\pi t}} + c_0 \sqrt{t} + o(\sqrt{t})
+\Tr(e^{-t \Lsym^2}) = \frac{\log(1/t)}{\sqrt{4\pi t}} + c_0 \sqrt{t} + o(\sqrt{t}),
 \]
-determines the order-one growth and normalization of the Carleman \(\zeta\)-regularized Fredholm determinant \( \detz(I - \lambda \Lsym) \). This connection is formalized via the Laplace representation and log-derivative identity (\lemref{lem:log_derivative_determinant}, \propref{prop:short_time_heat_expansion}). The necessity of the singular term follows from Hadamard product theory and spectral Mellin analysis~\cite[Ch.~III]{Korevaar2004Tauberian}.
+determines the Hadamard type and normalization of the canonical zeta-regularized determinant \( \detz(I - \lambda \Lsym) \). This structure underlies the Laplace–Mellin definition (\lemref{lem:log_derivative_determinant}) and guarantees the log-derivative identity required for analytic continuation. The singularity is necessary to match the spectral zeta pole at \( s = 0 \) and reflects the logarithmic trace anomaly predicted by Hadamard factorization~\cite[Ch.~III]{Korevaar2004Tauberian}.
 
 \begin{remark}[Modular Validation of Determinant Structure]
-Several asymptotic results derived in this chapter—most notably the short-time singular expansion of \( \Tr(e^{-t \Lsym^2}) \) and its Laplace integrability—were invoked in Chapter~\ref{sec:determinant_identity} to justify the Carleman determinant representation. These dependencies are modular and acyclic (see \cref{app:dependency_graph}), and the current chapter closes the analytic loop needed to rigorously establish the determinant’s growth class and log-derivative identity.
+Several heat trace asymptotics developed in this chapter—especially the singular expansion and Laplace integrability—were invoked in Chapter~\ref{sec:determinant_identity} to justify the structure of the canonical determinant. These references are modular and acyclic, as tracked in the DAG (\cref{app:dependency_graph}), and this chapter completes the analytic justification of the determinant’s growth rate and spectral zeta continuation.
 \end{remark}
 
 \paragraph{Outlook.}
-These analytic results provide the foundation for \secref{sec:tauberian_growth}, where Korevaar’s log-corrected Tauberian theorem (\lemref{lem:log_corrected_tauberian_estimate}) is applied to invert the trace asymptotics and derive the spectral growth law
+These asymptotic results provide the analytic foundation for Chapter~\ref{sec:tauberian_growth}, where Korevaar’s log-corrected Tauberian theorem is applied to invert the trace expansion and derive the spectral counting law
 \[
-N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}).
+N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}),
 \]
-This confirms that the spectrum of \( \Lsym \) encodes the nontrivial zero distribution of \( \zeta(s) \), completing the analytic–spectral bridge initiated in \secref{sec:determinant_identity}.
+thereby confirming that the spectrum of \( \Lsym \) encodes the density and growth rate of the nontrivial zeros of \( \zeta(s) \).

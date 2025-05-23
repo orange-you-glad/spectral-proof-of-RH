@@ -1,38 +1,47 @@
 \subsection*{Summary}
 
+\textbf{Determinant Foundations and Spectral Setup}
 \begin{itemize}
-  % --- Determinant Foundations ---
-  \item \defref{def:fredholm_determinant} — Fredholm determinant: defined via the eigenvalue product for \( T \in \TC \); analytic in \( \lambda \in \C \).
-  \item \defref{def:carleman_zeta_determinant} — Carleman \(\zeta\)-regularized determinant: defined by heat trace Laplace transform; entire extension via spectral zeta theory.
-  \item \defref{def:spectral_decomposition_compact} — Spectral decomposition for compact self-adjoint operators: complete orthonormal basis of eigenfunctions with discrete spectrum.
-  \item \defref{def:spectral_zeta_function} — Spectral zeta function \( \zeta_{L^2}(s) \): defined by Mellin transform of \( \Tr(e^{-t L^2}) \), with analytic continuation.
+  \item \defref{def:fredholm_determinant} — Fredholm determinant: eigenvalue product representation for \( T \in \TC \); analytic in \( \lambda \in \C \).
+  \item \defref{def:carleman_zeta_determinant} — Carleman \(\zeta\)-regularized determinant: defined via Laplace transform of the heat trace; extended by analytic continuation.
+  \item \defref{def:spectral_decomposition_compact} — Spectral decomposition for compact self-adjoint operators: orthonormal eigenbasis with discrete spectrum.
+  \item \defref{def:spectral_zeta_function} — Spectral zeta function \( \zeta_{\Lsym^2}(s) \): defined via Mellin transform of \( \Tr(e^{-t \Lsym^2}) \), analytically continued via subtraction of singularities.
+\end{itemize}
 
-  % --- Convergence and Analytic Structure ---
+\textbf{Kernel Convergence and Determinant Construction}
+\begin{itemize}
   \item \lemref{lem:kernel_trace_norm_convergence} — Kernel convergence: \( L_t \to \Lsym \) in trace norm.
   \item \lemref{lem:heat_semigroup_wellposed} — Semigroup \( \{e^{-t\Lsym^2}\} \subset \TC(\HPsi) \): holomorphic in \( t \), with exponential bounds.
-  \item \lemref{lem:det_via_heat_trace} — Determinant defined via Laplace transform:
+  \item \lemref{lem:det_via_heat_trace} — Determinant via Laplace transform:
   \[
   \log \detz(I - \lambda \Lsym) = - \int_0^\infty \frac{e^{-\lambda t}}{t} \Tr(e^{-t \Lsym}) \, dt.
   \]
-  \item \lemref{lem:laplace_heat_trace_convergence} — Absolute convergence of the Laplace integral establishes entire extension.
-  \item \lemref{lem:det_growth_bound} — Growth control:
+  \item \lemref{lem:laplace_heat_trace_convergence} — Absolute convergence of the Laplace integral ensures entire extension.
+  \item \lemref{lem:spectral_zeta_from_heat} — Mellin continuation of the spectral zeta function \( \zeta_{\Lsym^2}(s) \) via heat trace expansion.
+\end{itemize}
+
+\textbf{Growth Control and Hadamard Classification}
+\begin{itemize}
+  \item \lemref{lem:det_growth_bound} — Growth bound:
   \[
   \log |\detz(I - \lambda \Lsym)| \le C |\lambda| \log(1 + |\lambda|),
   \]
   showing membership in \( \mathcal{E}_1^{\leq \pi} \).
-  \item \lemref{lem:det_identity_entire_order_one} — Entire function has exact exponential type \( \pi \), consistent with Paley--Wiener theory.
+  \item \lemref{lem:det_identity_entire_order_one}, \lemref{lem:exact_type_pi} — Entire function has exact exponential type \( \pi \), matching the Paley--Wiener class of \( \Xi(\tfrac{1}{2} + i\lambda) \).
+  \item \lemref{lem:gamma_embedding_kernel_determinant} — Verifies proper embedding of Gamma factors in the spectral kernel and determinant growth.
+\end{itemize}
 
-  % --- Hadamard Structure and Spectral Encoding ---
-  \item \lemref{lem:exact_type_pi} — Sharp exponential type \( \pi \) for both \( \Xi(\tfrac{1}{2} + i\lambda) \) and the canonical determinant.
-  \item \lemref{lem:hadamard_linear_form} — Hadamard product representation:
+\textbf{Hadamard Structure and Spectral Matching}
+\begin{itemize}
+  \item \lemref{lem:hadamard_linear_form} — Hadamard product form:
   \[
   \Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} \right) \prod_{\rho} \left(1 - \frac{\lambda}{\lambda_\rho}\right) e^{\lambda/\lambda_\rho}.
   \]
-  \item \lemref{lem:trace_zero} — Trace vanishing:
+  \item \lemref{lem:trace_zero} — Trace centering:
   \[
   \Tr(\Lsym) = 0 \quad \Rightarrow \quad \detz(I) = 1.
   \]
-  \item \lemref{lem:A_log_derivative} — Logarithmic derivative identity:
+  \item \lemref{lem:A_log_derivative} — Logarithmic derivative of the determinant:
   \[
   \frac{d}{d\lambda} \log \detz(I - \lambda \Lsym) = \Tr\left( (I - \lambda \Lsym)^{-1} \Lsym \right).
   \]
@@ -40,35 +49,24 @@
   \[
   \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym),
   \]
-  with bijective multiplicity matching between \( \Spec(\Lsym) \setminus \{0\} \) and nontrivial zeros of \( \zeta(s) \).
-  \item \lemref{lem:hadamard_uniqueness_E1pi} — Entire function uniqueness in \( \mathcal{E}_1^\pi \): determined by zeros and normalization.
+  establishing a bijection between \( \zeta \)-zeros and \( \Lsym \)-spectrum with multiplicities matched.
+  \item \lemref{lem:hadamard_uniqueness_E1pi} — Uniqueness in \( \mathcal{E}_1^\pi \): entire function determined by zeros and normalization.
+\end{itemize}
 
-  % --- Canonical Identity Theorem ---
+\textbf{Canonical Identity and Spectral Implications}
+\begin{itemize}
   \item \thmref{thm:det_identity_revised} — Canonical determinant identity:
   \[
   \detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
   \]
-
-  % --- Asymptotics and Spectral Density ---
-  \item \lemref{lem:spectral_zeta_from_heat} — Mellin continuation of \( \zeta_{\Lsym^2}(s) \) via short-time heat asymptotics.
-  \item \propref{prop:spectral_counting_weyl} — Spectral counting function:
+  \item \propref{prop:spectral_counting_weyl} — Spectral asymptotics:
   \[
   N(\Lambda) := \#\{ \mu_n^2 \le \Lambda \} \sim \frac{\sqrt{\Lambda}}{\pi} \log \Lambda,
   \]
-  matching the classical Riemann--von Mangoldt estimate.
+  matching the classical zero-counting law.
 \end{itemize}
 
-\medskip
+\paragraph{Chapter Closure.}
+This chapter completes the analytic core of the spectral program. The canonical trace-class operator \( \Lsym \in \TC(\HPsi) \) realizes the completed zeta function \( \Xi(s) \) as a Carleman \(\zeta\)-regularized Fredholm determinant. All analytic invariants—growth rate, exponential type, zero structure, multiplicities, and normalization—are uniquely captured.
 
-\noindent
-These results complete the analytic phase of the spectral program. The canonical operator \( \Lsym \in \TC(\HPsi) \) realizes \( \Xi(s) \) as a zeta-regularized Fredholm determinant, with all analytic invariants—growth rate, zero set, multiplicities, and normalization—uniquely fixed.
-
-\medskip
-
-\noindent
-The spectral encoding map \( \rho \mapsto \mu_\rho \) is developed and proven bijective in \thmref{thm:spectral_zero_bijection_revised}. The logical implications of spectral structure for the Riemann Hypothesis begin in \thmref{thm:eq_of_rh} and are fully closed in \thmref{thm:truth_of_rh}.
-
-\medskip
-
-\noindent
-See \propref{prop:spectral_counting_weyl} and \lemref{lem:trace_distribution_positivity} for the connection between spectral distribution and the classical zero-counting function.
+The determinant identity forms the cornerstone for the spectral equivalence with RH, while the zero-to-spectrum bijection is established independently in Chapter~\ref{sec:spectral_correspondence}. The spectral implications of this encoding begin in \thmref{thm:eq_of_rh} and are logically closed in \thmref{thm:truth_of_rh}.

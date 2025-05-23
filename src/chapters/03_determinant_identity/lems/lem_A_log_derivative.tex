@@ -12,5 +12,9 @@ Then for all \( \lambda \in \C \) such that \( I - \lambda L_{\sym} \) is invert
 
 \medskip
 \noindent
-This identity relates the derivative of the entire function \( \lambda \mapsto \det\nolimits_\zeta(I - \lambda L_{\sym}) \) to the trace of the resolvent, and provides a precise analytic tool for matching the zero structure and multiplicities of the determinant with the Hadamard product. The right-hand side is analytic on the domain where \( \lambda^{-1} \notin \Spec(L_{\sym}) \).
+This identity follows from the Laplace representation of the determinant (see \lemref{lem:det_via_heat_trace}) and holds for all \( \lambda \in \C \) outside the inverse spectrum. Regularity at \(\lambda = 0\) is ensured by the trace vanishing \( \Tr(L_{\sym}) = 0 \) (see \lemref{lem:trace_zero}), which eliminates the linear term in the expansion.
+
+\medskip
+\noindent
+This formula provides a precise analytic link between the zero structure of \( \lambda \mapsto \detz(I - \lambda L_{\sym}) \) and the eigenvalue spectrum of \( L_{\sym} \), enabling the spectral identification formalized in \lemref{lem:spectrum_zero_bijection}.
 \end{lemma}

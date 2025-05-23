@@ -16,10 +16,11 @@ K := \FT^{-1}\left[ \Xi\left(\tfrac{1}{2} + i\lambda \right) \right].
 
 \medskip
 \noindent
-Then the mollified operators \( L_t \in \TC(H_{\Psi_\alpha}) \) converge to \( \Lsym \in \TC(H_{\Psi_\alpha}) \) in trace norm:
+Then the mollified operators \( L_t \in \TC(H_{\Psi_\alpha}) \) (see \lemref{lem:trace_class_Lt}) converge to \( \Lsym \in \TC(H_{\Psi_\alpha}) \) in trace norm:
 \[
-\lim_{t \to 0^+} \| L_t - \Lsym \|_{\TC} = 0.
+\lim_{t \to 0^+} \| L_t - \Lsym \|_{\TC} = 0,
 \]
+as established more precisely in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}, based on exponential decay of the kernels (see \lemref{lem:decay_mollified_kernel}).
 
 \medskip
 \noindent
@@ -27,7 +28,7 @@ In particular:
 \begin{itemize}
   \item Each \( L_t \) and \( \Lsym \) is compact, with continuous kernel in the weighted space
   \[
-  L^2\left( \mathbb{R}^2, \Psi_\alpha(x) \Psi_\alpha(y) \, dx \, dy \right).
+  L^2\left( \mathbb{R}^2, \Psi_\alpha(x) \Psi_\alpha(y) \, dx \, dy \right);
   \]
   \item The convergence holds in all Schatten classes \( \mathcal{C}_p \) for \( p \ge 1 \), including \( \TC \);
   \item The traces and zeta-regularized determinants satisfy

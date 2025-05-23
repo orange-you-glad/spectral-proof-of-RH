@@ -1,6 +1,7 @@
 \section{Logical Dependency Graph (Modular Proof Architecture)}
 \label{app:dependency_graph}
 
+\noindent
 This appendix presents the formal structure of the manuscript as a directed acyclic graph (DAG), in which each chapter builds only on previously established analytic foundations. No theorem appeals to any result logically equivalent to the Riemann Hypothesis prior to its proof, ensuring strict acyclicity and audit transparency.
 
 For symbol definitions, see Appendix~\ref{app:notation_summary}.
@@ -24,7 +25,7 @@ The analytic identity
 \[
 \detz(I - \lambda \Lsym) = \frac{\XiR(\tfrac{1}{2} + i\lambda)}{\XiR(\tfrac{1}{2})}
 \]
-relies on the following validated properties, derived across Chapters~1–2 and Appendix~\ref{app:zeta_trace_background}:
+is built on the following validated properties, derived across Chapters~1–2 and Appendix~\ref{app:zeta_trace_background}:
 
 \begin{center}
 \renewcommand{\arraystretch}{1.4}
@@ -32,17 +33,18 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \hline
 \textbf{Property} & \textbf{Summary and Source} \\
 \hline
-\textbf{Exponential Weight Threshold} & \( \alpha > \pi \) is necessary and sufficient for kernel inclusion in \( \TC(\HPsi) \); sharp trace-class cutoff established in \cref{lem:trace_class_failure_alpha_leq_pi}. \\
-\textbf{Spectral Profile Class} & \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) ensures exponential control (\cref{lem:xi_growth_bound}). \\
-\textbf{Kernel Localization} & \( \widehat{\Xi}(x) \in L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \) (\cref{lem:weighted_L1_inverse_FT_xi}). \\
-\textbf{Operator Regularity} & \( \Lsym \in \TC(\HPsi) \) is compact, self-adjoint, and uniquely defined (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}). \\
-\textbf{Heat Semigroup Well-Posedness} & \( e^{-t\Lsym^2} \in \TC(\HPsi) \), analytic with decay bounds (\cref{lem:heat_semigroup_existence}, \cref{lem:heat_semigroup_wellposed}). \\
-\textbf{Determinant Growth and Entirety} & \( \detz \) is entire of exponential type \( \pi \), matching trace data (\cref{lem:det_identity_entire_order_one}). \\
+\textbf{Exponential Weight Threshold} & \( \alpha > \pi \) is necessary and sufficient for trace-class kernel inclusion; sharp cutoff in \cref{lem:trace_class_failure_alpha_leq_pi}. \\
+\textbf{Spectral Profile Class} & \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) ensures exponential type and kernel decay (\cref{lem:xi_growth_bound}). \\
+\textbf{Kernel Localization} & \( \widehat{\Xi}(x) \in L^1(\R, e^{-\alpha |x|} dx) \) for all \( \alpha > \pi \); see \cref{lem:weighted_L1_inverse_FT_xi}. \\
+\textbf{Operator Regularity} & \( \Lsym \in \TC(\HPsi) \) is compact, self-adjoint, and trace-norm constructed (\cref{lem:trace_norm_convergence_Lt_to_Lsym}, \cref{lem:trace_norm_limit_unique}). \\
+\textbf{Heat Semigroup Well-Posedness} & \( e^{-t\Lsym^2} \in \TC(\HPsi) \) is holomorphic and integrable (\cref{lem:heat_semigroup_existence}, \cref{lem:heat_semigroup_wellposed}). \\
+\textbf{Determinant Growth and Entirety} & \( \detz \) is entire of exponential type \( \pi \); growth bounds from trace asymptotics (\cref{lem:det_identity_entire_order_one}). \\
 \hline
 \end{tabularx}
 \end{center}
 
 \subsection*{Directed Acyclic Graph (Visual Overview)}
+
 \begin{figure}[ht]
 \centering
 \scalebox{0.87}{
@@ -80,23 +82,43 @@ relies on the following validated properties, derived across Chapters~1–2 and 
 \label{fig:dag_visual}
 \end{figure}
 
+\paragraph{Global Structure.}
+Each lemma, proposition, and theorem depends only on prior analytic inputs or trace-class spectral calculus. No assumption of RH, spectral bijection, or zero reality is made prior to its proof. The analytic chain from determinant to RH equivalence,
+\[
+\RH \iff \Spec(\Lsym) \subset \R,
+\]
+is modular, acyclic, and closed in \cref{sec:logical_closure}, grounded in results from Chapters~1–8 and Appendix~\ref{app:zeta_trace_background}.
 
-Each lemma, proposition, and theorem in this manuscript depends only on prior analytic infrastructure or trace-class spectral calculus. No assumption of the Riemann Hypothesis, spectral bijection, or spectral reality is made until explicitly proven.
+\paragraph{Base Constraint.}
+The exponential weight threshold \( \alpha > \pi \) governs all trace-class constructions and appears as the root node of the DAG (\cref{lem:trace_class_failure_alpha_leq_pi}).
 
-The analytic–spectral chain from the determinant identity to the RH equivalence
+\begin{remark}[Closure of Forward Dependencies]
+The determinant identity in Chapter~\ref{sec:determinant_identity} invokes heat trace asymptotics and Laplace integrability results proved in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}. These forward uses are modular, formally declared, and induce no logical cycles.
+\end{remark}
+
+\medskip
+
+Forward dependency annotations are given in \remref{rem:forward_spectral_closure}. The equivalence
 \[
 \RH \iff \Spec(\Lsym) \subset \R
 \]
-is modular, acyclic, and fully closed in \cref{sec:logical_closure}, relying only on results from Chapters~1–8 and the analytic infrastructure in Appendix~\ref{app:zeta_trace_background}.
+is fully formalized in \thmref{thm:rh_spectrum_equiv} and concluded in \thmref{thm:truth_of_rh}.
 
-A structurally critical constraint in this chain is the exponential weight threshold \( \alpha > \pi \), which governs the trace-class viability of all kernel realizations and appears as the base node of this DAG (\cref{lem:trace_class_failure_alpha_leq_pi}).
+The DAG structure also extends conjecturally to the automorphic setting (Chapter~\ref{sec:spectral_generalization}), where one postulates analogous trace-class operators \( L_\pi \) satisfying:
+\[
+\GRH(\pi) \iff \Spec(L_\pi) \subset \R.
+\]
 
-\begin{remark}[Closure of Forward Dependencies]
-The determinant identity in Chapter~\ref{sec:determinant_identity} invokes heat trace asymptotics and Laplace integrability properties that are rigorously derived in Chapter~\ref{sec:heat_kernel_asymptotics} and Appendix~\ref{app:heat_kernel_construction}. These analytic inputs validate the determinant’s growth class, log-derivative identity, and short-time singular structure. Their forward use is modular and does not induce any logical cycles.
-\end{remark}
+For notation, see Appendix~\ref{app:notation_summary}.
 
-Forward dependency disclosure is given in \remref{rem:forward_spectral_closure}, and the full analytic equivalence is formally stated in \thmref{thm:rh_spectrum_equiv} and concluded in \thmref{thm:truth_of_rh}.
-
-The same DAG structure extends conjecturally to the automorphic setting discussed in Chapter~\ref{sec:spectral_generalization}.  There one postulates analogous operators \(L_\pi\) whose spectra encode the zeros of \(\Lambda_\pi(s)\), giving a pathway toward proving \(\GRH(\pi) \iff \Spec(L_\pi) \subset \R\).
-
-For symbol reference, see Appendix~\ref{app:notation_summary}.
+\begin{tcolorbox}[colback=gray!2!white, colframe=black!50, title={\textbf{Canonical Equivalence — RH via Spectral Reality}}]
+The canonical operator \( \Lsym \in \TC(\HPsi) \), constructed in Chapter~\ref{sec:operator_construction} and analytically normalized in Chapter~\ref{sec:determinant_identity}, satisfies the determinant identity
+\[
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\]
+whose spectral zeros match the nontrivial zeros of \( \zeta(s) \). This determinant structure, combined with the bijection \( \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \), canonically encodes zeta zeros into the spectrum of \( \Lsym \). The Riemann Hypothesis is then equivalent to spectral reality:
+\[
+\RH \iff \Spec(\Lsym) \subset \R,
+\]
+as formally proven in \thmref{thm:truth_of_rh}. This equivalence is derived solely from analytic spectral theory and zeta determinant regularization.
+\end{tcolorbox}

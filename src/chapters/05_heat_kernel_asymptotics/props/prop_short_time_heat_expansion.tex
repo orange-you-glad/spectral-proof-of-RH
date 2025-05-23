@@ -10,7 +10,7 @@ for some constant \( c_0 \in \R \), where the remainder \( o(\sqrt{t}) \) vanish
 
 \medskip
 \noindent
-The leading-order singularity \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) reflects the logarithmic divergence induced by the spectral structure of the mollified convolution kernel defining \( \Lsym \). This divergence originates from the genus-one Hadamard structure of the completed zeta function and implies non-integrability of the trace near \( t = 0 \).
+The leading-order singularity \( \frac{1}{\sqrt{4\pi t}} \log(1/t) \) reflects the logarithmic divergence induced by the spectral structure of the mollified convolution kernel defining \( \Lsym \). This behavior emerges from the genus-one Hadamard structure of the completed zeta function (see \lemref{lem:heat_trace_expansion}) and implies non-integrability of the trace near \( t = 0 \).
 
 \medskip
 \noindent
@@ -20,18 +20,19 @@ c_0 := \int_{\R} a_1(x) \, dx,
 \]
 where the diagonal expansion takes the form
 \[
-K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x)\, t^{n - \frac{1}{2}}.
+K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x)\, t^{n - \frac{1}{2}},
 \]
+as shown in \lemref{lem:hk_expansion_uniform}.
 
 \medskip
 \noindent
-This refined asymptotic plays a foundational role in the determinant expansion and Tauberian theory developed in \secref{sec:determinant_identity} and \secref{sec:tauberian_growth}. In particular, the logarithmic divergence necessitates analytic continuation in the Laplace transform and underpins the regularized determinant identity:
+This refined asymptotic plays a foundational role in the determinant expansion and Tauberian theory developed in \secref{sec:determinant_identity} and \secref{sec:tauberian_growth}. In particular, the logarithmic divergence necessitates analytic continuation in the Laplace transform and underpins the regularized determinant identity (see \lemref{lem:det_via_heat_trace}):
 \[
 \log \detz(I - \lambda \Lsym) = - \int_0^\infty \frac{e^{-\lambda^2 t}}{t} \Tr\left(e^{-t \Lsym^2} \right) \, dt,
 \]
-where the integral must be interpreted in the zeta-regularized sense.
+where the integral must be interpreted in the zeta-regularized sense, as further developed in \lemref{lem:spectral_zeta_from_heat}.
 \end{proposition}
 
 \begin{remark}[Singularity Control at \( t \to 0^+ \)]
-The integrand \( \Tr(e^{-tL_{\sym}^2}) / t \sim \log(1/t)/t^{3/2} \) is locally integrable on \( (0,\epsilon) \) due to the \texttt{o(\( \sqrt{t} \))} correction. This ensures convergence of the Laplace integral defining \( \log \det_\zeta \).
+The integrand \( \Tr(e^{-tL_{\sym}^2}) / t \sim \log(1/t)/t^{3/2} \) is locally integrable on \( (0,\epsilon) \) due to the \( o(\sqrt{t}) \) correction. This ensures convergence of the Laplace integral defining \( \log \det_\zeta \).
 \end{remark}

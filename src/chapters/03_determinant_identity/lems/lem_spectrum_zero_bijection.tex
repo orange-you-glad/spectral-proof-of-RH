@@ -4,7 +4,7 @@ Let \( L_{\sym} \in \TC(\HPsi) \) be the canonical self-adjoint, trace-class con
 \[
 f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\sym}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
 \]
-denote its Carleman zeta-regularized Fredholm determinant.
+denote its Carleman zeta-regularized Fredholm determinant (see \thmref{thm:det_identity_revised}).
 
 Then:
 
@@ -13,13 +13,13 @@ Then:
   \[
   \mu_\rho := \frac{1}{i(\rho - \tfrac{1}{2})}
   \]
-  lies in the spectrum \( \Spec(L_{\sym}) \), and its multiplicity matches the order of the zero at \( \rho \).
+  lies in the spectrum \( \Spec(L_{\sym}) \), and its multiplicity matches the order of the zero at \( \rho \), as seen from the Hadamard factorization in \lemref{lem:hadamard_linear_form}.
 
   \item[\textnormal{(ii)}] Conversely, every nonzero eigenvalue \( \mu_n \in \Spec(L_{\sym}) \setminus \{0\} \) corresponds to a unique zero \( \rho_n \) of \( \zeta(s) \) such that
   \[
   \rho_n := \tfrac{1}{2} - i \mu_n^{-1}.
   \]
-  The multiplicities agree, and \( f(\lambda_n) = 0 \) where \( \lambda_n := \mu_n^{-1} \).
+  The multiplicities agree, and \( f(\lambda_n) = 0 \) where \( \lambda_n := \mu_n^{-1} \). The identity follows from the analytic structure of the determinant's logarithmic derivative in \lemref{lem:A_log_derivative}.
 
   \item[\textnormal{(iii)}] The spectrum \( \Spec(L_{\sym}) \setminus \{0\} \subset \R \setminus \{0\} \) is symmetric about the origin, and the map
   \[

@@ -1,80 +1,64 @@
 \subsection*{Summary}
 
+This chapter establishes the asymptotic structure of the spectral heat trace
+\[
+\Theta(t) := \Tr(e^{-t \Lsym^2}),
+\]
+where \( \Lsym \in \TC(\HPsi) \) is the canonical operator defined in Chapter~\ref{sec:operator_construction}. The key results are organized as follows:
+
+\textbf{Semigroup and Heat Kernel Setup}
 \begin{itemize}
-  % --- Definitions ---
-  \item \defref{def:heat_operator} — Definition of the heat semigroup \( e^{-tL^2} \) for compact, self-adjoint operators: strongly continuous and trace class for all \( t > 0 \).
-
-  % --- Kernel Bounds and Local Expansion ---
-  \item \lemref{lem:hk_upper_bound} — Upper bound:
+  \item \defref{def:heat_operator} — Definition of the semigroup \( e^{-t \Lsym^2} \): strongly continuous, trace class, and generated via spectral calculus.
+  \item \lemref{lem:hk_upper_bound}, \lemref{lem:hk_lower_bound} — Two-sided bounds:
   \[
-  \Tr(e^{-t\Lsym^2}) \leq c_2\, t^{-1/2},
+  c_1\, t^{-1/2} \leq \Tr(e^{-t \Lsym^2}) \leq c_2\, t^{-1/2},
   \]
-  via spectral partitioning and Schatten norm estimates.
-
-  \item \lemref{lem:hk_lower_bound} — Lower bound:
+  confirming leading-order singularity and spectral dimension one.
+  \item \lemref{lem:hk_expansion_uniform} — Local diagonal kernel expansion:
   \[
-  \Tr(e^{-t\Lsym^2}) \geq c_1\, t^{-1/2},
+  K_t(x,x) \sim \sum_{n=0}^\infty a_n(x) \, t^{n - \frac{1}{2}}, \qquad a_n \in \Schwartz(\R).
   \]
-  confirming sharpness of the leading singular growth.
+\end{itemize}
 
-  \item \lemref{lem:hk_expansion_uniform} — Uniform short-time diagonal kernel expansion:
+\textbf{Global Trace Expansion and Regularity}
+\begin{itemize}
+  \item \lemref{lem:heat_trace_expansion}, \propref{prop:heat_trace_uniform_conv} — Global expansion:
   \[
-  K_t(x,x) \sim \sum_{n=0}^\infty a_n(x)\, t^{n - \frac{1}{2}}, \qquad a_n(x) \in C^\infty(\R) \cap \Schwartz(\R).
+  \Tr(e^{-t \Lsym^2}) \sim \sum_{n=0}^\infty A_n \, t^{n - \frac{1}{2}}, \quad A_n := \int_\R a_n(x) \, dx.
   \]
-
-  % --- Global Trace Expansion ---
-  \item \lemref{lem:heat_trace_expansion} — Trace asymptotics:
-  \[
-  \Tr(e^{-t\Lsym^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}}, \qquad
-  A_n := \int_{\R} a_n(x)\, dx.
-  \]
-
-  \item \propref{prop:two_sided_heat_trace_bounds} — Two-sided bound:
-  \[
-  c_1\, t^{-1/2} \leq \Tr(e^{-t\Lsym^2}) \leq c_2\, t^{-1/2},
-  \]
-  uniformly for \( t \in (0, t_0] \), establishing regular variation.
-
-  \item \propref{prop:heat_trace_uniform_conv} — Global expansion:
-  \[
-  \Tr(e^{-t\Lsym^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}},
-  \]
-  with termwise integrability and exponentially decaying tail.
-
   \item \propref{prop:short_time_heat_expansion} — Refined singular expansion:
   \[
-  \Tr(e^{-t\Lsym^2})
-  = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
-  + c_0 \sqrt{t} + o(\sqrt{t}), \qquad c_0 := \int_{\R} a_1(x)\, dx.
+  \Tr(e^{-t \Lsym^2}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + c_0 \sqrt{t} + o(\sqrt{t}),
   \]
-  The logarithmic term governs determinant growth and spectral counting.
+  where \( c_0 := \int_\R a_1(x)\, dx \). The logarithmic singularity determines determinant normalization and spectral growth.
+\end{itemize}
 
-  % --- Spectral and Determinant Linkages ---
-  \item \lemref{lem:log_derivative_determinant} — Logarithmic derivative of the spectral determinant:
+\textbf{Spectral Dimension and Determinant Analysis}
+\begin{itemize}
+  \item \propref{prop:two_sided_heat_trace_bounds} — Confirms \( \Theta(t) \in \mathcal{R}_{1/2}^{\log}(0^+) \), i.e., log-modulated regular variation.
+  \item \lemref{lem:log_derivative_determinant} — Carleman determinant identity via spectral trace:
   \[
-  \log \detz(\Lsym^2)
-  = -\int_0^\infty \frac{\Tr(e^{-t \Lsym^2}) - P(t)}{t} \, dt,
+  \log \detz(\Lsym^2) = -\int_0^\infty \frac{\Tr(e^{-t \Lsym^2}) - P(t)}{t} \, dt,
   \]
-  where \( P(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t) + \dots \) is the parametrix subtraction.
-
-  \item \remref{rem:spectral_dimension} — Spectral dimension and Weyl-type asymptotics:
+  where \( P(t) \sim \frac{1}{\sqrt{4\pi t}} \log(1/t) + \cdots \) subtracts singularities.
+  \item \remref{rem:spectral_dimension} — Logarithmic correction to Weyl law:
   \[
-  N(\lambda) \sim C \lambda^{1/2} \log \lambda,
+  N(\Lambda) \sim C \Lambda^{1/2} \log \Lambda,
   \]
-  identifying log-corrected spectral density for \( \Lsym^2 \).
+  with spectral dimension 1 and log-dense spectrum for \( \Lsym^2 \).
 \end{itemize}
 
 \medskip
 
-\noindent\textbf{Transition to \thmref{thm:det_identity_revised} and \thmref{thm:eq_of_rh}.}  
-These heat kernel asymptotics provide the analytic backbone for Chapter~6, where Tauberian inversion translates singular trace expansions into precise eigenvalue counting laws. The logarithmic divergence in the heat trace directly governs the determinant normalization, spectral growth, and rigidity results in \thmref{thm:det_identity_revised} and supports the RH equivalence in \thmref{thm:eq_of_rh}.
+\noindent\textbf{Forward Link: \thmref{thm:det_identity_revised}, \thmref{thm:eq_of_rh}.}  
+These heat kernel expansions supply the trace-level input to Chapter~\ref{sec:determinant_identity}, establishing entire growth and normalization of \( \detz(I - \lambda \Lsym) \), and underpin the spectral RH equivalence in Chapter~\ref{sec:spectral_implications}.
 
 \medskip
 
-\noindent\textbf{Back-reference to \lemref{lem:det_identity_entire_order_one}, \lemref{lem:log_derivative_determinant}.}  
-The singular structure derived here retroactively validates the Carleman determinant identity and its growth classification.
+\noindent\textbf{Back-reference: \lemref{lem:det_identity_entire_order_one}, \lemref{lem:log_derivative_determinant}.}  
+The singularity structure validates earlier determinant growth bounds and Laplace–Mellin continuation.
 
 \medskip
 
 \noindent
-For numerical illustrations of the heat trace and spectral encoding, see \appref{app:spectral_numerics}. For speculative physical analogies—e.g., partition function behavior and thermodynamic scaling—see \appref{app:spectral_physics_link}.
+Numerical approximations of the heat trace and its spectral consequences appear in \appref{app:spectral_numerics}. Interpretations from quantum field theory and statistical mechanics are discussed in \appref{app:spectral_physics_link}.

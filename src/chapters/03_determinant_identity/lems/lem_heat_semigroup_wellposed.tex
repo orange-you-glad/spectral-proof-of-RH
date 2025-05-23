@@ -1,11 +1,13 @@
 \begin{lemma}[Well-Posedness of the Heat Semigroup \( e^{-t L_{\sym}^2} \)]
 \label{lem:heat_semigroup_wellposed}
-Let \( L_{\sym} \in \TC(\HPsi) \) be the compact, self-adjoint operator constructed via convolution against the inverse Fourier transform of \( \Xi\left( \tfrac{1}{2} + i\lambda \right) \). Then:
+Let \( L_{\sym} \in \TC(\HPsi) \) be the compact, self-adjoint operator constructed via convolution against the inverse Fourier transform of \( \Xi\left( \tfrac{1}{2} + i\lambda \right) \), as in \lemref{lem:trace_norm_convergence_Lt_to_Lsym}.
+
+Then:
 
 \begin{enumerate}
     \item[\textnormal{(i)}] The square \( L_{\sym}^2 \) is positive, self-adjoint, and densely defined on \( \HPsi \).
 
-    \item[\textnormal{(ii)}] For all \( t > 0 \), the semigroup \( e^{-t L_{\sym}^2} \in \TC(\HPsi) \) is trace-class, compact, and analytic in \( t \).
+    \item[\textnormal{(ii)}] For all \( t > 0 \), the semigroup \( e^{-t L_{\sym}^2} \in \TC(\HPsi) \) is trace class, compact, and analytic in \( t \). This follows from the trace-class convergence of the approximating mollified operators \( L_t \in \TC(\HPsi) \) (see \lemref{lem:trace_class_Lt}) and the exponential decay of their kernels (\lemref{lem:decay_mollified_kernel}).
 
     \item[\textnormal{(iii)}] The map \( t \mapsto \Tr(e^{-t L_{\sym}^2}) \) is smooth on \( (0, \infty) \), and satisfies the heat trace asymptotics:
     \[

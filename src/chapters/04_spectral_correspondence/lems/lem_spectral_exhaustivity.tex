@@ -2,15 +2,15 @@
 \label{lem:spectral_exhaustivity}
 Let \( \Lsym \in \TC(H_{\Psi_\alpha}) \) denote the canonical compact, self-adjoint operator constructed in \secref{sec:operator_construction}. Suppose the regularized Fredholm determinant identity holds:
 \[
-\detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)} \qquad \forall \lambda \in \C.
+\detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)} \qquad \forall \lambda \in \C,
 \]
+as established in \thmref{thm:det_identity_revised}.
 
 Then for every nonzero eigenvalue \( \mu \in \Spec(\Lsym) \setminus \{0\} \), there exists a unique nontrivial zero \( \rho = \tfrac{1}{2} + i\gamma \in \C \) of the Riemann zeta function \( \zeta(s) \) such that
 \[
 \mu = \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) = \gamma.
 \]
-
-Moreover, the algebraic multiplicity of the eigenvalue \( \mu \) equals the order of vanishing of \( \zeta(s) \) at \( \rho \).
+The multiplicity of the eigenvalue \( \mu \) equals the order of vanishing of \( \zeta(s) \) at \( \rho \), as shown through the Hadamard factorization structure in \lemref{lem:hadamard_linear_form} and confirmed by spectral trace analysis in \lemref{lem:A_log_derivative}.
 
 \medskip
 \noindent
@@ -18,5 +18,5 @@ Hence, the canonical spectral map
 \[
 \rho \longmapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
 \]
-from the multiset of nontrivial zeros of \( \zeta(s) \) to the nonzero spectrum \( \Spec(\Lsym) \setminus \{0\} \) is surjective and multiplicity-preserving.
+from the multiset of nontrivial zeros of \( \zeta(s) \) to the nonzero spectrum \( \Spec(\Lsym) \setminus \{0\} \) is surjective and multiplicity-preserving. This completes the spectral correspondence described in \lemref{lem:spectrum_zero_bijection}.
 \end{lemma}

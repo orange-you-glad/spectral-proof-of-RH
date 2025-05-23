@@ -1,39 +1,42 @@
 \subsection*{Summary}
 
+This chapter derives the spectral growth of the canonical operator \( \Lsym \in \TC(\HPsi) \) from short-time asymptotics of the heat trace \( \Tr(e^{-t \Lsym^2}) \), using Laplace–Tauberian inversion. The key analytic results are:
+
+\textbf{Tauberian Structure and Spectral Envelopes}
 \begin{itemize}
-  % --- Tauberian Principle ---
-  \item \defref{def:tauberian_theorem} — Classical Laplace–Tauberian framework: short-time behavior of the heat trace \( \Tr(e^{-t\Lsym^2}) \) determines high-energy spectral growth \( N(\Lambda) \) via inverse Laplace analysis.
+  \item \defref{def:tauberian_theorem} — Classical Laplace–Tauberian framework: short-time behavior of the heat trace governs high-energy spectral growth via Laplace inversion.
 
-  % --- Asymptotic Bounds and Growth Envelopes ---
-  \item \lemref{lem:spectral_convexity_estimate} — From the envelope \( \Tr(e^{-t \Lsym^2}) = O(t^{-1/2}) \), we deduce the coarse growth bound:
+  \item \lemref{lem:spectral_convexity_estimate} — Spectral envelope estimate:
   \[
-  N(\lambda) = O(\lambda^{1/2+\varepsilon}),
+  \Tr(e^{-t \Lsym^2}) = O(t^{-1/2}) \quad \Longrightarrow \quad N(\lambda) = O(\lambda^{1/2+\varepsilon}),
   \]
-  confirming trace-class compactness and effective dimension \( d = 1 \).
+  confirming trace-class compactness and effective spectral dimension \( d = 1 \).
+\end{itemize}
 
-  \item \lemref{lem:log_corrected_tauberian_estimate} — From the refined expansion
+\textbf{Refined Asymptotics via Korevaar Theory}
+\begin{itemize}
+  \item \lemref{lem:log_corrected_tauberian_estimate} — Refined asymptotic:
   \[
-  \Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right),
-  \]
-  Korevaar’s Tauberian theory yields the sharp asymptotic:
-  \[
+  \Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
+  \quad \Longrightarrow \quad
   N(\lambda) \sim \frac{\sqrt{\lambda}}{\pi} \log \lambda.
   \]
+  This places \( \Theta(t) \in \mathcal{R}_{1/2}^{\log}(0^+) \) and enables sharp inversion.
 
-  \item \corref{cor:zeta_compatibility} — The spectral growth law for \( \Lsym \) matches the Riemann–von Mangoldt formula:
+  \item \corref{cor:zeta_compatibility} — Spectral growth matches the classical Riemann–von Mangoldt formula:
   \[
   N_\zeta(T) = \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + O(\log T),
   \]
-  confirming analytic agreement between the spectrum of \( \Lsym \) and the zero-counting function for \( \zeta(s) \).
+  confirming analytic agreement between the spectrum of \( \Lsym \) and the zeta zero distribution.
 \end{itemize}
 
 \medskip
 \noindent
-(For higher-order heat kernel corrections and refined Tauberian remainder terms, see \appref{app:heat_kernel_refinements}.)
+(For higher-order trace corrections and refined remainders, see \appref{app:heat_kernel_refinements}.)
 
 \vspace{0.5em}
 
-\noindent\textbf{Analytic Flow Diagram:}
+\textbf{Analytic Flow Diagram}
 \[
 \begin{aligned}
 \text{Heat Kernel}
@@ -44,10 +47,8 @@
 \]
 
 \begin{remark}[Transition to Spectral Rigidity]
-We have shown that the asymptotic eigenvalue distribution of \( \Lsym \) encodes the nontrivial zeros of the Riemann zeta function. The next natural question is rigidity: if an operator shares both the spectrum and the determinant identity, is it unitarily equivalent to \( \Lsym \)?
-
-This question leads directly to the spectral rigidity results in \thmref{thm:uniqueness_realization}.
+We have shown that the eigenvalue distribution of \( \Lsym \) precisely encodes the nontrivial zeros of \( \zeta(s) \). The next natural question is rigidity: if another operator shares both the spectral data and the determinant identity, must it be unitarily equivalent to \( \Lsym \)? This is the content of the spectral uniqueness result in \thmref{thm:uniqueness_realization}.
 \end{remark}
 
 \paragraph{Logical Closure.}
-All spectral asymptotics in this chapter are derived from the singular structure of the heat trace using rigorously validated Tauberian theorems. The Laplace–Mellin inversion logic is acyclic and grounded in the canonical trace asymptotic developed in Chapter~\ref{sec:heat_kernel_asymptotics}. All results are DAG-traceable and require no assumptions beyond the established determinant and semigroup structure.
+All asymptotics in this chapter are derived from the heat trace singularity using rigorously validated Tauberian theorems. The analytic flow from kernel to spectral counting is fully DAG-traceable and logically independent of RH or spectral assumptions.

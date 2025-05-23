@@ -13,25 +13,33 @@ constructed in \secref{sec:operator_construction}. Explicitly,
 \medskip
 
 \noindent
-This equivalence follows from the analytic realization of the completed zeta function
+This equivalence follows from the analytic realization of the completed zeta function via the canonical determinant identity:
 \[
 \detz(I - \lambda \Lsym) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
-and the bijective correspondence
+as shown in \thmref{thm:det_identity_revised}, and the bijective correspondence
 \[
 \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
 \]
-between nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \) and the nonzero spectrum of \( \Lsym \), with multiplicities preserved.
+between nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \) and the nonzero spectrum of \( \Lsym \), with multiplicities preserved as established in \thmref{thm:spectral_zero_bijection_revised}.
 
 \medskip
 
 \noindent
-All analytic inputs—Paley–Wiener decay, trace-norm convergence, self-adjointness, determinant regularization, and positivity—have been rigorously established in Chapters~\ref{sec:foundations}–\ref{sec:tauberian_growth}, with logical flow verified in Appendix~\ref{app:dependency_graph}.
+All analytic inputs—Paley–Wiener decay, trace-norm convergence, self-adjointness, determinant regularization, and positivity—have been rigorously verified in Chapters~\ref{sec:foundations}–\ref{sec:tauberian_growth}, culminating in the equivalence statement \thmref{thm:eq_of_rh}, with logical flow validated in Appendix~\ref{app:dependency_graph}.
 
 \medskip
 
 \noindent
-In particular, the analytic infrastructure has been verified in \lemref{lem:trace_class_Lt}, \lemref{lem:heat_trace_expansion}, \lemref{lem:spectral_encoding_injection}, \lemref{lem:trace_distribution_positivity}, \lemref{lem:spectral_symmetry}, and \thmref{thm:spectral_determinant_identity_Lpi}. These collectively guarantee the well-posedness, spectral encoding, trace convergence, and GRH generalization needed to ensure the determinant identity applies to \( \Lsym \).
+In particular, the analytic infrastructure has been ensured by:
+\begin{itemize}
+  \item \lemref{lem:trace_class_Lt} — trace-class inclusion of approximating mollifiers;
+  \item \lemref{lem:heat_trace_expansion} — singular expansion and spectral asymptotics;
+  \item \lemref{lem:spectral_encoding_injection} — zero-to-spectrum map;
+  \item \lemref{lem:trace_distribution_positivity} — positivity of the trace pairing;
+  \item \lemref{lem:spectral_symmetry} — evenness and reality correspondence;
+\end{itemize}
+which together support the spectral determinant framework.
 
 \medskip
 

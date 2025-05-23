@@ -6,7 +6,7 @@ Let \( L \in \TC(\HPsi) \) be a compact, self-adjoint operator such that the hea
 \qquad
 \Tr(e^{-tL}) \le B e^{-\delta t}, \quad \text{as } t \to \infty,
 \]
-for constants \( A, B, c, \delta > 0 \).
+for constants \( A, B, c, \delta > 0 \). Such bounds are satisfied by the canonical operator \( \Lsym \), as established in \lemref{lem:heat_semigroup_wellposed}.
 
 Then the Laplace integral
 \[
@@ -19,8 +19,8 @@ defines an entire function of order one and exponential type bounded by \( \pi \
 \qquad
 \left| \det\nolimits_\zeta(I - \lambda L) \right| \le C' e^{\pi |\lambda|}.
 \]
-\end{lemma}
 
 \medskip
 \noindent
-These heat trace bounds ensure that the Laplace transform converges absolutely and uniformly on compact subsets of \( \C \), and Paley--Wiener-type growth estimates control the entire function order and exponential type~\cite[Ch.~3]{Simon2005TraceIdeals},~\cite[Ch.~9]{Levin1996EntireLectures}.
+These heat trace bounds ensure that the Laplace transform, introduced in \lemref{lem:det_via_heat_trace}, converges absolutely and uniformly on compact subsets of \( \C \). Paley–Wiener-type estimates control the entire order and exponential type~\cite[Ch.~3]{Simon2005TraceIdeals},~\cite[Ch.~9]{Levin1996EntireLectures}.
+\end{lemma}

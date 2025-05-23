@@ -13,9 +13,13 @@ A_n := \int_{\R} a_n(x)\, dx,
 \]
 where \( a_n(x) \in C^\infty(\R) \) are the diagonal heat kernel coefficients from the local expansion
 \[
-K_t(x,x) \sim \sum_{n=0}^\infty a_n(x)\, t^{n - \frac{1}{2}}, \qquad \text{as } t \to 0^+.
+K_t(x,x) \sim \sum_{n=0}^\infty a_n(x)\, t^{n - \frac{1}{2}}, \qquad \text{as } t \to 0^+,
 \]
-Each \( A_n \) is finite due to the exponential decay of \( a_n(x) \) induced by the analytic smoothing of the convolution kernel.
+as constructed in \lemref{lem:hk_expansion_uniform}.
+
+\medskip
+\noindent
+Each \( A_n \) is finite due to the exponential decay of \( a_n(x) \), inherited from the smoothness and decay of \( K_t \) as shown in \lemref{lem:heat_semigroup_wellposed}. The dominated convergence of this termwise integral confirms the expansion result in \lemref{lem:heat_trace_expansion}.
 
 \medskip
 \noindent
@@ -26,5 +30,5 @@ Moreover, the expansion converges with uniform remainder bounds: for each \( N \
 
 \medskip
 \noindent
-This asymptotic holds uniformly on compact time intervals \( (0, t_0] \), and follows from classical parametrix expansion theory, combined with dominated convergence. Since \( e^{-t L_{\sym}^2} \in \TC \) and \( K_t(x,x) \in C^\infty(\R) \) with uniform exponential decay, the termwise integral converges for all \( n \), and the expansion defines the singular spectral trace structure used in the determinant and Tauberian growth results of \secref{sec:determinant_identity} and \secref{sec:tauberian_growth}.
+This asymptotic holds uniformly on compact time intervals \( (0, t_0] \), and follows from classical parametrix expansion theory, combined with trace-class regularity. Since \( e^{-t L_{\sym}^2} \in \TC \) and \( K_t(x,x) \in C^\infty(\R) \) with exponential decay, the termwise integral converges for all \( n \), and the expansion defines the singular spectral trace structure underlying \lemref{lem:spectral_zeta_from_heat} and the determinant growth in \secref{sec:determinant_identity}.
 \end{proposition}

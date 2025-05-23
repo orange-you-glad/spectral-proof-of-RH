@@ -1,61 +1,60 @@
 \subsection*{Introduction}
 \label{sec:intro_spectral_rigidity}
 
-This chapter recasts the Riemann Hypothesis as a statement of spectral rigidity: the spectrum of the canonical trace-class operator
+This chapter recasts the Riemann Hypothesis as a statement of spectral rigidity for the canonical trace-class operator
 \[
 \Lsym \in \TC(\HPsi),
 \]
-is real if and only if all nontrivial zeros of the Riemann zeta function lie on the critical line \( \Re(s) = \tfrac{1}{2} \). The operator \( \Lsym \) is constructed via mollified convolution from the inverse Fourier transform of the completed zeta function \( \XiR(s) \).
+constructed via mollified convolution from the inverse Fourier transform of the completed zeta function \( \XiR(s) \). The central claim is that the spectrum of \( \Lsym \) is real if and only if all nontrivial zeros of \( \zetaR(s) \) lie on the critical line \( \Re(s) = \tfrac{1}{2} \).
 
-\paragraph{Goals.}
+\paragraph{Objectives.}
 \begin{itemize}
-  \item \textit{Spectral Encoding.}  
-  The Carleman \(\zeta\)-regularized determinant identity
+  \item \textit{Spectral Encoding:}  
+  The canonical determinant identity
   \[
-  \detz(I - \lambda \Lsym)
-  = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}
+  \detz(I - \lambda \Lsym) = \frac{\XiR\left(\tfrac{1}{2} + i\lambda\right)}{\XiR\left(\tfrac{1}{2}\right)}
   \]
-  defines a multiplicity-preserving encoding
+  defines a multiplicity-preserving map
   \[
-  \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+  \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}),
   \]
-  sending nontrivial zeros \( \rho \) of \( \zetaR(s) \) to eigenvalues \( \mu_\rho \in \Spec(\Lsym) \). This intertwines the Hadamard factorization of \( \XiR(s) \) with the spectral structure of \( \Lsym \). We show that every determinant zero corresponds to a spectral eigenvalue.
+  sending each nontrivial zeta zero \( \rho \) to an eigenvalue \( \mu_\rho \in \Spec(\Lsym) \). This intertwines the Hadamard factorization of \( \XiR(s) \) with the spectral structure of \( \Lsym \), confirming that each determinant zero yields a spectral eigenvalue.
 
-  \item \textit{Spectral Rigidity.}  
-  Although \( \Lsym \) is self-adjoint and thus has real spectrum, we prove the converse: if all encoded eigenvalues \( \mu_\rho \in \R \), then each corresponding zero \( \rho \) lies on the critical line. That is,
+  \item \textit{Spectral Rigidity:}  
+  Although \( \Lsym \) is self-adjoint and thus has real spectrum, we prove the converse: if all eigenvalues \( \mu_\rho \in \R \), then all corresponding zeros \( \rho \) must lie on the critical line. That is,
   \[
   \Spec(\Lsym) \subset \R
   \quad \Longleftrightarrow \quad
-  \Re(\rho) = \tfrac{1}{2}, \quad \text{for all } \rho \in \Spec(\zetaR).
+  \Re(\rho) = \tfrac{1}{2} \quad \forall \rho \in \Spec(\zetaR).
   \]
-  Determinantal vanishing implies spectral inclusion via analytic continuation and Fredholm theory, without requiring a prior bijection.
+  The implication is established via analytic continuation, determinant structure, and Fredholm theory—without presuming spectral bijection.
 
-  \item \textit{Spectral Symmetry.}  
-  The functional identity \( \XiR(\tfrac{1}{2} + i\lambda) = \XiR(\tfrac{1}{2} - i\lambda) \) implies
+  \item \textit{Spectral Symmetry:}  
+  The functional equation \( \XiR(\tfrac{1}{2} + i\lambda) = \XiR(\tfrac{1}{2} - i\lambda) \) implies spectral symmetry:
   \[
   \mu \in \Spec(\Lsym) \quad \Rightarrow \quad -\mu \in \Spec(\Lsym),
   \]
-  with multiplicities preserved. This reflects the evenness of the centered spectral profile \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \).
+  with matched multiplicities. This reflects the evenness of the centered spectral profile \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \).
 
-  \item \textit{Trace Positivity.}  
-  The trace pairing
+  \item \textit{Trace Positivity:}  
+  The spectral trace pairing
   \[
   \phi \mapsto \Tr(\phi(\Lsym))
   \]
   defines a positive tempered distribution on \( \R \). In particular,
   \[
-  \Tr(e^{-t\Lsym^2}) \ge 0 \quad \forall\, t > 0,
+  \Tr(e^{-t \Lsym^2}) \ge 0 \quad \forall\, t > 0,
   \]
-  reflecting positivity of the heat kernel regularized spectral measure. This positivity extends to all \( \phi \in \Schwartz(\R) \), reinforcing the harmonic-analytic structure of the trace.
+  expressing the positivity of the heat trace and its interpretation as a regularized spectral measure. This positivity holds for all \( \phi \in \Schwartz(\R) \), reinforcing the harmonic-analytic structure of the trace.
 
-  \item \textit{Analytic Independence.}  
-  All results in this chapter follow from classical analytic theory:
+  \item \textit{Analytic Independence:}  
+  All results in this chapter are derived using classical analytic and operator-theoretic tools:
   \begin{itemize}
-    \item spectral theory of compact, self-adjoint operators;
-    \item kernel decay and semigroup regularity;
-    \item Hadamard product theory and functional symmetry;
-    \item Fredholm theory and determinant–spectrum correspondence;
-    \item unitary equivalence via orthonormal diagonalization.
+    \item spectral theory of compact self-adjoint operators;
+    \item exponential kernel decay and heat semigroup regularity;
+    \item Hadamard factorization and functional symmetry of \( \XiR(s) \);
+    \item Fredholm determinant theory and spectrum–zero correspondence;
+    \item uniqueness via unitary equivalence and diagonalization.
   \end{itemize}
-  No input is required from modular forms, trace formulas, or Langlands theory.
+  No use is made of automorphic forms, trace formulas, or Langlands theory.
 \end{itemize}

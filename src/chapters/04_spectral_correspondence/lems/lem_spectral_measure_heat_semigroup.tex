@@ -8,20 +8,20 @@ where the eigenvalue counting function \( N(\lambda) \) is defined by
 \[
 N(\lambda) := \sum_{\mu_\rho \leq \lambda} \operatorname{mult}_{\mathrm{spec}}(\mu_\rho),
 \]
-counting each eigenvalue \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \) with its algebraic multiplicity.
+counting each eigenvalue \( \mu_\rho \in \operatorname{Spec}(L_{\mathrm{sym}}) \) with its algebraic multiplicity, as classified in \lemref{lem:spectrum_zero_bijection}.
 
 \medskip
 
 \noindent
-Consequently, the canonical Carleman \(\zeta\)-regularized Fredholm determinant satisfies
+The trace-class and semigroup properties are guaranteed by \lemref{lem:heat_semigroup_wellposed}. Consequently, the canonical Carleman \(\zeta\)-regularized Fredholm determinant satisfies
 \[
 \log \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
 = - \int_{\mathbb{R}} \log\left(1 - \frac{\lambda}{\mu} \right) \, dN(\mu),
 \]
-valid for all \( \lambda \in \mathbb{C} \setminus \{ \mu_\rho \} \).
+valid for all \( \lambda \in \mathbb{C} \setminus \{ \mu_\rho \} \), as shown in \lemref{lem:A_log_derivative}.
 
 \medskip
 
 \noindent
-In particular, the Laplace transform of the spectral density \( dN(\lambda) \) defines the heat trace, and the Mellin transform of this trace connects directly to the completed zeta function \( \Xi(s) \). This forms the analytic backbone for the determinant identity and reflects classical Tauberian structure as in \cite{Korevaar2004Tauberian}.
+In particular, the Laplace transform of the spectral density \( dN(\lambda) \) defines the heat trace, and the Mellin transform of this trace connects directly to the completed zeta function \( \Xi(s) \), via \lemref{lem:spectral_zeta_from_heat}. This forms the analytic backbone for the determinant identity and reflects classical Tauberian structure as in \cite{Korevaar2004Tauberian}.
 \end{lemma}

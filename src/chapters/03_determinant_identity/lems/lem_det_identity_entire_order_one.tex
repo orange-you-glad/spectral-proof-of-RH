@@ -20,9 +20,11 @@ the Hadamard class of entire functions of order one and exact exponential type \
 
 \medskip
 \noindent
-\textbf{Proof Sketch.} This follows from the trace-class Fredholm determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals} and Paley–Wiener control on the kernel. The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) implies that the convolution kernel \( K(x - y) = \FT^{-1}[\phi](x - y) \) decays exponentially at rate \( \pi \). Via the short-time heat kernel trace expansion
+\textbf{Proof Sketch.} This follows from trace-class Fredholm determinant theory~\cite[Ch.~4]{Simon2005TraceIdeals}, the Laplace representation in \lemref{lem:det_via_heat_trace}, and heat trace estimates from \lemref{lem:heat_semigroup_wellposed}. The spectral profile \( \phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda) \in \PW{\pi} \) ensures that the convolution kernel \( K(x - y) := \FT^{-1}[\phi](x - y) \) decays at rate \( \pi \), determining the exponential type (see \lemref{lem:laplace_preserves_entire_type}).
+
+Via the short-time heat kernel expansion,
 \[
 \Tr(e^{-t \Lsym^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) + \mathcal{O}(t^{-1/2}) \quad \text{as } t \to 0^+,
 \]
-and Laplace–Mellin regularization (see \cref{lem:det_via_heat_trace}), the singularity structure at \( s = 0 \) determines the order, while the Paley–Wiener exponential type of the kernel bounds the entire growth of the determinant by \( \pi \). The logarithmic singularity is critical for confirming the genus-one Hadamard structure.
+the order is confirmed to be one, and the logarithmic singularity ensures the Hadamard genus-one structure. For precise classification, see also \lemref{lem:exact_type_pi}.
 \end{lemma}

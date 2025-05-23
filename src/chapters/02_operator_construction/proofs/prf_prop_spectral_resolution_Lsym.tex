@@ -1,0 +1,11 @@
+\begin{proof}[Proof of \propref{prop:spectral_resolution_Lsym}]
+Since \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) is compact and self-adjoint (see \thmref{thm:canonical_operator_realization} and \lemref{lem:core_essential_sa}), the spectral theorem for compact self-adjoint operators applies (see, e.g.,~\cite[Ch.~VII]{ReedSimon1980I}).
+
+This implies that there exists an orthonormal basis \( \{ \varphi_n \} \subset H_{\Psi_\alpha} \) consisting of eigenfunctions of \( L_{\mathrm{sym}} \), and a sequence of real eigenvalues \( \mu_n \to 0 \), such that:
+\[
+L_{\mathrm{sym}} f = \sum_{n=1}^\infty \mu_n \langle f, \varphi_n \rangle \varphi_n,
+\]
+for all \( f \in H_{\Psi_\alpha} \), with convergence in the norm topology. The operator domain \( \Dom(L_{\mathrm{sym}}) \) consists of those \( f \in H_{\Psi_\alpha} \) for which \( \sum |\mu_n|^2 |\langle f, \varphi_n \rangle|^2 < \infty \).
+
+This proves the claim.
+\end{proof}

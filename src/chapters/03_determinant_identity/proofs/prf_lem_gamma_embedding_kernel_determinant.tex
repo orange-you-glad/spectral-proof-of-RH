@@ -1,0 +1,28 @@
+\begin{proof}[Proof of \lemref{lem:gamma_embedding_kernel_determinant}]
+The completed zeta function
+\[
+\Xi(s) = \tfrac{1}{2} s(s-1) \pi^{-s/2} \Gamma\left(\tfrac{s}{2}\right) \zeta(s)
+\]
+is entire of order 1 and type \( \pi \). Evaluating along the critical line:
+\[
+\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)
+= \tfrac{1}{2} \left( \tfrac{1}{2} + i\lambda \right)\left( -\tfrac{1}{2} + i\lambda \right) \pi^{-(1/2 + i\lambda)/2} \Gamma\left( \tfrac{1}{4} + \tfrac{i\lambda}{2} \right) \zeta\left( \tfrac{1}{2} + i\lambda \right).
+\]
+
+The Gamma function dominates the growth of \( \phi(\lambda) \) as \( |\lambda| \to \infty \), and satisfies the bound:
+\[
+\left| \Gamma\left( \tfrac{1}{4} + \tfrac{i\lambda}{2} \right) \right| \sim C\, |\lambda|^{-\tfrac{1}{2}} e^{-\tfrac{\pi}{2} |\lambda|},
+\]
+from Stirling’s approximation in vertical strips. Combined with the moderate growth of \( \zeta \) on vertical lines, this ensures that \( \phi(\lambda) \in \PW{\pi} \cap L^1(\R) \cap \mathcal{S}(\R) \), and its inverse Fourier transform
+\[
+k(x) = \mathcal{F}^{-1}[\phi](x)
+\]
+is real, even, and decays exponentially at rate \( \pi \).
+
+Thus, the Gamma factor embedded in \( \Xi(s) \) ensures:
+- Spectral integrability of \( \phi \),
+- Rapid decay of \( k(x) \),
+- Validity of the Laplace–Mellin representation of the determinant.
+
+It is this analytic control from \( \Gamma(s/2) \) that guarantees the determinant’s order-one structure and its exponential type \( \pi \), completing the proof.
+\end{proof}

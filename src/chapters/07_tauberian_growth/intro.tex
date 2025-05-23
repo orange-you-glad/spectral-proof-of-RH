@@ -9,7 +9,7 @@ via Laplace–Tauberian inversion of its squared heat semigroup. Using refined s
 \[
 \Theta(t) := \Tr(e^{-t \Lsym^2}),
 \]
-we derive precise growth estimates for the eigenvalue counting function
+we derive sharp growth estimates for the eigenvalue counting function
 \[
 N(\Lambda) := \#\left\{ n \in \N : \mu_n^2 \le \Lambda \right\},
 \]
@@ -17,30 +17,31 @@ and confirm analytic compatibility with the Riemann–von Mangoldt zero-counting
 
 \paragraph{Objectives.}
 \begin{itemize}
-  \item \textit{Spectral Growth Bounds.}  
-  From the envelope
+  \item \textit{Spectral Growth Bounds:}  
+  From the asymptotic envelope
   \[
   \Theta(t) \asymp t^{-1/2} \quad \text{as } t \to 0^+,
   \]
-  established in Chapter~\ref{sec:heat_kernel_asymptotics}, we deduce via \lemref{lem:spectral_convexity_estimate} the subconvex bound
+  established in Chapter~\ref{sec:heat_kernel_asymptotics}, we deduce the subconvex bound
   \[
-  N(\Lambda) = O(\Lambda^{1/2+\varepsilon}) \quad \text{for all } \varepsilon > 0.
+  N(\Lambda) = O(\Lambda^{1/2+\varepsilon}) \quad \text{for all } \varepsilon > 0,
   \]
-  The effective spectral dimension is \( d = 1 \), consistent with leading growth \( N(\Lambda) \sim \Lambda^{1/2} \log \Lambda \).
+  via \lemref{lem:spectral_convexity_estimate}. This confirms effective spectral dimension \( d = 1 \), with asymptotic shape \( N(\Lambda) \sim \Lambda^{1/2} \log \Lambda \).
 
-  \item \textit{Tauberian Inversion.}  
-  Applying Korevaar’s refinement of Karamata theory (\lemref{lem:log_corrected_tauberian_estimate}), we invert the Laplace relation
+  \item \textit{Tauberian Inversion:}  
+  Applying Korevaar’s log-refined version of Karamata theory (\lemref{lem:log_corrected_tauberian_estimate}), we invert the Laplace relation
   \[
   \Theta(t) = \int_0^\infty e^{-t\lambda} \, dN(\lambda),
   \]
-  and obtain the sharp asymptotic
+  and recover the sharp asymptotic:
   \[
-  N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}) \quad \text{as } \Lambda \to \infty.
+  N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}),
+  \quad \text{as } \Lambda \to \infty.
   \]
-  This follows from classifying \( \Theta \in \mathcal{R}_{1/2}^{\log} \), i.e., regularly varying with index \( 1/2 \) and logarithmic modulation.
+  This follows from classifying \( \Theta \in \mathcal{R}_{1/2}^{\log}(0^+) \): the class of log-modulated regularly varying functions.
 
-  \item \textit{Zeta-Theoretic Compatibility.}  
-  The derived asymptotic matches the classical Riemann–von Mangoldt formula for zeta zeros. This match, proven in \corref{cor:zeta_compatibility}, confirms that the spectrum of \( \Lsym \) encodes the zero distribution of \( \zeta(s) \).
+  \item \textit{Zeta-Theoretic Compatibility:}  
+  The derived asymptotic agrees with the classical Riemann–von Mangoldt formula for the zero-counting function. This match, proven in \corref{cor:zeta_compatibility}, confirms that the spectrum of \( \Lsym \) spectrally encodes the distribution of \( \zeta(s) \) zeros.
 \end{itemize}
 
 \paragraph{Analytic Inputs from Chapter~\ref{sec:heat_kernel_asymptotics}.}
@@ -61,14 +62,15 @@ Triggers Korevaar inversion with logarithmic precision \\
 
 \lemref{lem:log_derivative_determinant} &
 Spectral zeta representation via heat trace &
-Links eigenvalue asymptotics to determinant structure \\
+Links eigenvalue asymptotics to determinant growth \\
+
 \hline
 \end{tabularx}
 \end{center}
 
 \paragraph{Link to Spectral Equivalence.}
-By matching the eigenvalue counting function with the Riemann--von Mangoldt formula, \lemref{lem:log_corrected_tauberian_estimate} supplies the final analytic ingredient used in Chapter~\ref{sec:spectral_implications}.  In particular, it shows that
+The Tauberian analysis developed here provides the final analytic link needed to validate the spectral criterion for the Riemann Hypothesis. By matching the counting function \( N(\Lambda) \) to the Riemann–von Mangoldt law, we confirm that:
 \[
   \RH \iff \Spec(\Lsym) \subset \R,
 \]
-as formalized in \thmref{thm:rh_spectral_closure}.  The Tauberian analysis here therefore closes the loop from heat kernel bounds to operator-theoretic reformulation of RH.
+as formalized in \thmref{thm:rh_spectral_closure}. This closes the analytic loop from determinant identity to spectral encoding to RH equivalence.

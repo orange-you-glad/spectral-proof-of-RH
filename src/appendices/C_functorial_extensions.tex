@@ -2,19 +2,20 @@
 \label{app:functorial_extensions}
 
 \noindent\textbf{[Noncritical Appendix.]}  
-This appendix is analytically and logically independent from Chapters~1–10. It no longer motivates constructions used in the main body, as the spectral realization of automorphic \( L \)-functions for \( \mathrm{GL}_n \) has been validated in \secref{sec:spectral_generalization}. Instead, it outlines speculative directions for generalizing the canonical determinant framework to broader classes of global \( L \)-functions arising in arithmetic geometry.
+This appendix is analytically and logically independent of the proof architecture presented in Chapters~1–10. It no longer motivates constructions used in the main body. Instead, it outlines prospective generalizations of the canonical spectral determinant framework to a broader class of global \( L \)-functions arising in arithmetic geometry.
 
 %--------------------------------------------------------------
 \subsection*{Beyond \texorpdfstring{$\mathrm{GL}_n$}{GLn}: Artin and Motivic \( L \)-Functions}
 
-Let \( \Lambda_\pi(s) \) denote the completed \( L \)-function associated to a motive over \( \Q \), a Galois representation, or a representation of a reductive group \( G \) beyond \( \GL_n \). Assume:
+Let \( \Lambda_\pi(s) \) denote the completed \( L \)-function associated to a motive over \( \Q \), a Galois representation, or a nonstandard automorphic representation of a reductive group \( G \). Assume:
+
 \begin{itemize}
   \item[(i)] \( \Lambda_\pi(s) \) is entire of order one;
   \item[(ii)] \( \Lambda_\pi(s) = \varepsilon_\pi \Lambda_\pi(1 - s) \), with \( |\varepsilon_\pi| = 1 \);
-  \item[(iii)] \( \Lambda_\pi(s) \) admits a genus-one Hadamard product.
+  \item[(iii)] \( \Lambda_\pi(s) \) admits a genus-one Hadamard factorization.
 \end{itemize}
 
-These conditions hold in many expected cases: Artin \( L \)-functions, symmetric powers of modular forms, Hasse–Weil \( L \)-functions of curves and higher-dimensional varieties, and Langlands \( L \)-functions attached to nonstandard representations~\cite{Langlands1970EulerProducts, Deligne1971WeilI}.
+These conditions are expected to hold for Artin \( L \)-functions, symmetric powers of modular forms, Hasse–Weil \( L \)-functions of curves and varieties, and Langlands–Shahidi \( L \)-functions for classical groups~\cite{Langlands1970EulerProducts, Deligne1971WeilI}.
 
 \medskip
 \noindent\textbf{Examples.}
@@ -27,46 +28,58 @@ These conditions hold in many expected cases: Artin \( L \)-functions, symmetric
 Modular form on \( \Gamma_0(N) \) & Hecke \( L \)-function & \cite{Cogdell2007Lectures} \\
 Elliptic curve over \( \Q \) & Hasse–Weil \( L \)-function & \cite{Deligne1971WeilI} \\
 Artin representation & Artin \( L \)-function & \cite{Langlands1970EulerProducts} \\
-\( \mathrm{GSp}_{2n} \) Siegel cusp form & Standard \( L \)-function & speculative \\
+\( \mathrm{GSp}_{2n} \) cusp form & Standard \( L \)-function & conjectural \\
 \hline
 \end{tabular}
 \end{center}
 
-To extend the spectral framework, one would define a Hilbert space \( H_{\Psi_\pi} := L^2(\R, w(x) dx) \) for a weight \( w(x) \gtrsim |\Lambda_\pi(1/2 + i x)|^2 \), and construct operators
+\paragraph{Proposed Generalization.}
+To extend the spectral construction, define a Hilbert space
 \[
-\varphi_{t,\pi}(\lambda) := e^{-t\lambda^2} \Lambda_\pi\left( \tfrac{1}{2} + i\lambda \right), \qquad K_t^{(\pi)} := \FT^{-1}[\varphi_{t,\pi}],
+H_{\Psi_\pi} := L^2(\R, w_\pi(x) dx)
 \]
-as in \secref{sec:spectral_generalization}.
+for a weight function \( w_\pi(x) \gtrsim |\Lambda_\pi(\tfrac{1}{2} + ix)|^2 \), and construct mollified Fourier profiles
+\[
+\varphi_{t,\pi}(\lambda) := e^{-t\lambda^2} \Lambda_\pi\left( \tfrac{1}{2} + i\lambda \right),
+\quad
+K_t^{(\pi)} := \FT^{-1}[\varphi_{t,\pi}],
+\]
+analogously to the construction in \secref{sec:spectral_generalization}.
 
 %--------------------------------------------------------------
 \subsection*{Extension Hypothesis}
 
-\textit{Hypothesis.} Suppose \( \Lambda_\pi(s) \) satisfies (i)--(iii), and that \( K_t^{(\pi)}(x) \in L^1(e^{\alpha |x|} dx) \) for some \( \alpha > 0 \). Then the operator
+\textit{Hypothesis.} Suppose \( \Lambda_\pi(s) \) satisfies (i)--(iii), and that
+\[
+K_t^{(\pi)}(x) \in L^1(\R, e^{\alpha |x|} dx) \quad \text{for some } \alpha > 0.
+\]
+Then the operator
 \[
 L_{\sym,\pi} := \lim_{t \to 0^+} \int_{\R} K_t^{(\pi)}(x - y) f(y) dy
 \]
-defines a compact, self-adjoint trace-class operator on \( H_{\Psi_\pi} \), with determinant
+defines a compact, self-adjoint, trace-class operator on \( H_{\Psi_\pi} \), with determinant identity:
 \[
-\detz(I - \lambda L_{\sym,\pi}) = \frac{\Lambda_\pi(1/2 + i\lambda)}{\Lambda_\pi(1/2)}.
+\detz(I - \lambda L_{\sym,\pi}) = \frac{\Lambda_\pi(\tfrac{1}{2} + i\lambda)}{\Lambda_\pi(\tfrac{1}{2})}.
 \]
 
-This statement is structurally parallel to the validated theorem of \secref{sec:spectral_generalization} and may be subjected to the same analytic audit in future work.
+This generalizes the validated construction from Chapter~\ref{sec:spectral_generalization}, and can be subjected to the same analytic audit framework.
 
 %--------------------------------------------------------------
 \subsection*{Research Directions}
 
 \begin{itemize}
-  \item[(1)] \textbf{Artin \( L \)-functions:} These lack a known modular origin, so Fourier kernel decay must be studied directly.
-  \item[(2)] \textbf{Non-\( \GL_n \) groups:} For example, spectral realization of \( L \)-functions for classical groups like \( \mathrm{GSp}_{2n} \), \( \mathrm{SO}_n \), \( \mathrm{U}_n \), requires new trace-norm embeddings.
-  \item[(3)] \textbf{Motivic weight normalization:} For cohomological \( L \)-functions, shift \( s \mapsto s + w/2 \) must be incorporated into the spectral scaling.
-  \item[(4)] \textbf{Symmetric power functoriality:} Does the spectral operator for \( \mathrm{Sym}^k(\pi) \) relate algebraically to \( L_{\sym,\pi} \)?
+  \item[(1)] \textbf{Artin \( L \)-functions:} As non-automorphic objects, these require direct control over Fourier decay from Galois-theoretic data.
+  \item[(2)] \textbf{Beyond \( \GL_n \):} Extending the spectral determinant framework to \( \mathrm{GSp}_{2n} \), \( \mathrm{SO}_n \), or \( \mathrm{U}_n \) requires new kernel bounds and weight embeddings.
+  \item[(3)] \textbf{Motivic Scaling:} Shift \( s \mapsto s + \tfrac{w}{2} \) in cohomological \( L \)-functions must be reflected in the spectral normalization.
+  \item[(4)] \textbf{Functoriality of Operators:} Is the spectral operator for \( \mathrm{Sym}^k(\pi) \) algebraically related to that for \( \pi \)? If so, what is the induced map on determinants?
 \end{itemize}
 
 %--------------------------------------------------------------
 \subsection*{Conclusion}
 
-With \secref{sec:spectral_generalization} establishing the spectral determinant identity for all automorphic \( L \)-functions on \( \GL_n \), this appendix shifts focus to speculative generalizations. These include Artin and motivic \( L \)-functions, and potential extensions of the spectral framework to groups beyond \( \GL_n \). Each of these paths invites a new set of analytic verifications and kernel constructions, building on the blueprint established in this manuscript.
+Having validated the spectral determinant identity for \( \GL_n \)-automorphic representations in Chapter~\ref{sec:spectral_generalization}, this appendix outlines next-stage extensions. These include Artin and motivic \( L \)-functions, and generalization to groups beyond \( \GL_n \). Each case invites its own kernel construction, weight analysis, and trace-class audit.
 
 \medskip
+
 \noindent
-These questions do not affect the closed proof of the Riemann Hypothesis presented in \secref{sec:logical_closure}, but provide a frontier for extending the spectral paradigm across arithmetic geometry.
+These extensions do not affect the completed proof of the Riemann Hypothesis (\cref{sec:logical_closure}), but delineate a broader landscape in which the spectral paradigm may continue to propagate across arithmetic geometry.

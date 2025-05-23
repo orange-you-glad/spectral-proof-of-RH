@@ -1,27 +1,53 @@
 \subsection*{Introduction}
 \label{sec:intro_spectral_generalization}
 
-This chapter initiates a postulated extension of the canonical spectral framework developed in the preceding chapters to the class of completed automorphic \( L \)-functions \( \Xi(s, \pi) \), where \( \pi \in \mathcal{A}_{\mathrm{cusp}}(\GL_n) \) is a unitary cuspidal automorphic representation. Our aim is to lift the determinant identity and spectral encoding established for the completed Riemann zeta function \( \Xi(s) \) to a functorial setting, contingent on analytically meaningful trace-class operators.
+This chapter initiates a proposed extension of the canonical spectral framework developed in preceding chapters to the class of completed automorphic \( L \)-functions
+\[
+\Xi(s, \pi), \qquad \pi \in \mathcal{A}_{\mathrm{cusp}}(\GL_n),
+\]
+where \( \pi \) is a unitary cuspidal automorphic representation. The goal is to functorially lift the determinant identity and spectral encoding established for the completed Riemann zeta function \( \Xi(s) \) to this broader setting, under analytically meaningful trace-class regularity conditions.
 
-In \secref{sec:determinant_identity} and \secref{sec:spectral_correspondence}, we constructed a compact, self-adjoint trace-class operator \( \Lsym \in \TC(\HPsi) \) whose zeta-regularized Fredholm determinant satisfies the identity
+In Chapter~\ref{sec:determinant_identity}, we constructed a compact, self-adjoint trace-class operator \( \Lsym \in \TC(\HPsi) \) satisfying
 \[
 \detz(I - \lambda \Lsym) = \frac{\Xi(1/2 + i\lambda)}{\Xi(1/2)},
-\]
-and whose spectrum encodes the nontrivial zeros of \( \zeta(s) \) via
-\[
+\quad \text{and} \quad
 \Spec(\Lsym) = \left\{ \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\}.
 \]
-In this chapter, we postulate the existence of analogous operators \( \Lsympi \in \TC(\Hpsipi) \), associated to the spectral data of \( \Xi(s, \pi) \), and satisfying a corresponding determinant identity
+Here, we postulate the existence of analogous operators \( \Lsympi \in \TC(\Hpsipi) \), associated to \( \Xi(s, \pi) \), satisfying a functorial determinant identity:
 \[
 \ZetaDetPi \overset{?}{=} \frac{\XiPiShifted}{\XiPiHalf}.
 \]
 
-Our primary aim is to precisely formulate the analytic assumptions under which such an identity could hold. We define the weighted Hilbert space \( \Hpsipi := L^2(\R, e^{\alphapi |x|} dx) \) in \defref{def:Hilbert_space_Lpi}, the family of mollified convolution operators \( \{ \Ltpi \}_{t > 0} \) in \defref{def:convolution_operator_Ltpi}, and state the decay condition on the inverse Fourier transform kernel necessary for \( \Ltpi \in \TC(\Hpsipi) \) (see \defref{def:kernel_decay_condition}).
+\paragraph{Analytic Setup.}
+We define the automorphic Hilbert space
+\[
+\Hpsipi := L^2(\R, e^{\alphapi |x|} dx),
+\]
+in \defref{def:Hilbert_space_Lpi}, construct mollified convolution operators \( \Ltpi \) in \defref{def:convolution_operator_Ltpi}, and specify a decay condition on their kernels in \defref{def:kernel_decay_condition} ensuring trace-class inclusion.
 
-While no part of this chapter is yet validated in the sense of the dependency DAG (\secref{app:dependency_graph}), the postulates presented here are analytically well-posed and logically extend the framework validated for \( \zeta(s) \). They are clearly labeled as \texttt{post:} declarations and isolated from the core theorem stack.
+\paragraph{Scope and Formal Status.}
+No result in this chapter is validated within the core dependency DAG (\appref{app:dependency_graph}). All claims are clearly labeled as \texttt{post:} declarations and structurally isolated from the theorem-proven chain. Nonetheless, the constructions are analytically well-posed and logically consistent with the framework validated for \( \zeta(s) \).
 
-Our objective is to formalize the conditions under which a spectral equivalence of the form
+\paragraph{Functorial Spectral Hypothesis.}
+We aim to formalize the analytic conditions under which a generalized spectral equivalence
 \[
 \GRH(\pi) \quad \Longleftrightarrow \quad \Spec(\Lsympi) \subset \R
 \]
-may be asserted, conditional on trace-class convergence and determinant regularity. The analytic and representation-theoretic context underlying this proposal is further elaborated in \appref{app:functorial_extensions}.
+may be asserted. This equivalence is conditional upon trace-norm convergence, determinant regularity, and appropriate kernel decay. The representation-theoretic background and speculative extensions are discussed in \appref{app:functorial_extensions}.
+
+\paragraph{Preview of Formal Ingredients.}
+\begin{itemize}
+  \item Construction of \( \Lsympi \) via mollified inverse Fourier transforms of \( \Xi(s, \pi) \),
+  \item Determinant identity \( \detz(I - \lambda \Lsympi) \overset{?}{=} \Xi(\tfrac{1}{2} + i\lambda, \pi) / \Xi(\tfrac{1}{2}, \pi) \),
+  \item Asymptotic heat trace and zero-counting matching:
+  \[
+  \Tr(e^{-t \Lsympi^2}) \sim \frac{1}{\sqrt{t}} \log(1/t), \quad
+  N_\pi(T) \sim \frac{T}{2\pi} \log T,
+  \]
+  \item Conditional spectral equivalence:
+  \[
+  \GRH(\pi) \iff \Spec(\Lsympi) \subset \R.
+  \]
+\end{itemize}
+
+This chapter thus frames a precise functorial conjecture linking automorphic representation theory with operator-theoretic zeta determinants, with analytically testable trace-class conditions.

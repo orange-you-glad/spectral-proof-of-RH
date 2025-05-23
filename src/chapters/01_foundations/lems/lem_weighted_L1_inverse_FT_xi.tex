@@ -4,7 +4,7 @@ Let \( \alpha > \pi \), and define the centered spectral profile
 \[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
 \]
-where \( \Xi(s) \) is the completed Riemann zeta function—entire of exponential type \( \pi \) and order one.
+where \( \Xi(s) \) is the completed Riemann zeta function—entire of exponential type \( \pi \) and order one (see \lemref{lem:xi_growth_bound}).
 
 Define its inverse Fourier transform:
 \[
@@ -35,7 +35,7 @@ lies in the trace class \( \TC(H_{\Psi_\alpha}) \) by Simon’s kernel criterion
 
 \medskip
 \noindent
-This decay follows from the Paley--Wiener theorem: since \( \phi \in \PW{\pi} \) (see \defref{def:paley_wiener_class}), its inverse Fourier transform satisfies
+This decay follows from the Paley--Wiener theorem: since \( \phi \in \PW{\pi} \) (see \defref{def:paley_wiener_class} and \lemref{lem:xi_growth_bound}), its inverse Fourier transform satisfies
 \[
 |\widehat{\Xi}(x)| = \mathcal{O}(e^{-\pi |x|}),
 \]
@@ -43,5 +43,5 @@ and thus lies in \( L^1(\mathbb{R}, e^{-\alpha |x|}\, dx) \) for all \( \alpha >
 
 \medskip
 \noindent
-\textbf{Optional.} For explicit pointwise exponential decay and differentiability of \( \widehat{\Xi}(x) \), see \lemref{lem:decay_inverse_fourier_xi}.
+\textbf{Optional.} For explicit pointwise decay and differentiability of \( \widehat{\Xi}(x) \), see \lemref{lem:decay_inverse_fourier_xi}.
 \end{lemma}

@@ -30,10 +30,10 @@ with trace norm estimate:
 \begin{itemize}
     \item The symmetry and real-valuedness of \( K \) imply that \( T \) is formally self-adjoint on the Schwartz core \( \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha} \). If \( K \) is sufficiently regular, this lifts to self-adjointness on the closure.
 
-    \item This result follows from \lemref{lem:trace_class_via_weighted_L1} via unitary conjugation to flat \( L^2(\mathbb{R}) \), where the transformed kernel
+    \item This result follows from \lemref{lem:trace_class_via_weighted_L1} by applying unitary conjugation to flat \( L^2(\mathbb{R}) \), where the transformed kernel
     \[
     \widetilde{K}(x,y) := \frac{K(x,y)}{\sqrt{\Psi_\alpha(x)\Psi_\alpha(y)}}
     \]
-    lies in \( L^1(\mathbb{R}^2) \), enabling Simon's trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
+    lies in \( L^1(\mathbb{R}^2) \), as guaranteed by \lemref{lem:L1_integrability_conjugated_kernel}, enabling Simon's trace-class criterion \cite[Thm.~4.2]{Simon2005TraceIdeals}.
 \end{itemize}
 \end{lemma}

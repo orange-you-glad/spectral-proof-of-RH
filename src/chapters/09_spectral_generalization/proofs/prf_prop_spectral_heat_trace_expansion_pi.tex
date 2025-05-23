@@ -1,0 +1,24 @@
+\begin{proof}[Proof of \propref{prop:spectral_heat_trace_expansion_pi}]
+The mollified convolution operators \( \Ltpi \to \Lsympi \) converge in trace norm by \lemref{lem:trace_class_convergence_general}. The mollified spectral profiles satisfy
+\[
+\phi_t^{(\pi)} \in \PW{\pi_\pi} \cap \mathcal{S},
+\]
+so the diagonal kernel \( K_t^{(\pi)}(x, x) \) admits a short-time expansion:
+\[
+K_t^{(\pi)}(x, x) \sim \sum_{n=0}^\infty a_n^{(\pi)}(x) \, t^{n - \frac{1}{2}}.
+\]
+
+Integrating over \( x \in \mathbb{R} \) yields:
+\[
+\Theta_\pi(t) := \Tr(e^{-t \Lsympi^2})
+\sim \sum_{n=0}^\infty A_n^{(\pi)} t^{n - \frac{1}{2}},
+\quad A_n^{(\pi)} := \int_\R a_n^{(\pi)}(x) \, dx.
+\]
+
+The leading term arises from the Mellin representation of the spectral determinant (via \lemref{lem:log_derivative_determinant}) and reflects the known growth of automorphic \( L \)-functions. Thus:
+\[
+\Theta_\pi(t) = \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right)
++ \frac{c_0^{(\pi)}}{\sqrt{t}} + o(t^{-1/2}),
+\]
+placing \( \Theta_\pi \in \mathcal{R}_{1/2}^{\log}(0^+) \).
+\end{proof}

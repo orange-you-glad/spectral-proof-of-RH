@@ -4,15 +4,15 @@ Let
 \[
 f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
 \]
-denote the canonical Carleman \(\zeta\)-regularized Fredholm determinant associated to \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), and suppose
+denote the canonical Carleman \(\zeta\)-regularized Fredholm determinant associated to \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), as defined in \thmref{thm:det_identity_revised}, and suppose
 \[
 f(\lambda) = \prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho} \right) \exp\left( \frac{\lambda}{\mu_\rho} \right)
 \]
-is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), where the product runs over the nontrivial zeros \( \rho \) of \( \zeta(s) \), counted with multiplicity.
+is its genus-one Hadamard factorization over spectral values \( \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \), where the product runs over the nontrivial zeros \( \rho \) of \( \zeta(s) \), counted with multiplicity, as described in \lemref{lem:hadamard_linear_form}.
 
 Then the Hadamard exponential factor introduces no additional (spurious) zeros: every zero of \( f(\lambda) \) corresponds to a nontrivial zero \( \rho \) of \( \zeta(s) \), and the nonzero spectrum of \( L_{\mathrm{sym}} \) satisfies
 \[
-\operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} = \left\{ \mu_\rho \in \mathbb{R} : \zeta(\rho) = 0 \right\}.
+\operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} = \left\{ \mu_\rho \in \mathbb{R} : \zeta(\rho) = 0 \right\},
 \]
-Thus, the determinant \( \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) \) has no extraneous poles or zeros beyond those explicitly contributed by the spectral zeros \( \mu_\rho \).
+as formalized in \lemref{lem:spectrum_zero_bijection}. Uniqueness of this correspondence, and the absence of extraneous zeros, follows from the classification of \( f \in \mathcal{E}_1^\pi \) with prescribed zero set and normalization (see \lemref{lem:hadamard_uniqueness_E1pi}).
 \end{lemma}

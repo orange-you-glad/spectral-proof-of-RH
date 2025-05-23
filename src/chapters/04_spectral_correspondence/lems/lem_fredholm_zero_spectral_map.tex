@@ -2,8 +2,9 @@
 \label{lem:fredholm_zero_spectral_map}
 Let \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \) be the canonical compact, self-adjoint operator, and define the determinant function
 \[
-f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
+f(\lambda) := \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
 \]
+as defined in \thmref{thm:det_identity_revised}.
 
 Then:
 \begin{enumerate}
@@ -11,14 +12,14 @@ Then:
   \[
   \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2})
   \]
-  is an eigenvalue of \( L_{\mathrm{sym}} \), with algebraic multiplicity equal to the order of vanishing of \( \zeta(s) \) at \( \rho \).
+  is an eigenvalue of \( L_{\mathrm{sym}} \), with algebraic multiplicity equal to the order of vanishing of \( \zeta(s) \) at \( \rho \), as established through the determinant factorization in \lemref{lem:hadamard_linear_form} and spectral correspondence in \lemref{lem:spectrum_zero_bijection}.
 
-  \item[\textnormal{(ii)}] Conversely, for every nonzero eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), there exists a unique \( \rho = \tfrac{1}{2} + \frac{1}{i\mu} \in \mathbb{C} \) such that \( \zeta(\rho) = 0 \) and \( \mu = \mu_\rho \).
+  \item[\textnormal{(ii)}] Conversely, for every nonzero eigenvalue \( \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), there exists a unique \( \rho = \tfrac{1}{2} + \frac{1}{i\mu} \in \mathbb{C} \) such that \( \zeta(\rho) = 0 \) and \( \mu = \mu_\rho \). This follows analytically from the structure of the resolvent trace in \lemref{lem:A_log_derivative}.
 
   \item[\textnormal{(iii)}] The zero set of \( f(\lambda) \) coincides (as a multiset) with
   \[
   \left\{ \lambda_\rho := i(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\},
   \]
-  and the canonical spectral map \( \rho \mapsto \mu_\rho \) defines a multiplicity-preserving bijection between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \).
+  and the canonical spectral map \( \rho \mapsto \mu_\rho \) defines a multiplicity-preserving bijection between the nontrivial zeros of \( \zeta(s) \) and the nonzero spectrum \( \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \), as consolidated in \lemref{lem:spectrum_zero_bijection}.
 \end{enumerate}
 \end{lemma}

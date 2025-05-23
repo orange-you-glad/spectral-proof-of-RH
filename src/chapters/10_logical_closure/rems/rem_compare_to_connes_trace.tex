@@ -1,0 +1,31 @@
+
+% Noncritical comparison; moved to app:additional_structures for structural context
+\begin{remark}[Comparison with Connes’ Trace Formula]
+\label{rem:compare_to_connes_trace}
+
+The canonical operator \( L_{\mathrm{sym}} \in \mathcal{C}_1(H_{\Psi_\alpha}) \), constructed in this manuscript, realizes a spectral trace identity that formally resembles the trace formula proposed by Connes in noncommutative geometry~\cite{Connes1999TraceFormula}.
+
+Both frameworks share the following structural features:
+\begin{itemize}
+  \item \textbf{Spectral Side.} The nontrivial zeros \( \rho \) of \( \zeta(s) \) appear as spectral data:
+  \[
+  \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\mathrm{sym}}) \qquad \text{(this manuscript)},
+  \]
+  and as poles of a distributional trace functional in Connes’ formulation.
+  
+  \item \textbf{Geometric Side.} The right-hand side of the trace involves sums over prime powers (via the von Mangoldt function) and archimedean contributions. These appear in both Connes’ formula and the spectral Laplace inversion of \( \Tr(e^{-tL^2}) \).
+
+  \item \textbf{Functional Equation Symmetry.} Both approaches encode the functional equation of \( \zeta(s) \) through symmetry properties: Fourier duality in this manuscript, scaling invariance in the Connes–Meyer model.
+\end{itemize}
+
+However, key differences remain:
+\begin{itemize}
+  \item \textbf{Foundational Setting.} Connes’ trace involves a distributional trace over a noncommutative space of adèles, not a Hilbert-space trace class operator. The precise spectral operator in his setting is not self-adjoint in the classical sense.
+  
+  \item \textbf{Operator Regularity.} The operator \( L_{\mathrm{sym}} \) is self-adjoint, compact, and trace class. The Connes trace involves divergent distributions requiring ad hoc subtraction schemes.
+
+  \item \textbf{Canonicality and Normalization.} This manuscript achieves a canonical zeta-regularized Fredholm determinant normalized at \( \lambda = 0 \), whereas Connes’ framework requires renormalization constants and cutoff procedures.
+\end{itemize}
+
+In summary, the trace formulation developed here shares the structural aspirations of Connes’ noncommutative trace formula but realizes them fully within operator theory and spectral analysis. The present construction yields a canonical spectral model whose determinant identity rigorously encodes the analytic structure of \( \zeta(s) \) and permits direct equivalence with RH.
+\end{remark}

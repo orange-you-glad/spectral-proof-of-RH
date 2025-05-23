@@ -125,6 +125,14 @@
   ],
   [
     "lem:core_essential_sa",
+    "prop:spectral_resolution_Lsym"
+  ],
+  [
+    "thm:canonical_operator_realization",
+    "prop:spectral_resolution_Lsym"
+  ],
+  [
+    "lem:core_essential_sa",
     "thm:existence_Lsym"
   ],
   [
@@ -552,6 +560,10 @@
     "thm:eq_of_rh"
   ],
   [
+    "lem:log_corrected_tauberian_estimate",
+    "thm:eq_of_rh"
+  ],
+  [
     "lem:multiplicity_preservation",
     "thm:eq_of_rh"
   ],
@@ -701,7 +713,35 @@
   ],
   [
     "def:kernel_decay_condition",
+    "lem:heat_trace_expansion_pi"
+  ],
+  [
+    "lem:heat_trace_expansion",
+    "lem:heat_trace_expansion_pi"
+  ],
+  [
+    "lem:trace_class_convergence_general",
+    "lem:heat_trace_expansion_pi"
+  ],
+  [
+    "lem:heat_trace_expansion_pi",
+    "lem:log_corrected_tauberian_estimate_pi"
+  ],
+  [
+    "def:kernel_decay_condition",
     "lem:trace_class_convergence_general"
+  ],
+  [
+    "prop:spectral_heat_trace_expansion_pi",
+    "prop:spectral_counting_law_pi"
+  ],
+  [
+    "lem:log_derivative_determinant",
+    "prop:spectral_heat_trace_expansion_pi"
+  ],
+  [
+    "lem:trace_class_convergence_general",
+    "prop:spectral_heat_trace_expansion_pi"
   ],
   [
     "def:kernel_decay_condition",
@@ -758,6 +798,14 @@
   [
     "thm:det_identity_revised",
     "lem:spectral_zero_encoding"
+  ],
+  [
+    "lem:log_derivative_determinant",
+    "prop:explicit_formula_operator"
+  ],
+  [
+    "thm:det_identity_revised",
+    "prop:explicit_formula_operator"
   ],
   [
     "thm:det_identity_revised",

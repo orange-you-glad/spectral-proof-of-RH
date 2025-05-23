@@ -53,6 +53,7 @@ The analytic proof is complete. Some classical ingredients (e.g., trace asymptot
 
 - May 17, 2025 — Manuscript submitted to *Annals of Mathematics*.
 - May 22, 2025 — Version 0.99.87 released (see [Releases](https://github.com/orange-you-glad/spectral-proof-of-RH/releases)).
+- May 23, 2025 — Manuscript declined to Annals of Mathematics. *Sigh*. I sent it to early.
 
 ---
 

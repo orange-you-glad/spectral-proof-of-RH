@@ -3,7 +3,7 @@ name = "spectral-proof-of-RH"
 version = "0.99.0"
 description = "Formal spectral determinant realization of the Riemann Hypothesis"
 authors = [
-  { name = "Robert Martone", email = "iheartweb@gmail.com" }
+  { name = "R.A. Jacob Martone", email = "jacob@orangeyouglad.prg" }
 ]
 requires-python = ">=3.11"
 

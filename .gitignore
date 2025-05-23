@@ -52,3 +52,7 @@ agents/logs/
 .envrc
 .env
 .venv/
+
+# Lean build artifacts
+lean/build/
+lean/.lake/

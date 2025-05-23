@@ -15,7 +15,16 @@ All agents must respect:
 
 ## Usage
 
-Run `make check` before committing, and document your agent additions here.
+Run `make check` before committing, and document your agent additions here. Templates for new agents live in:
+
+📁 `agents/templates/`
+
+Use these as boilerplate for writing or scripting a new task:
+
+- `add_lemma.md`
+- `rewrite_theorem.md`
+- `register_dag_edge.md`
+- `refactor_chapter.md`
 
 ---
 
@@ -47,7 +56,7 @@ Run `make check` before committing, and document your agent additions here.
 ## 📚 Reference & Citation Agents
 
 | Agent Name        | Purpose                                                    | Notes             |
-|-------------------|-------------------------------------------------------------|-------------------|
+|-------------------|------------------------------------------------------------|-------------------|
 | `ref-link-agent`  | Validates `\ref{}`, `\cite{}`, `\eqref{}` from `.aux` file  | Uses `checkcites` |
 | `bib-usage-agent` | Detects unused `.bib` entries and uncited references       | Optional via `checkcites` |
 
@@ -69,7 +78,7 @@ Run `make check` before committing, and document your agent additions here.
 ## 🧘 Lean & Formalization Agents
 
 | Agent Name        | Responsibility                                          | Target                    |
-|-------------------|----------------------------------------------------------|---------------------------|
+|-------------------|---------------------------------------------------------|---------------------------|
 | `lean-sync-agent` | Ensures theorem/lemma names match across Lean and LaTeX | `lakefile.lean`, `*.tex`  |
 | `lean-gap-agent`  | Flags theorems without Lean declarations                | `dag_nodes.json`, `lean/` |
 
@@ -102,8 +111,9 @@ To register a new agent:
 
 1. Add an entry to this file
 2. Declare your scope, files modified, and invariants
-3. Add yourself to `.github/CODEOWNERS` if appropriate
-4. Ensure your action runs safely under `make check`
+3. Create a template in `agents/templates/` if it adds a new action class
+4. Add yourself to `.github/CODEOWNERS` if appropriate
+5. Ensure your action runs safely under `make check`
 
 ---
 

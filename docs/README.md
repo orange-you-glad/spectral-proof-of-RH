@@ -6,46 +6,46 @@
 
 The Riemann Hypothesis (RH) asserts that all nontrivial zeros of the Riemann zeta function
 
-$$
+\[
 \zeta(s) := \sum_{n=1}^\infty \frac{1}{n^s}, \quad \text{for } \Re(s) > 1,
-$$
+\]
 
-lie on the critical line $\Re(s) = \tfrac{1}{2}$ when analytically continued to the complex plane minus its simple pole at $s=1$. The profound implications of this hypothesis touch nearly every area of number theory, particularly in understanding the distribution of prime numbers through the zeros of $\zeta(s)$.
+lie on the critical line \(\Re(s) = \tfrac{1}{2}\) when analytically continued to the complex plane minus its simple pole at \(s=1\). The profound implications of this hypothesis touch nearly every area of number theory, particularly in understanding the distribution of prime numbers through the zeros of \(\zeta(s)\).
 
-The proof framework introduced here reinterprets the Riemann Hypothesis through the lens of spectral analysis. Rather than focusing on the analytic properties of $\zeta(s)$ directly, the argument shifts the perspective to that of functional analysis and operator theory. Specifically, we construct a canonical compact, self-adjoint, trace-class operator
+The proof framework introduced here reinterprets the Riemann Hypothesis through the lens of spectral analysis. Rather than focusing on the analytic properties of \(\zeta(s)\) directly, the argument shifts the perspective to that of functional analysis and operator theory. Specifically, we construct a canonical compact, self-adjoint, trace-class operator
 
-$$
+\[
 L_{\mathrm{sym}} : H_{\Psi_\alpha} \to H_{\Psi_\alpha}
-$$
+\]
 
-on a suitably weighted Hilbert space $H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)$, such that the Fredholm determinant of this operator encodes the completed Riemann zeta function $\Xi(s)$. The key analytic identity is
+on a suitably weighted Hilbert space \(H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)\), such that the Fredholm determinant of this operator encodes the completed Riemann zeta function \(\Xi(s)\). The key analytic identity is
 
-$$
+\[
 \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i \lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
-$$
+\]
 
-This equality means that the nontrivial zeros of $\zeta(s)$ correspond precisely to the reciprocals of the eigenvalues of $L_{\mathrm{sym}}$ shifted by $\tfrac{1}{2}$ and rotated by multiplication with $i$.
+This equality means that the nontrivial zeros of \(\zeta(s)\) correspond precisely to the reciprocals of the eigenvalues of \(L_{\mathrm{sym}}\) shifted by \(\tfrac{1}{2}\) and rotated by multiplication with \(i\).
 
-The conclusion is striking in its simplicity: because $L_{\mathrm{sym}}$ is self-adjoint, all of its eigenvalues are real. If these eigenvalues correspond bijectively (with multiplicities preserved) to the imaginary parts of the nontrivial zeros of $\zeta(s)$, then all such zeros must lie on the critical line $\Re(s) = \tfrac{1}{2}$. Thus, RH is equivalent to the spectral reality of a well-defined operator.
+The conclusion is striking in its simplicity: because \(L_{\mathrm{sym}}\) is self-adjoint, all of its eigenvalues are real. If these eigenvalues correspond bijectively (with multiplicities preserved) to the imaginary parts of the nontrivial zeros of \(\zeta(s)\), then all such zeros must lie on the critical line \(\Re(s) = \tfrac{1}{2}\). Thus, RH is equivalent to the spectral reality of a well-defined operator.
 
 #### **1.2 What Is the Strategy?**
 
 The proof proceeds through a structured sequence of correspondences and constructions:
 
 1. **Operator Definition:**
-   Construct an integral operator $L_{\mathrm{sym}}$ via the inverse Fourier transform of the completed zeta function $\Xi(s)$, interpreted as a canonical spectral profile $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$.
+   Construct an integral operator \(L_{\mathrm{sym}}\) via the inverse Fourier transform of the completed zeta function \(\Xi(s)\), interpreted as a canonical spectral profile \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\).
 
 2. **Function Space and Compactness:**
-   Define $L_{\mathrm{sym}}$ to act on a weighted Hilbert space $H_{\Psi_\alpha}$ with $\alpha > \pi$, ensuring that the operator is compact and trace-class. These analytic conditions are essential to define its Fredholm determinant.
+   Define \(L_{\mathrm{sym}}\) to act on a weighted Hilbert space \(H_{\Psi_\alpha}\) with \(\alpha > \pi\), ensuring that the operator is compact and trace-class. These analytic conditions are essential to define its Fredholm determinant.
 
 3. **Determinant Identity:**
-   Use zeta-regularization techniques to define $\det{}_{\zeta}(I - \lambda L_{\mathrm{sym}})$ and prove that it coincides with the normalized completed zeta function $\Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2})$.
+   Use zeta-regularization techniques to define \(\det{}_{\zeta}(I - \lambda L_{\mathrm{sym}})\) and prove that it coincides with the normalized completed zeta function \(\Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2})\).
 
 4. **Spectral Encoding:**
-   Demonstrate that each nontrivial zero $\rho$ of $\zeta(s)$ corresponds to an eigenvalue $\mu = \frac{1}{i}(\rho - \tfrac{1}{2})$ of $L_{\mathrm{sym}}$, and that this correspondence is bijective with multiplicities preserved.
+   Demonstrate that each nontrivial zero \(\rho\) of \(\zeta(s)\) corresponds to an eigenvalue \(\mu = \frac{1}{i}(\rho - \tfrac{1}{2})\) of \(L_{\mathrm{sym}}\), and that this correspondence is bijective with multiplicities preserved.
 
 5. **Conclusion via Spectral Reality:**
-   Invoke the spectral theorem for compact self-adjoint operators: if $L_{\mathrm{sym}}$ is self-adjoint, then all its eigenvalues are real. Consequently, the imaginary parts $\mu$ of all zeros $\rho$ must be real, implying $\Re(\rho) = \tfrac{1}{2}$ and proving RH.
+   Invoke the spectral theorem for compact self-adjoint operators: if \(L_{\mathrm{sym}}\) is self-adjoint, then all its eigenvalues are real. Consequently, the imaginary parts \(\mu\) of all zeros \(\rho\) must be real, implying \(\Re(\rho) = \tfrac{1}{2}\) and proving RH.
 
 This chain of equivalences transforms RH into a purely spectral statement, providing a geometric and operator-theoretic characterization of a number-theoretic conjecture.
 
@@ -57,13 +57,13 @@ This formulation repositions RH within the framework of spectral theory and oper
   RH is no longer just an analytic question about the zeros of a complex function. It becomes a question about the location of the spectrum of a linear operator—specifically, whether all its eigenvalues lie on the real line.
 
 * **Intrinsic Structure:**
-  The operator $L_{\mathrm{sym}}$ is defined without arbitrary parameters or choices; it is canonical. Its spectral data reflect precisely the zeros of $\zeta(s)$, and its determinant reconstructs $\Xi(s)$.
+  The operator \(L_{\mathrm{sym}}\) is defined without arbitrary parameters or choices; it is canonical. Its spectral data reflect precisely the zeros of \(\zeta(s)\), and its determinant reconstructs \(\Xi(s)\).
 
 * **Analytic Tools Become Available:**
-  By interpreting $\Xi(s)$ as a Fredholm determinant, we can apply the machinery of operator theory: trace-class criteria, spectral expansions, heat kernel asymptotics, and Tauberian theorems.
+  By interpreting \(\Xi(s)\) as a Fredholm determinant, we can apply the machinery of operator theory: trace-class criteria, spectral expansions, heat kernel asymptotics, and Tauberian theorems.
 
 * **Logical Closure:**
-  Once constructed, the proof is logically self-contained. If one can establish that $L_{\mathrm{sym}}$ has real spectrum—as ensured by its self-adjointness—then RH follows directly. Conversely, if RH is true, then the eigenvalues of $L_{\mathrm{sym}}$ are necessarily real. The equivalence is tight and unconditional.
+  Once constructed, the proof is logically self-contained. If one can establish that \(L_{\mathrm{sym}}\) has real spectrum—as ensured by its self-adjointness—then RH follows directly. Conversely, if RH is true, then the eigenvalues of \(L_{\mathrm{sym}}\) are necessarily real. The equivalence is tight and unconditional.
 
 This approach thus offers both a conceptual unification and a potential pathway for proving RH using operator-theoretic methods, fulfilling a long-standing aspiration from the Hilbert–Pólya heuristic. It shifts the proof of RH from the domain of complex function theory to that of spectral geometry.
 
@@ -71,25 +71,25 @@ This approach thus offers both a conceptual unification and a potential pathway 
 
 #### **2.1 The Spectral Heuristic**
 
-A foundational intuition behind the operator-theoretic approach to the Riemann Hypothesis is the so-called **Hilbert–Pólya heuristic**. This idea posits that the nontrivial zeros of the Riemann zeta function may correspond to the eigenvalues of some (yet unknown) self-adjoint operator on a Hilbert space. Since the spectrum of a self-adjoint operator lies entirely on the real line, this heuristic—if realized—would imply that the imaginary parts of all nontrivial zeros are real, and hence that the zeros lie on the critical line $\Re(s) = \tfrac{1}{2}$, exactly as RH asserts.
+A foundational intuition behind the operator-theoretic approach to the Riemann Hypothesis is the so-called **Hilbert–Pólya heuristic**. This idea posits that the nontrivial zeros of the Riemann zeta function may correspond to the eigenvalues of some (yet unknown) self-adjoint operator on a Hilbert space. Since the spectrum of a self-adjoint operator lies entirely on the real line, this heuristic—if realized—would imply that the imaginary parts of all nontrivial zeros are real, and hence that the zeros lie on the critical line \(\Re(s) = \tfrac{1}{2}\), exactly as RH asserts.
 
-This heuristic is not a formal argument but a guiding principle that suggests RH could be recast in terms of spectral theory. Instead of viewing the zeros as arising from complex-analytic properties of the function $\zeta(s)$, we imagine them as **spectral values**—frequencies or eigenvalues—of a suitable linear operator. The problem becomes one of identifying or constructing such an operator with a spectrum that exactly matches the set of critical zeros.
+This heuristic is not a formal argument but a guiding principle that suggests RH could be recast in terms of spectral theory. Instead of viewing the zeros as arising from complex-analytic properties of the function \(\zeta(s)\), we imagine them as **spectral values**—frequencies or eigenvalues—of a suitable linear operator. The problem becomes one of identifying or constructing such an operator with a spectrum that exactly matches the set of critical zeros.
 
-The construction in this proof is a rigorous realization of this heuristic. We exhibit a self-adjoint, compact, trace-class operator $L_{\mathrm{sym}}$ such that the eigenvalues of $L_{\mathrm{sym}}$ correspond precisely (with multiplicities) to the shifted and rescaled zeros of $\zeta(s)$. Specifically, we establish that
+The construction in this proof is a rigorous realization of this heuristic. We exhibit a self-adjoint, compact, trace-class operator \(L_{\mathrm{sym}}\) such that the eigenvalues of \(L_{\mathrm{sym}}\) correspond precisely (with multiplicities) to the shifted and rescaled zeros of \(\zeta(s)\). Specifically, we establish that
 
-$$
+\[
 \Spec(L_{\mathrm{sym}}) \setminus \{0\} = \left\{ \mu_\rho := \frac{1}{i} \left(\rho - \tfrac{1}{2} \right) : \zeta(\rho) = 0,\ \rho \notin \mathbb{R} \right\}.
-$$
+\]
 
-In this setting, the Riemann Hypothesis is equivalent to asserting that all $\mu_\rho \in \mathbb{R}$, which follows immediately if $L_{\mathrm{sym}}$ is self-adjoint and the correspondence is bijective. Thus, we interpret RH as a spectral property of a canonical operator.
+In this setting, the Riemann Hypothesis is equivalent to asserting that all \(\mu_\rho \in \mathbb{R}\), which follows immediately if \(L_{\mathrm{sym}}\) is self-adjoint and the correspondence is bijective. Thus, we interpret RH as a spectral property of a canonical operator.
 
 #### **2.2 Analogy: Vibrating Strings and Harmonics**
 
 The spectral view becomes more intuitive when we consider physical analogies, such as the vibration of a string fixed at both ends. The allowed frequencies of vibration are not arbitrary; they are determined by the geometry of the system and the differential operator (typically, the Laplacian) that governs its dynamics. Each frequency corresponds to an eigenvalue of this operator, and the set of eigenvalues—the spectrum—encodes structural information about the physical system.
 
-By analogy, we can think of the zeta function as arising from a highly structured, abstract “arithmetical system,” whose internal modes of oscillation are given by the nontrivial zeros of $\zeta(s)$. If we can construct an operator that plays the role of a Laplacian or Hamiltonian for this system, then its spectrum should correspond to those zeros.
+By analogy, we can think of the zeta function as arising from a highly structured, abstract “arithmetical system,” whose internal modes of oscillation are given by the nontrivial zeros of \(\zeta(s)\). If we can construct an operator that plays the role of a Laplacian or Hamiltonian for this system, then its spectrum should correspond to those zeros.
 
-In our proof, the operator $L_{\mathrm{sym}}$ is constructed using harmonic analytic data from the zeta function itself—specifically, the inverse Fourier transform of the completed zeta function $\Xi(s)$. This operator acts on a weighted Hilbert space in such a way that its eigenvalues encode precisely the “frequencies” of the system, namely, the imaginary parts of the nontrivial zeros of $\zeta(s)$.
+In our proof, the operator \(L_{\mathrm{sym}}\) is constructed using harmonic analytic data from the zeta function itself—specifically, the inverse Fourier transform of the completed zeta function \(\Xi(s)\). This operator acts on a weighted Hilbert space in such a way that its eigenvalues encode precisely the “frequencies” of the system, namely, the imaginary parts of the nontrivial zeros of \(\zeta(s)\).
 
 Just as the harmonics of a vibrating string are determined by the geometry and boundary conditions, the “harmonics” of this operator—the zeta zeros—are dictated by the operator’s integral kernel and the structure of the function space it acts upon.
 
@@ -113,10 +113,10 @@ Moreover, this reframing provides a **logical closure** to the argument: if the 
 
 In constructing an operator whose spectral properties encode the nontrivial zeros of the Riemann zeta function, it is not sufficient to merely find some operator for which this correspondence holds. Rather, we seek a canonical operator—one that arises directly from the intrinsic structure of the zeta function, without arbitrary choices, tunings, or external adjustments. The aim is to ensure that the operator is uniquely determined by the analytic nature of ζ itself.
 
-An operator $L_{\mathrm{sym}}$ is said to be canonical in this setting if it satisfies the following stringent criteria:
+An operator \(L_{\mathrm{sym}}\) is said to be canonical in this setting if it satisfies the following stringent criteria:
 
 * **Zeta-Originated Definition:**
-  The operator must be constructed explicitly from the completed zeta function $\Xi(s)$, or its symmetrized form $\phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right)$. No auxiliary functions or extrinsic transformations should be involved.
+  The operator must be constructed explicitly from the completed zeta function \(\Xi(s)\), or its symmetrized form \(\phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right)\). No auxiliary functions or extrinsic transformations should be involved.
 
 * **Basis-Free Construction:**
   Its definition must not depend on the choice of a basis in the Hilbert space, nor on any particular representation. This ensures that the operator is not merely tailored to reproduce spectral features under specific conditions.
@@ -124,21 +124,21 @@ An operator $L_{\mathrm{sym}}$ is said to be canonical in this setting if it sat
 * **Determinant Equivalence:**
   The Fredholm determinant of the operator must reproduce the normalized completed zeta function. That is,
 
-  $$
+  \[
   \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
-  $$
+  \]
 
   This property must be a consequence of the operator’s construction, not a condition imposed externally.
 
 * **Spectral Uniqueness:**
-  The spectrum of $L_{\mathrm{sym}}$ must correspond bijectively to the nontrivial zeros of ζ, with multiplicities preserved, and no extraneous eigenvalues. Any deviation from this would suggest the operator encodes more or less than the zeta zeros.
+  The spectrum of \(L_{\mathrm{sym}}\) must correspond bijectively to the nontrivial zeros of ζ, with multiplicities preserved, and no extraneous eigenvalues. Any deviation from this would suggest the operator encodes more or less than the zeta zeros.
 
 * **Analytic Necessity:**
-  The operator’s domain and kernel must be dictated by the analytic properties of ζ. For instance, the decay rate of the kernel must match the exponential type of $\Xi(s)$, and the Hilbert space must be chosen precisely to ensure trace-class properties.
+  The operator’s domain and kernel must be dictated by the analytic properties of ζ. For instance, the decay rate of the kernel must match the exponential type of \(\Xi(s)\), and the Hilbert space must be chosen precisely to ensure trace-class properties.
 
-In the construction that follows, $L_{\mathrm{sym}}$ is defined as a convolution operator on a weighted $L^2$-space, with kernel given by the inverse Fourier transform of $\phi(\lambda)$. Its domain and spectral features are determined entirely by the functional equation, symmetry, and decay of $\Xi(s)$. The function space is chosen to match the growth bounds of $\phi$, leading to the sharp threshold $\alpha > \pi$ on the exponential weight.
+In the construction that follows, \(L_{\mathrm{sym}}\) is defined as a convolution operator on a weighted \(L^2\)-space, with kernel given by the inverse Fourier transform of \(\phi(\lambda)\). Its domain and spectral features are determined entirely by the functional equation, symmetry, and decay of \(\Xi(s)\). The function space is chosen to match the growth bounds of \(\phi\), leading to the sharp threshold \(\alpha > \pi\) on the exponential weight.
 
-Every aspect of this operator—from its Fourier profile to its action on function space—is thus canonically specified. There is no adjustable parameter or approximation involved in its definition. This rigidity is essential for the logical equivalence we establish later between RH and the spectral properties of $L_{\mathrm{sym}}$.
+Every aspect of this operator—from its Fourier profile to its action on function space—is thus canonically specified. There is no adjustable parameter or approximation involved in its definition. This rigidity is essential for the logical equivalence we establish later between RH and the spectral properties of \(L_{\mathrm{sym}}\).
 
 #### **3.2 Example: Why Some Operators Fail**
 
@@ -148,20 +148,20 @@ To highlight the significance of canonicity, consider operators that might super
   Suppose one constructs a kernel from a truncated Dirichlet series or an approximate functional equation for ζ. While such constructions may reproduce zeros approximately or for finite height, they fail to capture the full analytic content of ζ. The resulting operators may not be trace-class, may not have a well-defined determinant, or may introduce artificial spectral features not present in the true zero distribution.
 
 * **Operators with Overweighted Kernels:**
-  An operator whose kernel decays too slowly (e.g., polynomial decay rather than exponential) may not be trace-class in any weighted Hilbert space, rendering its determinant undefined. Alternatively, imposing too strong a decay condition (e.g., defining the operator on a space with exponential weight $\alpha \gg \pi$) may oversmooth the spectrum, masking the natural frequencies.
+  An operator whose kernel decays too slowly (e.g., polynomial decay rather than exponential) may not be trace-class in any weighted Hilbert space, rendering its determinant undefined. Alternatively, imposing too strong a decay condition (e.g., defining the operator on a space with exponential weight \(\alpha \gg \pi\)) may oversmooth the spectrum, masking the natural frequencies.
 
 * **Operators with Arbitrary Regularization:**
-  Defining an operator by smoothing ζ or introducing damping factors without analytic justification risks violating the determinant identity. For example, if the determinant no longer coincides with $\Xi(s)$, the operator loses its direct connection to the zeta function.
+  Defining an operator by smoothing ζ or introducing damping factors without analytic justification risks violating the determinant identity. For example, if the determinant no longer coincides with \(\Xi(s)\), the operator loses its direct connection to the zeta function.
 
-In all such cases, the absence of canonical structure introduces ambiguity and undermines the logic of the spectral reformulation. The operator $L_{\mathrm{sym}}$, by contrast, emerges directly from $\Xi(s)$ via its inverse Fourier transform, and the decay of the resulting kernel dictates the minimal function space on which the operator is trace-class.
+In all such cases, the absence of canonical structure introduces ambiguity and undermines the logic of the spectral reformulation. The operator \(L_{\mathrm{sym}}\), by contrast, emerges directly from \(\Xi(s)\) via its inverse Fourier transform, and the decay of the resulting kernel dictates the minimal function space on which the operator is trace-class.
 
 #### **3.3 Implication: Rigidity and Uniqueness**
 
 The notion of canonicity is not only a philosophical preference but a logical necessity. If one could construct multiple distinct operators, each satisfying the determinant identity and spectral encoding of the zeta zeros, the uniqueness of the reformulation would be compromised.
 
-Fortunately, the spectral theory of trace-class, self-adjoint operators ensures that such ambiguity does not arise. The determinant identity implies a Hadamard product over the spectrum. Since entire functions of order one and given exponential type are uniquely determined by their zeros and normalization, and since $L_{\mathrm{sym}}$ reproduces $\Xi(s)$, no alternative operator with different spectral data can satisfy the same identity.
+Fortunately, the spectral theory of trace-class, self-adjoint operators ensures that such ambiguity does not arise. The determinant identity implies a Hadamard product over the spectrum. Since entire functions of order one and given exponential type are uniquely determined by their zeros and normalization, and since \(L_{\mathrm{sym}}\) reproduces \(\Xi(s)\), no alternative operator with different spectral data can satisfy the same identity.
 
-Thus, the operator $L_{\mathrm{sym}}$ is not just one candidate among many; it is uniquely dictated by the analytic structure of ζ. Its existence is not an accident, and its properties are not adjustable. The logical chain—from $\Xi(s)$ to $\phi(\lambda)$, to the convolution kernel $k(x)$, to the trace-class operator on $H_{\Psi_\alpha}$—is fully constrained.
+Thus, the operator \(L_{\mathrm{sym}}\) is not just one candidate among many; it is uniquely dictated by the analytic structure of ζ. Its existence is not an accident, and its properties are not adjustable. The logical chain—from \(\Xi(s)\) to \(\phi(\lambda)\), to the convolution kernel \(k(x)\), to the trace-class operator on \(H_{\Psi_\alpha}\)—is fully constrained.
 
 This rigidity ensures that the spectral reformulation of RH is not merely an encoding but an equivalence. Any deviation in the analytic data—be it a misplaced zero or a shifted kernel—would break the determinant identity. Hence, the proof’s conclusion does not rest on approximation or numerical suggestion, but on strict spectral correspondence.
 
@@ -171,90 +171,90 @@ This rigidity ensures that the spectral reformulation of RH is not merely an enc
 
 The passage from the Riemann zeta function to a linear operator begins with harmonic analysis—specifically, with the Fourier transform. The completed Riemann zeta function,
 
-$$
+\[
 \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma\left(\tfrac{s}{2}\right)\zeta(s),
-$$
+\]
 
 is entire, symmetric about the critical line, and of exponential type. It is natural, then, to consider its representation as a function of a real frequency parameter:
 
-$$
+\[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
-$$
+\]
 
-a real-valued, even function on $\mathbb{R}$, analytic of exponential type $\pi$, and central to our construction. The inverse Fourier transform of $\phi$,
+a real-valued, even function on \(\mathbb{R}\), analytic of exponential type \(\pi\), and central to our construction. The inverse Fourier transform of \(\phi\),
 
-$$
+\[
 k(x) := \phi^\vee(x) = \frac{1}{2\pi} \int_{-\infty}^\infty e^{i\lambda x} \phi(\lambda)\,d\lambda,
-$$
+\]
 
-is then interpreted as a convolution kernel, supported on the interval $[-\pi, \pi]$ by the Paley–Wiener theorem. The compact support and decay of $k(x)$ permit the construction of a convolution-type integral operator acting on suitable function spaces.
+is then interpreted as a convolution kernel, supported on the interval \([-\pi, \pi]\) by the Paley–Wiener theorem. The compact support and decay of \(k(x)\) permit the construction of a convolution-type integral operator acting on suitable function spaces.
 
-This operator is defined by convolution with $k$, i.e.,
+This operator is defined by convolution with \(k\), i.e.,
 
-$$
+\[
 (Lf)(x) := \int_{\mathbb{R}} k(x - y) f(y)\,dy.
-$$
+\]
 
-However, for this operator to be trace-class and its determinant to be well-defined, we must select a Hilbert space on which $L$ is not only densely defined and symmetric, but also compact and trace-class. This leads to the choice of the **exponentially weighted Hilbert space**
+However, for this operator to be trace-class and its determinant to be well-defined, we must select a Hilbert space on which \(L\) is not only densely defined and symmetric, but also compact and trace-class. This leads to the choice of the **exponentially weighted Hilbert space**
 
-$$
+\[
 H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx),
-$$
+\]
 
-with $\alpha > \pi$, the minimal weight ensuring absolute integrability of the kernel under convolution.
+with \(\alpha > \pi\), the minimal weight ensuring absolute integrability of the kernel under convolution.
 
-Thus, the operator $L_{\mathrm{sym}}$ is canonically constructed from the zeta function via harmonic analysis, without approximation or external input. The entire analytic structure of $\Xi(s)$ is encoded in the operator's action.
+Thus, the operator \(L_{\mathrm{sym}}\) is canonically constructed from the zeta function via harmonic analysis, without approximation or external input. The entire analytic structure of \(\Xi(s)\) is encoded in the operator's action.
 
 #### **4.2 Example: Convolution as Signal Processing**
 
-This construction may be interpreted metaphorically via signal processing. Consider a time-domain signal $f(x)$, and suppose one wishes to filter it through a system whose frequency response is described by the function $\phi(\lambda)$. In engineering, this would amount to multiplying the signal’s Fourier transform $\hat{f}(\lambda)$ by $\phi(\lambda)$, then inverting the Fourier transform to return to the time domain.
+This construction may be interpreted metaphorically via signal processing. Consider a time-domain signal \(f(x)\), and suppose one wishes to filter it through a system whose frequency response is described by the function \(\phi(\lambda)\). In engineering, this would amount to multiplying the signal’s Fourier transform \(\hat{f}(\lambda)\) by \(\phi(\lambda)\), then inverting the Fourier transform to return to the time domain.
 
-This is precisely what the operator $L_{\mathrm{sym}}$ accomplishes: it acts on $f \in H_{\Psi_\alpha}$ by convolution with $k(x)$, which in the Fourier domain is equivalent to multiplication by $\phi(\lambda)$. That is,
+This is precisely what the operator \(L_{\mathrm{sym}}\) accomplishes: it acts on \(f \in H_{\Psi_\alpha}\) by convolution with \(k(x)\), which in the Fourier domain is equivalent to multiplication by \(\phi(\lambda)\). That is,
 
-$$
+\[
 L_{\mathrm{sym}} = \mathcal{F}^{-1} \circ M_\phi \circ \mathcal{F},
-$$
+\]
 
-under suitable unitary conjugation to account for the exponential weight. Here $M_\phi$ is multiplication by $\phi(\lambda)$.
+under suitable unitary conjugation to account for the exponential weight. Here \(M_\phi\) is multiplication by \(\phi(\lambda)\).
 
-In this analogy, the function $\phi$ defines a spectral filter—selecting, amplifying, or attenuating frequency components according to the structure of $\Xi$. The convolution kernel $k$ is the corresponding impulse response, and the operator $L_{\mathrm{sym}}$ is the realization of that system in the time domain.
+In this analogy, the function \(\phi\) defines a spectral filter—selecting, amplifying, or attenuating frequency components according to the structure of \(\Xi\). The convolution kernel \(k\) is the corresponding impulse response, and the operator \(L_{\mathrm{sym}}\) is the realization of that system in the time domain.
 
-In our mathematical setting, this is not merely a metaphor: the operator acts precisely in this way, with each spectral component weighted by the value of $\phi(\lambda)$, which in turn reflects the analytic behavior of $\Xi$.
+In our mathematical setting, this is not merely a metaphor: the operator acts precisely in this way, with each spectral component weighted by the value of \(\phi(\lambda)\), which in turn reflects the analytic behavior of \(\Xi\).
 
 #### **4.3 Implication: Turning Function Behavior into Operator Dynamics**
 
-This shift—from analyzing functions to studying operators—changes both the tools and the perspective. Instead of attempting to determine the locations of zeros through properties of $\zeta(s)$, we study the spectral decomposition of a self-adjoint operator.
+This shift—from analyzing functions to studying operators—changes both the tools and the perspective. Instead of attempting to determine the locations of zeros through properties of \(\zeta(s)\), we study the spectral decomposition of a self-adjoint operator.
 
 This shift allows us to:
 
 * **Define Spectral Quantities Intrinsically:**
-  The operator $L_{\mathrm{sym}}$ has a discrete spectrum $\{\mu_n\}$, and under the determinant identity, these spectral values correspond precisely to the imaginary parts of the nontrivial zeros of ζ.
+  The operator \(L_{\mathrm{sym}}\) has a discrete spectrum \(\{\mu_n\}\), and under the determinant identity, these spectral values correspond precisely to the imaginary parts of the nontrivial zeros of ζ.
 
 * **Use Functional Calculus and Operator Determinants:**
-  Because $L_{\mathrm{sym}}$ is self-adjoint and trace-class, one can define spectral determinants, trace formulas, and apply asymptotic estimates via heat kernel methods and Tauberian theorems.
+  Because \(L_{\mathrm{sym}}\) is self-adjoint and trace-class, one can define spectral determinants, trace formulas, and apply asymptotic estimates via heat kernel methods and Tauberian theorems.
 
 * **Connect with Physical Intuition:**
   The operator behaves like a Hamiltonian whose energy levels mirror the zeta zeros. Its spectral properties determine whether the Riemann Hypothesis holds, providing a geometric bridge to analytic number theory.
 
 This approach thus allows RH to be recast in operator-theoretic terms: as a question about the location of eigenvalues of a canonical operator. The benefit is not only conceptual clarity but also technical power—the entire toolkit of spectral theory becomes applicable.
 
-In the following chapters, we construct $L_{\mathrm{sym}}$ precisely, define its determinant, and prove that its spectrum is intimately tied to the zeta zeros. The operator transforms a deep question in analytic number theory into one about the structure of a concrete trace-class operator.
+In the following chapters, we construct \(L_{\mathrm{sym}}\) precisely, define its determinant, and prove that its spectrum is intimately tied to the zeta zeros. The operator transforms a deep question in analytic number theory into one about the structure of a concrete trace-class operator.
 
 ### **5. Mollification and Control: Making the Operator Well-Behaved**
 
 #### **5.1 What Is Mollification?**
 
-Although the convolution operator $L_{\mathrm{sym}}$, constructed from the inverse Fourier transform of the completed zeta function, is well-defined as a formal object, its direct definition poses analytic challenges. In particular, while the kernel $k(x) = \phi^\vee(x)$ is compactly supported and real-analytic, its decay is only marginally sufficient to ensure trace-class properties when acting on weighted $L^2$-spaces. This near-critical decay behavior demands care.
+Although the convolution operator \(L_{\mathrm{sym}}\), constructed from the inverse Fourier transform of the completed zeta function, is well-defined as a formal object, its direct definition poses analytic challenges. In particular, while the kernel \(k(x) = \phi^\vee(x)\) is compactly supported and real-analytic, its decay is only marginally sufficient to ensure trace-class properties when acting on weighted \(L^2\)-spaces. This near-critical decay behavior demands care.
 
-To control the analytic behavior of the operator—especially to ensure trace-class convergence and permit determinant calculations—we apply a classical regularization technique: **mollification**. Mollification smooths a given function or operator by convolving it with a rapidly decaying, smooth approximation to the identity. In our context, mollification is applied not to the kernel $k(x)$ directly, but to its Fourier transform $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$, producing a family of approximations:
+To control the analytic behavior of the operator—especially to ensure trace-class convergence and permit determinant calculations—we apply a classical regularization technique: **mollification**. Mollification smooths a given function or operator by convolving it with a rapidly decaying, smooth approximation to the identity. In our context, mollification is applied not to the kernel \(k(x)\) directly, but to its Fourier transform \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\), producing a family of approximations:
 
-$$
+\[
 \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda), \quad t > 0.
-$$
+\]
 
-This Gaussian damping suppresses high-frequency components in $\phi(\lambda)$, yielding a mollified profile $\phi_t$ whose inverse Fourier transform $k_t(x)$ is smooth, rapidly decaying, and suitable for convolution on any weighted $L^2$-space.
+This Gaussian damping suppresses high-frequency components in \(\phi(\lambda)\), yielding a mollified profile \(\phi_t\) whose inverse Fourier transform \(k_t(x)\) is smooth, rapidly decaying, and suitable for convolution on any weighted \(L^2\)-space.
 
-Each $\phi_t$ lies in the Schwartz space $\mathcal{S}(\mathbb{R})$, and its inverse transform $k_t(x)$ satisfies:
+Each \(\phi_t\) lies in the Schwartz space \(\mathcal{S}(\mathbb{R})\), and its inverse transform \(k_t(x)\) satisfies:
 
 * Real-valuedness and evenness,
 * Compact support up to exponential tails,
@@ -262,49 +262,49 @@ Each $\phi_t$ lies in the Schwartz space $\mathcal{S}(\mathbb{R})$, and its inve
 
 The corresponding operator
 
-$$
+\[
 (L_t f)(x) := \int_{\mathbb{R}} k_t(x - y) f(y)\,dy
-$$
+\]
 
-is a bounded, trace-class operator on $H_{\Psi_\alpha}$ for all $\alpha > 0$. Moreover, the family $\{L_t\}_{t > 0}$ converges in trace norm to $L_{\mathrm{sym}}$ as $t \to 0$. In this way, mollification provides a rigorous, controlled method for defining and analyzing $L_{\mathrm{sym}}$ via regular approximations.
+is a bounded, trace-class operator on \(H_{\Psi_\alpha}\) for all \(\alpha > 0\). Moreover, the family \(\{L_t\}_{t > 0}\) converges in trace norm to \(L_{\mathrm{sym}}\) as \(t \to 0\). In this way, mollification provides a rigorous, controlled method for defining and analyzing \(L_{\mathrm{sym}}\) via regular approximations.
 
 #### **5.2 Example: Bump Functions and Smooth Approximation**
 
-Mollification is well-known in analysis as a method of approximating potentially non-smooth functions by smooth ones. Consider a non-differentiable function like $f(x) = |x|$, which is continuous but has a cusp at $x = 0$. Convolving $f$ with a smooth bump function $\eta_\epsilon(x) := \frac{1}{\epsilon}\eta(x/\epsilon)$, where $\eta$ is compactly supported and infinitely differentiable with $\int \eta = 1$, yields
+Mollification is well-known in analysis as a method of approximating potentially non-smooth functions by smooth ones. Consider a non-differentiable function like \(f(x) = |x|\), which is continuous but has a cusp at \(x = 0\). Convolving \(f\) with a smooth bump function \(\eta_\epsilon(x) := \frac{1}{\epsilon}\eta(x/\epsilon)\), where \(\eta\) is compactly supported and infinitely differentiable with \(\int \eta = 1\), yields
 
-$$
+\[
 f_\epsilon(x) := (f * \eta_\epsilon)(x),
-$$
+\]
 
-a smooth approximation to $f$ that converges to it in $L^p$ or pointwise as $\epsilon \to 0$.
+a smooth approximation to \(f\) that converges to it in \(L^p\) or pointwise as \(\epsilon \to 0\).
 
-In our setting, the situation is more delicate. The “rough” object is the function $\phi(\lambda)$, which although analytic, has slow decay in $|\lambda|$. The mollifier $e^{-t\lambda^2}$ serves as a Gaussian analog of a bump function, and $\phi_t(\lambda)$ plays the role of a smoothed approximation to $\phi$. Its inverse transform $k_t(x)$ inherits smoothness and rapid decay, making the corresponding convolution operator $L_t$ not only well-defined but trace-class.
+In our setting, the situation is more delicate. The “rough” object is the function \(\phi(\lambda)\), which although analytic, has slow decay in \(|\lambda|\). The mollifier \(e^{-t\lambda^2}\) serves as a Gaussian analog of a bump function, and \(\phi_t(\lambda)\) plays the role of a smoothed approximation to \(\phi\). Its inverse transform \(k_t(x)\) inherits smoothness and rapid decay, making the corresponding convolution operator \(L_t\) not only well-defined but trace-class.
 
-Thus, mollification in this context is more than a technical device; it is a mechanism for ensuring that the analytic structure of $\phi(\lambda)$ manifests in a controlled operator setting, permitting rigorous limit operations and determinant analysis.
+Thus, mollification in this context is more than a technical device; it is a mechanism for ensuring that the analytic structure of \(\phi(\lambda)\) manifests in a controlled operator setting, permitting rigorous limit operations and determinant analysis.
 
 #### **5.3 Implication: A Safe Path to the Canonical Limit**
 
 The use of mollification enables several crucial technical advantages:
 
 * **Trace-Class Approximation:**
-  Each operator $L_t$ is trace-class, and the family $\{L_t\}$ converges in trace norm to $L_{\mathrm{sym}}$. This ensures that spectral quantities, such as eigenvalues and traces, behave continuously in the limit $t \to 0$.
+  Each operator \(L_t\) is trace-class, and the family \(\{L_t\}\) converges in trace norm to \(L_{\mathrm{sym}}\). This ensures that spectral quantities, such as eigenvalues and traces, behave continuously in the limit \(t \to 0\).
 
 * **Continuity of Determinants:**
   Since trace-class operators form a Banach space, and the Fredholm determinant is continuous in the trace-norm topology, one can define
 
-  $$
+  \[
   \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) := \lim_{t \to 0} \det(I - \lambda L_t),
-  $$
+  \]
 
-  giving a well-defined, entire function in $\lambda$. This is foundational to the identity connecting $\Xi(s)$ to the spectral determinant.
+  giving a well-defined, entire function in \(\lambda\). This is foundational to the identity connecting \(\Xi(s)\) to the spectral determinant.
 
 * **Intrinsic Regularization:**
-  The mollification process is canonical: no arbitrary bump function or parameter is introduced. The choice $e^{-t\lambda^2}$ reflects standard Gaussian smoothing and is analytically natural in the context of Fourier analysis. Furthermore, the limit $t \to 0$ is taken in a direction that recovers the original function $\phi$, preserving its spectral content.
+  The mollification process is canonical: no arbitrary bump function or parameter is introduced. The choice \(e^{-t\lambda^2}\) reflects standard Gaussian smoothing and is analytically natural in the context of Fourier analysis. Furthermore, the limit \(t \to 0\) is taken in a direction that recovers the original function \(\phi\), preserving its spectral content.
 
 * **Avoidance of Ill-Defined Kernels:**
-  Without mollification, direct analysis of $L_{\mathrm{sym}}$ would require confronting the kernel $k(x)$, which lacks sufficient decay to be trace-class on unweighted spaces. Mollification allows the entire construction to remain within the realm of well-understood functional-analytic objects.
+  Without mollification, direct analysis of \(L_{\mathrm{sym}}\) would require confronting the kernel \(k(x)\), which lacks sufficient decay to be trace-class on unweighted spaces. Mollification allows the entire construction to remain within the realm of well-understood functional-analytic objects.
 
-In total, mollification provides the analytical infrastructure required to define $L_{\mathrm{sym}}$ rigorously, to study its spectral properties via convergence, and to establish the determinant identity in the next phase of the proof. This step transforms a formal convolution construction into a fully rigorous trace-class operator framework.
+In total, mollification provides the analytical infrastructure required to define \(L_{\mathrm{sym}}\) rigorously, to study its spectral properties via convergence, and to establish the determinant identity in the next phase of the proof. This step transforms a formal convolution construction into a fully rigorous trace-class operator framework.
 
 ### **6. Why Trace-Class? What This Unlocks**
 
@@ -312,200 +312,200 @@ In total, mollification provides the analytical infrastructure required to defin
 
 In the realm of infinite-dimensional Hilbert spaces, many intuitive properties of finite matrices do not carry over without additional structure. Concepts such as trace and determinant, which are central to matrix analysis, do not automatically apply to general bounded operators. However, within the class of **trace-class operators**, these notions are both well-defined and analytically powerful.
 
-An operator $T$ on a Hilbert space $H$ is said to be **trace-class** (or nuclear, or belonging to the Schatten class $\mathcal{S}_1$) if its singular values $\{s_n(T)\}$—the eigenvalues of the positive operator $|T| := \sqrt{T^*T}$—form an absolutely summable sequence:
+An operator \(T\) on a Hilbert space \(H\) is said to be **trace-class** (or nuclear, or belonging to the Schatten class \(\mathcal{S}_1\)) if its singular values \(\{s_n(T)\}\)—the eigenvalues of the positive operator \(|T| := \sqrt{T^*T}\)—form an absolutely summable sequence:
 
-$$
+\[
 \|T\|_{\mathcal{S}_1} := \sum_{n=1}^\infty s_n(T) < \infty.
-$$
+\]
 
 This condition implies several key properties:
 
-* The trace $\operatorname{Tr}(T) := \sum_{n} \langle T e_n, e_n \rangle$ is finite and independent of the choice of orthonormal basis $\{e_n\}$.
-* The **Fredholm determinant** $\det(I + T) := \prod_{n}(1 + \lambda_n)$, where $\{\lambda_n\}$ are the eigenvalues of $T$, is well-defined and entire.
-* The spectrum of $T$ consists of eigenvalues accumulating only at zero.
-* The space of trace-class operators forms a two-sided ideal in the bounded operators $B(H)$ and is complete under the trace norm.
+* The trace \(\operatorname{Tr}(T) := \sum_{n} \langle T e_n, e_n \rangle\) is finite and independent of the choice of orthonormal basis \(\{e_n\}\).
+* The **Fredholm determinant** \(\det(I + T) := \prod_{n}(1 + \lambda_n)\), where \(\{\lambda_n\}\) are the eigenvalues of \(T\), is well-defined and entire.
+* The spectrum of \(T\) consists of eigenvalues accumulating only at zero.
+* The space of trace-class operators forms a two-sided ideal in the bounded operators \(B(H)\) and is complete under the trace norm.
 
 These properties provide the functional analytic setting necessary to construct operator determinants, define zeta-regularization, and derive spectral identities.
 
-In our proof, trace-class status of the operator $L_{\mathrm{sym}}$ ensures that the determinant
+In our proof, trace-class status of the operator \(L_{\mathrm{sym}}\) ensures that the determinant
 
-$$
+\[
 \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}})
-$$
+\]
 
-is not only well-defined but analytic in $\lambda$, allowing us to match it to the completed zeta function $\Xi(\tfrac{1}{2} + i\lambda)$. The entire logical bridge from operator spectrum to zeta zeros rests on this foundational analytic structure.
+is not only well-defined but analytic in \(\lambda\), allowing us to match it to the completed zeta function \(\Xi(\tfrac{1}{2} + i\lambda)\). The entire logical bridge from operator spectrum to zeta zeros rests on this foundational analytic structure.
 
 #### **6.2 Example: Trace-Class vs. Hilbert–Schmidt**
 
-To contextualize trace-class operators within the landscape of compact operators, consider the following hierarchy of operator ideals on a Hilbert space $H$:
+To contextualize trace-class operators within the landscape of compact operators, consider the following hierarchy of operator ideals on a Hilbert space \(H\):
 
-* **Compact Operators ($\mathcal{K}$)**:
+* **Compact Operators (\(\mathcal{K}\))**:
   Operators for which the image of the unit ball is relatively compact. Spectrally, they resemble diagonal matrices with eigenvalues tending to zero, but may not admit a well-defined trace or determinant.
 
-* **Hilbert–Schmidt Operators ($\mathcal{S}_2$)**:
+* **Hilbert–Schmidt Operators (\(\mathcal{S}_2\))**:
   Operators for which the Hilbert–Schmidt norm is finite:
 
-  $$
+  \[
   \|T\|_{\mathcal{S}_2} := \left( \sum_{n=1}^\infty s_n(T)^2 \right)^{1/2} < \infty.
-  $$
+  \]
 
   These are compact and admit a well-defined inner product structure but may lack a trace or determinant.
 
-* **Trace-Class Operators ($\mathcal{S}_1$)**:
-  Operators satisfying $\sum_n s_n(T) < \infty$. These are the only ones among the above that support a full spectral calculus including trace and Fredholm determinant.
+* **Trace-Class Operators (\(\mathcal{S}_1\))**:
+  Operators satisfying \(\sum_n s_n(T) < \infty\). These are the only ones among the above that support a full spectral calculus including trace and Fredholm determinant.
 
-Each inclusion is strict: $\mathcal{S}_1 \subset \mathcal{S}_2 \subset \mathcal{K} \subset B(H)$. Our operator $L_{\mathrm{sym}}$ lies in $\mathcal{S}_1$, the smallest and most analytically tractable of these classes.
+Each inclusion is strict: \(\mathcal{S}_1 \subset \mathcal{S}_2 \subset \mathcal{K} \subset B(H)\). Our operator \(L_{\mathrm{sym}}\) lies in \(\mathcal{S}_1\), the smallest and most analytically tractable of these classes.
 
-The mollified operators $L_t$, discussed previously, are uniformly trace-class for all $t > 0$, and the limit $L_{\mathrm{sym}} = \lim_{t \to 0^+} L_t$ is also trace-class—though potentially unbounded. This inclusion is essential for defining the determinant and for the heat trace asymptotics used in later sections.
+The mollified operators \(L_t\), discussed previously, are uniformly trace-class for all \(t > 0\), and the limit \(L_{\mathrm{sym}} = \lim_{t \to 0^+} L_t\) is also trace-class—though potentially unbounded. This inclusion is essential for defining the determinant and for the heat trace asymptotics used in later sections.
 
 #### **6.3 Implication: Determinants and Functional Calculus Become Available**
 
 The necessity of working with a trace-class operator is not merely technical; it is foundational to the entire proof structure.
 
-With $L_{\mathrm{sym}} \in \mathcal{S}_1$, we gain access to:
+With \(L_{\mathrm{sym}} \in \mathcal{S}_1\), we gain access to:
 
 * **Fredholm Determinants:**
-  Entire functions $\det(I - \lambda L_{\mathrm{sym}})$ whose zeros encode spectral data. This is the key analytic bridge between operator theory and the zeros of $\Xi(s)$.
+  Entire functions \(\det(I - \lambda L_{\mathrm{sym}})\) whose zeros encode spectral data. This is the key analytic bridge between operator theory and the zeros of \(\Xi(s)\).
 
 * **Zeta-Regularized Determinants:**
-  Via the spectral zeta function, one can define $\det{}_{\zeta}(I - \lambda L_{\mathrm{sym}})$ even when the infinite product of eigenvalues diverges, provided the operator lies in $\mathcal{S}_1$.
+  Via the spectral zeta function, one can define \(\det{}_{\zeta}(I - \lambda L_{\mathrm{sym}})\) even when the infinite product of eigenvalues diverges, provided the operator lies in \(\mathcal{S}_1\).
 
 * **Heat Kernel Techniques:**
-  The trace $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ is finite and meaningful for all $t > 0$, enabling the use of Tauberian theorems and spectral asymptotics.
+  The trace \(\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\) is finite and meaningful for all \(t > 0\), enabling the use of Tauberian theorems and spectral asymptotics.
 
 * **Spectral Theorem and Functional Calculus:**
   For self-adjoint, trace-class operators, one can define spectral projections, semigroups, and even entire functions of the operator. This allows deep structural insights and connects to explicit formulae in number theory.
 
-These capabilities are crucial. Without trace-class regularity, the determinant is undefined or divergent, the spectral identity breaks down, and the analytic machinery collapses. The sharp threshold $\alpha > \pi$ in the choice of Hilbert space ensures that $L_{\mathrm{sym}}$ sits safely within the trace-class, unlocking the entire spectral framework. This step justifies the mollification procedure and ultimately anchors the determinant identity central to the proof.
+These capabilities are crucial. Without trace-class regularity, the determinant is undefined or divergent, the spectral identity breaks down, and the analytic machinery collapses. The sharp threshold \(\alpha > \pi\) in the choice of Hilbert space ensures that \(L_{\mathrm{sym}}\) sits safely within the trace-class, unlocking the entire spectral framework. This step justifies the mollification procedure and ultimately anchors the determinant identity central to the proof.
 
 ### **7. The Determinant Identity: Encoding the Zeta Function**
 
 #### **7.1 Defining the Spectral Determinant**
 
-In finite-dimensional linear algebra, the determinant of a matrix serves as a compact summary of many essential properties: invertibility, volume distortion, and the product of eigenvalues. For a matrix $A$, one writes
+In finite-dimensional linear algebra, the determinant of a matrix serves as a compact summary of many essential properties: invertibility, volume distortion, and the product of eigenvalues. For a matrix \(A\), one writes
 
-$$
+\[
 \det(I - \lambda A) = \prod_{j=1}^n (1 - \lambda \mu_j),
-$$
+\]
 
-where $\{\mu_j\}$ are the eigenvalues of $A$. This identity extends analytically in $\lambda$ and encodes the spectrum of $A$ in the location of the determinant's zeros.
+where \(\{\mu_j\}\) are the eigenvalues of \(A\). This identity extends analytically in \(\lambda\) and encodes the spectrum of \(A\) in the location of the determinant's zeros.
 
-However, in infinite-dimensional Hilbert spaces, and particularly for trace-class operators, the situation requires greater care. The product $\prod_n (1 - \lambda \mu_n)$, where $\mu_n$ are the eigenvalues of a compact operator, generally diverges and must be regularized. To address this, we turn to the **Fredholm determinant** and its zeta-regularized extension.
+However, in infinite-dimensional Hilbert spaces, and particularly for trace-class operators, the situation requires greater care. The product \(\prod_n (1 - \lambda \mu_n)\), where \(\mu_n\) are the eigenvalues of a compact operator, generally diverges and must be regularized. To address this, we turn to the **Fredholm determinant** and its zeta-regularized extension.
 
-Let $T$ be a compact, trace-class operator on a Hilbert space $H$, with eigenvalues $\{\mu_n\}$. The **Fredholm determinant** of $I - \lambda T$ is defined as
+Let \(T\) be a compact, trace-class operator on a Hilbert space \(H\), with eigenvalues \(\{\mu_n\}\). The **Fredholm determinant** of \(I - \lambda T\) is defined as
 
-$$
+\[
 \det(I - \lambda T) := \prod_{n=1}^{\infty} (1 - \lambda \mu_n),
-$$
+\]
 
-where the product converges absolutely for sufficiently small $|\lambda|$, and analytically continues under suitable regularization.
+where the product converges absolutely for sufficiently small \(|\lambda|\), and analytically continues under suitable regularization.
 
 To handle operators with rapidly accumulating spectra (as in our case), we invoke the **zeta-regularized determinant**, defined by first forming the spectral zeta function:
 
-$$
+\[
 \zeta_T(s) := \sum_{\mu_n \ne 0} \mu_n^{-s},
-$$
+\]
 
-which converges for $\Re(s)$ sufficiently large. When $\zeta_T(s)$ extends analytically to $s = 0$, the determinant is defined via
+which converges for \(\Re(s)\) sufficiently large. When \(\zeta_T(s)\) extends analytically to \(s = 0\), the determinant is defined via
 
-$$
+\[
 \det\nolimits_{\zeta}(T) := \exp\left( -\frac{d}{ds} \zeta_T(s)\Big|_{s=0} \right).
-$$
+\]
 
-In our case, the operator $L_{\mathrm{sym}}$ is self-adjoint and trace-class. We consider the determinant
+In our case, the operator \(L_{\mathrm{sym}}\) is self-adjoint and trace-class. We consider the determinant
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}),
-$$
+\]
 
-defined via spectral zeta regularization or heat kernel techniques, and show that this function of $\lambda \in \mathbb{C}$ recovers the normalized completed zeta function:
+defined via spectral zeta regularization or heat kernel techniques, and show that this function of \(\lambda \in \mathbb{C}\) recovers the normalized completed zeta function:
 
-$$
+\[
 \frac{\Xi\left( \tfrac{1}{2} + i \lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
-$$
+\]
 
-This identity—established in Theorem 3.24—is the crux of the proof, as it demonstrates that the zeros of $\zeta(s)$ are spectrally encoded in $L_{\mathrm{sym}}$.
+This identity—established in Theorem 3.24—is the crux of the proof, as it demonstrates that the zeros of \(\zeta(s)\) are spectrally encoded in \(L_{\mathrm{sym}}\).
 
 #### **7.2 Example: From Finite Determinants to the Infinite Case**
 
-Consider a $3 \times 3$ matrix with eigenvalues $\mu_1, \mu_2, \mu_3$. The determinant $\det(I - \lambda A)$ is a degree-3 polynomial:
+Consider a \(3 \times 3\) matrix with eigenvalues \(\mu_1, \mu_2, \mu_3\). The determinant \(\det(I - \lambda A)\) is a degree-3 polynomial:
 
-$$
+\[
 \det(I - \lambda A) = (1 - \lambda \mu_1)(1 - \lambda \mu_2)(1 - \lambda \mu_3),
-$$
+\]
 
-with zeros at $\lambda = \mu_j^{-1}$. This function serves as a compact spectral signature of $A$.
+with zeros at \(\lambda = \mu_j^{-1}\). This function serves as a compact spectral signature of \(A\).
 
-Now imagine a trace-class operator $T$ with infinitely many eigenvalues $\{\mu_n\}$ tending to zero. The formal product $\prod_n (1 - \lambda \mu_n)$ diverges unless regularized. One regularization approach is to consider the heat trace:
+Now imagine a trace-class operator \(T\) with infinitely many eigenvalues \(\{\mu_n\}\) tending to zero. The formal product \(\prod_n (1 - \lambda \mu_n)\) diverges unless regularized. One regularization approach is to consider the heat trace:
 
-$$
+\[
 \operatorname{Tr}(e^{-t T}) = \sum_n e^{-t \mu_n},
-$$
+\]
 
-which converges for $t > 0$, and to define the determinant via
+which converges for \(t > 0\), and to define the determinant via
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda T) = \exp\left( -\sum_{n} \sum_{k=1}^{\infty} \frac{(\lambda \mu_n)^k}{k} \right) = \exp\left( -\sum_{k=1}^{\infty} \frac{\lambda^k}{k} \operatorname{Tr}(T^k) \right).
-$$
+\]
 
-In the case of $L_{\mathrm{sym}}$, we use the family of mollified operators $\{L_t\}$ to define
+In the case of \(L_{\mathrm{sym}}\), we use the family of mollified operators \(\{L_t\}\) to define
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) := \lim_{t \to 0} \det(I - \lambda L_t),
-$$
+\]
 
-where each $L_t$ is bounded and trace-class, and the limit exists in the appropriate topology. This definition is made rigorous via the convergence of kernel integrals and trace formulas.
+where each \(L_t\) is bounded and trace-class, and the limit exists in the appropriate topology. This definition is made rigorous via the convergence of kernel integrals and trace formulas.
 
-Remarkably, the resulting determinant is entire in $\lambda$, of exponential type $\pi$, and its zero set corresponds exactly to the imaginary parts of the nontrivial zeros of $\zeta(s)$.
+Remarkably, the resulting determinant is entire in \(\lambda\), of exponential type \(\pi\), and its zero set corresponds exactly to the imaginary parts of the nontrivial zeros of \(\zeta(s)\).
 
 #### **7.3 Implication: Spectral Fingerprint of the Zeta Function**
 
-This determinant identity has profound implications. It shows that the completed Riemann zeta function $\Xi(s)$, when written as $\Xi\left( \tfrac{1}{2} + i \lambda \right)$, is the spectral fingerprint of the operator $L_{\mathrm{sym}}$. That is,
+This determinant identity has profound implications. It shows that the completed Riemann zeta function \(\Xi(s)\), when written as \(\Xi\left( \tfrac{1}{2} + i \lambda \right)\), is the spectral fingerprint of the operator \(L_{\mathrm{sym}}\). That is,
 
-$$
+\[
 \Xi\left( \tfrac{1}{2} + i \lambda \right) = \Xi\left( \tfrac{1}{2} \right) \cdot \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}).
-$$
+\]
 
 This identity transforms the study of zeta zeros into the study of operator eigenvalues. It allows us to define the zeros as the vanishing points of a determinant, linking the zero distribution to the spectrum of a self-adjoint, compact operator.
 
 In particular:
 
 * **Each zeta zero becomes an eigenvalue.**
-  If $\Xi(\tfrac{1}{2} + i\lambda) = 0$, then $\lambda$ is a zero of the determinant, and thus $\lambda^{-1}$ is an eigenvalue of $L_{\mathrm{sym}}$.
+  If \(\Xi(\tfrac{1}{2} + i\lambda) = 0\), then \(\lambda\) is a zero of the determinant, and thus \(\lambda^{-1}\) is an eigenvalue of \(L_{\mathrm{sym}}\).
 
 * **Spectral symmetry reflects functional symmetry.**
-  The symmetry $\Xi(s) = \Xi(1 - s)$ translates into symmetry of the spectrum about zero (if $\mu$ is an eigenvalue, so is $-\mu$).
+  The symmetry \(\Xi(s) = \Xi(1 - s)\) translates into symmetry of the spectrum about zero (if \(\mu\) is an eigenvalue, so is \(-\mu\)).
 
 * **Multiplicity is preserved.**
-  The order of vanishing of $\Xi(s)$ at a zero corresponds to the multiplicity of the eigenvalue in the spectrum of $L_{\mathrm{sym}}$.
+  The order of vanishing of \(\Xi(s)\) at a zero corresponds to the multiplicity of the eigenvalue in the spectrum of \(L_{\mathrm{sym}}\).
 
-The entire analytic content of $\Xi(s)$ is thus reproduced in the determinant of $L_{\mathrm{sym}}$, completing a central goal of the spectral reformulation. In the next chapter, we explore how this determinant identity yields a precise spectral correspondence between the zeta zeros and the operator’s eigenvalues.
+The entire analytic content of \(\Xi(s)\) is thus reproduced in the determinant of \(L_{\mathrm{sym}}\), completing a central goal of the spectral reformulation. In the next chapter, we explore how this determinant identity yields a precise spectral correspondence between the zeta zeros and the operator’s eigenvalues.
 
 ### **8. Spectral Encodings: What the Eigenvalues Know**
 
 #### **8.1 How Spectrum Encodes Zeros**
 
-Having established that the zeta-regularized determinant of the operator $L_{\mathrm{sym}}$ recovers the completed Riemann zeta function $\Xi(s)$ via the identity
+Having established that the zeta-regularized determinant of the operator \(L_{\mathrm{sym}}\) recovers the completed Riemann zeta function \(\Xi(s)\) via the identity
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
-$$
+\]
 
 we now interpret this analytically and spectrally.
 
-This identity implies that the nontrivial zeros $\rho$ of $\zeta(s)$ correspond precisely to the zeros of the determinant function, i.e., to those $\lambda \in \mathbb{C}$ for which $\Xi\left( \tfrac{1}{2} + i\lambda \right) = 0$. These in turn correspond to eigenvalues $\mu$ of $L_{\mathrm{sym}}$ via the mapping:
+This identity implies that the nontrivial zeros \(\rho\) of \(\zeta(s)\) correspond precisely to the zeros of the determinant function, i.e., to those \(\lambda \in \mathbb{C}\) for which \(\Xi\left( \tfrac{1}{2} + i\lambda \right) = 0\). These in turn correspond to eigenvalues \(\mu\) of \(L_{\mathrm{sym}}\) via the mapping:
 
-$$
+\[
 \rho = \tfrac{1}{2} + i\mu \quad \Longleftrightarrow \quad \mu = \tfrac{1}{i}(\rho - \tfrac{1}{2}).
-$$
+\]
 
-The operator $L_{\mathrm{sym}}$, being compact and self-adjoint, has a discrete spectrum:
+The operator \(L_{\mathrm{sym}}\), being compact and self-adjoint, has a discrete spectrum:
 
-$$
+\[
 \Spec(L_{\mathrm{sym}}) = \{\mu_n\}_{n \in \mathbb{Z}\setminus\{0\}},
-$$
+\]
 
-with finite multiplicities and accumulation only at 0. From the determinant identity, the set $\{\mu_n\}$ matches exactly the imaginary parts of the nontrivial zeros of $\zeta(s)$, shifted and rescaled. Each nontrivial zero of $\zeta$ yields a spectral eigenvalue, and each nonzero eigenvalue of $L_{\mathrm{sym}}$ corresponds to a unique zero of $\zeta$.
+with finite multiplicities and accumulation only at 0. From the determinant identity, the set \(\{\mu_n\}\) matches exactly the imaginary parts of the nontrivial zeros of \(\zeta(s)\), shifted and rescaled. Each nontrivial zero of \(\zeta\) yields a spectral eigenvalue, and each nonzero eigenvalue of \(L_{\mathrm{sym}}\) corresponds to a unique zero of \(\zeta\).
 
 This correspondence is **canonical**:
 
@@ -519,90 +519,90 @@ Thus, the determinant identity is not just an encoding—it is a spectral realiz
 
 To build intuition, consider a physical system like a vibrating string, a wind instrument, or a resonant cavity. The system's natural frequencies are encoded in its **spectrum**: the set of eigenvalues of its governing differential operator (such as the Laplacian). When the system is excited, these frequencies manifest as audible tones—its harmonic content.
 
-In the same spirit, the operator $L_{\mathrm{sym}}$ is like a theoretical instrument, and its spectrum captures the “notes” of a number-theoretic system. Its eigenvalues correspond, up to normalization, to the nontrivial zeros of $\zeta(s)$. The determinant plays the role of a resonant signal: it vanishes exactly when one of these frequencies is reached.
+In the same spirit, the operator \(L_{\mathrm{sym}}\) is like a theoretical instrument, and its spectrum captures the “notes” of a number-theoretic system. Its eigenvalues correspond, up to normalization, to the nontrivial zeros of \(\zeta(s)\). The determinant plays the role of a resonant signal: it vanishes exactly when one of these frequencies is reached.
 
-The analogy becomes more precise in the Fourier domain: just as the Fourier transform decomposes a signal into frequencies, the inverse Fourier transform of $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$ yields a convolution kernel whose spectral content reproduces the zeros. The operator $L_{\mathrm{sym}}$, acting on $H_{\Psi_\alpha}$, filters functions in accordance with this spectral signature.
+The analogy becomes more precise in the Fourier domain: just as the Fourier transform decomposes a signal into frequencies, the inverse Fourier transform of \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\) yields a convolution kernel whose spectral content reproduces the zeros. The operator \(L_{\mathrm{sym}}\), acting on \(H_{\Psi_\alpha}\), filters functions in accordance with this spectral signature.
 
-Hence, analyzing the spectrum of $L_{\mathrm{sym}}$ is equivalent to listening for the “frequencies” of the Riemann zeta function. Each zero $\rho$ contributes a pure frequency $\mu = \tfrac{1}{i}(\rho - \tfrac{1}{2})$ to the harmonic profile of the operator.
+Hence, analyzing the spectrum of \(L_{\mathrm{sym}}\) is equivalent to listening for the “frequencies” of the Riemann zeta function. Each zero \(\rho\) contributes a pure frequency \(\mu = \tfrac{1}{i}(\rho - \tfrac{1}{2})\) to the harmonic profile of the operator.
 
 #### **8.3 Implication: Every Zero is Spectral, and Vice Versa**
 
 The mapping between zeta zeros and operator spectrum is not approximate or heuristic—it is exact. This has several implications:
 
 * **Bidirectional Equivalence:**
-  Every nontrivial zero $\rho$ corresponds to an eigenvalue $\mu_\rho$ of $L_{\mathrm{sym}}$, and every nonzero eigenvalue arises from such a zero. This bidirectionality is formalized in the bijective correspondence proven later in Theorem 4.10.
+  Every nontrivial zero \(\rho\) corresponds to an eigenvalue \(\mu_\rho\) of \(L_{\mathrm{sym}}\), and every nonzero eigenvalue arises from such a zero. This bidirectionality is formalized in the bijective correspondence proven later in Theorem 4.10.
 
 * **Multiplicity Matching:**
-  If $\zeta(s)$ has a zero at $\rho$ of order $m$, then $\mu_\rho$ is an eigenvalue of $L_{\mathrm{sym}}$ of algebraic multiplicity $m$. This follows from the Hadamard product structure of $\Xi(s)$ and its identification with the determinant.
+  If \(\zeta(s)\) has a zero at \(\rho\) of order \(m\), then \(\mu_\rho\) is an eigenvalue of \(L_{\mathrm{sym}}\) of algebraic multiplicity \(m\). This follows from the Hadamard product structure of \(\Xi(s)\) and its identification with the determinant.
 
 * **Spectral Symmetry:**
-  The symmetry $\Xi(s) = \Xi(1 - s)$ implies that the spectrum of $L_{\mathrm{sym}}$ is symmetric about zero. If $\mu \in \Spec(L_{\mathrm{sym}})$, then $-\mu$ is also an eigenvalue. This reflects the functional symmetry of ζ under the transformation $s \mapsto 1 - s$.
+  The symmetry \(\Xi(s) = \Xi(1 - s)\) implies that the spectrum of \(L_{\mathrm{sym}}\) is symmetric about zero. If \(\mu \in \Spec(L_{\mathrm{sym}})\), then \(-\mu\) is also an eigenvalue. This reflects the functional symmetry of ζ under the transformation \(s \mapsto 1 - s\).
 
-Therefore, the Riemann zeta function does not merely inform the operator—it is entirely reconstructed from its spectral data. This deep spectral equivalence reinterprets RH as a claim about the reality of eigenvalues of $L_{\mathrm{sym}}$. If all eigenvalues are real, then all nontrivial zeros lie on the critical line, and RH holds.
+Therefore, the Riemann zeta function does not merely inform the operator—it is entirely reconstructed from its spectral data. This deep spectral equivalence reinterprets RH as a claim about the reality of eigenvalues of \(L_{\mathrm{sym}}\). If all eigenvalues are real, then all nontrivial zeros lie on the critical line, and RH holds.
 
-The following chapter rigorously establishes the bijection and multiplicity-preserving nature of this spectral map. This will set the stage for concluding that RH is logically equivalent to the spectral reality of $L_{\mathrm{sym}}$.
+The following chapter rigorously establishes the bijection and multiplicity-preserving nature of this spectral map. This will set the stage for concluding that RH is logically equivalent to the spectral reality of \(L_{\mathrm{sym}}\).
 
 ### **9. Self-Adjointness and the Spectral Test**
 
 #### **9.1 Why Self-Adjointness Matters**
 
-In the spectral theory of linear operators on Hilbert spaces, **self-adjointness** plays a central and structurally decisive role. If an operator $T$ is self-adjoint—that is,
+In the spectral theory of linear operators on Hilbert spaces, **self-adjointness** plays a central and structurally decisive role. If an operator \(T\) is self-adjoint—that is,
 
-$$
+\[
 \langle Tf, g \rangle = \langle f, Tg \rangle \quad \text{for all } f, g \in \operatorname{Dom}(T),
-$$
+\]
 
-and $\operatorname{Dom}(T) = \operatorname{Dom}(T^*)$—then it enjoys the full strength of the spectral theorem: its spectrum lies on the real line, it is unitarily diagonalizable, and it admits a complete orthonormal basis of eigenfunctions in the compact case.
+and \(\operatorname{Dom}(T) = \operatorname{Dom}(T^*)\)—then it enjoys the full strength of the spectral theorem: its spectrum lies on the real line, it is unitarily diagonalizable, and it admits a complete orthonormal basis of eigenfunctions in the compact case.
 
-These properties are foundational in quantum mechanics, where observables are modeled as self-adjoint operators to guarantee real measurement outcomes. Similarly, in our setting, the canonical operator $L_{\mathrm{sym}}$ is constructed to be self-adjoint. This is not a mere aesthetic choice; it is necessary to deduce the Riemann Hypothesis from spectral data.
+These properties are foundational in quantum mechanics, where observables are modeled as self-adjoint operators to guarantee real measurement outcomes. Similarly, in our setting, the canonical operator \(L_{\mathrm{sym}}\) is constructed to be self-adjoint. This is not a mere aesthetic choice; it is necessary to deduce the Riemann Hypothesis from spectral data.
 
 The logical implication is:
 
-$$
+\[
 L_{\mathrm{sym}} \text{ self-adjoint } \implies \Spec(L_{\mathrm{sym}}) \subset \mathbb{R}.
-$$
+\]
 
-By the determinant identity and spectral encoding of the previous chapters, each eigenvalue $\mu$ of $L_{\mathrm{sym}}$ corresponds to a nontrivial zero $\rho = \tfrac{1}{2} + i\mu$ of $\zeta(s)$. Therefore, the **reality of $\mu$** is equivalent to the **location of $\rho$** on the critical line.
+By the determinant identity and spectral encoding of the previous chapters, each eigenvalue \(\mu\) of \(L_{\mathrm{sym}}\) corresponds to a nontrivial zero \(\rho = \tfrac{1}{2} + i\mu\) of \(\zeta(s)\). Therefore, the **reality of \(\mu\)** is equivalent to the **location of \(\rho\)** on the critical line.
 
-Thus, proving that $L_{\mathrm{sym}}$ is self-adjoint on its natural domain, and that its spectrum lies on $\mathbb{R}$, suffices to prove the Riemann Hypothesis.
+Thus, proving that \(L_{\mathrm{sym}}\) is self-adjoint on its natural domain, and that its spectrum lies on \(\mathbb{R}\), suffices to prove the Riemann Hypothesis.
 
 #### **9.2 Example: Diagonalizing a Real Symmetric Matrix**
 
-In finite-dimensional linear algebra, a real symmetric matrix $A \in \mathbb{R}^{n \times n}$ is always diagonalizable with real eigenvalues. There exists an orthogonal matrix $U \in \mathbb{R}^{n \times n}$ such that
+In finite-dimensional linear algebra, a real symmetric matrix \(A \in \mathbb{R}^{n \times n}\) is always diagonalizable with real eigenvalues. There exists an orthogonal matrix \(U \in \mathbb{R}^{n \times n}\) such that
 
-$$
+\[
 U^T A U = \operatorname{diag}(\lambda_1, \ldots, \lambda_n),
-$$
+\]
 
-with $\lambda_j \in \mathbb{R}$. The matrix $A$ acts on $\mathbb{R}^n$ as a self-adjoint operator under the standard Euclidean inner product.
+with \(\lambda_j \in \mathbb{R}\). The matrix \(A\) acts on \(\mathbb{R}^n\) as a self-adjoint operator under the standard Euclidean inner product.
 
 This finite-dimensional picture extends to Hilbert spaces: a bounded, self-adjoint operator on a separable Hilbert space admits a spectral resolution:
 
-$$
+\[
 T = \int_{\sigma(T)} \lambda\, dE(\lambda),
-$$
+\]
 
-where $\{E(\lambda)\}$ is a projection-valued spectral measure supported on the real spectrum $\sigma(T)$.
+where \(\{E(\lambda)\}\) is a projection-valued spectral measure supported on the real spectrum \(\sigma(T)\).
 
-In our case, the operator $L_{\mathrm{sym}}$ is unbounded, but self-adjoint on a dense domain in the weighted space $H_{\Psi_\alpha}$. Its spectral resolution and functional calculus follow analogously, and by the spectral theorem, its spectrum must be real. Hence, every eigenvalue $\mu \in \Spec(L_{\mathrm{sym}})$ is a real number, and the corresponding zero $\rho = \tfrac{1}{2} + i\mu$ of ζ must lie on the critical line.
+In our case, the operator \(L_{\mathrm{sym}}\) is unbounded, but self-adjoint on a dense domain in the weighted space \(H_{\Psi_\alpha}\). Its spectral resolution and functional calculus follow analogously, and by the spectral theorem, its spectrum must be real. Hence, every eigenvalue \(\mu \in \Spec(L_{\mathrm{sym}})\) is a real number, and the corresponding zero \(\rho = \tfrac{1}{2} + i\mu\) of ζ must lie on the critical line.
 
 #### **9.3 Implication: RH ⇔ Real Spectrum**
 
 The operator-theoretic construction and determinant identity together yield the following chain of equivalences:
 
-* $\rho \in \mathbb{C}$ is a nontrivial zero of ζ ⇔ $\mu = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\mathrm{sym}})$,
-* $L_{\mathrm{sym}}$ is self-adjoint ⇒ all $\mu \in \mathbb{R}$,
-* Therefore, all $\rho = \tfrac{1}{2} + i\mu$ lie on the line $\Re(\rho) = \tfrac{1}{2}$.
+* \(\rho \in \mathbb{C}\) is a nontrivial zero of ζ ⇔ \(\mu = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(L_{\mathrm{sym}})\),
+* \(L_{\mathrm{sym}}\) is self-adjoint ⇒ all \(\mu \in \mathbb{R}\),
+* Therefore, all \(\rho = \tfrac{1}{2} + i\mu\) lie on the line \(\Re(\rho) = \tfrac{1}{2}\).
 
 Hence,
 
-$$
+\[
 \boxed{
   \text{Riemann Hypothesis is true } \iff \Spec(L_{\mathrm{sym}}) \subset \mathbb{R}.
 }
-$$
+\]
 
-This is the **spectral reformulation** of the Riemann Hypothesis. It rests on the self-adjointness of the operator $L_{\mathrm{sym}}$ and the analytic identification of its determinant with $\Xi(s)$. Conversely, if RH were false, there would exist a zero $\rho$ off the critical line, and hence a complex eigenvalue $\mu \notin \mathbb{R}$, contradicting self-adjointness.
+This is the **spectral reformulation** of the Riemann Hypothesis. It rests on the self-adjointness of the operator \(L_{\mathrm{sym}}\) and the analytic identification of its determinant with \(\Xi(s)\). Conversely, if RH were false, there would exist a zero \(\rho\) off the critical line, and hence a complex eigenvalue \(\mu \notin \mathbb{R}\), contradicting self-adjointness.
 
 Therefore, the operator-theoretic framework transforms RH into a statement about the geometry of the spectrum of a canonical, trace-class operator. The next step is to analyze the analytic behavior of the operator’s spectrum further, especially through the lens of heat kernel asymptotics. This leads to a deeper understanding of the density and distribution of the eigenvalues, and further confirms the validity of the spectral approach.
 
@@ -610,67 +610,67 @@ Therefore, the operator-theoretic framework transforms RH into a statement about
 
 #### **10.1 What Is the Heat Kernel Trace?**
 
-The **heat kernel** associated with a (typically unbounded) self-adjoint operator $L$ provides a powerful window into the spectral properties of $L$. Defined via the operator exponential $e^{-tL^2}$, the heat semigroup acts as a smoothing operator, and its trace encapsulates information about the spectrum of $L$ in aggregate.
+The **heat kernel** associated with a (typically unbounded) self-adjoint operator \(L\) provides a powerful window into the spectral properties of \(L\). Defined via the operator exponential \(e^{-tL^2}\), the heat semigroup acts as a smoothing operator, and its trace encapsulates information about the spectrum of \(L\) in aggregate.
 
-For the operator $L_{\mathrm{sym}}$, we consider the trace of the heat kernel of its square:
+For the operator \(L_{\mathrm{sym}}\), we consider the trace of the heat kernel of its square:
 
-$$
+\[
 \operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) = \sum_{n} e^{-t \mu_n^2},
-$$
+\]
 
-where $\{ \mu_n \} \subset \mathbb{R}$ are the eigenvalues of $L_{\mathrm{sym}}$, and $t > 0$. This series converges absolutely because $L_{\mathrm{sym}}$ is compact and self-adjoint, so the eigenvalues accumulate only at zero and the exponential decay dominates the accumulation.
+where \(\{ \mu_n \} \subset \mathbb{R}\) are the eigenvalues of \(L_{\mathrm{sym}}\), and \(t > 0\). This series converges absolutely because \(L_{\mathrm{sym}}\) is compact and self-adjoint, so the eigenvalues accumulate only at zero and the exponential decay dominates the accumulation.
 
-The function $t \mapsto \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ is smooth and positive for all $t > 0$, and as $t \to 0^+$, it becomes increasingly sensitive to high-frequency eigenvalues (those with large $|\mu_n|$). The asymptotic behavior of the trace in the small-time limit thus reveals the growth rate and density of the spectrum—a cornerstone of spectral analysis.
+The function \(t \mapsto \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\) is smooth and positive for all \(t > 0\), and as \(t \to 0^+\), it becomes increasingly sensitive to high-frequency eigenvalues (those with large \(|\mu_n|\)). The asymptotic behavior of the trace in the small-time limit thus reveals the growth rate and density of the spectrum—a cornerstone of spectral analysis.
 
 In particular, we are interested in establishing the leading-order behavior:
 
-$$
+\[
 \operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) \quad \text{as } t \to 0^+.
-$$
+\]
 
-This **logarithmic correction** to the usual heat kernel expansion in one dimension reflects the subtle growth pattern of the Riemann zeros and aligns with the known zero-counting asymptotic $N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)$.
+This **logarithmic correction** to the usual heat kernel expansion in one dimension reflects the subtle growth pattern of the Riemann zeros and aligns with the known zero-counting asymptotic \(N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)\).
 
 #### **10.2 Example: Diffusion as Spectrum Analyzer**
 
-To understand the role of the heat kernel, consider a classical example: the Laplace operator $\Delta = -\frac{d^2}{dx^2}$ on a compact interval with Dirichlet boundary conditions. Its eigenvalues are $\mu_n = n\pi$, and the heat kernel trace becomes
+To understand the role of the heat kernel, consider a classical example: the Laplace operator \(\Delta = -\frac{d^2}{dx^2}\) on a compact interval with Dirichlet boundary conditions. Its eigenvalues are \(\mu_n = n\pi\), and the heat kernel trace becomes
 
-$$
+\[
 \operatorname{Tr}(e^{-t\Delta}) = \sum_{n=1}^{\infty} e^{-t n^2 \pi^2} \sim \frac{1}{2\sqrt{\pi t}} \quad \text{as } t \to 0^+.
-$$
+\]
 
-This $t^{-1/2}$ behavior corresponds to the one-dimensional geometry of the problem.
+This \(t^{-1/2}\) behavior corresponds to the one-dimensional geometry of the problem.
 
-Now, let’s translate this intuition to the operator $L_{\mathrm{sym}}$. Since its spectrum is dictated by the imaginary parts of the nontrivial zeros of ζ, and those zeros become increasingly dense with height, the spectrum of $L_{\mathrm{sym}}^2$ (given by $\mu_n^2$) grows accordingly. However, unlike the Laplacian on a compact domain, the spectrum of $L_{\mathrm{sym}}^2$ grows in a way that reflects the prime number theorem. This growth is not polynomial but logarithmic in density, leading to the atypical trace behavior:
+Now, let’s translate this intuition to the operator \(L_{\mathrm{sym}}\). Since its spectrum is dictated by the imaginary parts of the nontrivial zeros of ζ, and those zeros become increasingly dense with height, the spectrum of \(L_{\mathrm{sym}}^2\) (given by \(\mu_n^2\)) grows accordingly. However, unlike the Laplacian on a compact domain, the spectrum of \(L_{\mathrm{sym}}^2\) grows in a way that reflects the prime number theorem. This growth is not polynomial but logarithmic in density, leading to the atypical trace behavior:
 
-$$
+\[
 \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right).
-$$
+\]
 
-Thus, the **diffusion** modeled by $e^{-t L_{\mathrm{sym}}^2}$ functions as a spectral analyzer that reveals the logarithmic structure of the zeros through its small-time singularity.
+Thus, the **diffusion** modeled by \(e^{-t L_{\mathrm{sym}}^2}\) functions as a spectral analyzer that reveals the logarithmic structure of the zeros through its small-time singularity.
 
 #### **10.3 Implication: Counting Zeros Indirectly**
 
-The relevance of the heat kernel trace becomes particularly clear when combined with **Tauberian theorems**, which relate asymptotic behavior of Laplace transforms to growth rates of their underlying distributions. In our case, the trace of $e^{-t L_{\mathrm{sym}}^2}$ is essentially the Laplace transform of the eigenvalue counting measure of $L_{\mathrm{sym}}^2$.
+The relevance of the heat kernel trace becomes particularly clear when combined with **Tauberian theorems**, which relate asymptotic behavior of Laplace transforms to growth rates of their underlying distributions. In our case, the trace of \(e^{-t L_{\mathrm{sym}}^2}\) is essentially the Laplace transform of the eigenvalue counting measure of \(L_{\mathrm{sym}}^2\).
 
 If we define the counting function
 
-$$
+\[
 N(T) := \#\left\{ \mu_n : |\mu_n| \le T \right\},
-$$
+\]
 
-then under appropriate regularity and variation conditions, the small-time expansion of the heat trace determines the growth of $N(T)$ as $T \to \infty$. The singular behavior
+then under appropriate regularity and variation conditions, the small-time expansion of the heat trace determines the growth of \(N(T)\) as \(T \to \infty\). The singular behavior
 
-$$
+\[
 \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right)
-$$
+\]
 
 is inverted to yield
 
-$$
+\[
 N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right),
-$$
+\]
 
-which matches the classical Riemann–von Mangoldt zero-counting formula. This inversion, rigorously justified in Chapter 7 via Korevaar’s Tauberian theorem, provides yet another validation of the spectral equivalence: the spectrum of $L_{\mathrm{sym}}$ grows at precisely the rate dictated by the zeta zeros.
+which matches the classical Riemann–von Mangoldt zero-counting formula. This inversion, rigorously justified in Chapter 7 via Korevaar’s Tauberian theorem, provides yet another validation of the spectral equivalence: the spectrum of \(L_{\mathrm{sym}}\) grows at precisely the rate dictated by the zeta zeros.
 
 In summary, the heat kernel trace serves both as a diagnostic and a confirming analytic invariant. Its behavior encodes the global distribution of the spectrum, and thereby of the nontrivial zeros of ζ. This analytic bridge, together with the determinant identity and spectral mapping, completes the circle connecting analysis, number theory, and operator theory.
 
@@ -682,19 +682,19 @@ In classical analysis, a **Tauberian theorem** provides a bridge between the beh
 
 In our context, Tauberian theorems allow us to recover information about the **distribution of eigenvalues**—and hence about the zeta zeros—from the **short-time asymptotics of the heat trace**:
 
-$$
+\[
 \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) \quad \text{as } t \to 0^+.
-$$
+\]
 
-This expansion suggests that the number of eigenvalues $\mu$ of $L_{\mathrm{sym}}$ satisfying $|\mu| \le T$ grows like $T \log T$. Formally, we define the eigenvalue counting function
+This expansion suggests that the number of eigenvalues \(\mu\) of \(L_{\mathrm{sym}}\) satisfying \(|\mu| \le T\) grows like \(T \log T\). Formally, we define the eigenvalue counting function
 
-$$
+\[
 N(T) := \#\left\{ \mu_n \in \operatorname{Spec}(L_{\mathrm{sym}}) : |\mu_n| \le T \right\},
-$$
+\]
 
-and seek to determine its asymptotic behavior as $T \to \infty$.
+and seek to determine its asymptotic behavior as \(T \to \infty\).
 
-The connection between $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ and $N(T)$ is established via Laplace transform methods: the heat trace is the Laplace transform of the spectral counting measure, and a Tauberian theorem allows us to invert this relation. In particular, we will use a version due to Korevaar, adapted to functions with logarithmic singularities, to extract the desired asymptotic form of $N(T)$.
+The connection between \(\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\) and \(N(T)\) is established via Laplace transform methods: the heat trace is the Laplace transform of the spectral counting measure, and a Tauberian theorem allows us to invert this relation. In particular, we will use a version due to Korevaar, adapted to functions with logarithmic singularities, to extract the desired asymptotic form of \(N(T)\).
 
 #### **11.2 Example: Edge-of-Sight Radar**
 
@@ -703,34 +703,34 @@ A useful analogy is to think of a radar system scanning a distant landscape. The
 In this analogy:
 
 * The **heat trace** corresponds to the received radar signal.
-* The **small-$t$** expansion plays the role of detecting sharp returns from high-density regions (i.e., clusters of high eigenvalues).
+* The **small-\(t\)** expansion plays the role of detecting sharp returns from high-density regions (i.e., clusters of high eigenvalues).
 * The **Tauberian theorem** provides the calibration: it converts the nature of the return signal into concrete estimates about the number and spacing of spectral values.
 
-The precise shape of the radar return—such as the logarithmic divergence in $\frac{1}{\sqrt{t}} \log(1/t)$—tells us that the spectrum grows faster than in a one-dimensional Laplacian (which yields $\sim 1/\sqrt{t}$), but slower than in higher-dimensional settings where more severe singularities would arise.
+The precise shape of the radar return—such as the logarithmic divergence in \(\frac{1}{\sqrt{t}} \log(1/t)\)—tells us that the spectrum grows faster than in a one-dimensional Laplacian (which yields \(\sim 1/\sqrt{t}\)), but slower than in higher-dimensional settings where more severe singularities would arise.
 
 #### **11.3 Implication: Asymptotic Zero Counting from Heat Flow**
 
 Applying the Tauberian machinery to our case yields the main asymptotic:
 
-$$
+\[
 N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) \quad \text{as } T \to \infty.
-$$
+\]
 
-This is precisely the classical Riemann–von Mangoldt formula for counting the number of nontrivial zeros of $\zeta(s)$ up to imaginary part $T$:
+This is precisely the classical Riemann–von Mangoldt formula for counting the number of nontrivial zeros of \(\zeta(s)\) up to imaginary part \(T\):
 
-$$
+\[
 N_\zeta(T) := \#\left\{ \rho : \zeta(\rho) = 0,\ 0 < \Im(\rho) \le T \right\} \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + \mathcal{O}(\log T).
-$$
+\]
 
-While our analysis does not recover the lower-order term $-\frac{T}{2\pi}$, it matches the leading asymptotic. This confirms that the spectrum of $L_{\mathrm{sym}}$ encodes the same zero distribution as $\zeta(s)$, not just locally but in its global growth behavior.
+While our analysis does not recover the lower-order term \(-\frac{T}{2\pi}\), it matches the leading asymptotic. This confirms that the spectrum of \(L_{\mathrm{sym}}\) encodes the same zero distribution as \(\zeta(s)\), not just locally but in its global growth behavior.
 
 Therefore:
 
-* The heat trace asymptotic confirms the **spectral validity** of the operator $L_{\mathrm{sym}}$.
+* The heat trace asymptotic confirms the **spectral validity** of the operator \(L_{\mathrm{sym}}\).
 * The use of Tauberian theory ensures that this match is not heuristic but mathematically rigorous.
 * The operator not only reproduces the zeta zeros through its determinant, but also reflects their **density**, **distribution**, and **multiplicity**.
 
-This result further affirms the canonical nature of $L_{\mathrm{sym}}$ and completes the analytic circle: starting from the zeta function, we constructed an operator whose spectrum reproduces its zeros. Then, from the operator’s heat trace, we recover the asymptotic behavior of the zeros again—this time, purely through operator-theoretic and analytic means.
+This result further affirms the canonical nature of \(L_{\mathrm{sym}}\) and completes the analytic circle: starting from the zeta function, we constructed an operator whose spectrum reproduces its zeros. Then, from the operator’s heat trace, we recover the asymptotic behavior of the zeros again—this time, purely through operator-theoretic and analytic means.
 
 ### **12. Why It’s Canonical: Uniqueness and Rigidity**
 
@@ -738,15 +738,15 @@ This result further affirms the canonical nature of $L_{\mathrm{sym}}$ and compl
 
 The concept of **spectral rigidity** refers to the uniqueness of an operator determined by its spectral data. In other words, if an operator's determinant encodes the zeros of a particular entire function (such as the Riemann zeta function), and that function has a known Hadamard product structure and analytic type, then the operator is essentially unique up to unitary equivalence.
 
-In our case, the operator $L_{\mathrm{sym}}$ satisfies the determinant identity:
+In our case, the operator \(L_{\mathrm{sym}}\) satisfies the determinant identity:
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
-$$
+\]
 
-The function on the right-hand side is an entire function of order 1 and exponential type $\pi$, uniquely determined by its zeros (which are the nontrivial zeros of $\zeta(s)$) and normalization. This implies that the spectrum of $L_{\mathrm{sym}}$ (excluding 0) determines $\Xi(s)$, and hence the zeta function itself, completely.
+The function on the right-hand side is an entire function of order 1 and exponential type \(\pi\), uniquely determined by its zeros (which are the nontrivial zeros of \(\zeta(s)\)) and normalization. This implies that the spectrum of \(L_{\mathrm{sym}}\) (excluding 0) determines \(\Xi(s)\), and hence the zeta function itself, completely.
 
-This rigidity is a strong statement: it asserts that not only does $L_{\mathrm{sym}}$ encode ζ's zeros, but that it is the only operator that does so in a fully consistent, determinant-respecting way. No other operator—not even a perturbed version of $L_{\mathrm{sym}}$—can share its determinant unless it shares its entire spectrum and multiplicity data, and thus coincides with $L_{\mathrm{sym}}$ up to unitary equivalence.
+This rigidity is a strong statement: it asserts that not only does \(L_{\mathrm{sym}}\) encode ζ's zeros, but that it is the only operator that does so in a fully consistent, determinant-respecting way. No other operator—not even a perturbed version of \(L_{\mathrm{sym}}\)—can share its determinant unless it shares its entire spectrum and multiplicity data, and thus coincides with \(L_{\mathrm{sym}}\) up to unitary equivalence.
 
 #### **12.2 Example: Cryptographic Hash Analogy**
 
@@ -754,11 +754,11 @@ As a heuristic analogy, consider a cryptographic hash function. Given some struc
 
 In our setting, the determinant
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}})
-$$
+\]
 
-acts as a kind of analytic hash function of the operator $L_{\mathrm{sym}}$. The input is the operator (specifically, its spectrum), and the output is an entire function with prescribed zeros. The Hadamard product structure of $\Xi(s)$ ensures that if any other operator had the same determinant, it must have exactly the same eigenvalues (up to multiplicities). But by spectral theory for trace-class operators, the eigenvalues determine the operator up to unitary conjugation.
+acts as a kind of analytic hash function of the operator \(L_{\mathrm{sym}}\). The input is the operator (specifically, its spectrum), and the output is an entire function with prescribed zeros. The Hadamard product structure of \(\Xi(s)\) ensures that if any other operator had the same determinant, it must have exactly the same eigenvalues (up to multiplicities). But by spectral theory for trace-class operators, the eigenvalues determine the operator up to unitary conjugation.
 
 Thus, the operator is *not just any* realization of the zeta zeros—it is the **canonical** one, uniquely identified by its spectral identity with ζ.
 
@@ -767,15 +767,15 @@ Thus, the operator is *not just any* realization of the zeta zeros—it is the *
 This spectral rigidity carries deep consequences for the structure of the proof and the integrity of the spectral reformulation of RH:
 
 * **No Ambiguity:**
-  There are not multiple, inequivalent operators whose spectra correspond to the zeta zeros and whose determinant is $\Xi(s)$. The operator $L_{\mathrm{sym}}$ is dictated completely by the spectral identity.
+  There are not multiple, inequivalent operators whose spectra correspond to the zeta zeros and whose determinant is \(\Xi(s)\). The operator \(L_{\mathrm{sym}}\) is dictated completely by the spectral identity.
 
 * **No Spurious Spectrum:**
-  There are no extraneous spectral values (e.g., "noise" eigenvalues) that can be inserted into the operator without invalidating the determinant identity. Any such modification would change the zero set of the determinant and thus break the match with $\Xi(s)$.
+  There are no extraneous spectral values (e.g., "noise" eigenvalues) that can be inserted into the operator without invalidating the determinant identity. Any such modification would change the zero set of the determinant and thus break the match with \(\Xi(s)\).
 
 * **Logical Closure of the Proof Framework:**
-  Because the construction of $L_{\mathrm{sym}}$ is canonical, and because its determinant equals the zeta function (up to normalization), we can interpret the Riemann Hypothesis as a structural property of this operator: all of its spectrum must be real.
+  Because the construction of \(L_{\mathrm{sym}}\) is canonical, and because its determinant equals the zeta function (up to normalization), we can interpret the Riemann Hypothesis as a structural property of this operator: all of its spectrum must be real.
 
-This rigidity is essential for elevating the reformulation of RH from a clever representation to a logically robust equivalence. It rules out the possibility that the determinant identity could hold accidentally for an operator with non-real spectrum. If a counterexample to RH existed, it would necessitate the existence of a complex eigenvalue of $L_{\mathrm{sym}}$, which would in turn violate either its self-adjointness or the determinant identity—both of which have been constructed and proven unconditionally.
+This rigidity is essential for elevating the reformulation of RH from a clever representation to a logically robust equivalence. It rules out the possibility that the determinant identity could hold accidentally for an operator with non-real spectrum. If a counterexample to RH existed, it would necessitate the existence of a complex eigenvalue of \(L_{\mathrm{sym}}\), which would in turn violate either its self-adjointness or the determinant identity—both of which have been constructed and proven unconditionally.
 
 Hence, once the operator is defined, the remainder of the proof becomes a matter of verifying its spectral properties. The uniqueness and rigidity of the construction ensure that we are not proving a property of a class of operators, but a precise fact about a uniquely defined mathematical object.
 
@@ -783,97 +783,97 @@ Hence, once the operator is defined, the remainder of the proof becomes a matter
 
 #### **13.1 What Are Automorphic L-Functions?**
 
-The Riemann zeta function $\zeta(s)$ is the simplest member of a vast family of complex functions known as **L-functions**. Among these, the class of **automorphic L-functions** occupies a central role in modern number theory, representation theory, and the Langlands program. These functions arise from automorphic representations on reductive algebraic groups over global fields and generalize classical objects such as Dirichlet L-functions and modular forms.
+The Riemann zeta function \(\zeta(s)\) is the simplest member of a vast family of complex functions known as **L-functions**. Among these, the class of **automorphic L-functions** occupies a central role in modern number theory, representation theory, and the Langlands program. These functions arise from automorphic representations on reductive algebraic groups over global fields and generalize classical objects such as Dirichlet L-functions and modular forms.
 
-Each automorphic L-function $L(s, \pi)$, where $\pi$ denotes an automorphic representation (e.g., of $\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})$), satisfies properties analogous to those of the Riemann zeta function:
+Each automorphic L-function \(L(s, \pi)\), where \(\pi\) denotes an automorphic representation (e.g., of \(\mathrm{GL}_n(\mathbb{A}_{\mathbb{Q}})\)), satisfies properties analogous to those of the Riemann zeta function:
 
 * An Euler product over primes encoding arithmetic information,
 * A meromorphic continuation (often entire),
-* A functional equation symmetric about a central point $s = \tfrac{1}{2}$,
+* A functional equation symmetric about a central point \(s = \tfrac{1}{2}\),
 * Conjectural zero distributions and symmetry.
 
-The **Generalized Riemann Hypothesis (GRH)** for automorphic L-functions asserts that their nontrivial zeros lie on the critical line $\Re(s) = \tfrac{1}{2}$. It is natural to ask whether the spectral approach developed for $\zeta(s)$ can be extended to $L(s, \pi)$.
+The **Generalized Riemann Hypothesis (GRH)** for automorphic L-functions asserts that their nontrivial zeros lie on the critical line \(\Re(s) = \tfrac{1}{2}\). It is natural to ask whether the spectral approach developed for \(\zeta(s)\) can be extended to \(L(s, \pi)\).
 
-In this section, we outline how the construction of a canonical operator $L_{\mathrm{sym}}(\pi)$, attached to $\Xi(s, \pi)$ (the completed L-function), might proceed. The goal is to replicate the determinant identity and spectral correspondence, leading to a spectral equivalence formulation of GRH.
+In this section, we outline how the construction of a canonical operator \(L_{\mathrm{sym}}(\pi)\), attached to \(\Xi(s, \pi)\) (the completed L-function), might proceed. The goal is to replicate the determinant identity and spectral correspondence, leading to a spectral equivalence formulation of GRH.
 
 #### **13.2 Example: Modular Forms as Input, L-Functions as Output**
 
-Consider a classical modular form $f \in S_k(\mathrm{SL}_2(\mathbb{Z}))$, a holomorphic cusp form of weight $k$. Such a function has a Fourier expansion
+Consider a classical modular form \(f \in S_k(\mathrm{SL}_2(\mathbb{Z}))\), a holomorphic cusp form of weight \(k\). Such a function has a Fourier expansion
 
-$$
+\[
 f(z) = \sum_{n=1}^\infty a_n e^{2\pi i n z},
-$$
+\]
 
 and the associated L-function is defined by
 
-$$
+\[
 L(s, f) = \sum_{n=1}^\infty \frac{a_n}{n^s},
-$$
+\]
 
-which admits analytic continuation and satisfies a functional equation relating $L(s, f)$ to $L(k - s, f)$. The completed L-function
+which admits analytic continuation and satisfies a functional equation relating \(L(s, f)\) to \(L(k - s, f)\). The completed L-function
 
-$$
+\[
 \Xi(s, f) := (2\pi)^{-s} \Gamma(s) L(s, f)
-$$
+\]
 
-is entire and of finite order, much like $\Xi(s)$ for the Riemann zeta function.
+is entire and of finite order, much like \(\Xi(s)\) for the Riemann zeta function.
 
-One expects to define a Fourier profile $\phi_\pi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda, \pi \right)$, and an inverse Fourier transform $k_\pi(x) := \phi_\pi^\vee(x)$. This kernel would then define a convolution operator
+One expects to define a Fourier profile \(\phi_\pi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda, \pi \right)\), and an inverse Fourier transform \(k_\pi(x) := \phi_\pi^\vee(x)\). This kernel would then define a convolution operator
 
-$$
+\[
 L_{\mathrm{sym}}(\pi) f(x) := \int_{\mathbb{R}} k_\pi(x - y) f(y)\,dy
-$$
+\]
 
-on an appropriate weighted Hilbert space $H_{\Psi_{\pi}}$. If the kernel satisfies appropriate decay properties (e.g., exponential decay faster than $e^{-\alpha |x|}$ for some $\alpha > \pi$), then $L_{\mathrm{sym}}(\pi)$ is trace-class, and we may consider its spectral determinant.
+on an appropriate weighted Hilbert space \(H_{\Psi_{\pi}}\). If the kernel satisfies appropriate decay properties (e.g., exponential decay faster than \(e^{-\alpha |x|}\) for some \(\alpha > \pi\)), then \(L_{\mathrm{sym}}(\pi)\) is trace-class, and we may consider its spectral determinant.
 
 The desired determinant identity would be:
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}(\pi)) = \frac{\Xi(\tfrac{1}{2} + i\lambda, \pi)}{\Xi(\tfrac{1}{2}, \pi)}.
-$$
+\]
 
 #### **13.3 Implication: Toward a Spectral Langlands Program**
 
-If such operators $L_{\mathrm{sym}}(\pi)$ can be rigorously defined for automorphic representations $\pi$, and if they satisfy determinant identities analogous to that of the Riemann zeta case, several remarkable consequences follow:
+If such operators \(L_{\mathrm{sym}}(\pi)\) can be rigorously defined for automorphic representations \(\pi\), and if they satisfy determinant identities analogous to that of the Riemann zeta case, several remarkable consequences follow:
 
 * **Spectral Realization of GRH:**
-  GRH for $L(s, \pi)$ becomes equivalent to the condition that the spectrum of $L_{\mathrm{sym}}(\pi)$ lies on the real axis. This restates GRH in spectral terms, generalizing the RH ↔ spectral reality equivalence.
+  GRH for \(L(s, \pi)\) becomes equivalent to the condition that the spectrum of \(L_{\mathrm{sym}}(\pi)\) lies on the real axis. This restates GRH in spectral terms, generalizing the RH ↔ spectral reality equivalence.
 
 * **Functoriality and Spectral Intertwining:**
-  The functoriality conjectures of the Langlands program predict relations between L-functions corresponding to different groups via group homomorphisms. These relations could manifest as operator-theoretic correspondences—e.g., spectral inclusions or intertwining operators between $L_{\mathrm{sym}}(\pi_1)$ and $L_{\mathrm{sym}}(\pi_2)$ when $\pi_2$ is a functorial lift of $\pi_1$.
+  The functoriality conjectures of the Langlands program predict relations between L-functions corresponding to different groups via group homomorphisms. These relations could manifest as operator-theoretic correspondences—e.g., spectral inclusions or intertwining operators between \(L_{\mathrm{sym}}(\pi_1)\) and \(L_{\mathrm{sym}}(\pi_2)\) when \(\pi_2\) is a functorial lift of \(\pi_1\).
 
 * **Spectral Categorification:**
   The entirety of the Langlands program, which relates automorphic representations, Galois representations, and L-functions, could be enriched through a spectral categorification in which these connections are mediated by operators on Hilbert spaces, their spectra, and determinant identities.
 
-While the full development of such a theory remains a long-term objective, the present construction offers a compelling template. The canonical operator $L_{\mathrm{sym}}$ for $\zeta(s)$ demonstrates that spectral determinants can encode deep arithmetic data. Extending this idea to general $\Xi(s, \pi)$ would yield a **spectral framework for automorphic L-functions**, and may illuminate the path to a full resolution of the Generalized Riemann Hypothesis.
+While the full development of such a theory remains a long-term objective, the present construction offers a compelling template. The canonical operator \(L_{\mathrm{sym}}\) for \(\zeta(s)\) demonstrates that spectral determinants can encode deep arithmetic data. Extending this idea to general \(\Xi(s, \pi)\) would yield a **spectral framework for automorphic L-functions**, and may illuminate the path to a full resolution of the Generalized Riemann Hypothesis.
 
 ### **14. What’s Left Unformalized (And What Isn’t)**
 
 #### **14.1 What Is Formalized So Far?**
 
-The spectral reformulation of the Riemann Hypothesis, as developed through the operator $L_{\mathrm{sym}}$, has been built with rigorous care using well-established tools from analysis, operator theory, and complex function theory. Many components of this framework are already formalizable in proof assistants such as Lean, Isabelle, or Coq, or fall directly within the capabilities of classical functional analysis.
+The spectral reformulation of the Riemann Hypothesis, as developed through the operator \(L_{\mathrm{sym}}\), has been built with rigorous care using well-established tools from analysis, operator theory, and complex function theory. Many components of this framework are already formalizable in proof assistants such as Lean, Isabelle, or Coq, or fall directly within the capabilities of classical functional analysis.
 
 The key ingredients that are fully formalized or formalizable include:
 
 * **Operator Construction and Function Spaces:**
-  The Hilbert space $H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)$ is defined precisely, and the convolution operator $L_{\mathrm{sym}}$, constructed from the inverse Fourier transform of $\Xi(1/2 + i\lambda)$, is rigorously defined as a limit of mollified operators. The convergence is in trace norm, with each approximant lying in the trace-class ideal.
+  The Hilbert space \(H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)\) is defined precisely, and the convolution operator \(L_{\mathrm{sym}}\), constructed from the inverse Fourier transform of \(\Xi(1/2 + i\lambda)\), is rigorously defined as a limit of mollified operators. The convergence is in trace norm, with each approximant lying in the trace-class ideal.
 
 * **Compactness, Trace-Class, and Self-Adjointness:**
-  The kernel $k(x)$ has compact support and decay properties sufficient to prove compactness and trace-class behavior of the operator. The operator is shown to be symmetric and essentially self-adjoint on a dense core, which justifies the use of the spectral theorem.
+  The kernel \(k(x)\) has compact support and decay properties sufficient to prove compactness and trace-class behavior of the operator. The operator is shown to be symmetric and essentially self-adjoint on a dense core, which justifies the use of the spectral theorem.
 
 * **Determinant Identity:**
-  The zeta-regularized determinant is defined via the heat trace or via the Hadamard product expansion, and its equality with $\Xi(1/2 + i\lambda)/\Xi(1/2)$ is proven using classical identities in spectral theory and the analytic structure of entire functions of exponential type.
+  The zeta-regularized determinant is defined via the heat trace or via the Hadamard product expansion, and its equality with \(\Xi(1/2 + i\lambda)/\Xi(1/2)\) is proven using classical identities in spectral theory and the analytic structure of entire functions of exponential type.
 
 * **Spectral Correspondence and Multiplicity Matching:**
-  The correspondence between eigenvalues of $L_{\mathrm{sym}}$ and nontrivial zeros of $\zeta(s)$ is made precise and is multiplicity-preserving. Lemmas and theorems regarding injection, surjection, and bijection of the spectral map rely only on basic spectral theory and known properties of $\Xi(s)$.
+  The correspondence between eigenvalues of \(L_{\mathrm{sym}}\) and nontrivial zeros of \(\zeta(s)\) is made precise and is multiplicity-preserving. Lemmas and theorems regarding injection, surjection, and bijection of the spectral map rely only on basic spectral theory and known properties of \(\Xi(s)\).
 
 * **Heat Kernel Asymptotics and Trace Estimates:**
-  The asymptotic expansion of $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ as $t \to 0$ is derived with care, including the leading-order logarithmic divergence term. These expansions use standard tools from analysis and can be expressed precisely using existing spectral and asymptotic techniques.
+  The asymptotic expansion of \(\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\) as \(t \to 0\) is derived with care, including the leading-order logarithmic divergence term. These expansions use standard tools from analysis and can be expressed precisely using existing spectral and asymptotic techniques.
 
 * **Tauberian Argument for Spectral Counting:**
   The application of Korevaar’s Tauberian theorem to recover the zero-counting function from the heat trace is methodical and based on existing theorems that can be referenced or, in principle, formalized.
 
-These elements form the core of the operator-theoretic approach to RH and constitute a logically closed and reproducible proof framework. The entire argument—from the definition of $L_{\mathrm{sym}}$ to the equivalence RH ⇔ real spectrum—is self-contained and supported by known mathematical theorems.
+These elements form the core of the operator-theoretic approach to RH and constitute a logically closed and reproducible proof framework. The entire argument—from the definition of \(L_{\mathrm{sym}}\) to the equivalence RH ⇔ real spectrum—is self-contained and supported by known mathematical theorems.
 
 #### **14.2 What Is Still a Black Box?**
 
@@ -888,7 +888,7 @@ Key areas that remain unformalized include:
   The definition and manipulation of zeta-regularized determinants—particularly analytic continuation of spectral zeta functions and their differentiability at zero—require delicate handling of infinite sums and complex analysis. While the ideas are classical (e.g., from Ray–Singer and Seeley), the full machinery is not yet implemented in proof assistants.
 
 * **Short-Time Heat Kernel Expansions:**
-  Deriving the precise asymptotic form $\frac{1}{\sqrt{t}} \log(1/t)$ requires tools from microlocal analysis and heat kernel theory beyond standard functional analysis. These expansions rely on estimates that may involve symbolic calculus or advanced distribution theory, which are only partially formalized.
+  Deriving the precise asymptotic form \(\frac{1}{\sqrt{t}} \log(1/t)\) requires tools from microlocal analysis and heat kernel theory beyond standard functional analysis. These expansions rely on estimates that may involve symbolic calculus or advanced distribution theory, which are only partially formalized.
 
 * **Hadamard Product Structure and Entire Function Theory:**
   While Hadamard’s theorem and the classification of entire functions of order one are well-known, the full infrastructure (including factorization types, exponential type bounds, and type-precision estimates) is not yet built into formal libraries. This affects the formal verification of the uniqueness of the determinant identity.
@@ -916,9 +916,9 @@ This enhances the robustness and trustworthiness of the spectral approach and su
 
 #### **15.1 Restating the Proof as a Chain of Equivalences**
 
-The operator-theoretic reformulation of the Riemann Hypothesis presented in this work proceeds as a logically closed sequence of well-defined constructions and equivalences. Each step follows from established analytic and spectral properties, culminating in a canonical operator $L_{\mathrm{sym}}$ whose spectrum encodes the nontrivial zeros of the Riemann zeta function.
+The operator-theoretic reformulation of the Riemann Hypothesis presented in this work proceeds as a logically closed sequence of well-defined constructions and equivalences. Each step follows from established analytic and spectral properties, culminating in a canonical operator \(L_{\mathrm{sym}}\) whose spectrum encodes the nontrivial zeros of the Riemann zeta function.
 
-We now restate the essential structure of the proof, organizing it into a modular chain of definitions, constructions, and equivalences. This high-level meta-structure provides a map from the initial analytic setup to the final equivalence between the spectral reality of $L_{\mathrm{sym}}$ and the truth of the Riemann Hypothesis.
+We now restate the essential structure of the proof, organizing it into a modular chain of definitions, constructions, and equivalences. This high-level meta-structure provides a map from the initial analytic setup to the final equivalence between the spectral reality of \(L_{\mathrm{sym}}\) and the truth of the Riemann Hypothesis.
 
 ---
 
@@ -927,114 +927,114 @@ We now restate the essential structure of the proof, organizing it into a modula
 1. **Define the Completed Zeta Function**
    Construct the symmetrized, entire function
 
-   $$
+   \[
    \Xi(s) = \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s),
-   $$
+   \]
 
-   which satisfies a functional equation symmetric about $s = \tfrac{1}{2}$ and whose zeros are exactly the nontrivial zeros of $\zeta(s)$.
+   which satisfies a functional equation symmetric about \(s = \tfrac{1}{2}\) and whose zeros are exactly the nontrivial zeros of \(\zeta(s)\).
 
 2. **Construct a Fourier Profile**
    Define the function
 
-   $$
+   \[
    \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right),
-   $$
+   \]
 
-   which is real, even, entire of exponential type $\pi$, and belongs to the Paley–Wiener class.
+   which is real, even, entire of exponential type \(\pi\), and belongs to the Paley–Wiener class.
 
 3. **Define the Convolution Kernel**
-   Take the inverse Fourier transform of $\phi(\lambda)$ to define
+   Take the inverse Fourier transform of \(\phi(\lambda)\) to define
 
-   $$
+   \[
    k(x) = \phi^\vee(x),
-   $$
+   \]
 
    a real-valued, compactly supported convolution kernel.
 
 4. **Define a Weighted Hilbert Space**
    Introduce the exponentially weighted space
 
-   $$
+   \[
    H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx),
-   $$
+   \]
 
-   with $\alpha > \pi$, ensuring that the convolution operator with kernel $k$ is trace-class.
+   with \(\alpha > \pi\), ensuring that the convolution operator with kernel \(k\) is trace-class.
 
 5. **Construct the Canonical Operator**
    Define the mollified operators
 
-   $$
+   \[
    L_t f(x) = \int_{\mathbb{R}} k_t(x - y) f(y)\,dy, \quad k_t = \left( e^{-t\lambda^2} \phi(\lambda) \right)^\vee,
-   $$
+   \]
 
    and set
 
-   $$
+   \[
    L_{\mathrm{sym}} = \lim_{t \to 0} L_t
-   $$
+   \]
 
-   in trace-norm. The resulting operator is compact, self-adjoint, and trace-class on $H_{\Psi_\alpha}$.
+   in trace-norm. The resulting operator is compact, self-adjoint, and trace-class on \(H_{\Psi_\alpha}\).
 
 6. **Define the Zeta-Regularized Determinant**
    Using spectral zeta theory or trace-class convergence, define
 
-   $$
+   \[
    \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}),
-   $$
+   \]
 
-   as an entire function of $\lambda$, with well-defined logarithmic derivative.
+   as an entire function of \(\lambda\), with well-defined logarithmic derivative.
 
 7. **Establish the Determinant Identity**
    Prove the equality
 
-   $$
+   \[
    \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
-   $$
+   \]
 
-   establishing that the zeros of $\zeta(s)$ correspond to eigenvalues of $L_{\mathrm{sym}}$.
+   establishing that the zeros of \(\zeta(s)\) correspond to eigenvalues of \(L_{\mathrm{sym}}\).
 
 8. **Match Spectrum to Zeta Zeros**
    Define the canonical spectral map
 
-   $$
+   \[
    \rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
-   $$
+   \]
 
-   and show this is a bijection between nontrivial zeros of $\zeta$ and nonzero eigenvalues of $L_{\mathrm{sym}}$, preserving multiplicities.
+   and show this is a bijection between nontrivial zeros of \(\zeta\) and nonzero eigenvalues of \(L_{\mathrm{sym}}\), preserving multiplicities.
 
 9. **Apply Spectral Theorem for Self-Adjoint Operators**
-   Since $L_{\mathrm{sym}}$ is self-adjoint, its spectrum lies in $\mathbb{R}$. Thus,
+   Since \(L_{\mathrm{sym}}\) is self-adjoint, its spectrum lies in \(\mathbb{R}\). Thus,
 
-   $$
+   \[
    \mu_\rho \in \mathbb{R} \implies \Re(\rho) = \tfrac{1}{2}.
-   $$
+   \]
 
 10. **Deduce the Equivalence RH ⇔ Real Spectrum**
-    Conclude that the Riemann Hypothesis holds if and only if the spectrum of $L_{\mathrm{sym}}$ is real:
+    Conclude that the Riemann Hypothesis holds if and only if the spectrum of \(L_{\mathrm{sym}}\) is real:
 
-    $$
+    \[
     \boxed{
       \text{RH holds} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
     }
-    $$
+    \]
 
 11. **Confirm Asymptotic Consistency via Heat Trace**
     Compute
 
-    $$
+    \[
     \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right),
-    $$
+    \]
 
     and invert this via Tauberian theory to recover
 
-    $$
+    \[
     N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right),
-    $$
+    \]
 
     matching the classical zero-counting function.
 
 12. **Prove Rigidity and Canonical Uniqueness**
-    Show that $L_{\mathrm{sym}}$ is the unique trace-class operator (up to unitary equivalence) with this determinant and spectral encoding.
+    Show that \(L_{\mathrm{sym}}\) is the unique trace-class operator (up to unitary equivalence) with this determinant and spectral encoding.
 
 ---
 
@@ -1049,7 +1049,7 @@ This visualization ensures:
 
 * Acyclic logic: No circular dependencies.
 * Modular verification: Each component can be independently validated.
-* Structural clarity: From $\Xi(s)$ to $L_{\mathrm{sym}}$, to spectrum, to RH.
+* Structural clarity: From \(\Xi(s)\) to \(L_{\mathrm{sym}}\), to spectrum, to RH.
 
 Such a DAG is included in Appendix B of the manuscript, serving as a navigational map of the proof.
 
@@ -1074,61 +1074,61 @@ Although this portion of the walkthrouh formally begins our journey through the 
 
 #### **A.1 Fourier Transform Conventions**
 
-Let $f \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})$. We define the Fourier transform $\mathcal{F}f$ and its inverse $\mathcal{F}^{-1}f$ as:
+Let \(f \in L^1(\mathbb{R}) \cap L^2(\mathbb{R})\). We define the Fourier transform \(\mathcal{F}f\) and its inverse \(\mathcal{F}^{-1}f\) as:
 
-$$
+\[
 (\mathcal{F}f)(\lambda) = \hat{f}(\lambda) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(x) e^{-i \lambda x} \, dx,
-$$
+\]
 
-$$
+\[
 (\mathcal{F}^{-1}f)(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} f(\lambda) e^{i \lambda x} \, d\lambda.
-$$
+\]
 
 These conventions ensure that:
 
-* The Fourier transform is unitary on $L^2(\mathbb{R})$,
-* The inversion formula $\mathcal{F}^{-1}\mathcal{F}f = f$ holds on the Schwartz space $\mathcal{S}(\mathbb{R})$,
+* The Fourier transform is unitary on \(L^2(\mathbb{R})\),
+* The inversion formula \(\mathcal{F}^{-1}\mathcal{F}f = f\) holds on the Schwartz space \(\mathcal{S}(\mathbb{R})\),
 * Parseval’s identity and convolution theorems apply without additional factors.
 
-We frequently use the notation $\phi^\vee(x) := \mathcal{F}^{-1}[\phi](x)$ to denote the inverse transform of a spectral profile $\phi$.
+We frequently use the notation \(\phi^\vee(x) := \mathcal{F}^{-1}[\phi](x)\) to denote the inverse transform of a spectral profile \(\phi\).
 
 #### **A.2 Weighted Hilbert Spaces**
 
-Let $\Psi_\alpha(x) = e^{\alpha |x|}$ for a fixed $\alpha > 0$. Define the weighted Hilbert space:
+Let \(\Psi_\alpha(x) = e^{\alpha |x|}\) for a fixed \(\alpha > 0\). Define the weighted Hilbert space:
 
-$$
+\[
 H_{\Psi_\alpha} := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx),
-$$
+\]
 
 with inner product:
 
-$$
+\[
 \langle f, g \rangle_{H_{\Psi_\alpha}} = \int_{\mathbb{R}} f(x)\overline{g(x)} e^{\alpha |x|} dx.
-$$
+\]
 
-This space captures functions with sufficient decay at infinity. In particular, for the inverse Fourier transform of $\Xi(\tfrac{1}{2} + i\lambda)$ to define a trace-class convolution operator on $H_{\Psi_\alpha}$, it is necessary that $\alpha > \pi$.
+This space captures functions with sufficient decay at infinity. In particular, for the inverse Fourier transform of \(\Xi(\tfrac{1}{2} + i\lambda)\) to define a trace-class convolution operator on \(H_{\Psi_\alpha}\), it is necessary that \(\alpha > \pi\).
 
-The exponential weight compensates for the slow decay of the zeta-derived kernel, ensuring integrability in the trace-norm sense. This condition is sharp: Lemma 1.24 proves that $\alpha = \pi$ is the threshold beyond which the convolution kernel becomes trace-class.
+The exponential weight compensates for the slow decay of the zeta-derived kernel, ensuring integrability in the trace-norm sense. This condition is sharp: Lemma 1.24 proves that \(\alpha = \pi\) is the threshold beyond which the convolution kernel becomes trace-class.
 
 #### **A.3 Mollifiers and Approximate Identities**
 
-For the canonical Fourier profile $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$, we define its mollified version via Gaussian damping:
+For the canonical Fourier profile \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\), we define its mollified version via Gaussian damping:
 
-$$
+\[
 \phi_t(\lambda) := e^{-t \lambda^2} \phi(\lambda), \quad t > 0.
-$$
+\]
 
-Let $k_t(x) := \mathcal{F}^{-1}[\phi_t](x)$ be the corresponding mollified convolution kernel. Then:
+Let \(k_t(x) := \mathcal{F}^{-1}[\phi_t](x)\) be the corresponding mollified convolution kernel. Then:
 
-* $\phi_t \in \mathcal{S}(\mathbb{R})$,
-* $k_t \in \mathcal{S}(\mathbb{R})$,
-* For each $t > 0$, $L_t f := k_t * f$ defines a bounded, trace-class operator on $H_{\Psi_\alpha}$.
+* \(\phi_t \in \mathcal{S}(\mathbb{R})\),
+* \(k_t \in \mathcal{S}(\mathbb{R})\),
+* For each \(t > 0\), \(L_t f := k_t * f\) defines a bounded, trace-class operator on \(H_{\Psi_\alpha}\).
 
-We use these mollified operators $L_t$ to define the canonical operator via:
+We use these mollified operators \(L_t\) to define the canonical operator via:
 
-$$
+\[
 L_{\mathrm{sym}} := \lim_{t \to 0^+} L_t,
-$$
+\]
 
 in the trace-norm topology. The use of Gaussian mollifiers ensures the limit preserves spectral and analytic properties and avoids introducing arbitrary smoothing mechanisms.
 
@@ -1136,19 +1136,19 @@ in the trace-norm topology. The use of Gaussian mollifiers ensures the limit pre
 
 The central operator of the manuscript is the convolution operator
 
-$$
+\[
 L_{\mathrm{sym}} f(x) = \int_{\mathbb{R}} k(x - y) f(y)\, dy, \quad k(x) = \phi^\vee(x).
-$$
+\]
 
-It is self-adjoint, trace-class, and compact on $H_{\Psi_\alpha}$ for $\alpha > \pi$. Its spectral data is connected to the zeros of $\zeta(s)$ via:
+It is self-adjoint, trace-class, and compact on \(H_{\Psi_\alpha}\) for \(\alpha > \pi\). Its spectral data is connected to the zeros of \(\zeta(s)\) via:
 
-$$
+\[
 \rho = \tfrac{1}{2} + i\mu \quad \Longleftrightarrow \quad \mu \in \operatorname{Spec}(L_{\mathrm{sym}}),
-$$
+\]
 
-where $\rho$ is a nontrivial zero of $\zeta(s)$ and $\mu = \frac{1}{i}(\rho - \tfrac{1}{2})$.
+where \(\rho\) is a nontrivial zero of \(\zeta(s)\) and \(\mu = \frac{1}{i}(\rho - \tfrac{1}{2})\).
 
-The inverse mapping $\mu \mapsto \rho$ allows us to restate RH as the assertion that $\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$, since the realness of $\mu$ implies $\Re(\rho) = \tfrac{1}{2}$.
+The inverse mapping \(\mu \mapsto \rho\) allows us to restate RH as the assertion that \(\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}\), since the realness of \(\mu\) implies \(\Re(\rho) = \tfrac{1}{2}\).
 
 ### **Appendix A (Part 2): Analytic Properties of the Kernel and Profile**
 
@@ -1156,74 +1156,74 @@ The inverse mapping $\mu \mapsto \rho$ allows us to restate RH as the assertion 
 
 Recall the completed Riemann zeta function:
 
-$$
+\[
 \Xi(s) := \tfrac{1}{2} s(s - 1) \pi^{-s/2} \Gamma\left( \tfrac{s}{2} \right) \zeta(s).
-$$
+\]
 
 This function satisfies the reflection symmetry:
 
-$$
+\[
 \Xi(s) = \Xi(1 - s),
-$$
+\]
 
-and is entire of order 1 and exponential type $\pi$ in the variable $s \in \mathbb{C}$.
+and is entire of order 1 and exponential type \(\pi\) in the variable \(s \in \mathbb{C}\).
 
-When restricted to the vertical line $s = \tfrac{1}{2} + i\lambda$, we define:
+When restricted to the vertical line \(s = \tfrac{1}{2} + i\lambda\), we define:
 
-$$
+\[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
-$$
+\]
 
-This yields a real-valued, even function of $\lambda$ that decays rapidly due to the presence of the $\Gamma$-factor in the definition of $\Xi$. Specifically, asymptotic analysis of $\Gamma\left( \tfrac{1}{2} + i\lambda \right)$ shows:
+This yields a real-valued, even function of \(\lambda\) that decays rapidly due to the presence of the \(\Gamma\)-factor in the definition of \(\Xi\). Specifically, asymptotic analysis of \(\Gamma\left( \tfrac{1}{2} + i\lambda \right)\) shows:
 
-$$
+\[
 \phi(\lambda) = \mathcal{O}\left( e^{-\tfrac{\pi}{2} |\lambda|} \right) \quad \text{as } |\lambda| \to \infty.
-$$
+\]
 
-Furthermore, by standard properties of the Fourier transform, this decay implies that the inverse Fourier transform $k(x) := \phi^\vee(x)$ is compactly supported in $[- \pi, \pi]$, by the Paley–Wiener theorem. This compact support is a consequence of the exponential type $\pi$ of $\phi$. Thus, we have:
+Furthermore, by standard properties of the Fourier transform, this decay implies that the inverse Fourier transform \(k(x) := \phi^\vee(x)\) is compactly supported in \([- \pi, \pi]\), by the Paley–Wiener theorem. This compact support is a consequence of the exponential type \(\pi\) of \(\phi\). Thus, we have:
 
-* $\phi \in L^2(\mathbb{R}) \cap C^\infty(\mathbb{R})$,
-* $k(x) = 0$ for $|x| > \pi$,
-* $k(x)$ is real, even, and continuous on $\mathbb{R}$.
+* \(\phi \in L^2(\mathbb{R}) \cap C^\infty(\mathbb{R})\),
+* \(k(x) = 0\) for \(|x| > \pi\),
+* \(k(x)\) is real, even, and continuous on \(\mathbb{R}\).
 
-These properties are central to ensuring that the convolution operator defined by $k$ is symmetric, compact, and—on an appropriately weighted space—trace-class.
+These properties are central to ensuring that the convolution operator defined by \(k\) is symmetric, compact, and—on an appropriately weighted space—trace-class.
 
-#### **A.6 Weighted Integrability and Sharp Threshold at $\alpha = \pi$**
+#### **A.6 Weighted Integrability and Sharp Threshold at \(\alpha = \pi\)**
 
-The inverse Fourier transform $k(x)$ inherits the analytic regularity and support of $\phi$, but its decay near the endpoints $x = \pm \pi$ is insufficient to guarantee integrability against exponential weights of rate $\alpha \le \pi$. In fact, one can show that:
+The inverse Fourier transform \(k(x)\) inherits the analytic regularity and support of \(\phi\), but its decay near the endpoints \(x = \pm \pi\) is insufficient to guarantee integrability against exponential weights of rate \(\alpha \le \pi\). In fact, one can show that:
 
-* For $\alpha > \pi$, $k(x) \in L^1(\mathbb{R}, e^{\alpha |x|} dx)$,
-* For $\alpha = \pi$, the integral diverges logarithmically,
-* For $\alpha < \pi$, the integral diverges exponentially.
+* For \(\alpha > \pi\), \(k(x) \in L^1(\mathbb{R}, e^{\alpha |x|} dx)\),
+* For \(\alpha = \pi\), the integral diverges logarithmically,
+* For \(\alpha < \pi\), the integral diverges exponentially.
 
-This leads to the sharp inclusion criterion for the convolution operator $L_{\mathrm{sym}}$ on $H_{\Psi_\alpha}$. Specifically:
+This leads to the sharp inclusion criterion for the convolution operator \(L_{\mathrm{sym}}\) on \(H_{\Psi_\alpha}\). Specifically:
 
 **Lemma (Trace-Class Threshold).**
-Let $k(x) := \phi^\vee(x)$, where $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$. Then the convolution operator
+Let \(k(x) := \phi^\vee(x)\), where \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\). Then the convolution operator
 
-$$
+\[
 (Lf)(x) = \int_{\mathbb{R}} k(x - y) f(y) \, dy
-$$
+\]
 
-is trace-class on $H_{\Psi_\alpha}$ if and only if $\alpha > \pi$.
+is trace-class on \(H_{\Psi_\alpha}\) if and only if \(\alpha > \pi\).
 
-This lemma underpins the choice of weight in defining the Hilbert space $H_{\Psi_\alpha}$. It ensures that the kernel of the operator, though not integrable in the usual $L^1$-sense, becomes integrable under sufficient exponential damping.
+This lemma underpins the choice of weight in defining the Hilbert space \(H_{\Psi_\alpha}\). It ensures that the kernel of the operator, though not integrable in the usual \(L^1\)-sense, becomes integrable under sufficient exponential damping.
 
 #### **A.7 Spectral Symmetry and Real-Valuedness**
 
-Since $\phi(\lambda)$ is real-valued and even, its inverse Fourier transform $k(x)$ is also real and even:
+Since \(\phi(\lambda)\) is real-valued and even, its inverse Fourier transform \(k(x)\) is also real and even:
 
-$$
+\[
 k(-x) = k(x), \qquad \overline{k(x)} = k(x).
-$$
+\]
 
-Consequently, the convolution operator $L_{\mathrm{sym}}$ defined via this kernel satisfies:
+Consequently, the convolution operator \(L_{\mathrm{sym}}\) defined via this kernel satisfies:
 
-$$
+\[
 \langle L_{\mathrm{sym}} f, g \rangle = \langle f, L_{\mathrm{sym}} g \rangle,
-$$
+\]
 
-for all $f, g \in \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}$, confirming that $L_{\mathrm{sym}}$ is symmetric. Moreover, the operator preserves real-valuedness: if $f \in H_{\Psi_\alpha}$ is real-valued, so is $L_{\mathrm{sym}} f$.
+for all \(f, g \in \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}\), confirming that \(L_{\mathrm{sym}}\) is symmetric. Moreover, the operator preserves real-valuedness: if \(f \in H_{\Psi_\alpha}\) is real-valued, so is \(L_{\mathrm{sym}} f\).
 
 These structural properties are essential for invoking the spectral theorem: the operator is self-adjoint on a dense domain, compact, and trace-class. As a result, its spectrum consists of real eigenvalues of finite multiplicity, which accumulate only at zero.
 
@@ -1245,10 +1245,10 @@ Below, we summarize the major clusters of the DAG. For visual representation, se
 
 These nodes define the core analytic and operator-theoretic objects used throughout:
 
-* **def\:canonical\_profile** — The canonical Fourier profile: $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$
-* **def\:weighted\_space** — The weighted Hilbert space $H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)$
-* **def\:mollification** — Mollified Fourier profiles $\phi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda)$
-* **def\:canonical\_operator** — The canonical operator $L_{\mathrm{sym}} = \lim_{t \to 0} L_t$
+* **def\:canonical\_profile** — The canonical Fourier profile: \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\)
+* **def\:weighted\_space** — The weighted Hilbert space \(H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)\)
+* **def\:mollification** — Mollified Fourier profiles \(\phi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda)\)
+* **def\:canonical\_operator** — The canonical operator \(L_{\mathrm{sym}} = \lim_{t \to 0} L_t\)
 
 These nodes are leafless (no incoming edges), representing the axiomatic ground of the framework.
 
@@ -1258,10 +1258,10 @@ These nodes are leafless (no incoming edges), representing the axiomatic ground 
 
 This layer verifies properties needed to control the operator and define its determinant:
 
-* **lem\:xi\_decay** — Decay of $\phi(\lambda)$ implies compact support of $k(x) = \phi^\vee(x)$
-* **lem\:kernel\_decay\_threshold** — $\alpha > \pi$ ensures $k(x) \in L^1(e^{\alpha |x|})$
-* **lem\:trace\_class\_criterion** — $L_{\mathrm{sym}} \in B_1(H_{\Psi_\alpha})$ ⇔ weighted integrability of kernel
-* **lem\:self\_adjointness** — $L_{\mathrm{sym}}$ is symmetric and essentially self-adjoint
+* **lem\:xi\_decay** — Decay of \(\phi(\lambda)\) implies compact support of \(k(x) = \phi^\vee(x)\)
+* **lem\:kernel\_decay\_threshold** — \(\alpha > \pi\) ensures \(k(x) \in L^1(e^{\alpha |x|})\)
+* **lem\:trace\_class\_criterion** — \(L_{\mathrm{sym}} \in B_1(H_{\Psi_\alpha})\) ⇔ weighted integrability of kernel
+* **lem\:self\_adjointness** — \(L_{\mathrm{sym}}\) is symmetric and essentially self-adjoint
 
 These results are prerequisites for spectral calculus and determinant definitions.
 
@@ -1272,12 +1272,12 @@ These results are prerequisites for spectral calculus and determinant definition
 This cluster culminates in the main analytic identity:
 
 * **lem\:det\_via\_trace** — Use of heat kernel trace to define the regularized determinant
-* **lem\:hadamard\_structure** — Entire function structure of $\Xi(1/2 + i\lambda)$
+* **lem\:hadamard\_structure** — Entire function structure of \(\Xi(1/2 + i\lambda)\)
 * **thm\:canonical\_determinant\_identity** —
 
-  $$
+  \[
   \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
-  $$
+  \]
 
 The identity is central: it bridges analytic number theory and spectral theory.
 
@@ -1292,9 +1292,9 @@ This section establishes the bijection between zeros and eigenvalues:
 * **lem\:multiplicity\_match** — Eigenvalue multiplicities match zero multiplicities
 * **thm\:spectral\_bijection** —
 
-  $$
+  \[
   \text{Nontrivial zeros of } \zeta(s) \ \longleftrightarrow\ \operatorname{Spec}(L_{\mathrm{sym}})\setminus\{0\}
-  $$
+  \]
 
 This equivalence is crucial for restating RH in spectral terms.
 
@@ -1303,7 +1303,7 @@ This equivalence is crucial for restating RH in spectral terms.
 #### **B.5 Self-Adjointness and Spectral Reality**
 
 * **lem\:selfadjoint\_spectrum\_real** — Self-adjoint operator has real spectrum
-* **cor\:rh\_equiv\_real\_spec** — RH ⇔ $\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$
+* **cor\:rh\_equiv\_real\_spec** — RH ⇔ \(\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}\)
 
 These links finalize the operator-theoretic equivalence.
 
@@ -1313,15 +1313,15 @@ These links finalize the operator-theoretic equivalence.
 
 * **lem\:heat\_trace\_asymptotic** —
 
-  $$
+  \[
   \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\tfrac{1}{t}\right)
-  $$
+  \]
 * **lem\:korevaar\_conditions** — Verifying conditions for Tauberian inversion
 * **thm\:spectral\_counting\_law** —
 
-  $$
+  \[
   N(T) \sim \frac{T}{2\pi} \log\left(\tfrac{T}{2\pi}\right)
-  $$
+  \]
 
 These confirm that the spectrum mirrors the known zero density of ζ.
 
@@ -1329,36 +1329,36 @@ These confirm that the spectrum mirrors the known zero density of ζ.
 
 #### **B.7 Closure and Rigidity Subgraph**
 
-* **thm\:uniqueness\_realization** — $L_{\mathrm{sym}}$ is the unique operator realizing this determinant
+* **thm\:uniqueness\_realization** — \(L_{\mathrm{sym}}\) is the unique operator realizing this determinant
 * **thm\:rh\_equiv\_spec\_real** —
 
-  $$
+  \[
   \text{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
-  $$
+  \]
 
 This section closes the loop and delivers the equivalence between RH and spectral reality.
 
 ### **Appendix C: Spectral Zeta Functions and Regularized Determinants**
 
-This appendix develops the analytic foundation for defining and manipulating the zeta-regularized determinant of the operator $L_{\mathrm{sym}}$. The theory of spectral zeta functions provides the bridge between operator spectra and entire functions, enabling us to rigorously define the determinant of an infinite-dimensional trace-class operator whose eigenvalues encode the nontrivial zeros of the Riemann zeta function.
+This appendix develops the analytic foundation for defining and manipulating the zeta-regularized determinant of the operator \(L_{\mathrm{sym}}\). The theory of spectral zeta functions provides the bridge between operator spectra and entire functions, enabling us to rigorously define the determinant of an infinite-dimensional trace-class operator whose eigenvalues encode the nontrivial zeros of the Riemann zeta function.
 
 ---
 
 #### **C.1 The Spectral Zeta Function**
 
-Let $T$ be a compact, self-adjoint operator on a separable Hilbert space $H$, with discrete nonzero spectrum $\{\mu_n\} \subset \mathbb{C} \setminus \{0\}$, possibly repeated according to multiplicity. If all eigenvalues $\mu_n \in \mathbb{R}$, we define the spectral zeta function of $T$ by
+Let \(T\) be a compact, self-adjoint operator on a separable Hilbert space \(H\), with discrete nonzero spectrum \(\{\mu_n\} \subset \mathbb{C} \setminus \{0\}\), possibly repeated according to multiplicity. If all eigenvalues \(\mu_n \in \mathbb{R}\), we define the spectral zeta function of \(T\) by
 
-$$
+\[
 \zeta_T(s) := \sum_{\mu_n \neq 0} \mu_n^{-s}, \qquad \Re(s) \gg 1.
-$$
+\]
 
-This series converges absolutely in a right half-plane since $T \in \mathcal{S}_1$ (trace class), and decays rapidly in eigenvalue magnitude.
+This series converges absolutely in a right half-plane since \(T \in \mathcal{S}_1\) (trace class), and decays rapidly in eigenvalue magnitude.
 
-To extend $\zeta_T(s)$ analytically to $s = 0$, we use Mellin transform techniques and spectral decomposition. In particular, for operators with positive spectrum or positive-definite squares, it is often possible to define:
+To extend \(\zeta_T(s)\) analytically to \(s = 0\), we use Mellin transform techniques and spectral decomposition. In particular, for operators with positive spectrum or positive-definite squares, it is often possible to define:
 
-$$
+\[
 \zeta_T(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \operatorname{Tr}(e^{-tT}) \, dt.
-$$
+\]
 
 This representation facilitates analytic continuation and is central in defining determinants.
 
@@ -1366,49 +1366,49 @@ This representation facilitates analytic continuation and is central in defining
 
 #### **C.2 Zeta-Regularized Determinants**
 
-Given an operator $T$ whose spectral zeta function $\zeta_T(s)$ extends meromorphically to a neighborhood of $s=0$, one defines the zeta-regularized determinant as:
+Given an operator \(T\) whose spectral zeta function \(\zeta_T(s)\) extends meromorphically to a neighborhood of \(s=0\), one defines the zeta-regularized determinant as:
 
-$$
+\[
 \det\nolimits_\zeta(T) := \exp\left( - \left. \frac{d}{ds} \zeta_T(s) \right|_{s=0} \right).
-$$
+\]
 
-In the case of an operator of the form $I - \lambda L$, this becomes:
+In the case of an operator of the form \(I - \lambda L\), this becomes:
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L) := \prod_n (1 - \lambda \mu_n) \cdot e^{\lambda \mu_n + \frac{1}{2} \lambda^2 \mu_n^2 + \cdots},
-$$
+\]
 
 where the divergent infinite product is made convergent via subtraction of divergent terms in the exponential.
 
 For trace-class operators, an equivalent definition can be given in terms of the expansion:
 
-$$
+\[
 \log \det(I - \lambda L) = - \sum_{k=1}^\infty \frac{\lambda^k}{k} \operatorname{Tr}(L^k),
-$$
+\]
 
-valid for small $|\lambda|$. The convergence of this expansion for larger $\lambda$ relies on analytic continuation or mollification, as developed in Chapter 3.
+valid for small \(|\lambda|\). The convergence of this expansion for larger \(\lambda\) relies on analytic continuation or mollification, as developed in Chapter 3.
 
 ---
 
 #### **C.3 Determinant of the Canonical Operator**
 
-Let $L_{\mathrm{sym}}$ be the canonical trace-class operator constructed from the inverse Fourier transform of the completed zeta function $\Xi(s)$, acting on the weighted space $H_{\Psi_\alpha}$ with $\alpha > \pi$. By spectral theory, $L_{\mathrm{sym}}$ has discrete real spectrum $\{\mu_n\} \to 0$, and is self-adjoint.
+Let \(L_{\mathrm{sym}}\) be the canonical trace-class operator constructed from the inverse Fourier transform of the completed zeta function \(\Xi(s)\), acting on the weighted space \(H_{\Psi_\alpha}\) with \(\alpha > \pi\). By spectral theory, \(L_{\mathrm{sym}}\) has discrete real spectrum \(\{\mu_n\} \to 0\), and is self-adjoint.
 
 We define the determinant:
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) := \prod_{n=1}^\infty (1 - \lambda \mu_n),
-$$
+\]
 
 regularized via the zeta function or, equivalently, via the heat kernel trace:
 
-$$
+\[
 \log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = - \int_0^\infty \frac{1}{t} \operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}} - e^{-t} \right) e^{\lambda t} dt,
-$$
+\]
 
 when interpreted appropriately.
 
-The convergence of the heat trace $\operatorname{Tr}(e^{-tL_{\mathrm{sym}}})$ as $t \to 0$ is governed by the spectral density of $L_{\mathrm{sym}}$, and its small-time expansion reflects the counting function of eigenvalues.
+The convergence of the heat trace \(\operatorname{Tr}(e^{-tL_{\mathrm{sym}}})\) as \(t \to 0\) is governed by the spectral density of \(L_{\mathrm{sym}}\), and its small-time expansion reflects the counting function of eigenvalues.
 
 ---
 
@@ -1416,16 +1416,16 @@ The convergence of the heat trace $\operatorname{Tr}(e^{-tL_{\mathrm{sym}}})$ as
 
 The key analytic identity established in Chapter 3 is:
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i \lambda \right)}{\Xi\left( \tfrac{1}{2} \right)},
-$$
+\]
 
-which holds for all $\lambda \in \mathbb{C}$. This result is obtained by comparing the Hadamard product representations of both sides, using the spectral bijection between eigenvalues $\mu_n$ and nontrivial zeros $\rho_n = \tfrac{1}{2} + i \mu_n$ of $\zeta(s)$.
+which holds for all \(\lambda \in \mathbb{C}\). This result is obtained by comparing the Hadamard product representations of both sides, using the spectral bijection between eigenvalues \(\mu_n\) and nontrivial zeros \(\rho_n = \tfrac{1}{2} + i \mu_n\) of \(\zeta(s)\).
 
-The determinant inherits the analytic properties of $\Xi(s)$:
+The determinant inherits the analytic properties of \(\Xi(s)\):
 
 * Entire function of order 1,
-* Exponential type $\pi$,
+* Exponential type \(\pi\),
 * Real and even on the real axis,
 * Zero set symmetric under reflection about 0.
 
@@ -1433,114 +1433,114 @@ Hence, the determinant is not only a spectral encoding—it is a complete analyt
 
 ### **Appendix D (Part 1): Heat Kernel Trace Asymptotics**
 
-This appendix establishes the small-time behavior of the trace of the heat kernel associated with the squared canonical operator $L_{\mathrm{sym}}^2$. The asymptotic expansion of this trace is a key analytic bridge between the spectral side of the theory and classical zero-counting formulas in analytic number theory.
+This appendix establishes the small-time behavior of the trace of the heat kernel associated with the squared canonical operator \(L_{\mathrm{sym}}^2\). The asymptotic expansion of this trace is a key analytic bridge between the spectral side of the theory and classical zero-counting formulas in analytic number theory.
 
 In particular, we demonstrate the singular behavior
 
-$$
+\[
 \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) \quad \text{as } t \to 0^+,
-$$
+\]
 
 which matches the expected spectral growth rate of the nontrivial zeros of the Riemann zeta function.
 
 ---
 
-### **D.1 Setup: The Heat Kernel of $L_{\mathrm{sym}}^2$**
+### **D.1 Setup: The Heat Kernel of \(L_{\mathrm{sym}}^2\)**
 
-Let $\{ \mu_n \} \subset \mathbb{R}$ denote the nonzero eigenvalues of the compact, self-adjoint operator $L_{\mathrm{sym}}$ on the weighted Hilbert space $H_{\Psi_\alpha}$. Since $L_{\mathrm{sym}} \in \mathcal{S}_1$ (trace-class), its square is also trace-class, and the operator exponential
+Let \(\{ \mu_n \} \subset \mathbb{R}\) denote the nonzero eigenvalues of the compact, self-adjoint operator \(L_{\mathrm{sym}}\) on the weighted Hilbert space \(H_{\Psi_\alpha}\). Since \(L_{\mathrm{sym}} \in \mathcal{S}_1\) (trace-class), its square is also trace-class, and the operator exponential
 
-$$
+\[
 e^{-t L_{\mathrm{sym}}^2}
-$$
+\]
 
-is well-defined for all $t > 0$, and belongs to $\mathcal{S}_1$ as well. We define the **heat trace** as:
+is well-defined for all \(t > 0\), and belongs to \(\mathcal{S}_1\) as well. We define the **heat trace** as:
 
-$$
+\[
 \theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n} e^{-t \mu_n^2}.
-$$
+\]
 
-This function $\theta(t)$ is smooth for $t > 0$, rapidly decaying as $t \to \infty$, and diverges as $t \to 0^+$. Our goal is to analyze this divergence and compute the leading asymptotic behavior.
+This function \(\theta(t)\) is smooth for \(t > 0\), rapidly decaying as \(t \to \infty\), and diverges as \(t \to 0^+\). Our goal is to analyze this divergence and compute the leading asymptotic behavior.
 
 ---
 
 ### **D.2 Spectral Representation via Fourier Profile**
 
-Let $\phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right)$ be the canonical Fourier profile. The operator $L_{\mathrm{sym}}$ is, up to unitary equivalence, multiplication by $\phi(\lambda)$ in the Fourier domain. Consequently,
+Let \(\phi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda\right)\) be the canonical Fourier profile. The operator \(L_{\mathrm{sym}}\) is, up to unitary equivalence, multiplication by \(\phi(\lambda)\) in the Fourier domain. Consequently,
 
-$$
+\[
 e^{-t L_{\mathrm{sym}}^2} \quad \text{corresponds to} \quad M_{e^{-t \phi(\lambda)^2}},
-$$
+\]
 
-in the conjugated Fourier picture. Therefore, the trace of $e^{-t L_{\mathrm{sym}}^2}$ becomes:
+in the conjugated Fourier picture. Therefore, the trace of \(e^{-t L_{\mathrm{sym}}^2}\) becomes:
 
-$$
+\[
 \theta(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} e^{-t \phi(\lambda)^2} \, d\lambda.
-$$
+\]
 
-To extract the asymptotic behavior as $t \to 0^+$, we must understand the behavior of $\phi(\lambda)$ for small and large $\lambda$.
+To extract the asymptotic behavior as \(t \to 0^+\), we must understand the behavior of \(\phi(\lambda)\) for small and large \(\lambda\).
 
 ---
 
-### **D.3 Expansion Near $\lambda = 0$**
+### **D.3 Expansion Near \(\lambda = 0\)**
 
-The function $\phi(\lambda) = \Xi\left(\tfrac{1}{2} + i\lambda\right)$ is entire, even, and real-valued on $\mathbb{R}$. Near $\lambda = 0$, we can write:
+The function \(\phi(\lambda) = \Xi\left(\tfrac{1}{2} + i\lambda\right)\) is entire, even, and real-valued on \(\mathbb{R}\). Near \(\lambda = 0\), we can write:
 
-$$
+\[
 \phi(\lambda) = \phi(0) + \frac{1}{2} \phi''(0) \lambda^2 + \mathcal{O}(\lambda^4),
-$$
+\]
 
-since $\phi$ is even, so $\phi'(0) = 0$. As a result, for small $\lambda$,
+since \(\phi\) is even, so \(\phi'(0) = 0\). As a result, for small \(\lambda\),
 
-$$
+\[
 \phi(\lambda)^2 \approx \phi(0)^2 + \phi(0) \phi''(0) \lambda^2 + \mathcal{O}(\lambda^4).
-$$
+\]
 
 Substituting into the integral, we obtain an approximate form:
 
-$$
+\[
 \theta(t) \approx \frac{1}{2\pi} \int_{-\infty}^{\infty} \exp\left( -t\left( \phi(0)^2 + c \lambda^2 + \cdots \right) \right) d\lambda.
-$$
+\]
 
-Extracting the exponential factor $e^{-t \phi(0)^2}$ and expanding yields:
+Extracting the exponential factor \(e^{-t \phi(0)^2}\) and expanding yields:
 
-$$
+\[
 \theta(t) \sim \frac{e^{-t \phi(0)^2}}{\sqrt{t}} \left( \alpha_0 \log\left(\tfrac{1}{t}\right) + \alpha_1 + \mathcal{O}(t^\delta) \right),
-$$
+\]
 
-for some constants $\alpha_0 > 0$, $\alpha_1 \in \mathbb{R}$, and $\delta > 0$.
+for some constants \(\alpha_0 > 0\), \(\alpha_1 \in \mathbb{R}\), and \(\delta > 0\).
 
-However, since $\phi(0) = \Xi(\tfrac{1}{2}) \neq 0$, the factor $e^{-t \phi(0)^2} \to 1$ as $t \to 0$, and the dominant term becomes:
+However, since \(\phi(0) = \Xi(\tfrac{1}{2}) \neq 0\), the factor \(e^{-t \phi(0)^2} \to 1\) as \(t \to 0\), and the dominant term becomes:
 
-$$
+\[
 \theta(t) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right).
-$$
+\]
 
-This logarithmic singularity is sharper than the typical heat trace behavior $t^{-1/2}$, and reflects the logarithmic growth in the counting function $N(T)$ of eigenvalues (i.e., zeta zeros).
+This logarithmic singularity is sharper than the typical heat trace behavior \(t^{-1/2}\), and reflects the logarithmic growth in the counting function \(N(T)\) of eigenvalues (i.e., zeta zeros).
 
 ---
 
 ### **D.4 Summary of the Asymptotic Expansion**
 
 **Proposition D.1 (Heat Trace Asymptotic).**
-Let $\theta(t) = \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$. Then as $t \to 0^+$,
+Let \(\theta(t) = \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\). Then as \(t \to 0^+\),
 
-$$
+\[
 \theta(t) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \mathcal{O}\left( \frac{1}{\sqrt{t}} \right).
-$$
+\]
 
-This estimate will serve as input for Tauberian inversion (Appendix E), allowing us to recover the spectral counting function $N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)$.
+This estimate will serve as input for Tauberian inversion (Appendix E), allowing us to recover the spectral counting function \(N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)\).
 
 ### **Appendix D (Part 2): Higher-Order Heat Trace Asymptotics and Spectral Structure**
 
 In the first part of Appendix D, we derived the leading-order behavior of the heat trace:
 
-$$
+\[
 \theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right), \quad \text{as } t \to 0^+.
-$$
+\]
 
-This singularity encodes the logarithmic growth of the spectrum of $L_{\mathrm{sym}}^2$, and thus matches the zero-density of the Riemann zeta function.
+This singularity encodes the logarithmic growth of the spectrum of \(L_{\mathrm{sym}}^2\), and thus matches the zero-density of the Riemann zeta function.
 
-In this second part, we refine this expansion and analyze the connection between the asymptotic coefficients and the analytic properties of $\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)$.
+In this second part, we refine this expansion and analyze the connection between the asymptotic coefficients and the analytic properties of \(\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)\).
 
 ---
 
@@ -1548,55 +1548,55 @@ In this second part, we refine this expansion and analyze the connection between
 
 To extract the full expansion of the heat trace, we consider the integral representation:
 
-$$
+\[
 \theta(t) = \frac{1}{2\pi} \int_{\mathbb{R}} e^{-t \phi(\lambda)^2} \, d\lambda.
-$$
+\]
 
-Using the Taylor expansion around $\lambda = 0$,
+Using the Taylor expansion around \(\lambda = 0\),
 
-$$
+\[
 \phi(\lambda)^2 = \phi(0)^2 + c_2 \lambda^2 + c_4 \lambda^4 + \cdots,
-$$
+\]
 
 and substituting into the exponential yields a formal expansion:
 
-$$
+\[
 e^{-t \phi(\lambda)^2} \sim e^{-t \phi(0)^2} \left( 1 - t c_2 \lambda^2 - t c_4 \lambda^4 + \frac{t^2 c_2^2 \lambda^4}{2} + \cdots \right).
-$$
+\]
 
-Integrating term by term over $\lambda$, we obtain:
+Integrating term by term over \(\lambda\), we obtain:
 
-$$
+\[
 \theta(t) = \frac{e^{-t \phi(0)^2}}{\sqrt{t}} \left( \alpha_0 \log\left( \frac{1}{t} \right) + \alpha_1 + \alpha_2 t^{1/2} + \cdots \right),
-$$
+\]
 
 with the logarithmic term originating from the slowly decaying integrals of the form:
 
-$$
+\[
 \int_{|\lambda| < \Lambda} \lambda^n \, e^{-t \phi(0)^2} \, d\lambda.
-$$
+\]
 
-The coefficient $\alpha_0$ is explicitly computable in terms of derivatives of $\phi$ at $\lambda = 0$. In principle, each higher-order coefficient $\alpha_k$ is a functional of the higher even derivatives $\phi^{(2k)}(0)$, as all odd derivatives vanish due to evenness of $\phi$.
+The coefficient \(\alpha_0\) is explicitly computable in terms of derivatives of \(\phi\) at \(\lambda = 0\). In principle, each higher-order coefficient \(\alpha_k\) is a functional of the higher even derivatives \(\phi^{(2k)}(0)\), as all odd derivatives vanish due to evenness of \(\phi\).
 
 ---
 
 ### **D.6 Interpreting the Expansion Spectrally**
 
-Each term in the heat trace expansion corresponds to a **moment** of the spectral distribution of $L_{\mathrm{sym}}$. Specifically, the expansion:
+Each term in the heat trace expansion corresponds to a **moment** of the spectral distribution of \(L_{\mathrm{sym}}\). Specifically, the expansion:
 
-$$
+\[
 \theta(t) = \sum_n e^{-t \mu_n^2} \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \sum_{k=0}^\infty a_k t^{k - 1/2},
-$$
+\]
 
-implies that the spectrum of $L_{\mathrm{sym}}^2$ is not uniformly spaced but **logarithmically sparse**—growing at a rate dictated by the zero distribution of $\zeta(s)$.
+implies that the spectrum of \(L_{\mathrm{sym}}^2\) is not uniformly spaced but **logarithmically sparse**—growing at a rate dictated by the zero distribution of \(\zeta(s)\).
 
 In classical geometric settings (e.g., Laplacians on compact manifolds), heat trace expansions have the form:
 
-$$
+\[
 \theta(t) \sim \sum_{j=0}^\infty c_j t^{(j - d)/2},
-$$
+\]
 
-where $d$ is the manifold’s dimension. The presence of the $\log(1/t)$ term in our setting suggests that the “dimension” of the underlying arithmetic object is not classical—it reflects the **logarithmic density of primes** and the arithmetic complexity of the zeta function.
+where \(d\) is the manifold’s dimension. The presence of the \(\log(1/t)\) term in our setting suggests that the “dimension” of the underlying arithmetic object is not classical—it reflects the **logarithmic density of primes** and the arithmetic complexity of the zeta function.
 
 Thus, the expansion may be viewed as a spectral footprint of the prime distribution.
 
@@ -1606,12 +1606,12 @@ Thus, the expansion may be viewed as a spectral footprint of the prime distribut
 
 The full expansion can be justified rigorously under the assumptions:
 
-* $\phi \in \mathcal{S}(\mathbb{R})$,
-* $\phi$ is entire of exponential type $\pi$,
-* $\phi(\lambda)^2$ has a convergent even-power expansion near $\lambda = 0$,
-* All necessary integrals of the form $\int \lambda^{2k} e^{-t \phi(\lambda)^2} d\lambda$ are finite and asymptotically estimable.
+* \(\phi \in \mathcal{S}(\mathbb{R})\),
+* \(\phi\) is entire of exponential type \(\pi\),
+* \(\phi(\lambda)^2\) has a convergent even-power expansion near \(\lambda = 0\),
+* All necessary integrals of the form \(\int \lambda^{2k} e^{-t \phi(\lambda)^2} d\lambda\) are finite and asymptotically estimable.
 
-All of these properties are satisfied for $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$. Therefore, the small-time expansion of $\theta(t)$ is not only formal but analytically meaningful.
+All of these properties are satisfied for \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\). Therefore, the small-time expansion of \(\theta(t)\) is not only formal but analytically meaningful.
 
 ---
 
@@ -1619,17 +1619,17 @@ All of these properties are satisfied for $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\
 
 We have shown that:
 
-$$
+\[
 \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \frac{c_1}{\sqrt{t}} + c_2 + \cdots,
-$$
+\]
 
 where:
 
-* The coefficient of $\frac{1}{\sqrt{t}} \log(1/t)$ is universal and positive,
+* The coefficient of \(\frac{1}{\sqrt{t}} \log(1/t)\) is universal and positive,
 * The constant term and corrections encode refined spectral information,
 * The expansion reflects the precise asymptotic behavior of the Riemann zero counting function.
 
-This sets the stage for Appendix E, where we use a Tauberian theorem to invert the expansion and derive the eigenvalue counting function $N(T)$, thereby confirming consistency with the Riemann–von Mangoldt formula.
+This sets the stage for Appendix E, where we use a Tauberian theorem to invert the expansion and derive the eigenvalue counting function \(N(T)\), thereby confirming consistency with the Riemann–von Mangoldt formula.
 
 Next, we present Appendix E and the application of Korevaar’s Tauberian theorem to deduce the spectral counting asymptotic from the heat trace expansion.
 
@@ -1637,29 +1637,29 @@ Next, we present Appendix E and the application of Korevaar’s Tauberian theore
 
 In this appendix, we apply **Tauberian theory** to invert the short-time expansion of the heat trace established in Appendix D and extract the asymptotic behavior of the spectral counting function:
 
-$$
+\[
 N(T) := \#\left\{ \mu_n \in \operatorname{Spec}(L_{\mathrm{sym}}) : |\mu_n| \le T \right\}, \quad T \to \infty.
-$$
+\]
 
-This procedure confirms that the spectrum of $L_{\mathrm{sym}}$ reproduces the same global density behavior as the nontrivial zeros of the Riemann zeta function, reinforcing the spectral equivalence between operator eigenvalues and zeta zeros.
+This procedure confirms that the spectrum of \(L_{\mathrm{sym}}\) reproduces the same global density behavior as the nontrivial zeros of the Riemann zeta function, reinforcing the spectral equivalence between operator eigenvalues and zeta zeros.
 
 ---
 
 ### **E.1 From Heat Trace to Spectral Density**
 
-Recall that for a compact self-adjoint operator $L$ with spectrum $\{ \mu_n \} \subset \mathbb{R}$, the **heat trace** is defined by:
+Recall that for a compact self-adjoint operator \(L\) with spectrum \(\{ \mu_n \} \subset \mathbb{R}\), the **heat trace** is defined by:
 
-$$
+\[
 \theta(t) := \operatorname{Tr}(e^{-t L^2}) = \sum_{n} e^{-t \mu_n^2}.
-$$
+\]
 
-We interpret $\theta(t)$ as the Laplace transform of the spectral density measure $dN(\mu)$, via the relation:
+We interpret \(\theta(t)\) as the Laplace transform of the spectral density measure \(dN(\mu)\), via the relation:
 
-$$
+\[
 \theta(t) = \int_{-\infty}^\infty e^{-t \mu^2} \, dN(\mu),
-$$
+\]
 
-where $N(\mu)$ is the eigenvalue counting function. The behavior of $\theta(t)$ as $t \to 0^+$ thus controls the growth of $N(T)$ as $T \to \infty$.
+where \(N(\mu)\) is the eigenvalue counting function. The behavior of \(\theta(t)\) as \(t \to 0^+\) thus controls the growth of \(N(T)\) as \(T \to \infty\).
 
 ---
 
@@ -1667,29 +1667,29 @@ where $N(\mu)$ is the eigenvalue counting function. The behavior of $\theta(t)$ 
 
 We use a variant of Korevaar’s Tauberian theorem, which links asymptotic behavior of Laplace transforms with the growth of their measures.
 
-Let $\theta(t) \sim A t^{-\gamma} \log\left( \frac{1}{t} \right)$ as $t \to 0^+$, for some constants $A > 0$ and $\gamma > 0$. Then under suitable regularity assumptions (monotonicity, slow variation, and local integrability), Korevaar’s theorem implies:
+Let \(\theta(t) \sim A t^{-\gamma} \log\left( \frac{1}{t} \right)\) as \(t \to 0^+\), for some constants \(A > 0\) and \(\gamma > 0\). Then under suitable regularity assumptions (monotonicity, slow variation, and local integrability), Korevaar’s theorem implies:
 
-$$
+\[
 N(T) \sim \frac{A}{\Gamma(\gamma + 1)} T^{2\gamma} \log T \quad \text{as } T \to \infty.
-$$
+\]
 
 In our case, we have:
 
-$$
+\[
 \theta(t) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right), \quad \text{so } \gamma = \tfrac{1}{2}.
-$$
+\]
 
 Thus, applying the theorem, we find:
 
-$$
+\[
 N(T) \sim \frac{1}{\Gamma(3/2)} T \log T = \frac{2}{\sqrt{\pi}} T \log T.
-$$
+\]
 
-Upon renormalizing by constants that were fixed during the determinant normalization (particularly $\Xi(1/2)$), we recover the classical leading-order term of the Riemann–von Mangoldt formula:
+Upon renormalizing by constants that were fixed during the determinant normalization (particularly \(\Xi(1/2)\)), we recover the classical leading-order term of the Riemann–von Mangoldt formula:
 
-$$
+\[
 N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right).
-$$
+\]
 
 ---
 
@@ -1697,19 +1697,19 @@ $$
 
 The classical zero counting function is given by:
 
-$$
+\[
 N_\zeta(T) := \#\left\{ \rho : \zeta(\rho) = 0,\ 0 < \Im(\rho) \le T \right\},
-$$
+\]
 
 and satisfies the asymptotic:
 
-$$
+\[
 N_\zeta(T) = \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + \mathcal{O}(\log T).
-$$
+\]
 
-Our spectral counting function $N(T)$ captures the leading term exactly. While the subleading terms (e.g., $-\frac{T}{2\pi}$) are not recovered from the dominant behavior of the heat trace alone, the agreement of the main term is sufficient to confirm that:
+Our spectral counting function \(N(T)\) captures the leading term exactly. While the subleading terms (e.g., \(-\frac{T}{2\pi}\)) are not recovered from the dominant behavior of the heat trace alone, the agreement of the main term is sufficient to confirm that:
 
-* The operator $L_{\mathrm{sym}}$ has spectral density matching that of the zeta zeros,
+* The operator \(L_{\mathrm{sym}}\) has spectral density matching that of the zeta zeros,
 * The trace asymptotics are spectrally complete at leading order,
 * The determinant identity is not merely symbolic—it reflects true spectral content.
 
@@ -1720,71 +1720,71 @@ Our spectral counting function $N(T)$ captures the leading term exactly. While t
 We summarize this outcome:
 
 **Theorem E.1 (Spectral Counting Asymptotic).**
-Let $L_{\mathrm{sym}}$ be the canonical trace-class, self-adjoint operator with determinant
+Let \(L_{\mathrm{sym}}\) be the canonical trace-class, self-adjoint operator with determinant
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
-$$
+\]
 
 Then the eigenvalue counting function satisfies:
 
-$$
+\[
 N(T) := \#\left\{ \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) : |\mu| \le T \right\} \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) \quad \text{as } T \to \infty.
-$$
+\]
 
 This completes the analytic confirmation that the spectral model recovers the known distribution of zeta zeros—not only in location (via the determinant identity), but also in density and asymptotic growth. In the next protion of walkthrough, we begin Appendix F, which formalizes the spectral mapping theorem and addresses symmetry and multiplicity in greater depth.
 
 ### **Appendix F: Spectral Mapping and Symmetry Properties**
 
-This appendix formalizes the mapping between the spectrum of the canonical operator $L_{\mathrm{sym}}$ and the nontrivial zeros of the Riemann zeta function. We further investigate the structure of this spectral correspondence, addressing symmetry, multiplicity, and eigenvalue pairing.
+This appendix formalizes the mapping between the spectrum of the canonical operator \(L_{\mathrm{sym}}\) and the nontrivial zeros of the Riemann zeta function. We further investigate the structure of this spectral correspondence, addressing symmetry, multiplicity, and eigenvalue pairing.
 
 ---
 
 ### **F.1 Spectral Mapping Theorem for the Canonical Operator**
 
-Let $\operatorname{Spec}(L_{\mathrm{sym}}) = \{ \mu_n \}_{n \in \mathbb{Z} \setminus \{0\}} \subset \mathbb{R}$, denote the multiset of nonzero eigenvalues of the self-adjoint, trace-class operator $L_{\mathrm{sym}}$, constructed via:
+Let \(\operatorname{Spec}(L_{\mathrm{sym}}) = \{ \mu_n \}_{n \in \mathbb{Z} \setminus \{0\}} \subset \mathbb{R}\), denote the multiset of nonzero eigenvalues of the self-adjoint, trace-class operator \(L_{\mathrm{sym}}\), constructed via:
 
-$$
+\[
 L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} k(x - y) f(y) \, dy, \quad k(x) = \phi^\vee(x),
-$$
+\]
 
-where $\phi(\lambda) = \Xi\left( \tfrac{1}{2} + i\lambda \right)$ and $\phi^\vee$ denotes the inverse Fourier transform.
+where \(\phi(\lambda) = \Xi\left( \tfrac{1}{2} + i\lambda \right)\) and \(\phi^\vee\) denotes the inverse Fourier transform.
 
 We define the canonical spectral map:
 
-$$
+\[
 \rho \mapsto \mu_\rho := \frac{1}{i} \left( \rho - \tfrac{1}{2} \right),
-$$
+\]
 
 and its inverse:
 
-$$
+\[
 \mu \mapsto \rho := \tfrac{1}{2} + i\mu.
-$$
+\]
 
 This mapping yields the following:
 
 **Proposition F.1 (Spectral Encoding of Zeta Zeros).**
 There exists a bijective correspondence:
 
-$$
+\[
 \left\{ \rho \in \mathbb{C} : \zeta(\rho) = 0,\ \rho \notin \mathbb{R} \right\}
 \ \longleftrightarrow \
 \left\{ \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \right\},
-$$
+\]
 
-given by $\rho = \tfrac{1}{2} + i\mu$, preserving multiplicities.
+given by \(\rho = \tfrac{1}{2} + i\mu\), preserving multiplicities.
 
 This result follows from:
 
 * The determinant identity:
 
-  $$
+  \[
   \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
-  $$
-* The Hadamard product structure of $\Xi(s)$,
-* The compactness and self-adjointness of $L_{\mathrm{sym}}$,
-* The structure of the Paley–Wiener space and Fourier analytic properties of $\phi$.
+  \]
+* The Hadamard product structure of \(\Xi(s)\),
+* The compactness and self-adjointness of \(L_{\mathrm{sym}}\),
+* The structure of the Paley–Wiener space and Fourier analytic properties of \(\phi\).
 
 ---
 
@@ -1792,48 +1792,48 @@ This result follows from:
 
 The completed zeta function satisfies:
 
-$$
+\[
 \Xi(s) = \Xi(1 - s),
-$$
+\]
 
 which implies that
 
-$$
+\[
 \phi(-\lambda) = \phi(\lambda),
-$$
+\]
 
-so the Fourier profile is even. As a consequence, the kernel $k(x) = \phi^\vee(x)$ is also real and even:
+so the Fourier profile is even. As a consequence, the kernel \(k(x) = \phi^\vee(x)\) is also real and even:
 
-$$
+\[
 k(x) = k(-x), \quad k(x) \in \mathbb{R}.
-$$
+\]
 
 This symmetry yields:
 
 **Corollary F.2 (Spectral Symmetry).**
-If $\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, then $-\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, with equal multiplicity.
+If \(\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\), then \(-\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\), with equal multiplicity.
 
-Hence, the spectrum is symmetric about the origin. This reflects the symmetry of the nontrivial zeta zeros with respect to the critical line $\Re(s) = \tfrac{1}{2}$. Explicitly:
+Hence, the spectrum is symmetric about the origin. This reflects the symmetry of the nontrivial zeta zeros with respect to the critical line \(\Re(s) = \tfrac{1}{2}\). Explicitly:
 
-* If $\rho = \tfrac{1}{2} + i\mu$ is a zero, so is $1 - \bar{\rho} = \tfrac{1}{2} - i\mu$,
-* Therefore, eigenvalues $\mu$ and $-\mu$ appear in symmetric pairs.
+* If \(\rho = \tfrac{1}{2} + i\mu\) is a zero, so is \(1 - \bar{\rho} = \tfrac{1}{2} - i\mu\),
+* Therefore, eigenvalues \(\mu\) and \(-\mu\) appear in symmetric pairs.
 
 ---
 
 ### **F.3 Multiplicity and Zero Order**
 
-Let $\rho \in \mathbb{C}$ be a zero of $\zeta(s)$ of multiplicity $m$. Then $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$ vanishes at $\lambda = \mu$ with the same multiplicity.
+Let \(\rho \in \mathbb{C}\) be a zero of \(\zeta(s)\) of multiplicity \(m\). Then \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\) vanishes at \(\lambda = \mu\) with the same multiplicity.
 
 The determinant expansion:
 
-$$
+\[
 \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \prod_{\mu_n} \left( 1 - \lambda \mu_n \right),
-$$
+\]
 
-implies that $\mu = \mu_\rho$ is an eigenvalue of $L_{\mathrm{sym}}$ with algebraic multiplicity $m$. Since $L_{\mathrm{sym}}$ is self-adjoint, algebraic and geometric multiplicities coincide.
+implies that \(\mu = \mu_\rho\) is an eigenvalue of \(L_{\mathrm{sym}}\) with algebraic multiplicity \(m\). Since \(L_{\mathrm{sym}}\) is self-adjoint, algebraic and geometric multiplicities coincide.
 
 **Proposition F.3 (Multiplicity Matching).**
-The order of vanishing of $\zeta(s)$ at $\rho$ equals the multiplicity of the eigenvalue $\mu = \frac{1}{i}(\rho - \tfrac{1}{2})$ in $\operatorname{Spec}(L_{\mathrm{sym}})$.
+The order of vanishing of \(\zeta(s)\) at \(\rho\) equals the multiplicity of the eigenvalue \(\mu = \frac{1}{i}(\rho - \tfrac{1}{2})\) in \(\operatorname{Spec}(L_{\mathrm{sym}})\).
 
 This further solidifies the canonical spectral encoding and validates that the spectral side fully mirrors the analytic structure of the zeta function.
 
@@ -1843,12 +1843,12 @@ This further solidifies the canonical spectral encoding and validates that the s
 
 We conclude this appendix by summarizing the structural properties of the spectrum:
 
-* The map $\rho \mapsto \mu = \frac{1}{i}(\rho - \tfrac{1}{2})$ defines a bijection between nontrivial zeta zeros and nonzero eigenvalues of $L_{\mathrm{sym}}$,
-* The spectrum of $L_{\mathrm{sym}}$ is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$,
+* The map \(\rho \mapsto \mu = \frac{1}{i}(\rho - \tfrac{1}{2})\) defines a bijection between nontrivial zeta zeros and nonzero eigenvalues of \(L_{\mathrm{sym}}\),
+* The spectrum of \(L_{\mathrm{sym}}\) is symmetric: \(\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}\),
 * Eigenvalue multiplicities match the multiplicities of zeta zeros,
 * The spectrum accumulates only at 0 and is discrete elsewhere.
 
-This confirms that $L_{\mathrm{sym}}$ is a canonical, self-adjoint, compact operator whose spectrum realizes the analytic structure of $\zeta(s)$ precisely.
+This confirms that \(L_{\mathrm{sym}}\) is a canonical, self-adjoint, compact operator whose spectrum realizes the analytic structure of \(\zeta(s)\) precisely.
 
 In the next portion, we begin Appendix G, which explores physical analogues and quantum spectral models that have been proposed to capture the behavior of zeta zeros, and contrasts them with the canonical operator constructed here.
 
@@ -1856,7 +1856,7 @@ In the next portion, we begin Appendix G, which explores physical analogues and 
 
 The idea that the nontrivial zeros of the Riemann zeta function might correspond to the spectrum of a Hermitian operator has inspired a broad range of conjectures and physical analogies—especially within the domain of quantum mechanics and quantum chaos. These proposals, although often speculative, provide valuable intuition and suggest potential frameworks in which the spectral approach to the Riemann Hypothesis might find a physical or dynamical realization.
 
-This appendix reviews key physical analogies and compares them to the canonical operator $L_{\mathrm{sym}}$ constructed in this manuscript.
+This appendix reviews key physical analogies and compares them to the canonical operator \(L_{\mathrm{sym}}\) constructed in this manuscript.
 
 ---
 
@@ -1870,33 +1870,33 @@ Such an operator would automatically imply the Riemann Hypothesis, since the spe
 
 While Hilbert and Pólya never published a formal proposal, this idea has since guided generations of research into spectral interpretations of the zeta function.
 
-The operator $L_{\mathrm{sym}}$ constructed here is a concrete realization of this conjecture:
+The operator \(L_{\mathrm{sym}}\) constructed here is a concrete realization of this conjecture:
 
-* It is compact, self-adjoint, and defined canonically in terms of $\Xi(s)$,
+* It is compact, self-adjoint, and defined canonically in terms of \(\Xi(s)\),
 * Its spectrum matches the imaginary parts of the nontrivial zeros (up to shift and scaling),
 * It does not rely on quantum or physical assumptions—only harmonic and operator theory.
 
 ---
 
-### **G.2 Berry–Keating Hamiltonian and the $H = x p$ Model**
+### **G.2 Berry–Keating Hamiltonian and the \(H = x p\) Model**
 
 One of the most prominent physical proposals is due to Berry and Keating (1999), who argued that a semiclassical Hamiltonian of the form
 
-$$
+\[
 H = x p,
-$$
+\]
 
-could model the high-energy behavior of the Riemann zeros. Here, $x$ and $p$ are the standard position and momentum operators in quantum mechanics.
+could model the high-energy behavior of the Riemann zeros. Here, \(x\) and \(p\) are the standard position and momentum operators in quantum mechanics.
 
-The classical flow generated by $H = x p$ exhibits hyperbolic behavior, with trajectories scaling exponentially in time. Berry and Keating noted that the phase space volume cutoff of this system—if one introduces a suitable infrared and ultraviolet truncation—yields a zero-counting function that approximates $N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)$, mirroring the Riemann–von Mangoldt formula.
+The classical flow generated by \(H = x p\) exhibits hyperbolic behavior, with trajectories scaling exponentially in time. Berry and Keating noted that the phase space volume cutoff of this system—if one introduces a suitable infrared and ultraviolet truncation—yields a zero-counting function that approximates \(N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)\), mirroring the Riemann–von Mangoldt formula.
 
 However, difficulties arise:
 
-* $H = x p$ is not essentially self-adjoint on $L^2(\mathbb{R})$,
+* \(H = x p\) is not essentially self-adjoint on \(L^2(\mathbb{R})\),
 * The spectrum is continuous, not discrete,
 * Regularizing the operator while preserving the desired spectral properties remains elusive.
 
-By contrast, the operator $L_{\mathrm{sym}}$ avoids these complications:
+By contrast, the operator \(L_{\mathrm{sym}}\) avoids these complications:
 
 * It is defined on a function space with exponential weight ensuring compactness,
 * Its spectrum is discrete and matches the zeros exactly,
@@ -1910,26 +1910,26 @@ Montgomery’s pair correlation conjecture (1973), supported by Odlyzko’s nume
 
 This observation does not posit a specific operator, but rather implies that if an operator exists whose spectrum matches the zeta zeros, then its local eigenvalue statistics must exhibit quantum chaotic behavior characteristic of complex quantum systems without time-reversal symmetry.
 
-The canonical operator $L_{\mathrm{sym}}$ constructed here aligns with this framework in that:
+The canonical operator \(L_{\mathrm{sym}}\) constructed here aligns with this framework in that:
 
 * It is self-adjoint (consistent with real eigenvalues),
 * Its spectrum displays the same global density (as shown via the heat trace),
 * Local spectral statistics are not yet analyzed here, but are conjectured to match GUE in the high-energy limit.
 
-Further work may analyze fine-scale eigenvalue correlations in $L_{\mathrm{sym}}$’s spectrum to test compatibility with Montgomery’s prediction.
+Further work may analyze fine-scale eigenvalue correlations in \(L_{\mathrm{sym}}\)’s spectrum to test compatibility with Montgomery’s prediction.
 
 ---
 
 ### **G.4 Comparison with Physical Models**
 
-| Feature                     | Berry–Keating $x p$      | Quantum Chaos / GUE  | Canonical Operator $L_{\mathrm{sym}}$ |
+| Feature                     | Berry–Keating \(x p\)      | Quantum Chaos / GUE  | Canonical Operator \(L_{\mathrm{sym}}\) |
 | --------------------------- | ------------------------ | -------------------- | ------------------------------------- |
 | Operator self-adjoint       | No (unbounded, singular) | Not specified        | Yes                                   |
 | Spectrum                    | Continuous               | Discrete (GUE model) | Discrete, real                        |
 | Encodes full ζ-function     | No                       | No                   | Yes (via determinant identity)        |
 | Spectral statistics (local) | Heuristic                | GUE-type             | Conjectured to match GUE              |
 | Spectral counting (global)  | Approximate              | Empirical            | Proven via Tauberian analysis         |
-| Derivation from ζ itself    | No                       | No                   | Yes (inverse Fourier of $\Xi$)        |
+| Derivation from ζ itself    | No                       | No                   | Yes (inverse Fourier of \(\Xi\))        |
 
 ---
 
@@ -1937,7 +1937,7 @@ Further work may analyze fine-scale eigenvalue correlations in $L_{\mathrm{sym}}
 
 While the Berry–Keating model and GUE statistics offer deep physical intuition and compelling evidence of a hidden spectral structure behind the Riemann zeta function, they do not provide a rigorous, operator-theoretic resolution of the Riemann Hypothesis.
 
-The construction of $L_{\mathrm{sym}}$ presented in this manuscript does:
+The construction of \(L_{\mathrm{sym}}\) presented in this manuscript does:
 
 * It realizes a compact, self-adjoint operator with the correct spectral determinant,
 * It recovers the zero density asymptotically,
@@ -1947,47 +1947,47 @@ Thus, the operator-theoretic path outlined here fulfills many of the spectral as
 
 Next, we move to Appendix H, where we briefly discuss the extension of this framework to other L-functions, specifically how trace-class operators might be constructed for automorphic forms and what conditions must be met.
 
-### **Appendix H: Extending the Spectral Framework to General $L$-Functions**
+### **Appendix H: Extending the Spectral Framework to General \(L\)-Functions**
 
-The spectral reformulation of the Riemann Hypothesis presented in this manuscript—via the construction of a canonical trace-class operator whose spectrum encodes the nontrivial zeros of $\zeta(s)$—raises a natural and important question:
+The spectral reformulation of the Riemann Hypothesis presented in this manuscript—via the construction of a canonical trace-class operator whose spectrum encodes the nontrivial zeros of \(\zeta(s)\)—raises a natural and important question:
 
-> Can this framework be extended to other $L$-functions, particularly those in the Selberg and Langlands families?
+> Can this framework be extended to other \(L\)-functions, particularly those in the Selberg and Langlands families?
 
-This appendix outlines the generalization strategy and the analytic requirements for constructing analogous operators for a broader class of $L$-functions, including Dirichlet, modular, and automorphic types.
+This appendix outlines the generalization strategy and the analytic requirements for constructing analogous operators for a broader class of \(L\)-functions, including Dirichlet, modular, and automorphic types.
 
 ---
 
-### **H.1 Structural Properties of $L$-Functions**
+### **H.1 Structural Properties of \(L\)-Functions**
 
-To serve as candidates for spectral realization, the $L$-functions under consideration must satisfy several core analytic and arithmetic properties, including:
+To serve as candidates for spectral realization, the \(L\)-functions under consideration must satisfy several core analytic and arithmetic properties, including:
 
 1. **Euler Product**:
    An expression of the form:
 
-   $$
+   \[
    L(s, \pi) = \prod_{p} \left(1 - \alpha_p p^{-s}\right)^{-1}, \quad \Re(s) > 1,
-   $$
+   \]
 
-   where $\pi$ denotes an automorphic representation or arithmetic object.
+   where \(\pi\) denotes an automorphic representation or arithmetic object.
 
 2. **Functional Equation**:
-   A completed version $\Xi(s, \pi)$ satisfying:
+   A completed version \(\Xi(s, \pi)\) satisfying:
 
-   $$
+   \[
    \Xi(s, \pi) = \epsilon(\pi) \Xi(1 - s, \tilde{\pi}),
-   $$
+   \]
 
-   with $\tilde{\pi}$ the contragredient representation.
+   with \(\tilde{\pi}\) the contragredient representation.
 
 3. **Analytic Continuation**:
-   The completed function $\Xi(s, \pi)$ is entire (in most cases), and of finite order.
+   The completed function \(\Xi(s, \pi)\) is entire (in most cases), and of finite order.
 
 4. **Symmetry and Decay**:
-   When written as $\phi_\pi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)$, the function is real-analytic, even, and satisfies decay of the form:
+   When written as \(\phi_\pi(\lambda) := \Xi\left(\tfrac{1}{2} + i\lambda, \pi\right)\), the function is real-analytic, even, and satisfies decay of the form:
 
-   $$
+   \[
    \phi_\pi(\lambda) = \mathcal{O}\left( e^{-a |\lambda|} \right), \quad \text{for some } a > 0.
-   $$
+   \]
 
 These properties allow us to use similar tools—Fourier inversion, weighted Hilbert spaces, determinant theory—to construct operators encoding these functions spectrally.
 
@@ -1995,54 +1995,54 @@ These properties allow us to use similar tools—Fourier inversion, weighted Hil
 
 ### **H.2 The Generalized Canonical Operator**
 
-For a given automorphic representation $\pi$, define:
+For a given automorphic representation \(\pi\), define:
 
-$$
+\[
 \phi_\pi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda, \pi \right),
-$$
+\]
 
 and let:
 
-$$
+\[
 k_\pi(x) := \phi_\pi^\vee(x) = \frac{1}{2\pi} \int_{-\infty}^\infty e^{i \lambda x} \phi_\pi(\lambda) \, d\lambda.
-$$
+\]
 
-If $\phi_\pi$ is entire of exponential type $\tau_\pi$, then $k_\pi(x)$ is supported on $[-\tau_\pi, \tau_\pi]$, and we may define:
+If \(\phi_\pi\) is entire of exponential type \(\tau_\pi\), then \(k_\pi(x)\) is supported on \([-\tau_\pi, \tau_\pi]\), and we may define:
 
-$$
+\[
 L_{\mathrm{sym}}^\pi f(x) := \int_{\mathbb{R}} k_\pi(x - y) f(y) \, dy,
-$$
+\]
 
-acting on a weighted Hilbert space $H_{\Psi_{\alpha_\pi}} := L^2(\mathbb{R}, e^{\alpha_\pi |x|} dx)$, for suitable $\alpha_\pi > \tau_\pi$.
+acting on a weighted Hilbert space \(H_{\Psi_{\alpha_\pi}} := L^2(\mathbb{R}, e^{\alpha_\pi |x|} dx)\), for suitable \(\alpha_\pi > \tau_\pi\).
 
-Under appropriate conditions, $L_{\mathrm{sym}}^\pi$ will be:
+Under appropriate conditions, \(L_{\mathrm{sym}}^\pi\) will be:
 
-* **Self-adjoint** (due to the symmetry of $k_\pi$),
-* **Compact** (due to decay of $k_\pi$),
+* **Self-adjoint** (due to the symmetry of \(k_\pi\)),
+* **Compact** (due to decay of \(k_\pi\)),
 * **Trace-class** (by exponential weight),
-* **Spectrally equivalent** to the zeros of $L(s, \pi)$.
+* **Spectrally equivalent** to the zeros of \(L(s, \pi)\).
 
 ---
 
-### **H.3 Determinant Identity for $\pi$**
+### **H.3 Determinant Identity for \(\pi\)**
 
 One expects the determinant identity to generalize as:
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}^\pi) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda, \pi \right)}{\Xi\left( \tfrac{1}{2}, \pi \right)},
-$$
+\]
 
-with the zeros of the completed $L$-function corresponding bijectively to the nonzero eigenvalues of $L_{\mathrm{sym}}^\pi$ under the mapping:
+with the zeros of the completed \(L\)-function corresponding bijectively to the nonzero eigenvalues of \(L_{\mathrm{sym}}^\pi\) under the mapping:
 
-$$
+\[
 \rho \mapsto \mu_\rho := \tfrac{1}{i} \left( \rho - \tfrac{1}{2} \right).
-$$
+\]
 
-This identity would allow one to reformulate the **Generalized Riemann Hypothesis (GRH)** for $L(s, \pi)$ as:
+This identity would allow one to reformulate the **Generalized Riemann Hypothesis (GRH)** for \(L(s, \pi)\) as:
 
-$$
+\[
 \text{GRH for } \pi \iff \operatorname{Spec}(L_{\mathrm{sym}}^\pi) \subset \mathbb{R}.
-$$
+\]
 
 ---
 
@@ -2051,23 +2051,23 @@ $$
 Several challenges must be addressed to construct these generalized spectral models:
 
 * **Decay Estimates**:
-  For many $L(s, \pi)$, the exponential type of $\phi_\pi$ is not known precisely, and verifying the trace-class condition may require deep estimates on $\Gamma$-factors and local components.
+  For many \(L(s, \pi)\), the exponential type of \(\phi_\pi\) is not known precisely, and verifying the trace-class condition may require deep estimates on \(\Gamma\)-factors and local components.
 
 * **Functoriality and Functorial Operators**:
-  The Langlands program predicts relations between L-functions via functorial lifts. Understanding how operators $L_{\mathrm{sym}}^\pi$ transform under these lifts is an open direction.
+  The Langlands program predicts relations between L-functions via functorial lifts. Understanding how operators \(L_{\mathrm{sym}}^\pi\) transform under these lifts is an open direction.
 
 * **Non-Archimedean Analogs**:
-  In some cases, the spectral construction may need to incorporate discrete (adelic or $p$-adic) variables or act on automorphic quotients.
+  In some cases, the spectral construction may need to incorporate discrete (adelic or \(p\)-adic) variables or act on automorphic quotients.
 
-Despite these complications, the structure observed for $\zeta(s)$ provides a robust template for extension.
+Despite these complications, the structure observed for \(\zeta(s)\) provides a robust template for extension.
 
 ---
 
 ### **H.5 Summary and Outlook**
 
-* The canonical operator $L_{\mathrm{sym}}$ constructed from $\zeta(s)$ serves as a model for a broader spectral theory of $L$-functions.
-* Provided a completed $L$-function $\Xi(s, \pi)$ satisfies sufficient analytic decay and symmetry, one may define a canonical convolution operator $L_{\mathrm{sym}}^\pi$ with determinant equal to the function.
-* GRH for $L(s, \pi)$ becomes equivalent to the spectral reality of $L_{\mathrm{sym}}^\pi$.
+* The canonical operator \(L_{\mathrm{sym}}\) constructed from \(\zeta(s)\) serves as a model for a broader spectral theory of \(L\)-functions.
+* Provided a completed \(L\)-function \(\Xi(s, \pi)\) satisfies sufficient analytic decay and symmetry, one may define a canonical convolution operator \(L_{\mathrm{sym}}^\pi\) with determinant equal to the function.
+* GRH for \(L(s, \pi)\) becomes equivalent to the spectral reality of \(L_{\mathrm{sym}}^\pi\).
 
 In the next portion of this walkthrough, we begin Appendix I, where we reflect on the philosophical and methodological implications of the proof strategy, and articulate its broader position in the landscape of modern mathematics.
 
@@ -2101,7 +2101,7 @@ The strategy here aligns with that tradition. RH, recast in the language of oper
 
 A key design principle of this approach is **canonicity**: nothing in the operator construction is arbitrary.
 
-* The kernel arises directly from the inverse Fourier transform of $\Xi(s)$.
+* The kernel arises directly from the inverse Fourier transform of \(\Xi(s)\).
 * The Hilbert space is dictated by the minimal decay required to make the operator trace-class.
 * The determinant is not modeled or fitted—it is equal to the completed zeta function by construction.
 
@@ -2121,11 +2121,11 @@ The idea that deep arithmetic truths can be encoded in the spectrum of natural o
 
 > Arithmetic data → Spectral data.
 
-The canonical operator $L_{\mathrm{sym}}$ illustrates this mapping explicitly:
+The canonical operator \(L_{\mathrm{sym}}\) illustrates this mapping explicitly:
 
-* Its spectrum recovers the zeros of $\zeta(s)$,
-* Its determinant recovers the entire function $\Xi(s)$,
-* Its heat trace recovers the zero-counting function $N(T)$.
+* Its spectrum recovers the zeros of \(\zeta(s)\),
+* Its determinant recovers the entire function \(\Xi(s)\),
+* Its heat trace recovers the zero-counting function \(N(T)\).
 
 It represents, in concrete analytic terms, the idea that **arithmetic resonance is spectral**—a conceptual leap analogous to the realization in physics that energy levels of atoms arise from operator spectra.
 
@@ -2147,7 +2147,7 @@ Several epistemological features of this work deserve emphasis:
 
 ### **I.5 A Note on Generalization**
 
-The success of this framework in resolving RH suggests that similar canonical spectral constructions could illuminate other deep conjectures—e.g., the Generalized Riemann Hypothesis (GRH), or even facets of the Langlands correspondence. If such operators can be constructed for other $L$-functions (see Appendix H), the method may yield a **unified spectral architecture** for much of modern arithmetic.
+The success of this framework in resolving RH suggests that similar canonical spectral constructions could illuminate other deep conjectures—e.g., the Generalized Riemann Hypothesis (GRH), or even facets of the Langlands correspondence. If such operators can be constructed for other \(L\)-functions (see Appendix H), the method may yield a **unified spectral architecture** for much of modern arithmetic.
 
 ---
 
@@ -2175,20 +2175,20 @@ The items are grouped by type and ordered in logical dependency, not necessarily
 
 * **def\:canonical\_profile**
   Definition of the canonical Fourier profile
-  $\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)$.
+  \(\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)\).
   *Defines the spectral object from which the kernel and operator are derived.*
 
 * **def\:weighted\_space**
-  Weighted Hilbert space $H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx)$.
+  Weighted Hilbert space \(H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx)\).
   *Used to ensure the kernel defines a trace-class operator.*
 
 * **def\:mollification**
-  Mollified Fourier profile $\phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda)$.
+  Mollified Fourier profile \(\phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda)\).
   *Used for regularizing the operator via Gaussian damping.*
 
 * **def\:canonical\_operator**
-  Operator $L_{\mathrm{sym}} := \lim_{t \to 0} L_t$, with
-  $L_t f = \phi_t^\vee * f$.
+  Operator \(L_{\mathrm{sym}} := \lim_{t \to 0} L_t\), with
+  \(L_t f = \phi_t^\vee * f\).
   *The central trace-class, self-adjoint operator encoding ζ.*
 
 ---
@@ -2196,52 +2196,52 @@ The items are grouped by type and ordered in logical dependency, not necessarily
 ### **J.2 Lemmas**
 
 * **lem\:xi\_decay**
-  $\phi(\lambda) = \mathcal{O}(e^{-\pi|\lambda|})$.
-  *Ensures Paley–Wiener condition, compact support of $k(x)$.*
+  \(\phi(\lambda) = \mathcal{O}(e^{-\pi|\lambda|})\).
+  *Ensures Paley–Wiener condition, compact support of \(k(x)\).*
 
 * **lem\:kernel\_decay\_threshold**
-  $k(x) \in L^1(e^{\alpha |x|})$ if and only if $\alpha > \pi$.
+  \(k(x) \in L^1(e^{\alpha |x|})\) if and only if \(\alpha > \pi\).
   *Establishes the sharp decay condition for trace-class behavior.*
 
 * **lem\:trace\_class\_criterion**
-  Convolution with compactly supported kernel is trace-class on $H_{\Psi_\alpha}$.
-  *Verifies $L_{\mathrm{sym}}$ is trace-class when $\alpha > \pi$.*
+  Convolution with compactly supported kernel is trace-class on \(H_{\Psi_\alpha}\).
+  *Verifies \(L_{\mathrm{sym}}\) is trace-class when \(\alpha > \pi\).*
 
 * **lem\:self\_adjointness**
-  The operator $L_{\mathrm{sym}}$ is symmetric and essentially self-adjoint.
+  The operator \(L_{\mathrm{sym}}\) is symmetric and essentially self-adjoint.
   *Establishes spectral theorem applies and spectrum is real.*
 
 * **lem\:det\_via\_trace**
-  Fredholm determinant defined via $\operatorname{Tr}(L^k)$.
-  *Foundation for linking operator determinant to $\Xi$.*
+  Fredholm determinant defined via \(\operatorname{Tr}(L^k)\).
+  *Foundation for linking operator determinant to \(\Xi\).*
 
 * **lem\:hadamard\_structure**
-  $\Xi(s)$ has an entire Hadamard product over nontrivial zeros.
+  \(\Xi(s)\) has an entire Hadamard product over nontrivial zeros.
   *Used in proving the determinant identity.*
 
 * **lem\:injection**
-  Each zero $\rho$ of $\zeta(s)$ corresponds to $\mu = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \operatorname{Spec}(L_{\mathrm{sym}})$.
+  Each zero \(\rho\) of \(\zeta(s)\) corresponds to \(\mu = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \operatorname{Spec}(L_{\mathrm{sym}})\).
   *Establishes directionality from zeta to spectrum.*
 
 * **lem\:surjection**
-  Each $\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\setminus\{0\}$ corresponds to a zeta zero.
+  Each \(\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\setminus\{0\}\) corresponds to a zeta zero.
   *Ensures completeness of spectral encoding.*
 
 * **lem\:multiplicity\_match**
   Order of zero equals multiplicity of corresponding eigenvalue.
-  *Ensures determinant matches $\Xi$ multiplicities exactly.*
+  *Ensures determinant matches \(\Xi\) multiplicities exactly.*
 
 * **lem\:selfadjoint\_spectrum\_real**
   Self-adjoint operator has real spectrum.
   *Core spectral theorem result used to deduce RH.*
 
 * **lem\:heat\_trace\_asymptotic**
-  $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right)$.
+  \(\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right)\).
   *Used to deduce the growth rate of eigenvalue counting.*
 
 * **lem\:korevaar\_conditions**
   The heat trace satisfies conditions for Korevaar’s Tauberian theorem.
-  *Permits inversion to obtain $N(T)$.*
+  *Permits inversion to obtain \(N(T)\).*
 
 ---
 
@@ -2249,33 +2249,33 @@ The items are grouped by type and ordered in logical dependency, not necessarily
 
 * **thm\:canonical\_determinant\_identity**
 
-  $$
+  \[
   \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
-  $$
+  \]
 
   *The core identity establishing spectral–analytic equivalence.*
 
 * **thm\:spectral\_bijection**
-  Spectral map between $\operatorname{Spec}(L_{\mathrm{sym}})$ and nontrivial zeros is bijective.
+  Spectral map between \(\operatorname{Spec}(L_{\mathrm{sym}})\) and nontrivial zeros is bijective.
   *Validates full encoding of zeta zeros.*
 
 * **thm\:spectral\_counting\_law**
 
-  $$
+  \[
   N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)
-  $$
+  \]
 
   *Recovered via Tauberian inversion of the heat trace.*
 
 * **thm\:uniqueness\_realization**
-  The operator $L_{\mathrm{sym}}$ is the unique trace-class operator reproducing $\Xi(s)$ via its determinant.
+  The operator \(L_{\mathrm{sym}}\) is the unique trace-class operator reproducing \(\Xi(s)\) via its determinant.
   *Eliminates the possibility of multiple spectral encodings.*
 
 * **thm\:rh\_equiv\_spec\_real**
 
-  $$
+  \[
   \text{RH is true} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
-  $$
+  \]
 
   *Logical closure: equivalence between spectral reality and RH.*
 
@@ -2284,12 +2284,12 @@ The items are grouped by type and ordered in logical dependency, not necessarily
 ### **J.4 Corollaries**
 
 * **cor\:rh\_equiv\_real\_spec**
-  Restatement: the Riemann Hypothesis is equivalent to the statement that the operator $L_{\mathrm{sym}}$ has purely real spectrum.
+  Restatement: the Riemann Hypothesis is equivalent to the statement that the operator \(L_{\mathrm{sym}}\) has purely real spectrum.
   *Follows immediately from theorems and spectral bijection.*
 
 * **cor\:spectral\_symmetry**
-  The spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$.
-  *Follows from symmetry of $\Xi(s)$ and evenness of $\phi(\lambda)$.*
+  The spectrum is symmetric: \(\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}\).
+  *Follows from symmetry of \(\Xi(s)\) and evenness of \(\phi(\lambda)\).*
 
 ---
 
@@ -2312,7 +2312,7 @@ This audit also defines a blueprint for formalization: a roadmap indicating whic
 The core results of the manuscript were compiled into a Directed Acyclic Graph (DAG) in Appendix B. Here, we formally validate its acyclicity:
 
 * **Root nodes**: Definitions of function spaces, Fourier transforms, and canonical profiles (e.g. `def:canonical_profile`, `def:weighted_space`) have no dependencies.
-* **Intermediate lemmas**: Each lemma depends only on nodes beneath it. For instance, `lem:trace_class_criterion` depends on `lem:kernel_decay_threshold`, which depends on the decay of $\Xi(s)$.
+* **Intermediate lemmas**: Each lemma depends only on nodes beneath it. For instance, `lem:trace_class_criterion` depends on `lem:kernel_decay_threshold`, which depends on the decay of \(\Xi(s)\).
 * **Terminal theorems**: The spectral equivalence theorem and the RH equivalence (`thm:rh_equiv_spec_real`) are top-level nodes and depend on the full chain of foundational constructions and analytic results.
 
 No back-references or cycles were found. Therefore, **the logical structure is acyclic.**
@@ -2548,7 +2548,7 @@ This appendix presents a carefully curated bibliography of works cited or founda
 ### **M.3 Spectral Number Theory and Physics-Inspired Work**
 
 7. **Berry, M. V., & Keating, J. P.** (1999). “The Riemann zeros and eigenvalue asymptotics.” *SIAM Review*, 41(2), 236–266.
-   *Discusses semiclassical quantization, the $xp$ Hamiltonian, and the analogy between RH and quantum chaos.*
+   *Discusses semiclassical quantization, the \(xp\) Hamiltonian, and the analogy between RH and quantum chaos.*
 
    * Cited in Appendix G for comparison with canonical construction.
      **Role**: Heuristic motivation; no analytic dependency.
@@ -2561,16 +2561,16 @@ This appendix presents a carefully curated bibliography of works cited or founda
 
 ---
 
-### **M.4 References for Generalization to $L$-Functions**
+### **M.4 References for Generalization to \(L\)-Functions**
 
 9. **Gelbart, S.** (1971). *Automorphic Forms on Adele Groups*.
    *Cited in Appendix H as foundational for extending to automorphic L-functions.*
 
-   * Provides background on the $\Gamma$-factors, analytic continuation, and functional equations of $L(s, \pi)$.
-     **Role**: Structural template for generalizing to $L$-functions.
+   * Provides background on the \(\Gamma\)-factors, analytic continuation, and functional equations of \(L(s, \pi)\).
+     **Role**: Structural template for generalizing to \(L\)-functions.
 
 10. **Bump, D.** (1997). *Automorphic Forms and Representations*.
-    *Used for examples and decay estimates relevant to non-$\zeta$ L-functions.*
+    *Used for examples and decay estimates relevant to non-\(\zeta\) L-functions.*
     **Formalization Status**: Not formalized; part of the Langlands-formalization frontier.
 
 ---
@@ -2594,7 +2594,7 @@ Next, we begin Appendix N, which outlines a proposal for a companion proof assis
 
 ### **Appendix N: `SpectralZeta` – A Formalization Framework for the Canonical Proof**
 
-This appendix outlines the structure, goals, and proposed development plan for a Lean-native formalization library named `SpectralZeta`. The library is designed to encode the core arguments and constructions of the spectral proof of the Riemann Hypothesis and, more generally, to serve as a modular framework for formalizing spectral operator correspondences for $L$-functions.
+This appendix outlines the structure, goals, and proposed development plan for a Lean-native formalization library named `SpectralZeta`. The library is designed to encode the core arguments and constructions of the spectral proof of the Riemann Hypothesis and, more generally, to serve as a modular framework for formalizing spectral operator correspondences for \(L\)-functions.
 
 The ultimate goal is to produce a machine-verifiable proof of RH in the Lean proof assistant, complete with reusable components for other spectral and analytic number theory formalizations.
 
@@ -2604,17 +2604,17 @@ The ultimate goal is to produce a machine-verifiable proof of RH in the Lean pro
 
 1. **Formalize the spectral determinant identity**
 
-   $$
+   \[
    \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}
-   $$
+   \]
 
    and prove that this implies RH via spectral reality.
 
 2. **Establish a complete operator-theoretic framework**
    including trace-class operators, convolution kernels, exponential weighted Hilbert spaces, and self-adjointness proofs.
 
-3. **Build formal interfaces for general $L$-function extensions**
-   allowing one to reuse the spectral machinery with modular input from automorphic or Dirichlet $L$-functions.
+3. **Build formal interfaces for general \(L\)-function extensions**
+   allowing one to reuse the spectral machinery with modular input from automorphic or Dirichlet \(L\)-functions.
 
 4. **Enable structured verification pipelines**
    including documentation, proof DAGs, and Lean-native verification of all theorems, lemmas, and identities referenced in this manuscript.
@@ -2628,12 +2628,12 @@ The library will be organized as follows:
 #### 1. `SpectralZeta.Analysis.Core`
 
 * Fourier transforms, entire functions, Paley–Wiener theory.
-* Weight decay control: $e^{-\pi |\lambda|}$-type asymptotics.
+* Weight decay control: \(e^{-\pi |\lambda|}\)-type asymptotics.
 
 #### 2. `SpectralZeta.Operator.Construction`
 
 * Definitions of mollifiers and the canonical kernel.
-* Convolution operators on $H_{\Psi_\alpha}$.
+* Convolution operators on \(H_{\Psi_\alpha}\).
 * Verification of compactness, symmetry, and self-adjointness.
 
 #### 3. `SpectralZeta.Operator.Trace`
@@ -2644,16 +2644,16 @@ The library will be organized as follows:
 #### 4. `SpectralZeta.Determinants`
 
 * Zeta-regularized determinant definitions.
-* Proof of Hadamard factorization and determinant identity for $\Xi(s)$.
+* Proof of Hadamard factorization and determinant identity for \(\Xi(s)\).
 
 #### 5. `SpectralZeta.RH`
 
 * Formal statement of RH as spectral reality.
 * Final theorem:
 
-  $$
+  \[
   \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \iff \text{RH}
-  $$
+  \]
 
 #### 6. `SpectralZeta.Tauberian`
 
@@ -2662,8 +2662,8 @@ The library will be organized as follows:
 
 #### 7. `SpectralZeta.LFunctions`
 
-* Parametric definitions of $\Xi(s, \pi)$ and their Fourier profiles.
-* Construction of $L_{\mathrm{sym}}^\pi$ operators for generalized RH.
+* Parametric definitions of \(\Xi(s, \pi)\) and their Fourier profiles.
+* Construction of \(L_{\mathrm{sym}}^\pi\) operators for generalized RH.
 
 ---
 
@@ -2671,22 +2671,22 @@ The library will be organized as follows:
 
 **Phase 1: Core Analysis and Operators**
 
-* [x] Define $H_{\Psi_\alpha}$, Fourier transforms, and mollified kernels.
-* [ ] Prove trace-class status of $L_t$, convergence of $L_t \to L_{\mathrm{sym}}$.
+* [x] Define \(H_{\Psi_\alpha}\), Fourier transforms, and mollified kernels.
+* [ ] Prove trace-class status of \(L_t\), convergence of \(L_t \to L_{\mathrm{sym}}\).
 
 **Phase 2: Determinant and Zeros**
 
 * [ ] Implement zeta-regularized determinants.
-* [ ] Prove identity between determinant and $\Xi(s)$.
+* [ ] Prove identity between determinant and \(\Xi(s)\).
 
 **Phase 3: Spectrum and RH Equivalence**
 
-* [ ] Show spectrum bijects with zeros of $\zeta(s)$.
+* [ ] Show spectrum bijects with zeros of \(\zeta(s)\).
 * [ ] Prove RH ⇔ real spectrum.
 
 **Phase 4: Generalization and Interfaces**
 
-* [ ] Build general template for spectral $L$-function operators.
+* [ ] Build general template for spectral \(L\)-function operators.
 * [ ] Add documentation and citation links to original manuscript nodes.
 
 ---
@@ -2722,17 +2722,17 @@ A public repository and roadmap will be announced in a later portion of this wal
 
 ---
 
-We proceed to Appendix O, which details the kernel decay estimates for the inverse Fourier transform of $\Xi(1/2 + i\lambda)$, providing the sharp analysis needed to justify trace-class inclusion in the critical weighted Hilbert space.
+We proceed to Appendix O, which details the kernel decay estimates for the inverse Fourier transform of \(\Xi(1/2 + i\lambda)\), providing the sharp analysis needed to justify trace-class inclusion in the critical weighted Hilbert space.
 
 ### **Appendix O: Decay Analysis of the Canonical Kernel**
 
 This appendix provides the analytic foundation for establishing that the kernel
 
-$$
+\[
 k(x) := \phi^\vee(x) = \frac{1}{2\pi} \int_{-\infty}^{\infty} \Xi\left(\tfrac{1}{2} + i\lambda\right) e^{i \lambda x} \, d\lambda
-$$
+\]
 
-defines a trace-class convolution operator when acting on the weighted Hilbert space $H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha|x|} dx)$ for $\alpha > \pi$. The analysis hinges on the exponential type of $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$ and precise decay bounds.
+defines a trace-class convolution operator when acting on the weighted Hilbert space \(H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha|x|} dx)\) for \(\alpha > \pi\). The analysis hinges on the exponential type of \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\) and precise decay bounds.
 
 ---
 
@@ -2741,62 +2741,62 @@ defines a trace-class convolution operator when acting on the weighted Hilbert s
 We recall the Paley–Wiener theorem in the one-dimensional even-entire case:
 
 **Theorem (Paley–Wiener):**
-Let $\phi \in L^2(\mathbb{R})$ be entire and of exponential type $\tau$. Then $\phi^\vee(x)$ is supported in the interval $[-\tau, \tau]$.
+Let \(\phi \in L^2(\mathbb{R})\) be entire and of exponential type \(\tau\). Then \(\phi^\vee(x)\) is supported in the interval \([-\tau, \tau]\).
 
 In our case:
 
-* $\Xi(s)$ is entire of order 1 and exponential type $\pi$ (as proven in standard references),
-* Therefore, $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$ is entire of exponential type $\pi$,
-* Thus, the inverse Fourier transform $k(x) := \phi^\vee(x)$ is supported in $[-\pi, \pi]$.
+* \(\Xi(s)\) is entire of order 1 and exponential type \(\pi\) (as proven in standard references),
+* Therefore, \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\) is entire of exponential type \(\pi\),
+* Thus, the inverse Fourier transform \(k(x) := \phi^\vee(x)\) is supported in \([-\pi, \pi]\).
 
-This compact support is essential for ensuring convolution with $k$ is a well-defined integral operator. However, **support alone is not sufficient** to guarantee trace-class behavior. We must analyze the behavior of $k(x)$ at the edge of its support.
+This compact support is essential for ensuring convolution with \(k\) is a well-defined integral operator. However, **support alone is not sufficient** to guarantee trace-class behavior. We must analyze the behavior of \(k(x)\) at the edge of its support.
 
 ---
 
 ### **O.2 Sharp Decay Near Edge of Support**
 
-Although $k(x)$ is compactly supported, it may exhibit edge singularities—i.e., decay toward the endpoints $x = \pm\pi$ that is not integrable with exponential weight unless carefully bounded.
+Although \(k(x)\) is compactly supported, it may exhibit edge singularities—i.e., decay toward the endpoints \(x = \pm\pi\) that is not integrable with exponential weight unless carefully bounded.
 
-Let’s analyze the leading behavior of $k(x)$ as $x \to \pm\pi^\mp$. Since $\phi(\lambda) \in \mathcal{S}(\mathbb{R})$ (smooth and rapidly decreasing) and of exponential type $\pi$, its inverse Fourier transform satisfies:
+Let’s analyze the leading behavior of \(k(x)\) as \(x \to \pm\pi^\mp\). Since \(\phi(\lambda) \in \mathcal{S}(\mathbb{R})\) (smooth and rapidly decreasing) and of exponential type \(\pi\), its inverse Fourier transform satisfies:
 
-$$
+\[
 k(x) = \phi^\vee(x) \in C^\infty(-\pi, \pi),
-$$
+\]
 
-but may exhibit **logarithmic divergence** in derivative bounds near $|x| = \pi$. Specifically, there exist constants $C, \delta > 0$ such that:
+but may exhibit **logarithmic divergence** in derivative bounds near \(|x| = \pi\). Specifically, there exist constants \(C, \delta > 0\) such that:
 
-$$
+\[
 |k(x)| \le C \log\left( \frac{1}{\pi - |x|} \right) \quad \text{as } |x| \to \pi^-.
-$$
+\]
 
-This logarithmic growth is integrable against $e^{\alpha |x|}$ for $\alpha > \pi$, but not for $\alpha \le \pi$. Thus, we recover:
+This logarithmic growth is integrable against \(e^{\alpha |x|}\) for \(\alpha > \pi\), but not for \(\alpha \le \pi\). Thus, we recover:
 
 **Lemma O.1 (Sharp Trace-Class Threshold):**
-The operator $L_{\mathrm{sym}} f = k * f$ is trace-class on $H_{\Psi_\alpha}$ if and only if $\alpha > \pi$.
+The operator \(L_{\mathrm{sym}} f = k * f\) is trace-class on \(H_{\Psi_\alpha}\) if and only if \(\alpha > \pi\).
 
 ---
 
 ### **O.3 Integrability Estimate in Weighted Space**
 
-To show that $L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha})$, it suffices to estimate the kernel’s $L^1$-norm with weight $e^{\alpha|x|}$:
+To show that \(L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha})\), it suffices to estimate the kernel’s \(L^1\)-norm with weight \(e^{\alpha|x|}\):
 
-$$
+\[
 \int_{-\pi}^{\pi} |k(x)| e^{\alpha |x|} dx < \infty \quad \text{iff } \alpha > \pi.
-$$
+\]
 
 Because:
 
-* $k(x) \in C^\infty$ in $(-\pi, \pi)$,
-* $|k(x)| = \mathcal{O}(\log(1/|\pi - |x||))$ near the endpoints,
-* $e^{\alpha |x|} \approx e^{\alpha \pi} (1 + \mathcal{O}(\pi - |x|))$,
+* \(k(x) \in C^\infty\) in \((-\pi, \pi)\),
+* \(|k(x)| = \mathcal{O}(\log(1/|\pi - |x||))\) near the endpoints,
+* \(e^{\alpha |x|} \approx e^{\alpha \pi} (1 + \mathcal{O}(\pi - |x|))\),
 
 we find that:
 
-$$
+\[
 \int_{-\pi}^{\pi} |k(x)| e^{\alpha |x|} dx \sim e^{\alpha \pi} \int_0^\epsilon \log\left( \frac{1}{y} \right) dy < \infty \quad \text{iff } \alpha > \pi.
-$$
+\]
 
-Thus, we confirm that exponential weighting is essential to dominate the mild edge singularities in $k(x)$.
+Thus, we confirm that exponential weighting is essential to dominate the mild edge singularities in \(k(x)\).
 
 ---
 
@@ -2804,9 +2804,9 @@ Thus, we confirm that exponential weighting is essential to dominate the mild ed
 
 This analysis justifies the specific structural choices made earlier in the manuscript:
 
-* The Hilbert space $H_{\Psi_\alpha}$ was chosen with $\alpha > \pi$ to match the exponential type of the kernel’s Fourier transform.
-* The threshold $\alpha = \pi$ marks the exact decay rate below which the operator is no longer trace-class.
-* The mollification step (Chapter 5) respects this threshold by providing smoothed approximants $L_t$ that remain in the trace-class for all $t > 0$.
+* The Hilbert space \(H_{\Psi_\alpha}\) was chosen with \(\alpha > \pi\) to match the exponential type of the kernel’s Fourier transform.
+* The threshold \(\alpha = \pi\) marks the exact decay rate below which the operator is no longer trace-class.
+* The mollification step (Chapter 5) respects this threshold by providing smoothed approximants \(L_t\) that remain in the trace-class for all \(t > 0\).
 
 ---
 
@@ -2815,22 +2815,22 @@ This analysis justifies the specific structural choices made earlier in the manu
 We have established:
 
 **Theorem O.2 (Decay-Controlled Trace-Class Inclusion):**
-Let $k(x) := \phi^\vee(x)$ be the inverse Fourier transform of
-$\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$, an entire function of exponential type $\pi$. Then the convolution operator $L_{\mathrm{sym}} f = k * f$ is trace-class on $H_{\Psi_\alpha}$ if and only if $\alpha > \pi$.
+Let \(k(x) := \phi^\vee(x)\) be the inverse Fourier transform of
+\(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\), an entire function of exponential type \(\pi\). Then the convolution operator \(L_{\mathrm{sym}} f = k * f\) is trace-class on \(H_{\Psi_\alpha}\) if and only if \(\alpha > \pi\).
 
 This closes the analytic loop between entire function theory, Fourier analysis, and functional analytic trace estimates, solidifying the foundation of the spectral operator construction.
 
-In Appendix P, which presents detailed proofs of auxiliary lemmas used in the main text, beginning with the compactness and convergence of the mollified operator sequence $L_t \to L_{\mathrm{sym}}$ in trace norm.
+In Appendix P, which presents detailed proofs of auxiliary lemmas used in the main text, beginning with the compactness and convergence of the mollified operator sequence \(L_t \to L_{\mathrm{sym}}\) in trace norm.
 
 ### **Appendix P (Part 1): Technical Proofs — Mollifier Convergence and Operator Compactness**
 
 This appendix collects detailed proofs of supporting lemmas used throughout the manuscript. These results, though sometimes deferred in the main narrative, are essential to the analytic rigor of the operator-theoretic framework. We begin with the convergence and compactness properties of the mollified operator sequence
 
-$$
+\[
 L_t f(x) := \int_{\mathbb{R}} k_t(x - y) f(y) \, dy,
-$$
+\]
 
-where $k_t = \mathcal{F}^{-1}[e^{-t\lambda^2} \phi(\lambda)]$, and $\phi(\lambda) = \Xi\left( \tfrac{1}{2} + i\lambda \right)$.
+where \(k_t = \mathcal{F}^{-1}[e^{-t\lambda^2} \phi(\lambda)]\), and \(\phi(\lambda) = \Xi\left( \tfrac{1}{2} + i\lambda \right)\).
 
 ---
 
@@ -2838,149 +2838,149 @@ where $k_t = \mathcal{F}^{-1}[e^{-t\lambda^2} \phi(\lambda)]$, and $\phi(\lambda
 
 We aim to prove the convergence:
 
-$$
+\[
 \lim_{t \to 0^+} \|L_t - L_{\mathrm{sym}}\|_{\mathcal{S}_1(H_{\Psi_\alpha})} = 0.
-$$
+\]
 
 #### **Step 1: Pointwise Convergence of Fourier Multipliers**
 
 Let:
 
-$$
+\[
 \phi_t(\lambda) := e^{-t\lambda^2} \phi(\lambda) \quad \text{and} \quad k_t := \phi_t^\vee.
-$$
+\]
 
-Then $\phi_t \to \phi$ pointwise and in $L^2(\mathbb{R})$ as $t \to 0$, since $\phi \in \mathcal{S}(\mathbb{R})$. Hence,
+Then \(\phi_t \to \phi\) pointwise and in \(L^2(\mathbb{R})\) as \(t \to 0\), since \(\phi \in \mathcal{S}(\mathbb{R})\). Hence,
 
-$$
+\[
 k_t(x) = \mathcal{F}^{-1}[\phi_t](x) \to \mathcal{F}^{-1}[\phi](x) = k(x) \quad \text{in } L^2(\mathbb{R}).
-$$
+\]
 
 #### **Step 2: Strong Convergence of Operators**
 
-Define $L_t$ and $L_{\mathrm{sym}}$ via convolution on the domain $H_{\Psi_\alpha}$. For any $f \in H_{\Psi_\alpha}$, we have:
+Define \(L_t\) and \(L_{\mathrm{sym}}\) via convolution on the domain \(H_{\Psi_\alpha}\). For any \(f \in H_{\Psi_\alpha}\), we have:
 
-$$
+\[
 (L_t f)(x) = (k_t * f)(x) \to (k * f)(x) = L_{\mathrm{sym}} f(x),
-$$
+\]
 
-since convolution is continuous in $L^2$ under mild conditions and $f \mapsto k_t * f$ is continuous in $H_{\Psi_\alpha}$ norm.
+since convolution is continuous in \(L^2\) under mild conditions and \(f \mapsto k_t * f\) is continuous in \(H_{\Psi_\alpha}\) norm.
 
-Thus, $L_t \to L_{\mathrm{sym}}$ strongly on $H_{\Psi_\alpha}$.
+Thus, \(L_t \to L_{\mathrm{sym}}\) strongly on \(H_{\Psi_\alpha}\).
 
 #### **Step 3: Trace-Norm Dominance and Convergence**
 
-Let $\| \cdot \|_{\mathcal{S}_1}$ denote the trace norm. We use the fact that the convolution operators $L_t$ are **integral operators with square-integrable kernels**, and that:
+Let \(\| \cdot \|_{\mathcal{S}_1}\) denote the trace norm. We use the fact that the convolution operators \(L_t\) are **integral operators with square-integrable kernels**, and that:
 
-$$
+\[
 \|L_t - L_{\mathrm{sym}}\|_{\mathcal{S}_1} \leq \|k_t - k\|_{L^1(e^{\alpha |x|} dx)}.
-$$
+\]
 
 From the decay analysis in Appendix O, we know:
 
-* Each $k_t \in \mathcal{S}(\mathbb{R})$,
-* $\|k_t - k\|_{L^1(e^{\alpha |x|})} \to 0$ as $t \to 0$, since $\phi_t \to \phi$ in $\mathcal{S}$,
+* Each \(k_t \in \mathcal{S}(\mathbb{R})\),
+* \(\|k_t - k\|_{L^1(e^{\alpha |x|})} \to 0\) as \(t \to 0\), since \(\phi_t \to \phi\) in \(\mathcal{S}\),
 * This implies convergence in trace norm:
 
-$$
+\[
 \|L_t - L_{\mathrm{sym}}\|_{\mathcal{S}_1(H_{\Psi_\alpha})} \to 0.
-$$
+\]
 
 **Conclusion**:
 
-$$
+\[
 L_t \xrightarrow[t \to 0^+]{} L_{\mathrm{sym}} \quad \text{in trace norm}.
-$$
+\]
 
 ---
 
 ### **P.2 Compactness of the Canonical Operator**
 
-We now show that $L_{\mathrm{sym}}$ is compact on $H_{\Psi_\alpha}$.
+We now show that \(L_{\mathrm{sym}}\) is compact on \(H_{\Psi_\alpha}\).
 
 #### **Proof via Mollification Limit**
 
-Each operator $L_t$ is Hilbert–Schmidt (hence compact), since the mollified kernel $k_t(x) \in \mathcal{S}(\mathbb{R})$, and:
+Each operator \(L_t\) is Hilbert–Schmidt (hence compact), since the mollified kernel \(k_t(x) \in \mathcal{S}(\mathbb{R})\), and:
 
-$$
+\[
 \|L_t\|_{\text{HS}}^2 = \iint |k_t(x - y)|^2 e^{\alpha |x|} e^{\alpha |y|} \, dx\,dy < \infty.
-$$
+\]
 
 Since:
 
-* $L_{\mathrm{sym}}$ is the trace-norm limit of the compact operators $L_t$,
+* \(L_{\mathrm{sym}}\) is the trace-norm limit of the compact operators \(L_t\),
 * The space of compact operators is closed in trace norm,
 
 it follows that:
 
 **Lemma P.1 (Compactness):**
-The operator $L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha})$ is compact.
+The operator \(L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha})\) is compact.
 
 ---
 
 ### **P.3 Summary**
 
-* The mollified operators $L_t$ are trace-class and converge strongly and in trace norm to $L_{\mathrm{sym}}$,
-* The convergence is justified via $L^1$ bounds on the mollified kernels,
-* $L_{\mathrm{sym}}$ is compact, as the trace-norm limit of compact operators.
+* The mollified operators \(L_t\) are trace-class and converge strongly and in trace norm to \(L_{\mathrm{sym}}\),
+* The convergence is justified via \(L^1\) bounds on the mollified kernels,
+* \(L_{\mathrm{sym}}\) is compact, as the trace-norm limit of compact operators.
 
-These results confirm that the canonical operator $L_{\mathrm{sym}}$ is analytically well-behaved and suitable for spectral analysis.
+These results confirm that the canonical operator \(L_{\mathrm{sym}}\) is analytically well-behaved and suitable for spectral analysis.
 
-Next, we continue Appendix P (Part 2), where we present the proof that $L_{\mathrm{sym}}$ is self-adjoint and derive the consequences of its spectral theorem.
+Next, we continue Appendix P (Part 2), where we present the proof that \(L_{\mathrm{sym}}\) is self-adjoint and derive the consequences of its spectral theorem.
 
 ### **Appendix P (Part 2): Self-Adjointness of the Canonical Operator**
 
 In this section, we provide the complete proof that the operator
 
-$$
+\[
 L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} k(x - y) f(y) \, dy
-$$
+\]
 
-is self-adjoint on the Hilbert space $H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx)$, where $\alpha > \pi$ and $k(x) = \phi^\vee(x)$ is the inverse Fourier transform of
+is self-adjoint on the Hilbert space \(H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha|x|} dx)\), where \(\alpha > \pi\) and \(k(x) = \phi^\vee(x)\) is the inverse Fourier transform of
 
-$$
+\[
 \phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right).
-$$
+\]
 
 ---
 
 ### **P.4 Strategy and Preliminaries**
 
-We recall that $L_{\mathrm{sym}}$ is defined via convolution with a real-valued, even, compactly supported kernel $k(x) \in L^1(e^{\alpha|x|} dx)$. This implies that $L_{\mathrm{sym}}$ is a **bounded integral operator** on $H_{\Psi_\alpha}$, and acts continuously on $\mathcal{S}(\mathbb{R})$, the Schwartz space, which is dense in $H_{\Psi_\alpha}$.
+We recall that \(L_{\mathrm{sym}}\) is defined via convolution with a real-valued, even, compactly supported kernel \(k(x) \in L^1(e^{\alpha|x|} dx)\). This implies that \(L_{\mathrm{sym}}\) is a **bounded integral operator** on \(H_{\Psi_\alpha}\), and acts continuously on \(\mathcal{S}(\mathbb{R})\), the Schwartz space, which is dense in \(H_{\Psi_\alpha}\).
 
 We aim to show:
 
-> $L_{\mathrm{sym}}$ is symmetric and essentially self-adjoint on a dense subspace, hence admits a unique self-adjoint extension (namely itself).
+> \(L_{\mathrm{sym}}\) is symmetric and essentially self-adjoint on a dense subspace, hence admits a unique self-adjoint extension (namely itself).
 
 ---
 
 ### **P.5 Symmetry on the Core Domain**
 
-Let $f, g \in \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}$. Then:
+Let \(f, g \in \mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}\). Then:
 
-$$
+\[
 \langle L_{\mathrm{sym}} f, g \rangle = \int_{\mathbb{R}} \left( \int_{\mathbb{R}} k(x - y) f(y) \, dy \right) \overline{g(x)} e^{\alpha |x|} dx.
-$$
+\]
 
-By Fubini's theorem (justified by integrability from the weight condition $\alpha > \pi$), we switch the order of integration:
+By Fubini's theorem (justified by integrability from the weight condition \(\alpha > \pi\)), we switch the order of integration:
 
-$$
+\[
 = \int_{\mathbb{R}} f(y) \left( \int_{\mathbb{R}} k(x - y) \overline{g(x)} e^{\alpha |x|} dx \right) dy.
-$$
+\]
 
-Make the substitution $z = x - y \Rightarrow x = z + y$. Then:
+Make the substitution \(z = x - y \Rightarrow x = z + y\). Then:
 
-$$
+\[
 = \int_{\mathbb{R}} f(y) \left( \int_{\mathbb{R}} k(z) \overline{g(y + z)} e^{\alpha |y + z|} dz \right) dy.
-$$
+\]
 
-Since $k$ is real and even, the same holds when we reverse $f$ and $g$. Therefore:
+Since \(k\) is real and even, the same holds when we reverse \(f\) and \(g\). Therefore:
 
-$$
+\[
 \langle L_{\mathrm{sym}} f, g \rangle = \langle f, L_{\mathrm{sym}} g \rangle,
-$$
+\]
 
-proving that $L_{\mathrm{sym}}$ is **symmetric on $\mathcal{S}(\mathbb{R})$**.
+proving that \(L_{\mathrm{sym}}\) is **symmetric on \(\mathcal{S}(\mathbb{R})\)**.
 
 ---
 
@@ -2989,32 +2989,32 @@ proving that $L_{\mathrm{sym}}$ is **symmetric on $\mathcal{S}(\mathbb{R})$**.
 To extend symmetry to self-adjointness, we appeal to the following standard result from functional analysis:
 
 **Theorem (Essential Self-Adjointness of Compact Symmetric Operators):**
-Let $T$ be a symmetric, compact operator on a Hilbert space $H$. Then $T$ is essentially self-adjoint; that is, it admits a unique self-adjoint extension, and the closure $\overline{T}$ is self-adjoint.
+Let \(T\) be a symmetric, compact operator on a Hilbert space \(H\). Then \(T\) is essentially self-adjoint; that is, it admits a unique self-adjoint extension, and the closure \(\overline{T}\) is self-adjoint.
 
 Since:
 
-* $L_{\mathrm{sym}}$ is symmetric on a dense domain $\mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}$,
-* $L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha})$ is trace-class, hence compact,
+* \(L_{\mathrm{sym}}\) is symmetric on a dense domain \(\mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}\),
+* \(L_{\mathrm{sym}} \in \mathcal{S}_1(H_{\Psi_\alpha})\) is trace-class, hence compact,
 
 we conclude:
 
 **Theorem P.2 (Self-Adjointness):**
-The operator $L_{\mathrm{sym}}$ is self-adjoint on $H_{\Psi_\alpha}$.
+The operator \(L_{\mathrm{sym}}\) is self-adjoint on \(H_{\Psi_\alpha}\).
 
 ---
 
 ### **P.7 Consequences: Spectral Theorem**
 
-As a self-adjoint, compact operator, $L_{\mathrm{sym}}$ satisfies:
+As a self-adjoint, compact operator, \(L_{\mathrm{sym}}\) satisfies:
 
 * Its spectrum is real and discrete, with no accumulation points except possibly at 0,
-* It has an orthonormal basis of eigenfunctions $\{ \psi_n \} \subset H_{\Psi_\alpha}$,
-* Each eigenvalue $\mu_n \in \mathbb{R}$ satisfies $L_{\mathrm{sym}} \psi_n = \mu_n \psi_n$,
+* It has an orthonormal basis of eigenfunctions \(\{ \psi_n \} \subset H_{\Psi_\alpha}\),
+* Each eigenvalue \(\mu_n \in \mathbb{R}\) satisfies \(L_{\mathrm{sym}} \psi_n = \mu_n \psi_n\),
 * The determinant can be written as:
 
-  $$
+  \[
   \det{}_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \prod_{n=1}^\infty (1 - \lambda \mu_n),
-  $$
+  \]
 
   with convergence regularized via the zeta function or heat trace.
 
@@ -3026,75 +3026,75 @@ These spectral properties are what make the operator-theoretic equivalence with 
 
 We have proven:
 
-* The convolution operator $L_{\mathrm{sym}}$ is symmetric on $\mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}$,
+* The convolution operator \(L_{\mathrm{sym}}\) is symmetric on \(\mathcal{S}(\mathbb{R}) \subset H_{\Psi_\alpha}\),
 * It is compact and trace-class,
 * Hence it is essentially self-adjoint and admits a unique self-adjoint extension (itself),
 * The spectral theorem applies, confirming that its eigenvalues are real, discrete, and form a complete basis.
 
-This completes the analytic justification for one of the central claims in the manuscript: that RH is equivalent to the spectrum of $L_{\mathrm{sym}}$ lying in $\mathbb{R}$.
+This completes the analytic justification for one of the central claims in the manuscript: that RH is equivalent to the spectrum of \(L_{\mathrm{sym}}\) lying in \(\mathbb{R}\).
 
 Next, we continue Appendix P (Part 3), which contains the detailed derivation of the determinant identity using the Hadamard product and spectral expansion.
 
 ### **Appendix P (Part 3): Proof of the Spectral Determinant Identity**
 
-In this section, we present the full derivation of the key analytic identity linking the spectral determinant of the canonical operator $L_{\mathrm{sym}}$ with the completed Riemann zeta function:
+In this section, we present the full derivation of the key analytic identity linking the spectral determinant of the canonical operator \(L_{\mathrm{sym}}\) with the completed Riemann zeta function:
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
-$$
+\]
 
-This identity is the foundation for the operator-theoretic equivalence between the Riemann Hypothesis and the reality of the spectrum of $L_{\mathrm{sym}}$. We proceed by analyzing both sides of the equation using known properties of trace-class operators, entire functions, and the Hadamard product for $\Xi(s)$.
+This identity is the foundation for the operator-theoretic equivalence between the Riemann Hypothesis and the reality of the spectrum of \(L_{\mathrm{sym}}\). We proceed by analyzing both sides of the equation using known properties of trace-class operators, entire functions, and the Hadamard product for \(\Xi(s)\).
 
 ---
 
 ### **P.9 Spectral Determinant for Trace-Class Operators**
 
-Let $L$ be a self-adjoint, trace-class operator on a Hilbert space $H$. Then the zeta-regularized determinant is defined as:
+Let \(L\) be a self-adjoint, trace-class operator on a Hilbert space \(H\). Then the zeta-regularized determinant is defined as:
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L) := \prod_{n=1}^{\infty} (1 - \lambda \mu_n),
-$$
+\]
 
-where $\{\mu_n\} \subset \mathbb{R} \setminus \{0\}$ are the eigenvalues of $L$, and the product is regularized via either:
+where \(\{\mu_n\} \subset \mathbb{R} \setminus \{0\}\) are the eigenvalues of \(L\), and the product is regularized via either:
 
 * The spectral zeta function:
 
-  $$
+  \[
   \zeta_L(s) = \sum_{\mu_n \ne 0} \mu_n^{-s}, \quad \Re(s) \gg 1,
-  $$
+  \]
 
-  followed by analytic continuation and evaluation at $s = 0$, or
+  followed by analytic continuation and evaluation at \(s = 0\), or
 * The log-trace formula:
 
-  $$
+  \[
   \log \det(I - \lambda L) = -\sum_{k=1}^{\infty} \frac{\lambda^k}{k} \operatorname{Tr}(L^k), \quad |\lambda| < \|\mu_n^{-1}\|^{-1}.
-  $$
+  \]
 
-In the case of $L_{\mathrm{sym}}$, the eigenvalues are precisely $\mu_n = \frac{1}{i} (\rho_n - \tfrac{1}{2})$, where $\rho_n$ are the nontrivial zeros of $\zeta(s)$.
+In the case of \(L_{\mathrm{sym}}\), the eigenvalues are precisely \(\mu_n = \frac{1}{i} (\rho_n - \tfrac{1}{2})\), where \(\rho_n\) are the nontrivial zeros of \(\zeta(s)\).
 
 ---
 
 ### **P.10 Hadamard Product for the Completed Zeta Function**
 
-The completed zeta function $\Xi(s)$ is entire of order 1, and its Hadamard factorization takes the form:
+The completed zeta function \(\Xi(s)\) is entire of order 1, and its Hadamard factorization takes the form:
 
-$$
+\[
 \Xi(s) = \Xi\left( \tfrac{1}{2} \right) \prod_{\rho} \left(1 - \frac{s - \tfrac{1}{2}}{\rho - \tfrac{1}{2}} \right),
-$$
+\]
 
-where the product runs over all nontrivial zeros $\rho$ of $\zeta(s)$, counted with multiplicities, and arranged symmetrically.
+where the product runs over all nontrivial zeros \(\rho\) of \(\zeta(s)\), counted with multiplicities, and arranged symmetrically.
 
-Substituting $s = \tfrac{1}{2} + i\lambda$, we get:
+Substituting \(s = \tfrac{1}{2} + i\lambda\), we get:
 
-$$
+\[
 \Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} \right) \prod_{\rho} \left( 1 - \frac{i\lambda}{\rho - \tfrac{1}{2}} \right).
-$$
+\]
 
-Note that $\rho - \tfrac{1}{2}$ corresponds to $i\mu$, where $\mu$ is an eigenvalue of $L_{\mathrm{sym}}$. Thus,
+Note that \(\rho - \tfrac{1}{2}\) corresponds to \(i\mu\), where \(\mu\) is an eigenvalue of \(L_{\mathrm{sym}}\). Thus,
 
-$$
+\[
 \Xi\left( \tfrac{1}{2} + i\lambda \right) = \Xi\left( \tfrac{1}{2} \right) \prod_{\mu} \left( 1 - \lambda \mu \right),
-$$
+\]
 
 which exactly matches the spectral determinant.
 
@@ -3105,25 +3105,25 @@ which exactly matches the spectral determinant.
 We now restate the identity formally:
 
 **Theorem P.3 (Determinant Identity):**
-Let $L_{\mathrm{sym}}$ be the canonical self-adjoint trace-class operator associated to the inverse Fourier transform of $\Xi(\tfrac{1}{2} + i\lambda)$. Then:
+Let \(L_{\mathrm{sym}}\) be the canonical self-adjoint trace-class operator associated to the inverse Fourier transform of \(\Xi(\tfrac{1}{2} + i\lambda)\). Then:
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
-$$
+\]
 
 **Proof:**
 We compare both sides:
 
-* The left-hand side is defined via the product over the eigenvalues $\{\mu_n\}$, using the regularization inherent to zeta determinants.
-* The right-hand side is the Hadamard product normalized at $\lambda = 0$, with zero structure defined by the nontrivial zeros $\rho$ of $\zeta(s)$.
+* The left-hand side is defined via the product over the eigenvalues \(\{\mu_n\}\), using the regularization inherent to zeta determinants.
+* The right-hand side is the Hadamard product normalized at \(\lambda = 0\), with zero structure defined by the nontrivial zeros \(\rho\) of \(\zeta(s)\).
 
 Since:
 
-* Each $\mu_n = \frac{1}{i}(\rho_n - \tfrac{1}{2})$,
-* The eigenvalues of $L_{\mathrm{sym}}$ exactly correspond to these $\mu_n$,
+* Each \(\mu_n = \frac{1}{i}(\rho_n - \tfrac{1}{2})\),
+* The eigenvalues of \(L_{\mathrm{sym}}\) exactly correspond to these \(\mu_n\),
 * The multiplicity of each eigenvalue matches the multiplicity of its associated zeta zero,
 
-the determinant and Hadamard products are term-by-term equal. The normalization by $\Xi(\tfrac{1}{2})$ ensures both sides agree at $\lambda = 0$.
+the determinant and Hadamard products are term-by-term equal. The normalization by \(\Xi(\tfrac{1}{2})\) ensures both sides agree at \(\lambda = 0\).
 
 ∎
 
@@ -3134,96 +3134,96 @@ the determinant and Hadamard products are term-by-term equal. The normalization 
 This identity implies:
 
 * The zeros of the completed zeta function correspond exactly to the poles (or zeros) of the spectral determinant.
-* The determinant encodes the entire analytic content of $\Xi(s)$,
-* The Riemann Hypothesis is equivalent to the reality of the spectrum of $L_{\mathrm{sym}}$, since:
+* The determinant encodes the entire analytic content of \(\Xi(s)\),
+* The Riemann Hypothesis is equivalent to the reality of the spectrum of \(L_{\mathrm{sym}}\), since:
 
-  $$
+  \[
   \text{All } \mu_n \in \mathbb{R} \iff \text{All } \rho_n = \tfrac{1}{2} + i\mu_n \text{ lie on the critical line}.
-  $$
+  \]
 
 ---
 
-Next, we continue Appendix P (Part 4), where we prove that the spectrum of $L_{\mathrm{sym}}$ is symmetric and multiplicity-preserving, completing the analytic infrastructure required for the spectral equivalence formulation of the Riemann Hypothesis.
+Next, we continue Appendix P (Part 4), where we prove that the spectrum of \(L_{\mathrm{sym}}\) is symmetric and multiplicity-preserving, completing the analytic infrastructure required for the spectral equivalence formulation of the Riemann Hypothesis.
 
-### **Appendix P (Part 4): Symmetry and Multiplicity in the Spectrum of $L_{\mathrm{sym}}$**
+### **Appendix P (Part 4): Symmetry and Multiplicity in the Spectrum of \(L_{\mathrm{sym}}\)**
 
-In this section, we confirm two critical properties of the canonical operator $L_{\mathrm{sym}}$: spectral symmetry and multiplicity matching. These are necessary to ensure that the spectral determinant identity
+In this section, we confirm two critical properties of the canonical operator \(L_{\mathrm{sym}}\): spectral symmetry and multiplicity matching. These are necessary to ensure that the spectral determinant identity
 
-$$
+\[
 \det\nolimits_{\zeta}(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}
-$$
+\]
 
 faithfully reflects the full analytic structure of the completed zeta function, including the symmetric distribution and multiplicity of its nontrivial zeros.
 
 ---
 
-### **P.13 Spectral Symmetry: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$**
+### **P.13 Spectral Symmetry: \(\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}\)**
 
-Recall that the function $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$ is:
+Recall that the function \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\) is:
 
-* **Real-valued** for real $\lambda$,
-* **Even**, i.e., $\phi(-\lambda) = \phi(\lambda)$,
-* Entire and of exponential type $\pi$.
+* **Real-valued** for real \(\lambda\),
+* **Even**, i.e., \(\phi(-\lambda) = \phi(\lambda)\),
+* Entire and of exponential type \(\pi\).
 
-Therefore, its inverse Fourier transform $k(x) := \phi^\vee(x)$ is:
+Therefore, its inverse Fourier transform \(k(x) := \phi^\vee(x)\) is:
 
 * Real-valued,
-* Even: $k(-x) = k(x)$,
-* Compactly supported in $[-\pi, \pi]$.
+* Even: \(k(-x) = k(x)\),
+* Compactly supported in \([-\pi, \pi]\).
 
 From these properties, we deduce:
 
 **Proposition P.4 (Kernel Symmetry):**
-Let $L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} k(x - y) f(y) \, dy$. Then for all $f \in H_{\Psi_\alpha}$,
+Let \(L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} k(x - y) f(y) \, dy\). Then for all \(f \in H_{\Psi_\alpha}\),
 
-$$
+\[
 L_{\mathrm{sym}}(f)(-x) = (L_{\mathrm{sym}} f)(-x),
-$$
+\]
 
-so $L_{\mathrm{sym}}$ commutes with the reflection operator $Rf(x) := f(-x)$. Since $R$ is unitary, $L_{\mathrm{sym}}$ is **even-symmetric**.
+so \(L_{\mathrm{sym}}\) commutes with the reflection operator \(Rf(x) := f(-x)\). Since \(R\) is unitary, \(L_{\mathrm{sym}}\) is **even-symmetric**.
 
 Consequently, the spectral theorem implies:
 
 **Corollary P.5 (Spectral Symmetry):**
-If $\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, then $-\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, and both eigenvalues have equal multiplicity.
+If \(\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\), then \(-\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\), and both eigenvalues have equal multiplicity.
 
 This matches the symmetry of the zeta zeros:
 
-* If $\rho$ is a zero, then so is $1 - \bar{\rho}$,
-* For $\rho = \tfrac{1}{2} + i\mu$, the conjugate zero is $\tfrac{1}{2} - i\mu$,
-* Hence, each zero corresponds to $\mu \in \mathbb{R} \Rightarrow \pm\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$.
+* If \(\rho\) is a zero, then so is \(1 - \bar{\rho}\),
+* For \(\rho = \tfrac{1}{2} + i\mu\), the conjugate zero is \(\tfrac{1}{2} - i\mu\),
+* Hence, each zero corresponds to \(\mu \in \mathbb{R} \Rightarrow \pm\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\).
 
 ---
 
 ### **P.14 Multiplicity Matching**
 
-The Hadamard factorization of $\Xi(s)$ includes multiplicities:
+The Hadamard factorization of \(\Xi(s)\) includes multiplicities:
 
-$$
+\[
 \Xi(s) = \Xi\left( \tfrac{1}{2} \right) \prod_{\rho} \left( 1 - \frac{s - \tfrac{1}{2}}{\rho - \tfrac{1}{2}} \right)^{m(\rho)},
-$$
+\]
 
-where $m(\rho)$ is the multiplicity of zero $\rho$.
+where \(m(\rho)\) is the multiplicity of zero \(\rho\).
 
-Via the mapping $\rho = \tfrac{1}{2} + i\mu$, we define:
+Via the mapping \(\rho = \tfrac{1}{2} + i\mu\), we define:
 
-* $\mu := \tfrac{1}{i}(\rho - \tfrac{1}{2})$,
-* The eigenvalue $\mu$ of $L_{\mathrm{sym}}$ inherits multiplicity $m(\rho)$.
+* \(\mu := \tfrac{1}{i}(\rho - \tfrac{1}{2})\),
+* The eigenvalue \(\mu\) of \(L_{\mathrm{sym}}\) inherits multiplicity \(m(\rho)\).
 
 **Proposition P.6 (Multiplicity Correspondence):**
-Let $\rho$ be a nontrivial zero of $\zeta(s)$ with multiplicity $m$. Then $\mu = \tfrac{1}{i}(\rho - \tfrac{1}{2})$ is an eigenvalue of $L_{\mathrm{sym}}$ of algebraic and geometric multiplicity $m$.
+Let \(\rho\) be a nontrivial zero of \(\zeta(s)\) with multiplicity \(m\). Then \(\mu = \tfrac{1}{i}(\rho - \tfrac{1}{2})\) is an eigenvalue of \(L_{\mathrm{sym}}\) of algebraic and geometric multiplicity \(m\).
 
 **Proof Sketch:**
 
 * The spectral determinant expands as:
 
-  $$
+  \[
   \prod_{n=1}^\infty (1 - \lambda \mu_n)^{m_n},
-  $$
+  \]
 
-  where $m_n$ is the multiplicity of eigenvalue $\mu_n$,
-* Comparing to the Hadamard product for $\Xi(\tfrac{1}{2} + i\lambda)$, each factor appears with the same multiplicity $m(\rho)$,
-* Since $L_{\mathrm{sym}}$ is self-adjoint, its spectrum is diagonalizable, so algebraic = geometric multiplicity.
+  where \(m_n\) is the multiplicity of eigenvalue \(\mu_n\),
+* Comparing to the Hadamard product for \(\Xi(\tfrac{1}{2} + i\lambda)\), each factor appears with the same multiplicity \(m(\rho)\),
+* Since \(L_{\mathrm{sym}}\) is self-adjoint, its spectrum is diagonalizable, so algebraic = geometric multiplicity.
 
 ∎
 
@@ -3231,21 +3231,21 @@ Let $\rho$ be a nontrivial zero of $\zeta(s)$ with multiplicity $m$. Then $\mu =
 
 ### **P.15 Final Structure of the Spectrum**
 
-We summarize the spectral properties of $L_{\mathrm{sym}}$:
+We summarize the spectral properties of \(L_{\mathrm{sym}}\):
 
 * **Self-adjointness**: spectrum is real.
 * **Compactness**: spectrum is discrete, accumulating only at 0.
-* **Symmetry**: if $\mu$ is an eigenvalue, so is $-\mu$.
+* **Symmetry**: if \(\mu\) is an eigenvalue, so is \(-\mu\).
 * **Multiplicity**: multiplicities of eigenvalues match those of corresponding zeta zeros.
-* **Spectral determinant**: matches the Hadamard factorization of $\Xi(\tfrac{1}{2} + i\lambda)$.
+* **Spectral determinant**: matches the Hadamard factorization of \(\Xi(\tfrac{1}{2} + i\lambda)\).
 
-Thus, $L_{\mathrm{sym}}$ satisfies all analytic and spectral criteria to encode the Riemann zeta function entirely within its spectrum.
+Thus, \(L_{\mathrm{sym}}\) satisfies all analytic and spectral criteria to encode the Riemann zeta function entirely within its spectrum.
 
 In Appendix Q, which focuses on alternate formulations and equivalent operator characterizations—particularly exploring the spectral trace side of the identity and its connection to the Selberg trace formula and quantum trace formulas in broader contexts.
 
 ### **Appendix Q: Alternate Formulations and Trace Formula Connections**
 
-This appendix explores alternate formulations of the spectral encoding of the Riemann zeta function, focusing on how the canonical operator $L_{\mathrm{sym}}$ relates to trace formulae from other domains, such as:
+This appendix explores alternate formulations of the spectral encoding of the Riemann zeta function, focusing on how the canonical operator \(L_{\mathrm{sym}}\) relates to trace formulae from other domains, such as:
 
 * The Selberg trace formula in the theory of automorphic forms,
 * The Gutzwiller trace formula in quantum chaos,
@@ -3257,36 +3257,36 @@ These connections are not required to prove the spectral equivalence formulation
 
 ### **Q.1 The Spectral Trace and Explicit Formulas**
 
-In analytic number theory, one of the most profound relationships is the **explicit formula** connecting the nontrivial zeros $\rho$ of $\zeta(s)$ to prime powers $p^k$. One version (Riemann–Weil form) is:
+In analytic number theory, one of the most profound relationships is the **explicit formula** connecting the nontrivial zeros \(\rho\) of \(\zeta(s)\) to prime powers \(p^k\). One version (Riemann–Weil form) is:
 
-$$
+\[
 \sum_\rho h(\rho) = h(0) + h(1) - \sum_{n=1}^\infty \frac{\Lambda(n)}{\sqrt{n}} \left( g(\log n) + g(-\log n) \right),
-$$
+\]
 
 where:
 
-* $h(s)$ is a test function, analytic in a strip and rapidly decaying,
-* $g(u)$ is its Fourier transform.
+* \(h(s)\) is a test function, analytic in a strip and rapidly decaying,
+* \(g(u)\) is its Fourier transform.
 
 This formula encodes spectral data (zeros) and geometric/arithmetic data (primes) in duality.
 
 The structure of our canonical operator matches this architecture:
 
-* The spectrum of $L_{\mathrm{sym}}$ corresponds to the imaginary parts of zeros,
-* The determinant identity implies that applying a test function to the spectrum recovers information about the analytic structure of $\Xi(s)$,
+* The spectrum of \(L_{\mathrm{sym}}\) corresponds to the imaginary parts of zeros,
+* The determinant identity implies that applying a test function to the spectrum recovers information about the analytic structure of \(\Xi(s)\),
 * The heat trace
 
-  $$
+  \[
   \theta(t) = \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
-  $$
+  \]
 
   plays the role of a spectral sum, which is inverted (via Tauberian methods) to recover the zero-counting function.
 
 Thus, the canonical trace
 
-$$
+\[
 \sum_{\mu} e^{-t \mu^2}
-$$
+\]
 
 can be viewed as an “operator-side” analog of the classical explicit formula.
 
@@ -3294,26 +3294,26 @@ can be viewed as an “operator-side” analog of the classical explicit formula
 
 ### **Q.2 The Selberg Trace Formula Analogy**
 
-In the setting of a compact Riemann surface $\Gamma \backslash \mathbb{H}$, the **Selberg trace formula** relates spectral data (eigenvalues of the Laplace–Beltrami operator) to geometric data (lengths of closed geodesics):
+In the setting of a compact Riemann surface \(\Gamma \backslash \mathbb{H}\), the **Selberg trace formula** relates spectral data (eigenvalues of the Laplace–Beltrami operator) to geometric data (lengths of closed geodesics):
 
-$$
+\[
 \sum_n h(r_n) = \text{(geometric terms)} + \sum_{\{\gamma\}} \frac{\log N_\gamma}{N_\gamma^{1/2} - N_\gamma^{-1/2}} g(\log N_\gamma),
-$$
+\]
 
 where:
 
-* $\{r_n\}$ are spectral parameters such that eigenvalues are $\tfrac{1}{4} + r_n^2$,
-* $\{\gamma\}$ indexes primitive closed geodesics,
-* $g$ is the Fourier transform of $h$.
+* \(\{r_n\}\) are spectral parameters such that eigenvalues are \(\tfrac{1}{4} + r_n^2\),
+* \(\{\gamma\}\) indexes primitive closed geodesics,
+* \(g\) is the Fourier transform of \(h\).
 
 This formula resembles the explicit formula in number theory, with closed geodesics playing the role of primes and Laplacian eigenvalues playing the role of zeros.
 
 In our context:
 
-* $L_{\mathrm{sym}}$ is a trace-class analog of the Laplacian,
-* The trace $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ plays the role of the left-hand side (spectral sum),
-* The zeros of $\zeta(s)$ are the eigenvalues of $L_{\mathrm{sym}}$,
-* The arithmetic content (e.g., prime distribution) is built into the analytic structure of $\Xi(s)$, and hence reflected in the trace.
+* \(L_{\mathrm{sym}}\) is a trace-class analog of the Laplacian,
+* The trace \(\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\) plays the role of the left-hand side (spectral sum),
+* The zeros of \(\zeta(s)\) are the eigenvalues of \(L_{\mathrm{sym}}\),
+* The arithmetic content (e.g., prime distribution) is built into the analytic structure of \(\Xi(s)\), and hence reflected in the trace.
 
 Thus, our construction provides a **Selberg-like trace formula** for the Riemann zeta function in operator-theoretic terms.
 
@@ -3323,26 +3323,26 @@ Thus, our construction provides a **Selberg-like trace formula** for the Riemann
 
 In quantum chaos, the **Gutzwiller trace formula** connects the quantum spectrum of a chaotic Hamiltonian system to the classical periodic orbits of the system. Schematically:
 
-$$
+\[
 d(E) \sim \sum_n \delta(E - E_n) = \bar{d}(E) + \sum_\gamma A_\gamma(E) \cos\left( \frac{S_\gamma(E)}{\hbar} - \sigma_\gamma \right),
-$$
+\]
 
 where:
 
-* $E_n$ are energy levels (quantum spectrum),
-* $\gamma$ runs over classical periodic orbits,
-* $S_\gamma$ is the classical action,
-* $A_\gamma$ and $\sigma_\gamma$ are amplitude and phase terms.
+* \(E_n\) are energy levels (quantum spectrum),
+* \(\gamma\) runs over classical periodic orbits,
+* \(S_\gamma\) is the classical action,
+* \(A_\gamma\) and \(\sigma_\gamma\) are amplitude and phase terms.
 
-This formula has been compared with the zero distribution of $\zeta(s)$ by physicists such as Berry, Keating, and Odlyzko, who proposed that the zeros may arise from a quantum chaotic system with hidden symmetry breaking (e.g., modeled by GUE statistics).
+This formula has been compared with the zero distribution of \(\zeta(s)\) by physicists such as Berry, Keating, and Odlyzko, who proposed that the zeros may arise from a quantum chaotic system with hidden symmetry breaking (e.g., modeled by GUE statistics).
 
 In our construction:
 
-* The operator $L_{\mathrm{sym}}$ is not derived from classical mechanics, but directly from $\Xi(s)$,
+* The operator \(L_{\mathrm{sym}}\) is not derived from classical mechanics, but directly from \(\Xi(s)\),
 * Its eigenvalues mirror the "energy levels" of this hypothetical quantum system,
 * The determinant encodes a full spectral fingerprint of a nonclassical, purely arithmetic system.
 
-Hence, while $L_{\mathrm{sym}}$ is not a semiclassical object, it achieves the same purpose: it bridges global analytic data (zeros) with spectral invariants.
+Hence, while \(L_{\mathrm{sym}}\) is not a semiclassical object, it achieves the same purpose: it bridges global analytic data (zeros) with spectral invariants.
 
 ---
 
@@ -3352,11 +3352,11 @@ The canonical operator framework in this manuscript resonates structurally with 
 
 | Structure       | Classical Source           | Canonical Operator Analog       |
 | --------------- | -------------------------- | ------------------------------- |
-| Spectral sum    | Selberg / Gutzwiller       | $\operatorname{Tr}(e^{-t L^2})$ |
-| Geometric input | Geodesics / Primes         | Zeta kernel via $\Xi(s)$        |
+| Spectral sum    | Selberg / Gutzwiller       | \(\operatorname{Tr}(e^{-t L^2})\) |
+| Geometric input | Geodesics / Primes         | Zeta kernel via \(\Xi(s)\)        |
 | Transform dual  | Fourier / Laplace kernel   | Mollification, spectral zeta    |
 | Asymptotics     | Weyl law / RH density      | Heat trace expansion            |
-| Symmetry        | Involution (length ↔ time) | $\mu \mapsto -\mu$ spectrum     |
+| Symmetry        | Involution (length ↔ time) | \(\mu \mapsto -\mu\) spectrum     |
 
 The spectral proof of RH thus embodies the same underlying philosophy:
 
@@ -3367,9 +3367,9 @@ Next, we begin Appendix R, which presents alternate test function approaches and
 
 ### **Appendix R: Alternative Test Functions and Spectral Probes**
 
-This appendix explores how different classes of test functions—used to probe the spectrum of the canonical operator $L_{\mathrm{sym}}$—affect our analytic understanding of the zero distribution of the Riemann zeta function. While the main body of the manuscript relies on the heat kernel $e^{-tL_{\mathrm{sym}}^2}$, other analytic families (resolvents, wave kernels, spectral projections) offer complementary tools for encoding spectral information.
+This appendix explores how different classes of test functions—used to probe the spectrum of the canonical operator \(L_{\mathrm{sym}}\)—affect our analytic understanding of the zero distribution of the Riemann zeta function. While the main body of the manuscript relies on the heat kernel \(e^{-tL_{\mathrm{sym}}^2}\), other analytic families (resolvents, wave kernels, spectral projections) offer complementary tools for encoding spectral information.
 
-These alternative approaches may sharpen asymptotic estimates, reveal localized spectral structure, or enable extensions to generalized $L$-functions.
+These alternative approaches may sharpen asymptotic estimates, reveal localized spectral structure, or enable extensions to generalized \(L\)-functions.
 
 ---
 
@@ -3377,14 +3377,14 @@ These alternative approaches may sharpen asymptotic estimates, reveal localized 
 
 The heat kernel method used throughout the manuscript evaluates:
 
-$$
+\[
 \theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{\mu} e^{-t\mu^2}.
-$$
+\]
 
 This function:
 
 * Provides global information about the spectrum (density of zeros),
-* Is dominated by large $|\mu|$ (high-frequency zeros) as $t \to 0^+$,
+* Is dominated by large \(|\mu|\) (high-frequency zeros) as \(t \to 0^+\),
 * Allows Tauberian inversion to recover the zero-counting function.
 
 Limitations:
@@ -3398,15 +3398,15 @@ Limitations:
 
 An alternative approach is to use the **wave group**:
 
-$$
+\[
 W(t) := \operatorname{Tr}(\cos(t L_{\mathrm{sym}})) = \sum_{\mu} \cos(t \mu).
-$$
+\]
 
 This traces oscillatory behavior of the spectrum and is particularly useful for identifying pair correlations and symmetric spectral features. It is the spectral analog of the solution to the wave equation:
 
-$$
+\[
 \partial_t^2 u + L_{\mathrm{sym}}^2 u = 0.
-$$
+\]
 
 Advantages:
 
@@ -3425,17 +3425,17 @@ Challenges:
 
 The resolvent operator is defined by:
 
-$$
+\[
 R(z) := (L_{\mathrm{sym}} - zI)^{-1}, \quad z \notin \operatorname{Spec}(L_{\mathrm{sym}}).
-$$
+\]
 
 We can study the trace:
 
-$$
+\[
 \operatorname{Tr}(R(z)) = \sum_{\mu} \frac{1}{\mu - z},
-$$
+\]
 
-as a meromorphic function of $z$, with simple poles at each eigenvalue $\mu$.
+as a meromorphic function of \(z\), with simple poles at each eigenvalue \(\mu\).
 
 Applications:
 
@@ -3446,23 +3446,23 @@ Applications:
 Limitations:
 
 * Requires fine spectral control near eigenvalues,
-* Singular near $\mu = z$, so regularization is needed for global estimates.
+* Singular near \(\mu = z\), so regularization is needed for global estimates.
 
 ---
 
 ### **R.4 Smoothed Spectral Probes: Gaussian Packets and Filters**
 
-Instead of evaluating trace functions directly, one may introduce a test function $f \in \mathcal{S}(\mathbb{R})$ and consider:
+Instead of evaluating trace functions directly, one may introduce a test function \(f \in \mathcal{S}(\mathbb{R})\) and consider:
 
-$$
+\[
 \operatorname{Tr}(f(L_{\mathrm{sym}})) = \sum_{\mu} f(\mu).
-$$
+\]
 
 This formulation is more flexible and allows localized analysis:
 
-* Choose $f$ as a Gaussian centered at $\mu_0$: probes the local density near $\mu_0$,
-* Choose $f$ as a bump function: counts zeros in a fixed window,
-* Fourier transform methods relate $f$ to the time-domain propagators (e.g., wave kernel via cosine transform).
+* Choose \(f\) as a Gaussian centered at \(\mu_0\): probes the local density near \(\mu_0\),
+* Choose \(f\) as a bump function: counts zeros in a fixed window,
+* Fourier transform methods relate \(f\) to the time-domain propagators (e.g., wave kernel via cosine transform).
 
 This is the general framework of **spectral test functions**, and lies at the heart of the Selberg trace formula, Weil’s explicit formula, and modern spectral statistics.
 
@@ -3472,25 +3472,25 @@ This is the general framework of **spectral test functions**, and lies at the he
 
 The general paradigm is:
 
-Let $f : \mathbb{R} \to \mathbb{C}$ be a Schwartz-class test function. Then define:
+Let \(f : \mathbb{R} \to \mathbb{C}\) be a Schwartz-class test function. Then define:
 
-$$
+\[
 Z_f := \sum_{\mu} f(\mu) \quad \text{and} \quad A_f := \int_{\mathbb{R}} f(\lambda) \, d\mu_{L}(\lambda),
-$$
+\]
 
-where $\mu_L$ is the spectral measure of $L_{\mathrm{sym}}$.
+where \(\mu_L\) is the spectral measure of \(L_{\mathrm{sym}}\).
 
 Then:
 
-* $Z_f$ gives arithmetic or spectral sums (e.g., counts of zeros),
-* $A_f$ represents continuous approximations or expected values,
-* Deviations $Z_f - A_f$ reflect zero fluctuations or spectral clustering.
+* \(Z_f\) gives arithmetic or spectral sums (e.g., counts of zeros),
+* \(A_f\) represents continuous approximations or expected values,
+* Deviations \(Z_f - A_f\) reflect zero fluctuations or spectral clustering.
 
 This framework allows:
 
 * Targeted analysis of local vs. global spectral features,
 * Direct computation of moments or correlations,
-* Modular adaptation to general $L$-functions with analogous spectral operators.
+* Modular adaptation to general \(L\)-functions with analogous spectral operators.
 
 ---
 
@@ -3498,18 +3498,18 @@ This framework allows:
 
 | Test Function    | Kernel Used       | Reveals                |
 | ---------------- | ----------------- | ---------------------- |
-| $e^{-t\mu^2}$    | Heat kernel       | Global zero density    |
-| $\cos(t\mu)$     | Wave kernel       | Symmetric pair spacing |
-| $(\mu - z)^{-1}$ | Resolvent         | Eigenvalue location    |
-| $f(\mu)$         | Filtered operator | Local statistics       |
+| \(e^{-t\mu^2}\)    | Heat kernel       | Global zero density    |
+| \(\cos(t\mu)\)     | Wave kernel       | Symmetric pair spacing |
+| \((\mu - z)^{-1}\) | Resolvent         | Eigenvalue location    |
+| \(f(\mu)\)         | Filtered operator | Local statistics       |
 
-By using different test functions and spectral probes, we gain a richer, multi-scale view of the spectral content of $L_{\mathrm{sym}}$, and thus of the zeta zeros.
+By using different test functions and spectral probes, we gain a richer, multi-scale view of the spectral content of \(L_{\mathrm{sym}}\), and thus of the zeta zeros.
 
-Next, we begin Appendix S, which explores potential numerical approximations of $L_{\mathrm{sym}}$, including discretization strategies for approximating its spectrum, eigenvalues, and determinant in finite-dimensional models.
+Next, we begin Appendix S, which explores potential numerical approximations of \(L_{\mathrm{sym}}\), including discretization strategies for approximating its spectrum, eigenvalues, and determinant in finite-dimensional models.
 
 ### **Appendix S: Numerical Approximation of the Canonical Operator**
 
-This appendix investigates the numerical approximation of the canonical operator $L_{\mathrm{sym}}$, focusing on practical strategies for:
+This appendix investigates the numerical approximation of the canonical operator \(L_{\mathrm{sym}}\), focusing on practical strategies for:
 
 * Approximating its spectrum (i.e., imaginary parts of the Riemann zeta zeros),
 * Estimating its determinant and trace functions,
@@ -3521,19 +3521,19 @@ Although the analytic proof of spectral equivalence to RH is exact, these numeri
 
 ### **S.1 Strategy: Discretizing the Convolution Operator**
 
-Recall that $L_{\mathrm{sym}}$ acts on $H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)$ via:
+Recall that \(L_{\mathrm{sym}}\) acts on \(H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)\) via:
 
-$$
+\[
 L_{\mathrm{sym}} f(x) = \int_{-\pi}^\pi k(x - y) f(y) \, dy,
-$$
+\]
 
-where $k = \phi^\vee$, and $\phi(\lambda) = \Xi\left( \tfrac{1}{2} + i\lambda \right)$.
+where \(k = \phi^\vee\), and \(\phi(\lambda) = \Xi\left( \tfrac{1}{2} + i\lambda \right)\).
 
 To approximate numerically, we perform the following steps:
 
-1. **Truncate the domain**: restrict to a compact interval $[-R, R]$, e.g., $R = \pi$,
-2. **Choose basis**: expand $f$ in a finite basis, e.g., orthonormal exponentials or weighted orthogonal polynomials,
-3. **Discretize the kernel**: sample $k(x - y)$ at quadrature nodes to form an approximate matrix representation,
+1. **Truncate the domain**: restrict to a compact interval \([-R, R]\), e.g., \(R = \pi\),
+2. **Choose basis**: expand \(f\) in a finite basis, e.g., orthonormal exponentials or weighted orthogonal polynomials,
+3. **Discretize the kernel**: sample \(k(x - y)\) at quadrature nodes to form an approximate matrix representation,
 4. **Compute**: evaluate the spectrum, determinant, and trace numerically from the finite matrix.
 
 ---
@@ -3542,42 +3542,42 @@ To approximate numerically, we perform the following steps:
 
 #### Option A: Fourier basis (suitable on periodic intervals)
 
-Let $f_n(x) = e^{i n x}$ for $n = -N, \dots, N$, with weights $e^{\alpha |x|}$. Then the matrix elements are:
+Let \(f_n(x) = e^{i n x}\) for \(n = -N, \dots, N\), with weights \(e^{\alpha |x|}\). Then the matrix elements are:
 
-$$
+\[
 [L]_{mn} = \int_{-\pi}^{\pi} \int_{-\pi}^{\pi} e^{-i m x} k(x - y) e^{i n y} e^{\alpha(|x| + |y|)} dx dy.
-$$
+\]
 
 #### Option B: Gauss–Hermite or Gauss–Laguerre quadrature
 
-If working on $\mathbb{R}$, we use exponential weight functions, and represent the operator using:
+If working on \(\mathbb{R}\), we use exponential weight functions, and represent the operator using:
 
-* Orthogonal polynomials $\psi_n(x)$,
-* Spectral collocation points $x_j$ and weights $w_j$,
-* Discrete matrix $[L]_{ij} = k(x_i - x_j) \sqrt{w_i w_j}$.
+* Orthogonal polynomials \(\psi_n(x)\),
+* Spectral collocation points \(x_j\) and weights \(w_j\),
+* Discrete matrix \([L]_{ij} = k(x_i - x_j) \sqrt{w_i w_j}\).
 
 ---
 
 ### **S.3 Spectral Approximation**
 
-Once the finite-dimensional matrix $L_N$ is constructed, we compute:
+Once the finite-dimensional matrix \(L_N\) is constructed, we compute:
 
-* **Eigenvalues** $\{ \mu_j^{(N)} \}$,
+* **Eigenvalues** \(\{ \mu_j^{(N)} \}\),
 * **Approximate determinant**:
 
-  $$
+  \[
   \det(I - \lambda L_N) = \prod_{j=1}^{2N+1} (1 - \lambda \mu_j^{(N)}),
-  $$
+  \]
 * **Approximate trace**:
 
-  $$
+  \[
   \theta_N(t) := \operatorname{Tr}(e^{-t L_N^2}) = \sum_j e^{-t (\mu_j^{(N)})^2}.
-  $$
+  \]
 
 Comparisons with:
 
-* Known high-precision zeros of $\zeta(s)$,
-* Theoretical trace asymptotics (e.g., $\sim t^{-1/2} \log(1/t)$),
+* Known high-precision zeros of \(\zeta(s)\),
+* Theoretical trace asymptotics (e.g., \(\sim t^{-1/2} \log(1/t)\)),
 
 can validate the accuracy of the approximation.
 
@@ -3585,25 +3585,25 @@ can validate the accuracy of the approximation.
 
 ### **S.4 Example: Toy Implementation in 50 Dimensions**
 
-1. Construct $k(x) \approx \mathcal{F}^{-1}[\phi](x)$ numerically, sampling $\phi(\lambda)$ at 1000 points and inverse Fourier transforming.
+1. Construct \(k(x) \approx \mathcal{F}^{-1}[\phi](x)\) numerically, sampling \(\phi(\lambda)\) at 1000 points and inverse Fourier transforming.
 
-2. Use quadrature nodes $\{x_j\} \subset [-\pi, \pi]$, e.g., Chebyshev or Gauss–Legendre points.
+2. Use quadrature nodes \(\{x_j\} \subset [-\pi, \pi]\), e.g., Chebyshev or Gauss–Legendre points.
 
-3. Define matrix $[L]_{ij} = k(x_i - x_j) \cdot w_j$, normalized appropriately.
+3. Define matrix \([L]_{ij} = k(x_i - x_j) \cdot w_j\), normalized appropriately.
 
-4. Diagonalize $L$: compute eigenvalues $\mu_j$, sorted by magnitude.
+4. Diagonalize \(L\): compute eigenvalues \(\mu_j\), sorted by magnitude.
 
 5. Compare top eigenvalues to known imaginary parts of ζ zeros.
 
-Result: even with modest dimension (e.g. $N = 25$), the largest eigenvalues approximate the lowest-lying zeta zeros to within a few percent.
+Result: even with modest dimension (e.g. \(N = 25\)), the largest eigenvalues approximate the lowest-lying zeta zeros to within a few percent.
 
 ---
 
 ### **S.5 Limitations and Challenges**
 
-* **Edge behavior**: approximation becomes less accurate near the endpoints $x = \pm \pi$ unless specialized boundary treatment is used.
+* **Edge behavior**: approximation becomes less accurate near the endpoints \(x = \pm \pi\) unless specialized boundary treatment is used.
 * **Resolution**: higher zeros require larger matrices and finer quadrature.
-* **Weighting**: exponential weights $e^{\alpha |x|}$ must be handled carefully in numerical inner products.
+* **Weighting**: exponential weights \(e^{\alpha |x|}\) must be handled carefully in numerical inner products.
 
 Nonetheless, the operator is **remarkably stable under mollified sampling**, and its trace-class nature allows even modest discretizations to yield useful approximations.
 
@@ -3617,76 +3617,76 @@ Nonetheless, the operator is **remarkably stable under mollified sampling**, and
 
 ---
 
-Next, we begin Appendix T, which outlines a roadmap for extending this spectral formalism to automorphic and Artin $L$-functions, providing conjectural operator definitions and required analytic inputs.
+Next, we begin Appendix T, which outlines a roadmap for extending this spectral formalism to automorphic and Artin \(L\)-functions, providing conjectural operator definitions and required analytic inputs.
 
-### **Appendix T: Roadmap to Spectral Formalism for General $L$-Functions**
+### **Appendix T: Roadmap to Spectral Formalism for General \(L\)-Functions**
 
-This appendix outlines a proposed strategy for extending the canonical spectral framework developed for the Riemann zeta function to more general $L$-functions, including:
+This appendix outlines a proposed strategy for extending the canonical spectral framework developed for the Riemann zeta function to more general \(L\)-functions, including:
 
-* Dirichlet $L$-functions,
-* Automorphic $L$-functions (e.g., those attached to modular forms),
-* Artin $L$-functions (associated with Galois representations).
+* Dirichlet \(L\)-functions,
+* Automorphic \(L\)-functions (e.g., those attached to modular forms),
+* Artin \(L\)-functions (associated with Galois representations).
 
-The goal is to construct, for each $L$-function satisfying a suitable set of analytic properties, a **canonical trace-class, self-adjoint operator** whose spectrum encodes the nontrivial zeros and whose determinant reproduces the completed $L$-function via a spectral identity.
+The goal is to construct, for each \(L\)-function satisfying a suitable set of analytic properties, a **canonical trace-class, self-adjoint operator** whose spectrum encodes the nontrivial zeros and whose determinant reproduces the completed \(L\)-function via a spectral identity.
 
 ---
 
 ### **T.1 Canonical Structure Recap (Zeta Case)**
 
-For $\zeta(s)$, the construction proceeds as:
+For \(\zeta(s)\), the construction proceeds as:
 
-1. **Input**: $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$,
-2. **Transform**: $k(x) := \phi^\vee(x) \in C^\infty_c([-π, π])$,
-3. **Operator**: $L_{\mathrm{sym}} f(x) = \int k(x - y) f(y)\,dy$ on $H_{\Psi_\alpha}$,
+1. **Input**: \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\),
+2. **Transform**: \(k(x) := \phi^\vee(x) \in C^\infty_c([-π, π])\),
+3. **Operator**: \(L_{\mathrm{sym}} f(x) = \int k(x - y) f(y)\,dy\) on \(H_{\Psi_\alpha}\),
 4. **Determinant**:
 
-   $$
+   \[
    \det{}_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
-   $$
-5. **Conclusion**: RH ⇔ $\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$.
+   \]
+5. **Conclusion**: RH ⇔ \(\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}\).
 
 ---
 
-### **T.2 General Template for $L(s, \pi)$**
+### **T.2 General Template for \(L(s, \pi)\)**
 
-Let $L(s, \pi)$ be an $L$-function associated to an automorphic representation $\pi$, satisfying:
+Let \(L(s, \pi)\) be an \(L\)-function associated to an automorphic representation \(\pi\), satisfying:
 
 * **Euler product**:
 
-  $$
+  \[
   L(s, \pi) = \prod_p \prod_{j=1}^{d_\pi} (1 - \alpha_{j, p} p^{-s})^{-1},
-  $$
+  \]
 * **Functional equation**:
 
-  $$
+  \[
   \Xi(s, \pi) = \epsilon(\pi) \Xi(1 - s, \tilde{\pi}),
-  $$
-* **Analytic continuation**: $\Xi(s, \pi)$ entire of finite order,
-* **Bounded exponential type**: $\phi_\pi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda, \pi) \in \mathcal{S}(\mathbb{R})$.
+  \]
+* **Analytic continuation**: \(\Xi(s, \pi)\) entire of finite order,
+* **Bounded exponential type**: \(\phi_\pi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda, \pi) \in \mathcal{S}(\mathbb{R})\).
 
 We then define:
 
 1. **Canonical Profile**:
-   $\phi_\pi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda, \pi \right)$,
+   \(\phi_\pi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda, \pi \right)\),
 2. **Kernel**:
-   $k_\pi(x) := \phi_\pi^\vee(x)$, compactly supported via Paley–Wiener (if exponential type bounded),
+   \(k_\pi(x) := \phi_\pi^\vee(x)\), compactly supported via Paley–Wiener (if exponential type bounded),
 3. **Operator**:
 
-   $$
+   \[
    L_{\mathrm{sym}}^{(\pi)} f(x) := \int_{\mathbb{R}} k_\pi(x - y) f(y) \, dy,
-   $$
+   \]
 
-   acting on $H_{\Psi_{\alpha_\pi}}$, where $\alpha_\pi > \text{type}(\phi_\pi)$,
+   acting on \(H_{\Psi_{\alpha_\pi}}\), where \(\alpha_\pi > \text{type}(\phi_\pi)\),
 4. **Determinant**:
 
-   $$
+   \[
    \det{}_\zeta(I - \lambda L_{\mathrm{sym}}^{(\pi)}) = \frac{\Xi(\tfrac{1}{2} + i\lambda, \pi)}{\Xi(\tfrac{1}{2}, \pi)},
-   $$
+   \]
 5. **GRH Equivalence**:
 
-   $$
+   \[
    \text{GRH for } L(s, \pi) \iff \operatorname{Spec}(L_{\mathrm{sym}}^{(\pi)}) \subset \mathbb{R}.
-   $$
+   \]
 
 ---
 
@@ -3694,20 +3694,20 @@ We then define:
 
 | Step                           | Requirement                         | Difficulty                                             |      |                                            |
 | ------------------------------ | ----------------------------------- | ------------------------------------------------------ | ---- | ------------------------------------------ |
-| Exponential type of $\phi_\pi$ | Bounded by $\tau_\pi$               | Known for many cases; requires $\Gamma$-factor control |      |                                            |
+| Exponential type of \(\phi_\pi\) | Bounded by \(\tau_\pi\)               | Known for many cases; requires \(\Gamma\)-factor control |      |                                            |
 | Kernel integrability           | ( k\_\pi \in L^1(e^{\alpha          | x                                                      | }) ) | Requires decay estimates; often computable |
-| Trace-class verification       | $\alpha > \tau_\pi$                 | Analytic but technical                                 |      |                                            |
-| Determinant identity           | Hadamard structure of $\Xi(s, \pi)$ | Known in many automorphic cases                        |      |                                            |
+| Trace-class verification       | \(\alpha > \tau_\pi\)                 | Analytic but technical                                 |      |                                            |
+| Determinant identity           | Hadamard structure of \(\Xi(s, \pi)\) | Known in many automorphic cases                        |      |                                            |
 | Spectrum ↔ zeros bijection     | Requires multiplicity matching      | Conjectural in Artin/GL(n) cases                       |      |                                            |
 
 ---
 
 ### **T.4 Special Cases and Known Results**
 
-* **Dirichlet $L$-functions**: satisfy all conditions. Canonical operators should be constructible via $\chi(n)$-twists in $k_\chi(x)$.
-* **Modular forms**: $L(s, f)$ attached to cusp forms yield $\Xi(s, f)$ with known functional equations and gamma factors.
+* **Dirichlet \(L\)-functions**: satisfy all conditions. Canonical operators should be constructible via \(\chi(n)\)-twists in \(k_\chi(x)\).
+* **Modular forms**: \(L(s, f)\) attached to cusp forms yield \(\Xi(s, f)\) with known functional equations and gamma factors.
 * **Selberg zeta functions**: already linked to spectrum of Laplacians; analogous constructions exist.
-* **Artin $L$-functions**: conjectural analytic continuation and RH; conditional spectral models may be formulated.
+* **Artin \(L\)-functions**: conjectural analytic continuation and RH; conditional spectral models may be formulated.
 
 ---
 
@@ -3715,25 +3715,25 @@ We then define:
 
 A longer-term ambition is to formalize:
 
-* Spectral functoriality: if $\pi \mapsto \pi'$ is a Langlands lift, then
+* Spectral functoriality: if \(\pi \mapsto \pi'\) is a Langlands lift, then
 
-  $$
+  \[
   L_{\mathrm{sym}}^{(\pi')} = F(L_{\mathrm{sym}}^{(\pi)}),
-  $$
+  \]
 
-  where $F$ is a spectral functor (e.g., symmetric power, base change).
+  where \(F\) is a spectral functor (e.g., symmetric power, base change).
 
 * Compatibility of determinant identities under lift:
 
-  $$
+  \[
   \Xi(s, \pi') = \Xi(s, \pi)^\#,
-  $$
+  \]
 
   implies
 
-  $$
+  \[
   \det(I - \lambda L_{\mathrm{sym}}^{(\pi')}) = (\det(I - \lambda L_{\mathrm{sym}}^{(\pi)}))^\#.
-  $$
+  \]
 
 While speculative, such structure would render the spectral framework a genuine analytic incarnation of the Langlands program.
 
@@ -3741,19 +3741,19 @@ While speculative, such structure would render the spectral framework a genuine 
 
 ### **T.6 Summary**
 
-The spectral formalism used to prove RH generalizes naturally to a broad class of $L$-functions, contingent on:
+The spectral formalism used to prove RH generalizes naturally to a broad class of \(L\)-functions, contingent on:
 
 * Analytic continuation and functional equations,
 * Controlled exponential type and decay of transforms,
 * Trace-class convergence of the resulting operators.
 
-Once defined, these operators $L_{\mathrm{sym}}^{(\pi)}$ encode the zeros spectrally, and the Generalized Riemann Hypothesis becomes equivalent to their spectra lying in $\mathbb{R}$.
+Once defined, these operators \(L_{\mathrm{sym}}^{(\pi)}\) encode the zeros spectrally, and the Generalized Riemann Hypothesis becomes equivalent to their spectra lying in \(\mathbb{R}\).
 
 Next, we begin Appendix U, which outlines a proposed minimal axiomatization—i.e., the necessary and sufficient analytic properties a function must satisfy to admit a canonical spectral encoding under this framework.
 
 ### **Appendix U: Axiomatic Framework for Canonical Spectral Encodings**
 
-In this appendix, we abstract the core conditions required for a function $F(s)$ to admit a canonical spectral realization—i.e., to arise as the zeta-regularized determinant of a trace-class, self-adjoint operator. The goal is to formulate a minimal and general **axiomatic template** that captures the essence of the spectral equivalence strategy used for the Riemann zeta function and its generalizations.
+In this appendix, we abstract the core conditions required for a function \(F(s)\) to admit a canonical spectral realization—i.e., to arise as the zeta-regularized determinant of a trace-class, self-adjoint operator. The goal is to formulate a minimal and general **axiomatic template** that captures the essence of the spectral equivalence strategy used for the Riemann zeta function and its generalizations.
 
 This framework identifies the necessary analytic inputs and structural constraints, providing a blueprint for future generalizations and theoretical classification.
 
@@ -3761,134 +3761,134 @@ This framework identifies the necessary analytic inputs and structural constrain
 
 ### **U.1 Motivation: Generalizing the Canonical Construction**
 
-Recall the key identity for $\zeta(s)$:
+Recall the key identity for \(\zeta(s)\):
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)},
-$$
+\]
 
-where $L_{\mathrm{sym}}$ is a canonical trace-class operator and $\Xi(s)$ is the completed Riemann zeta function.
+where \(L_{\mathrm{sym}}\) is a canonical trace-class operator and \(\Xi(s)\) is the completed Riemann zeta function.
 
 We aim to determine:
-**What analytic properties must $\Xi(s)$ satisfy to allow this identity to hold generally?**
+**What analytic properties must \(\Xi(s)\) satisfy to allow this identity to hold generally?**
 
 ---
 
 ### **U.2 Axioms for Spectral Encodability**
 
-Let $F(s)$ be a complex-valued function. We propose the following minimal axioms to define its eligibility for canonical spectral realization.
+Let \(F(s)\) be a complex-valued function. We propose the following minimal axioms to define its eligibility for canonical spectral realization.
 
 #### **Axiom 1 (Entirety and Order 1)**
 
-$F(s)$ is entire of order at most 1:
+\(F(s)\) is entire of order at most 1:
 
-$$
+\[
 |F(s)| \le C e^{A|s|} \quad \text{for some constants } C, A > 0.
-$$
+\]
 
 #### **Axiom 2 (Real Line Symmetry)**
 
-$F(s)$ is real on the real line:
+\(F(s)\) is real on the real line:
 
-$$
+\[
 \overline{F(s)} = F(\overline{s}) \quad \text{for all } s \in \mathbb{C}.
-$$
+\]
 
 #### **Axiom 3 (Functional Equation Symmetry)**
 
-There exists a central point $c \in \mathbb{R}$ such that:
+There exists a central point \(c \in \mathbb{R}\) such that:
 
-$$
+\[
 F(c + s) = F(c - s) \quad \text{for all } s \in \mathbb{C}.
-$$
+\]
 
-This ensures $F$ can be written as $\phi(\lambda) = F(c + i\lambda)$, a real, even function of $\lambda \in \mathbb{R}$.
+This ensures \(F\) can be written as \(\phi(\lambda) = F(c + i\lambda)\), a real, even function of \(\lambda \in \mathbb{R}\).
 
 #### **Axiom 4 (Exponential Type and Paley–Wiener Regularity)**
 
-There exists $\tau > 0$ such that:
+There exists \(\tau > 0\) such that:
 
-$$
+\[
 |\phi(\lambda)| \le C e^{-\tau |\lambda|}, \quad \text{with } \phi(\lambda) := F(c + i\lambda).
-$$
+\]
 
-Then $\phi(\lambda)$ is of exponential type $\tau$, and $\phi^\vee(x)$ has compact support in $[-\tau, \tau]$.
+Then \(\phi(\lambda)\) is of exponential type \(\tau\), and \(\phi^\vee(x)\) has compact support in \([-\tau, \tau]\).
 
 #### **Axiom 5 (Hadamard Product Structure)**
 
-$F(s)$ admits a Hadamard factorization of the form:
+\(F(s)\) admits a Hadamard factorization of the form:
 
-$$
+\[
 F(s) = F(c) \prod_{\rho} \left(1 - \frac{s - c}{\rho - c}\right),
-$$
+\]
 
-with $\rho$ the nonreal zeros of $F$, counted with multiplicity.
+with \(\rho\) the nonreal zeros of \(F\), counted with multiplicity.
 
 ---
 
 ### **U.3 Canonical Operator from Axioms**
 
-Given a function $F$ satisfying Axioms 1–5, define:
+Given a function \(F\) satisfying Axioms 1–5, define:
 
-* **Spectral Profile**: $\phi(\lambda) := F(c + i\lambda)$,
-* **Kernel**: $k(x) := \phi^\vee(x)$, supported in $[-\tau, \tau]$,
-* **Weighted Space**: $H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)$, with $\alpha > \tau$,
+* **Spectral Profile**: \(\phi(\lambda) := F(c + i\lambda)\),
+* **Kernel**: \(k(x) := \phi^\vee(x)\), supported in \([-\tau, \tau]\),
+* **Weighted Space**: \(H_{\Psi_\alpha} = L^2(\mathbb{R}, e^{\alpha |x|} dx)\), with \(\alpha > \tau\),
 * **Operator**:
 
-  $$
+  \[
   L_F f(x) := \int_{\mathbb{R}} k(x - y) f(y) \, dy,
-  $$
+  \]
 
   which is trace-class, compact, and self-adjoint.
 
 Then:
 
-* The spectrum of $L_F$ (excluding 0) is the set $\mu = \tfrac{1}{i}(\rho - c)$,
+* The spectrum of \(L_F\) (excluding 0) is the set \(\mu = \tfrac{1}{i}(\rho - c)\),
 * The spectral determinant satisfies:
 
-  $$
+  \[
   \det\nolimits_\zeta(I - \lambda L_F) = \frac{F(c + i\lambda)}{F(c)}.
-  $$
+  \]
 
-Thus, this operator $L_F$ canonically encodes the zeros of $F$ as its spectrum.
+Thus, this operator \(L_F\) canonically encodes the zeros of \(F\) as its spectrum.
 
 ---
 
 ### **U.4 RH-Style Equivalence**
 
-If $F$ satisfies the above axioms, we define the **generalized Riemann Hypothesis for $F$** as:
+If \(F\) satisfies the above axioms, we define the **generalized Riemann Hypothesis for \(F\)** as:
 
-$$
+\[
 \text{GRH}(F): \quad \text{All nontrivial zeros } \rho \text{ of } F(s) \text{ satisfy } \Re(\rho) = c.
-$$
+\]
 
 Then:
 
 **Theorem U.1 (Spectral Reformulation of GRH(F)):**
 Under Axioms 1–5,
 
-$$
+\[
 \text{GRH}(F) \quad \Longleftrightarrow \quad \operatorname{Spec}(L_F) \subset \mathbb{R}.
-$$
+\]
 
-This restates the analytic hypothesis as a spectral reality condition on a trace-class, self-adjoint operator constructed canonically from $F$.
+This restates the analytic hypothesis as a spectral reality condition on a trace-class, self-adjoint operator constructed canonically from \(F\).
 
 ---
 
 ### **U.5 Examples**
 
-| Function $F(s)$            | Central Point $c$ | Spectral Operator $L_F$ Exists?         |
+| Function \(F(s)\)            | Central Point \(c\) | Spectral Operator \(L_F\) Exists?         |
 | -------------------------- | ----------------- | --------------------------------------- |
-| $\Xi(s)$ (Riemann)         | $\tfrac{1}{2}$    | ✅ Canonical operator in this manuscript |
-| $\Xi(s, \chi)$ (Dirichlet) | $\tfrac{1}{2}$    | ✅ Provided analytic continuation        |
-| $\Xi(s, f)$ (modular form) | $\tfrac{k}{2}$    | ✅ For cusp forms of weight $k$          |
-| $\zeta(s)$ (not completed) | –                 | ❌ Lacks symmetry and exponential decay  |
+| \(\Xi(s)\) (Riemann)         | \(\tfrac{1}{2}\)    | ✅ Canonical operator in this manuscript |
+| \(\Xi(s, \chi)\) (Dirichlet) | \(\tfrac{1}{2}\)    | ✅ Provided analytic continuation        |
+| \(\Xi(s, f)\) (modular form) | \(\tfrac{k}{2}\)    | ✅ For cusp forms of weight \(k\)          |
+| \(\zeta(s)\) (not completed) | –                 | ❌ Lacks symmetry and exponential decay  |
 
 ---
 
 ### **U.6 Summary**
 
-We have formulated a minimal, concrete set of axioms for when a complex function $F(s)$ can be canonically encoded into a spectral operator whose determinant recovers $F$, and whose spectrum recovers its zeros. This structure supports:
+We have formulated a minimal, concrete set of axioms for when a complex function \(F(s)\) can be canonically encoded into a spectral operator whose determinant recovers \(F\), and whose spectrum recovers its zeros. This structure supports:
 
 * The spectral reinterpretation of RH and GRH,
 * A generalization of the canonical construction to a family of functions,
@@ -3912,26 +3912,26 @@ These connections are speculative but increasingly plausible, and they suggest a
 
 A dynamical zeta function typically encodes data about periodic orbits of a flow or diffeomorphism. One prototypical form is the **Ruelle zeta function**:
 
-$$
+\[
 Z(s) = \prod_{\gamma} \left(1 - e^{-s T_\gamma}\right)^{-1},
-$$
+\]
 
 where:
 
-* $\gamma$ runs over primitive closed orbits of a smooth Anosov flow,
-* $T_\gamma$ is the period of $\gamma$.
+* \(\gamma\) runs over primitive closed orbits of a smooth Anosov flow,
+* \(T_\gamma\) is the period of \(\gamma\).
 
 Another example is the **Selberg zeta function**:
 
-$$
+\[
 Z_{\mathrm{Sel}}(s) = \prod_{\{\gamma\}} \prod_{k=0}^\infty \left(1 - e^{-(s + k) \ell(\gamma)}\right),
-$$
+\]
 
-for hyperbolic surfaces, where $\ell(\gamma)$ is the length of a primitive closed geodesic.
+for hyperbolic surfaces, where \(\ell(\gamma)\) is the length of a primitive closed geodesic.
 
 In both cases, the zeta function reflects the **spectrum** of an associated **transfer operator** or Laplacian, and often satisfies:
 
-* Analytic continuation to $\mathbb{C}$,
+* Analytic continuation to \(\mathbb{C}\),
 * A functional equation,
 * A trace formula relating spectral data to periodic orbit data.
 
@@ -3941,16 +3941,16 @@ In both cases, the zeta function reflects the **spectrum** of an associated **tr
 
 The zeta-regularized determinant from our construction:
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
-$$
+\]
 
 bears structural resemblance to dynamical zeta functions:
 
-* The operator $L_{\mathrm{sym}}$ acts like a transfer operator for an "arithmetic dynamical system",
+* The operator \(L_{\mathrm{sym}}\) acts like a transfer operator for an "arithmetic dynamical system",
 * Its spectrum encodes resonance-like data (the imaginary parts of the nontrivial zeros),
 * The determinant is the natural entire function capturing its spectral signature,
-* The heat trace $\operatorname{Tr}(e^{-tL^2})$ behaves analogously to dynamical trace formulas, aggregating over "orbits" (eigenvalues).
+* The heat trace \(\operatorname{Tr}(e^{-tL^2})\) behaves analogously to dynamical trace formulas, aggregating over "orbits" (eigenvalues).
 
 **Speculative interpretation**: the Riemann zeta function is a **dynamical zeta function** for an arithmetic flow on a hidden geometric or noncommutative space.
 
@@ -3964,18 +3964,18 @@ In dynamical systems, trace formulas relate spectral data of an operator to geom
 * The **Selberg trace formula** connects Laplacian eigenvalues to lengths of geodesics,
 * In quantum chaos, the **Gutzwiller trace formula** relates energy levels to classical periodic orbits.
 
-In our case, while the operator $L_{\mathrm{sym}}$ is not explicitly generated by a flow, it has:
+In our case, while the operator \(L_{\mathrm{sym}}\) is not explicitly generated by a flow, it has:
 
 * A trace formula:
 
-  $$
+  \[
   \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_{\mu} e^{-t\mu^2},
-  $$
+  \]
 * A determinant expressing zeros:
 
-  $$
+  \[
   \Xi(\tfrac{1}{2} + i\lambda) = \Xi(\tfrac{1}{2}) \prod_{\mu} (1 - \lambda \mu).
-  $$
+  \]
 
 These serve as **spectral signatures**, analogous to how dynamical zeta functions encode fixed-point data.
 
@@ -3983,30 +3983,30 @@ These serve as **spectral signatures**, analogous to how dynamical zeta function
 
 ### **V.4 Conjectural Interpretation: The Arithmetic Flow**
 
-If we could interpret $L_{\mathrm{sym}}$ as the generator of a flow $\Phi^t$ on some (possibly noncommutative) space $X$, then:
+If we could interpret \(L_{\mathrm{sym}}\) as the generator of a flow \(\Phi^t\) on some (possibly noncommutative) space \(X\), then:
 
-* The eigenvalues $\mu_n$ would be resonance frequencies of this flow,
+* The eigenvalues \(\mu_n\) would be resonance frequencies of this flow,
 * The determinant would be its zeta function,
-* The trace of $e^{-tL^2}$ would be its partition function or dynamical trace.
+* The trace of \(e^{-tL^2}\) would be its partition function or dynamical trace.
 
 This viewpoint is consonant with:
 
 * Alain Connes’s noncommutative geometry approach to RH,
-* The Langlands program’s view of $L$-functions as harmonic spectra on adelic quotients,
+* The Langlands program’s view of \(L\)-functions as harmonic spectra on adelic quotients,
 * Recent ideas relating zeta zeros to quantum chaos and arithmetic dynamics.
 
-Such a flow—if it exists—would provide a **dynamical model of prime behavior**, with $L_{\mathrm{sym}}$ as its infinitesimal generator.
+Such a flow—if it exists—would provide a **dynamical model of prime behavior**, with \(L_{\mathrm{sym}}\) as its infinitesimal generator.
 
 ---
 
 ### **V.5 Toward a Unified Framework**
 
-The key insight: in many settings, a zeta function arises as the **determinant of $1 - \text{flow operator}$** or **resolvent trace** of a natural differential operator.
+The key insight: in many settings, a zeta function arises as the **determinant of \(1 - \text{flow operator}\)** or **resolvent trace** of a natural differential operator.
 
 | Zeta Function      | Generator                    | Spectral Object                 | Domain                         |
 | ------------------ | ---------------------------- | ------------------------------- | ------------------------------ |
-| Riemann $\zeta(s)$ | Canonical $L_{\mathrm{sym}}$ | Trace-class convolution op.     | Weighted $L^2(\mathbb{R})$     |
-| Selberg            | Laplace–Beltrami             | Laplacian on hyperbolic surface | $\Gamma \backslash \mathbb{H}$ |
+| Riemann \(\zeta(s)\) | Canonical \(L_{\mathrm{sym}}\) | Trace-class convolution op.     | Weighted \(L^2(\mathbb{R})\)     |
+| Selberg            | Laplace–Beltrami             | Laplacian on hyperbolic surface | \(\Gamma \backslash \mathbb{H}\) |
 | Ruelle             | Flow derivative              | Transfer operator               | Anosov space                   |
 
 A grand vision is that **all natural zeta functions arise from spectral invariants of a flow**—on classical, adelic, or noncommutative spaces.
@@ -4015,7 +4015,7 @@ A grand vision is that **all natural zeta functions arise from spectral invarian
 
 ### **V.6 Summary**
 
-The canonical operator $L_{\mathrm{sym}}$ and its determinant echo the structural logic of dynamical zeta functions:
+The canonical operator \(L_{\mathrm{sym}}\) and its determinant echo the structural logic of dynamical zeta functions:
 
 * An operator with meaningful spectrum,
 * A determinant function capturing spectral locations,
@@ -4024,7 +4024,7 @@ The canonical operator $L_{\mathrm{sym}}$ and its determinant echo the structura
 
 While the construction is not yet embedded in a geometric flow, it is an open and enticing question whether one can:
 
-* Construct such a flow for $L_{\mathrm{sym}}$,
+* Construct such a flow for \(L_{\mathrm{sym}}\),
 * Embed the canonical spectral proof into a geometric or dynamical formalism,
 * Extend this framework to a global theory of arithmetic dynamics.
 
@@ -4040,12 +4040,12 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 
 | Symbol          | Meaning                                                  | Notes                                                    |
 | --------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| $\mathbb{R}$    | Real numbers                                             | Standard                                                 |
-| $\mathbb{C}$    | Complex numbers                                          | Standard                                                 |
-| $\lambda$       | Spectral parameter (Fourier or eigenvalue variable)      | Appears in $\Xi(\tfrac{1}{2} + i\lambda)$                |
-| $\mu$           | Eigenvalue of canonical operator $L_{\mathrm{sym}}$      | Corresponds to $\mu = \tfrac{1}{i}(\rho - \tfrac{1}{2})$ |
-| $\rho$          | Nontrivial zero of $\zeta(s)$                            | RH asserts $\Re(\rho) = \tfrac{1}{2}$                    |
-| $\phi(\lambda)$ | Canonical Fourier profile $\Xi(\tfrac{1}{2} + i\lambda)$ | Entire, even, real-valued                                |
+| \(\mathbb{R}\)    | Real numbers                                             | Standard                                                 |
+| \(\mathbb{C}\)    | Complex numbers                                          | Standard                                                 |
+| \(\lambda\)       | Spectral parameter (Fourier or eigenvalue variable)      | Appears in \(\Xi(\tfrac{1}{2} + i\lambda)\)                |
+| \(\mu\)           | Eigenvalue of canonical operator \(L_{\mathrm{sym}}\)      | Corresponds to \(\mu = \tfrac{1}{i}(\rho - \tfrac{1}{2})\) |
+| \(\rho\)          | Nontrivial zero of \(\zeta(s)\)                            | RH asserts \(\Re(\rho) = \tfrac{1}{2}\)                    |
+| \(\phi(\lambda)\) | Canonical Fourier profile \(\Xi(\tfrac{1}{2} + i\lambda)\) | Entire, even, real-valued                                |
 
 ---
 
@@ -4053,11 +4053,11 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 
 | Symbol           | Meaning                                         | Notes                                                 |     |                                       |
 | ---------------- | ----------------------------------------------- | ----------------------------------------------------- | --- | ------------------------------------- |
-| $\zeta(s)$       | Riemann zeta function                           | Defined for $\Re(s) > 1$, meromorphic on $\mathbb{C}$ |     |                                       |
-| $\Xi(s)$         | Completed zeta function                         | Entire, satisfies $\Xi(s) = \Xi(1 - s)$               |     |                                       |
-| $\phi^\vee(x)$   | Inverse Fourier transform of $\phi$             | Yields convolution kernel $k(x)$                      |     |                                       |
-| $k(x)$           | Kernel function for operator $L_{\mathrm{sym}}$ | Real, even, compactly supported on $[-\pi, \pi]$      |     |                                       |
-| $\Psi_\alpha(x)$ | Weight function ( e^{\alpha                     | x                                                     | } ) | Used in defining weighted $L^2$ space |
+| \(\zeta(s)\)       | Riemann zeta function                           | Defined for \(\Re(s) > 1\), meromorphic on \(\mathbb{C}\) |     |                                       |
+| \(\Xi(s)\)         | Completed zeta function                         | Entire, satisfies \(\Xi(s) = \Xi(1 - s)\)               |     |                                       |
+| \(\phi^\vee(x)\)   | Inverse Fourier transform of \(\phi\)             | Yields convolution kernel \(k(x)\)                      |     |                                       |
+| \(k(x)\)           | Kernel function for operator \(L_{\mathrm{sym}}\) | Real, even, compactly supported on \([-\pi, \pi]\)      |     |                                       |
+| \(\Psi_\alpha(x)\) | Weight function ( e^{\alpha                     | x                                                     | } ) | Used in defining weighted \(L^2\) space |
 
 ---
 
@@ -4065,10 +4065,10 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 
 | Symbol                   | Meaning                                             | Notes                                             |         |                                         |
 | ------------------------ | --------------------------------------------------- | ------------------------------------------------- | ------- | --------------------------------------- |
-| $H_{\Psi_\alpha}$        | Weighted Hilbert space: ( L^2(\mathbb{R}, e^{\alpha | x                                                 | } dx) ) | Requires $\alpha > \pi$ for trace-class |
-| $L_{\mathrm{sym}}$       | Canonical operator constructed from $\Xi(s)$        | Self-adjoint, compact, trace-class                |         |                                         |
-| $L_t$                    | Mollified operator $L_t = \phi_t^\vee * \cdot$      | $\phi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda)$ |         |                                         |
-| $\operatorname{Spec}(L)$ | Spectrum of operator $L$                            | Discrete for compact operators                    |         |                                         |
+| \(H_{\Psi_\alpha}\)        | Weighted Hilbert space: ( L^2(\mathbb{R}, e^{\alpha | x                                                 | } dx) ) | Requires \(\alpha > \pi\) for trace-class |
+| \(L_{\mathrm{sym}}\)       | Canonical operator constructed from \(\Xi(s)\)        | Self-adjoint, compact, trace-class                |         |                                         |
+| \(L_t\)                    | Mollified operator \(L_t = \phi_t^\vee * \cdot\)      | \(\phi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda)\) |         |                                         |
+| \(\operatorname{Spec}(L)\) | Spectrum of operator \(L\)                            | Discrete for compact operators                    |         |                                         |
 
 ---
 
@@ -4076,10 +4076,10 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 
 | Symbol                               | Meaning                                                    | Notes                                  |
 | ------------------------------------ | ---------------------------------------------------------- | -------------------------------------- |
-| $\det\nolimits_\zeta(I - \lambda L)$ | Zeta-regularized Fredholm determinant of operator $L$      | Encodes $\Xi(\tfrac{1}{2} + i\lambda)$ |
-| $\operatorname{Tr}(T)$               | Trace of operator $T$                                      | Well-defined for trace-class operators |
-| $\theta(t)$                          | Heat trace: $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ | Used in Tauberian inversion            |
-| $\zeta_L(s)$                         | Spectral zeta function: $\sum \mu_n^{-s}$                  | For eigenvalues $\mu_n \ne 0$          |
+| \(\det\nolimits_\zeta(I - \lambda L)\) | Zeta-regularized Fredholm determinant of operator \(L\)      | Encodes \(\Xi(\tfrac{1}{2} + i\lambda)\) |
+| \(\operatorname{Tr}(T)\)               | Trace of operator \(T\)                                      | Well-defined for trace-class operators |
+| \(\theta(t)\)                          | Heat trace: \(\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})\) | Used in Tauberian inversion            |
+| \(\zeta_L(s)\)                         | Spectral zeta function: \(\sum \mu_n^{-s}\)                  | For eigenvalues \(\mu_n \ne 0\)          |
 
 ---
 
@@ -4087,10 +4087,10 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 
 | Symbol                                       | Meaning                                   | Notes                                |
 | -------------------------------------------- | ----------------------------------------- | ------------------------------------ |
-| $\mathcal{F}$                                | Fourier transform                         | Normalized for unitarity on $L^2$    |
-| $\mathcal{S}(\mathbb{R})$                    | Schwartz space                            | Dense in $H_{\Psi_\alpha}$           |
-| $\operatorname{Re}(s), \operatorname{Im}(s)$ | Real/imaginary part of complex number $s$ | Standard                             |
-| $\operatorname{Res}_{s=s_0}$                 | Residue at $s = s_0$                      | Used in complex contour integrations |
+| \(\mathcal{F}\)                                | Fourier transform                         | Normalized for unitarity on \(L^2\)    |
+| \(\mathcal{S}(\mathbb{R})\)                    | Schwartz space                            | Dense in \(H_{\Psi_\alpha}\)           |
+| \(\operatorname{Re}(s), \operatorname{Im}(s)\) | Real/imaginary part of complex number \(s\) | Standard                             |
+| \(\operatorname{Res}_{s=s_0}\)                 | Residue at \(s = s_0\)                      | Used in complex contour integrations |
 
 ---
 
@@ -4098,12 +4098,12 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 
 | Label                                | Describes                                                  | Defined In   |
 | ------------------------------------ | ---------------------------------------------------------- | ------------ |
-| `def:canonical_profile`              | $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$            | §3.1         |
-| `def:canonical_operator`             | $L_{\mathrm{sym}} := \phi^\vee * \cdot$                    | §3.3         |
+| `def:canonical_profile`              | \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\)            | §3.1         |
+| `def:canonical_operator`             | \(L_{\mathrm{sym}} := \phi^\vee * \cdot\)                    | §3.3         |
 | `thm:canonical_determinant_identity` | Main spectral determinant identity                         | §7.1         |
-| `lem:self_adjointness`               | Self-adjointness of $L_{\mathrm{sym}}$                     | Appendix P.2 |
-| `thm:rh_equiv_spec_real`             | RH ⇔ Real spectrum of $L_{\mathrm{sym}}$                   | §9.3         |
-| `thm:spectral_counting_law`          | $N(T) \sim \frac{T}{2\pi} \log\left(\frac{T}{2\pi}\right)$ | §11.3        |
+| `lem:self_adjointness`               | Self-adjointness of \(L_{\mathrm{sym}}\)                     | Appendix P.2 |
+| `thm:rh_equiv_spec_real`             | RH ⇔ Real spectrum of \(L_{\mathrm{sym}}\)                   | §9.3         |
+| `thm:spectral_counting_law`          | \(N(T) \sim \frac{T}{2\pi} \log\left(\frac{T}{2\pi}\right)\) | §11.3        |
 
 ---
 
@@ -4134,9 +4134,9 @@ where:
 
 For example:
 
-* `def:canonical_operator` — defines the core operator $L_{\mathrm{sym}}$
+* `def:canonical_operator` — defines the core operator \(L_{\mathrm{sym}}\)
 * `lem:trace_class_criterion` — proves the decay condition for trace-class
-* `thm:canonical_determinant_identity` — identifies the spectral determinant with $\Xi(s)$
+* `thm:canonical_determinant_identity` — identifies the spectral determinant with \(\Xi(s)\)
 * `cor:rh_equiv_real_spec` — restates the equivalence between RH and spectral reality
 
 ---
@@ -4147,13 +4147,13 @@ Each label is unique and associated with a precise location and reference ID. A 
 
 | Label                                | Section     | Reference ID | Description                                                                                   |
 | ------------------------------------ | ----------- | ------------ | --------------------------------------------------------------------------------------------- |
-| `def:canonical_profile`              | §3.1        | D01          | Defines $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$                                        |
-| `def:canonical_operator`             | §3.3        | D02          | Defines $L_{\mathrm{sym}}$ as convolution by $\phi^\vee$                                      |
-| `lem:xi_decay`                       | §3.2        | L01          | Decay estimate for $\Xi$ and Paley–Wiener compact support                                     |
-| `lem:kernel_decay_threshold`         | §5.1        | L04          | Sharp threshold $\alpha > \pi$ for kernel integrability                                       |
-| `lem:self_adjointness`               | Appendix P2 | L07          | Proves self-adjointness of $L_{\mathrm{sym}}$                                                 |
-| `thm:canonical_determinant_identity` | §7.3        | T01          | $\det{}_\zeta(I - \lambda L_{\mathrm{sym}}) = \Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2})$ |
-| `thm:rh_equiv_spec_real`             | §9.3        | T03          | RH ⇔ Spectrum of $L_{\mathrm{sym}}$ is real                                                   |
+| `def:canonical_profile`              | §3.1        | D01          | Defines \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\)                                        |
+| `def:canonical_operator`             | §3.3        | D02          | Defines \(L_{\mathrm{sym}}\) as convolution by \(\phi^\vee\)                                      |
+| `lem:xi_decay`                       | §3.2        | L01          | Decay estimate for \(\Xi\) and Paley–Wiener compact support                                     |
+| `lem:kernel_decay_threshold`         | §5.1        | L04          | Sharp threshold \(\alpha > \pi\) for kernel integrability                                       |
+| `lem:self_adjointness`               | Appendix P2 | L07          | Proves self-adjointness of \(L_{\mathrm{sym}}\)                                                 |
+| `thm:canonical_determinant_identity` | §7.3        | T01          | \(\det{}_\zeta(I - \lambda L_{\mathrm{sym}}) = \Xi(\tfrac{1}{2} + i\lambda)/\Xi(\tfrac{1}{2})\) |
+| `thm:rh_equiv_spec_real`             | §9.3        | T03          | RH ⇔ Spectrum of \(L_{\mathrm{sym}}\) is real                                                   |
 
 ---
 
@@ -4236,14 +4236,14 @@ These connections, while not required for the validity of the argument, point to
 
 ### **Y.1 Quantum Mechanics and Operator Spectra**
 
-The canonical operator $L_{\mathrm{sym}}$ shares formal characteristics with Hamiltonians in quantum mechanics:
+The canonical operator \(L_{\mathrm{sym}}\) shares formal characteristics with Hamiltonians in quantum mechanics:
 
 * It is **self-adjoint**, ensuring real eigenvalues ("observable energies"),
 * It has **compact resolvent**, implying a discrete spectrum,
 * Its eigenvalues correspond to "frequencies" that determine the harmonic structure of the zeta function.
 
 **Analog:**
-Just as quantum systems encode physical structure via their spectral data, $L_{\mathrm{sym}}$ encodes number-theoretic structure via its eigenvalues. In this analogy:
+Just as quantum systems encode physical structure via their spectral data, \(L_{\mathrm{sym}}\) encodes number-theoretic structure via its eigenvalues. In this analogy:
 
 * **The zeta zeros** play the role of energy levels,
 * **The zeta determinant** is the partition function,
@@ -4259,12 +4259,12 @@ Alain Connes’s noncommutative geometry program has long posited that the zeros
 
 The present construction resonates with that vision:
 
-* The operator $L_{\mathrm{sym}}$ can be viewed as living on a weighted $L^2$-space shaped by zeta’s analytic properties,
+* The operator \(L_{\mathrm{sym}}\) can be viewed as living on a weighted \(L^2\)-space shaped by zeta’s analytic properties,
 * The **spectral side** of the trace formula is fully explicit,
-* The **arithmetic side** is encoded intrinsically within the kernel derived from $\Xi(s)$.
+* The **arithmetic side** is encoded intrinsically within the kernel derived from \(\Xi(s)\).
 
 Potential connection:
-If a geometric space can be constructed whose Laplacian or flow generator is unitarily equivalent to $L_{\mathrm{sym}}$, it would establish a concrete **noncommutative spectral triple**.
+If a geometric space can be constructed whose Laplacian or flow generator is unitarily equivalent to \(L_{\mathrm{sym}}\), it would establish a concrete **noncommutative spectral triple**.
 
 ---
 
@@ -4274,15 +4274,15 @@ The Langlands program predicts deep correspondences between:
 
 * Automorphic representations (analytic objects),
 * Galois representations (arithmetic objects),
-* $L$-functions as their joint spectral avatars.
+* \(L\)-functions as their joint spectral avatars.
 
 The spectral reformulation of RH suggests that:
 
-* Each $L$-function may admit a canonical operator,
-* The **spectrum** of this operator reflects arithmetic data (e.g., zeros of $L(s)$),
+* Each \(L\)-function may admit a canonical operator,
+* The **spectrum** of this operator reflects arithmetic data (e.g., zeros of \(L(s)\)),
 * **Functoriality** (e.g., base change, lifting) may correspond to **intertwining operators** or **spectral functors**.
 
-This builds a **spectral layer** over Langlands duality, potentially enabling new types of trace formulas and categorical interpretations of $L$-functions.
+This builds a **spectral layer** over Langlands duality, potentially enabling new types of trace formulas and categorical interpretations of \(L\)-functions.
 
 ---
 
@@ -4290,12 +4290,12 @@ This builds a **spectral layer** over Langlands duality, potentially enabling ne
 
 From a categorical perspective, the canonical operator construction has the shape of a **functor**:
 
-* Input: $F(s)$ satisfying axioms (entirety, symmetry, exponential type, etc.),
-* Output: a self-adjoint trace-class operator $L_F$ such that
+* Input: \(F(s)\) satisfying axioms (entirety, symmetry, exponential type, etc.),
+* Output: a self-adjoint trace-class operator \(L_F\) such that
 
-  $$
+  \[
   \det\nolimits_\zeta(I - \lambda L_F) = \frac{F(c + i\lambda)}{F(c)}.
-  $$
+  \]
 
 This mapping could be formalized as a **functor between categories**:
 
@@ -4348,29 +4348,29 @@ such that the proof becomes **modular, self-contained**, and suitable for direct
 
 The axiomatic kernel is organized in four layers:
 
-1. **Analytic Assumptions** — properties of the completed zeta function $\Xi(s)$,
-2. **Operator Construction** — defining $L_{\mathrm{sym}}$ and its domain,
-3. **Spectral Equivalence** — linking determinant to $\Xi(s)$ and zeros to eigenvalues,
+1. **Analytic Assumptions** — properties of the completed zeta function \(\Xi(s)\),
+2. **Operator Construction** — defining \(L_{\mathrm{sym}}\) and its domain,
+3. **Spectral Equivalence** — linking determinant to \(\Xi(s)\) and zeros to eigenvalues,
 4. **Logical Conclusion** — reformulating RH as a spectral condition.
 
 ---
 
 ### **Z.2 Minimal Axioms**
 
-Let $\Xi(s) := \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma\left( \tfrac{s}{2} \right)\zeta(s)$. Assume:
+Let \(\Xi(s) := \tfrac{1}{2}s(s-1)\pi^{-s/2}\Gamma\left( \tfrac{s}{2} \right)\zeta(s)\). Assume:
 
 **Axiom A1 (Entirety and Order One):**
-$\Xi(s)$ is entire of order 1 and exponential type $\pi$ in $s \in \mathbb{C}$.
+\(\Xi(s)\) is entire of order 1 and exponential type \(\pi\) in \(s \in \mathbb{C}\).
 
 **Axiom A2 (Functional Symmetry):**
-$\Xi(s) = \Xi(1 - s)$, so $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$ is real and even.
+\(\Xi(s) = \Xi(1 - s)\), so \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\) is real and even.
 
 **Axiom A3 (Hadamard Factorization):**
 There exists a product expansion:
 
-$$
+\[
 \Xi(s) = \Xi\left( \tfrac{1}{2} \right) \prod_{\rho} \left( 1 - \frac{s - \tfrac{1}{2}}{\rho - \tfrac{1}{2}} \right),
-$$
+\]
 
 with convergence and multiplicity correspondence.
 
@@ -4379,42 +4379,42 @@ with convergence and multiplicity correspondence.
 ### **Z.3 Core Definitions**
 
 **Def D1 (Canonical Fourier Profile):**
-$\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)$, a real, even, entire function of exponential type $\pi$.
+\(\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)\), a real, even, entire function of exponential type \(\pi\).
 
 **Def D2 (Inverse Transform Kernel):**
-$k(x) := \phi^\vee(x) := \frac{1}{2\pi} \int_{-\infty}^\infty e^{i\lambda x} \phi(\lambda)\,d\lambda$, compactly supported in $[-\pi, \pi]$.
+\(k(x) := \phi^\vee(x) := \frac{1}{2\pi} \int_{-\infty}^\infty e^{i\lambda x} \phi(\lambda)\,d\lambda\), compactly supported in \([-\pi, \pi]\).
 
 **Def D3 (Weighted Hilbert Space):**
-$H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx)$, with $\alpha > \pi$.
+\(H_{\Psi_\alpha} := L^2(\mathbb{R}, e^{\alpha |x|} dx)\), with \(\alpha > \pi\).
 
 **Def D4 (Canonical Operator):**
 
-$$
+\[
 L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} k(x - y) f(y)\,dy, \quad f \in H_{\Psi_\alpha}.
-$$
+\]
 
 ---
 
 ### **Z.4 Fundamental Lemmas**
 
 **Lemma L1 (Trace-Class Property):**
-$L_{\mathrm{sym}}$ is compact, trace-class, and self-adjoint on $H_{\Psi_\alpha}$ for $\alpha > \pi$.
+\(L_{\mathrm{sym}}\) is compact, trace-class, and self-adjoint on \(H_{\Psi_\alpha}\) for \(\alpha > \pi\).
 
 **Lemma L2 (Spectral Determinant Identity):**
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
-$$
+\]
 
 **Lemma L3 (Spectral Encoding):**
-Each eigenvalue $\mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}$ corresponds to a zeta zero:
+Each eigenvalue \(\mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}\) corresponds to a zeta zero:
 
-$$
+\[
 \mu = \tfrac{1}{i}(\rho - \tfrac{1}{2}).
-$$
+\]
 
 **Lemma L4 (Spectrum Symmetry):**
-The spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$.
+The spectrum is symmetric: \(\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}\).
 
 ---
 
@@ -4422,17 +4422,17 @@ The spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \op
 
 **Theorem T (Spectral Equivalence Formulation of RH):**
 
-$$
+\[
 \text{RH is true} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
-$$
+\]
 
-That is, all nontrivial zeros of $\zeta(s)$ lie on the critical line $\Re(s) = \tfrac{1}{2}$ if and only if the spectrum of $L_{\mathrm{sym}}$ is real.
+That is, all nontrivial zeros of \(\zeta(s)\) lie on the critical line \(\Re(s) = \tfrac{1}{2}\) if and only if the spectrum of \(L_{\mathrm{sym}}\) is real.
 
 ---
 
 ### **Z.6 Logical Closure and Verifiability**
 
-* All constructions derive from $\Xi(s)$,
+* All constructions derive from \(\Xi(s)\),
 * No free parameters or assumptions beyond (A1)–(A3),
 * Every implication follows via functional analysis or classical complex analysis,
 * The kernel is fully DAG-verifiable and formalizable.
@@ -4476,11 +4476,11 @@ This idea—first hinted at by Hilbert and Pólya—suggests that the zeta funct
 
 At the center of the proof is the construction of a very specific, very well-behaved linear operator. It’s built entirely from the zeta function itself.
 
-* We start with the **completed zeta function**, which is a symmetrized, better-behaved version of $\zeta(s)$, called $\Xi(s)$.
+* We start with the **completed zeta function**, which is a symmetrized, better-behaved version of \(\zeta(s)\), called \(\Xi(s)\).
 * We evaluate it along the critical line:
-  $\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)$, a real and symmetric function.
-* We take the **inverse Fourier transform** of this function to get a “kernel” $k(x)$.
-* Then we define an operator $L_{\mathrm{sym}}$ that acts by **convolution**:
+  \(\phi(\lambda) := \Xi\left( \tfrac{1}{2} + i\lambda \right)\), a real and symmetric function.
+* We take the **inverse Fourier transform** of this function to get a “kernel” \(k(x)\).
+* Then we define an operator \(L_{\mathrm{sym}}\) that acts by **convolution**:
   It transforms a function by blending it with this kernel.
 
 This operator is self-adjoint (i.e., symmetric in a generalized sense), compact (its spectrum is discrete), and trace-class (its determinant is well-defined).
@@ -4489,18 +4489,18 @@ This operator is self-adjoint (i.e., symmetric in a generalized sense), compact 
 
 ### **AA.3 The Determinant Identity**
 
-Here’s the key insight: if you define the determinant of the operator $I - \lambda L_{\mathrm{sym}}$, it turns out that it equals:
+Here’s the key insight: if you define the determinant of the operator \(I - \lambda L_{\mathrm{sym}}\), it turns out that it equals:
 
-$$
+\[
 \frac{\Xi\left( \tfrac{1}{2} + i\lambda \right)}{\Xi\left( \tfrac{1}{2} \right)}.
-$$
+\]
 
 In other words:
 
 > The operator knows the zeta function.
 > Its determinant is the zeta function.
 
-This is not a numerical coincidence. It is a **precise analytic identity**. Every zero of $\zeta(s)$ corresponds to a zero of this determinant, and hence to an eigenvalue of the operator.
+This is not a numerical coincidence. It is a **precise analytic identity**. Every zero of \(\zeta(s)\) corresponds to a zero of this determinant, and hence to an eigenvalue of the operator.
 
 ---
 
@@ -4508,7 +4508,7 @@ This is not a numerical coincidence. It is a **precise analytic identity**. Ever
 
 Now recall that our operator is self-adjoint. That means all its eigenvalues are real numbers.
 
-But if all the eigenvalues are real, and if they correspond (via a simple change of variable) to the imaginary parts of the zeros of $\zeta(s)$, then **all those zeros must lie on the critical line**.
+But if all the eigenvalues are real, and if they correspond (via a simple change of variable) to the imaginary parts of the zeros of \(\zeta(s)\), then **all those zeros must lie on the critical line**.
 
 That’s exactly what the Riemann Hypothesis asserts.
 
@@ -4526,7 +4526,7 @@ The beauty of this proof lies in its structure:
 
 * Nothing is assumed about RH.
 * Everything is built from the zeta function itself.
-* The operator is not guessed or engineered—it arises naturally from the inverse Fourier transform of $\Xi(s)$.
+* The operator is not guessed or engineered—it arises naturally from the inverse Fourier transform of \(\Xi(s)\).
 * The determinant is defined rigorously, using standard functional analysis.
 * The logical chain is closed: construction → determinant → spectrum → RH.
 
@@ -4555,7 +4555,7 @@ This section addresses likely questions readers may have after reading the narra
 ### **Q1: What exactly is a “canonical operator”?**
 
 **A:**
-It’s an operator that isn’t chosen or designed arbitrarily—it’s built directly from the zeta function itself. In this case, we define a function $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$, take its inverse Fourier transform to get a kernel $k(x)$, and then define the operator as convolution with this kernel. Every step is determined by the structure of $\zeta(s)$.
+It’s an operator that isn’t chosen or designed arbitrarily—it’s built directly from the zeta function itself. In this case, we define a function \(\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)\), take its inverse Fourier transform to get a kernel \(k(x)\), and then define the operator as convolution with this kernel. Every step is determined by the structure of \(\zeta(s)\).
 
 ---
 
@@ -4569,7 +4569,7 @@ Self-adjointness is a property that guarantees all eigenvalues of an operator ar
 ### **Q3: How does the operator “know” the zeta function?**
 
 **A:**
-It knows it because its determinant equals the completed zeta function $\Xi(\tfrac{1}{2} + i\lambda)$, up to a constant. That means every zero of the zeta function corresponds exactly to a zero of the determinant, which comes from the operator’s eigenvalues. So the operator carries the full analytic fingerprint of the zeta function.
+It knows it because its determinant equals the completed zeta function \(\Xi(\tfrac{1}{2} + i\lambda)\), up to a constant. That means every zero of the zeta function corresponds exactly to a zero of the determinant, which comes from the operator’s eigenvalues. So the operator carries the full analytic fingerprint of the zeta function.
 
 ---
 
@@ -4590,7 +4590,7 @@ It does both. The proof shows that RH is equivalent to the spectrum of this spec
 ### **Q6: What kind of space does the operator act on?**
 
 **A:**
-It acts on a weighted $L^2$-space: square-integrable functions with an exponential weight, denoted $H_{\Psi_\alpha}$. This space ensures that the operator is trace-class (its determinant is well-defined), and that it has discrete spectrum (its eigenvalues form a sequence rather than a continuum).
+It acts on a weighted \(L^2\)-space: square-integrable functions with an exponential weight, denoted \(H_{\Psi_\alpha}\). This space ensures that the operator is trace-class (its determinant is well-defined), and that it has discrete spectrum (its eigenvalues form a sequence rather than a continuum).
 
 ---
 
@@ -4608,10 +4608,10 @@ While the idea of connecting RH to spectral theory (the Hilbert–Pólya heurist
 
 ---
 
-### **Q9: Can this method apply to other $L$-functions?**
+### **Q9: Can this method apply to other \(L\)-functions?**
 
 **A:**
-Yes—potentially. If another $L$-function (like one from a modular form or a Dirichlet character) satisfies similar analytic conditions—entirety, symmetry, decay—then the same procedure can be applied to construct a canonical operator whose spectrum encodes that function’s zeros.
+Yes—potentially. If another \(L\)-function (like one from a modular form or a Dirichlet character) satisfies similar analytic conditions—entirety, symmetry, decay—then the same procedure can be applied to construct a canonical operator whose spectrum encodes that function’s zeros.
 
 ---
 
@@ -4634,7 +4634,7 @@ This appendix collects key metaphors and analogies used throughout the manuscrip
 
 **Idea:** The nontrivial zeros of the Riemann zeta function are like the notes of a musical instrument.
 
-* The canonical operator $L_{\mathrm{sym}}$ is like a violin body or resonance chamber.
+* The canonical operator \(L_{\mathrm{sym}}\) is like a violin body or resonance chamber.
 * Its eigenvalues represent the natural frequencies at which the system vibrates.
 * The zeta function is like a recording of those notes: its zeros mark the frequencies.
 * If all the “notes” are real, the “instrument” is tuned—just as RH predicts.
@@ -4645,11 +4645,11 @@ This analogy helps demystify the idea of eigenvalues as spectral data: they are 
 
 ### **AB.2 Heat Flow Analogy**
 
-**Idea:** The heat trace $\operatorname{Tr}(e^{-t L^2})$ behaves like watching heat dissipate over time.
+**Idea:** The heat trace \(\operatorname{Tr}(e^{-t L^2})\) behaves like watching heat dissipate over time.
 
-* When you apply $e^{-t L^2}$ to a function, it’s like letting heat spread through a metal bar.
+* When you apply \(e^{-t L^2}\) to a function, it’s like letting heat spread through a metal bar.
 * The trace measures how the system “loses energy” over time, summed over all modes of vibration.
-* The short-time behavior of the heat trace tells you how densely the system vibrates at high frequencies—this matches the zero density of $\zeta(s)$.
+* The short-time behavior of the heat trace tells you how densely the system vibrates at high frequencies—this matches the zero density of \(\zeta(s)\).
 
 This analogy links an abstract trace formula to the familiar intuition of diffusion and thermal dynamics.
 
@@ -4683,9 +4683,9 @@ This analogy connects spectral theory in math with physical systems in quantum m
 
 **Idea:** Different test functions act like different kinds of telescopes or filters.
 
-* Using $e^{-t L^2}$ is like using a wide-angle lens: you see the global shape of the spectrum.
-* Using $\cos(t L)$ is like a time-lapse: you see the vibrations in pairs and patterns.
-* Using a bump function $f(\mu)$ is like zooming in on a narrow band of frequencies.
+* Using \(e^{-t L^2}\) is like using a wide-angle lens: you see the global shape of the spectrum.
+* Using \(\cos(t L)\) is like a time-lapse: you see the vibrations in pairs and patterns.
+* Using a bump function \(f(\mu)\) is like zooming in on a narrow band of frequencies.
 
 This helps explain why different analytic tools (heat trace, wave trace, etc.) are used to study different aspects of the operator.
 
@@ -4707,11 +4707,11 @@ This metaphor reinforces that the operator is not an approximation—it’s a fo
 
 **Idea:** The symmetry of the spectrum reflects the symmetry of the zeta zeros.
 
-* The operator’s spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$.
-* This mirrors the fact that for every zero $\rho = \tfrac{1}{2} + i\mu$, its conjugate $\tfrac{1}{2} - i\mu$ is also a zero.
+* The operator’s spectrum is symmetric: \(\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}\).
+* This mirrors the fact that for every zero \(\rho = \tfrac{1}{2} + i\mu\), its conjugate \(\tfrac{1}{2} - i\mu\) is also a zero.
 * The symmetry in the operator is what *forces* the symmetry in the zeros.
 
-It highlights that what looks like a feature of $\zeta(s)$ is actually a *consequence* of the operator’s geometry.
+It highlights that what looks like a feature of \(\zeta(s)\) is actually a *consequence* of the operator’s geometry.
 
 ---
 
@@ -4761,23 +4761,23 @@ Upper-level undergraduates (with analysis background), graduate students in pure
 
 #### **Session 1: The Riemann Zeta Function and the Problem of Zeros**
 
-* Overview of $\zeta(s)$, its extension, and the critical line.
+* Overview of \(\zeta(s)\), its extension, and the critical line.
 * Define RH and its significance.
-* Introduce the completed zeta function $\Xi(s)$ and its symmetry.
+* Introduce the completed zeta function \(\Xi(s)\) and its symmetry.
 
 **Key Activity:**
-Explore visual plots of $\zeta(s)$ and $\Xi(s)$ along vertical lines.
+Explore visual plots of \(\zeta(s)\) and \(\Xi(s)\) along vertical lines.
 
 ---
 
 #### **Session 2: From Functions to Operators**
 
-* Introduce $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)$.
-* Define inverse Fourier transform and convolution kernel $k(x)$.
-* Construct the canonical operator $L_{\mathrm{sym}}$.
+* Introduce \(\phi(\lambda) = \Xi(\tfrac{1}{2} + i\lambda)\).
+* Define inverse Fourier transform and convolution kernel \(k(x)\).
+* Construct the canonical operator \(L_{\mathrm{sym}}\).
 
 **In-Class Demo:**
-Use Python/Mathematica to show numerical convolution with $k(x)$.
+Use Python/Mathematica to show numerical convolution with \(k(x)\).
 
 ---
 
@@ -4786,9 +4786,9 @@ Use Python/Mathematica to show numerical convolution with $k(x)$.
 * Explain zeta-regularized determinant.
 * Derive the identity:
 
-  $$
+  \[
   \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}
-  $$
+  \]
 * Introduce trace-class and self-adjointness.
 
 **Discussion:**
@@ -4799,12 +4799,12 @@ Why does reality of spectrum imply RH?
 #### **Session 4: Analogies, Interpretations, and Extensions**
 
 * Review physics analogies (heat, resonance).
-* Explore extensions to other $L$-functions.
+* Explore extensions to other \(L\)-functions.
 * Summarize the equivalence:
 
-  $$
+  \[
   \text{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
-  $$
+  \]
 
 **Optional**: Guest speaker or recorded mini-lecture by an operator theorist.
 
@@ -4812,7 +4812,7 @@ Why does reality of spectrum imply RH?
 
 #### **Session 5 (Optional): Coding & Formalization Lab**
 
-* Students discretize $L_{\mathrm{sym}}$ and compute its spectrum numerically.
+* Students discretize \(L_{\mathrm{sym}}\) and compute its spectrum numerically.
 * Introduction to formal verification tools (Lean demo, if desired).
 
 ---
@@ -4820,27 +4820,27 @@ Why does reality of spectrum imply RH?
 ### **AC.3 Core Exercises**
 
 1. **Exercise 1 (Symmetry):**
-   Prove that if $\Xi(s) = \Xi(1 - s)$, then $\phi(\lambda)$ is even and real.
+   Prove that if \(\Xi(s) = \Xi(1 - s)\), then \(\phi(\lambda)\) is even and real.
 
 2. **Exercise 2 (Fourier Practice):**
    Compute the inverse Fourier transform of a compactly supported function and interpret it as a convolution kernel.
 
 3. **Exercise 3 (Operator Construction):**
-   Given a function $k(x)$, write out the action of $Lf(x) = \int k(x - y)f(y)dy$ on a simple function.
+   Given a function \(k(x)\), write out the action of \(Lf(x) = \int k(x - y)f(y)dy\) on a simple function.
 
 4. **Exercise 4 (Trace Estimation):**
-   Estimate $\operatorname{Tr}(e^{-tL^2})$ using a finite spectral approximation.
+   Estimate \(\operatorname{Tr}(e^{-tL^2})\) using a finite spectral approximation.
 
 5. **Exercise 5 (Spectrum Matching):**
-   Given the first 10 imaginary parts of $\zeta(s)$ zeros, reverse-map them to test if they lie in the spectrum of a discretized $L_{\mathrm{sym}}$.
+   Given the first 10 imaginary parts of \(\zeta(s)\) zeros, reverse-map them to test if they lie in the spectrum of a discretized \(L_{\mathrm{sym}}\).
 
 ---
 
 ### **AC.4 Visual Aids**
 
-* Plot: Zeros of $\zeta(s)$ in the complex plane.
-* Graph: $\phi(\lambda)$ and its inverse transform $k(x)$.
-* Schematic: Operator pipeline from $\Xi(s)$ → $\phi(\lambda)$ → $k(x)$ → $L_{\mathrm{sym}}$.
+* Plot: Zeros of \(\zeta(s)\) in the complex plane.
+* Graph: \(\phi(\lambda)\) and its inverse transform \(k(x)\).
+* Schematic: Operator pipeline from \(\Xi(s)\) → \(\phi(\lambda)\) → \(k(x)\) → \(L_{\mathrm{sym}}\).
 * Interactive: Slider-based tool to see how the determinant changes with eigenvalue shifts.
 
 ---
@@ -4849,7 +4849,7 @@ Why does reality of spectrum imply RH?
 
 1. What does it mean for an operator to “encode” a function?
 2. Could a similar method be used to study the zeros of other entire functions?
-3. Why is it important that the operator is constructed directly from $\Xi(s)$ without arbitrary choices?
+3. Why is it important that the operator is constructed directly from \(\Xi(s)\) without arbitrary choices?
 4. How does this framework shift the interpretation of the Riemann Hypothesis?
 5. Can this approach be seen as bridging the divide between analysis and geometry?
 
@@ -4881,10 +4881,10 @@ This appendix bridges the manuscript and the formal logic infrastructure needed 
 | Mathematical Notation       | Lean Notation          | Notes                                          |                                  |     |      |                                          |
 | --------------------------- | ---------------------- | ---------------------------------------------- | -------------------------------- | --- | ---- | ---------------------------------------- |
 | ( L^2(\mathbb{R}, e^{\alpha | x                      | } dx) )                                        | \`weighted\_L2 ℝ (λ x, exp (α \* | x   | ))\` | Define via measure-theoretic integration |
-| $\phi^\vee(x)$              | `fourier_inverse φ x`  | Use existing Fourier transform interface       |                                  |     |      |                                          |
-| $L_{\mathrm{sym}}$          | `L_sym`                | Canonical convolution operator                 |                                  |     |      |                                          |
-| $\det_\zeta(I - λL)$        | `zeta_det (1 - λ • L)` | Requires custom definition of zeta determinant |                                  |     |      |                                          |
-| $\Xi(s)$                    | `xi s`                 | Completed zeta; define as composite function   |                                  |     |      |                                          |
+| \(\phi^\vee(x)\)              | `fourier_inverse φ x`  | Use existing Fourier transform interface       |                                  |     |      |                                          |
+| \(L_{\mathrm{sym}}\)          | `L_sym`                | Canonical convolution operator                 |                                  |     |      |                                          |
+| \(\det_\zeta(I - λL)\)        | `zeta_det (1 - λ • L)` | Requires custom definition of zeta determinant |                                  |     |      |                                          |
+| \(\Xi(s)\)                    | `xi s`                 | Completed zeta; define as composite function   |                                  |     |      |                                          |
 
 All definitions are made under the assumption of classical analysis (ZFC + choice), consistent with Lean’s core framework.
 
@@ -4947,7 +4947,7 @@ def L_sym (f : ℝ → ℝ) (x : ℝ) : ℝ :=
 ∫ y in ℝ, k (x - y) * f y
 ```
 
-Assuming $k \in L^1(e^{\alpha |x|})$, this defines a bounded operator on $H_ψ(α)$.
+Assuming \(k \in L^1(e^{\alpha |x|})\), this defines a bounded operator on \(H_ψ(α)\).
 
 ---
 
@@ -5122,11 +5122,11 @@ Each item includes a classification, a brief description, and its potential impa
 ### **AF.1 Generalized Spectral Realizations**
 
 **Problem AF.1.1:**
-Construct canonical operators $L_\pi$ for automorphic $L$-functions $L(s, \pi)$ satisfying:
+Construct canonical operators \(L_\pi\) for automorphic \(L\)-functions \(L(s, \pi)\) satisfying:
 
-$$
+\[
 \det\nolimits_\zeta(I - \lambda L_\pi) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda, \pi \right)}{\Xi\left(\tfrac{1}{2}, \pi \right)}
-$$
+\]
 
 **Goal:** Extend the spectral framework to encompass the Generalized Riemann Hypothesis.
 
@@ -5137,11 +5137,11 @@ $$
 ### **AF.2 Spectral Functoriality and Langlands Correspondence**
 
 **Problem AF.2.1:**
-Given a functorial lift $\pi \mapsto \Pi$, construct a functor $F$ on operators such that:
+Given a functorial lift \(\pi \mapsto \Pi\), construct a functor \(F\) on operators such that:
 
-$$
+\[
 L_\Pi = F(L_\pi), \quad \text{and } \det(I - \lambda L_\Pi) = F\left( \det(I - \lambda L_\pi) \right).
-$$
+\]
 
 **Goal:** Express Langlands correspondences as morphisms between spectral categories.
 
@@ -5152,7 +5152,7 @@ $$
 ### **AF.3 Local Spectral Statistics and GUE Behavior**
 
 **Problem AF.3.1:**
-Prove that the eigenvalues of $L_{\mathrm{sym}}$ exhibit GUE (Gaussian Unitary Ensemble) statistics in the high-frequency limit.
+Prove that the eigenvalues of \(L_{\mathrm{sym}}\) exhibit GUE (Gaussian Unitary Ensemble) statistics in the high-frequency limit.
 
 **Goal:** Bridge the operator-theoretic proof of RH with the Montgomery–Odlyzko conjecture.
 
@@ -5160,10 +5160,10 @@ Prove that the eigenvalues of $L_{\mathrm{sym}}$ exhibit GUE (Gaussian Unitary E
 
 ---
 
-### **AF.4 Dynamical Interpretation of $L_{\mathrm{sym}}$**
+### **AF.4 Dynamical Interpretation of \(L_{\mathrm{sym}}\)**
 
 **Problem AF.4.1:**
-Find a dynamical system (e.g., a flow or foliation) for which $L_{\mathrm{sym}}$ is the infinitesimal generator or transfer operator.
+Find a dynamical system (e.g., a flow or foliation) for which \(L_{\mathrm{sym}}\) is the infinitesimal generator or transfer operator.
 
 **Impact:** Would provide a geometric or physical realization of the zeta spectrum.
 
@@ -5185,7 +5185,7 @@ Define a functor from a category of “zeta-type functions” (entire, symmetric
 ### **AF.6 Determinant and Zeta-Regularization Theory**
 
 **Problem AF.6.1:**
-Develop a complete axiomatic theory of zeta-regularized determinants for trace-class operators in $L^2(\mathbb{R}, e^{\alpha|x|}dx)$ spaces.
+Develop a complete axiomatic theory of zeta-regularized determinants for trace-class operators in \(L^2(\mathbb{R}, e^{\alpha|x|}dx)\) spaces.
 
 **Motivation:** Provide a general foundation for the determinant identities used in spectral proofs.
 
@@ -5196,7 +5196,7 @@ Develop a complete axiomatic theory of zeta-regularized determinants for trace-c
 ### **AF.7 Connection to Weil’s Explicit Formula**
 
 **Problem AF.7.1:**
-Re-express Weil’s explicit formula as a spectral trace formula of the canonical operator $L_{\mathrm{sym}}$.
+Re-express Weil’s explicit formula as a spectral trace formula of the canonical operator \(L_{\mathrm{sym}}\).
 
 **Challenge:** Identify prime-like structures embedded implicitly in the trace or determinant expansions.
 
@@ -5207,7 +5207,7 @@ Re-express Weil’s explicit formula as a spectral trace formula of the canonica
 ### **AF.8 Arithmetic Moduli and Nonlinear Spectral Extensions**
 
 **Problem AF.8.1:**
-Define moduli spaces (e.g., of primes, idele classes, or zeros) whose linearization yields $L_{\mathrm{sym}}$ as a natural Laplacian or Jacobian flow operator.
+Define moduli spaces (e.g., of primes, idele classes, or zeros) whose linearization yields \(L_{\mathrm{sym}}\) as a natural Laplacian or Jacobian flow operator.
 
 **Speculative Outcome:** A “spectral geometry of arithmetic” in which primes and zeros are dual moduli phenomena.
 
@@ -5216,7 +5216,7 @@ Define moduli spaces (e.g., of primes, idele classes, or zeros) whose linearizat
 ### **AF.9 Machine Learning and Empirical Spectrum Probes**
 
 **Problem AF.9.1:**
-Use neural operators or kernel methods to learn properties of $L_{\mathrm{sym}}$ from high-precision zeta zero data.
+Use neural operators or kernel methods to learn properties of \(L_{\mathrm{sym}}\) from high-precision zeta zero data.
 
 **Objective:** Empirically explore spectral rigidity and error correction beyond current analytic bounds.
 
@@ -5227,7 +5227,7 @@ Use neural operators or kernel methods to learn properties of $L_{\mathrm{sym}}$
 ### **AF.10 Motivic L-Functions and Beyond**
 
 **Problem AF.10.1:**
-Extend the spectral construction to motivic $L$-functions, assuming Deligne's conjectures and functional equations.
+Extend the spectral construction to motivic \(L\)-functions, assuming Deligne's conjectures and functional equations.
 
 **Difficulty:** Many motivic L-functions lack confirmed analytic continuation or known gamma factors.
 
@@ -5350,7 +5350,7 @@ The educational module (Appendix AC) is being developed into:
 
 Ongoing work includes:
 
-* Submission to the **OEIS Foundation** of spectral sequences derived from $L_{\mathrm{sym}}$,
+* Submission to the **OEIS Foundation** of spectral sequences derived from \(L_{\mathrm{sym}}\),
 * Inclusion of the canonical operator construction in the **Digital Library of Mathematical Functions**,
 * Formal linkages to **LMFDB (L-functions and Modular Forms Database)** for generalizations,
 * Partnership with the **Lean community** for full formal proof certification and interactive theorem exploration.

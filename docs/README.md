@@ -320,7 +320,7 @@ $$
 
 This condition implies several key properties:
 
-* The trace $\operatorname{Tr}(T) := \sum_{n} \langle T e_n, e_n \rangle$ is finite and independent of the choice of orthonormal basis $\{e_n\}$.
+* The trace $\mathrm{Tr}(T) := \sum_{n} \langle T e_n, e_n \rangle$ is finite and independent of the choice of orthonormal basis $\{e_n\}$.
 * The **Fredholm determinant** $\det(I + T) := \prod_{n}(1 + \lambda_n)$, where $\{\lambda_n\}$ are the eigenvalues of $T$, is well-defined and entire.
 * The spectrum of $T$ consists of eigenvalues accumulating only at zero.
 * The space of trace-class operators forms a two-sided ideal in the bounded operators $B(H)$ and is complete under the trace norm.
@@ -371,7 +371,7 @@ With $L_{\mathrm{sym}} \in \mathcal{S}_1$, we gain access to:
   Via the spectral zeta function, one can define $\det{}_{\zeta}(I - \lambda L_{\mathrm{sym}})$ even when the infinite product of eigenvalues diverges, provided the operator lies in $\mathcal{S}_1$.
 
 * **Heat Kernel Techniques:**
-  The trace $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ is finite and meaningful for all $t > 0$, enabling the use of Tauberian theorems and spectral asymptotics.
+  The trace $\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$ is finite and meaningful for all $t > 0$, enabling the use of Tauberian theorems and spectral asymptotics.
 
 * **Spectral Theorem and Functional Calculus:**
   For self-adjoint, trace-class operators, one can define spectral projections, semigroups, and even entire functions of the operator. This allows deep structural insights and connects to explicit formulae in number theory.
@@ -439,13 +439,13 @@ with zeros at $\lambda = \mu_j^{-1}$. This function serves as a compact spectral
 Now imagine a trace-class operator $T$ with infinitely many eigenvalues $\{\mu_n\}$ tending to zero. The formal product $\prod_n (1 - \lambda \mu_n)$ diverges unless regularized. One regularization approach is to consider the heat trace:
 
 $$
-\operatorname{Tr}(e^{-t T}) = \sum_n e^{-t \mu_n},
+\mathrm{Tr}(e^{-t T}) = \sum_n e^{-t \mu_n},
 $$
 
 which converges for $t > 0$, and to define the determinant via
 
 $$
-\det\nolimits_{\zeta}(I - \lambda T) = \exp\left( -\sum_{n} \sum_{k=1}^{\infty} \frac{(\lambda \mu_n)^k}{k} \right) = \exp\left( -\sum_{k=1}^{\infty} \frac{\lambda^k}{k} \operatorname{Tr}(T^k) \right).
+\det\nolimits_{\zeta}(I - \lambda T) = \exp\left( -\sum_{n} \sum_{k=1}^{\infty} \frac{(\lambda \mu_n)^k}{k} \right) = \exp\left( -\sum_{k=1}^{\infty} \frac{\lambda^k}{k} \mathrm{Tr}(T^k) \right).
 $$
 
 In the case of $L_{\mathrm{sym}}$, we use the family of mollified operators $\{L_t\}$ to define
@@ -549,10 +549,10 @@ The following chapter rigorously establishes the bijection and multiplicity-pres
 In the spectral theory of linear operators on Hilbert spaces, **self-adjointness** plays a central and structurally decisive role. If an operator $T$ is self-adjoint—that is,
 
 $$
-\langle Tf, g \rangle = \langle f, Tg \rangle \quad \text{for all } f, g \in \operatorname{Dom}(T),
+\langle Tf, g \rangle = \langle f, Tg \rangle \quad \text{for all } f, g \in \mathrm{Dom}(T),
 $$
 
-and $\operatorname{Dom}(T) = \operatorname{Dom}(T^*)$—then it enjoys the full strength of the spectral theorem: its spectrum lies on the real line, it is unitarily diagonalizable, and it admits a complete orthonormal basis of eigenfunctions in the compact case.
+and $\mathrm{Dom}(T) = \mathrm{Dom}(T^*)$—then it enjoys the full strength of the spectral theorem: its spectrum lies on the real line, it is unitarily diagonalizable, and it admits a complete orthonormal basis of eigenfunctions in the compact case.
 
 These properties are foundational in quantum mechanics, where observables are modeled as self-adjoint operators to guarantee real measurement outcomes. Similarly, in our setting, the canonical operator $L_{\mathrm{sym}}$ is constructed to be self-adjoint. This is not a mere aesthetic choice; it is necessary to deduce the Riemann Hypothesis from spectral data.
 
@@ -571,7 +571,7 @@ Thus, proving that $L_{\mathrm{sym}}$ is self-adjoint on its natural domain, and
 In finite-dimensional linear algebra, a real symmetric matrix $A \in \mathbb{R}^{n \times n}$ is always diagonalizable with real eigenvalues. There exists an orthogonal matrix $U \in \mathbb{R}^{n \times n}$ such that
 
 $$
-U^T A U = \operatorname{diag}(\lambda_1, \ldots, \lambda_n),
+U^T A U = \mathrm{diag}(\lambda_1, \ldots, \lambda_n),
 $$
 
 with $\lambda_j \in \mathbb{R}$. The matrix $A$ acts on $\mathbb{R}^n$ as a self-adjoint operator under the standard Euclidean inner product.
@@ -615,17 +615,17 @@ The **heat kernel** associated with a (typically unbounded) self-adjoint operato
 For the operator $L_{\mathrm{sym}}$, we consider the trace of the heat kernel of its square:
 
 $$
-\operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) = \sum_{n} e^{-t \mu_n^2},
+\mathrm{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) = \sum_{n} e^{-t \mu_n^2},
 $$
 
 where $\{ \mu_n \} \subset \mathbb{R}$ are the eigenvalues of $L_{\mathrm{sym}}$, and $t > 0$. This series converges absolutely because $L_{\mathrm{sym}}$ is compact and self-adjoint, so the eigenvalues accumulate only at zero and the exponential decay dominates the accumulation.
 
-The function $t \mapsto \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ is smooth and positive for all $t > 0$, and as $t \to 0^+$, it becomes increasingly sensitive to high-frequency eigenvalues (those with large $|\mu_n|$). The asymptotic behavior of the trace in the small-time limit thus reveals the growth rate and density of the spectrum—a cornerstone of spectral analysis.
+The function $t \mapsto \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$ is smooth and positive for all $t > 0$, and as $t \to 0^+$, it becomes increasingly sensitive to high-frequency eigenvalues (those with large $|\mu_n|$). The asymptotic behavior of the trace in the small-time limit thus reveals the growth rate and density of the spectrum—a cornerstone of spectral analysis.
 
 In particular, we are interested in establishing the leading-order behavior:
 
 $$
-\operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) \quad \text{as } t \to 0^+.
+\mathrm{Tr}\left( e^{-t L_{\mathrm{sym}}^2} \right) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) \quad \text{as } t \to 0^+.
 $$
 
 This **logarithmic correction** to the usual heat kernel expansion in one dimension reflects the subtle growth pattern of the Riemann zeros and aligns with the known zero-counting asymptotic $N(T) \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right)$.
@@ -635,7 +635,7 @@ This **logarithmic correction** to the usual heat kernel expansion in one dimens
 To understand the role of the heat kernel, consider a classical example: the Laplace operator $\Delta = -\frac{d^2}{dx^2}$ on a compact interval with Dirichlet boundary conditions. Its eigenvalues are $\mu_n = n\pi$, and the heat kernel trace becomes
 
 $$
-\operatorname{Tr}(e^{-t\Delta}) = \sum_{n=1}^{\infty} e^{-t n^2 \pi^2} \sim \frac{1}{2\sqrt{\pi t}} \quad \text{as } t \to 0^+.
+\mathrm{Tr}(e^{-t\Delta}) = \sum_{n=1}^{\infty} e^{-t n^2 \pi^2} \sim \frac{1}{2\sqrt{\pi t}} \quad \text{as } t \to 0^+.
 $$
 
 This $t^{-1/2}$ behavior corresponds to the one-dimensional geometry of the problem.
@@ -643,7 +643,7 @@ This $t^{-1/2}$ behavior corresponds to the one-dimensional geometry of the prob
 Now, let’s translate this intuition to the operator $L_{\mathrm{sym}}$. Since its spectrum is dictated by the imaginary parts of the nontrivial zeros of ζ, and those zeros become increasingly dense with height, the spectrum of $L_{\mathrm{sym}}^2$ (given by $\mu_n^2$) grows accordingly. However, unlike the Laplacian on a compact domain, the spectrum of $L_{\mathrm{sym}}^2$ grows in a way that reflects the prime number theorem. This growth is not polynomial but logarithmic in density, leading to the atypical trace behavior:
 
 $$
-\operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right).
+\mathrm{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right).
 $$
 
 Thus, the **diffusion** modeled by $e^{-t L_{\mathrm{sym}}^2}$ functions as a spectral analyzer that reveals the logarithmic structure of the zeros through its small-time singularity.
@@ -661,7 +661,7 @@ $$
 then under appropriate regularity and variation conditions, the small-time expansion of the heat trace determines the growth of $N(T)$ as $T \to \infty$. The singular behavior
 
 $$
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right)
+\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right)
 $$
 
 is inverted to yield
@@ -683,18 +683,18 @@ In classical analysis, a **Tauberian theorem** provides a bridge between the beh
 In our context, Tauberian theorems allow us to recover information about the **distribution of eigenvalues**—and hence about the zeta zeros—from the **short-time asymptotics of the heat trace**:
 
 $$
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) \quad \text{as } t \to 0^+.
+\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) \quad \text{as } t \to 0^+.
 $$
 
 This expansion suggests that the number of eigenvalues $\mu$ of $L_{\mathrm{sym}}$ satisfying $|\mu| \le T$ grows like $T \log T$. Formally, we define the eigenvalue counting function
 
 $$
-N(T) := \#\left\{ \mu_n \in \operatorname{Spec}(L_{\mathrm{sym}}) : |\mu_n| \le T \right\},
+N(T) := \#\left\{ \mu_n \in \mathrm{Spec}(L_{\mathrm{sym}}) : |\mu_n| \le T \right\},
 $$
 
 and seek to determine its asymptotic behavior as $T \to \infty$.
 
-The connection between $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ and $N(T)$ is established via Laplace transform methods: the heat trace is the Laplace transform of the spectral counting measure, and a Tauberian theorem allows us to invert this relation. In particular, we will use a version due to Korevaar, adapted to functions with logarithmic singularities, to extract the desired asymptotic form of $N(T)$.
+The connection between $\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$ and $N(T)$ is established via Laplace transform methods: the heat trace is the Laplace transform of the spectral counting measure, and a Tauberian theorem allows us to invert this relation. In particular, we will use a version due to Korevaar, adapted to functions with logarithmic singularities, to extract the desired asymptotic form of $N(T)$.
 
 #### **11.2 Example: Edge-of-Sight Radar**
 
@@ -868,7 +868,7 @@ The key ingredients that are fully formalized or formalizable include:
   The correspondence between eigenvalues of $L_{\mathrm{sym}}$ and nontrivial zeros of $\zeta(s)$ is made precise and is multiplicity-preserving. Lemmas and theorems regarding injection, surjection, and bijection of the spectral map rely only on basic spectral theory and known properties of $\Xi(s)$.
 
 * **Heat Kernel Asymptotics and Trace Estimates:**
-  The asymptotic expansion of $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ as $t \to 0$ is derived with care, including the leading-order logarithmic divergence term. These expansions use standard tools from analysis and can be expressed precisely using existing spectral and asymptotic techniques.
+  The asymptotic expansion of $\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$ as $t \to 0$ is derived with care, including the leading-order logarithmic divergence term. These expansions use standard tools from analysis and can be expressed precisely using existing spectral and asymptotic techniques.
 
 * **Tauberian Argument for Spectral Counting:**
   The application of Korevaar’s Tauberian theorem to recover the zero-counting function from the heat trace is methodical and based on existing theorems that can be referenced or, in principle, formalized.
@@ -1014,7 +1014,7 @@ We now restate the essential structure of the proof, organizing it into a modula
 
     $$
     \boxed{
-      \text{RH holds} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+      \text{RH holds} \iff \mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
     }
     $$
 
@@ -1022,7 +1022,7 @@ We now restate the essential structure of the proof, organizing it into a modula
     Compute
 
     $$
-    \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right),
+    \mathrm{Tr}(e^{-tL_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right),
     $$
 
     and invert this via Tauberian theory to recover
@@ -1143,12 +1143,12 @@ $$
 It is self-adjoint, trace-class, and compact on $H_{\Psi_\alpha}$ for $\alpha > \pi$. Its spectral data is connected to the zeros of $\zeta(s)$ via:
 
 $$
-\rho = \tfrac{1}{2} + i\mu \quad \Longleftrightarrow \quad \mu \in \operatorname{Spec}(L_{\mathrm{sym}}),
+\rho = \tfrac{1}{2} + i\mu \quad \Longleftrightarrow \quad \mu \in \mathrm{Spec}(L_{\mathrm{sym}}),
 $$
 
 where $\rho$ is a nontrivial zero of $\zeta(s)$ and $\mu = \frac{1}{i}(\rho - \tfrac{1}{2})$.
 
-The inverse mapping $\mu \mapsto \rho$ allows us to restate RH as the assertion that $\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$, since the realness of $\mu$ implies $\Re(\rho) = \tfrac{1}{2}$.
+The inverse mapping $\mu \mapsto \rho$ allows us to restate RH as the assertion that $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$, since the realness of $\mu$ implies $\Re(\rho) = \tfrac{1}{2}$.
 
 ### **Appendix A (Part 2): Analytic Properties of the Kernel and Profile**
 
@@ -1293,7 +1293,7 @@ This section establishes the bijection between zeros and eigenvalues:
 * **thm\:spectral\_bijection** —
 
   $$
-  \text{Nontrivial zeros of } \zeta(s) \ \longleftrightarrow\ \operatorname{Spec}(L_{\mathrm{sym}})\setminus\{0\}
+  \text{Nontrivial zeros of } \zeta(s) \ \longleftrightarrow\ \mathrm{Spec}(L_{\mathrm{sym}})\setminus\{0\}
   $$
 
 This equivalence is crucial for restating RH in spectral terms.
@@ -1303,7 +1303,7 @@ This equivalence is crucial for restating RH in spectral terms.
 #### **B.5 Self-Adjointness and Spectral Reality**
 
 * **lem\:selfadjoint\_spectrum\_real** — Self-adjoint operator has real spectrum
-* **cor\:rh\_equiv\_real\_spec** — RH ⇔ $\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$
+* **cor\:rh\_equiv\_real\_spec** — RH ⇔ $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$
 
 These links finalize the operator-theoretic equivalence.
 
@@ -1314,7 +1314,7 @@ These links finalize the operator-theoretic equivalence.
 * **lem\:heat\_trace\_asymptotic** —
 
   $$
-  \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\tfrac{1}{t}\right)
+  \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\tfrac{1}{t}\right)
   $$
 * **lem\:korevaar\_conditions** — Verifying conditions for Tauberian inversion
 * **thm\:spectral\_counting\_law** —
@@ -1333,7 +1333,7 @@ These confirm that the spectrum mirrors the known zero density of ζ.
 * **thm\:rh\_equiv\_spec\_real** —
 
   $$
-  \text{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \text{RH} \iff \mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
   $$
 
 This section closes the loop and delivers the equivalence between RH and spectral reality.
@@ -1357,7 +1357,7 @@ This series converges absolutely in a right half-plane since $T \in \mathcal{S}_
 To extend $\zeta_T(s)$ analytically to $s = 0$, we use Mellin transform techniques and spectral decomposition. In particular, for operators with positive spectrum or positive-definite squares, it is often possible to define:
 
 $$
-\zeta_T(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \operatorname{Tr}(e^{-tT}) \, dt.
+\zeta_T(s) = \frac{1}{\Gamma(s)} \int_0^\infty t^{s-1} \mathrm{Tr}(e^{-tT}) \, dt.
 $$
 
 This representation facilitates analytic continuation and is central in defining determinants.
@@ -1383,7 +1383,7 @@ where the divergent infinite product is made convergent via subtraction of diver
 For trace-class operators, an equivalent definition can be given in terms of the expansion:
 
 $$
-\log \det(I - \lambda L) = - \sum_{k=1}^\infty \frac{\lambda^k}{k} \operatorname{Tr}(L^k),
+\log \det(I - \lambda L) = - \sum_{k=1}^\infty \frac{\lambda^k}{k} \mathrm{Tr}(L^k),
 $$
 
 valid for small $|\lambda|$. The convergence of this expansion for larger $\lambda$ relies on analytic continuation or mollification, as developed in Chapter 3.
@@ -1403,12 +1403,12 @@ $$
 regularized via the zeta function or, equivalently, via the heat kernel trace:
 
 $$
-\log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = - \int_0^\infty \frac{1}{t} \operatorname{Tr}\left( e^{-t L_{\mathrm{sym}}} - e^{-t} \right) e^{\lambda t} dt,
+\log \det\nolimits_\zeta(I - \lambda L_{\mathrm{sym}}) = - \int_0^\infty \frac{1}{t} \mathrm{Tr}\left( e^{-t L_{\mathrm{sym}}} - e^{-t} \right) e^{\lambda t} dt,
 $$
 
 when interpreted appropriately.
 
-The convergence of the heat trace $\operatorname{Tr}(e^{-tL_{\mathrm{sym}}})$ as $t \to 0$ is governed by the spectral density of $L_{\mathrm{sym}}$, and its small-time expansion reflects the counting function of eigenvalues.
+The convergence of the heat trace $\mathrm{Tr}(e^{-tL_{\mathrm{sym}}})$ as $t \to 0$ is governed by the spectral density of $L_{\mathrm{sym}}$, and its small-time expansion reflects the counting function of eigenvalues.
 
 ---
 
@@ -1438,7 +1438,7 @@ This appendix establishes the small-time behavior of the trace of the heat kerne
 In particular, we demonstrate the singular behavior
 
 $$
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) \quad \text{as } t \to 0^+,
+\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right) \quad \text{as } t \to 0^+,
 $$
 
 which matches the expected spectral growth rate of the nontrivial zeros of the Riemann zeta function.
@@ -1456,7 +1456,7 @@ $$
 is well-defined for all $t > 0$, and belongs to $\mathcal{S}_1$ as well. We define the **heat trace** as:
 
 $$
-\theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n} e^{-t \mu_n^2}.
+\theta(t) := \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{n} e^{-t \mu_n^2}.
 $$
 
 This function $\theta(t)$ is smooth for $t > 0$, rapidly decaying as $t \to \infty$, and diverges as $t \to 0^+$. Our goal is to analyze this divergence and compute the leading asymptotic behavior.
@@ -1522,7 +1522,7 @@ This logarithmic singularity is sharper than the typical heat trace behavior $t^
 ### **D.4 Summary of the Asymptotic Expansion**
 
 **Proposition D.1 (Heat Trace Asymptotic).**
-Let $\theta(t) = \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$. Then as $t \to 0^+$,
+Let $\theta(t) = \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$. Then as $t \to 0^+$,
 
 $$
 \theta(t) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \mathcal{O}\left( \frac{1}{\sqrt{t}} \right).
@@ -1535,7 +1535,7 @@ This estimate will serve as input for Tauberian inversion (Appendix E), allowing
 In the first part of Appendix D, we derived the leading-order behavior of the heat trace:
 
 $$
-\theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right), \quad \text{as } t \to 0^+.
+\theta(t) := \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right), \quad \text{as } t \to 0^+.
 $$
 
 This singularity encodes the logarithmic growth of the spectrum of $L_{\mathrm{sym}}^2$, and thus matches the zero-density of the Riemann zeta function.
@@ -1620,7 +1620,7 @@ All of these properties are satisfied for $\phi(\lambda) = \Xi(\tfrac{1}{2} + i\
 We have shown that:
 
 $$
-\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \frac{c_1}{\sqrt{t}} + c_2 + \cdots,
+\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left( \frac{1}{t} \right) + \frac{c_1}{\sqrt{t}} + c_2 + \cdots,
 $$
 
 where:
@@ -1638,7 +1638,7 @@ Next, we present Appendix E and the application of Korevaar’s Tauberian theore
 In this appendix, we apply **Tauberian theory** to invert the short-time expansion of the heat trace established in Appendix D and extract the asymptotic behavior of the spectral counting function:
 
 $$
-N(T) := \#\left\{ \mu_n \in \operatorname{Spec}(L_{\mathrm{sym}}) : |\mu_n| \le T \right\}, \quad T \to \infty.
+N(T) := \#\left\{ \mu_n \in \mathrm{Spec}(L_{\mathrm{sym}}) : |\mu_n| \le T \right\}, \quad T \to \infty.
 $$
 
 This procedure confirms that the spectrum of $L_{\mathrm{sym}}$ reproduces the same global density behavior as the nontrivial zeros of the Riemann zeta function, reinforcing the spectral equivalence between operator eigenvalues and zeta zeros.
@@ -1650,7 +1650,7 @@ This procedure confirms that the spectrum of $L_{\mathrm{sym}}$ reproduces the s
 Recall that for a compact self-adjoint operator $L$ with spectrum $\{ \mu_n \} \subset \mathbb{R}$, the **heat trace** is defined by:
 
 $$
-\theta(t) := \operatorname{Tr}(e^{-t L^2}) = \sum_{n} e^{-t \mu_n^2}.
+\theta(t) := \mathrm{Tr}(e^{-t L^2}) = \sum_{n} e^{-t \mu_n^2}.
 $$
 
 We interpret $\theta(t)$ as the Laplace transform of the spectral density measure $dN(\mu)$, via the relation:
@@ -1729,7 +1729,7 @@ $$
 Then the eigenvalue counting function satisfies:
 
 $$
-N(T) := \#\left\{ \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) : |\mu| \le T \right\} \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) \quad \text{as } T \to \infty.
+N(T) := \#\left\{ \mu \in \mathrm{Spec}(L_{\mathrm{sym}}) : |\mu| \le T \right\} \sim \frac{T}{2\pi} \log\left( \frac{T}{2\pi} \right) \quad \text{as } T \to \infty.
 $$
 
 This completes the analytic confirmation that the spectral model recovers the known distribution of zeta zeros—not only in location (via the determinant identity), but also in density and asymptotic growth. In the next protion of walkthrough, we begin Appendix F, which formalizes the spectral mapping theorem and addresses symmetry and multiplicity in greater depth.
@@ -1742,7 +1742,7 @@ This appendix formalizes the mapping between the spectrum of the canonical opera
 
 ### **F.1 Spectral Mapping Theorem for the Canonical Operator**
 
-Let $\operatorname{Spec}(L_{\mathrm{sym}}) = \{ \mu_n \}_{n \in \mathbb{Z} \setminus \{0\}} \subset \mathbb{R}$, denote the multiset of nonzero eigenvalues of the self-adjoint, trace-class operator $L_{\mathrm{sym}}$, constructed via:
+Let $\mathrm{Spec}(L_{\mathrm{sym}}) = \{ \mu_n \}_{n \in \mathbb{Z} \setminus \{0\}} \subset \mathbb{R}$, denote the multiset of nonzero eigenvalues of the self-adjoint, trace-class operator $L_{\mathrm{sym}}$, constructed via:
 
 $$
 L_{\mathrm{sym}} f(x) := \int_{\mathbb{R}} k(x - y) f(y) \, dy, \quad k(x) = \phi^\vee(x),
@@ -1770,7 +1770,7 @@ There exists a bijective correspondence:
 $$
 \left\{ \rho \in \mathbb{C} : \zeta(\rho) = 0,\ \rho \notin \mathbb{R} \right\}
 \ \longleftrightarrow \
-\left\{ \mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \right\},
+\left\{ \mu \in \mathrm{Spec}(L_{\mathrm{sym}}) \setminus \{0\} \right\},
 $$
 
 given by $\rho = \tfrac{1}{2} + i\mu$, preserving multiplicities.
@@ -1811,7 +1811,7 @@ $$
 This symmetry yields:
 
 **Corollary F.2 (Spectral Symmetry).**
-If $\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, then $-\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, with equal multiplicity.
+If $\mu \in \mathrm{Spec}(L_{\mathrm{sym}})$, then $-\mu \in \mathrm{Spec}(L_{\mathrm{sym}})$, with equal multiplicity.
 
 Hence, the spectrum is symmetric about the origin. This reflects the symmetry of the nontrivial zeta zeros with respect to the critical line $\Re(s) = \tfrac{1}{2}$. Explicitly:
 
@@ -1833,7 +1833,7 @@ $$
 implies that $\mu = \mu_\rho$ is an eigenvalue of $L_{\mathrm{sym}}$ with algebraic multiplicity $m$. Since $L_{\mathrm{sym}}$ is self-adjoint, algebraic and geometric multiplicities coincide.
 
 **Proposition F.3 (Multiplicity Matching).**
-The order of vanishing of $\zeta(s)$ at $\rho$ equals the multiplicity of the eigenvalue $\mu = \frac{1}{i}(\rho - \tfrac{1}{2})$ in $\operatorname{Spec}(L_{\mathrm{sym}})$.
+The order of vanishing of $\zeta(s)$ at $\rho$ equals the multiplicity of the eigenvalue $\mu = \frac{1}{i}(\rho - \tfrac{1}{2})$ in $\mathrm{Spec}(L_{\mathrm{sym}})$.
 
 This further solidifies the canonical spectral encoding and validates that the spectral side fully mirrors the analytic structure of the zeta function.
 
@@ -1844,7 +1844,7 @@ This further solidifies the canonical spectral encoding and validates that the s
 We conclude this appendix by summarizing the structural properties of the spectrum:
 
 * The map $\rho \mapsto \mu = \frac{1}{i}(\rho - \tfrac{1}{2})$ defines a bijection between nontrivial zeta zeros and nonzero eigenvalues of $L_{\mathrm{sym}}$,
-* The spectrum of $L_{\mathrm{sym}}$ is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$,
+* The spectrum of $L_{\mathrm{sym}}$ is symmetric: $\mu \in \mathrm{Spec} \Rightarrow -\mu \in \mathrm{Spec}$,
 * Eigenvalue multiplicities match the multiplicities of zeta zeros,
 * The spectrum accumulates only at 0 and is discrete elsewhere.
 
@@ -2041,7 +2041,7 @@ $$
 This identity would allow one to reformulate the **Generalized Riemann Hypothesis (GRH)** for $L(s, \pi)$ as:
 
 $$
-\text{GRH for } \pi \iff \operatorname{Spec}(L_{\mathrm{sym}}^\pi) \subset \mathbb{R}.
+\text{GRH for } \pi \iff \mathrm{Spec}(L_{\mathrm{sym}}^\pi) \subset \mathbb{R}.
 $$
 
 ---
@@ -2212,7 +2212,7 @@ The items are grouped by type and ordered in logical dependency, not necessarily
   *Establishes spectral theorem applies and spectrum is real.*
 
 * **lem\:det\_via\_trace**
-  Fredholm determinant defined via $\operatorname{Tr}(L^k)$.
+  Fredholm determinant defined via $\mathrm{Tr}(L^k)$.
   *Foundation for linking operator determinant to $\Xi$.*
 
 * **lem\:hadamard\_structure**
@@ -2220,11 +2220,11 @@ The items are grouped by type and ordered in logical dependency, not necessarily
   *Used in proving the determinant identity.*
 
 * **lem\:injection**
-  Each zero $\rho$ of $\zeta(s)$ corresponds to $\mu = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \operatorname{Spec}(L_{\mathrm{sym}})$.
+  Each zero $\rho$ of $\zeta(s)$ corresponds to $\mu = \frac{1}{i}(\rho - \tfrac{1}{2}) \in \mathrm{Spec}(L_{\mathrm{sym}})$.
   *Establishes directionality from zeta to spectrum.*
 
 * **lem\:surjection**
-  Each $\mu \in \operatorname{Spec}(L_{\mathrm{sym}})\setminus\{0\}$ corresponds to a zeta zero.
+  Each $\mu \in \mathrm{Spec}(L_{\mathrm{sym}})\setminus\{0\}$ corresponds to a zeta zero.
   *Ensures completeness of spectral encoding.*
 
 * **lem\:multiplicity\_match**
@@ -2236,7 +2236,7 @@ The items are grouped by type and ordered in logical dependency, not necessarily
   *Core spectral theorem result used to deduce RH.*
 
 * **lem\:heat\_trace\_asymptotic**
-  $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right)$.
+  $\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \frac{1}{\sqrt{t}} \log\left(\frac{1}{t}\right)$.
   *Used to deduce the growth rate of eigenvalue counting.*
 
 * **lem\:korevaar\_conditions**
@@ -2256,7 +2256,7 @@ The items are grouped by type and ordered in logical dependency, not necessarily
   *The core identity establishing spectral–analytic equivalence.*
 
 * **thm\:spectral\_bijection**
-  Spectral map between $\operatorname{Spec}(L_{\mathrm{sym}})$ and nontrivial zeros is bijective.
+  Spectral map between $\mathrm{Spec}(L_{\mathrm{sym}})$ and nontrivial zeros is bijective.
   *Validates full encoding of zeta zeros.*
 
 * **thm\:spectral\_counting\_law**
@@ -2274,7 +2274,7 @@ The items are grouped by type and ordered in logical dependency, not necessarily
 * **thm\:rh\_equiv\_spec\_real**
 
   $$
-  \text{RH is true} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \text{RH is true} \iff \mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
   $$
 
   *Logical closure: equivalence between spectral reality and RH.*
@@ -2288,7 +2288,7 @@ The items are grouped by type and ordered in logical dependency, not necessarily
   *Follows immediately from theorems and spectral bijection.*
 
 * **cor\:spectral\_symmetry**
-  The spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$.
+  The spectrum is symmetric: $\mu \in \mathrm{Spec} \Rightarrow -\mu \in \mathrm{Spec}$.
   *Follows from symmetry of $\Xi(s)$ and evenness of $\phi(\lambda)$.*
 
 ---
@@ -2652,7 +2652,7 @@ The library will be organized as follows:
 * Final theorem:
 
   $$
-  \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \iff \text{RH}
+  \mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \iff \text{RH}
   $$
 
 #### 6. `SpectralZeta.Tauberian`
@@ -3067,7 +3067,7 @@ where $\{\mu_n\} \subset \mathbb{R} \setminus \{0\}$ are the eigenvalues of $L$,
 * The log-trace formula:
 
   $$
-  \log \det(I - \lambda L) = -\sum_{k=1}^{\infty} \frac{\lambda^k}{k} \operatorname{Tr}(L^k), \quad |\lambda| < \|\mu_n^{-1}\|^{-1}.
+  \log \det(I - \lambda L) = -\sum_{k=1}^{\infty} \frac{\lambda^k}{k} \mathrm{Tr}(L^k), \quad |\lambda| < \|\mu_n^{-1}\|^{-1}.
   $$
 
 In the case of $L_{\mathrm{sym}}$, the eigenvalues are precisely $\mu_n = \frac{1}{i} (\rho_n - \tfrac{1}{2})$, where $\rho_n$ are the nontrivial zeros of $\zeta(s)$.
@@ -3157,7 +3157,7 @@ faithfully reflects the full analytic structure of the completed zeta function, 
 
 ---
 
-### **P.13 Spectral Symmetry: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$**
+### **P.13 Spectral Symmetry: $\mu \in \mathrm{Spec} \Rightarrow -\mu \in \mathrm{Spec}$**
 
 Recall that the function $\phi(\lambda) := \Xi(\tfrac{1}{2} + i\lambda)$ is:
 
@@ -3185,13 +3185,13 @@ so $L_{\mathrm{sym}}$ commutes with the reflection operator $Rf(x) := f(-x)$. Si
 Consequently, the spectral theorem implies:
 
 **Corollary P.5 (Spectral Symmetry):**
-If $\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, then $-\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$, and both eigenvalues have equal multiplicity.
+If $\mu \in \mathrm{Spec}(L_{\mathrm{sym}})$, then $-\mu \in \mathrm{Spec}(L_{\mathrm{sym}})$, and both eigenvalues have equal multiplicity.
 
 This matches the symmetry of the zeta zeros:
 
 * If $\rho$ is a zero, then so is $1 - \bar{\rho}$,
 * For $\rho = \tfrac{1}{2} + i\mu$, the conjugate zero is $\tfrac{1}{2} - i\mu$,
-* Hence, each zero corresponds to $\mu \in \mathbb{R} \Rightarrow \pm\mu \in \operatorname{Spec}(L_{\mathrm{sym}})$.
+* Hence, each zero corresponds to $\mu \in \mathbb{R} \Rightarrow \pm\mu \in \mathrm{Spec}(L_{\mathrm{sym}})$.
 
 ---
 
@@ -3277,7 +3277,7 @@ The structure of our canonical operator matches this architecture:
 * The heat trace
 
   $$
-  \theta(t) = \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})
+  \theta(t) = \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})
   $$
 
   plays the role of a spectral sum, which is inverted (via Tauberian methods) to recover the zero-counting function.
@@ -3311,7 +3311,7 @@ This formula resembles the explicit formula in number theory, with closed geodes
 In our context:
 
 * $L_{\mathrm{sym}}$ is a trace-class analog of the Laplacian,
-* The trace $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ plays the role of the left-hand side (spectral sum),
+* The trace $\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$ plays the role of the left-hand side (spectral sum),
 * The zeros of $\zeta(s)$ are the eigenvalues of $L_{\mathrm{sym}}$,
 * The arithmetic content (e.g., prime distribution) is built into the analytic structure of $\Xi(s)$, and hence reflected in the trace.
 
@@ -3352,7 +3352,7 @@ The canonical operator framework in this manuscript resonates structurally with 
 
 | Structure       | Classical Source           | Canonical Operator Analog       |
 | --------------- | -------------------------- | ------------------------------- |
-| Spectral sum    | Selberg / Gutzwiller       | $\operatorname{Tr}(e^{-t L^2})$ |
+| Spectral sum    | Selberg / Gutzwiller       | $\mathrm{Tr}(e^{-t L^2})$ |
 | Geometric input | Geodesics / Primes         | Zeta kernel via $\Xi(s)$        |
 | Transform dual  | Fourier / Laplace kernel   | Mollification, spectral zeta    |
 | Asymptotics     | Weyl law / RH density      | Heat trace expansion            |
@@ -3378,7 +3378,7 @@ These alternative approaches may sharpen asymptotic estimates, reveal localized 
 The heat kernel method used throughout the manuscript evaluates:
 
 $$
-\theta(t) := \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{\mu} e^{-t\mu^2}.
+\theta(t) := \mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \sum_{\mu} e^{-t\mu^2}.
 $$
 
 This function:
@@ -3399,7 +3399,7 @@ Limitations:
 An alternative approach is to use the **wave group**:
 
 $$
-W(t) := \operatorname{Tr}(\cos(t L_{\mathrm{sym}})) = \sum_{\mu} \cos(t \mu).
+W(t) := \mathrm{Tr}(\cos(t L_{\mathrm{sym}})) = \sum_{\mu} \cos(t \mu).
 $$
 
 This traces oscillatory behavior of the spectrum and is particularly useful for identifying pair correlations and symmetric spectral features. It is the spectral analog of the solution to the wave equation:
@@ -3426,13 +3426,13 @@ Challenges:
 The resolvent operator is defined by:
 
 $$
-R(z) := (L_{\mathrm{sym}} - zI)^{-1}, \quad z \notin \operatorname{Spec}(L_{\mathrm{sym}}).
+R(z) := (L_{\mathrm{sym}} - zI)^{-1}, \quad z \notin \mathrm{Spec}(L_{\mathrm{sym}}).
 $$
 
 We can study the trace:
 
 $$
-\operatorname{Tr}(R(z)) = \sum_{\mu} \frac{1}{\mu - z},
+\mathrm{Tr}(R(z)) = \sum_{\mu} \frac{1}{\mu - z},
 $$
 
 as a meromorphic function of $z$, with simple poles at each eigenvalue $\mu$.
@@ -3455,7 +3455,7 @@ Limitations:
 Instead of evaluating trace functions directly, one may introduce a test function $f \in \mathcal{S}(\mathbb{R})$ and consider:
 
 $$
-\operatorname{Tr}(f(L_{\mathrm{sym}})) = \sum_{\mu} f(\mu).
+\mathrm{Tr}(f(L_{\mathrm{sym}})) = \sum_{\mu} f(\mu).
 $$
 
 This formulation is more flexible and allows localized analysis:
@@ -3571,7 +3571,7 @@ Once the finite-dimensional matrix $L_N$ is constructed, we compute:
 * **Approximate trace**:
 
   $$
-  \theta_N(t) := \operatorname{Tr}(e^{-t L_N^2}) = \sum_j e^{-t (\mu_j^{(N)})^2}.
+  \theta_N(t) := \mathrm{Tr}(e^{-t L_N^2}) = \sum_j e^{-t (\mu_j^{(N)})^2}.
   $$
 
 Comparisons with:
@@ -3643,7 +3643,7 @@ For $\zeta(s)$, the construction proceeds as:
    $$
    \det{}_\zeta(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
    $$
-5. **Conclusion**: RH ⇔ $\operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$.
+5. **Conclusion**: RH ⇔ $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}$.
 
 ---
 
@@ -3685,7 +3685,7 @@ We then define:
 5. **GRH Equivalence**:
 
    $$
-   \text{GRH for } L(s, \pi) \iff \operatorname{Spec}(L_{\mathrm{sym}}^{(\pi)}) \subset \mathbb{R}.
+   \text{GRH for } L(s, \pi) \iff \mathrm{Spec}(L_{\mathrm{sym}}^{(\pi)}) \subset \mathbb{R}.
    $$
 
 ---
@@ -3868,7 +3868,7 @@ Then:
 Under Axioms 1–5,
 
 $$
-\text{GRH}(F) \quad \Longleftrightarrow \quad \operatorname{Spec}(L_F) \subset \mathbb{R}.
+\text{GRH}(F) \quad \Longleftrightarrow \quad \mathrm{Spec}(L_F) \subset \mathbb{R}.
 $$
 
 This restates the analytic hypothesis as a spectral reality condition on a trace-class, self-adjoint operator constructed canonically from $F$.
@@ -3950,7 +3950,7 @@ bears structural resemblance to dynamical zeta functions:
 * The operator $L_{\mathrm{sym}}$ acts like a transfer operator for an "arithmetic dynamical system",
 * Its spectrum encodes resonance-like data (the imaginary parts of the nontrivial zeros),
 * The determinant is the natural entire function capturing its spectral signature,
-* The heat trace $\operatorname{Tr}(e^{-tL^2})$ behaves analogously to dynamical trace formulas, aggregating over "orbits" (eigenvalues).
+* The heat trace $\mathrm{Tr}(e^{-tL^2})$ behaves analogously to dynamical trace formulas, aggregating over "orbits" (eigenvalues).
 
 **Speculative interpretation**: the Riemann zeta function is a **dynamical zeta function** for an arithmetic flow on a hidden geometric or noncommutative space.
 
@@ -3969,7 +3969,7 @@ In our case, while the operator $L_{\mathrm{sym}}$ is not explicitly generated b
 * A trace formula:
 
   $$
-  \operatorname{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_{\mu} e^{-t\mu^2},
+  \mathrm{Tr}(e^{-tL_{\mathrm{sym}}^2}) = \sum_{\mu} e^{-t\mu^2},
   $$
 * A determinant expressing zeros:
 
@@ -4068,7 +4068,7 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 | $H_{\Psi_\alpha}$        | Weighted Hilbert space: ( L^2(\mathbb{R}, e^{\alpha | x                                                 | } dx) ) | Requires $\alpha > \pi$ for trace-class |
 | $L_{\mathrm{sym}}$       | Canonical operator constructed from $\Xi(s)$        | Self-adjoint, compact, trace-class                |         |                                         |
 | $L_t$                    | Mollified operator $L_t = \phi_t^\vee * \cdot$      | $\phi_t(\lambda) = e^{-t\lambda^2} \phi(\lambda)$ |         |                                         |
-| $\operatorname{Spec}(L)$ | Spectrum of operator $L$                            | Discrete for compact operators                    |         |                                         |
+| $\mathrm{Spec}(L)$ | Spectrum of operator $L$                            | Discrete for compact operators                    |         |                                         |
 
 ---
 
@@ -4077,8 +4077,8 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 | Symbol                               | Meaning                                                    | Notes                                  |
 | ------------------------------------ | ---------------------------------------------------------- | -------------------------------------- |
 | $\det\nolimits_\zeta(I - \lambda L)$ | Zeta-regularized Fredholm determinant of operator $L$      | Encodes $\Xi(\tfrac{1}{2} + i\lambda)$ |
-| $\operatorname{Tr}(T)$               | Trace of operator $T$                                      | Well-defined for trace-class operators |
-| $\theta(t)$                          | Heat trace: $\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2})$ | Used in Tauberian inversion            |
+| $\mathrm{Tr}(T)$               | Trace of operator $T$                                      | Well-defined for trace-class operators |
+| $\theta(t)$                          | Heat trace: $\mathrm{Tr}(e^{-t L_{\mathrm{sym}}^2})$ | Used in Tauberian inversion            |
 | $\zeta_L(s)$                         | Spectral zeta function: $\sum \mu_n^{-s}$                  | For eigenvalues $\mu_n \ne 0$          |
 
 ---
@@ -4089,8 +4089,8 @@ This appendix provides a comprehensive glossary of symbols, functions, operators
 | -------------------------------------------- | ----------------------------------------- | ------------------------------------ |
 | $\mathcal{F}$                                | Fourier transform                         | Normalized for unitarity on $L^2$    |
 | $\mathcal{S}(\mathbb{R})$                    | Schwartz space                            | Dense in $H_{\Psi_\alpha}$           |
-| $\operatorname{Re}(s), \operatorname{Im}(s)$ | Real/imaginary part of complex number $s$ | Standard                             |
-| $\operatorname{Res}_{s=s_0}$                 | Residue at $s = s_0$                      | Used in complex contour integrations |
+| $\mathrm{Re}(s), \mathrm{Im}(s)$ | Real/imaginary part of complex number $s$ | Standard                             |
+| $\mathrm{Res}_{s=s_0}$                 | Residue at $s = s_0$                      | Used in complex contour integrations |
 
 ---
 
@@ -4407,14 +4407,14 @@ $$
 $$
 
 **Lemma L3 (Spectral Encoding):**
-Each eigenvalue $\mu \in \operatorname{Spec}(L_{\mathrm{sym}}) \setminus \{0\}$ corresponds to a zeta zero:
+Each eigenvalue $\mu \in \mathrm{Spec}(L_{\mathrm{sym}}) \setminus \{0\}$ corresponds to a zeta zero:
 
 $$
 \mu = \tfrac{1}{i}(\rho - \tfrac{1}{2}).
 $$
 
 **Lemma L4 (Spectrum Symmetry):**
-The spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$.
+The spectrum is symmetric: $\mu \in \mathrm{Spec} \Rightarrow -\mu \in \mathrm{Spec}$.
 
 ---
 
@@ -4423,7 +4423,7 @@ The spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \op
 **Theorem T (Spectral Equivalence Formulation of RH):**
 
 $$
-\text{RH is true} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
+\text{RH is true} \iff \mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}.
 $$
 
 That is, all nontrivial zeros of $\zeta(s)$ lie on the critical line $\Re(s) = \tfrac{1}{2}$ if and only if the spectrum of $L_{\mathrm{sym}}$ is real.
@@ -4645,7 +4645,7 @@ This analogy helps demystify the idea of eigenvalues as spectral data: they are 
 
 ### **AB.2 Heat Flow Analogy**
 
-**Idea:** The heat trace $\operatorname{Tr}(e^{-t L^2})$ behaves like watching heat dissipate over time.
+**Idea:** The heat trace $\mathrm{Tr}(e^{-t L^2})$ behaves like watching heat dissipate over time.
 
 * When you apply $e^{-t L^2}$ to a function, it’s like letting heat spread through a metal bar.
 * The trace measures how the system “loses energy” over time, summed over all modes of vibration.
@@ -4707,7 +4707,7 @@ This metaphor reinforces that the operator is not an approximation—it’s a fo
 
 **Idea:** The symmetry of the spectrum reflects the symmetry of the zeta zeros.
 
-* The operator’s spectrum is symmetric: $\mu \in \operatorname{Spec} \Rightarrow -\mu \in \operatorname{Spec}$.
+* The operator’s spectrum is symmetric: $\mu \in \mathrm{Spec} \Rightarrow -\mu \in \mathrm{Spec}$.
 * This mirrors the fact that for every zero $\rho = \tfrac{1}{2} + i\mu$, its conjugate $\tfrac{1}{2} - i\mu$ is also a zero.
 * The symmetry in the operator is what *forces* the symmetry in the zeros.
 
@@ -4803,7 +4803,7 @@ Why does reality of spectrum imply RH?
 * Summarize the equivalence:
 
   $$
-  \text{RH} \iff \operatorname{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
+  \text{RH} \iff \mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R}
   $$
 
 **Optional**: Guest speaker or recorded mini-lecture by an operator theorist.
@@ -4829,7 +4829,7 @@ Why does reality of spectrum imply RH?
    Given a function $k(x)$, write out the action of $Lf(x) = \int k(x - y)f(y)dy$ on a simple function.
 
 4. **Exercise 4 (Trace Estimation):**
-   Estimate $\operatorname{Tr}(e^{-tL^2})$ using a finite spectral approximation.
+   Estimate $\mathrm{Tr}(e^{-tL^2})$ using a finite spectral approximation.
 
 5. **Exercise 5 (Spectrum Matching):**
    Given the first 10 imaginary parts of $\zeta(s)$ zeros, reverse-map them to test if they lie in the spectrum of a discretized $L_{\mathrm{sym}}$.

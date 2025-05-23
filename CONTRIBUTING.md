@@ -1,6 +1,3 @@
-### ✅ `CONTRIBUTING.md`
-
-````markdown
 # 🤝 Contributing to `spectral-proof-of-RH`
 
 Welcome! This project builds a formal, spectral operator-theoretic realization of the Riemann Hypothesis. We welcome contributions that enhance structure, readability, correctness, automation, or formalization.
@@ -145,5 +142,3 @@ scripts/
 ---
 
 Thank you for helping us build a formally sound, reproducible, and elegant proof system!
-
-```

@@ -1,0 +1,23 @@
+name: Lean CI
+
+on:
+  push:
+    paths:
+      - 'lean/**'
+  pull_request:
+    paths:
+      - 'lean/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup elan
+        uses: leanprover/lean-action@v1
+        with:
+          toolchain: stable
+      - name: Build Lean project
+        run: |
+          cd lean
+          ./build.sh

@@ -160,10 +160,6 @@
     "thm:sa_trace_class_Lsym"
   ],
   [
-    "lem:heat_trace_expansion",
-    "cor:dag_closure"
-  ],
-  [
     "lem:spectral_encoding_injection",
     "cor:dag_closure"
   ],
@@ -221,10 +217,6 @@
   ],
   [
     "lem:heat_semigroup_wellposed",
-    "lem:analytic_closure_core"
-  ],
-  [
-    "lem:heat_trace_expansion",
     "lem:analytic_closure_core"
   ],
   [
@@ -336,10 +328,6 @@
     "thm:det_identity_revised"
   ],
   [
-    "lem:heat_trace_expansion",
-    "thm:det_identity_revised"
-  ],
-  [
     "lem:kernel_L2_weighted_bound",
     "thm:det_identity_revised"
   ],
@@ -436,44 +424,8 @@
     "thm:spectral_zero_bijection_revised"
   ],
   [
-    "lem:heat_trace_expansion",
-    "lem:distributional_trace_asymptotics"
-  ],
-  [
     "lem:trace_class_Lt",
     "lem:distributional_trace_asymptotics"
-  ],
-  [
-    "lem:heat_kernel_diagonal_positivity",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "lem:hk_expansion_uniform",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "lem:kernel_L2_weighted_bound",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "lem:mollified_profile_decay",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "lem:trace_norm_convergence_Lt_to_Lsym",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "lem:xi_growth_bound",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "thm:canonical_operator_realization",
-    "lem:heat_trace_expansion"
-  ],
-  [
-    "lem:heat_trace_expansion",
-    "lem:laplace_integrability_heat_trace"
   ],
   [
     "lem:hk_upper_bound",
@@ -486,10 +438,6 @@
   [
     "lem:hk_expansion_uniform",
     "prop:heat_trace_uniform_conv"
-  ],
-  [
-    "lem:heat_trace_expansion",
-    "prop:spectral_counting_weyl"
   ],
   [
     "lem:log_corrected_tauberian_estimate",
@@ -550,10 +498,6 @@
   [
     "thm:uniqueness_realization",
     "lem:spectral_rigidity_determinant"
-  ],
-  [
-    "lem:heat_trace_expansion",
-    "thm:eq_of_rh"
   ],
   [
     "lem:kernel_trace_norm_convergence",
@@ -713,22 +657,6 @@
   ],
   [
     "def:kernel_decay_condition",
-    "lem:heat_trace_expansion_pi"
-  ],
-  [
-    "lem:heat_trace_expansion",
-    "lem:heat_trace_expansion_pi"
-  ],
-  [
-    "lem:trace_class_convergence_general",
-    "lem:heat_trace_expansion_pi"
-  ],
-  [
-    "lem:heat_trace_expansion_pi",
-    "lem:log_corrected_tauberian_estimate_pi"
-  ],
-  [
-    "def:kernel_decay_condition",
     "lem:trace_class_convergence_general"
   ],
   [
@@ -825,10 +753,6 @@
   ],
   [
     "lem:canonical_closure",
-    "thm:truth_of_rh"
-  ],
-  [
-    "lem:heat_trace_expansion",
     "thm:truth_of_rh"
   ],
   [

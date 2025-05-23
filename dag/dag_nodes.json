@@ -263,12 +263,6 @@
     "hash": "ab0c6b3fc0f00b811fbb41d80e34ffc143e1d221a41e46fdb8414bea4f02eb88",
     "type": "lemma"
   },
-  "lem:det_continuity_trace_norm": {
-    "chapter": 3,
-    "file": "src/chapters/03_determinant_identity/lems/lem_det_continuity_trace_norm.tex",
-    "hash": "d47f182d87ef44df691bdef4f6043045b6c94b5a7b357ca7fdb4497de3e00d27",
-    "type": "lemma"
-  },
   "lem:det_growth_bound": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/lems/lem_det_growth_bound.tex",
@@ -371,18 +365,6 @@
     "hash": "70e0a09ec439a4a6104ab83542f077650037ba408a5f48dd48b10fdb373dfe77",
     "type": "lemma"
   },
-  "lem:heat_trace_expansion": {
-    "chapter": 5,
-    "file": "src/chapters/05_heat_kernel_asymptotics/lems/lem_heat_trace_expansion.tex",
-    "hash": "6451c61a412af8fea3b816c98e2ff05c3a5c54770ac47e4ea2a01fc06ea27005",
-    "type": "lemma"
-  },
-  "lem:heat_trace_expansion_pi": {
-    "chapter": 9,
-    "file": "src/chapters/09_spectral_generalization/lems/lem_heat_trace_expansion_pi.tex",
-    "hash": "04d01a38da0337ceb1057b6c36cd72bf43d305ce7729de3dd48f686b3c43ec9e",
-    "type": "lemma"
-  },
   "lem:hk_expansion_uniform": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/lems/lem_hk_expansion_uniform.tex",
@@ -467,16 +449,10 @@
     "hash": "2504ed371c2d28120abc0085bab41e878cf15502309e284d8c3df3eee8d043d5",
     "type": "lemma"
   },
-  "lem:log_corrected_tauberian_estimate_pi": {
-    "chapter": 9,
-    "file": "src/chapters/09_spectral_generalization/lems/lem_log_corrected_tauberian_estimate_pi.tex",
-    "hash": "17deae2f09f9516d81f857f3e75da33d44cb3b2e2a3c87e599dd8be9ab944080",
-    "type": "lemma"
-  },
   "lem:log_derivative_determinant": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/lems/lem_log_derivative_determinant.tex",
-    "hash": "a4fef6fcca0dc78ceb71668ce16c5e7451e1e30e25568c74bde9a56ac0a7d9a4",
+    "hash": "2fa7aee9a6e24d5ae620585871f4f53caa7919141c3e59db991bd72516a3df9a",
     "type": "lemma"
   },
   "lem:mollified_profile_decay": {
@@ -716,7 +692,7 @@
   "prop:heat_trace_uniform_conv": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/props/prop_heat_trace_uniform_conv.tex",
-    "hash": "97b25f9adaf5b4ed02b2c49c1f9ffde8dfb073e68cf53095c8f6b3e4b3e73bdc",
+    "hash": "387ced9a2cffbe0d5a3ffe0cd6acf779cbb0a1f2b36ed2cf66e07bc515ff5bb6",
     "type": "proposition"
   },
   "prop:inverse_spectral_rigidity": {
@@ -734,7 +710,7 @@
   "prop:short_time_heat_expansion": {
     "chapter": 5,
     "file": "src/chapters/05_heat_kernel_asymptotics/props/prop_short_time_heat_expansion.tex",
-    "hash": "27078c6583d61dd8a9a891d788126f235c2e4465137be468229cc08eb37e7d97",
+    "hash": "347cf59886960845c6e4c2af282f02e906dd85c038100ce130da62b67b9cf904",
     "type": "proposition"
   },
   "prop:spectral_counting_law_pi": {
@@ -800,7 +776,7 @@
   "rem:compare_to_connes_trace": {
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/rems/rem_compare_to_connes_trace.tex",
-    "hash": "82b6c766b25a4e0192d6e786f4ccb425361ca4564aece7e6473836423428a4ec",
+    "hash": "7008fcc771f2e595a1dccaebc6465d420a2d2ecabad1bab1e1ff4658c798db57",
     "type": "remark"
   },
   "rem:contextual_link_prologue": {
@@ -962,7 +938,7 @@
   "thm:eq_of_rh": {
     "chapter": 6,
     "file": "src/chapters/06_spectral_implications/thms/thm_eq_of_rh.tex",
-    "hash": "5923adc3c0b615b52c74b7d806efc3dace4c5a0db6eadfa70e5455b914e486ea",
+    "hash": "50f663a95331389dcb7a42d5fb2e6a529456a8d7936f9228844f95a0ccb408eb",
     "type": "theorem"
   },
   "thm:existence_Lsym": {
@@ -1034,7 +1010,7 @@
   "thm:truth_of_rh": {
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/thms/thm_truth_of_rh.tex",
-    "hash": "59c918dd3ddb9c24e79750e5d8b25b57c2bad35f3e62d5d8b9a95f33ecd2a6b6",
+    "hash": "b28b1fd09093f1d5eed9d612a8743b5d6ae33f75d916a5ab4b2acdf24e0b7868",
     "type": "theorem"
   },
   "thm:uniqueness_realization": {

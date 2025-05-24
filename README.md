@@ -33,8 +33,8 @@ This manuscript presents a complete analytic and operator-theoretic proof of the
   $\det_\zeta(I - \lambda L_{\mathrm{sym}}) = \dfrac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}$
 
 - The operator $L_{\mathrm{sym}}$ is:
-  - Self-adjoint
-  - Trace-class on the exponentially weighted space $L^2(\mathbb{R}, e^{\alpha |x|} dx)$
+  - Self-adjoint  
+  - Trace-class on the exponentially weighted space $L^2(\mathbb{R}, e^{\alpha |x|} dx)$  
   - Canonically determined by the spectral identity
 
 - **Spectral encoding:**  
@@ -49,11 +49,16 @@ $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \;\Rightarrow\; \text{RH}$
 
 The analytic proof is complete. Some classical ingredients (e.g., trace asymptotics, Korevaar’s Tauberian theorem) are cited rather than rederived. Formal verification in Lean is modularized and underway.
 
-### 🗓️ Updates
+---
 
-- May 17, 2025 — Manuscript submitted to *Annals of Mathematics*.
-- May 22, 2025 — Version 0.99.87 released (see [Releases](https://github.com/orange-you-glad/spectral-proof-of-RH/releases)).
-- May 23, 2025 — Manuscript declined by Annals of Mathematics. *Sigh*. I sent it to early.
+## 🗓️ Timeline
+
+- **May 13, 2025** — Submission to *Annals of Mathematics*
+- **May 19, 2025** — Passed initial editorial filter (top 5% of submissions)
+- **May 22, 2025** — Internal release: version 0.99.87
+- **May 23, 2025** — ✨ Public launch of Bourbaki.RH  
+  📄 Version 1.0.0 of the manuscript formally released in this repository
+- **May 25, 2025** — 🌍 Public announcement of the project and manuscript
 
 ---
 
@@ -77,14 +82,15 @@ Run `make check` to verify the integrity suite and `make deploy` to build the fu
 
 - 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
 - DAG overview: [docs/DAG_TOUR.md](docs/DAG_TOUR.md)
-- PDF: `docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`
+- PDF: [`docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`](./docs/spectral_determinant_RH_equivalence_v1.0.0.pdf)
 
 ---
 
 ## 📍 Author
 
 **R.A. Jacob Martone**  
-Fresno, CA — Radio Park & beyond
+Fresno, CA — Radio Park & beyond  
+🌐 [orangeyouglad.org](https://orangeyouglad.org)
 
 > ALS-like disease keeps me mostly bed-bound.  
 > I write proofs that move — because I cannot.  
@@ -92,17 +98,26 @@ Fresno, CA — Radio Park & beyond
 
 ---
 
+## 💬 Formal Interlocutor
+
+This system is accompanied by a Socratic formal guide:
+
+- 🤖 [Bourbaki.RH on ChatGPT](https://chat.openai.com/g/g-WkZZP7ywr-bourbaki-rh)  
+- ℹ️ Bourbaki.RH is a spectral dialectician embedded in the DAG structure. Ask questions. Audit lemmas. Traverse the logical architecture of the proof from kernel to closure.
+
+---
+
 ## 🧡 Support
 
-- Say hello or open an issue here on GitHub
-- Share the repo with someone who loves rigor and elegance
+- Say hello or open an issue here on GitHub  
+- Share the repo with someone who loves rigor and elegance  
 - Or give oranges to someone who needs them
 
 ---
 
 ## 📖 License
 
-- Code & automation: [MIT License](./LICENSE)
+- Code & automation: [MIT License](./LICENSE)  
 - Manuscript (text, figures): [CC BY 4.0 License](./LICENSE-CC-BY-4.0)
 
 © 2025 R.A. Jacob Martone — you may share and adapt this work with attribution.

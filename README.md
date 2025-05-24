@@ -77,7 +77,7 @@ Run `make check` to verify the integrity suite and `make deploy` to build the fu
 
 - 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
 - DAG overview: [docs/DAG_TOUR.md](docs/DAG_TOUR.md)
-- PDF: `docs/spectral_determinant_RH_equivalence_v0.99.87.pdf`
+- PDF: `docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`
 
 ---
 

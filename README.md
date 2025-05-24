@@ -102,7 +102,7 @@ Fresno, CA — Radio Park & beyond
 
 This system is accompanied by a Socratic formal guide:
 
-- 🤖 [Bourbaki.RH on ChatGPT](https://chat.openai.com/g/g-WkZZP7ywr-bourbaki-rh)  
+- 🤖 [Bourbaki.RH on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki-rh) 
 - ℹ️ Bourbaki.RH is a spectral dialectician embedded in the DAG structure. Ask questions. Audit lemmas. Traverse the logical architecture of the proof from kernel to closure.
 
 ---

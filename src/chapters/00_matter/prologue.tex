@@ -2,42 +2,44 @@
 \label{sec:prologue}
 
 \paragraph*{1.1 The Autonomous Mathematician.}
-Bourbaki.RH is not a project about the Riemann Hypothesis. It is a prototype for the next phase of mathematics: autonomous, compositional, and self-verifying. At its core is a system that engineers mathematics—not just writing proofs, but refactoring them, machine-checking them, and compiling them into a rigorously typed document. This is not LLM-as-calculator; it is LLM as collaborator in a formal loop: conjecture $\rightarrow$ attempt $\rightarrow$ audit $\rightarrow$ refactor $\rightarrow$ validate $\rightarrow$ render. The result is not a paper—it’s an artifact. A reproducible build. Every DAG edge in this manuscript is re-proven on every commit. Every analytic identity, every determinant formula, every trace expansion—traced and enforced down to the kernel. This isn't a new proof of RH. It's a new standard for what counts as a proof.
+Bourbaki.RH is not a project about the Riemann Hypothesis. It is a prototype for what mathematics becomes when its proofs are no longer written, but built. Autonomous. Compositional. Self-verifying. At its heart is not an answer, but an architecture—a formal system that doesn’t just construct proofs, but refactors them, audits them, and compiles them into semantic artifacts. This is not LLM-as-calculator. It is LLM as collaborator, as interlocutor, as dialectical engine in a formal loop:
+\[
+\text{conjecture} \rightarrow \text{attempt} \rightarrow \text{audit} \rightarrow \text{refactor} \rightarrow \text{validate} \rightarrow \text{render}.
+\]
+The output is not a paper. It is a reproducible build. Every DAG edge in this manuscript is re-proven on every commit. Every identity is tracked to its analytic kernel. Every expansion is recursively justified. This is not a new proof of RH. It is a new epistemology of proof.
 
 \paragraph*{1.2 Why RH Became the Test Case.}
-The Riemann Hypothesis was not chosen for surprise or fame, but for stress. RH resists improvisation. It rewards only structure. It forces a system to grow up. It presents a proving problem that is technical, intricate, and yet cleanly refactorable into modular equivalences. Its sharp edge—real spectrum versus critical zeros—is the kind of binary equivalence that a formal system can test, diagnose, and refactor without infinite guesswork. RH was the ideal crash test for the Bourbaki.RH pipeline.
+The Riemann Hypothesis was not chosen for celebrity, but for constraint. RH does not tolerate intuition loosely held. It rewards only structure. It enforces a discipline of equivalence. In a mathematical ecosystem designed to be modular, local, and formally audited, RH serves not as a summit but as a stress test. Its sharp edge—real spectrum versus critical zeros—is the kind of binary condition that a formal pipeline can test, stabilize, and expose without infinite guesswork. RH demanded a proving system mature enough to confront necessity. And Bourbaki.RH responded.
 
 \paragraph*{1.3 Workflow in Miniature.}
-At the heart of Bourbaki.RH is a Directed Acyclic Graph (DAG) of irreducible lemmas, each compositional, each typed, each carrying semantic weight. These nodes are machine-audited and connected by zeta-invariant structure: determinant identities, spectral bijections, kernel decay, Tauberian asymptotics. The DAG is compiled into a Lean 4 formalization (in progress) and a typeset manuscript. A reproducible containerized CI pipeline re-verifies the entire graph on every push. The system doesn’t "trust" any prior argument—it rebuilds logic from the inside out.
+At the core is a Directed Acyclic Graph (DAG) of irreducible semantic units—lemmas that are not merely steps in a proof, but composable modules in a formal structure. Each is typed, audited, and connected by analytic invariants: spectral bijections, determinant identities, kernel decay, Tauberian asymptotics. The DAG compiles into a Lean 4 formalization (in progress), a typeset manuscript, and a containerized CI pipeline that re-verifies the logical closure on every push. Nothing is assumed. Nothing is trusted. Everything is reconstructed. From the Fourier kernel up.
 
 \paragraph*{1.4 Mathematical Result, Briefly.}
-The central mathematical object is a canonical trace-class operator
+The central analytic construct is a canonical trace-class operator
 \[
 \Lsym \in \TC(\HPsi), \quad \HPsi := L^2(\R, e^{\alpha|x|} dx), \quad \alpha > \pi,
 \]
-whose zeta-regularized Fredholm determinant satisfies
+whose zeta-regularized Fredholm determinant satisfies the identity:
 \[
 \detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
 \]
-The spectrum of \( \Lsym \) recovers the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \), via the map
+Through this identity, the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \) are encoded as spectral data:
 \[
-\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}).
+\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym).
 \]
-The spectral theorem guarantees \( \Spec(\Lsym) \subset \R \) if and only if RH holds. Thus, Bourbaki.RH proves:
+By the spectral theorem, this yields:
 \[
 \RH \iff \Spec(\Lsym) \subset \R.
 \]
-But again, this is not about novelty. It is about closure—formal, repeatable, machine-verifiable closure.
+But again: this is not about novelty. It is about closure. Formal, auditable, repeatable closure—where arithmetic truth emerges as a spectral invariant.
 
 \paragraph*{1.5 Invitation to Audit and Extend.}
-Every lemma is modular. Every equation is reproducible. The full DAG structure, Lean verification suite (coming soon), and CI runner are open source:
+Every lemma is modular. Every operator is reproducible. The full DAG structure, Lean verification suite (in progress), and CI runner are open source:
 \begin{itemize}
   \item GitHub: \texttt{https://github.com/orange-you-glad/spectral-proof-of-RH}
-  \item Container image: \texttt{ghcr.io/orange-you-glad/bourbaki.rh:latest}
+  \item Formal interlocutor: \texttt{https://chat.openai.com/g/g-WkZZP7ywr-bourbaki-rh}
 \end{itemize}
-We invite readers not just to verify but to fork. The real experiment is whether you can extend it. New operators. New L-functions. New spectral theorems. This system wasn’t designed to end the RH conversation. It was designed to start the next one.
-
-\medskip
+The real experiment is not whether RH is true, but whether a formal ecosystem can grow. Can you extend it? Introduce new operators? Lift to automorphic \( L \)-functions? Generalize the determinant theory? Bourbaki.RH wasn’t designed to resolve the Riemann Hypothesis. It was designed to build the proving systems of the next century.
 
 \subsection*{Main Equivalence — Spectral RH Reformulation}
 \hfill \break
@@ -63,20 +65,18 @@ such that:
   \Spec(\Lsym) \subset \mathbb{R}.
   \]
 \end{enumerate}
-All analytic and operator-theoretic infrastructure—Paley–Wiener kernel decay, trace-norm convergence, heat semigroup regularity, determinant growth—is rigorously modularized and validated across Chapters~1–10. See \thmref{thm:truth_of_rh} for formal equivalence.
+All analytic and operator-theoretic infrastructure—Paley–Wiener kernel decay, trace-norm convergence, heat semigroup regularity, determinant growth—is rigorously modularized and verified across Chapters~1–10. See \thmref{thm:truth_of_rh} for formal equivalence.
 \end{tcolorbox}
-
 
 \subsection*{Disclosure of Large-Language-Model Assistance}
 
 The author used OpenAI’s \emph{ChatGPT} (GPT-4o, May 2025 release) as a research and writing assistant. This collaboration included:
 
 \begin{itemize}
-  \item Structural scaffolding for chapters and DAG layout;
-  \item Drafting provisional LaTeX formulations for definitions and identities;
-  \item Symbolic verification (e.g., Fourier transforms, determinant expansions);
-  \item Boilerplate generation for cross-references and macros;
-  \item Refactoring prose for clarity and alignment with formal semantics.
+  \item Structural scaffolding for chapters and DAG architecture;
+  \item Drafting provisional \LaTeX{} for definitions, lemmas, and operator identities;
+  \item Symbolic verification of transforms and expansions;
+  \item Refactoring of prose for clarity, precision, and formal alignment.
 \end{itemize}
 
-All mathematics was independently re-verified by the author. The LLM is not an author and bears no responsibility for any claim made herein.
+All mathematics was independently verified by the author. The LLM is not an author and bears no responsibility for any claim made herein.

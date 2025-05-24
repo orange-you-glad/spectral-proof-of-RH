@@ -53,6 +53,7 @@ The analytic proof is complete. Some classical ingredients (e.g., trace asymptot
 
 - May 17, 2025 — Manuscript submitted to *Annals of Mathematics*.
 - May 22, 2025 — Version 0.99.87 released (see [Releases](https://github.com/orange-you-glad/spectral-proof-of-RH/releases)).
+- May 23, 2025 — Manuscript declined by Annals of Mathematics. *Sigh*. I sent it to early.
 
 ---
 
@@ -76,7 +77,7 @@ Run `make check` to verify the integrity suite and `make deploy` to build the fu
 
 - 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
 - DAG overview: [docs/DAG_TOUR.md](docs/DAG_TOUR.md)
-- PDF: `docs/spectral_determinant_RH_equivalence_v0.99.87.pdf`
+- PDF: `docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`
 
 ---
 

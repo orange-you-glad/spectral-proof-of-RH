@@ -1,0 +1,28 @@
+\begin{proof}[Proof of \lemref{lem:uniqueness_from_determinant}]
+Let \( A, B \in \TC(H) \) be compact, self-adjoint, positive operators such that
+\[
+\detz(I - \lambda A) = \detz(I - \lambda B) \quad \text{for all } \lambda \in \C.
+\]
+The zeta-regularized determinant of a trace-class operator \( T \ge 0 \) with eigenvalues \( \{\mu_n\} \subset [0, \infty) \) is defined via:
+\[
+\log \detz(I - \lambda T) = -\sum_{n=1}^\infty \log(1 - \lambda \mu_n).
+\]
+This is valid as an entire function in \( \lambda \) due to the compactness and positivity of \( T \), and uniquely determines the multiset \( \{\mu_n\} \), counted with multiplicities, by Hadamard's factorization theorem.
+
+Hence, if \( \detz(I - \lambda A) = \detz(I - \lambda B) \), then the sequences of eigenvalues \( \{\mu_n^{(A)}\} \) and \( \{\mu_n^{(B)}\} \) must coincide, including multiplicities. That is,
+\[
+\operatorname{Spec}(A) = \operatorname{Spec}(B) \quad \text{as multisets}.
+\]
+
+Now suppose \( A \) and \( B \) share a common orthonormal eigenbasis \( \{e_n\} \). Then both operators are diagonal with respect to this basis:
+\[
+A e_n = \mu_n e_n = B e_n \quad \text{for all } n.
+\]
+Thus, \( A = B \) as operators on \( H \).
+
+Applying this to the canonical operator \( L_{\mathrm{sym}} \) with determinant identity
+\[
+\detz(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\]
+we conclude that any other operator \( \widetilde{L} \in \TC(H_{\Psi_\alpha}) \) sharing this identity must have the same eigenvalues as \( L_{\mathrm{sym}} \). If \( \widetilde{L} \) is additionally assumed to be self-adjoint on the same space, it is unitarily equivalent to \( L_{\mathrm{sym}} \), and if their eigenvectors align, they must coincide.
+\end{proof}

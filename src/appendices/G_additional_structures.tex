@@ -38,6 +38,43 @@ This appendix is logically inert: no theorem, lemma, or proof in the core manusc
   where \( \Lambda^G(s) \) is the Langlands \( L \)-function for \( G \) or its dual group \( {}^L G \). Potential realizations include trace formulas, geometric Langlands models, and moduli of shtukas.
 \end{itemize}
 
+\subsection*{Canonical Uniqueness and Arithmetic Rigidity}
+
+To reinforce the arithmetic naturality of the canonical operator \( L_{\mathrm{sym}} \), one may ask:
+
+\begin{quote}
+\emph{Is \( L_{\mathrm{sym}} \) uniquely determined—up to unitary equivalence—by its zeta determinant? By the completed zeta function? By an arithmetic moduli problem?}
+\end{quote}
+
+These questions align with several speculative principles:
+
+\begin{itemize}
+  \item \textbf{Spectral Rigidity via Zeta Determinants.}  
+  For trace-class self-adjoint operators, the zeta-regularized determinant uniquely determines the eigenvalue multiset (up to ordering). If the spectral measure \( \mu \) of \( L_{\mathrm{sym}} \) satisfies
+  \[
+  \detz(I - \lambda L_{\mathrm{sym}}) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+  \]
+  then \( \mu \) and hence the operator \( L_{\mathrm{sym}} \) itself is uniquely pinned down (modulo isometry), assuming trace-class positivity and canonical Hilbert space embedding.
+
+  \item \textbf{Arithmetic Determinacy of Kernel.}  
+  The heat kernel \( K_t(x,x) \) generating the trace expansion
+  \[
+  \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) \sim \sum_{n=0}^\infty A_n\, t^{n - \frac{1}{2}}
+  \]
+  encodes a moment problem for the spectral measure. This uniquely reconstructs \( \mu \) under growth conditions guaranteed by the exponential weight \( \alpha > \pi \), ensuring determinacy of \( L_{\mathrm{sym}} \) from its spectral trace.
+
+  \item \textbf{Arithmetic Moduli and Motivic Rigidity.}  
+  Should a cohomological or categorical lift of \( L_{\mathrm{sym}} \) be found—e.g., as a spectral realization of Frobenius on a hypothetical cohomology theory over \( \mathrm{Spec}(\mathbb{Z}) \)—the operator would become canonical by universality of the associated motive. That is:
+  \[
+  L_{\mathrm{sym}} \cong \mathrm{Tr}_{\text{Frob} | \mathcal{H}^\bullet(\mathbb{Z}, \mathcal{F}_\zeta)},
+  \]
+  for a yet-to-be-defined zeta-motive \( \mathcal{F}_\zeta \).
+\end{itemize}
+
+The uniqueness and canonicity of \( L_{\mathrm{sym}} \) thus straddle analysis, arithmetic, and motive-theoretic speculation. Establishing such rigidity is essential for any future program aiming to define \( L \)-functions spectrally across the Langlands landscape.
+
+These analytic principles are formalized in \propref{prop:inverse_spectral_rigidity} and \corref{cor:canonical_operator_uniqueness}, which jointly establish that any trace-class, self-adjoint operator encoding the completed zeta function via a Carleman determinant must coincide (up to unitary equivalence) with the canonical operator \( L_{\mathrm{sym}} \). This spectral rigidity reinforces the arithmetic naturality of the construction and positions \( L_{\mathrm{sym}} \) as a candidate for realization within deeper cohomological or motivic frameworks.
+
 \subsection*{Outlook}
 
 The canonical determinant identity for \( \XiR(s) \) suggests a spectral framework where global \( L \)-functions admit analytic realization via trace-class operators. If such models can be defined uniformly, they could unify:

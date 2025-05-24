@@ -1,0 +1,24 @@
+\begin{proof}[Proof of \lemref{lem:heat_trace_expansion}]
+We begin by recalling that \( L_{\mathrm{sym}}^2 \) is a positive, self-adjoint, trace-class operator on \( H_{\Psi_\alpha} \), and hence the associated heat semigroup \( e^{-t L_{\mathrm{sym}}^2} \) admits a smooth integral kernel \( K_t(x,y) \in C^\infty(\mathbb{R}^2) \), which decays rapidly in both variables.
+
+By \lemref{lem:hk_expansion_uniform}, for each compact \( K \subset \mathbb{R} \), the diagonal kernel \( K_t(x,x) \) admits a uniform asymptotic expansion:
+\[
+K_t(x,x) \sim \sum_{n=0}^{\infty} a_n(x)\, t^{n - \frac{1}{2}},
+\]
+where \( a_n(x) \in \mathcal{S}(\mathbb{R}) \) for each \( n \), ensuring the absolute integrability of all terms in the expansion.
+
+Integrating termwise over \( \mathbb{R} \), we obtain:
+\[
+\operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) = \int_{\mathbb{R}} K_t(x,x)\, dx \sim \sum_{n=0}^{\infty} A_n\, t^{n - \frac{1}{2}}, \quad A_n := \int_{\mathbb{R}} a_n(x)\, dx.
+\]
+
+To validate termwise integration, we invoke dominated convergence: for each \( N \), the remainder estimate
+\[
+\left| K_t(x,x) - \sum_{n=0}^{N-1} a_n(x)\, t^{n - \frac{1}{2}} \right| \le C_N(x)\, t^{N - \frac{1}{2}}
+\]
+holds with \( C_N(x) \in \mathcal{S}(\mathbb{R}) \), ensuring that \( \int_{\mathbb{R}} C_N(x)\, dx < \infty \). Hence, integrating the remainder gives the global error control
+\[
+\left| \operatorname{Tr}(e^{-t L_{\mathrm{sym}}^2}) - \sum_{n=0}^{N-1} A_n\, t^{n - \frac{1}{2}} \right| \le C_N' t^{N - \frac{1}{2}},
+\]
+with \( C_N' := \int_{\mathbb{R}} C_N(x)\, dx \). This completes the asymptotic expansion globally.
+\end{proof}

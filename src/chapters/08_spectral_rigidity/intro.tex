@@ -18,23 +18,23 @@ constructed via mollified convolution from the inverse Fourier transform of the 
   \[
   \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}),
   \]
-  sending each nontrivial zeta zero \( \rho \) to an eigenvalue \( \mu_\rho \in \Spec(\Lsym) \). This intertwines the Hadamard factorization of \( \XiR(s) \) with the spectral structure of \( \Lsym \), confirming that each determinant zero yields a spectral eigenvalue.
+  sending each nontrivial zeta zero \( \rho \) to an eigenvalue \( \mu_\rho \in \Spec(\Lsym) \). This intertwines the Hadamard factorization of \( \XiR(s) \) with the spectral structure of \( \Lsym \), ensuring that each determinant zero yields a spectral eigenvalue. Full spectral bijection is verified independently in Chapter~\ref{sec:spectral_correspondence}.
 
   \item \textit{Spectral Rigidity:}  
-  Although \( \Lsym \) is self-adjoint and thus has real spectrum, we prove the converse: if all eigenvalues \( \mu_\rho \in \R \), then all corresponding zeros \( \rho \) must lie on the critical line. That is,
+  While self-adjointness ensures \( \Spec(\Lsym) \subset \R \Rightarrow \Re(\rho) = \tfrac{1}{2} \), we establish the converse: if all eigenvalues \( \mu_\rho \in \R \), then the associated zeros \( \rho \) must lie on the critical line. That is,
   \[
   \Spec(\Lsym) \subset \R
   \quad \Longleftrightarrow \quad
   \Re(\rho) = \tfrac{1}{2} \quad \forall \rho \in \Spec(\zetaR).
   \]
-  The implication is established via analytic continuation, determinant structure, and Fredholm theory—without presuming spectral bijection.
+  This implication is derived using analytic continuation, Fredholm determinant structure, and spectral multiplicity—without assuming automorphic surjectivity.
 
   \item \textit{Spectral Symmetry:}  
   The functional equation \( \XiR(\tfrac{1}{2} + i\lambda) = \XiR(\tfrac{1}{2} - i\lambda) \) implies spectral symmetry:
   \[
   \mu \in \Spec(\Lsym) \quad \Rightarrow \quad -\mu \in \Spec(\Lsym),
   \]
-  with matched multiplicities. This reflects the evenness of the centered spectral profile \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \).
+  with matched multiplicities. This mirrors the evenness of the centered spectral profile \( \phi(\lambda) := \XiR(\tfrac{1}{2} + i\lambda) \) and enforces parity across the spectrum.
 
   \item \textit{Trace Positivity:}  
   The spectral trace pairing
@@ -45,16 +45,16 @@ constructed via mollified convolution from the inverse Fourier transform of the 
   \[
   \Tr(e^{-t \Lsym^2}) \ge 0 \quad \forall\, t > 0,
   \]
-  expressing the positivity of the heat trace and its interpretation as a regularized spectral measure. This positivity holds for all \( \phi \in \Schwartz(\R) \), reinforcing the harmonic-analytic structure of the trace.
+  interpreting the heat trace as a regularized spectral measure supported on \( \Spec(\Lsym) \). This positivity extends to all \( \phi \in \Schwartz(\R) \) and reflects the harmonic-analytic structure of the trace. Trace-class regularity holds under the sharp threshold \( \alpha > \pi \); see Lemma~\ref{lem:trace_class_Lt}.
 
   \item \textit{Analytic Independence:}  
-  All results in this chapter are derived using classical analytic and operator-theoretic tools:
+  All results in this chapter are established using classical analytic and operator-theoretic methods:
   \begin{itemize}
     \item spectral theory of compact self-adjoint operators;
     \item exponential kernel decay and heat semigroup regularity;
     \item Hadamard factorization and functional symmetry of \( \XiR(s) \);
     \item Fredholm determinant theory and spectrum–zero correspondence;
-    \item uniqueness via unitary equivalence and diagonalization.
+    \item uniqueness via unitary equivalence and spectral diagonalization.
   \end{itemize}
-  No use is made of automorphic forms, trace formulas, or Langlands theory.
+  No use is made of automorphic representations, Selberg trace formulas, or Langlands-theoretic structures.
 \end{itemize}

@@ -1,4 +1,10 @@
 {
+  "cor:canonical_operator_uniqueness": {
+    "chapter": 8,
+    "file": "src/chapters/08_spectral_rigidity/cors/cor_canonical_operator_uniqueness.tex",
+    "hash": "eac3797b8f6b460f56ccc8b86680874b3e3df057088351bd103362f0c1fabedd",
+    "type": "corollary"
+  },
   "cor:dag_closure": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/cors/cor_dag_closure.tex",
@@ -116,7 +122,7 @@
   "def:paley_wiener_class": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/defs/def_paley_wiener_class.tex",
-    "hash": "0838473fa0219f1e31df8f0d262bac7f273235e5b956d380b83f32a767fa0f08",
+    "hash": "a5cc387f5260df8dea1b93ef24d0532657e7d225128d947dc57d58e6f21a2721",
     "type": "definition"
   },
   "def:selfadjoint_operator": {
@@ -170,7 +176,7 @@
   "def:weighted_Hilbert_space_HPsi": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/defs/def_weighted_Hilbert_space_HPsi.tex",
-    "hash": "b58217b979f60872eb773e7d28cfa48d8f2ab12fd24de9bb60da02d4d3455ddb",
+    "hash": "739a66c3f9abdfd7b1d3765c0db2075682be49b3e6a3a77fac28de0229651778",
     "type": "definition"
   },
   "def:weighted_fourier_space": {
@@ -344,7 +350,7 @@
   "lem:hadamard_uniqueness_E1pi": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/lems/lem_hadamard_uniqueness_E1pi.tex",
-    "hash": "a4e3a0afc28bbfeaa1ad8a9163a4a0c64514d8aa0b19ee2f620de0beed1cea1d",
+    "hash": "ef9bb709eb6974a8c780a42441e537f2e68b70a3946398a7542a51a8c9da8360",
     "type": "lemma"
   },
   "lem:heat_kernel_diagonal_positivity": {
@@ -363,6 +369,12 @@
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/lems/lem_heat_semigroup_wellposed.tex",
     "hash": "70e0a09ec439a4a6104ab83542f077650037ba408a5f48dd48b10fdb373dfe77",
+    "type": "lemma"
+  },
+  "lem:heat_trace_expansion": {
+    "chapter": 5,
+    "file": "src/chapters/05_heat_kernel_asymptotics/lems/lem_heat_trace_expansion.tex",
+    "hash": "9af02d263dbf340536f27ae0971e841b0512b90c70d57367ec34043fc0c38fcb",
     "type": "lemma"
   },
   "lem:hk_expansion_uniform": {
@@ -584,7 +596,7 @@
   "lem:trace_class_failure_alpha_leq_pi": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/lems/lem_trace_class_failure_alpha_leq_pi.tex",
-    "hash": "2e86b10d79af49e95d802bd279c13f078624dd43f99bf22756fb8ddc9c8ed5b9",
+    "hash": "a995ad09b8166a181d6451677bb872c29cc30268d0e69756bbc9a58b0f6c5757",
     "type": "lemma"
   },
   "lem:trace_class_via_weighted_L1": {
@@ -635,10 +647,16 @@
     "hash": "86cf6c995464f6dab732d2336a47fea852c243ccccddf5b3d589323e94f4f007",
     "type": "lemma"
   },
+  "lem:uniqueness_from_determinant": {
+    "chapter": 8,
+    "file": "src/chapters/08_spectral_rigidity/lems/lem_uniqueness_from_determinant.tex",
+    "hash": "6e3da131d5e309670cf046b610f308f61c7bedf3b078c304d15d895961ad8291",
+    "type": "lemma"
+  },
   "lem:unitary_conjugation_trace_class": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/lems/lem_unitary_conjugation_trace_class.tex",
-    "hash": "1d19519001890427da748e67c29e7b1ab5be992146b3087592a9aff5537282cd",
+    "hash": "6f4b7fd20429afb030057b22abde1ba71496ad6952e965e987f0fd8d2356e29d",
     "type": "lemma"
   },
   "lem:weighted_L1_inverse_FT_xi": {
@@ -758,7 +776,7 @@
   "prop:trace_class_sharpness": {
     "chapter": 1,
     "file": "src/chapters/01_foundations/props/prop_trace_class_sharpness.tex",
-    "hash": "593ed1b36e406eab9bfb349078a4654608af82230d8e795e56b4bdb23fb45b50",
+    "hash": "6f907240c669d567c55ecaae95018ac2f7e61d9eb55ffcddaf5a4f12e013875d",
     "type": "proposition"
   },
   "prop:two_sided_heat_trace_bounds": {
@@ -771,6 +789,12 @@
     "chapter": 9,
     "file": "src/chapters/09_spectral_generalization/rems/rem_aut_representation_context.tex",
     "hash": "9be90649436938016eb57da0c00088bb90c31f39471f3baf12c6a31b01619b9e",
+    "type": "remark"
+  },
+  "rem:canonical_uniqueness_logical_closure": {
+    "chapter": 10,
+    "file": "src/chapters/10_logical_closure/rems/rem_canonical_uniqueness_logical_closure.tex",
+    "hash": "19b3dbd72401e770654e47e399a9a6a5fe1c88cefb8bee76da77ca86543063a7",
     "type": "remark"
   },
   "rem:compare_to_connes_trace": {
@@ -932,7 +956,7 @@
   "thm:det_identity_revised": {
     "chapter": 3,
     "file": "src/chapters/03_determinant_identity/thms/thm_det_identity_revised.tex",
-    "hash": "9385679b83027dca2bab5f18852cfb2786c2c1011c2c0b282c4883f919cc97d0",
+    "hash": "c3ffa5286a2f2da72cbc732e604c42b947b6771ad7adf8ea70c8cfc3662d05ab",
     "type": "theorem"
   },
   "thm:eq_of_rh": {

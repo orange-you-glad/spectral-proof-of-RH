@@ -1,0 +1,15 @@
+\begin{proof}[Proof of \corref{cor:canonical_operator_uniqueness}]
+Assume $L_1, L_2 \in \mathcal{C}_1(H_{\Psi_\alpha})$ are compact, self-adjoint operators on the exponentially weighted Hilbert space $H_{\Psi_\alpha}$ with $\alpha > \pi$, and suppose they satisfy the same determinant identity:
+\[
+\det\nolimits_{\zeta}(I - \lambda L_j) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)} \quad \text{for } j = 1,2.
+\]
+
+The right-hand side is an entire function of order 1 and exponential type $\pi$, whose Hadamard factorization is uniquely determined by the nontrivial zeros $\rho$ of $\zeta(s)$ via
+\[
+\Xi\left(\tfrac{1}{2} + i\lambda\right) = \Xi\left(\tfrac{1}{2}\right) \prod_{\rho} \left(1 - \frac{\lambda}{\mu_\rho}\right),
+\quad \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}),
+\]
+with multiplicities preserved.
+
+Since the zeta-regularized determinant encodes the nonzero spectrum (with multiplicities), both $L_1$ and $L_2$ must share the same multiset of eigenvalues. Because both are self-adjoint and compact, the spectral theorem implies they are unitarily equivalent. Hence, the operator is determined uniquely (up to unitary equivalence) by the determinant identity.
+\end{proof}

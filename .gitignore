@@ -1,4 +1,4 @@
-# LaTeX build artifacts
+# === LaTeX build artifacts ===
 *.aux
 *.bbl
 *.blg
@@ -19,40 +19,42 @@
 main.pdf
 *.rpi
 
-# Intermediate metadata
+# === Intermediate metadata ===
 src/metadata/
 src/**/all_*.tex
 
-# Editor files
+# === Editor temp files ===
 *~
 *.swp
 *.swo
 .DS_Store
-# .vscode/
+.vscode/
 .idea/
 
-# Python cache
+# === Python cache ===
 __pycache__/
 *.py[cod]
 
-# Build tools
+# === Python + build tools ===
 build/
 dist/
 
-# DAG and analysis outputs
+# === DAG and analysis outputs ===
 dag/dag.dot
 dag/*.png
 dag/*.pdf
 
-# Agent and Codex outputs (optional)
+# === Agent / LLM outputs ===
 agents/templates/*.md
 agents/logs/
 
-# Environment and secrets
+# === Environment and secrets ===
 .envrc
 .env
 .venv/
 
-# Lean build artifacts
+# === Lean and Lake ===
 lean/build/
 lean/.lake/
+lean/lake-manifest.json
+lean/lakefile.olean

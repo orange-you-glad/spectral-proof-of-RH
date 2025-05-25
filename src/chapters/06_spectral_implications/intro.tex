@@ -22,6 +22,9 @@ The core logical equivalence
 \]
 follows from the determinant identity, the bijection \( \rho \mapsto \mu_\rho \), and the spectral trace properties of \( L_{\mathrm{sym}} \). The spectrum is fully determined by the zeros of \( \zeta(s) \), and their location governs the reality of the spectrum.
 
+\paragraph{Alternate Operator from Trace Asymptotics.}
+In parallel, we show that the same spectral bijection can be canonically realized from short-time heat trace data alone. Lemma~\ref{lem:heat_kernel_from_trace_asymptotics} constructs an operator \( \tilde{L}_{\mathrm{sym}} \in \TC(\HPsi) \) directly from the trace expansion without reference to \( \Xi(s) \). Theorem~\ref{thm:spectral_bijection_from_trace_asymptotics} proves that its spectrum satisfies the same bijection, and the Riemann Hypothesis follows from the self-adjointness of \( \tilde{L}_{\mathrm{sym}} \) in \thmref{thm:truth_of_rh_from_trace_asymptotics}.
+
 \paragraph{Uniqueness of the Canonical Operator.}
 Let \( L \in \TC(\HPsi) \) be any compact, self-adjoint operator satisfying the same determinant identity:
 \[
@@ -33,8 +36,6 @@ Then \( L \) is unitarily equivalent to \( \Lsym \). This rigidity result shows 
 \begin{quote}
 The completed zeta function \( \Xi(s) \), through its Hadamard factorization and functional symmetry, canonically determines a unique compact, self-adjoint, trace-class operator whose spectrum encodes RH via the reality condition \( \Spec(\Lsym) \subset \R \).
 \end{quote}
-
-This chapter completes the analytic chain initiated in Chapter~\ref{sec:determinant_identity} and prepares the logical closure in Chapter~\ref{sec:logical_closure}.
 
 \paragraph{Analytic Closure.}
 All arguments in this chapter—determinant identity, trace class convergence, spectral zeta analysis—are rigorously constructed using operator semigroup theory and heat kernel asymptotics. All analytic dependencies are modular, acyclic, and traced in the DAG (\appref{app:dependency_graph}).

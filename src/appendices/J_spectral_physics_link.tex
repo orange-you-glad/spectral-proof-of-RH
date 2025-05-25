@@ -2,7 +2,7 @@
 \label{app:spectral_physics_link}
 
 \noindent\textbf{[Noncritical Appendix]}  
-This appendix explores speculative physical analogies of the canonical operator \( \Lsym \in \TC(\HPsi) \). No physical model is constructed or required for any analytic result. However, the spectral structure of \( \Lsym \) formally resembles quantum Hamiltonians and thermodynamic systems, offering a conceptual bridge between analytic number theory and statistical mechanics.
+This appendix explores speculative physical analogies of the canonical operator \( \Lsym \in \TC(\HPsi) \). No physical model is constructed or required for any analytic result. However, the spectral structure of \( \Lsym \) formally resembles certain Hamiltonians and partition operators in statistical mechanics and quantum field theory. These parallels offer a suggestive bridge between analytic number theory and spectral dynamics.
 
 \subsection*{Partition Function Analogy}
 
@@ -14,40 +14,43 @@ resembles a thermal partition function for a quantum system with discrete energy
 \[
 Z(t) \sim \frac{1}{\sqrt{4\pi t}} \log\left( \frac{1}{t} \right) + o(t^{-1/2}), \qquad t \to 0^+,
 \]
-mirrors ultraviolet divergences common in heat kernel regularization of noncompact spectral problems.
+mirrors ultraviolet divergences common in heat kernel regularization of noncompact or scale-invariant systems.
 
 The zeta-regularized Fredholm determinant
 \[
 \detz(I - \lambda \Lsym)
 \]
-may then be interpreted as a spectral free energy, with its logarithm playing the role of a generating function or thermodynamic potential. This analogy is formalized in \cref{thm:det_identity_revised}.
+may then be interpreted as a spectral free energy, with its logarithm acting as a generating function or thermodynamic potential. This analogy is made rigorous within analytic number theory via \cref{thm:det_identity_revised}.
 
 \subsection*{GUE Statistics and Inverse Spectrum}
 
-Under the nonlinear spectral map
+Under the nonlinear map
 \[
 \gamma_n \longmapsto \mu_n := \frac{1}{\gamma_n},
 \]
-the conjectured GUE distribution of \( \zeta \)-zeros~\cite{Montgomery1973PairCorrelation, Berry1986RiemannSpectra} transforms into a compressed spectrum \( \mu_n \in \Spec(\Lsym) \). This inversion:
+the conjectured GUE distribution of zeta zero ordinates~\cite{Montgomery1973PairCorrelation, Berry1986RiemannSpectra} becomes a compressed spectrum with enhanced infrared regularity. In this formulation:
+
 \begin{itemize}
-  \item Compresses high-energy behavior while enhancing resolution at low \( \gamma \);
-  \item Yields a finite trace-class operator with spectrally regulated infrared properties;
-  \item Suggests \( \Lsym \) models a thermodynamically regularized arithmetic Hamiltonian.
+  \item High-energy behavior is compressed and made trace-class;
+  \item Low-frequency structure becomes spectrally accessible;
+  \item The spectrum admits heat kernel regularization and Mellin analytic continuation;
+  \item \( \Lsym \) behaves formally as an arithmetic Hamiltonian with bounded energy and regulated entropy.
 \end{itemize}
+
+This mapping is not a model of quantum chaos—but it reflects how number-theoretic randomness is smoothed into traceable spectral behavior via analytic inversion.
 
 \subsection*{Interpretation and Outlook}
 
-These analogies do not impact the analytic construction or RH equivalence results. No Lagrangian, path integral, or quantization framework is proposed. Nonetheless, they may inspire future investigation into:
+These analogies have no bearing on the analytic construction or equivalence theorems. No path integral, quantization procedure, or dynamical system is proposed. However, the structural parallels are suggestive, and may motivate future exploration in:
 
 \begin{itemize}
-  \item Quantum mechanical models of arithmetic spectra;
-  \item Spectral trace-class Hamiltonians in arithmetic QFT;
-  \item Regularized determinants as partition functions in nonlocal field theories;
-  \item Categorical or gauge-theoretic representations of zeta spectra.
+  \item Arithmetic quantum field theory and trace-class spectral Hamiltonians;
+  \item Zeta regularization as a bridge between arithmetic and thermodynamic entropy;
+  \item Spectral categorification of zeta zeros via quantum symmetries or gauge dualities;
+  \item Diagrammatic encodings of number-theoretic identities using spectral partition algebras.
 \end{itemize}
 
-\noindent
-While purely heuristic here, the canonical spectral encoding via \( \Lsym \) provides a natural testing ground for connections between number theory, spectral geometry, and statistical mechanics.
+These directions remain speculative. But the canonical operator \( \Lsym \), and the trace-asymptotic construction of \( \tilde{L}_{\mathrm{sym}} \), establish a stable analytic ground from which dynamic or physical interpretations might one day rise.
 
 \subsection*{Analogy Table: Zeta–Physics Correspondence}
 
@@ -84,7 +87,7 @@ Determinant over arithmetic spectrum \\
 \end{center}
 
 \noindent
-This table heuristically aligns the canonical analytic structures with thermodynamic and quantum analogs. These correspondences are not used in any formal argument but may guide speculative unification between spectral number theory and quantum physics.
+This table heuristically aligns the canonical analytic structures with thermodynamic and quantum analogs. These correspondences are not used in any formal argument but may guide future attempts to synthesize spectral number theory with physical dynamics.
 
 \medskip
 \noindent

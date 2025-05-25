@@ -4,6 +4,10 @@
 \noindent
 This appendix presents the formal structure of the manuscript as a directed acyclic graph (DAG), in which each chapter builds only on previously established analytic foundations. No theorem appeals to any result logically equivalent to the Riemann Hypothesis prior to its proof, ensuring strict acyclicity and audit transparency.
 
+The DAG is not simply a documentation tool. It is the proving system itself. Every node is an atomic semantic unit—typed, referenced, and locally verified. Every edge reflects a compositional dependency: one lemma invoking another, one identity building on a prior kernel, one spectral asymptotic following from trace-class control. Proof becomes a graph traversal. Audit becomes re-compilation.
+
+In this sense, the DAG enforces a new contract on proof architecture: correctness must be local, verifiability must be modular, and equivalence must emerge not from heuristic judgment but from formally auditable structure.
+
 For symbol definitions, see Appendix~\ref{app:notation_summary}.
 
 \vspace{1ex}
@@ -17,6 +21,7 @@ For symbol definitions, see Appendix~\ref{app:notation_summary}.
 \vspace{1ex}
 \hrule
 \vspace{2ex}
+
 
 \subsection*{Analytic Preconditions for the Determinant Identity}
 \label{dag:determinant_preconditions}
@@ -47,47 +52,72 @@ is built on the following validated properties, derived across Chapters~1–2 an
 
 \begin{figure}[ht]
 \centering
-\scalebox{0.87}{
+\scalebox{0.80}{
 \begin{tikzpicture}[
-  node distance=1.4cm and 2.6cm,
-  every node/.style={draw, align=center, rounded corners=3pt, font=\small, fill=gray!5, text width=4.8cm},
-  arrow/.style={-{Stealth}, thick}
+  node distance=1.5cm and 1.8cm,
+  every node/.style={
+    draw,
+    align=center,
+    rounded corners=3pt,
+    font=\small,
+    fill=gray!5,
+    text width=4.3cm
+  },
+  arrow/.style={-{Stealth}, thick},
+  dashedarrow/.style={-{Stealth}, dashed, gray!70}
 ]
 
+% Nodes
 \node (ch1) {Ch.~1\\Foundational Structures};
 \node (ch2) [below=of ch1] {Ch.~2\\Operator Construction};
 \node (ch3) [below=of ch2] {Ch.~3\\Determinant Identity};
+
 \node (ch4) [right=of ch3] {Ch.~4\\Spectral Bijection};
 \node (ch5) [below=of ch3] {Ch.~5\\Heat Kernel Asymptotics};
+
 \node (ch6) [right=of ch5] {Ch.~6\\RH Equivalence};
 \node (ch7) [below=of ch5] {Ch.~7\\Tauberian Growth};
 \node (ch8) [right=of ch7] {Ch.~8\\Spectral Rigidity};
-\node (ch9) [below=of ch7] {Ch.~9\\Logical Closure};
+\node (ch9) [below=of ch7] {Ch.~9\\Numerical \& Motivic Extensions};
+\node (ch10) [below=of ch9, xshift=1.6cm] {Ch.~10\\Logical Closure};
 
+% Canonical path
 \draw[arrow] (ch1) -- (ch2);
 \draw[arrow] (ch2) -- (ch3);
 \draw[arrow] (ch3) -- (ch5);
 \draw[arrow] (ch5) -- (ch7);
 \draw[arrow] (ch7) -- (ch9);
+\draw[arrow] (ch9) -- (ch10);
 
 \draw[arrow] (ch3) -- (ch4);
 \draw[arrow] (ch4) -- (ch6);
 \draw[arrow] (ch5) -- (ch6);
 \draw[arrow] (ch6) -- (ch8);
-\draw[arrow] (ch8) -- (ch9);
+\draw[arrow] (ch8) -- (ch10);
+
+% Alternate path label
+\node at ([xshift=-3.2cm,yshift=0.3cm]ch7.west) [align=left, font=\scriptsize] {\textbf{Alternate path:} \\ \(\tilde{L}_{\mathrm{sym}}\) from trace asymptotics};
+
+% Alternate path to ch10
+\draw[dashedarrow] (ch5.south west) ++(-0.2,-0.1) to[out=230,in=180] (ch10.west);
 
 \end{tikzpicture}
 }
-\caption{Directed acyclic graph of analytic dependencies. Arrows represent logical flow between chapters.}
+\caption{Directed acyclic graph of analytic dependencies. Solid arrows represent canonical logical flow through \( \Lsym \); the dashed arrow indicates the alternate spectral route via \( \tilde{L}_{\mathrm{sym}} \). Chapter~10 concludes both constructions.}
 \label{fig:dag_visual}
 \end{figure}
+
+
 
 \paragraph{Global Structure.}
 Each lemma, proposition, and theorem depends only on prior analytic inputs or trace-class spectral calculus. No assumption of RH, spectral bijection, or zero reality is made prior to its proof. The analytic chain from determinant to RH equivalence,
 \[
 \RH \iff \Spec(\Lsym) \subset \R,
 \]
-is modular, acyclic, and closed in \cref{sec:logical_closure}, grounded in results from Chapters~1–8 and Appendix~\ref{app:zeta_trace_background}.
+is modular, acyclic, and closed in \cref{sec:logical_closure}, grounded in results from Chapters~1–10 and Appendix~\ref{app:zeta_trace_background}.
+
+\paragraph{Alternate Path via Heat Trace.}
+In addition to the canonical determinant-based route, the manuscript constructs an alternate operator \( \tilde{L}_{\mathrm{sym}} \in \TC(\HPsi) \) from heat trace asymptotics alone. Introduced in \lemref{lem:heat_kernel_from_trace_asymptotics}, this operator’s spectrum encodes the zeta zeros via the same bijection. The Riemann Hypothesis then follows from its self-adjointness (\thmref{thm:truth_of_rh_from_trace_asymptotics}). This parallel analytic route remains modular and logically acyclic, terminating at Chapter~\ref{sec:logical_closure}.
 
 \paragraph{Base Constraint.}
 The exponential weight threshold \( \alpha > \pi \) governs all trace-class constructions and appears as the root node of the DAG (\cref{lem:trace_class_failure_alpha_leq_pi}).
@@ -98,27 +128,18 @@ The determinant identity in Chapter~\ref{sec:determinant_identity} invokes heat 
 
 \medskip
 
-Forward dependency annotations are given in \remref{rem:forward_spectral_closure}. The equivalence
-\[
-\RH \iff \Spec(\Lsym) \subset \R
-\]
-is fully formalized in \thmref{thm:rh_spectrum_equiv} and concluded in \thmref{thm:truth_of_rh}.
-
-The DAG structure also extends conjecturally to the automorphic setting (Chapter~\ref{sec:spectral_generalization}), where one postulates analogous trace-class operators \( L_\pi \) satisfying:
-\[
-\GRH(\pi) \iff \Spec(L_\pi) \subset \R.
-\]
-
-For notation, see Appendix~\ref{app:notation_summary}.
-
 \begin{tcolorbox}[colback=gray!2!white, colframe=black!50, title={\textbf{Canonical Equivalence — RH via Spectral Reality}}]
 The canonical operator \( \Lsym \in \TC(\HPsi) \), constructed in Chapter~\ref{sec:operator_construction} and analytically normalized in Chapter~\ref{sec:determinant_identity}, satisfies the determinant identity
 \[
-\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})},
+\detz(I - \lambda \Lsym) = \frac{\Xi(\tfrac{1}{2} + i\lambda)}{\Xi(\tfrac{1}{2})}.
 \]
-whose spectral zeros match the nontrivial zeros of \( \zeta(s) \). This determinant structure, combined with the bijection \( \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \), canonically encodes zeta zeros into the spectrum of \( \Lsym \). The Riemann Hypothesis is then equivalent to spectral reality:
+Its spectrum reflects the nontrivial zeros of \( \zeta(s) \), encoded via
+\[
+\rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym).
+\]
+The Riemann Hypothesis is then equivalent to spectral reality:
 \[
 \RH \iff \Spec(\Lsym) \subset \R,
 \]
-as formally proven in \thmref{thm:truth_of_rh}. This equivalence is derived solely from analytic spectral theory and zeta determinant regularization.
+as formally concluded in Chapter~\ref{sec:logical_closure}, via \thmref{thm:truth_of_rh} and \thmref{thm:truth_of_rh_from_trace_asymptotics}.
 \end{tcolorbox}

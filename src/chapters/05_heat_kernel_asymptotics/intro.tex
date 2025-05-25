@@ -34,19 +34,8 @@ The asymptotic expansion is derived using operator-theoretic tools, kernel analy
   with an explicit logarithmic singularity controlled in \lemref{lem:heat_trace_expansion} and \propref{prop:short_time_heat_expansion}.
 \end{itemize}
 
-\paragraph{Spectral Class and Regular Variation.}
-The singular behavior of the trace function \( \Theta(t) := \Tr(e^{-t \Lsym^2}) \) places it in the log-modulated regularly varying class
-\[
-\Theta(t) \in \mathcal{R}_{1/2}^{\log}(0^+),
-\]
-which is essential for Tauberian inversion and spectral growth analysis.
-
-\paragraph{Determinant and Spectral Implications.}
-The refined expansion
-\[
-\Tr(e^{-t \Lsym^2}) = \frac{\log(1/t)}{\sqrt{4\pi t}} + c_0 \sqrt{t} + o(\sqrt{t}),
-\]
-determines the Hadamard type and normalization of the canonical zeta-regularized determinant \( \detz(I - \lambda \Lsym) \). This structure underlies the Laplace–Mellin definition (\lemref{lem:log_derivative_determinant}) and guarantees the log-derivative identity required for analytic continuation. The singularity is necessary to match the spectral zeta pole at \( s = 0 \) and reflects the logarithmic trace anomaly predicted by Hadamard factorization~\cite[Ch.~III]{Korevaar2004Tauberian}.
+\paragraph{Alternative Construction from Asymptotic Trace Data.}
+In addition to the Fourier-based construction of \( \Lsym \), we show that the same spectral operator structure can be canonically derived from short-time trace asymptotics alone. Lemma~\ref{lem:heat_kernel_from_trace_asymptotics} constructs a new family of mollified convolution operators \( \tilde{L}_t \) from a log-weighted heat trace profile, yielding a limit operator \( \tilde{L}_{\mathrm{sym}} \in \TC(\HPsi) \) whose trace expansion recovers the zero-counting asymptotics of \( \zeta(s) \) without invoking \( \Xi(s) \). This alternate path enables a decontaminated formulation of the Riemann Hypothesis in spectral terms.
 
 \begin{remark}[Modular Validation of Determinant Structure]
 Several heat trace asymptotics developed in this chapter—especially the singular expansion and Laplace integrability—were invoked in Chapter~\ref{sec:determinant_identity} to justify the structure of the canonical determinant. These references are modular and acyclic, as tracked in the DAG (\cref{app:dependency_graph}), and this chapter completes the analytic justification of the determinant’s growth rate and spectral zeta continuation.
@@ -57,4 +46,4 @@ These asymptotic results provide the analytic foundation for Chapter~\ref{sec:ta
 \[
 N(\Lambda) = \frac{\sqrt{\Lambda}}{\pi} \log \Lambda + O(\sqrt{\Lambda}),
 \]
-thereby confirming that the spectrum of \( \Lsym \) encodes the density and growth rate of the nontrivial zeros of \( \zeta(s) \).
+thereby confirming that the spectrum of \( \Lsym \) encodes the density and growth rate of the nontrivial zeros of \( \zeta(s) \). In Chapter~\ref{sec:spectral_implications}, this alternate operator \( \tilde{L}_{\mathrm{sym}} \) is shown to spectrally encode the same zeta zeros via heat trace alone, enabling a self-contained analytic route to the Riemann Hypothesis through \thmref{thm:truth_of_rh_from_trace_asymptotics}.

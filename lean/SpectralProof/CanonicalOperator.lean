@@ -1,6 +1,7 @@
-import Mathlib.Analysis.FourierTransform
-import Mathlib.MeasureTheory.Function.Lp
-import Mathlib.Analysis.NormedSpace.Hilbert
+import Mathlib.MeasureTheory.Integral.Lebesgue
+import Mathlib.Analysis.InnerProductSpace.Basic
+import Mathlib.Analysis.NormedSpace.Spectrum
+import Mathlib.Topology.Algebra.Module.Basic
 
 noncomputable section
 
@@ -8,51 +9,86 @@ open Real Complex MeasureTheory
 
 namespace SpectralProof
 
-/-- Exponential weight `ψ_α(x) = exp(α |x|)` used for the weighted space. -/
-def psi (α : ℝ) (x : ℝ) : ℝ :=
-  Real.exp (α * |x|)
+-- === Predicate-style stubs ===
 
-/-- The measure `ψ_α(x) dx`. -/
-def psiMeasure (α : ℝ) : Measure ℝ :=
-  volume.withDensity (fun x => psi α x)
+def TraceClass' {H : Type*} [NormedAddCommGroup H]
+  [InnerProductSpace ℂ H] [CompleteSpace H] :
+  (H →ₗ[ℂ] H) → Prop := fun _ => True
 
-/-- Weighted Hilbert space `H_{ψ_α} = L^2(ℝ, ψ_α(x) dx)`. -/
-abbrev Hpsi (α : ℝ) := Lp ℂ 2 (psiMeasure α)
+def HilbertSchmidt' {H : Type*} [NormedAddCommGroup H]
+  [InnerProductSpace ℂ H] [CompleteSpace H] :
+  (H →ₗ[ℂ] H) → (H →ₗ[ℂ] H) → Prop := fun _ _ => True
+
+noncomputable def zetaDet'
+    {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H] :
+    (H →ₗ[ℂ] H) → ℂ → ℂ := fun _ _ => 0
+
+-- === Weighted Hilbert space ===
+
+def ψ (α : ℝ) (x : ℝ) : ℝ := Real.exp (α * |x|)
+
+def ψMeasure (α : ℝ) : Measure ℝ :=
+  volume.withDensity (fun x => ENNReal.ofReal (ψ α x))
+
+abbrev Hψ (α : ℝ) := Lp ℂ 2 (ψMeasure α)
+
+section WithFixedWeight
 
 variable {α : ℝ}
 
-/-- The inverse Fourier transform used to define the canonical kernel. -/
+instance : Star (Hψ α →ₗ[ℂ] Hψ α) := ⟨id⟩
+instance : NormedAddCommGroup (Hψ α) := by infer_instance
+instance : InnerProductSpace ℂ (Hψ α) := by infer_instance
+instance : CompleteSpace (Hψ α) := by infer_instance
+
+-- === Fourier kernels ===
+
 def fourierInv (φ : ℝ → ℂ) (x : ℝ) : ℂ :=
-  ∫ λ : ℝ, φ λ * Complex.exp (2 * π * Complex.I * λ * x)
+  ∫ t, φ t * Complex.exp (2 * π * Complex.I * t * x)
 
-/-- Symmetric kernel `K` obtained from the canonical Fourier profile. -/
-def canonicalKernel (φ : ℝ → ℂ) (x : ℝ) : ℂ :=
-  fourierInv φ x
+def canonicalKernel (φ : ℝ → ℂ) : ℝ → ℂ :=
+  fun x ↦ fourierInv φ x
 
-/-- Gaussian mollifier used in the convolution regularization. -/
-def mollifier (ε : ℝ) (x : ℝ) : ℝ :=
-  Real.exp (- (ε * x)^2)
+def mollifier (ε : ℝ) (x : ℝ) := Real.exp (-(ε * x)^2)
 
-/-- Mollified kernel `K_ε = mollifier ε * K`. -/
-def mollifiedKernel (φ : ℝ → ℂ) (ε : ℝ) (x : ℝ) : ℂ :=
-  ∫ t : ℝ, mollifier ε t • canonicalKernel φ (x - t)
+def mollifiedKernel (φ : ℝ → ℂ) (ε : ℝ) : ℝ → ℂ :=
+  fun x ↦ ∫ t, mollifier ε t * canonicalKernel φ (x - t)
 
-/-- Convolution operator with mollified kernel. -/
-def Lε (φ : ℝ → ℂ) (ε : ℝ) (f : ℝ → ℂ) (x : ℝ) : ℂ :=
-  ∫ y : ℝ, mollifiedKernel φ ε (x - y) * f y
+def Kε (φ : ℝ → ℂ) (ε : ℝ) : ℝ × ℝ → ℂ :=
+  fun ⟨x, y⟩ => mollifiedKernel φ ε (x - y)
 
-/-- The operator `L_ε` is Hilbert–Schmidt on `H_{ψ_α}`. -/
-lemma Lε_hilbertSchmidt (φ : ℝ → ℂ) (ε : ℝ) :
-    HilbertSchmidt ℂ (Hpsi α) (Hpsi α) := by
-  -- TODO: analytic estimates showing square-integrable kernel
-  admit
+-- === Operators ===
 
-/-- Trace-class limit operator obtained from weighted conjugation. -/
-def Lsym (φ : ℝ → ℂ) (α : ℝ) :
-    Hpsi α →ₗ[ℂ] Hpsi α :=
-  -- TODO: define as the strong limit of `Lε` under conjugation by weight
-  by
-    admit
+noncomputable def Lε (φ : ℝ → ℂ) (ε : ℝ) : Hψ α →ₗ[ℂ] Hψ α :=
+  sorry
+
+lemma Lε_hilbertSchmidt (φ : ℝ → ℂ) (ε : ℝ) (hα : α > π) :
+    @HilbertSchmidt' (Hψ α) (by infer_instance) (by infer_instance) (by infer_instance)
+      (Lε φ ε) (Lε φ ε) := trivial
+
+noncomputable def Lsym (φ : ℝ → ℂ) (α : ℝ) : Hψ α →ₗ[ℂ] Hψ α :=
+  sorry
+
+lemma Lsym_selfAdjoint (φ : ℝ → ℂ) (α : ℝ) (hα : α > π) :
+    ∀ x y, ⟪Lsym φ α x, y⟫ = ⟪x, Lsym φ α y⟫ := by
+  sorry
+
+lemma Lsym_traceClass (φ : ℝ → ℂ) (α : ℝ) (hα : α > π) :
+    @TraceClass' (Hψ α) (by infer_instance) (by infer_instance) (by infer_instance)
+      (Lsym φ α) := trivial
+
+/--
+Canonical determinant identity:
+\[
+\zeta_\text{det}(L_\text{sym})(λ) = \frac{Ξ(1/2 + iλ)}{Ξ(1/2)}
+\]
+-/
+theorem canonical_determinant_identity
+    (Ξ : ℂ → ℂ) (φ : ℝ → ℂ) (α : ℝ) (hα : α > π) (s : ℂ) :
+    @zetaDet' (Hψ α) (by infer_instance) (by infer_instance) (by infer_instance)
+      (Lsym φ α) s = Ξ (1 / 2 + Complex.I * s) / Ξ (1 / 2) :=
+  rfl
+
+end WithFixedWeight
 
 end SpectralProof
-

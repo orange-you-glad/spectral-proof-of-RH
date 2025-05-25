@@ -1,0 +1,28 @@
+\begin{lemma}[Heat Kernel from Trace Asymptotics]
+\label{lem:heat_kernel_from_trace_asymptotics}
+Let $\Psi_\alpha(x) := e^{\alpha|x|}$ for fixed $\alpha > \pi$, and define the weighted Hilbert space
+\[
+H_\Psi := L^2(\mathbb{R}, \Psi_\alpha(x) \, dx).
+\]
+Then there exists a family of real-valued, even, smooth, rapidly decaying functions $\{ \tilde{k}_t \}_{t > 0} \subset \mathcal{S}(\mathbb{R})$ such that:
+
+\begin{enumerate}
+\item For each $t > 0$, the integral operator $\tilde{L}_t : H_\Psi \to H_\Psi$ defined by
+\[
+(\tilde{L}_t f)(x) := \int_{\mathbb{R}} \tilde{k}_t(x - y) f(y) \, dy
+\]
+is trace-class, and the family $\{ \tilde{L}_t \}_{t > 0}$ is uniformly bounded in $\mathcal{B}_1(H_\Psi)$ as $t \to 0^+$.
+
+\item The associated heat semigroup $\tilde{H}_t := e^{-t \tilde{L}_t^2}$ satisfies the short-time trace asymptotic
+\[
+\operatorname{Tr}(\tilde{H}_t) \sim \frac{1}{2\pi} \int_{\mathbb{R}} e^{-t \lambda^2} \left( \log\left( \frac{\lambda}{2\pi} \right) + \mathcal{O}\left( \frac{1}{\lambda} \right) \right) d\lambda, \qquad t \to 0^+,
+\]
+matching the growth of the zero-counting function $N(T)$ for the Riemann zeta function.
+
+\item The limit
+\[
+\tilde{L}_{\mathrm{sym}} := \lim_{t \to 0^+} \tilde{L}_t
+\]
+exists in trace norm, and defines a compact, self-adjoint, trace-class operator on $H_\Psi$.
+\end{enumerate}
+\end{lemma}

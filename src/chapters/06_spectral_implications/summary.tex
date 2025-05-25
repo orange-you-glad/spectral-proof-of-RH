@@ -1,6 +1,6 @@
 \subsection*{Summary}
 
-This chapter establishes the equivalence between the Riemann Hypothesis and spectral reality for the canonical operator \( \Lsym \), and proves its uniqueness among trace-class realizations of the determinant identity.
+This chapter establishes the equivalence between the Riemann Hypothesis and spectral reality for the canonical operator \( \Lsym \), and proves its uniqueness among trace-class realizations of the determinant identity. An alternate canonical operator \( \tilde{L}_{\mathrm{sym}} \) is also shown to encode RH via heat trace asymptotics alone.
 
 \textbf{Main Results}
 \begin{itemize}
@@ -23,6 +23,14 @@ This chapter establishes the equivalence between the Riemann Hypothesis and spec
 
   \item \lemref{lem:canonical_closure} — \textbf{Canonical Closure of the Spectral Program}
   The completed zeta function \( \XiR(s) \) canonically determines the unique operator \( \Lsym \in \TC(\HPsi) \) whose spectrum encodes RH. Any other realization either coincides with \( \Lsym \) (modulo conjugation) or violates analytic constraints. Non-trace-class operators cannot satisfy the determinant identity.
+
+  \item \thmref{thm:spectral_bijection_from_trace_asymptotics} — \textbf{Spectral Encoding via Trace Asymptotics}
+  A distinct operator \( \tilde{L}_{\mathrm{sym}} \in \TC(\HPsi) \), constructed in \lemref{lem:heat_kernel_from_trace_asymptotics} purely from short-time trace asymptotics, exhibits the same bijective spectral encoding of zeta zeros. Its spectrum satisfies
+  \[
+  \Spec(\tilde{L}_{\mathrm{sym}}) = \left\{ \mu_\rho = \tfrac{1}{i}(\rho - \tfrac{1}{2}) : \zeta(\rho) = 0 \right\}.
+  \]
+  This operator is built without invoking \( \Xi(s) \), using only analytic properties of the trace.
+
 \end{itemize}
 
 \medskip
@@ -32,7 +40,7 @@ These results complete the spectral realization phase of the proof. The Riemann 
 \[
 \RH \iff \Spec(\Lsym) \subset \mathbb{R},
 \]
-a purely operator-theoretic criterion grounded in canonical zeta-determinant identity (\thmref{thm:det_identity_revised}) and spectral encoding of zeros (\thmref{thm:spectral_zero_bijection_revised}).
+a purely operator-theoretic criterion grounded in the canonical zeta-determinant identity (\thmref{thm:det_identity_revised}) and spectral encoding of zeros (\thmref{thm:spectral_zero_bijection_revised}). A parallel route using \( \tilde{L}_{\mathrm{sym}} \) is completed in Chapter~\ref{sec:logical_closure} via \thmref{thm:truth_of_rh_from_trace_asymptotics}.
 
 \paragraph{Logical Closure.}
 All dependencies are derived using trace-class operator theory, spectral convergence, and heat kernel asymptotics. The logical DAG is fully acyclic and documented in \appref{app:dependency_graph}.

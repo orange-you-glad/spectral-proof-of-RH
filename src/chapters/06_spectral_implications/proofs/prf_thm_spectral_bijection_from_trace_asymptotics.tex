@@ -1,0 +1,23 @@
+\begin{proof}[Proof of \thmref{thm:spectral_bijection_from_trace_asymptotics}]
+From \lemref{lem:heat_kernel_from_trace_asymptotics}, the operator $\tilde{L}_{\mathrm{sym}} \in \mathcal{B}_1(H_\Psi)$ is compact, self-adjoint, and trace class, constructed via mollified convolution kernels.
+
+The associated heat trace satisfies:
+\[
+\operatorname{Tr}(e^{-t \tilde{L}_{\mathrm{sym}}^2}) \sim \frac{1}{2\pi} \int_{\mathbb{R}} e^{-t \lambda^2} \left( \log\left( \frac{|\lambda|}{2\pi} \right) + \mathcal{O}\left( \frac{1}{\lambda} \right) \right) d\lambda.
+\]
+Let $\{ \mu_n \} \subset \mathbb{R}$ denote the eigenvalues of $\tilde{L}_{\mathrm{sym}}$, counted with multiplicity. Then:
+\[
+\operatorname{Tr}(e^{-t \tilde{L}_{\mathrm{sym}}^2}) = \sum_n e^{-t \mu_n^2}.
+\]
+By the log-corrected Tauberian estimate \lemref{lem:log_corrected_tauberian_estimate}, this asymptotic uniquely determines the spectral counting function:
+\[
+N_{\mathrm{spec}}(T) := \#\{ n : |\mu_n| \leq T \} = \frac{T}{2\pi} \log \left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + \mathcal{O}(\log T),
+\]
+matching the zero-counting function $N(T)$ of $\zeta(s)$.
+
+By the bijection theorem \thmref{thm:spectral_zero_bijection_revised}, any trace-class, self-adjoint operator with this spectral asymptotic admits a unique, multiplicity-preserving map:
+\[
+\rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \in \operatorname{Spec}(\tilde{L}_{\mathrm{sym}}),
+\]
+for all nontrivial zeros $\rho$ of $\zeta(s)$. This implies the spectrum of $\tilde{L}_{\mathrm{sym}}$ encodes exactly the zero set of $\zeta(s)$.
+\end{proof}

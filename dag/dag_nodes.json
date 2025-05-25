@@ -359,6 +359,12 @@
     "hash": "e7786c9871fa53f5579563fc069bf74473dd732bc2cb414db8cdca57f80f0b80",
     "type": "lemma"
   },
+  "lem:heat_kernel_from_trace_asymptotics": {
+    "chapter": 5,
+    "file": "src/chapters/05_heat_kernel_asymptotics/lems/lem_heat_kernel_from_trace_asymptotics.tex",
+    "hash": "7831e0509c56a65dcad0cecf92da745d0ba089e80f32d2b4a588d712dde55ce6",
+    "type": "lemma"
+  },
   "lem:heat_semigroup_existence": {
     "chapter": 2,
     "file": "src/chapters/02_operator_construction/lems/lem_heat_semigroup_existence.tex",
@@ -1013,6 +1019,12 @@
     "hash": "01739c0a5269b0e752d51e3a6edf136e544bd5a723e391e28b95ea76ea6612b6",
     "type": "theorem"
   },
+  "thm:spectral_bijection_from_trace_asymptotics": {
+    "chapter": 6,
+    "file": "src/chapters/06_spectral_implications/thms/thm_spectral_bijection_from_trace_asymptotics.tex",
+    "hash": "d065f31ab8d806a689104e1c9585cca1a8f5dc4572aac3331a8c05e78897bf18",
+    "type": "theorem"
+  },
   "thm:spectral_determinant_identity_Lpi": {
     "chapter": 9,
     "file": "src/chapters/09_spectral_generalization/thms/thm_spectral_determinant_identity_Lpi.tex",
@@ -1035,6 +1047,12 @@
     "chapter": 10,
     "file": "src/chapters/10_logical_closure/thms/thm_truth_of_rh.tex",
     "hash": "b28b1fd09093f1d5eed9d612a8743b5d6ae33f75d916a5ab4b2acdf24e0b7868",
+    "type": "theorem"
+  },
+  "thm:truth_of_rh_from_trace_asymptotics": {
+    "chapter": 10,
+    "file": "src/chapters/10_logical_closure/thms/thm_truth_of_rh_from_trace_asymptotics.tex",
+    "hash": "a0e3d48e101c01d0e82a5446769cdacfca70f8e8367c9c55502ce3cd4d022137",
     "type": "theorem"
   },
   "thm:uniqueness_realization": {

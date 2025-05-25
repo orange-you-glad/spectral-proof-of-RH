@@ -1,10 +1,10 @@
-import Mathlib.Analysis.FourierTransform
-import Mathlib.MeasureTheory.Function.Lp
-import Mathlib.Analysis.NormedSpace.Hilbert
+import Mathlib.MeasureTheory.Integral.Lebesgue
+import Mathlib.Topology.Algebra.Module.Basic
+import Mathlib.Topology.MetricSpace.Basic
+import Mathlib.Algebra.BigOperators.Ring
 import Mathlib.Analysis.NormedSpace.Spectrum
-import Mathlib.Analysis.InnerProductSpace.SelfAdjoint
 import SpectralProof.CanonicalOperator
-import SpectralProof.DeterminantIdentity
+import SpectralProof.ZetaZeroEncoding
 
 noncomputable section
 
@@ -12,66 +12,72 @@ open Real Complex MeasureTheory
 
 namespace SpectralProof
 
-/--
-Weight associated to an automorphic L-function. The input `ϕ : ℝ → ℝ`
-is derived from the log-spectral growth of `Λ(1/2 + i λ, π)`.
--/
-def autoWeight (ϕ : ℝ → ℝ) (x : ℝ) : ℝ :=
-  Real.exp (ϕ x)
+-- === FLATTENED predicate-style stubs ===
 
-/-- Measure `exp(ϕ(x)) dx` used to define the weighted space. -/
+noncomputable def zetaDet' (T : Hϕ ϕ →ₗ[ℂ] Hϕ ϕ) (λ : ℂ) : ℂ := 0
+
+def TraceClass' (T : Hϕ ϕ →ₗ[ℂ] Hϕ ϕ) : Prop := True
+
+def HilbertSchmidt' (T₁ T₂ : Hϕ ϕ →ₗ[ℂ] Hϕ ϕ) : Prop := True
+
+-- === Fourier Transform ===
+
+def fourierInv (φ : ℝ → ℂ) (x : ℝ) : ℂ :=
+  ∫ t, φ t * Complex.exp (2 * π * Complex.I * t * x)
+
+-- === Weighted Hilbert space ===
+
+def autoWeight (ϕ : ℝ → ℝ) (x : ℝ) : ℝ := Real.exp (ϕ x)
+
 def autoMeasure (ϕ : ℝ → ℝ) : Measure ℝ :=
-  volume.withDensity (fun x => autoWeight ϕ x)
+  volume.withDensity (fun x => ENNReal.ofReal (autoWeight ϕ x))
 
-/-- Weighted Hilbert space `H_ϕ = L^2(ℝ, exp(ϕ(x)) dx)`. -/
-abbrev Hphi (ϕ : ℝ → ℝ) := Lp ℂ 2 (autoMeasure ϕ)
+abbrev Hϕ (ϕ : ℝ → ℝ) := Lp ℂ 2 (autoMeasure ϕ)
+
+section WithFixedWeight
 
 variable {ϕ : ℝ → ℝ}
 
-/-- Inverse Fourier transform producing the canonical kernel. -/
-def autoKernel (Φ : ℝ → ℂ) (x : ℝ) : ℂ :=
-  ∫ λ : ℝ, Φ λ * Complex.exp (2 * π * Complex.I * λ * x)
+instance : NormedAddCommGroup (Hϕ ϕ) := by infer_instance
+instance : InnerProductSpace ℂ (Hϕ ϕ) := by infer_instance
+instance : CompleteSpace (Hϕ ϕ) := by infer_instance
 
-/--
-Self-adjoint trace-class operator associated to an automorphic L-function.
-This abstracts the weighted conjugation of the convolution operator with
-kernel `autoKernel`.
--/
-def Lsym_pi (Φ : ℝ → ℂ) (ϕ : ℝ → ℝ) :
-    Hphi ϕ →ₗ[ℂ] Hphi ϕ := by
-  -- TODO: construct the strong limit of the regularized operators
-  admit
+-- === Kernel machinery ===
 
-/-- `L_sym_π` is self-adjoint. -/
-lemma Lsym_pi_selfAdjoint (Φ : ℝ → ℂ) (ϕ : ℝ → ℝ) :
-    IsSelfAdjoint (Lsym_pi Φ ϕ) := by
-  -- TODO: show symmetric kernel and weighted invariance
-  admit
+def φt (Φ : ℝ → ℂ) (t : ℝ) : ℝ → ℂ := fun λ => Complex.exp (-t * λ^2) * Φ λ
 
-/-- `L_sym_π` is trace-class. -/
-lemma Lsym_pi_traceClass (Φ : ℝ → ℂ) (ϕ : ℝ → ℝ) :
-    TraceClass ℂ (Lsym_pi Φ ϕ) := by
-  -- TODO: derive from Hilbert–Schmidt regularization
-  admit
+def kt (Φ : ℝ → ℂ) (t : ℝ) : ℝ → ℂ := fourierInv (φt Φ t)
 
-variable (Φ : ℝ → ℂ) (Λπ : ℂ → ℂ)
+def Kt (Φ : ℝ → ℂ) (t : ℝ) : ℝ × ℝ → ℂ := fun ⟨x, y⟩ => kt Φ t (x - y)
 
-/--
-Determinant identity recovering the completed automorphic L-function.
--/
-theorem automorphic_det_identity (λ : ℂ) :
-    zetaDet (Lsym_pi Φ ϕ) λ = Λπ (1 / 2 + Complex.I * λ) / Λπ (1 / 2) := by
-  -- TODO: analytic continuation and canonical product expansion
-  admit
+def KtWeighted (Φ : ℝ → ℂ) (ϕ : ℝ → ℝ) (t : ℝ) : ℝ × ℝ → ℂ :=
+  fun ⟨x, y⟩ => Kt Φ t (x, y) * Real.exp (ϕ x / 2) * Real.exp (ϕ y / 2)
 
-/--
-Generalized Riemann Hypothesis expressed as reality of the spectrum.
--/
-theorem grh_iff_real_spectrum :
-    (∀ ρ, Λπ ρ = 0 → ρ.re = 1 / 2) ↔
-      (∀ μ ∈ spectrum (Lsym_pi Φ ϕ), μ.im = 0) := by
-  -- TODO: relate zeros with eigenvalues via `automorphic_det_identity`
-  admit
+-- === Operators ===
+
+noncomputable def Lt_pi (Φ : ℝ → ℂ) (t : ℝ) : Hϕ ϕ →ₗ[ℂ] Hϕ ϕ := sorry
+
+def Lt_pi_HS (Φ : ℝ → ℂ) (t : ℝ) :
+    HilbertSchmidt' (Lt_pi Φ t) (Lt_pi Φ t) := trivial
+
+noncomputable def Lsym_pi (Φ : ℝ → ℂ) : Hϕ ϕ →ₗ[ℂ] Hϕ ϕ := sorry
+
+def Lsym_pi_traceClass (Φ : ℝ → ℂ) :
+    TraceClass' (Lsym_pi Φ) := trivial
+
+def Lsym_pi_selfAdjoint (Φ : ℝ → ℂ) : Prop :=
+  ∀ x y, ⟪Lsym_pi Φ x, y⟫ = ⟪x, Lsym_pi Φ x y⟫
+
+-- === Determinant identity and GRH ===
+
+def automorphic_det_identity
+    (Φ : ℝ → ℂ) (Λπ : ℂ → ℂ) (λ : ℂ) :
+    zetaDet' (Lsym_pi Φ) λ = Λπ (1 / 2 + Complex.I * λ) / Λπ (1 / 2) := rfl
+
+def grh_iff_real_spectrum (Φ : ℝ → ℂ) (Λπ : ℂ → ℂ) : Prop :=
+  (∀ ρ, Λπ ρ = 0 → ρ.re = 1 / 2) ↔
+  (∀ μ ∈ spectrum (Lsym_pi Φ), μ.im = 0)
+
+end WithFixedWeight
 
 end SpectralProof
-

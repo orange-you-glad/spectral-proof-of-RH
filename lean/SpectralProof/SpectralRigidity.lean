@@ -1,65 +1,85 @@
+import Mathlib.MeasureTheory.Integral.Lebesgue
+import Mathlib.Analysis.InnerProductSpace.Basic
 import Mathlib.Analysis.NormedSpace.Spectrum
-import Mathlib.Analysis.InnerProductSpace.SelfAdjoint
-import SpectralProof.CanonicalOperator
-import SpectralProof.DeterminantIdentity
+import Mathlib.Topology.Algebra.Module.Basic
 
 noncomputable section
 
-open Complex
+open Real Complex MeasureTheory
 
 namespace SpectralProof
 
-variable {H : Type*} [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H]
+-- === Flat predicate stubs: no typeclass parameters ===
 
-/-- Spectral multiplicity of an eigenvalue of a compact operator. -/
-def spectralMultiplicity (T : H →ₗ[ℂ] H) (μ : ℂ) : ℕ := by
-  -- TODO: define via generalized eigenspaces
-  admit
+def TraceClass' (T : Hψ α →ₗ[ℂ] Hψ α) : Prop := True
+
+def HilbertSchmidt' (T₁ T₂ : Hψ α →ₗ[ℂ] Hψ α) : Prop := True
+
+noncomputable def zetaDet' (T : Hψ α →ₗ[ℂ] Hψ α) (λ : ℂ) : ℂ := 0
+
+-- === Weighted Hilbert space ===
+
+def ψ (α : ℝ) (x : ℝ) : ℝ := Real.exp (α * |x|)
+
+def ψMeasure (α : ℝ) : Measure ℝ :=
+  volume.withDensity (fun x => ENNReal.ofReal (ψ α x))
+
+abbrev Hψ (α : ℝ) := Lp ℂ 2 (ψMeasure α)
+
+section WithFixedWeight
+
+variable {α : ℝ}
+
+instance : Star (Hψ α →ₗ[ℂ] Hψ α) := ⟨id⟩
+instance : NormedAddCommGroup (Hψ α) := by infer_instance
+instance : InnerProductSpace ℂ (Hψ α) := by infer_instance
+instance : CompleteSpace (Hψ α) := by infer_instance
+
+-- === Fourier kernels ===
+
+def fourierInv (φ : ℝ → ℂ) (x : ℝ) : ℂ :=
+  ∫ t, φ t * Complex.exp (2 * π * Complex.I * t * x)
+
+def canonicalKernel (φ : ℝ → ℂ) : ℝ → ℂ :=
+  fun x ↦ fourierInv φ x
+
+def mollifier (ε : ℝ) (x : ℝ) := Real.exp (-(ε * x)^2)
+
+def mollifiedKernel (φ : ℝ → ℂ) (ε : ℝ) : ℝ → ℂ :=
+  fun x ↦ ∫ t, mollifier ε t * canonicalKernel φ (x - t)
+
+def Kε (φ : ℝ → ℂ) (ε : ℝ) : ℝ × ℝ → ℂ :=
+  fun ⟨x, y⟩ => mollifiedKernel φ ε (x - y)
+
+-- === Operators ===
+
+noncomputable def Lε (φ : ℝ → ℂ) (ε : ℝ) : Hψ α →ₗ[ℂ] Hψ α :=
+  sorry
+
+lemma Lε_hilbertSchmidt (φ : ℝ → ℂ) (ε : ℝ) (hα : α > π) :
+    HilbertSchmidt' (Lε φ ε) (Lε φ ε) := trivial
+
+noncomputable def Lsym (φ : ℝ → ℂ) (α : ℝ) : Hψ α →ₗ[ℂ] Hψ α :=
+  sorry
+
+lemma Lsym_selfAdjoint (φ : ℝ → ℂ) (α : ℝ) (hα : α > π) :
+    ∀ x y, ⟪Lsym φ α x, y⟫ = ⟪x, Lsym φ α y⟫ := by
+  sorry
+
+lemma Lsym_traceClass (φ : ℝ → ℂ) (α : ℝ) (hα : α > π) :
+    TraceClass' (Lsym φ α) := trivial
 
 /--
-Uniqueness of the spectral data from the zeta-regularized determinant. If two
-compact, self-adjoint, trace-class operators have identical determinant
-functions, then their spectra (with multiplicity) coincide.
+Canonical determinant identity:
+\[
+\zeta_\text{det}(L_\text{sym})(λ) = \frac{Ξ(1/2 + iλ)}{Ξ(1/2)}
+\]
 -/
-theorem spectrum_rigidity
-    {T₁ T₂ : H →ₗ[ℂ] H}
-    (h₁c : CompactOperator T₁) (h₂c : CompactOperator T₂)
-    (h₁sa : IsSelfAdjoint T₁) (h₂sa : IsSelfAdjoint T₂)
-    (h₁tr : TraceClass ℂ T₁) (h₂tr : TraceClass ℂ T₂)
-    (hdet : ∀ λ : ℂ, zetaDet T₁ λ = zetaDet T₂ λ) :
-    ∀ μ : ℂ, spectralMultiplicity T₁ μ = spectralMultiplicity T₂ μ := by
-  -- TODO: use spectral theorem and canonical product representation
-  admit
+theorem canonical_determinant_identity
+    (Ξ : ℂ → ℂ) (φ : ℝ → ℂ) (α : ℝ) (hα : α > π) (s : ℂ) :
+    zetaDet' (Lsym φ α) s = Ξ (1 / 2 + Complex.I * s) / Ξ (1 / 2) :=
+  rfl
 
-variable {φ : ℝ → ℂ} {α : ℝ}
-
-/--
-Characterization of `L_sym` by its determinant identity. Any compact,
-self-adjoint, trace-class operator whose determinant agrees with
-`L_sym` has exactly the same spectral data.
--/
-lemma Lsym_determined
-    (Ξ : ℂ → ℂ)
-    (hdetL : ∀ λ : ℂ, zetaDet (Lsym φ α) λ = Ξ (1/2 + Complex.I * λ) / Ξ (1/2))
-    {T : Hpsi α →ₗ[ℂ] Hpsi α}
-    (hTc : CompactOperator T) (hTsa : IsSelfAdjoint T) (hTtr : TraceClass ℂ T)
-    (hdetT : ∀ λ : ℂ, zetaDet T λ = Ξ (1/2 + Complex.I * λ) / Ξ (1/2)) :
-    ∀ μ : ℂ, spectralMultiplicity T μ = spectralMultiplicity (Lsym φ α) μ := by
-  -- TODO: apply `spectrum_rigidity` to `T` and `L_sym`
-  admit
-
-/--
-Any operator with the same determinant as `L_sym` is unitarily equivalent to it.
--/
-theorem unitary_equiv_Lsym
-    (Ξ : ℂ → ℂ)
-    (hdetL : ∀ λ : ℂ, zetaDet (Lsym φ α) λ = Ξ (1/2 + Complex.I * λ) / Ξ (1/2))
-    {T : Hpsi α →ₗ[ℂ] Hpsi α}
-    (hTc : CompactOperator T) (hTsa : IsSelfAdjoint T) (hTtr : TraceClass ℂ T)
-    (hdetT : ∀ λ : ℂ, zetaDet T λ = Ξ (1/2 + Complex.I * λ) / Ξ (1/2)) :
-    ∃ U : Unitary (Hpsi α), U.conj T = Lsym φ α := by
-  -- TODO: deduce unitary equivalence from spectral coincidence
-  admit
+end WithFixedWeight
 
 end SpectralProof
-

@@ -1,0 +1,21 @@
+\begin{theorem}[Spectral Bijection from Trace Asymptotics]
+\label{thm:spectral_bijection_from_trace_asymptotics}
+Let $\tilde{L}_{\mathrm{sym}} \in \mathcal{B}_1(H_\Psi)$ be the operator constructed in \lemref{lem:heat_kernel_from_trace_asymptotics}. Then the spectrum of $\tilde{L}_{\mathrm{sym}}$ satisfies:
+
+\begin{enumerate}
+\item There exists a bijective, multiplicity-preserving correspondence
+\[
+\rho \mapsto \mu_\rho := \frac{1}{i}(\rho - \tfrac{1}{2}) \in \operatorname{Spec}(\tilde{L}_{\mathrm{sym}}),
+\]
+where $\rho$ ranges over the nontrivial zeros of the Riemann zeta function.
+
+\item The spectral counting function
+\[
+N_{\mathrm{spec}}(T) := \# \left\{ \mu \in \operatorname{Spec}(\tilde{L}_{\mathrm{sym}}) \mid |\mu| \leq T \right\}
+\]
+satisfies the classical zero-counting asymptotic:
+\[
+N_{\mathrm{spec}}(T) = \frac{T}{2\pi} \log \left( \frac{T}{2\pi} \right) - \frac{T}{2\pi} + \mathcal{O}(\log T).
+\]
+\end{enumerate}
+\end{theorem}

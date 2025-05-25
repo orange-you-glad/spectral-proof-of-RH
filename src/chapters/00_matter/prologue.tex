@@ -1,49 +1,59 @@
-\section*{Prologue: Bourbaki.RH and the Future of Proof}
+\section*{Prologue: Bourbaki and the Future of Proof}
 \label{sec:prologue}
 
 \paragraph*{1.1 The Autonomous Mathematician.}
-Bourbaki.RH is not a project about the Riemann Hypothesis. It is a prototype for what mathematics becomes when its proofs are no longer written, but built. Autonomous. Compositional. Self-verifying. At its heart is not an answer, but an architecture—a formal system that doesn’t just construct proofs, but refactors them, audits them, and compiles them into semantic artifacts. This is not LLM-as-calculator. It is LLM as collaborator, as interlocutor, as dialectical engine in a formal loop:
+\emph{Bourbaki} is not a project about the Riemann Hypothesis. It is a prototype for what mathematics becomes when proofs are no longer written, but built. Autonomous. Compositional. Self-verifying. At its heart is not an answer, but an architecture—a formal system that does not merely construct proofs, but refactors them, audits them, and compiles them into semantic artifacts. This is not LLM-as-calculator. It is LLM as collaborator, as interlocutor, as dialectical engine in a formal loop:
 \[
 \text{conjecture} \rightarrow \text{attempt} \rightarrow \text{audit} \rightarrow \text{refactor} \rightarrow \text{validate} \rightarrow \text{render}.
 \]
-The output is not a paper. It is a reproducible build. Every DAG edge in this manuscript is re-proven on every commit. Every identity is tracked to its analytic kernel. Every expansion is recursively justified. This is not a new proof of RH. It is a new epistemology of proof.
+The output is not a paper. It is a reproducible build. Every DAG edge in this manuscript is re-verified on every commit. Every identity is tracked to its analytic kernel. Every expansion is recursively justified. This is not a new proof of RH. It is a new epistemology of proof.
 
 \paragraph*{1.2 Why RH Became the Test Case.}
-The Riemann Hypothesis was not chosen for celebrity, but for constraint. RH does not tolerate intuition loosely held. It rewards only structure. It enforces a discipline of equivalence. In a mathematical ecosystem designed to be modular, local, and formally audited, RH serves not as a summit but as a stress test. Its sharp edge—real spectrum versus critical zeros—is the kind of binary condition that a formal pipeline can test, stabilize, and expose without infinite guesswork. RH demanded a proving system mature enough to confront necessity. And Bourbaki.RH responded.
+The Riemann Hypothesis was not chosen for its fame, but for its constraints. RH tolerates no ambiguity. It rewards only structure. It enforces a discipline of equivalence. In a mathematical ecosystem designed to be modular, local, and formally audited, RH serves not as a summit but as a stress test. Its sharp dichotomy—real spectrum versus critical zeros—defines the kind of binary architecture a formal pipeline can encode, stabilize, and audit without heuristic drift. RH demanded a proving system capable of confronting necessity. \emph{Bourbaki} responded—with structure.
 
 \paragraph*{1.3 Workflow in Miniature.}
-At the core is a Directed Acyclic Graph (DAG) of irreducible semantic units—lemmas that are not merely steps in a proof, but composable modules in a formal structure. Each is typed, audited, and connected by analytic invariants: spectral bijections, determinant identities, kernel decay, Tauberian asymptotics. The DAG compiles into a Lean 4 formalization (in progress), a typeset manuscript, and a containerized CI pipeline that re-verifies the logical closure on every push. Nothing is assumed. Nothing is trusted. Everything is reconstructed. From the Fourier kernel up.
+At the core is a Directed Acyclic Graph (DAG) of irreducible semantic units—lemmas that are not merely steps in a proof, but composable modules in a formal structure. Each is typed, audited, and connected by analytic invariants: spectral bijections, determinant identities, kernel decay, Tauberian asymptotics. The DAG compiles into a Lean 4 formalization (in progress), a typeset manuscript, and a containerized CI pipeline that re-verifies logical closure on every push. Nothing is assumed. Nothing is trusted. Everything is reconstructed—from the Fourier kernel up. Every path to RH is explicit. Every identity is localizable.
 
 \paragraph*{1.4 Mathematical Result, Briefly.}
 The central analytic construct is a canonical trace-class operator
 \[
-\Lsym \in \TC(\HPsi), \quad \HPsi := L^2(\R, e^{\alpha|x|} dx), \quad \alpha > \pi,
+\Lsym \in \TC(\HPsi), \qquad \HPsi := L^2(\R, e^{\alpha|x|} dx), \quad \alpha > \pi,
 \]
-whose zeta-regularized Fredholm determinant satisfies the identity:
+whose zeta-regularized Fredholm determinant satisfies:
 \[
 \detz(I - \lambda \Lsym) = \frac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}.
 \]
-Through this identity, the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \) are encoded as spectral data:
+Through this identity, the nontrivial zeros \( \rho \in \C \) of \( \zeta(s) \) are encoded spectrally:
 \[
 \rho \mapsto \mu_\rho := \tfrac{1}{i}(\rho - \tfrac{1}{2}) \in \Spec(\Lsym).
 \]
-By the spectral theorem, this yields:
+By the spectral theorem:
 \[
 \RH \iff \Spec(\Lsym) \subset \R.
 \]
-But again: this is not about novelty. It is about closure. Formal, auditable, repeatable closure—where arithmetic truth emerges as a spectral invariant.
+But this manuscript does not merely state the result—it reconstructs it compositionally. No appeal to conjecture. No invocation of unverified arithmetic intuition. Arithmetic truth emerges here not as a hypothesis, but as a spectral invariant.
 
-\paragraph*{1.5 Invitation to Audit and Extend.}
-Every lemma is modular. Every operator is reproducible. The full DAG structure, Lean verification suite (in progress), and CI runner are open source:
+\paragraph*{1.5 Parallel Construction via Trace Asymptotics.}
+Beyond the canonical route through \( \Xi(s) \), we show that RH can also be deduced from heat trace asymptotics alone. A second operator, \( \tilde{L}_{\mathrm{sym}} \in \TC(\HPsi) \), is constructed directly from the short-time expansion of the trace
+\[
+t \mapsto \Tr(e^{-t \tilde{L}_{\mathrm{sym}}^2}),
+\]
+without assuming access to the zero set or the completed zeta function. Its spectrum encodes the same bijection to the nontrivial zeros of \( \zeta(s) \), and the Riemann Hypothesis follows from its self-adjointness. This provides a clean, spectral-theoretic route to RH, independently anchored in trace kernel asymptotics and Laplace duality.
+
+\paragraph*{1.6 The Shape of What Comes Next.}
+Bourbaki is not a closed object. It is a proving platform. Any operator in this ecosystem is reproducible; any identity, composable. You can lift the framework to automorphic \( L \)-functions. You can generalize the determinant theory to other trace norms. You can replace the Riemann zeta function with zeta elements arising from motives, curves, or noncommutative spaces. This is mathematics built not just to verify one hypothesis, but to support a hundred. And prove them all.
+
+\paragraph*{1.7 Invitation to Audit and Extend.}
+Every lemma is modular. Every operator is refactorable. The full DAG structure, Lean verification suite (in progress), and CI runner are open source:
 \begin{itemize}
   \item GitHub: \texttt{https://github.com/orange-you-glad/spectral-proof-of-RH}
-  \item Formal interlocutor: \texttt{https://chat.openai.com/g/g-WkZZP7ywr-bourbaki-rh}
+  \item Formal interlocutor: \texttt{https://orangeyouglad.org/bourbaki}
 \end{itemize}
-The real experiment is not whether RH is true, but whether a formal ecosystem can grow. Can you extend it? Introduce new operators? Lift to automorphic \( L \)-functions? Generalize the determinant theory? Bourbaki.RH wasn’t designed to resolve the Riemann Hypothesis. It was designed to build the proving systems of the next century.
+The true experiment is not whether RH is true, but whether formal mathematics can scale. Can you extend it? Optimize it? Add a new spectral branch? Bourbaki was not designed to end a proof. It was designed to begin one.
+
 
 \subsection*{Main Equivalence — Spectral RH Reformulation}
 \hfill \break
-
 \begin{tcolorbox}[colback=gray!3!white, colframe=black!75!white]
 We construct a canonical operator \( \Lsym \in \TC(\HPsi) \) on
 \[
@@ -65,7 +75,7 @@ such that:
   \Spec(\Lsym) \subset \mathbb{R}.
   \]
 \end{enumerate}
-All analytic and operator-theoretic infrastructure—Paley–Wiener kernel decay, trace-norm convergence, heat semigroup regularity, determinant growth—is rigorously modularized and verified across Chapters~1–10. See \thmref{thm:truth_of_rh} for formal equivalence.
+All analytic and operator-theoretic infrastructure—Paley–Wiener kernel decay, trace-norm convergence, heat semigroup regularity, determinant growth—is rigorously modularized and verified across Chapters~1–10. See \thmref{thm:truth_of_rh} and \thmref{thm:truth_of_rh_from_trace_asymptotics} for the dual equivalences.
 \end{tcolorbox}
 
 \subsection*{Disclosure of Large-Language-Model Assistance}

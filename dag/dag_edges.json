@@ -592,6 +592,18 @@
     "thm:rh_spectral_closure"
   ],
   [
+    "lem:heat_kernel_from_trace_asymptotics",
+    "thm:spectral_bijection_from_trace_asymptotics"
+  ],
+  [
+    "lem:log_corrected_tauberian_estimate",
+    "thm:spectral_bijection_from_trace_asymptotics"
+  ],
+  [
+    "thm:spectral_zero_bijection_revised",
+    "thm:spectral_bijection_from_trace_asymptotics"
+  ],
+  [
     "lem:hadamard_linear_form",
     "thm:uniqueness_realization"
   ],
@@ -822,5 +834,9 @@
   [
     "thm:spectral_zero_bijection_revised",
     "thm:truth_of_rh"
+  ],
+  [
+    "thm:spectral_bijection_from_trace_asymptotics",
+    "thm:truth_of_rh_from_trace_asymptotics"
   ]
 ]

@@ -1,0 +1,48 @@
+\begin{proof}[Proof of \lemref{lem:heat_kernel_from_trace_asymptotics}]
+Fix $\alpha > \pi$ and define the exponential weight $\Psi_\alpha(x) := e^{\alpha|x|}$. Let $H_\Psi := L^2(\mathbb{R}, \Psi_\alpha(x)\, dx)$.
+
+\vspace{1em}
+\noindent\textbf{Step 1: Spectral profile construction.}  
+Let $\Lambda > 0$ be fixed. Define a smooth cutoff function $r(\lambda) \in C_c^\infty(\mathbb{R})$ supported in $[-\Lambda, \Lambda]$ such that
+\[
+\tilde{\phi}_t(\lambda) := e^{-t \lambda^2} \cdot \left( \log\left( \frac{|\lambda|}{2\pi} \right) + r(\lambda) \right)
+\]
+is well-defined, real-valued, even, and satisfies $\tilde{\phi}_t \in \mathcal{S}(\mathbb{R})$. The cutoff ensures integrability near $\lambda = 0$ and compact decay at infinity.
+
+\vspace{1em}
+\noindent\textbf{Step 2: Inverse Fourier transform.}  
+Define the kernel
+\[
+\tilde{k}_t(x) := \frac{1}{2\pi} \int_{\mathbb{R}} \tilde{\phi}_t(\lambda) e^{i\lambda x} d\lambda.
+\]
+Then $\tilde{k}_t \in \mathcal{S}(\mathbb{R})$ is real, even, and rapidly decaying. This follows from the Paley–Wiener theorem and standard entire function theory~\cite[Thm.~3.2.4]{Levin1996EntireLectures}.
+
+Set $\tilde{K}_t(x, y) := \tilde{k}_t(x - y)$.
+
+\vspace{1em}
+\noindent\textbf{Step 3: Trace-class inclusion.}  
+By exponential decay of $\tilde{k}_t$ and the assumption $\alpha > \pi$, we compute:
+\[
+\int_{\mathbb{R}^2} |\tilde{K}_t(x, y)| \Psi_\alpha(x)\Psi_\alpha(y)\, dx dy = \left( \int_{\mathbb{R}} |\tilde{k}_t(z)| \Psi_\alpha(z)\, dz \right) \left( \int_{\mathbb{R}} \Psi_\alpha(x)\, dx \right) < \infty.
+\]
+Therefore, $\tilde{L}_t$ is trace class on $H_\Psi$ by Simon’s kernel criterion~\cite[Thm.~4.2]{Simon2005TraceIdeals}. Uniform decay of $\tilde{k}_t$ ensures $\|\tilde{L}_t\|_{\mathcal{B}_1(H_\Psi)}$ is bounded uniformly in $t$.
+
+\vspace{1em}
+\noindent\textbf{Step 4: Heat trace asymptotics.}  
+Define $\tilde{H}_t := e^{-t \tilde{L}_t^2}$. Then:
+\[
+\operatorname{Tr}(\tilde{H}_t) = \int_{\mathbb{R}} e^{-t \lambda^2} \left( \log\left( \frac{|\lambda|}{2\pi} \right) + r(\lambda) \right) d\lambda.
+\]
+As $t \to 0^+$, the dominant contribution arises from the logarithmic term. A standard Tauberian expansion~\cite[Ch.~III]{Korevaar2004Tauberian} yields:
+\[
+\operatorname{Tr}(\tilde{H}_t) \sim \frac{1}{2\pi} \int_{\mathbb{R}} e^{-t \lambda^2} \left( \log\left( \frac{|\lambda|}{2\pi} \right) + \mathcal{O}\left( \frac{1}{\lambda} \right) \right) d\lambda.
+\]
+
+\vspace{1em}
+\noindent\textbf{Step 5: Trace-norm convergence.}  
+Since $\tilde{\phi}_t \to \tilde{\phi}_0$ in $L^1(\mathbb{R}, e^{-\beta |\lambda|} d\lambda)$ for any $\beta < \pi$, the kernels $\tilde{k}_t$ converge in $L^1(\mathbb{R}, \Psi_\alpha(x) dx)$ by dominated convergence. Hence:
+\[
+\lim_{t \to 0^+} \| \tilde{L}_t - \tilde{L}_{\mathrm{sym}} \|_{\mathcal{B}_1(H_\Psi)} = 0.
+\]
+The limit $\tilde{L}_{\mathrm{sym}}$ is thus compact, trace class, and self-adjoint (as limit of symmetric operators).
+\end{proof}

@@ -31,6 +31,7 @@ where \( \Lsym \in \TC(\HPsi) \) is the canonical operator defined in Chapter~\r
   \Tr(e^{-t \Lsym^2}) = \frac{1}{\sqrt{4\pi t}} \log\left(\frac{1}{t}\right) + c_0 \sqrt{t} + o(\sqrt{t}),
   \]
   where \( c_0 := \int_\R a_1(x)\, dx \). The logarithmic singularity determines determinant normalization and spectral growth.
+  \item \lemref{lem:heat_kernel_from_trace_asymptotics} — The trace expansion alone suffices to construct a canonical operator \( \tilde{L}_{\mathrm{sym}} \in \TC(\HPsi) \), independent of the Fourier profile of \( \Xi(s) \), by mollifying and inverting the log-modulated trace kernel.
 \end{itemize}
 
 \textbf{Spectral Dimension and Determinant Analysis}
@@ -57,6 +58,11 @@ These heat kernel expansions supply the trace-level input to Chapter~\ref{sec:de
 
 \noindent\textbf{Back-reference: \lemref{lem:det_identity_entire_order_one}, \lemref{lem:log_derivative_determinant}.}  
 The singularity structure validates earlier determinant growth bounds and Laplace–Mellin continuation.
+
+\medskip
+
+\noindent\textbf{Alternate Construction and RH Closure.}  
+The asymptotic structure of \( \Theta(t) \) also supports an alternative operator realization: \lemref{lem:heat_kernel_from_trace_asymptotics} shows that a canonical operator \( \tilde{L}_{\mathrm{sym}} \) can be constructed solely from the trace profile, without reference to the zeta function’s spectral determinant. As shown in Chapter~\ref{sec:spectral_implications}, the spectrum of \( \tilde{L}_{\mathrm{sym}} \) reproduces the nontrivial zeros of \( \zeta(s) \), and the Riemann Hypothesis follows from spectral reality in \thmref{thm:truth_of_rh_from_trace_asymptotics}.
 
 \medskip
 

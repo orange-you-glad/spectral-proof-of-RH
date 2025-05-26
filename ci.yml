@@ -1,23 +1,27 @@
-name: Manuscript CI
+name: Manuscript + Lean CI
 
 on:
   push:
     paths:
+      - '**.lean'
       - '**.tex'
       - '**.py'
       - '.github/workflows/ci.yml'
+      - 'lakefile.lean'
       - 'Makefile'
       - 'VERSION'
   pull_request:
     paths:
+      - '**.lean'
       - '**.tex'
       - '**.py'
       - '.github/workflows/ci.yml'
+      - 'lakefile.lean'
       - 'Makefile'
       - 'VERSION'
 
 jobs:
-  validate:
+  manuscript:
     runs-on: ubuntu-latest
     name: Structural + Hygiene Checks
 
@@ -45,3 +49,25 @@ jobs:
 
       - name: 📄 Check LaTeX log for warnings/errors
         run: python tests/check_latex_log.py
+
+  lean-verify:
+    runs-on: ubuntu-latest
+    name: Formal Lean Build
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 🧠 Set up Lean
+        uses: leanprover/lean-action@v1
+        with:
+          lean-version: leanprover/lean4:stable
+
+      - name: 🛠 Build Lean project
+        run: |
+          lake exe cache get
+          lake build
+
+      - name: 🔍 Check for incomplete proofs
+        run: |
+          ! grep -r "sorry" SpectralProof/

@@ -54,9 +54,8 @@ agents/logs/
 .venv/
 
 # === Lean and Lake ===
-lean/build/
-lean/.lake/
-lean/lake-manifest.json
-lakefile.olean
-lakefile.olean.trace
-
+build/
+lake-manifest.json
+.lean/
+.leanprover/
+.lake/

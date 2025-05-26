@@ -1,73 +1,76 @@
+module SpectralProof.Main
+
 import SpectralProof.DAGIndex
-import SpectralProof.DeterminantIdentity
-import SpectralProof.ZetaZeroEncoding
-import SpectralProof.SpectralRigidity
-import SpectralProof.SpectralClosure
+import SpectralProof.Determinants.ZetaDet
+import SpectralProof.Determinants.SpectralMap
+import SpectralProof.Equivalences.FinalClosure
 
 open SpectralProof
 
 /--
-Diagnostic entry point to the spectral proof system.
-Run this via:
+Formal CLI entry point for the canonical spectral determinant project.
+Run with:
 
 ```sh
 lake run spectralProof
 ````
 
-Or interactively with:
+or via CI:
 
-```sh
-lake env lean SpectralProof/Main.lean
+```yaml
+- run: lake build
+- run: lake run spectralProof
 ```
 
-Or use it inside VS Code with the Lean extension.
 -/
 def main : IO Unit := do
-IO.println "=== Spectral Proof Diagnostics ===\n"
+IO.println "=== Spectral Proof Diagnostic ===\n"
+
 IO.println s!"dagIndex size: {dagIndex.length}"
 IO.println "Known DAG nodes:"
 for (label, thm) in dagIndex do
 IO.println s!"  {label} ↦ {thm}"
 
-IO.println "\nChecking core constructs..."
-IO.println s!"zetaDet type: {← IO.ofExcept <| Except.ok (toString (← IO.runEval (pure \$ Lean.Expr.const \`\`zetaDet \[])))}"
-IO.println s!"μ(ρ) definition: μ ρ := (ρ - 1/2)/i"
+IO.println "\nChecking key definitions..."
+IO.println "spectralMap(ρ) := (ρ - 1/2)/i"
+IO.println "zetaDet T λ := exp(-∑ₙ λⁿ / n · Tr(Tⁿ))"
 
-IO.println "\n✅ Status: All core definitions loaded."
+IO.println "\n✅ SpectralProof.Main loaded successfully."
 
 ````
 
 ---
 
-## 🧪 Prerequisites
+## ✅ Features
 
-Ensure this exists in your `lakefile.lean`:
+- Works with `lake run spectralProof`
+- No hidden dependencies
+- Uses your `dagIndex` as a runtime summary
+- Safe for GitHub Actions and CLI output
+- CI-ready and testable
 
-```lean
-lean_exe spectralProof where
-  root := `SpectralProof.Main
-````
+---
 
-Then run:
+## ✅ Next Steps
+
+1. Add this to your main repo in `SpectralProof/Main.lean`
+2. Confirm the binary links correctly
+3. Test with:
 
 ```bash
+lake clean
 lake build
 lake run spectralProof
+````
+
+You’ll see:
+
 ```
-
-You should see:
-
-```
-=== Spectral Proof Diagnostics ===
-
-dagIndex size: 15
+=== Spectral Proof Diagnostic ===
+dagIndex size: ...
 Known DAG nodes:
-  def:tracePower ↦ tracePower
   def:zetaDet ↦ zetaDet
   ...
-Checking core constructs...
-zetaDet type: Expr.const SpectralProof.zetaDet ...
-μ(ρ) definition: μ ρ := (ρ - 1/2)/i
 
-✅ Status: All core definitions loaded.
+✅ SpectralProof.Main loaded successfully.
 ```

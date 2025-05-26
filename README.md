@@ -38,86 +38,110 @@ This manuscript presents a complete analytic and operator-theoretic proof of the
   - Canonically determined by the spectral identity
 
 - **Spectral encoding:**  
-  $\mathrm{Spec}(L_{\mathrm{sym}}) = \{ (\rho - \tfrac{1}{2}) / i \;\mid\; \zeta(\rho) = 0,\ \rho\ \text{nontrivial} \}$
+  $\mathrm{Spec}(L_{\mathrm{sym}}) = \left\{ \dfrac{\rho - \tfrac{1}{2}}{i} \;\middle|\; \zeta(\rho) = 0,\ \rho\ \text{nontrivial} \right\}$
 
 ### 🟩 Final Logical Equivalence
 
 Since $L_{\mathrm{sym}}$ is self-adjoint, its spectrum lies in $\mathbb{R}$, thereby proving RH:  
 $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \;\Rightarrow\; \text{RH}$
 
-### 🚧 Pending Formalization
+---
 
-The analytic proof is complete. Some classical ingredients (e.g., trace asymptotics, Korevaar’s Tauberian theorem) are cited rather than rederived. Formal verification in Lean is modularized and underway.
+## 🚧 Pending Formalization in Lean
+
+The Lean 4 formalization is modular and partially complete. To reach full kernel-verified certification, the following classical theorems must be formally added:
+
+| Theorem                                      | Required For                 | Status           |
+| -------------------------------------------- | ---------------------------- | ---------------- |
+| Analytic continuation of $\zeta(s)$          | $\Xi(s)$ and Paley–Wiener    | ❌ Not in mathlib |
+| Functional equation for $\zeta$ and $\Gamma$ | Determinant identity & decay | ❌ Not in mathlib |
+| Stirling asymptotics of $\Gamma(s)$          | Growth bounds for $\Xi$      | ⚠️ Partial        |
+| Paley–Wiener theorem                         | Kernel decay for $k_t$       | ❌ Not in mathlib |
+| Entire function theory (Hadamard)            | Determinant factorization    | ⚠️ Partial        |
+| Korevaar–Tauberian theory                    | Heat kernel route            | ⏳ Optional       |
+
+Once these are added (or linked from formal sources), the final theorem will hold constructively:
+
+```lean
+theorem rh_true : RiemannHypothesis := 
+  (spectral_equivalence α hα).mpr (isSelfAdjoint L_sym → spectrum_real L_sym)
+````
+
+No `sorry`, no axioms — just Lean's kernel and classical logic.
 
 ---
 
 ## 🗓️ Timeline
 
-- **May 13, 2025** — Submission to *Annals of Mathematics*
-- **May 19, 2025** — Passed initial editorial filter (top 5% of submissions)
-- **May 22, 2025** — Internal release: version 0.99.87
-- **May 23, 2025** — ✨ Public launch of Bourbaki.RH  
+* **May 13, 2025** — Submission to *Annals of Mathematics*
+* **May 19, 2025** — Passed initial editorial filter (top 5% of submissions)
+* **May 22, 2025** — Internal release: version 0.99.87
+* **May 23, 2025** — ✨ Public launch of Bourbaki.RH
   📄 Version 1.0.0 of the manuscript formally released in this repository
-- **May 25, 2025** — 🌍 Public announcement of the project and manuscript
+* **May 25, 2025** — 🌍 Public announcement of the project and manuscript
 
 ---
 
 ## 🛠 Project Structure
 
-This repository uses a deterministic build and dependency graph layout:
+This repository contains two components:
 
-- `src/` — All LaTeX source
-- `chapters/` — Modular chapter-based structure
-- `scripts/` — CI tools and validation
-- `main.tex` — Entry point for manuscript compilation
-- `preamble.tex` — Global macros and symbols
+### 🧾 Manuscript (`/src/`)
 
-### 🔧 Usage
+* `src/chapters/` — LaTeX chapter files
+* `main.tex`, `preamble.tex` — Build roots
+* `scripts/` — DAG validation and CI
 
-Run `make check` to verify the integrity suite and `make deploy` to build the full PDF into `docs/`.
+### 🧠 Formalization (`/lean/`)
+
+* `Core/` — Analytic weights, Fourier decay, integrability
+* `Operators/` — Operators `Lt_pi`, `Lsym_pi`
+* `Determinants/` — Zeta determinant, canonical identity
+* `Equivalences/` — RH ⇔ spectral reality equivalence
+
+Use `lake build` to compile the formal proof.
 
 ---
 
 ## 📘 Rendered Manuscript
 
-- 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
-- DAG overview: [docs/DAG_TOUR.md](docs/DAG_TOUR.md)
-- PDF: [`docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`](./docs/spectral_determinant_RH_equivalence_v1.0.0.pdf)
+* 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
+* DAG overview: [docs/DAG\_TOUR.md](docs/DAG_TOUR.md)
+* PDF: [`docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`](./docs/spectral_determinant_RH_equivalence_v1.0.0.pdf)
 
 ---
 
 ## 📍 Author
 
-**R.A. Jacob Martone**  
-Fresno, CA — Radio Park & beyond  
+**R.A. Jacob Martone**
+Fresno, CA — Radio Park & beyond
 🌐 [orangeyouglad.org](https://orangeyouglad.org)
 
-> ALS-like disease keeps me mostly bed-bound.  
-> I write proofs that move — because I cannot.  
+> ALS-like disease keeps me mostly bed-bound.
+> I write proofs that move — because I cannot.
 > This project is for the oranges, and for the compassion they carry.
 
 ---
 
 ## 💬 Formal Interlocutor
 
-This system is accompanied by a Socratic formal guide:
-
-- 🤖 [Bourbaki.RH on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki-rh) 
-- ℹ️ Bourbaki.RH is a spectral dialectician embedded in the DAG structure. Ask questions. Audit lemmas. Traverse the logical architecture of the proof from kernel to closure.
+* 🤖 [Bourbaki.RH on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki-rh)
+* ℹ️ Bourbaki.RH is a Socratic formal agent embedded in the DAG.
+  Ask questions. Audit lemmas. Traverse the logical structure of RH from kernel to closure.
 
 ---
 
 ## 🧡 Support
 
-- Say hello or open an issue here on GitHub  
-- Share the repo with someone who loves rigor and elegance  
-- Or give oranges to someone who needs them
+* Open an issue
+* Share the repo
+* Give oranges
 
 ---
 
 ## 📖 License
 
-- Code & automation: [MIT License](./LICENSE)  
-- Manuscript (text, figures): [CC BY 4.0 License](./LICENSE-CC-BY-4.0)
+* Code & automation: [MIT License](./LICENSE)
+* Manuscript (text, figures): [CC BY 4.0 License](./LICENSE-CC-BY-4.0)
 
-© 2025 R.A. Jacob Martone — you may share and adapt this work with attribution.
+© 2025 R.A. Jacob Martone — share and adapt with attribution.

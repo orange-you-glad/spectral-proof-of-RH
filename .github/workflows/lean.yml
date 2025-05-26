@@ -4,13 +4,13 @@ on:
   push:
     paths:
       - '**.lean'
-      - 'lean-toolchain'
-      - 'lakefile.lean'
+      - 'lean/lean-toolchain'
+      - 'lean/lakefile.lean'
   pull_request:
     paths:
       - '**.lean'
-      - 'lean-toolchain'
-      - 'lakefile.lean'
+      - 'lean/lean-toolchain'
+      - 'lean/lakefile.lean'
 
 jobs:
   build:
@@ -30,12 +30,15 @@ jobs:
         run: |
           lake --version
           lean --version
+        working-directory: ./lean
 
       - name: Update dependencies
         run: lake update
+        working-directory: ./lean
 
       - name: Build with Lake
         run: lake build
+        working-directory: ./lean
 
       - name: Check for `sorry`
         run: |
@@ -45,3 +48,4 @@ jobs:
           else
             echo "✅ No 'sorry' found."
           fi
+        working-directory: ./lean

@@ -4,7 +4,7 @@ This directory contains the Lean 4 formalization of the canonical operator-theor
 
 > **A Canonical Spectral Determinant and Spectral Equivalence Formulation of the Riemann Hypothesis**  
 > R.A. Jacob Martone, 2025  
-> [[PDF]](../spectral_determinant_RH_equivalence_v0.99.98.pdf)
+> [[PDF]](../docs/spectral_determinant_RH_equivalence_v0.99.98.pdf)
 
 ## 📐 Structure
 

@@ -22,10 +22,7 @@ noncomputable def Lsym_pi
     Hϕ ϕ →ₗ[ℂ] Hϕ ϕ :=
   let seq := fun n : ℕ ↦ Lt_pi Φ (1 / (n + 1 : ℝ))
   let ops : ℕ → TraceClass ℂ (Hϕ ϕ) := fun n =>
-    TraceClass.mk' (seq n) (by
-      apply SpectralProof.Core.integrable_KtWeighted Φ (1 / (n + 1 : ℝ)) ϕ hϕ
-      -- Use Paley–Wiener decay for Φ here
-      sorry)
+    TraceClass.mk' (seq n) (SpectralProof.Core.integrable_KtWeighted Φ (1 / (n + 1 : ℝ)) ϕ hϕ)
   let lim := Metric.completeSpace.hasLimit (ops : ℕ → TraceClass ℂ (Hϕ ϕ))
   TraceClass.continuousLinearMap lim.some
 
@@ -37,20 +34,26 @@ lemma trace_class_Lsym_pi
     TraceClass ℂ (Hϕ ϕ) (Lsym_pi Φ hϕ) := by
   let seq := fun n : ℕ ↦ Lt_pi Φ (1 / (n + 1 : ℝ))
   let ops := fun n ↦ TraceClass.mk' (seq n)
-    (SpectralProof.Core.integrable_KtWeighted Φ _ ϕ hϕ sorry)
+    (SpectralProof.Core.integrable_KtWeighted Φ (1 / (n + 1 : ℝ)) ϕ hϕ)
   exact TraceClass.limit_closed ops
 
 /--
-If Φ is real on the real axis (i.e. Φ(-λ) = conj Φ(λ)), then Lsym_π is symmetric.
-This implies self-adjointness since Lsym_π is compact.
+If Φ is real on the real axis (i.e. Φ(-λ) = conj Φ(λ)), then `Lsym_pi` is symmetric.
+This implies self-adjointness since `Lsym_pi` is compact.
 -/
 lemma self_adjoint_Lsym_pi
     (Φ : ℝ → ℂ)
     (hΦ_symm : ∀ λ, Φ (-λ) = Complex.conj (Φ λ))
     (hϕ : ∃ α > π, ∀ x, ϕ x ≥ α * |x|) :
     IsSelfAdjoint (Lsym_pi Φ hϕ) := by
-  -- Strategy: show kernel k_t is real-valued and even ⇒ kernel symmetric
-  -- then L_t are symmetric ⇒ limit is symmetric
-  sorry
+  let seq := fun n : ℕ ↦ Lt_pi Φ (1 / (n + 1 : ℝ))
+
+  -- Step 1: Each operator in the sequence is self-adjoint
+  have h_symm : ∀ n, IsSelfAdjoint (seq n) := by
+    intro n
+    exact SpectralProof.Core.symmetric_Lt_pi Φ (1 / (n + 1 : ℝ)) hΦ_symm hϕ
+
+  -- Step 2: Use closure of self-adjoint operators in trace-class norm
+  exact TraceClass.limit_isSelfAdjoint seq h_symm
 
 end SpectralProof.Operators

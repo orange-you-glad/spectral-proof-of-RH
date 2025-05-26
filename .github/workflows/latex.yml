@@ -22,5 +22,5 @@ jobs:
       run: |
         sudo apt-get install -y texlive-full  # Install TeX Live (full distribution)
 
-    - name: Run make check
+    - name: Run make all
       run: make check  # Run your make check command

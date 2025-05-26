@@ -45,7 +45,7 @@ jobs:
           pip install checkcites
 
       - name: 🧪 Run full integrity suite (Makefile-driven)
-        run: make check
+        run: make all
 
       - name: 📄 Check LaTeX log for warnings/errors
         run: python tests/check_latex_log.py

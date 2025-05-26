@@ -12,7 +12,7 @@ namespace SpectralProof.Operators
 
 variable {ϕ : ℝ → ℝ} (Φ : ℝ → ℂ) (t : ℝ)
 
--- Bring in weighted Hilbert space and measure
+-- Weighted Hilbert space and measure
 abbrev Hϕ := SpectralProof.Core.Hϕ ϕ
 abbrev μϕ := SpectralProof.Core.autoMeasure ϕ
 
@@ -29,14 +29,12 @@ noncomputable def Lt_pi : Hϕ →ₗ[ℂ] Hϕ :=
   LinearMap.mkContinuous
     { toFun := fun f =>
         ⟨fun x => ∫ y, kernel (x, y) * f y,
-         by
-           -- integrability proof: deferred to integrability module
-           sorry⟩,
+         SpectralProof.Core.Integrability.integrable_convolution_kernel kernel f⟩,
       map_add' := fun f g => by
         ext x; simp only [Pi.add_apply, integral_add]; ring,
       map_smul' := fun c f => by
         ext x; simp only [smul_eq_mul, integral_const_mul] }
-    1 -- norm bound (can refine if needed)
+    1
     (by simp)
 
 end SpectralProof.Operators

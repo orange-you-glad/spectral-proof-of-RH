@@ -10,14 +10,27 @@ on:
 
 jobs:
   build:
+    name: Build Lean Project
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup elan
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Lean
         uses: leanprover/lean-action@v1
         with:
           toolchain: stable
-      - name: Build Lean project
+
+      - name: Build with lake
+        working-directory: lean
         run: |
-          cd lean
-          ./build.sh
+          lake build
+
+      - name: Check for `sorry`s
+        working-directory: lean
+        run: |
+          if grep -rnw . -e "sorry" --include \*.lean; then
+            echo "❌ 'sorry' found in Lean files."
+            exit 1
+          fi

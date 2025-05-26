@@ -107,7 +107,7 @@ Use `lake build` to compile the formal proof.
 
 * 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
 * DAG overview: [docs/DAG\_TOUR.md](docs/DAG_TOUR.md)
-* PDF: [`docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`](./docs/spectral_determinant_RH_equivalence_v1.0.0.pdf)
+* PDF: [`docs/spectral_determinant_RH_equivalence_v1.0.0.pdf`](./docs/spectral_determinant_RH_equivalence_v0,99.98pdf)
 
 ---
 
@@ -125,9 +125,8 @@ Fresno, CA — Radio Park & beyond
 
 ## 💬 Formal Interlocutor
 
-* 🤖 [Bourbaki.RH on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki-rh)
-* ℹ️ Bourbaki.RH is a Socratic formal agent embedded in the DAG.
-  Ask questions. Audit lemmas. Traverse the logical structure of RH from kernel to closure.
+* 🤖 [Bourbaki on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki)
+* ℹ️ Bourbaki is an agent embedded in the DAG. Ask questions. Audit lemmas. Traverse the logical structure of RH from kernel to closure.
 
 ---
 

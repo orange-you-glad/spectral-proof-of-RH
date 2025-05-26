@@ -125,8 +125,8 @@ Fresno, CA — Radio Park & beyond
 
 ## 💬 Formal Interlocutor
 
-* 🤖 [Bourbaki.RH on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki-rh)
-* ℹ️ Bourbaki.RH is a Socratic formal agent embedded in the DAG.
+* 🤖 [Bourbaki on ChatGPT](https://chatgpt.com/g/g-6795c69dc5f48191b68ab1debf40b5a7-bourbaki)
+* ℹ️ Bourbaki is a Socratic formal agent embedded in the DAG.
   Ask questions. Audit lemmas. Traverse the logical structure of RH from kernel to closure.
 
 ---

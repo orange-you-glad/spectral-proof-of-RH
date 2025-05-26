@@ -81,7 +81,8 @@ No `sorry`, no axioms — just Lean's kernel and classical logic.
 * **May 22, 2025** — Internal release: version 0.99.87
 * **May 23, 2025** — ✨ Public launch of Bourbaki.RH
   - 📄 Version 0.99.88 of the manuscript formally released in this repository
-  - 📄 Version Declined by *Annals* (no comment) *sigh, to early* 
+  - 📄 Version Declined by *Annals* (no comment) *sigh, to early*
+* **May 25, 2025** — Lean CLI Passing
 
 ---
 

@@ -6,13 +6,11 @@ on:
       - '**.lean'
       - 'lean-toolchain'
       - 'lakefile.lean'
-      - 'lake-manifest.json'
   pull_request:
     paths:
       - '**.lean'
       - 'lean-toolchain'
       - 'lakefile.lean'
-      - 'lake-manifest.json'
 
 jobs:
   build:
@@ -23,13 +21,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Lean (uses lean-toolchain)
-        uses: leanprover/lean-action@v1
-
-      - name: Show Lean version
+      - name: Install Elan (Lean version manager)
         run: |
-          lean --version
+          curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+
+      - name: Install Lake and Show Versions
+        run: |
           lake --version
+          lean --version
 
       - name: Update dependencies
         run: lake update

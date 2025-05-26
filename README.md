@@ -109,7 +109,7 @@ Use `lake build` to compile the formal proof.
 
 * 👉 [View in GitHub Docs](https://github.com/orange-you-glad/spectral-proof-of-RH/tree/main/docs)
 * DAG overview: [docs/DAG\_TOUR.md](docs/DAG_TOUR.md)
-* PDF: [`docs/spectral_determinant_RH_equivalence_v0.99.98.pdf`](./docs/spectral_determinant_RH_equivalence_v0.99.98pdf)
+* PDF: [`docs/spectral_determinant_RH_equivalence_v0.99.98.pdf`](./docs/spectral_determinant_RH_equivalence_v0.99.98.pdf)
 
 ---
 

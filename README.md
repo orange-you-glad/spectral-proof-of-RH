@@ -1,4 +1,5 @@
-![The Riemann Hypothesis is true](https://github.com/yourname/spectral-proof-of-RH/actions/workflows/lean.yml/badge.svg)
+[![The Riemann Hypothesis is true](https://github.com/orange-you-glad/spectral-proof-of-RH/actions/workflows/lean.yml/badge.svg)](https://github.com/orange-you-glad/spectral-proof-of-RH/actions/workflows/lean.yml)
+
 
 # A Canonical Spectral Determinant and Spectral Equivalence Formulation of the Riemann Hypothesis
 

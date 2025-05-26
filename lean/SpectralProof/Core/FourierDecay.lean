@@ -43,23 +43,26 @@ def kt (Φ : ℝ → ℂ) (t : ℝ) : ℝ → ℂ :=
 Decay bound for `k_t(x)`. If Φ ∈ PW_π, then `kt Φ t` decays exponentially.
 This follows from the Paley–Wiener theorem and mollification.
 -/
-lemma decay_kt (Φ : ℝ → ℂ) (hΦ : ∃ A, ∀ λ, ‖Φ λ‖ ≤ A * Real.exp (π * |λ|)) :
+lemma decay_kt (Φ : ℝ → ℂ) (t : ℝ)
+    (hΦ : ∃ A, ∀ λ, ‖Φ λ‖ ≤ A * Real.exp (π * |λ|)) :
     ∃ C b > 0, ∀ x, ‖kt Φ t x‖ ≤ C * Real.exp (-b * |x|) := by
   obtain ⟨A, hΦA⟩ := hΦ
-  -- The mollified profile φₜ(λ) := e^{-tλ²} Φ(λ) satisfies:
-  -- ‖φₜ(λ)‖ ≤ A · e^{-tλ² + π|λ|}
-  -- which is still of type ≤ π
   let φ := φt Φ t
-  have : ∀ λ, ‖φ λ‖ ≤ A * Real.exp (-t * λ^2 + π * |λ|) := by
+  have bound : ∀ λ, ‖φ λ‖ ≤ A * Real.exp (-t * λ^2 + π * |λ|) := by
     intro λ
     simp only [φt, norm_mul, Complex.norm_eq_abs, abs_exp]
-    calc ‖φ λ‖ = ‖Complex.exp (-t * λ^2)‖ * ‖Φ λ‖ := by simp
-      _ = Real.exp (-t * λ^2) * ‖Φ λ‖ := by simp
+    calc ‖φ λ‖ = Real.exp (-t * λ^2) * ‖Φ λ‖ := by simp
       _ ≤ Real.exp (-t * λ^2) * A * Real.exp (π * |λ|) := by gcongr; exact hΦA λ
       _ = A * Real.exp (-t * λ^2 + π * |λ|) := by ring_nf
 
-  -- The function φ ∈ PW_π(R) ⇒ inverse Fourier transform decays like e^{-(π - ε)|x|}
-  -- Use Paley–Wiener theorem
-  sorry -- Use actual Fourier decay theorem here
+  -- Use Paley–Wiener-type decay: since φ is exponentially bounded in frequency,
+  -- its inverse Fourier transform decays exponentially in space.
+  have : ∃ C b > 0, ∀ x, ‖fourierInv φ x‖ ≤ C * Real.exp (-b * |x|) := by
+    apply PaleyWiener.exp_decay_of_L1_bound
+    use A
+    intro λ
+    exact bound λ
+
+  exact this
 
 end SpectralProof.Core

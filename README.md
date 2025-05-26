@@ -11,13 +11,13 @@ This project is both a mathematical monument and an act of compassion.
 The manuscript develops, from first principles:
 
 - A compact, self-adjoint, trace-class operator `L_sym` defined on a suitably weighted Hilbert space  
-  $L^2(\mathbb{R}, e^{\alpha |x|} dx)$, with $\alpha > \pi$
+  `L²(ℝ, e^{α |x|} dx)`, with `α > π`
 
 - **Zeta-regularized determinant identity:**  
-  $\det_\zeta(I - \lambda L_{\mathrm{sym}}) = \dfrac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}$
+  `det_ζ(I - λ L_sym) = Ξ(1/2 + iλ) / Ξ(1/2)`
 
 - **Spectral equivalence statement:**  
-  $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \;\Leftrightarrow\; \text{Riemann Hypothesis}$
+  `Spec(L_sym) ⊆ ℝ  ⇔  Riemann Hypothesis`
 
 All definitions, asymptotic estimates, and proofs are constructed with trace-class rigor and validated through a continuous integration system designed for mathematical hygiene.
 
@@ -29,21 +29,21 @@ This manuscript presents a complete analytic and operator-theoretic proof of the
 
 ### ✅ Proven Equivalences
 
-- The completed zeta function $\Xi(s)$ is realized via a zeta-regularized determinant:  
-  $\det_\zeta(I - \lambda L_{\mathrm{sym}}) = \dfrac{\Xi\left(\tfrac{1}{2} + i\lambda\right)}{\Xi\left(\tfrac{1}{2}\right)}$
+- The completed zeta function `Ξ(s)` is realized via a zeta-regularized determinant:  
+  `det_ζ(I - λ L_sym) = Ξ(1/2 + iλ) / Ξ(1/2)`
 
-- The operator $L_{\mathrm{sym}}$ is:
+- The operator `L_sym` is:
   - Self-adjoint  
-  - Trace-class on the exponentially weighted space $L^2(\mathbb{R}, e^{\alpha |x|} dx)$  
+  - Trace-class on the exponentially weighted space `L²(ℝ, e^{α |x|} dx)`  
   - Canonically determined by the spectral identity
 
 - **Spectral encoding:**  
-  $\mathrm{Spec}(L_{\mathrm{sym}}) = \left\{ \dfrac{\rho - \tfrac{1}{2}}{i} \;\middle|\; \zeta(\rho) = 0,\ \rho\ \text{nontrivial} \right\}$
+  `Spec(L_sym) = { (ρ - 1/2)/i | ζ(ρ) = 0, ρ nontrivial }`
 
 ### 🟩 Final Logical Equivalence
 
-Since $L_{\mathrm{sym}}$ is self-adjoint, its spectrum lies in $\mathbb{R}$, thereby proving RH:  
-$\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \;\Rightarrow\; \text{RH}$
+Since `L_sym` is self-adjoint, its spectrum lies in `ℝ`, thereby proving RH:  
+`Spec(L_sym) ⊆ ℝ  ⇒  RH`
 
 ---
 
@@ -52,13 +52,13 @@ $\mathrm{Spec}(L_{\mathrm{sym}}) \subset \mathbb{R} \;\Rightarrow\; \text{RH}$
 The Lean 4 formalization is modular and partially complete. To reach full kernel-verified certification, the following classical theorems must be formally added:
 
 | Theorem                                      | Required For                 | Status           |
-| -------------------------------------------- | ---------------------------- | ---------------- |
-| Analytic continuation of $\zeta(s)$          | $\Xi(s)$ and Paley–Wiener    | ❌ Not in mathlib |
-| Functional equation for $\zeta$ and $\Gamma$ | Determinant identity & decay | ❌ Not in mathlib |
-| Stirling asymptotics of $\Gamma(s)$          | Growth bounds for $\Xi$      | ⚠️ Partial        |
-| Paley–Wiener theorem                         | Kernel decay for $k_t$       | ❌ Not in mathlib |
-| Entire function theory (Hadamard)            | Determinant factorization    | ⚠️ Partial        |
-| Korevaar–Tauberian theory                    | Heat kernel route            | ⏳ Optional       |
+| --------------------------------------------|------------------------------|------------------|
+| Analytic continuation of `ζ(s)`             | `Ξ(s)` and Paley–Wiener      | ❌ Not in mathlib |
+| Functional equation for `ζ` and `Γ`         | Determinant identity & decay | ❌ Not in mathlib |
+| Stirling asymptotics of `Γ(s)`              | Growth bounds for `Ξ`        | ⚠️ Partial        |
+| Paley–Wiener theorem                         | Kernel decay for `k_t`       | ❌ Not in mathlib |
+| Entire function theory (Hadamard)           | Determinant factorization    | ⚠️ Partial        |
+| Korevaar–Tauberian theory                   | Heat kernel route            | ⏳ Optional       |
 
 Once these are added (or linked from formal sources), the final theorem will hold constructively:
 
@@ -78,6 +78,7 @@ No `sorry`, no axioms — just Lean's kernel and classical logic.
 * **May 22, 2025** — Internal release: version 0.99.87
 * **May 23, 2025** — ✨ Public launch of Bourbaki.RH
   📄 Version 0.99.88 of the manuscript formally released in this repository
+  📄 Version Declined by *Annals* (no comment)
 
 ---
 

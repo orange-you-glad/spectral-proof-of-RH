@@ -1,2 +1,2 @@
 -- lean/SpectralProof.lean
-/-! SpectralProof: Canonical Operator DAG Root.. -/
+/-! SpectralProof: Canonical Operator DAG Root... -/

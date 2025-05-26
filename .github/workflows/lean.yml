@@ -3,10 +3,16 @@ name: Lean CI
 on:
   push:
     paths:
-      - 'lean/**'
+      - '**.lean'
+      - 'lean-toolchain'
+      - 'lakefile.lean'
+      - 'lake-manifest.json'
   pull_request:
     paths:
-      - 'lean/**'
+      - '**.lean'
+      - 'lean-toolchain'
+      - 'lakefile.lean'
+      - 'lake-manifest.json'
 
 jobs:
   build:
@@ -17,24 +23,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Lean
+      - name: Set up Lean (uses lean-toolchain)
         uses: leanprover/lean-action@v1
-        with:
-          toolchain: stable
 
-      - name: Display Lean version
-        working-directory: lean
+      - name: Show Lean version
         run: |
           lean --version
           lake --version
 
       - name: Build with Lake
-        working-directory: lean
         run: |
           lake build
 
       - name: Check for `sorry`
-        working-directory: lean
         run: |
           if grep -rE '\bsorry\b' --include='*.lean' .; then
             echo "❌ 'sorry' found in Lean source files."

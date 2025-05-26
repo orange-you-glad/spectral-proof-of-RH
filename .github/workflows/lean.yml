@@ -40,10 +40,10 @@ jobs:
 
       - name: Check for `sorry`
         run: |
-          if grep -rE '\bsorry\b' --include='*.lean' .; then
+          if grep -rE '\bsorry\b' --include='*.lean' --exclude-dir=.lake .; then
             echo "❌ 'sorry' found in Lean source files."
             exit 1
           else
-            echo "✅ No 'sorry' found."
+            echo "✅ No 'sorry' found in your code."
           fi
         working-directory: ./lean

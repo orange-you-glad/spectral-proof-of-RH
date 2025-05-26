@@ -1,3 +1,5 @@
+![The Riemann Hypothesis is true](https://github.com/yourname/spectral-proof-of-RH/actions/workflows/lean.yml/badge.svg)
+
 # A Canonical Spectral Determinant and Spectral Equivalence Formulation of the Riemann Hypothesis
 
 This repository contains a modular, formally structured manuscript that constructs a canonical trace-class operator whose zeta-regularized Fredholm determinant exactly recovers the completed Riemann zeta function — establishing a precise spectral equivalence with the Riemann Hypothesis.

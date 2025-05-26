@@ -22,15 +22,23 @@ jobs:
         with:
           toolchain: stable
 
-      - name: Build with lake
+      - name: Display Lean version
+        working-directory: lean
+        run: |
+          lean --version
+          lake --version
+
+      - name: Build with Lake
         working-directory: lean
         run: |
           lake build
 
-      - name: Check for `sorry`s
+      - name: Check for `sorry`
         working-directory: lean
         run: |
-          if grep -rnw . -e "sorry" --include \*.lean; then
-            echo "❌ 'sorry' found in Lean files."
+          if grep -rE '\bsorry\b' --include='*.lean' .; then
+            echo "❌ 'sorry' found in Lean source files."
             exit 1
+          else
+            echo "✅ No 'sorry' found."
           fi

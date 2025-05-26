@@ -9,18 +9,5 @@ jobs:
   build:
     runs-on: ubuntu-latest  # Using the latest Ubuntu runner on GitHub Actions
 
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2  # Checkout the code to the GitHub runner
-
-    - name: Install latexmk
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y latexmk  # Install latexmk
-
-    - name: Install LaTeX (optional, if not already installed)
-      run: |
-        sudo apt-get install -y texlive-full  # Install TeX Live (full distribution)
-
     - name: Run make all
       run: make check  # Run your make check command

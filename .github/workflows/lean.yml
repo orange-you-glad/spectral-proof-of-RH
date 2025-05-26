@@ -31,9 +31,11 @@ jobs:
           lean --version
           lake --version
 
+      - name: Update dependencies
+        run: lake update
+
       - name: Build with Lake
-        run: |
-          lake build
+        run: lake build
 
       - name: Check for `sorry`
         run: |

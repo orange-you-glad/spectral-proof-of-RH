@@ -59,3 +59,8 @@ lake-manifest.json
 .lean/
 .leanprover/
 .lake/
+
+# === Rust build artifacts ===
+target/
+Cargo.lock
+snapshots/

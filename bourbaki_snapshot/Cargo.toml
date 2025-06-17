@@ -1,0 +1,11 @@
+[package]
+name = "bourbaki_snapshot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+snapshot = { path = "../crates/snapshot" }
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }

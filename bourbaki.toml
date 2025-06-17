@@ -1,0 +1,12 @@
+[basic]
+version = "0.1.0"
+
+[snapshot]
+include = [
+    "bourbaki.toml",
+    "dag/*.json",
+    "lean/build/**/*.olean",
+    "logs/*.jsonl"
+]
+include_large = false
+rng_seed = 42

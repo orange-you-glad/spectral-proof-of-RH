@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/snapshot",
+    "bourbaki_snapshot"
+]
+resolver = "2"

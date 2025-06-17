@@ -148,3 +148,4 @@ Fresno, CA — Radio Park & beyond
 * Manuscript (text, figures): [CC BY 4.0 License](./LICENSE-CC-BY-4.0)
 
 © 2025 R.A. Jacob Martone — share and adapt with attribution.
+\nSee [docs/snapshot.md](docs/snapshot.md) for snapshot archive instructions.
